@@ -58,10 +58,10 @@ deepseek_dapo_100r_20261015_setup_v2,RL,running,,35,323742
 deepseek_dapo_100r_20261015_setup_v3,RL,failed,,21,114432
 deepseek_dapo_100r_20261015_setup_v4,RL,running,,18,130098
 deepseek_dapo_100r_20261015_setup_v5,RL,complete_verified,,40,9934980
-deepseek_dapo_10k_20261016,RL,sampling,2411,89,48400379
+deepseek_dapo_10k_20261016,RL,checkpointed_stop,2652,100,61723846
 deepseek_dapo_10k_20261016_setup,RL,superseded_at_checkpoint,,26,1354595
 deepseek_dapo_10k_20261017_tail_setup,RL,failed,,38,8049339
-deepseek_dapo_10k_20261018_recovery_setup,RL,running,,31,9025829
+deepseek_dapo_10k_20261018_recovery_setup,RL,stopped,,31,12745539
 deepseek_dapo_decode_20261015,RL,recorded,,6,423873
 deepseek_dapo_profile_20261015,RL,recorded,,4,890793
 deepseek_dapo_recovery_20261015,RL,recorded,,6,12677

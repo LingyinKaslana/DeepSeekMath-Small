@@ -1,6 +1,6 @@
 {
-  "snapshot_started_utc": "2026-10-18T15:06:01.091420+00:00",
-  "snapshot_finished_utc": "2026-10-18T15:09:36.897614+00:00",
+  "snapshot_started_utc": "2026-10-19T07:30:57.118364+00:00",
+  "snapshot_finished_utc": "2026-10-19T07:32:26.445589+00:00",
   "cpt": {
     "status": "complete",
     "input_tokens": 10000000000,
@@ -17,43 +17,53 @@
     "best_validation_loss": 0.7081043124198914
   },
   "rl": {
-    "status": "in_progress_at_snapshot",
-    "completed_rounds": 2411,
-    "last_completed_utc": "2026-10-18T15:06:18.312490+00:00",
+    "status": "checkpointed_stop",
+    "completed_rounds": 2652,
+    "last_completed_utc": "2026-10-19T07:30:32.940200+00:00",
     "target_rounds": 10000,
-    "gradient_updates": 9644,
-    "effective_groups_found": 85737,
-    "effective_groups_used": 77152,
+    "gradient_updates": 10608,
+    "effective_groups_found": 93645,
+    "effective_groups_used": 84864,
     "best_validation_round": 800,
     "best_validation_accuracy": 0.4140625,
     "latest_validation": {
-      "round": 2400,
+      "round": 2600,
       "examples": 256,
-      "correct": 99,
-      "accuracy": 0.38671875,
+      "correct": 100,
+      "accuracy": 0.390625,
       "truncated": 0,
-      "seconds": 102.01925097091589,
+      "seconds": 75.78124494687654,
       "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
     },
-    "last100_seconds_per_round": 205.7721646969697,
-    "last100_rounds_per_hour": 17.495077652031014,
-    "last100_mixed_fraction": 0.06832837301587301,
+    "last100_seconds_per_round": 264.9712187474748,
+    "last100_rounds_per_hour": 13.586381256867387,
+    "last100_mixed_fraction": 0.04447952961672474,
     "snapshot_progress": {
-      "status": "sampling",
-      "utc": "2026-10-18T15:07:21.446733+00:00",
-      "completed_rounds": 2411,
-      "round": 2412,
-      "target_rounds": 10000,
-      "effective_groups": 11,
-      "target_groups": 32,
-      "candidate_groups": 160,
-      "batch_in_flight": true,
-      "sampling_policy": "history_rank",
-      "cumulative_effective_groups_found": 85737,
-      "cumulative_effective_groups_used": 77152,
-      "allocated_gib": 15.274803638458252,
-      "reserved_gib": 163.056640625
-    }
+      "status": "checkpointed_stop",
+      "completed_rounds": 2652,
+      "utc": "2026-10-19T07:30:49.559806+00:00"
+    },
+    "stop_record": {
+      "status": "checkpointed_stop",
+      "utc": "2026-10-19T07:30:49.558308+00:00",
+      "completed_rounds": 2652,
+      "gradient_updates": 10608,
+      "checkpoint": "./runs/deepseek_dapo_10k_20261016/latest_checkpoint"
+    },
+    "group_totals": {
+      "completed_rounds": 2652,
+      "effective_groups_found": 93645,
+      "effective_groups_used": 84864,
+      "all_wrong_groups": 102513,
+      "all_correct_groups": 442754,
+      "candidate_groups": 638912,
+      "gradient_updates": 10608,
+      "forced_incorrect_responses": 0,
+      "artificial_mixed_groups": 0,
+      "raw_mixed_groups_found": 93645
+    },
+    "sampled_response_tokens": 474622294,
+    "trained_response_tokens": 69105310
   },
   "full_test_1024": [
     {

@@ -304,5 +304,23 @@
     "truncated": 0,
     "seconds": 102.01925097091589,
     "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
+  },
+  {
+    "round": 2500,
+    "examples": 256,
+    "correct": 90,
+    "accuracy": 0.3515625,
+    "truncated": 0,
+    "seconds": 88.90733149589505,
+    "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
+  },
+  {
+    "round": 2600,
+    "examples": 256,
+    "correct": 100,
+    "accuracy": 0.390625,
+    "truncated": 0,
+    "seconds": 75.78124494687654,
+    "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
   }
 ]

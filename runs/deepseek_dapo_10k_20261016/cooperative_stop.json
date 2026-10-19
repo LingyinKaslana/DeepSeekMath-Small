@@ -1,0 +1,7 @@
+{
+  "status": "checkpointed_stop",
+  "utc": "2026-10-19T07:30:49.558308+00:00",
+  "completed_rounds": 2652,
+  "gradient_updates": 10608,
+  "checkpoint": "./runs/deepseek_dapo_10k_20261016/latest_checkpoint"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-19T07:31:14.368370+00:00",
+  "checkpoint": "runs/deepseek_dapo_10k_20261016/latest_checkpoint",
+  "completed_rounds": 2652,
+  "gradient_updates": 10608,
+  "effective_groups_used": 84864,
+  "weight_tensors": 219,
+  "weight_elements": 1346471936,
+  "optimizer_states": 219,
+  "checks": [
+    "weights and Adam tensors finite",
+    "checkpoint manifest, training state and stop round agree",
+    "all Adam steps match gradient update count",
+    "CPU and CUDA RNG states present"
+  ],
+  "weight_files": [
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "bytes": 3974417112,
+      "sha256": "c214dd67b4be545636966510b1359518b7f04ecb207c5eba796221dd02a7c5b8"
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "bytes": 1411495712,
+      "sha256": "7e06f539aaefd1858d3334cdedeacdfb12930a249c610af551e540d18c300535"
+    }
+  ]
+}

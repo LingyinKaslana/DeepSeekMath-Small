@@ -1,12 +1,12 @@
 {
-  "completed_rounds": 2411,
-  "effective_groups_found": 85737,
-  "effective_groups_used": 77152,
-  "all_wrong_groups": 93667,
-  "all_correct_groups": 297204,
-  "candidate_groups": 476608,
-  "gradient_updates": 9644,
+  "completed_rounds": 2652,
+  "effective_groups_found": 93645,
+  "effective_groups_used": 84864,
+  "all_wrong_groups": 102513,
+  "all_correct_groups": 442754,
+  "candidate_groups": 638912,
+  "gradient_updates": 10608,
   "forced_incorrect_responses": 0,
   "artificial_mixed_groups": 0,
-  "raw_mixed_groups_found": 85737
+  "raw_mixed_groups_found": 93645
 }

@@ -22,3 +22,5 @@
 {"round":2200,"path":"runs/deepseek_dapo_10k_20261016/checkpoints/round002200","effective_groups_found":78736,"effective_groups_used":70400,"gradient_updates":8800}
 {"round":2300,"path":"runs/deepseek_dapo_10k_20261016/checkpoints/round002300","effective_groups_found":82064,"effective_groups_used":73600,"gradient_updates":9200}
 {"round":2400,"path":"runs/deepseek_dapo_10k_20261016/checkpoints/round002400","effective_groups_found":85371,"effective_groups_used":76800,"gradient_updates":9600}
+{"round":2500,"path":"runs/deepseek_dapo_10k_20261016/checkpoints/round002500","effective_groups_found":88661,"effective_groups_used":80000,"gradient_updates":10000}
+{"round":2600,"path":"runs/deepseek_dapo_10k_20261016/checkpoints/round002600","effective_groups_found":91943,"effective_groups_used":83200,"gradient_updates":10400}
