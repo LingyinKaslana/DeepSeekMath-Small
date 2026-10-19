@@ -1,0 +1,427 @@
+{
+  "status": "passed_handoff_review",
+  "completed_utc": "2026-10-10T06:52:22.863298+00:00",
+  "reviewer": "decay_audit independent agent",
+  "checks_passed": 77,
+  "checks_total": 77,
+  "checks": [
+    {
+      "name": "old_run_successful_SIGTERM",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_wrapper_stopped_verified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_PID_exited",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_published",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "handoff_ready",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "handoff_is_latest_stopped_checkpoint",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_resume_step_counters_same",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_resume_input_counts_same",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preflight_actual_stopped_checkpoint",
+      "passed": true,
+      "details": "Preflight relative checkpoint path resolved against project root"
+    },
+    {
+      "name": "preflight_CPU_only_no_updates",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_global_10B_budget_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_schedule_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_order_metadata_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "resume_before5B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_exact5B6B_hold",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "previous_independent_checkpoint_verifier_passed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "previous_verifier_338weights338Adam",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "checkpoint_manifest_SHA_matches_verifier",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_signature_matches_manifest",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_generation_config.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_added_tokens.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_chat_template.jinja",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_training_state.pt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_model-00002-of-00002.safetensors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_tokenizer_config.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_checkpoint_manifest.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_model-00001-of-00002.safetensors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_merges.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_tokenizer.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_special_tokens_map.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_model.safetensors.index.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_config.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_checkpoint_file_size_vocab.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "order_SHA_order_epoch_00000.npy",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "order_SHA_order_epoch_00001.npy",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "backend_exact_old",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "micro_effective16_optimized",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "reviewed_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "reviewed_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "reviewed_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "reviewed_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_standard_native.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_frozen_source_lr_intervention.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "reviewed_source_lr_intervention.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "exact11_original_other_sources_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "preflight_review_passed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_make_schedule",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_learning_rate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_selected_token_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_restore_optimizer",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_evaluate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_update",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_epoch_cursor",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_check_model_safety",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unchanged_function_check_optimizer_precision",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "saved_Adam_and_RNG_restore_code",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "saved_CPU_CUDA_RNG_restore_code",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "restore_precedes_validation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explicit_resume_source_policy_flags",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "expected_validation_matches_old_final",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "expected_probe_matches_old_final",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_rate_5000000000",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_rate_5500000000",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_rate_6000000000",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_rate_9000000000",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_rate_10000000000",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "checkpoint": "./runs/cpt_10b_lr3e6_20261009/stopped_checkpoint",
+  "completed_steps": 140508,
+  "input_tokens": 4604166144,
+  "expected_validation_loss": 1.8521075248718262,
+  "expected_train_probe_loss": 1.8959360122680664,
+  "policy": {
+    "schema_version": 1,
+    "type": "linear_input_tokens",
+    "start_input_tokens": 5000000000,
+    "end_input_tokens": 6000000000,
+    "start_lr": 3e-06,
+    "end_lr": 3e-07,
+    "after": "hold"
+  },
+  "global_input_token_budget": 10000000000,
+  "reviewed_source_sha256": {
+    "train_cpt.py": "5b4ed4f23399fbd75fda18a0538954f2ae7bd5d9b45c3688d99bbc835a600de1",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820",
+    "lr_intervention.py": "881e005c690cef06f3b2ab30e38ab3c90c24917652ced12294f8e7cf08aa03a8"
+  },
+  "new_training_runtime_verified": false,
+  "blocking_findings": [],
+  "scope": "Read-only prior verifier/result/manifest/file size/source+order small-hash consistency; no large checkpoint/data rehash and no GPU operation. New startup continuity is reviewed separately."
+}

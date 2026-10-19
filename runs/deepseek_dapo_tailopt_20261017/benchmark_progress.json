@@ -1,0 +1,9 @@
+{
+  "event": "benchmark_batch",
+  "utc": "2026-10-17T13:13:03.558469+00:00",
+  "policy": "history_rank",
+  "trial": 3,
+  "candidates": 136,
+  "used_groups": 32,
+  "seconds": 120.61363968695514
+}

@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "groups": {
+    "groups": 256,
+    "mixed": 130,
+    "correct_responses": 318,
+    "truncated": 0,
+    "all_wrong": 124,
+    "all_correct": 2
+  },
+  "responses": 2048,
+  "generated_tokens": 217481,
+  "generation_seconds": 370.9811521269148,
+  "utc": "2026-10-15T11:43:31.724775+00:00",
+  "effective_group_fraction": 0.5078125
+}

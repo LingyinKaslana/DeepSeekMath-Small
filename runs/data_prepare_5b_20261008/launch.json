@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-08T06:40:25.146312+00:00",
+  "tmux_session": "deepseekmath-data5b",
+  "script_sha256": "7a5f062e25ff62ee2b248051f1998046acf56ef3be702a6c946781b9e68df98c",
+  "source": "./runs/data_prepare_5b_20261008/source/prepare_openwebmath_large.py",
+  "output": "./data/processed/openwebmath_5b_s42",
+  "train_tokens": 5000000000,
+  "validation_tokens": 2097152,
+  "workers": 12,
+  "tokenizer_threads": 4,
+  "resume_command": "bash ./runs/data_prepare_5b_20261008/run.sh --resume"
+}

@@ -1,0 +1,17 @@
+{
+  "step": 15259,
+  "loss": 2.2042839527130127,
+  "grad_norm": 0.6716034412384033,
+  "epoch": 1,
+  "step_in_epoch": 15259,
+  "lr": 3e-06,
+  "effective_fp32_lr": 3.000000106112566e-06,
+  "lr_input_tokens": 499974144,
+  "input_tokens": 32768,
+  "supervised_tokens": 32752,
+  "cumulative_tokens": 500006912,
+  "seconds": 0.5517007669550367,
+  "native_retry_applied": false,
+  "optimizer_applied": true,
+  "first_full_shape_update": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "generation_complete",
+  "questions": 6319,
+  "rerun_questions": 2020,
+  "benchmarks": {
+    "gsm8k": {
+      "questions": 1319,
+      "rerun_questions": 160,
+      "retained_questions": 1159,
+      "retry_finish_reasons": {
+        "length": 118,
+        "stop_string": 42
+      },
+      "prefix_1024_text_identical": 78,
+      "prediction_sha256": "01c27887e09407503736c35bf8aebcda1a025a070679fad3657efd2e8de766ba"
+    },
+    "math": {
+      "questions": 5000,
+      "rerun_questions": 1860,
+      "retained_questions": 3140,
+      "retry_finish_reasons": {
+        "length": 1650,
+        "stop_string": 210
+      },
+      "prefix_1024_text_identical": 1155,
+      "prediction_sha256": "c9d0f0d033b87dfb486e45d22f8ac4f0a2adfa47481af234bac3371491862ff1"
+    }
+  },
+  "finished_utc": "2026-10-15T05:51:57.443045+00:00",
+  "wall_seconds": 2997.3869085509796,
+  "training_modified": false
+}

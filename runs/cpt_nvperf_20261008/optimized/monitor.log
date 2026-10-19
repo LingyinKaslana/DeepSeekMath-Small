@@ -1,0 +1,7 @@
+NVPERF|INF|06:05:26:633|Initialize || Setting library load paths: /external/nvidia-perfsdk/Samples/NvPerfUtility/tools/build/bin
+NVPERF|INF|06:05:26:846|Initialize || Loaded NvPerf Vulkan backend
+NVPERF|INF|06:05:26:846|SelectDevice || Detected 1 NvPerf device(s)
+NVPERF|INF|06:05:26:846|SelectDevice || [0] NVIDIA GB300 (LOCAL_GPU_HOST), periodic-sampler-supported=yes
+NVPERF|INF|06:05:26:852|main || Loaded 13 metrics [gb110-llm-extended.yaml]
+NVPERF|INF|06:05:26:978|main || CSV mode: UTF-8 comma-separated values -> ./runs/cpt_nvperf_20261008/optimized/training.csv. Monitoring will stop when CSV GPU duration expires.
+NVPERF|INF|06:05:51:106|main || Monitoring finished

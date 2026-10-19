@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "completed_constant_native_prefix_extension",
+  "source_checkpoint": "./runs/deepseek_coder_1p3b_500m_20261012/final_checkpoint",
+  "source_data": "./data/processed/deepseek_coder_1p3b_512m_s42",
+  "target_data": "./data/processed/deepseek_coder_1p3b_5b_s42",
+  "source_checkpoint_manifest_sha256": "d7a498cffacfe8ee741e73756166f308a1b71c184344ea716a0b8c9bf541cc11",
+  "source_training_state_sha256": "8542aba5ea2c6809405a3f96dc628c79e3085a393cd9f35be09f87b1d76fb22e",
+  "completed_steps": 15259,
+  "trained_tokens": 500006912,
+  "supervised_tokens": 499762768,
+  "optimizer_updates": 15259,
+  "target_steps": 305176,
+  "target_epochs": 2,
+  "target_input_tokens": 10000000000,
+  "reason": "User explicitly requested continuing the successful original-model 0.5B pilot to cumulative 10B; retain current weights, Adam/RNG, 763-step completed warmup, constant3e-6 native backend, validation and fixed train probe.",
+  "source_weight_sha256": {
+    "model-00001-of-00002.safetensors": "1d3c320a1e395659a9b5cca4b1d56d5bd902e64e1c10cb31e4502d2beab6c1f2",
+    "model-00002-of-00002.safetensors": "fb2a375ab594c5747f6700c9489650f3a863501699bcfc10353bd1716d388fa7",
+    "model.safetensors.index.json": "5c4bd0e3e9c08c86728d9267678aa1c2e0d59cbb4a1778974ffa3a278ba3bb6e"
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "purpose": "Learn the three-stage DeepSeekMath workflow; no benchmark reproduction target",
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "checkpoint_chain": [
+    "coder_base",
+    "math_cpt",
+    "math_sft",
+    "math_grpo"
+  ],
+  "stages": {
+    "cpt": {
+      "dtype": "BF16 autocast compute",
+      "training": "full_parameters",
+      "pilot_token_budget": 10000000,
+      "data": "OpenWebMath-only 5B-token sample, two full epochs, 10B input-token training budget",
+      "loss": "causal language modeling over all tokens",
+      "prepared_data": "data/processed/openwebmath_5b_s42",
+      "validation_tokens": 2097152,
+      "sequence_length": 2048,
+      "parameter_dtype": "float32",
+      "optimizer_moment_dtype": "float32",
+      "effective_batch_sequences": 16,
+      "effective_batch_tokens": 32768,
+      "micro_batch_sequences": 16,
+      "optimizer": {
+        "name": "AdamW",
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "weight_decay": 0.1,
+        "fused": false,
+        "foreach": true,
+        "compiled": true,
+        "learning_rate_storage": "CUDA FP32 scalar updated in place",
+        "capturable": true
+      },
+      "peak_learning_rate": 3e-06,
+      "gradient_clip_norm": 1.0,
+      "learning_rate_schedule": {
+        "warmup_fraction": 0.05,
+        "decay_progress": [
+          0.8,
+          0.9
+        ],
+        "decay_factors": [
+          0.316,
+          0.1
+        ]
+      },
+      "attention": "Compiled native PyTorch attention with resolved causal masks for full production batches; native eager fallback for partial/masked tail",
+      "include_final_partial_block": true,
+      "status": "fresh_optimized_10b_running",
+      "result": "./runs/cpt_10b_lr3e6_20261009/result.json",
+      "checkpoint": "./runs/cpt_10b_lr3e6_20261009/final_checkpoint",
+      "baseline_result": "runs/cpt_pilot_10m_20261008/result.json",
+      "baseline_checkpoint": "runs/cpt_pilot_10m_20261008/final_checkpoint",
+      "backend_config": "./runs/cpt_10b_lr3e6_20261009_launch/backend_config.json",
+      "trainer": "./runs/cpt_10b_lr3e6_20261009_launch/source/train_cpt.py",
+      "run_entry": "./runs/cpt_10b_lr3e6_20261009_launch/run.sh",
+      "optimization": {
+        "summary": "runs/cpt_optimization_20261008/summary.json",
+        "hardware_comparison": "runs/cpt_optimization_20261008/hardware_comparison.json",
+        "hardware_plot": "runs/cpt_nvperf_20261008/optimized/hardware_timeline.png",
+        "checkpoint_verification": "runs/cpt_optimization_20261008/fast_final_checkpoint_verification.json",
+        "pipeline_verification": "runs/cpt_optimization_20261008/fast_pipeline_verification.json",
+        "default_mode": "Active production uses audited optimized backend, whole-model compile and compiled capturable foreach AdamW; native entrypoints retained for comparisons",
+        "strict_alternative_config": "configs/cpt_backend_stable.json",
+        "strict_alternative_result": "runs/cpt_stable_pilot_10m_20261008/result.json",
+        "strict_alternative_checkpoint": "runs/cpt_stable_pilot_10m_20261008/final_checkpoint",
+        "memory_alternative_config": "configs/cpt_backend_memory.json",
+        "steady_tokens_per_second": 97302.31909951668,
+        "benchmark_steady_peak_allocated_gib": 118.6608018875122,
+        "whole_pilot_peak_allocated_gib": 180.43143796920776,
+        "tail_policy": "Eager fallback for partial shape or separately masked tail labels; avoids one-off graph recompilation"
+      },
+      "pilot_result": "runs/cpt_fast_pilot_10m_20261008/result.json",
+      "pilot_checkpoint": "runs/cpt_fast_pilot_10m_20261008/final_checkpoint",
+      "long_run_plan": "configs/cpt_10b_lr3e6_plan.json",
+      "long_run_data": "data/processed/openwebmath_5b_s42",
+      "long_run_input_token_budget": 10000000000,
+      "long_run_epochs": 2,
+      "long_run_entrypoint": "./runs/cpt_10b_lr3e6_20261009_launch/run.sh",
+      "epochs": 2,
+      "configured_input_tokens": 10000000000,
+      "failure": {
+        "run": "runs/cpt_10b_20261008",
+        "failed_utc": "2026-10-08T23:47:14.920057+00:00",
+        "failed_update": 175997,
+        "last_successful_step": 175996,
+        "last_logged_input_tokens": 5767033344,
+        "recoverable_step": 175000,
+        "recoverable_input_tokens": 5734396416,
+        "rollback_successful_updates": 996,
+        "rollback_input_tokens": 32636928,
+        "checkpoint_verification": "runs/cpt_failure_20261009/checkpoint_175000_verification.json",
+        "diagnostics": "runs/cpt_failure_20261009",
+        "reason": "Nonfinite gradient norm; optimizer update blocked before step",
+        "root_cause": "Unresolved; replay and native retry guard validation in progress",
+        "detected_utc": "2026-10-09T02:00:03.647057+00:00"
+      },
+      "recovery": {
+        "resume_checkpoint": "runs/cpt_resume_guard_smoke_20261009/stopped_checkpoint",
+        "resume_completed_steps": 175004,
+        "resume_input_tokens": 5734527488,
+        "original_checkpoint": "runs/cpt_10b_20261008/checkpoint_step_00175000",
+        "source_only_migration_at_step": 175000,
+        "source_migration_count": 1,
+        "retry_native_on_nonfinite": true,
+        "skip_batches": false,
+        "finite_gradient_norm_required": true,
+        "data_order_lr_unchanged": true,
+        "root_cause": "Unresolved; 1020-step replay did not reproduce original failure",
+        "cpu_verification": "runs/cpt_failure_20261009/retry_cpu_verification.json",
+        "gpu_forced_retry_verification": "runs/cpt_failure_20261009/retry_gpu_verification.json",
+        "recovery_checkpoint_verification": "runs/cpt_failure_20261009/recovery_checkpoint_verification.json"
+      },
+      "comparison": {
+        "report": "runs/cpt_native_compare_20261009/report/summary.json",
+        "updates_per_case": 1000,
+        "input_tokens_per_case": 32768000,
+        "experimental_updates_excluded_from_production": true
+      },
+      "native_observation": "runs/cpt_native_long_20261009/control.json",
+      "paused_progress": {
+        "status": "stopped",
+        "stop_reason": "SIGTERM",
+        "completed_steps": 186317,
+        "optimizer_updates": 186317,
+        "trained_tokens": 6105230336,
+        "supervised_tokens": 6102249265,
+        "checkpoint": "./runs/cpt_10b_20261009_native/stopped_checkpoint"
+      },
+      "native_from0_observation": "runs/cpt_native_from0_5h_20261009_setup/control.json",
+      "native_from0_observation_result": {
+        "status": "completed_observation",
+        "stop_reason": "max_seconds",
+        "completed_steps": 30860,
+        "trained_tokens": 1011220480,
+        "validation_loss": 1.8750613927841187,
+        "minimum_validation_loss": 1.8254090547561646,
+        "checkpoint": "./runs/cpt_native_from0_5h_20261009/stopped_checkpoint",
+        "checkpoint_cpu_verification": "runs/cpt_native_from0_5h_20261009_setup/final_checkpoint_verification.json",
+        "report": "runs/cpt_native_from0_5h_20261009_setup/report/summary.json",
+        "finished_utc": "2026-10-09T09:31:58.697553+00:00",
+        "production_budget_complete": false,
+        "counts_toward_production_budget": false,
+        "old_production_auto_resumed": false
+      },
+      "current_diagnostic": "runs/cpt_causes_20261009/control.json",
+      "diagnostic_startup_verification": "runs/cpt_causes_20261009/baseline_startup_verification.json",
+      "diagnostic_status": "complete",
+      "diagnostic_report": "runs/cpt_causes_20261009/report/summary.json",
+      "initialization": "fresh pinned Coder base at step0; fresh AdamW state",
+      "retry_native_on_nonfinite": true,
+      "skip_batches": false,
+      "previous_long_run_plan_preserved": "configs/cpt_10b_plan.json",
+      "startup_verification": "./runs/cpt_10b_lr3e6_20261009_launch/startup_verification.json",
+      "seen_unseen_diagnostic": "./runs/cpt_seen_unseen_lr3e6_20261010/findings.json"
+    },
+    "sft": {
+      "dtype": "bfloat16",
+      "training": "full_parameters",
+      "pilot_examples": 5000,
+      "epochs": 1,
+      "data": "pending: questions and worked solutions",
+      "loss": "completion tokens only",
+      "initialization": "./runs/cpt_10b_lr3e6_20261009/final_checkpoint",
+      "pilot_initialization": "runs/cpt_fast_pilot_10m_20261008/final_checkpoint",
+      "initialization_status": "pending completion and verification of new fresh10B optimized run; prior runs preserved"
+    },
+    "grpo": {
+      "training": "pending decision after SFT",
+      "pilot_questions": 2000,
+      "group_size": 4,
+      "pilot_optimizer_updates": 200,
+      "reward": "deterministic final-answer correctness",
+      "zero_reward_groups": "record; not a blocker for learning the workflow"
+    }
+  },
+  "execution_order": [
+    "cpt_correctness_smoke",
+    "cpt_throughput_baseline",
+    "profile_and_optimize_cpt",
+    "cpt_pilot",
+    "sft_correctness_smoke",
+    "profile_and_optimize_sft",
+    "sft_pilot",
+    "grpo_correctness_smoke",
+    "profile_and_optimize_grpo",
+    "grpo_pilot"
+  ],
+  "performance_protocol": {
+    "compare_same_model_data_sequence_length_effective_batch_precision": true,
+    "exclude_loading_warmup_checkpoint_io_from_steady_state_timing": true,
+    "record": [
+      "tokens_per_second",
+      "seconds_per_optimizer_update",
+      "peak_allocated_memory",
+      "peak_reserved_memory",
+      "gpu_utilization",
+      "power",
+      "profiler_trace"
+    ],
+    "candidate_optimizations": [
+      "batch_size",
+      "pretokenized_fixed_length_blocks",
+      "attention_backend",
+      "fused_adamw",
+      "fused_loss",
+      "torch_compile"
+    ],
+    "note": "Test one change at a time; GPU utilization alone is not the optimization target"
+  },
+  "status": "Fresh optimized10B CPT running at peakLR3e-6; startup verified",
+  "hardware": {
+    "gpu": "NVIDIA GB300",
+    "architecture": "aarch64",
+    "compute_capability": [
+      10,
+      3
+    ],
+    "reported_memory_mib": 256703
+  },
+  "model_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "smoke_result": "runs/cpt_smoke_20261008/result.json",
+  "next_step": "Complete fixed10B input tokens, verify final checkpoint and evaluate curves before SFT",
+  "data_source": {
+    "repo": "open-web-math/open-web-math",
+    "revision": "fde8ef8de2300f5e778f56261843dab89f230815",
+    "raw_manifest": "data/raw/openwebmath_20261008/manifest.json",
+    "prepared_manifest": "data/processed/openwebmath_5b_s42/manifest.json",
+    "source_bytes": 27431041597,
+    "source_documents": 6315233,
+    "pilot_prepared_manifest": "data/processed/openwebmath_10m_s42/manifest.json"
+  },
+  "calibration_result": "runs/cpt_calibration_v4_20261008/result.json",
+  "initial_baseline_result": "runs/cpt_calibration_v3_20261008/result.json",
+  "active_run": "./runs/cpt_10b_lr3e6_20261009",
+  "latest_observation_run": "runs/cpt_native_from0_5h_20261009",
+  "latest_diagnostic": "runs/cpt_causes_20261009/result.json",
+  "latest_seen_unseen_diagnostic": "./runs/cpt_seen_unseen_lr3e6_20261010/findings.json"
+}

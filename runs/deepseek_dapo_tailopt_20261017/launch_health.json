@@ -1,0 +1,44 @@
+{
+  "status": "small_benchmark_complete_main_resumed",
+  "utc": "2026-10-17T13:15:17.458143+00:00",
+  "selected_policy": "history_rank",
+  "paused_seconds": 763.024111032486,
+  "source_checkpoint_hashes_unchanged": {
+    "checkpoint_manifest.json": "96a9daf7e699b99e87091dcfb3f766ba6f706a9e3db876985e878ce7d9e668bb",
+    "model-00001-of-00002.safetensors": "8bf14ae180626ebaf3b87b46d11f56fbeace683d64e2ba89bde9a5261bf203b0",
+    "model-00002-of-00002.safetensors": "fd13a051ac772d85e3395c631bcb6e6416cd21bb38cb747c36bc894cd9ac17d6"
+  },
+  "main_completed_rounds_at_pause": 1936,
+  "test_checks_passed": 23,
+  "summary": {
+    "uniform": {
+      "effective_groups_per_second": 0.07276735676234776,
+      "mean_mixed_fraction": 0.06640625,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 1.0
+    },
+    "history_weighted": {
+      "effective_groups_per_second": 0.21055709760507862,
+      "mean_mixed_fraction": 0.2,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 2.893565287698176
+    },
+    "history_rank": {
+      "effective_groups_per_second": 0.2546610883650896,
+      "mean_mixed_fraction": 0.28125,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 3.499661107614392
+    },
+    "history_tail": {
+      "effective_groups_per_second": 0.22124738308590322,
+      "mean_mixed_fraction": 0.28125,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 3.0404757425569144
+    }
+  },
+  "probe_before_correct": 19,
+  "probe_after_correct": 17,
+  "probe_size": 64,
+  "probe_not_quality_guarantee": true,
+  "next_stage": "runs/deepseek_dapo_10k_20261017_tail_setup/transition_status.json"
+}

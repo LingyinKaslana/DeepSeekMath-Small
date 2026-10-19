@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "completed_rounds": 2,
+  "gradient_updates": 8,
+  "accepted_responses": 64,
+  "source_sft_unchanged": true,
+  "checkpoint_roundtrip": {
+    "status": "passed",
+    "weight_tensors": 219,
+    "optimizer_states": 219,
+    "completed_rounds": 2,
+    "gradient_updates": 8
+  },
+  "response_alignment": {
+    "status": "passed",
+    "response_tokens": 39,
+    "selected_response_nll": 0.16645483672618866,
+    "native_hf_answer_only_ce": 0.16645485162734985,
+    "absolute_difference": 1.4901161193847656e-08,
+    "tolerance": 0.03
+  },
+  "formal_initialization": "Original unchanged SFT best_checkpoint; fresh AdamW"
+}

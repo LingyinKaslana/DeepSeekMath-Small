@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-09T02:07:43.312592+00:00",
+  "checks": {
+    "cpu_tests": true,
+    "gpu_forced_retry": true,
+    "frozen_source_matches_smoke": true,
+    "launch_snapshot_hashes": true,
+    "backend_config_unchanged": true,
+    "only_source_signature_changed": true,
+    "original_signature_preserved": true,
+    "one_source_migration": true,
+    "schedule_unchanged": true,
+    "global_budget_unchanged": true,
+    "four_successful_updates": true,
+    "no_skipped_batch": true,
+    "no_unexpected_retry": true,
+    "initial_validation_exact": true,
+    "smoke_stopped_cleanly": true,
+    "recovery_checkpoint_published": true,
+    "recovery_checkpoint_exact_reload": true
+  },
+  "checkpoint_verification": "runs/cpt_failure_20261009/recovery_checkpoint_verification.json",
+  "regular_smoke_update_tokens_per_second": 98608.42313672844,
+  "evidence": {
+    "cpu_tests": "runs/cpt_failure_20261009/retry_cpu_verification.json",
+    "gpu_forced_retry": "runs/cpt_failure_20261009/retry_gpu_verification.json",
+    "original_checkpoint": "runs/cpt_failure_20261009/checkpoint_175000_verification.json",
+    "replay": "runs/cpt_failure_20261009/failure_review_summary.json",
+    "recovery_smoke": "runs/cpt_resume_guard_smoke_20261009/result.json"
+  },
+  "completed_utc": "2026-10-09T02:08:03.929637+00:00"
+}

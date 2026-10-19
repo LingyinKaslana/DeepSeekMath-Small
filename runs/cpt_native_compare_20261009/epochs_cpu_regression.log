@@ -1,0 +1,14 @@
+test_all_tail_prefixes_and_zero_target_updates (__main__.EpochTests.test_all_tail_prefixes_and_zero_target_updates) ... ok
+test_checksum_and_tail_metadata_rejection (__main__.EpochTests.test_checksum_and_tail_metadata_rejection) ... ok
+test_five_billion_budget_without_large_python_lists (__main__.EpochTests.test_five_billion_budget_without_large_python_lists) ... ok
+test_historical_first_shuffle_and_distinct_second (__main__.EpochTests.test_historical_first_shuffle_and_distinct_second) ... ok
+test_legacy_list_counter_and_rejection (__main__.EpochTests.test_legacy_list_counter_and_rejection) ... ok
+test_masked_tail_does_not_claim_compile_initialization (__main__.EpochTests.test_masked_tail_does_not_claim_compile_initialization) ... ok
+test_multi_epoch_stop_resume_pipeline_evidence (__main__.EpochTests.test_multi_epoch_stop_resume_pipeline_evidence) ... ok
+test_periodic_retention_preserves_foreign_and_epoch_checkpoints (__main__.EpochTests.test_periodic_retention_preserves_foreign_and_epoch_checkpoints) ... ok
+test_resume_on_both_sides_of_epoch_boundary_and_global_lr (__main__.EpochTests.test_resume_on_both_sides_of_epoch_boundary_and_global_lr) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.346s
+
+OK

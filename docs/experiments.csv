@@ -1,0 +1,75 @@
+experiment,family,status_at_snapshot,completed_rounds_or_steps,files,bytes
+base_math_inference_20261012,Qwen CPT/eval/diagnostic,complete_verified,,22,4708405
+base_vs_cpt_10b_20261012,Qwen CPT/eval/diagnostic,recorded,,9,8625442
+cpt_10b_20261008,Qwen CPT/eval/diagnostic,failed,,25,9162594
+cpt_10b_20261008_launch,Qwen CPT/eval/diagnostic,recorded,,16,704568
+cpt_10b_20261009_after_compare_launch,Qwen CPT/eval/diagnostic,recorded,,17,161654
+cpt_10b_20261009_after_native_compare,Qwen CPT/eval/diagnostic,stopped,181650,23,925054
+cpt_10b_20261009_native,Qwen CPT/eval/diagnostic,stopped,186317,27,2565132
+cpt_10b_20261009_resume_launch,Qwen CPT/eval/diagnostic,recorded,,18,174070
+cpt_10b_20261009_resumed,Qwen CPT/eval/diagnostic,stopped,179939,22,2111856
+cpt_10b_decay_5b_6b_20261010,Qwen CPT/eval/diagnostic,complete,305176,65,13398318
+cpt_10b_decay_5b_6b_20261010_launch,Qwen CPT/eval/diagnostic,recorded,,61,9786365
+cpt_10b_inference_20261012,Qwen CPT/eval/diagnostic,complete_verified,,36,7252904
+cpt_10b_lr3e6_20261009,Qwen CPT/eval/diagnostic,stopped,140508,55,8981361
+cpt_10b_lr3e6_20261009_launch,Qwen CPT/eval/diagnostic,recorded,,41,2006543
+cpt_calibration_20261008,Qwen CPT/eval/diagnostic,recorded,,2,1592
+cpt_calibration_v2_20261008,Qwen CPT/eval/diagnostic,recorded,,2,3823
+cpt_calibration_v3_20261008,Qwen CPT/eval/diagnostic,complete,,19,10438197
+cpt_calibration_v4_20261008,Qwen CPT/eval/diagnostic,complete,,19,10182161
+cpt_causes_20261009,Qwen CPT/eval/diagnostic,complete,,95,3587543
+cpt_decay_comparison_20261010,Qwen CPT/eval/diagnostic,recorded,,76,6192289
+cpt_failure_20261009,Qwen CPT/eval/diagnostic,recorded,,24,733099
+cpt_fast_pilot_10m_20261008,Qwen CPT/eval/diagnostic,complete,306,19,229456
+cpt_fast_pilot_10m_20261008_part1,Qwen CPT/eval/diagnostic,stopped,64,20,177411
+cpt_io_diagnostic_20261008,Qwen CPT/eval/diagnostic,recorded,,4,997981
+cpt_loss_rebound_web_review_20261010,Qwen CPT/eval/diagnostic,recorded,,1,11342
+cpt_multiepoch_smoke_20261008,Qwen CPT/eval/diagnostic,complete,66,22,172792
+cpt_multiepoch_smoke_20261008_part1,Qwen CPT/eval/diagnostic,stopped,34,23,181896
+cpt_native_compare_20261009,Qwen CPT/eval/diagnostic,recorded,,59,2334379
+cpt_native_from0_5h_20261009,Qwen CPT/eval/diagnostic,stopped,30860,32,5835220
+cpt_native_from0_5h_20261009_setup,Qwen CPT/eval/diagnostic,recorded,,38,920164
+cpt_native_long_20261009,Qwen CPT/eval/diagnostic,recorded,,66,1170754
+cpt_native_long_launch_20261009,Qwen CPT/eval/diagnostic,recorded,,24,304370
+cpt_nvperf_20261008,Qwen CPT/eval/diagnostic,recorded,,29,1837874
+cpt_optimization_20261008,Qwen CPT/eval/diagnostic,recorded,,252,9190608
+cpt_optimized_pilot_10m_20261008,Qwen CPT/eval/diagnostic,complete,306,17,232924
+cpt_optimized_pilot_10m_20261008_part1,Qwen CPT/eval/diagnostic,stopped,64,18,165902
+cpt_pilot_10m_20261008,Qwen CPT/eval/diagnostic,complete,,12,128785
+cpt_resume_guard_smoke_20261009,Qwen CPT/eval/diagnostic,stopped,175004,22,263238
+cpt_seen_unseen_lr3e6_20261010,Qwen CPT/eval/diagnostic,recorded,,37,719911
+cpt_smoke_20261008,Qwen CPT/eval/diagnostic,passed,,1,1510
+cpt_stable_pilot_10m_20261008,Qwen CPT/eval/diagnostic,complete,306,19,235737
+cpt_stable_pilot_10m_20261008_part1,Qwen CPT/eval/diagnostic,stopped,64,20,177257
+cpt_validation_curve_20261009,Qwen CPT/eval/diagnostic,recorded,,9,1235723
+data_prepare_5b_20261008,Qwen CPT/eval/diagnostic,recorded,,6,84791
+deepseek_base_vs_10b_20261015,DeepSeek CPT/eval,recorded,,9,8629007
+deepseek_coder_10b_inference_20261015,DeepSeek CPT/eval,complete_verified,,23,4260332
+deepseek_coder_1p3b_10b_20261012,DeepSeek CPT/eval,complete,305176,40,18390534
+deepseek_coder_1p3b_10b_20261012_setup,DeepSeek CPT/eval,complete_verified,,54,3388187
+deepseek_coder_1p3b_10b_extension_smoke_20261012,DeepSeek CPT/eval,stopped,15291,29,496431
+deepseek_coder_1p3b_500m_20261012,DeepSeek CPT/eval,complete,15259,29,7901386
+deepseek_coder_1p3b_500m_20261012_setup,DeepSeek CPT/eval,complete_verified,,53,1426123
+deepseek_coder_1p3b_smoke_20261012,DeepSeek CPT/eval,complete,32,26,254538
+deepseek_coder_base_inference_20261015,DeepSeek CPT/eval,complete_verified,,25,4268898
+deepseek_dapo_100r_20261015,RL,complete_verified,100,28,2663288
+deepseek_dapo_100r_20261015_setup,RL,failed,,17,82194
+deepseek_dapo_100r_20261015_setup_v2,RL,running,,35,323742
+deepseek_dapo_100r_20261015_setup_v3,RL,failed,,21,114432
+deepseek_dapo_100r_20261015_setup_v4,RL,running,,18,130098
+deepseek_dapo_100r_20261015_setup_v5,RL,complete_verified,,40,9934980
+deepseek_dapo_10k_20261016,RL,sampling,2411,89,48400379
+deepseek_dapo_10k_20261016_setup,RL,superseded_at_checkpoint,,26,1354595
+deepseek_dapo_10k_20261017_tail_setup,RL,failed,,38,8049339
+deepseek_dapo_10k_20261018_recovery_setup,RL,running,,31,9025829
+deepseek_dapo_decode_20261015,RL,recorded,,6,423873
+deepseek_dapo_profile_20261015,RL,recorded,,4,890793
+deepseek_dapo_recovery_20261015,RL,recorded,,6,12677
+deepseek_dapo_tailopt_20261017,RL,recorded,,23,2431520
+deepseek_dapo_tuning_20261015,RL,recorded,,10,318889
+deepseek_group_length_shadow_20261015,RL,recorded,,8,81049
+deepseek_length2048_20261015,DeepSeek CPT/eval,complete_verified,,49,9571136
+deepseek_sft_gsm_math_20261015,SFT,complete,1356,11,495493
+deepseek_sft_gsm_math_20261015_setup,SFT,complete_verified,,48,6547948
+deepseek_sft_length2048_20261015,SFT,complete_verified,,33,4495715
+deepseek_sft_smoke_v2_20261015,SFT,stopped,16,9,20079

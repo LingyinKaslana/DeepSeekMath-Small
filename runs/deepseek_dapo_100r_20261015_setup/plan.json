@@ -1,0 +1,30 @@
+{
+  "algorithm": "DAPO",
+  "source_checkpoint": "./runs/deepseek_sft_gsm_math_20261015/best_checkpoint",
+  "rounds": 100,
+  "effective_groups_per_round": 32,
+  "responses_per_group": 8,
+  "accepted_responses": 25600,
+  "optimizer_minibatch_responses": 64,
+  "gradient_updates_per_round": 4,
+  "planned_gradient_updates": 400,
+  "learning_rate": 1e-06,
+  "warmup_rounds": 10,
+  "generation_limit": 2048,
+  "soft_penalty_start": 1536,
+  "clip_low": 0.2,
+  "clip_high": 0.28,
+  "kl_loss": false,
+  "training_data": "Existing GSM8K SFT training subset, 7217 questions",
+  "validation": "Existing isolated GSM8K SFT validation subset, 256 questions",
+  "max_candidate_groups_per_round": 512,
+  "smoke": "2 rounds, 4 effective groups/round, 8 responses/group, minibatch 8; 8 gradient updates; isolated output; restart formal run from original SFT checkpoint",
+  "diagnostic_prompts": 256,
+  "final_evaluation": "Validation-selected checkpoint; official full GSM8K/MATH, native greedy 1024, batch256, matched CPT/SFT reference",
+  "paper_reference": {
+    "url": "https://arxiv.org/html/2503.14476v2",
+    "local_pdf_sha256": "1648856fa5f41c511d164328d42bab3616af161ba6a9b51736892727e57714de",
+    "budget_basis": "About 1% of accepted response instances; not matched token count or FLOPs"
+  },
+  "formal_run": "./runs/deepseek_dapo_100r_20261015"
+}

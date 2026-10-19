@@ -1,0 +1,176 @@
+{"event": "model_loaded", "seconds": 3.5680527049989905, "parameters": 1543714304}
+W1008 06:05:13.936000 200342 torch/_logging/_internal.py:1199] [1/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+{
+  "measured_utc": "2026-10-08T06:05:55.233611+00:00",
+  "mode": "disposable full-parameter CPT",
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "sequence_length": 2048,
+  "batch": 16,
+  "backend_config": {
+    "schema_version": 1,
+    "validated": true,
+    "model": "Qwen/Qwen2.5-Coder-1.5B",
+    "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "micro_batch": 16,
+    "mask_policy": "causal",
+    "fused_optimizer": false,
+    "options": {
+      "kernels": "native",
+      "loss": "native",
+      "chunk_mem_const": 1,
+      "compile_scope": "model",
+      "compile_mode": "default",
+      "compile_shape": [
+        16,
+        2048
+      ],
+      "compile_fullgraph": true,
+      "rms_in_place": false,
+      "emulate_precision_casts": true,
+      "compile_label_alias": "same_as_input",
+      "preserve_silu": false,
+      "ce_chunk_rows": 4096
+    },
+    "validation_evidence": {
+      "benchmark_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam_tailguard/result.json",
+      "production_numerical_result": "./runs/cpt_optimization_20261008/production_flash_numerics_deterministic/result.json",
+      "optimizer_check_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam/optimizer_check.json",
+      "strict_production_numerical_check_passed": false,
+      "initial_10m_training_result": "./runs/cpt_optimized_pilot_10m_20261008/result.json",
+      "checkpoint_verification": "./runs/cpt_optimization_20261008/initial_final_checkpoint_verification.json",
+      "native_ulp_sensitivity": "./runs/cpt_optimization_20261008/native_ulp_sensitivity.json",
+      "policy": "Useful for learning workflow/throughput experiments; not for a strictly identical native-gradient comparison. All numerical differences remain recorded; strict per-probe threshold is not relaxed or claimed passed.",
+      "selection_context": "User prioritizes learning the workflow, not paper metrics. Keep strict alternative and all drift diagnostics; no claim of per-probe equivalence."
+    },
+    "purpose": "High-throughput learning-workflow CPT backend with recorded compiler rounding differences",
+    "compiled_optimizer": true
+  },
+  "precision": "BF16 autocast; FP32 parameters, gradients, AdamW state",
+  "tool_command": [
+    "sudo",
+    "-n",
+    "/external/nvidia-perfsdk/Samples/NvPerfUtility/tools/build/bin/Monitoring",
+    "--device",
+    "0",
+    "--yaml",
+    "./runs/cpt_nvperf_20261008/optimized/gb110-llm-extended.yaml",
+    "-n",
+    "0.02",
+    "--max-buffer-duration",
+    "60",
+    "--csv",
+    "--output-csv",
+    "./runs/cpt_nvperf_20261008/optimized/training.csv",
+    "--csv-duration",
+    "24"
+  ],
+  "preset_sha256": "f15061398e84ae2aa93b98caf9322b6a1f3fccac27175820884f10465970ed06",
+  "tool_sha256": "ac49493d785558201f9c6db3d17a7feb84cd2ac1389917a7c9732f91feea2455",
+  "source_sha256": "4510a463bdb8a5b5d3fb543e1493263bb4e522b1d16247ad119ffc0fad9b18ce",
+  "counters_device_wide": true,
+  "csv_start_boundary": 1.0,
+  "csv_end_boundary": 11.84,
+  "steady_samples": 487,
+  "steady_duration_seconds": 9.74,
+  "monitored_tokens_per_second": 97366.61200727819,
+  "unmonitored_before_tokens_per_second": 98718.58010406363,
+  "unmonitored_after_tokens_per_second": 98305.99010669683,
+  "peak_allocated_bytes": 127410122240,
+  "peak_reserved_bytes": 135241138176,
+  "cuda_span_mean_ms": {
+    "input": 0.6713149957358837,
+    "forward_loss": 98.96959400177002,
+    "backward": 219.53317642211914,
+    "clip_check": 5.846245974302292,
+    "optimizer": 9.356407970190048
+  },
+  "cuda_span_caution": "Event-to-event spans include GPU work and host launch/synchronization gaps; not kernel self time",
+  "metrics": {
+    "SM active (%) (%)": {
+      "mean": 92.3278976714579,
+      "p10": 90.6829884,
+      "p50": 94.418253,
+      "p90": 96.39904,
+      "max": 99.476453
+    },
+    "Warp occupancy while SM active (%) (%)": {
+      "mean": 29.161594246406572,
+      "p10": 24.356891400000002,
+      "p50": 26.015487,
+      "p90": 42.704319200000015,
+      "max": 65.717036
+    },
+    "Tensor pipe active (%) (%)": {
+      "mean": 53.96112948870636,
+      "p10": 35.5591322,
+      "p50": 56.644163,
+      "p90": 61.69105840000001,
+      "max": 87.984483
+    },
+    "HBM read (GB/s) (bytes / second)": {
+      "mean": 1722.0644244147843,
+      "p10": 1548.000727,
+      "p50": 1732.321587,
+      "p90": 1912.6984524000006,
+      "max": 2655.505997
+    },
+    "HBM write (GB/s) (bytes / second)": {
+      "mean": 785.9235885482548,
+      "p10": 554.7088308,
+      "p50": 630.408307,
+      "p90": 1124.9127348000006,
+      "max": 1403.83351
+    },
+    "L2 hit rate (%) (%)": {
+      "mean": 54.05623847433264,
+      "p10": 47.648906,
+      "p50": 54.384301,
+      "p90": 58.526564,
+      "max": 67.217414
+    },
+    "SM clock (GHz) (gpc_cycles / second)": {
+      "mean": 1.7390716160164268,
+      "p10": 1.6363568,
+      "p50": 1.757992,
+      "p90": 1.813314,
+      "max": 1.946035
+    },
+    "L2 clock (GHz) (fbp_cycles / second)": {
+      "mean": 1.8030330492813142,
+      "p10": 1.7557314,
+      "p50": 1.805722,
+      "p90": 1.8449639999999998,
+      "max": 1.911997
+    },
+    "PCIe read (GB/s) (bytes / second)": {
+      "mean": 0.002760897330595482,
+      "p10": 0.001101,
+      "p50": 0.002944,
+      "p90": 0.003635,
+      "max": 0.010086
+    },
+    "PCIe write (GB/s) (bytes / second)": {
+      "mean": 0.002544227926078029,
+      "p10": 0.000922,
+      "p50": 0.002765,
+      "p90": 0.003251,
+      "max": 0.009293
+    },
+    "HBM throughput (%) (%)": {
+      "mean": 35.023695776180695,
+      "p10": 31.5288158,
+      "p50": 33.832177,
+      "p90": 38.5024,
+      "max": 50.266129
+    },
+    "L2 sector traffic (GB/s) (l2_sectors / second)": {
+      "mean": 8391.53399994661,
+      "p10": 7130.9018482,
+      "p50": 8127.160659,
+      "p90": 10177.0727368,
+      "max": 11813.780458
+    }
+  }
+}

@@ -1,0 +1,2968 @@
+{
+  "status": "completed",
+  "cpu_only": true,
+  "failure_kind": "The total norm of order 2.0 for gradients from `parameters` is non-finite, so it cannot be clipped. To disable this error and scale the gradients by the non-finite norm anyway, set `error_if_nonfinite=False`",
+  "last_successful_record": {
+    "step": 175996,
+    "loss": 1.6440527439117432,
+    "grad_norm": 2.262354612350464,
+    "epoch": 2,
+    "step_in_epoch": 23408,
+    "lr": 1e-05,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 5767033344,
+    "seconds": 0.3358495300053619,
+    "optimizer_applied": true,
+    "first_full_shape_update": false
+  },
+  "inferred_failed_update": 175997,
+  "inference_basis": "training.jsonl records every successful update; update raised in clip_grad_norm_ before optimizer and before completed_steps increment",
+  "epoch_1_based": 2,
+  "step_in_epoch_1_based": 23409,
+  "order_checksum_verified": "d522f0f1d149346e93da04800c666611fb3789df357343ac221de61a745f6f80",
+  "block_indices": [
+    1931057,
+    986267,
+    1838901,
+    1666841,
+    671534,
+    212149,
+    1982794,
+    2384173,
+    2288213,
+    1860944,
+    42451,
+    2097679,
+    422606,
+    893558,
+    960752,
+    1662557
+  ],
+  "input_tokens": 32768,
+  "supervised_tokens": 32752,
+  "blocks": [
+    {
+      "block_index": 1931057,
+      "start": 3954804736,
+      "end": 3954806784,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 1,
+      "maximum_token_id": 96478,
+      "unique_tokens": 824,
+      "token_entropy_bits": 8.628766553006198,
+      "most_common": [
+        {
+          "id": 13,
+          "count": 74,
+          "fraction": 0.0361328125,
+          "decoded": "."
+        },
+        {
+          "id": 11,
+          "count": 62,
+          "fraction": 0.0302734375,
+          "decoded": ","
+        },
+        {
+          "id": 279,
+          "count": 56,
+          "fraction": 0.02734375,
+          "decoded": " the"
+        },
+        {
+          "id": 311,
+          "count": 40,
+          "fraction": 0.01953125,
+          "decoded": " to"
+        },
+        {
+          "id": 358,
+          "count": 33,
+          "fraction": 0.01611328125,
+          "decoded": " I"
+        },
+        {
+          "id": 16,
+          "count": 31,
+          "fraction": 0.01513671875,
+          "decoded": "1"
+        },
+        {
+          "id": 315,
+          "count": 30,
+          "fraction": 0.0146484375,
+          "decoded": " of"
+        },
+        {
+          "id": 264,
+          "count": 28,
+          "fraction": 0.013671875,
+          "decoded": " a"
+        }
+      ],
+      "longest_same_token_run": 3,
+      "longest_same_token_run_start": 1269,
+      "longest_same_token_run_id": 15,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 9,
+          "tokens": [
+            382,
+            16,
+            13,
+            220
+          ],
+          "decoded": ".\n\n1. "
+        },
+        "8": {
+          "maximum_occurrences": 2,
+          "tokens": [
+            2409,
+            293,
+            62273,
+            11,
+            369,
+            752,
+            518,
+            3245
+          ],
+          "decoded": " big bummer, for me at least"
+        }
+      },
+      "decoded_prefix": "perhaps even proofs in tractable cases). If there isn’t, then what we’re testing is my understanding of the requirements - am I able to write tests which highlight my lack of understanding?\n\nI’ve worked on a project with dedicated BAs who could always tell me exactly what should happen in any specific scenario, but whenever they tried to write a specification it didn’t correspond to their examples. In the end I just asked them for examples and wrote the simplest code that made those test cases pass. So maybe the use case is when the domain itself isn’t formally understood?\n\n1. 5\n\nThough it didn’t turn out to be more than a week or two of headache, I have sometimes found myself given examples by a client having the flavor of the voting paradox. There’d be examples like “if such and such happens, then Concern A trumps Concern B,” “but if so and so happens, then Concern B trumps Concern A,” and so",
+      "documents": [
+        {
+          "text_sha256": "514331098c26da65a5aebb1eba2d4f0d94b39c345e9bba1a9161e281a79a2f6c",
+          "url": "https://lobste.rs/threads/twopoint718",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 986267,
+      "start": 2019874816,
+      "end": 2019876864,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 3,
+      "maximum_token_id": 144300,
+      "unique_tokens": 722,
+      "token_entropy_bits": 8.311041806626585,
+      "most_common": [
+        {
+          "id": 279,
+          "count": 84,
+          "fraction": 0.041015625,
+          "decoded": " the"
+        },
+        {
+          "id": 13,
+          "count": 83,
+          "fraction": 0.04052734375,
+          "decoded": "."
+        },
+        {
+          "id": 315,
+          "count": 58,
+          "fraction": 0.0283203125,
+          "decoded": " of"
+        },
+        {
+          "id": 264,
+          "count": 48,
+          "fraction": 0.0234375,
+          "decoded": " a"
+        },
+        {
+          "id": 311,
+          "count": 46,
+          "fraction": 0.0224609375,
+          "decoded": " to"
+        },
+        {
+          "id": 11,
+          "count": 45,
+          "fraction": 0.02197265625,
+          "decoded": ","
+        },
+        {
+          "id": 323,
+          "count": 35,
+          "fraction": 0.01708984375,
+          "decoded": " and"
+        },
+        {
+          "id": 220,
+          "count": 29,
+          "fraction": 0.01416015625,
+          "decoded": " "
+        }
+      ],
+      "longest_same_token_run": 2,
+      "longest_same_token_run_start": 25,
+      "longest_same_token_run_id": 15,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 5,
+          "tokens": [
+            4503,
+            316,
+            7068,
+            7875
+          ],
+          "decoded": " photomultiplier"
+        },
+        "8": {
+          "maximum_occurrences": 2,
+          "tokens": [
+            220,
+            17,
+            20,
+            13,
+            19,
+            9961,
+            57960,
+            15136
+          ],
+          "decoded": " 25.4 cm $\\times"
+        }
+      },
+      "decoded_prefix": " an actual attenuation of approximately 62.6\\%, the resulting optical signal would have energies on the order of 300 keVee. As a result, we were able to conclude that a detector with this geometry would be optically viable.\nFrequently, in nuclear physics research, nuclear events are studied using the electrical or optical signals they produce in various materials. Research relating to neutrons has an especially strong need for robust and efficient signal classification algorithms that can be adapted quickly to varying materials and experiment types. Previous methods are considered, and a new graphically-driven software-based pulse shape discrimination approach is proposed. Our implementation of the method is explained in detail. Use of the method at BYU has significantly reduced the time required to begin new neutron-related research projects and adapt to changes in experimental setup. Furthermore, it has dramatically increased user understanding of the pulse classification process, reduced the number of errors made, and helped identify mistakes made in processing previous datasets",
+      "documents": [
+        {
+          "text_sha256": "8b2e856fe0486fa2279da02d0fa187c93e40b3f054de1cc8ea62b8e6bb448683",
+          "url": "https://physics.byu.edu/faculty/rees/theses",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 1838901,
+      "start": 3766069248,
+      "end": 3766071296,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 11,
+      "maximum_token_id": 145584,
+      "unique_tokens": 420,
+      "token_entropy_bits": 7.46431831006859,
+      "most_common": [
+        {
+          "id": 220,
+          "count": 77,
+          "fraction": 0.03759765625,
+          "decoded": " "
+        },
+        {
+          "id": 13,
+          "count": 58,
+          "fraction": 0.0283203125,
+          "decoded": "."
+        },
+        {
+          "id": 279,
+          "count": 56,
+          "fraction": 0.02734375,
+          "decoded": " the"
+        },
+        {
+          "id": 198,
+          "count": 53,
+          "fraction": 0.02587890625,
+          "decoded": "\n"
+        },
+        {
+          "id": 16,
+          "count": 44,
+          "fraction": 0.021484375,
+          "decoded": "1"
+        },
+        {
+          "id": 1975,
+          "count": 40,
+          "fraction": 0.01953125,
+          "decoded": "over"
+        },
+        {
+          "id": 90,
+          "count": 40,
+          "fraction": 0.01953125,
+          "decoded": "{"
+        },
+        {
+          "id": 1056,
+          "count": 38,
+          "fraction": 0.0185546875,
+          "decoded": "line"
+        }
+      ],
+      "longest_same_token_run": 2,
+      "longest_same_token_run_start": 560,
+      "longest_same_token_run_id": 16,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 22,
+          "tokens": [
+            59,
+            1975,
+            1056,
+            90
+          ],
+          "decoded": "\\overline{"
+        },
+        "8": {
+          "maximum_occurrences": 15,
+          "tokens": [
+            92,
+            1124,
+            443,
+            70,
+            1124,
+            1975,
+            1056,
+            90
+          ],
+          "decoded": "} \\cong \\overline{"
+        }
+      },
+      "decoded_prefix": "3\nProve ∠1 is a complement of ∠3.\n\n Statements Reasons 1. ∠1 is a complement of ∠2. 1. Given 2. ∠2 ≅ ∠3 2. _____________________________ 3. m∠1 + m∠2 = 90° 3. _____________________________ 4. m∠2 = m∠3 4.  Definition of congruent angles 5. _____________________________ 5. Substitution Property Of Equality 6. ∠1 is a complement of ∠3. 6. _____________________________\n Statements Reasons 1. ∠1 is a complement of ∠2. 1. Given 2. ∠2 ≅ ∠3 2. Given 3. m∠1 + m∠2 = 90° 3. Definition of complementary angles 4. m∠2 = m",
+      "documents": [
+        {
+          "text_sha256": "bf69c67c7ad2b8e49584a17e0e74aa4ae787fe24f03981b86c68642c58ac85c3",
+          "url": "https://bigideasmathanswer.com/big-ideas-math-geometry-answers-chapter-2/",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 1666841,
+      "start": 3413690368,
+      "end": 3413692416,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 7,
+      "maximum_token_id": 96660,
+      "unique_tokens": 370,
+      "token_entropy_bits": 7.379240147681212,
+      "most_common": [
+        {
+          "id": 92,
+          "count": 76,
+          "fraction": 0.037109375,
+          "decoded": "}"
+        },
+        {
+          "id": 1124,
+          "count": 69,
+          "fraction": 0.03369140625,
+          "decoded": " \\"
+        },
+        {
+          "id": 609,
+          "count": 64,
+          "fraction": 0.03125,
+          "decoded": " &"
+        },
+        {
+          "id": 17,
+          "count": 64,
+          "fraction": 0.03125,
+          "decoded": "2"
+        },
+        {
+          "id": 42,
+          "count": 59,
+          "fraction": 0.02880859375,
+          "decoded": "K"
+        },
+        {
+          "id": 90,
+          "count": 56,
+          "fraction": 0.02734375,
+          "decoded": "{"
+        },
+        {
+          "id": 16,
+          "count": 40,
+          "fraction": 0.01953125,
+          "decoded": "1"
+        },
+        {
+          "id": 25,
+          "count": 38,
+          "fraction": 0.0185546875,
+          "decoded": ":"
+        }
+      ],
+      "longest_same_token_run": 2,
+      "longest_same_token_run_start": 1426,
+      "longest_same_token_run_id": 549,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 18,
+          "tokens": [
+            90,
+            65,
+            18110,
+            92
+          ],
+          "decoded": "{bmatrix}"
+        },
+        "8": {
+          "maximum_occurrences": 7,
+          "tokens": [
+            609,
+            284,
+            609,
+            1124,
+            7265,
+            90,
+            65,
+            18110
+          ],
+          "decoded": " & = & \\begin{bmatrix"
+        }
+      },
+      "decoded_prefix": "eqnarray} Or equivalently: .. math:: x_t = F_t x_{t-1} + w_t,\\ w_t \\sim \\mathcal{N}(0,Q_t) where: .. math:: x & = & \\begin{bmatrix} x_{pos} \\\\ x_{vel} \\end{bmatrix} .. math:: F_t & = & \\begin{bmatrix} 1 & \\frac{1}{K}(1 - e^{-Kdt})\\\\ 0 & e^{-Kdt} \\end{bmatrix} .. math:: Q_t & = & \\begin{bmatrix} \\frac{dt - \\frac{2}{K}(1 - e^{-Kdt}) + \\frac{1}{2K}(1 - e^{-2Kdt})}{K^2} & \\frac{\\frac{1}{K}(1 - e^{-Kdt}) - \\frac{",
+      "documents": [
+        {
+          "text_sha256": "4468b39b1baa7d28e093197009fe3e758d6d23c02d89b45d0fa7048cd56a625a",
+          "url": "https://stonesoup.readthedocs.io/en/v0.1b9/_modules/stonesoup/models/transition/linear.html",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 671534,
+      "start": 1375301632,
+      "end": 1375303680,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 8,
+      "maximum_token_id": 98721,
+      "unique_tokens": 909,
+      "token_entropy_bits": 8.805579356970888,
+      "most_common": [
+        {
+          "id": 279,
+          "count": 86,
+          "fraction": 0.0419921875,
+          "decoded": " the"
+        },
+        {
+          "id": 11,
+          "count": 72,
+          "fraction": 0.03515625,
+          "decoded": ","
+        },
+        {
+          "id": 315,
+          "count": 47,
+          "fraction": 0.02294921875,
+          "decoded": " of"
+        },
+        {
+          "id": 311,
+          "count": 38,
+          "fraction": 0.0185546875,
+          "decoded": " to"
+        },
+        {
+          "id": 609,
+          "count": 33,
+          "fraction": 0.01611328125,
+          "decoded": " &"
+        },
+        {
+          "id": 382,
+          "count": 29,
+          "fraction": 0.01416015625,
+          "decoded": ".\n\n"
+        },
+        {
+          "id": 304,
+          "count": 29,
+          "fraction": 0.01416015625,
+          "decoded": " in"
+        },
+        {
+          "id": 13,
+          "count": 27,
+          "fraction": 0.01318359375,
+          "decoded": "."
+        }
+      ],
+      "longest_same_token_run": 3,
+      "longest_same_token_run_start": 1297,
+      "longest_same_token_run_id": 15,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 2,
+          "tokens": [
+            382,
+            1357,
+            52324,
+            785
+          ],
+          "decoded": ".\n\n##########\n\nThe"
+        },
+        "8": {
+          "maximum_occurrences": 1,
+          "tokens": [
+            358,
+            6925,
+            387,
+            2952,
+            311,
+            2906,
+            498,
+            304
+          ],
+          "decoded": " I’d be able to school you in"
+        }
+      },
+      "decoded_prefix": " I’d be able to school you in 500 Chars, nor would I-wish to anyway.\n\n##########\n\nSteel girders “Dystifying in mid air?” Saw it on the second day.\n\nThe CGI nose separated from the CGO plane because some of the ppl working for the Jews who pulled the 911 treason were Jewish themselves & basically meant to make trouble for the big lie you now live by.\n\n##########\n\nThe O\\T sacrifices were whistle blowing on something much deeper & darker in human history within Baal Molech worship cults relating to human sacrifice & the ritual cannibalistic consumption of human flesh, which by the way was practiced by Herod, by Saul, by popes in the Dark Ages, Templars + pre-Masonic post Templar groups during the times when martyrs & even so called “WITCHES” were burnt at the stake. It was endemic in the “Hellfire Clubs",
+      "documents": [
+        {
+          "text_sha256": "4c858658aa3b9eef606fcc3cd4715b3dc8f5b61b29cc70c93d02a2c71d25fdfb",
+          "url": "https://spacelizardlaw.wordpress.com/2013/06/19/little-logic-bombs-to-spark-a-thought-or-two/",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 212149,
+      "start": 434481152,
+      "end": 434483200,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 2,
+      "maximum_token_id": 151643,
+      "unique_tokens": 610,
+      "token_entropy_bits": 8.092137632034868,
+      "most_common": [
+        {
+          "id": 17,
+          "count": 68,
+          "fraction": 0.033203125,
+          "decoded": "2"
+        },
+        {
+          "id": 92,
+          "count": 49,
+          "fraction": 0.02392578125,
+          "decoded": "}"
+        },
+        {
+          "id": 279,
+          "count": 46,
+          "fraction": 0.0224609375,
+          "decoded": " the"
+        },
+        {
+          "id": 16,
+          "count": 44,
+          "fraction": 0.021484375,
+          "decoded": "1"
+        },
+        {
+          "id": 11,
+          "count": 43,
+          "fraction": 0.02099609375,
+          "decoded": ","
+        },
+        {
+          "id": 264,
+          "count": 38,
+          "fraction": 0.0185546875,
+          "decoded": " a"
+        },
+        {
+          "id": 15159,
+          "count": 37,
+          "fraction": 0.01806640625,
+          "decoded": "_{"
+        },
+        {
+          "id": 374,
+          "count": 35,
+          "fraction": 0.01708984375,
+          "decoded": " is"
+        }
+      ],
+      "longest_same_token_run": 3,
+      "longest_same_token_run_start": 1618,
+      "longest_same_token_run_id": 15,
+      "special_counts": {
+        "151643": 4
+      },
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 8,
+          "tokens": [
+            81,
+            15159,
+            16,
+            92
+          ],
+          "decoded": "r_{1}"
+        },
+        "8": {
+          "maximum_occurrences": 3,
+          "tokens": [
+            320,
+            81,
+            15159,
+            16,
+            92,
+            10,
+            435,
+            15159
+          ],
+          "decoded": " (r_{1}+ r_{"
+        }
+      },
+      "decoded_prefix": " radius of the given cylinder, $$\\mathbf{r_{2}}$$ is inner radius and $$\\mathbf{h}$$ is height. $$\\mathbf{C_{1}}$$ is the outer circumference and $$\\mathbf{C_{2}}$$ is the inner circumference. L1 and L2 is the outer and inner surface areas respectively. t be the thickness of the cylinder ($$\\mathbf{r_{1}- r_{2}}$$)\n\nArea of Hollow Cylinder formulas:\n\nThe Circumference of a circle (C) is given by:\n\n$$C = 2\\pi r$$, therefore,$$C_{1} = 2\\pi r_{1}$$ $$C_{2} = 2\\pi r_{2}$$\n\nThe Lateral Surface Area (L),for a cylinder is:\n\n$$L = C \\times h = 2 \\pi r h$$, therefore,\n$$",
+      "documents": [
+        {
+          "text_sha256": "d34889b96b311a62b1f7e1da2e7347b236c3dae6d54bb3c058e55e5dd195f5c6",
+          "url": "https://eguruchela.com/math/calculator/hollow-cyclinder-calculator.php",
+          "overlap_tokens": 532
+        },
+        {
+          "text_sha256": "90e613abdf6f840c2029f89b4b36395ca5a42022217a93cebc58bb04676f4726",
+          "url": "https://queirozf.com/entries/apache-spark-architecture-overview-clusters-jobs-stages-tasks",
+          "overlap_tokens": 458
+        },
+        {
+          "text_sha256": "8c613aa18a5faf03f42c320780c63d841292a3de8286ceb41af2c938bb9f9031",
+          "url": "http://owenduffy.net/blog/?p=899",
+          "overlap_tokens": 690
+        },
+        {
+          "text_sha256": "bd2e0fb5d81cfa96e9116c59c2fa96204aa42f0b2c9690cbe6b36ca62d3928e5",
+          "url": "https://socratic.org/questions/57fe8e0411ef6b206e078627",
+          "overlap_tokens": 274
+        },
+        {
+          "text_sha256": "44ea83610676e526c0cdc036a4a723efdfab124c51ca7c48cc8d0a44c6148900",
+          "url": "https://tex.stackexchange.com/questions/239780/minted-caching-in-tikz-externalize-job",
+          "overlap_tokens": 94
+        }
+      ]
+    },
+    {
+      "block_index": 1982794,
+      "start": 4060762112,
+      "end": 4060764160,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 3,
+      "maximum_token_id": 95099,
+      "unique_tokens": 672,
+      "token_entropy_bits": 8.27423585925451,
+      "most_common": [
+        {
+          "id": 11,
+          "count": 65,
+          "fraction": 0.03173828125,
+          "decoded": ","
+        },
+        {
+          "id": 315,
+          "count": 65,
+          "fraction": 0.03173828125,
+          "decoded": " of"
+        },
+        {
+          "id": 279,
+          "count": 64,
+          "fraction": 0.03125,
+          "decoded": " the"
+        },
+        {
+          "id": 4102,
+          "count": 41,
+          "fraction": 0.02001953125,
+          "decoded": " "
+        },
+        {
+          "id": 264,
+          "count": 37,
+          "fraction": 0.01806640625,
+          "decoded": " a"
+        },
+        {
+          "id": 374,
+          "count": 31,
+          "fraction": 0.01513671875,
+          "decoded": " is"
+        },
+        {
+          "id": 400,
+          "count": 30,
+          "fraction": 0.0146484375,
+          "decoded": " $"
+        },
+        {
+          "id": 13,
+          "count": 28,
+          "fraction": 0.013671875,
+          "decoded": "."
+        }
+      ],
+      "longest_same_token_run": 1,
+      "longest_same_token_run_start": 0,
+      "longest_same_token_run_id": 76491,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 13,
+          "tokens": [
+            57960,
+            10374,
+            13233,
+            90
+          ],
+          "decoded": " $\\mathbf{"
+        },
+        "8": {
+          "maximum_occurrences": 2,
+          "tokens": [
+            26351,
+            13664,
+            315,
+            57960,
+            10374,
+            13233,
+            90,
+            9701
+          ],
+          "decoded": " morphisms of $\\mathbf{Conn"
+        }
+      },
+      "decoded_prefix": "Lie(H)$-valued 2-forms.)\n\nThe morphisms of $\\mathbf{Conn}$ are one type of “gauge transformation”: namely, those which assign $H$-holonomies to edges. (Or: $Lie(H)$-valued 1-forms). They affect the edge holonomies of a connection just like a 2-morphism in $\\mathcal{G}$.  Face holonomies are affected by the $H$-value that comes from the boundary of the face.\n\nWhat’s physically significant here is that both objects and morphisms of $\\mathbf{Conn}$ describe nonlocal geometric information.  They describe holonomies over edges and surfaces: not what happens at a point.  The “2-group of gauge transformations”, which we call $\\mathbf{Gauge}$, on the other hand, is purely about local transformations.  If $V$ is the vertex set of the discretized manifold",
+      "documents": [
+        {
+          "text_sha256": "84a24eeed603f6f3e22445e11f94ef6cba2c93cc983a8c633bbb542464b591f2",
+          "url": "http://theoreticalatlas.wordpress.com/category/2-groups/",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 2384173,
+      "start": 4882786304,
+      "end": 4882788352,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 1,
+      "maximum_token_id": 151643,
+      "unique_tokens": 761,
+      "token_entropy_bits": 8.5987105484429,
+      "most_common": [
+        {
+          "id": 279,
+          "count": 71,
+          "fraction": 0.03466796875,
+          "decoded": " the"
+        },
+        {
+          "id": 11,
+          "count": 59,
+          "fraction": 0.02880859375,
+          "decoded": ","
+        },
+        {
+          "id": 13,
+          "count": 49,
+          "fraction": 0.02392578125,
+          "decoded": "."
+        },
+        {
+          "id": 374,
+          "count": 34,
+          "fraction": 0.0166015625,
+          "decoded": " is"
+        },
+        {
+          "id": 429,
+          "count": 31,
+          "fraction": 0.01513671875,
+          "decoded": " that"
+        },
+        {
+          "id": 311,
+          "count": 28,
+          "fraction": 0.013671875,
+          "decoded": " to"
+        },
+        {
+          "id": 315,
+          "count": 27,
+          "fraction": 0.01318359375,
+          "decoded": " of"
+        },
+        {
+          "id": 264,
+          "count": 26,
+          "fraction": 0.0126953125,
+          "decoded": " a"
+        }
+      ],
+      "longest_same_token_run": 3,
+      "longest_same_token_run_start": 953,
+      "longest_same_token_run_id": 15,
+      "special_counts": {
+        "151643": 1
+      },
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 13,
+          "tokens": [
+            608,
+            7791,
+            58343,
+            67479
+          ],
+          "decoded": " /sys/kernel/debug"
+        },
+        "8": {
+          "maximum_occurrences": 4,
+          "tokens": [
+            861,
+            608,
+            7791,
+            58343,
+            67479,
+            21485,
+            4527,
+            74053
+          ],
+          "decoded": " > /sys/kernel/debug/tracing/current"
+        }
+      },
+      "decoded_prefix": " still think there are plenty of [opportunities] that merit equity investment; Coinbase is a prime example of an equity investment, not a token investment, but we’re increasingly doing a lot in the token space. I would say, the majority of our funds are deployed in tokens. And when you’re talking about tokens, you want to have really thought through token economics at the outset. Has the team set aside enough tokens for the community? Once the protocol is live, what does that look like? Are they going to Airdrop tokens? What’s their go-to-market strategy? Are they incentivizing early employees with tokens? So I would say the token economic model is something that we look at very heavily.\n\nTC: Are you saying that the firm is looking at buying tokens, meaning buying slugs of currency, versus investing in foundational technology?\n\nKH: We see tokens as foundational technology because we see these protocols, in many cases, as foundational technology.\n\n",
+      "documents": [
+        {
+          "text_sha256": "cefe2b6ff5f487d644eca20e1301dadef55714f8a729977db290d6e4bd553797",
+          "url": "https://hyperedge.tech/2021/04/16/katie-haun-on-saying-yes-to-coinbase-and-where-a16zs-crypto-fund-is-placing-its-bets-now/",
+          "overlap_tokens": 1074
+        },
+        {
+          "text_sha256": "b1a9c72d10528dd1f6732177f4612dd58300e6f853b4b332f67117645462eb4a",
+          "url": "https://doc.kusakata.com/trace/mmiotrace.html",
+          "overlap_tokens": 974
+        }
+      ]
+    },
+    {
+      "block_index": 2288213,
+      "start": 4686260224,
+      "end": 4686262272,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 8,
+      "maximum_token_id": 85857,
+      "unique_tokens": 232,
+      "token_entropy_bits": 6.076984062730694,
+      "most_common": [
+        {
+          "id": 15,
+          "count": 200,
+          "fraction": 0.09765625,
+          "decoded": "0"
+        },
+        {
+          "id": 353,
+          "count": 190,
+          "fraction": 0.0927734375,
+          "decoded": " *"
+        },
+        {
+          "id": 13,
+          "count": 157,
+          "fraction": 0.07666015625,
+          "decoded": "."
+        },
+        {
+          "id": 22,
+          "count": 83,
+          "fraction": 0.04052734375,
+          "decoded": "7"
+        },
+        {
+          "id": 17,
+          "count": 74,
+          "fraction": 0.0361328125,
+          "decoded": "2"
+        },
+        {
+          "id": 220,
+          "count": 64,
+          "fraction": 0.03125,
+          "decoded": " "
+        },
+        {
+          "id": 481,
+          "count": 59,
+          "fraction": 0.02880859375,
+          "decoded": " -"
+        },
+        {
+          "id": 23,
+          "count": 52,
+          "fraction": 0.025390625,
+          "decoded": "8"
+        }
+      ],
+      "longest_same_token_run": 3,
+      "longest_same_token_run_start": 351,
+      "longest_same_token_run_id": 353,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 31,
+          "tokens": [
+            353,
+            481,
+            15,
+            13
+          ],
+          "decoded": " * -0."
+        },
+        "8": {
+          "maximum_occurrences": 4,
+          "tokens": [
+            16,
+            17,
+            353,
+            353,
+            353,
+            481,
+            15,
+            13
+          ],
+          "decoded": "12 * * * -0."
+        }
+      },
+      "decoded_prefix": ". According to the definition of the correlation, one can call it also as the standardized covariance.\n\nThe maximum possible value of the correlation (the so-called correlation coefficient) could be 1, the minimum could be -1. In the first case there is a perfect positive (thus in the second case there is a perfect negative) linear relationship between the two variables, though perfect relationships, especially in the social sciences, are quite rare. If two variables are independent from each other, the correlation between them is 0, but 0 correlation coefficient only means certainly a linear independency.\n\nBecause extreme values occur seldom we have rule of thumbs for the coefficients, like other fields of statistics:\n\n• we call two variables highly correlated if the absolute value of the correlation coefficient between them is higher than 0.7 and\n• we call them uncorrelated if that is smaller than 0.2.\n\nPlease note that correlation has nothing to do with causal models,",
+      "documents": [
+        {
+          "text_sha256": "31aa048cce633c7f488849e5d393c3350f934961500156dd68509f6ed8850fe8",
+          "url": "http://rapport-package.info/demo/Correlation.html",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 1860944,
+      "start": 3811213312,
+      "end": 3811215360,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 11,
+      "maximum_token_id": 98744,
+      "unique_tokens": 471,
+      "token_entropy_bits": 6.679118894064699,
+      "most_common": [
+        {
+          "id": 624,
+          "count": 256,
+          "fraction": 0.125,
+          "decoded": ".\n"
+        },
+        {
+          "id": 198,
+          "count": 256,
+          "fraction": 0.125,
+          "decoded": "\n"
+        },
+        {
+          "id": 345,
+          "count": 81,
+          "fraction": 0.03955078125,
+          "decoded": ",\n"
+        },
+        {
+          "id": 15,
+          "count": 71,
+          "fraction": 0.03466796875,
+          "decoded": "0"
+        },
+        {
+          "id": 16,
+          "count": 65,
+          "fraction": 0.03173828125,
+          "decoded": "1"
+        },
+        {
+          "id": 17,
+          "count": 50,
+          "fraction": 0.0244140625,
+          "decoded": "2"
+        },
+        {
+          "id": 24,
+          "count": 43,
+          "fraction": 0.02099609375,
+          "decoded": "9"
+        },
+        {
+          "id": 18,
+          "count": 33,
+          "fraction": 0.01611328125,
+          "decoded": "3"
+        }
+      ],
+      "longest_same_token_run": 3,
+      "longest_same_token_run_start": 698,
+      "longest_same_token_run_id": 15,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 25,
+          "tokens": [
+            624,
+            17,
+            15,
+            15
+          ],
+          "decoded": ".\n200"
+        },
+        "8": {
+          "maximum_occurrences": 5,
+          "tokens": [
+            624,
+            624,
+            17,
+            15,
+            15,
+            24,
+            198,
+            624
+          ],
+          "decoded": ".\n.\n2009\n.\n"
+        }
+      },
+      "decoded_prefix": "\n:\n5768\n5779\n.\nS.A.\n,\nRosbash\nM.\n.\n2005\n.\nCotranscriptional spliceosome assembly dynamics and the role of U1 snRNA:5’ss base pairing in yeast\n.\nMol. Cell.\n19\n:\n65\n75\n.\nLamond\nA.I.\n,\nSpector\nD.L.\n.\n2003\n.\nNuclear speckles: a model for nuclear organelles\n.\nNat. Rev. Mol. Cell Biol.\n4\n:\n605\n612\n.\nLeMaire\nM.F.\n,\nThummel\nC.S.\n.\n1990\n.\nSplicing precedes polyadenylation during Drosophila E74A transcription\n.\nMol. Cell. Biol.\n10\n:\n6059\n6063\n.\n",
+      "documents": [
+        {
+          "text_sha256": "6cc8834027425b325408a1adaa08f3d2643a8cbf000540670c8612767c48c2ef",
+          "url": "https://rupress.org/jcb/article/191/1/75/35946/The-differential-interaction-of-snRNPs-with-pre",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 42451,
+      "start": 86939648,
+      "end": 86941696,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 1,
+      "maximum_token_id": 96254,
+      "unique_tokens": 429,
+      "token_entropy_bits": 7.680298733128915,
+      "most_common": [
+        {
+          "id": 284,
+          "count": 68,
+          "fraction": 0.033203125,
+          "decoded": " ="
+        },
+        {
+          "id": 16,
+          "count": 58,
+          "fraction": 0.0283203125,
+          "decoded": "1"
+        },
+        {
+          "id": 17,
+          "count": 46,
+          "fraction": 0.0224609375,
+          "decoded": "2"
+        },
+        {
+          "id": 3,
+          "count": 43,
+          "fraction": 0.02099609375,
+          "decoded": "$"
+        },
+        {
+          "id": 18,
+          "count": 42,
+          "fraction": 0.0205078125,
+          "decoded": "3"
+        },
+        {
+          "id": 220,
+          "count": 39,
+          "fraction": 0.01904296875,
+          "decoded": " "
+        },
+        {
+          "id": 7,
+          "count": 37,
+          "fraction": 0.01806640625,
+          "decoded": "("
+        },
+        {
+          "id": 82,
+          "count": 36,
+          "fraction": 0.017578125,
+          "decoded": "s"
+        }
+      ],
+      "longest_same_token_run": 2,
+      "longest_same_token_run_start": 1066,
+      "longest_same_token_run_id": 16,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 13,
+          "tokens": [
+            284,
+            10254,
+            2324,
+            7
+          ],
+          "decoded": " = PopUp("
+        },
+        "8": {
+          "maximum_occurrences": 11,
+          "tokens": [
+            20,
+            258,
+            52398,
+            79,
+            90,
+            15,
+            13,
+            20
+          ],
+          "decoded": "5in}|p{0.5"
+        }
+      },
+      "decoded_prefix": " \"niceTables.pl\", \"PGcourse.pl\", \"PGchoicemacros.pl\", \"answerHints.pl\", \"weightedGrader.pl\" ); install_weighted_grader(); #Text(beginproblem()); #uncomment #install_problem_grader(~~&std_problem_grader);$showPartialCorrectAnswers = 1;\n\nContext(\"Numeric\");\nParser::Number::NoDecimals($context); # we want the exact value of critical numbers Context()->flags->set( tolerance => 0.01, tolType => \"absolute\", ); ############ Start Problem HW 1.8 ################# #$a = non_zero_random(-7,7);\n#$c = non_zero_random(-7,7); # do {$b = non_zero_random(-13,13); } until ($b**2 > 3*$a*$c); ## forcing all real domain with 2 cp.$d = non_zero_random(-15,15",
+      "documents": [
+        {
+          "text_sha256": "ff2abf4489e9996ed41b65b150efc7a97491154fdc6288c3f1cd3063228a4d5f",
+          "url": "https://webwork.maa.org/moodle/mod/forum/discuss.php?d=4135",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 2097679,
+      "start": 4296046592,
+      "end": 4296048640,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 4,
+      "maximum_token_id": 97915,
+      "unique_tokens": 613,
+      "token_entropy_bits": 7.591490686699468,
+      "most_common": [
+        {
+          "id": 11,
+          "count": 140,
+          "fraction": 0.068359375,
+          "decoded": ","
+        },
+        {
+          "id": 13,
+          "count": 107,
+          "fraction": 0.05224609375,
+          "decoded": "."
+        },
+        {
+          "id": 16,
+          "count": 80,
+          "fraction": 0.0390625,
+          "decoded": "1"
+        },
+        {
+          "id": 15,
+          "count": 69,
+          "fraction": 0.03369140625,
+          "decoded": "0"
+        },
+        {
+          "id": 17,
+          "count": 69,
+          "fraction": 0.03369140625,
+          "decoded": "2"
+        },
+        {
+          "id": 220,
+          "count": 55,
+          "fraction": 0.02685546875,
+          "decoded": " "
+        },
+        {
+          "id": 25,
+          "count": 38,
+          "fraction": 0.0185546875,
+          "decoded": ":"
+        },
+        {
+          "id": 315,
+          "count": 37,
+          "fraction": 0.01806640625,
+          "decoded": " of"
+        }
+      ],
+      "longest_same_token_run": 3,
+      "longest_same_token_run_start": 496,
+      "longest_same_token_run_id": 24,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 16,
+          "tokens": [
+            13,
+            220,
+            17,
+            15
+          ],
+          "decoded": ". 20"
+        },
+        "8": {
+          "maximum_occurrences": 5,
+          "tokens": [
+            506,
+            20576,
+            658,
+            968,
+            337,
+            11203,
+            42955,
+            33276
+          ],
+          "decoded": " Otolaryngol Head Neck Surg"
+        }
+      },
+      "decoded_prefix": " for evaluation of dysphagia and odynophagia. Head Face Med. 2009;5:9.\n4. Vaiman M, Nahlieli O, Segal S, Eviatar E. Electromyography monitoring of patients with salivary gland diseases. Otolaryngol Head Neck Surg. 2005;133(6):869-73.\n5. Vaiman M, Nahlieli O, Eliav E. Odynophagia in patients after dental extraction: surface electromyography study. Head and Face. 2007;2:34-40.\n6. Vaiman M, Krakovski D, Gavriel H. Swallowing before and after tonsillectomy as evaluated by surface electromyography. Otolaryngol Head Neck Surg. 2007;",
+      "documents": [
+        {
+          "text_sha256": "453eeee34d3fa2a83529d1d2dd6640e75d53fee8ca0f78319f0edd678ac13fb3",
+          "url": "https://www.jkds.org/journal/view.html?uid=169",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 422606,
+      "start": 865497088,
+      "end": 865499136,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 0,
+      "maximum_token_id": 151643,
+      "unique_tokens": 615,
+      "token_entropy_bits": 8.104664103789114,
+      "most_common": [
+        {
+          "id": 279,
+          "count": 81,
+          "fraction": 0.03955078125,
+          "decoded": " the"
+        },
+        {
+          "id": 11,
+          "count": 71,
+          "fraction": 0.03466796875,
+          "decoded": ","
+        },
+        {
+          "id": 264,
+          "count": 49,
+          "fraction": 0.02392578125,
+          "decoded": " a"
+        },
+        {
+          "id": 13,
+          "count": 48,
+          "fraction": 0.0234375,
+          "decoded": "."
+        },
+        {
+          "id": 315,
+          "count": 45,
+          "fraction": 0.02197265625,
+          "decoded": " of"
+        },
+        {
+          "id": 15,
+          "count": 45,
+          "fraction": 0.02197265625,
+          "decoded": "0"
+        },
+        {
+          "id": 311,
+          "count": 42,
+          "fraction": 0.0205078125,
+          "decoded": " to"
+        },
+        {
+          "id": 374,
+          "count": 37,
+          "fraction": 0.01806640625,
+          "decoded": " is"
+        }
+      ],
+      "longest_same_token_run": 5,
+      "longest_same_token_run_start": 1784,
+      "longest_same_token_run_id": 15,
+      "special_counts": {
+        "151643": 2
+      },
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 10,
+          "tokens": [
+            15,
+            15,
+            15,
+            15
+          ],
+          "decoded": "0000"
+        },
+        "8": {
+          "maximum_occurrences": 4,
+          "tokens": [
+            387,
+            458,
+            1334,
+            315,
+            279,
+            1852,
+            3084,
+            438
+          ],
+          "decoded": " be an array of the same length as"
+        }
+      },
+      "decoded_prefix": "while global size of Q > 0\n\nreturn localOrder\n```\n\nThe communication cost depends heavily on the given graph partition. As for runtime, on a CRCW-PRAM model that allows fetch-and-decrement in constant time, this algorithm runs in\n\n${textstyle {mathcal {O}}left({frac {m+n}{p}}+D(Delta +log n)right)}$\n\n, where D is again the longest path in G and Δ the maximum degree.[7]\n\n## Application to shortest path finding\n\nThe topological ordering can also be used to quickly compute shortest paths through a weighted directed acyclic graph. Let V be the list of vertices in such a graph, in topological order. Then the following algorithm computes the shortest path from some source vertex s to all other vertices:[3]\n\n• Let d be an array of the same length as V; this will hold the shortest-path distances from s. Set d[s]",
+      "documents": [
+        {
+          "text_sha256": "4f33fd85630f2558799ce8078e10b5d3fa986616d660e5684d450189749858a8",
+          "url": "https://wiki.edu.vn/en/wiki14/topological-sorting-wikipedia/",
+          "overlap_tokens": 1298
+        },
+        {
+          "text_sha256": "4747438b9758f25045bdd415e1325b9264358f3e6257e602484dbebd3b1b08fa",
+          "url": "https://motls.blogspot.com/2010/11/penn-teller-bullshit-global-warming.html?m=1",
+          "overlap_tokens": 149
+        },
+        {
+          "text_sha256": "5f5c919c5badaedfee3fe8cc3859fc82a7cc64d29322903ab4e3340c2528a0e9",
+          "url": "http://midnattssolsrallyt.com.php54.levonline.com/k7ueskrz/553e18-transitive-boolean-matrix",
+          "overlap_tokens": 601
+        }
+      ]
+    },
+    {
+      "block_index": 893558,
+      "start": 1830006784,
+      "end": 1830008832,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 0,
+      "maximum_token_id": 135777,
+      "unique_tokens": 474,
+      "token_entropy_bits": 7.375824710965942,
+      "most_common": [
+        {
+          "id": 16,
+          "count": 113,
+          "fraction": 0.05517578125,
+          "decoded": "1"
+        },
+        {
+          "id": 220,
+          "count": 73,
+          "fraction": 0.03564453125,
+          "decoded": " "
+        },
+        {
+          "id": 15,
+          "count": 71,
+          "fraction": 0.03466796875,
+          "decoded": "0"
+        },
+        {
+          "id": 17,
+          "count": 68,
+          "fraction": 0.033203125,
+          "decoded": "2"
+        },
+        {
+          "id": 24,
+          "count": 62,
+          "fraction": 0.0302734375,
+          "decoded": "9"
+        },
+        {
+          "id": 13,
+          "count": 55,
+          "fraction": 0.02685546875,
+          "decoded": "."
+        },
+        {
+          "id": 22,
+          "count": 50,
+          "fraction": 0.0244140625,
+          "decoded": "7"
+        },
+        {
+          "id": 11,
+          "count": 49,
+          "fraction": 0.02392578125,
+          "decoded": ","
+        }
+      ],
+      "longest_same_token_run": 4,
+      "longest_same_token_run_start": 1447,
+      "longest_same_token_run_id": 24,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 12,
+          "tokens": [
+            67,
+            37018,
+            90,
+            16
+          ],
+          "decoded": "dfrac{1"
+        },
+        "8": {
+          "maximum_occurrences": 8,
+          "tokens": [
+            26888,
+            90,
+            17,
+            3417,
+            90,
+            17,
+            11035,
+            1291
+          ],
+          "decoded": "sqrt{2}}{2}\\right"
+        }
+      },
+      "decoded_prefix": " not converge to 0, but are bounded by 1.\n\nNow we simply apply all this with\n\n$$a_k = \\dfrac{1}{2k}$$\n\nand get that the sum above is equal to 1/2.\n\nFor the records, we study the conclusion (1) in more detail. First of all for positive a_l between 0 and 1, we get\n\n$$\\sum\\limits_{k=1}^\\infty a_l = \\infty \\quad\\Leftrightarrow\\quad \\prod\\limits_{l=1}^\\infty (1-a_l) = 0.$$\n\nWe can use the estimate\n\n$$– 2h \\le \\log(1-h) \\le -h \\qquad\\text{for } 0 \\le h < \\dfrac{1}{2}<h$$\n\nfor this. In case, infinitely many a(l) are larger",
+      "documents": [
+        {
+          "text_sha256": "abe6d0fd9868c58be07d0b17047bf4a27d38818cd183c0ffe467e5867b305930",
+          "url": "http://observations.rene-grothmann.de/page/2/",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 960752,
+      "start": 1967620096,
+      "end": 1967622144,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 0,
+      "maximum_token_id": 125419,
+      "unique_tokens": 797,
+      "token_entropy_bits": 8.434679348295887,
+      "most_common": [
+        {
+          "id": 279,
+          "count": 89,
+          "fraction": 0.04345703125,
+          "decoded": " the"
+        },
+        {
+          "id": 13,
+          "count": 88,
+          "fraction": 0.04296875,
+          "decoded": "."
+        },
+        {
+          "id": 11,
+          "count": 51,
+          "fraction": 0.02490234375,
+          "decoded": ","
+        },
+        {
+          "id": 311,
+          "count": 43,
+          "fraction": 0.02099609375,
+          "decoded": " to"
+        },
+        {
+          "id": 315,
+          "count": 42,
+          "fraction": 0.0205078125,
+          "decoded": " of"
+        },
+        {
+          "id": 264,
+          "count": 39,
+          "fraction": 0.01904296875,
+          "decoded": " a"
+        },
+        {
+          "id": 220,
+          "count": 34,
+          "fraction": 0.0166015625,
+          "decoded": " "
+        },
+        {
+          "id": 323,
+          "count": 33,
+          "fraction": 0.01611328125,
+          "decoded": " and"
+        }
+      ],
+      "longest_same_token_run": 2,
+      "longest_same_token_run_start": 760,
+      "longest_same_token_run_id": 18,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 7,
+          "tokens": [
+            220,
+            21,
+            220,
+            21
+          ],
+          "decoded": " 6 6"
+        },
+        "8": {
+          "maximum_occurrences": 5,
+          "tokens": [
+            220,
+            21,
+            220,
+            21,
+            220,
+            21,
+            220,
+            21
+          ],
+          "decoded": " 6 6 6 6"
+        }
+      },
+      "decoded_prefix": " use autograd to compute the gradient vector field, and plot it with Matplotlib's quiver method. Output: Congratulations for making it this far!. (b)The trick in transforming the unconstrained problem minimize kAx bk 1 (1) into a constrained linear programming problem is to characterise the 1-norm as the solution of a minimization problem. from mlxtend. It was initially explored in earnest by Jerome Friedman in the paper Greedy Function Approximation: A Gradient Boosting Machine. Note that we examine the whole data set in every step; for much larger data sets, SGD (Stochastic Gradient Descent) with some reasonable mini-batch would make more sense, but for simple linear regression problems the data size is rarely very big. Lab08: Conjugate Gradient Descent¶. We will start with some value of 𝛉 and keep on changing the values until we get the Minimum value of J(�",
+      "documents": [
+        {
+          "text_sha256": "ca306240206f1f7cb6dd6681a28f6386ada1ca5e257cdd2b5d47be6340284e26",
+          "url": "http://mondoleskiteampratonevoso.it/dnlk/gradient-descent-contour-plot-python.html",
+          "overlap_tokens": 2048
+        }
+      ]
+    },
+    {
+      "block_index": 1662557,
+      "start": 3404916736,
+      "end": 3404918784,
+      "is_tail": false,
+      "n": 2048,
+      "minimum_token_id": 0,
+      "maximum_token_id": 146720,
+      "unique_tokens": 257,
+      "token_entropy_bits": 6.891745477912159,
+      "most_common": [
+        {
+          "id": 14193,
+          "count": 119,
+          "fraction": 0.05810546875,
+          "decoded": "[t"
+        },
+        {
+          "id": 17,
+          "count": 66,
+          "fraction": 0.0322265625,
+          "decoded": "2"
+        },
+        {
+          "id": 16,
+          "count": 63,
+          "fraction": 0.03076171875,
+          "decoded": "1"
+        },
+        {
+          "id": 8465,
+          "count": 63,
+          "fraction": 0.03076171875,
+          "decoded": "]*"
+        },
+        {
+          "id": 77,
+          "count": 62,
+          "fraction": 0.0302734375,
+          "decoded": "n"
+        },
+        {
+          "id": 23986,
+          "count": 60,
+          "fraction": 0.029296875,
+          "decoded": "*n"
+        },
+        {
+          "id": 60,
+          "count": 59,
+          "fraction": 0.02880859375,
+          "decoded": "]"
+        },
+        {
+          "id": 595,
+          "count": 55,
+          "fraction": 0.02685546875,
+          "decoded": " k"
+        }
+      ],
+      "longest_same_token_run": 2,
+      "longest_same_token_run_start": 75,
+      "longest_same_token_run_id": 15,
+      "special_counts": {},
+      "repeated_ngrams": {
+        "4": {
+          "maximum_occurrences": 45,
+          "tokens": [
+            14193,
+            60,
+            488,
+            595
+          ],
+          "decoded": "[t] + k"
+        },
+        "8": {
+          "maximum_occurrences": 20,
+          "tokens": [
+            14193,
+            8465,
+            77,
+            46761,
+            14193,
+            60,
+            488,
+            595
+          ],
+          "decoded": "[t]*nOH[t] + k"
+        }
+      },
+      "decoded_prefix": "Φ_] := Tsup[Φ]*[(1 - Sqrt[1 - (Rsup[Φ]/r)^2])]^4; Having t[r_,Φ_] for each 'r', I can calculate 'k', wich goes from k1 to k143, to each t[r_,Φ_]: ki = α*(t[r,Φ]/300)^βExp[-ɣt[r,Φ]] Then I can finally calcute the molecular concentration profiles by solving a system of 50 non-linear, stiff, ordinary and coupled differential equations. Here an example with three of those equations. nH'[t] == ((k17*nH2[t]*nO[t] + k18*nH2[t]*nOH[t] + k21*nC[t]*nOH[t] + k62*nO[t]*nOH[t] + k97*nOH[t]*nCO[t",
+      "documents": [
+        {
+          "text_sha256": "3f0254ffc4f4b0256f8734173a260f890d6185c28ad43f5b65e90e1794f04c27",
+          "url": "https://mathematica.stackexchange.com/posts/82922/revisions",
+          "overlap_tokens": 2048
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://lobste.rs/threads/twopoint718",
+      "text_sha256": "514331098c26da65a5aebb1eba2d4f0d94b39c345e9bba1a9161e281a79a2f6c",
+      "source_shard": "data/train-00096-of-00114-1c45362bad7ef7b7.parquet",
+      "row_group": 11,
+      "row_in_group": 953,
+      "document_tokens_with_eos": 8954,
+      "used_tokens": 8954,
+      "token_offset": 3954800743,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 39287,
+        "text_prefix": "1. 1\n\nThis is really cool. Thanks for the post!\n\n1. 2\n\nIt’s hard to google for but I remember hearing about a language (ALGOL?) which specified a “typeset syntax.” Keywords are set in bold, identifiers in italic, etc. It seems that this could be a very readable sort of syntax highlighting as well.\n\n1. 2\n\nI’ve used AsciiDoc for a book that I’ve been writing. I found that it lies somewhere between L"
+      }
+    },
+    {
+      "url": "https://physics.byu.edu/faculty/rees/theses",
+      "text_sha256": "8b2e856fe0486fa2279da02d0fa187c93e40b3f054de1cc8ea62b8e6bb448683",
+      "source_shard": "data/train-00112-of-00114-5fdaac128cc9daa8.parquet",
+      "row_group": 11,
+      "row_in_group": 272,
+      "document_tokens_with_eos": 6168,
+      "used_tokens": 6168,
+      "token_offset": 2019873095,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 31242,
+        "text_prefix": "# Theses\n\n## Theses, Captstones, and Dissertations\n\nData acquisition systems used for spectroscopy have undergone many changes over the past several years. Rapid changes in both hardware and software cause these systems to become obsolete very quickly. A new technology known as waveform digitization has recently become available. In principle, waveform digitizers could replace several components o"
+      }
+    },
+    {
+      "url": "https://bigideasmathanswer.com/big-ideas-math-geometry-answers-chapter-2/",
+      "text_sha256": "bf69c67c7ad2b8e49584a17e0e74aa4ae787fe24f03981b86c68642c58ac85c3",
+      "source_shard": "data/train-00053-of-00114-974473259757634e.parquet",
+      "row_group": 25,
+      "row_in_group": 218,
+      "document_tokens_with_eos": 34212,
+      "used_tokens": 34212,
+      "token_offset": 3766047141,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 114435,
+        "text_prefix": "# Big Ideas Math Geometry Answers Chapter 2 Reasoning and Proofs\n\nReasoning and Proofs Chapter Answers provided are aligned as per the Big Ideas Math Geometry Textbooks. Have an overview of the concepts you need to learn in BIM Geometry Ch 2 Reasoning and Proofs and test your understanding. Master the topics of BIM Geometry Chapter 2 Reasoning and Proofs by practicing from the quick links availabl"
+      }
+    },
+    {
+      "url": "https://stonesoup.readthedocs.io/en/v0.1b9/_modules/stonesoup/models/transition/linear.html",
+      "text_sha256": "4468b39b1baa7d28e093197009fe3e758d6d23c02d89b45d0fa7048cd56a625a",
+      "source_shard": "data/train-00043-of-00114-2313cb610d98e99d.parquet",
+      "row_group": 4,
+      "row_in_group": 956,
+      "document_tokens_with_eos": 5894,
+      "used_tokens": 5894,
+      "token_offset": 3413687382,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 18327,
+        "text_prefix": "Source code for stonesoup.models.transition.linear\n\n# -*- coding: utf-8 -*-\nimport math\nfrom typing import Sequence\nfrom functools import lru_cache\n\nimport numpy as np\nfrom scipy.linalg import block_diag\n\nfrom .base import TransitionModel, CombinedGaussianTransitionModel\nfrom ..base import (LinearModel, GaussianModel, TimeVariantModel,\nTimeInvariantModel)\nfrom ...base import Property\nfrom ...types"
+      }
+    },
+    {
+      "url": "https://spacelizardlaw.wordpress.com/2013/06/19/little-logic-bombs-to-spark-a-thought-or-two/",
+      "text_sha256": "4c858658aa3b9eef606fcc3cd4715b3dc8f5b61b29cc70c93d02a2c71d25fdfb",
+      "source_shard": "data/train-00037-of-00114-18f228cb81d4f382.parquet",
+      "row_group": 48,
+      "row_in_group": 613,
+      "document_tokens_with_eos": 10377,
+      "used_tokens": 10377,
+      "token_offset": 1375300965,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 44138,
+        "text_prefix": "## (Little logic bombs to spark a thought or two)\n\n.\n\n.\n\nPolitical philosophy & religious humour from the land of eternal hope & glory. (Snicker)\n\n.\n\n##########\n\n.\n\nI’d like to ‘PROVE’ all atheists & theists have no sense of humour, so here goes nothing.\n\nHeard the one about the choirboy & the cannibalistic bishop? The kid ended up fcuked.\n\n##########\n\nIn the beginning was a deity called Doug who "
+      }
+    },
+    {
+      "url": "https://eguruchela.com/math/calculator/hollow-cyclinder-calculator.php",
+      "text_sha256": "d34889b96b311a62b1f7e1da2e7347b236c3dae6d54bb3c058e55e5dd195f5c6",
+      "source_shard": "data/train-00074-of-00114-b9ba5eaf8a91adb0.parquet",
+      "row_group": 52,
+      "row_in_group": 455,
+      "document_tokens_with_eos": 763,
+      "used_tokens": 763,
+      "token_offset": 434480921,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 2346,
+        "text_prefix": "# Calculate Hollow cylinder volume, area, surface area and circumference\n\nCalculate the various properties of a tube, also called a pipe or hollow cylinder for given values\n\n Cylinder outer radius value (r1): m Cylinder inner radius value (r2): m Cylinder height (L): m\n\n Circumference outer (C1) m Circumference inner (C2) m Lateral Surface Area outer (L1) m2 Lateral Surface Area inner (L2) m2 Area"
+      }
+    },
+    {
+      "url": "https://queirozf.com/entries/apache-spark-architecture-overview-clusters-jobs-stages-tasks",
+      "text_sha256": "90e613abdf6f840c2029f89b4b36395ca5a42022217a93cebc58bb04676f4726",
+      "source_shard": "data/train-00074-of-00114-b9ba5eaf8a91adb0.parquet",
+      "row_group": 52,
+      "row_in_group": 739,
+      "document_tokens_with_eos": 458,
+      "used_tokens": 458,
+      "token_offset": 434481684,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 1973,
+        "text_prefix": "# Apache Spark Architecture Overview: Jobs, Stages, Tasks, etc\n\nLast updated:\n\n## Cluster\n\nA Cluster is a group of JVMs (nodes) connected by the network, each of which runs Spark, either in Driver or Worker roles.\n\n## Driver\n\nThe Driver is one of the nodes in the Cluster.\n\nThe driver does not run computations (filter,map, reduce, etc).\n\nIt plays the role of a master node in the Spark cluster.\n\nWhe"
+      }
+    },
+    {
+      "url": "http://owenduffy.net/blog/?p=899",
+      "text_sha256": "8c613aa18a5faf03f42c320780c63d841292a3de8286ceb41af2c938bb9f9031",
+      "source_shard": "data/train-00074-of-00114-b9ba5eaf8a91adb0.parquet",
+      "row_group": 52,
+      "row_in_group": 304,
+      "document_tokens_with_eos": 690,
+      "used_tokens": 690,
+      "token_offset": 434482142,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 2916,
+        "text_prefix": "# Designing high performance VHF/UHF receive systems – Part 2\n\nG/T is defined as the ratio of antenna gain to total equivalent noise temperature.\n\nFor clarity, lets define those terms.\n\n## Gain\n\nGain of an antenna is defined (IEEE 1983) as the ratio of the radiation intensity, in a given direction, to the radiation intensity that would be obtained if the power accepted by the antenna were radiated"
+      }
+    },
+    {
+      "url": "https://socratic.org/questions/57fe8e0411ef6b206e078627",
+      "text_sha256": "bd2e0fb5d81cfa96e9116c59c2fa96204aa42f0b2c9690cbe6b36ca62d3928e5",
+      "source_shard": "data/train-00074-of-00114-b9ba5eaf8a91adb0.parquet",
+      "row_group": 52,
+      "row_in_group": 512,
+      "document_tokens_with_eos": 274,
+      "used_tokens": 274,
+      "token_offset": 434482832,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 711,
+        "text_prefix": "# Question #78627\n\nJan 18, 2017\n\n(A)\n\n#### Explanation:\n\nTwo given capacitors are connected as shown in figure above.\nThe total capacitance ${C}_{\\text{T}}$ can be found by\n\n${C}_{\\text{T}} = {C}_{1} + {C}_{2}$ .........(1)\n\nFor a charge $q$ given to the assembly\n\n${C}_{\\text{T}} = \\frac{q}{V}$\nwhere $V$ is voltage drop across capacitors and is equal for both capacitors.\n\nIf ${q}_{1} \\mathmr{and} "
+      }
+    },
+    {
+      "url": "https://tex.stackexchange.com/questions/239780/minted-caching-in-tikz-externalize-job",
+      "text_sha256": "44ea83610676e526c0cdc036a4a723efdfab124c51ca7c48cc8d0a44c6148900",
+      "source_shard": "data/train-00074-of-00114-b9ba5eaf8a91adb0.parquet",
+      "row_group": 52,
+      "row_in_group": 847,
+      "document_tokens_with_eos": 1277,
+      "used_tokens": 1277,
+      "token_offset": 434483106,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 4116,
+        "text_prefix": "Minted caching in tikz externalize job\n\nEnabled caching options for minted and tikz lead to unexpected and inefficient caching. For every tikz figure that is externalized, all minted code blocks of the main document are cached within the tikz cache directory. For documents with e.g. >50 figures and >100 code listings, caching takes a long time and uses more disk space than would be necessary.\n\nTo "
+      }
+    },
+    {
+      "url": "http://theoreticalatlas.wordpress.com/category/2-groups/",
+      "text_sha256": "84a24eeed603f6f3e22445e11f94ef6cba2c93cc983a8c633bbb542464b591f2",
+      "source_shard": "data/train-00064-of-00114-a54c530c88d036c8.parquet",
+      "row_group": 3,
+      "row_in_group": 485,
+      "document_tokens_with_eos": 36696,
+      "used_tokens": 36696,
+      "token_offset": 4060758252,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 148115,
+        "text_prefix": "Hamburg\n\nSince I moved to Hamburg,   Alessandro Valentino and I have been organizing one series of seminar talks whose goal is to bring people (mostly graduate students, and some postdocs and others) up to speed on the tools used in Jacob Lurie’s big paper on the classification of TQFT and proof of the Cobordism Hypothesis.  This is part of the Forschungsseminar (“research seminar”) for the workin"
+      }
+    },
+    {
+      "url": "https://hyperedge.tech/2021/04/16/katie-haun-on-saying-yes-to-coinbase-and-where-a16zs-crypto-fund-is-placing-its-bets-now/",
+      "text_sha256": "cefe2b6ff5f487d644eca20e1301dadef55714f8a729977db290d6e4bd553797",
+      "source_shard": "data/train-00003-of-00114-e7fc257ef044bc03.parquet",
+      "row_group": 8,
+      "row_in_group": 756,
+      "document_tokens_with_eos": 2999,
+      "used_tokens": 2999,
+      "token_offset": 4882784379,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 14324,
+        "text_prefix": "Coinbase, the newly public cryptocurrency exchange, has had it share of ups and downs. Still, the nearly nine-year-old, San Francisco-based outfit got a lot right ahead of its highly successful direct listing this week, including, seemingly, inviting in former federal prosecutor Katie Haun to join its board in 2017.\n\nAt the time, Haun had just spent 11 years working for the Justice Department, han"
+      }
+    },
+    {
+      "url": "https://doc.kusakata.com/trace/mmiotrace.html",
+      "text_sha256": "b1a9c72d10528dd1f6732177f4612dd58300e6f853b4b332f67117645462eb4a",
+      "source_shard": "data/train-00003-of-00114-e7fc257ef044bc03.parquet",
+      "row_group": 8,
+      "row_in_group": 626,
+      "document_tokens_with_eos": 1589,
+      "used_tokens": 1589,
+      "token_offset": 4882787378,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 6594,
+        "text_prefix": "# In-kernel memory-mapped I/O tracing¶\n\nHome page and links to optional user space tools:\n\nMMIO tracing was originally developed by Intel around 2003 for their Fault Injection Test Harness. In Dec 2006 - Jan 2007, using the code from Intel, Jeff Muizelaar created a tool for tracing MMIO accesses with the Nouveau project in mind. Since then many people have contributed.\n\nMmiotrace was built for rev"
+      }
+    },
+    {
+      "url": "http://rapport-package.info/demo/Correlation.html",
+      "text_sha256": "31aa048cce633c7f488849e5d393c3350f934961500156dd68509f6ed8850fe8",
+      "source_shard": "data/train-00017-of-00114-7680a1785b342d09.parquet",
+      "row_group": 19,
+      "row_in_group": 567,
+      "document_tokens_with_eos": 2801,
+      "used_tokens": 2801,
+      "token_offset": 4686259764,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 8418,
+        "text_prefix": "## Description\n\nThis template will return the correlation matrix of supplied numerical variables.\n\n### Introduction\n\nCorrelation is one of the most commonly used statistical tool. With the help of that we can get information about a possible linear relation between two variables. According to the definition of the correlation, one can call it also as the standardized covariance.\n\nThe maximum possi"
+      }
+    },
+    {
+      "url": "https://rupress.org/jcb/article/191/1/75/35946/The-differential-interaction-of-snRNPs-with-pre",
+      "text_sha256": "6cc8834027425b325408a1adaa08f3d2643a8cbf000540670c8612767c48c2ef",
+      "source_shard": "data/train-00101-of-00114-312d73b894e70a8a.parquet",
+      "row_group": 52,
+      "row_in_group": 89,
+      "document_tokens_with_eos": 16031,
+      "used_tokens": 16031,
+      "token_offset": 3811199752,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 54829,
+        "text_prefix": "Precursor messenger RNA (pre-mRNA) splicing is catalyzed by the spliceosome, a large ribonucleoprotein (RNP) complex composed of five small nuclear RNP particles (snRNPs) and additional proteins. Using live cell imaging of GFP-tagged snRNP components expressed at endogenous levels, we examined how the spliceosome assembles in vivo. A comprehensive analysis of snRNP dynamics in the cell nucleus ena"
+      }
+    },
+    {
+      "url": "https://webwork.maa.org/moodle/mod/forum/discuss.php?d=4135",
+      "text_sha256": "ff2abf4489e9996ed41b65b150efc7a97491154fdc6288c3f1cd3063228a4d5f",
+      "source_shard": "data/train-00080-of-00114-7e0742992331e6e4.parquet",
+      "row_group": 33,
+      "row_in_group": 377,
+      "document_tokens_with_eos": 3199,
+      "used_tokens": 3199,
+      "token_offset": 86939268,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 10126,
+        "text_prefix": "## 2017 Problem Authoring Workshop\n\n### Negative variables when squared stay negative?\n\nby tim Payer -\nNumber of replies: 3\nGreetings once again.\n\nI came across an error that was based on my assumption that when we square a negative variable that the negative is also squared but apparently this is not always the case? The only way I could get the negative to square to a positive was to enclose the"
+      }
+    },
+    {
+      "url": "https://www.jkds.org/journal/view.html?uid=169",
+      "text_sha256": "453eeee34d3fa2a83529d1d2dd6640e75d53fee8ca0f78319f0edd678ac13fb3",
+      "source_shard": "data/train-00004-of-00114-3158c787ea8296d3.parquet",
+      "row_group": 13,
+      "row_in_group": 39,
+      "document_tokens_with_eos": 19873,
+      "used_tokens": 19873,
+      "token_offset": 4296039292,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 63341,
+        "text_prefix": "검색\n검색 팝업 닫기\n\n## Original Article\n\nSplit Viewer\n\nJ Korean Dysphagia Soc 2021; 11(2): 128-136\n\nPublished online July 30, 2021 https://doi.org/10.34160/jkds.2021.11.2.007\n\n## Reliability of Suprahyoid and Infrahyoid Electromyographic Measurements during Swallowing in Healthy Subjects\n\nMyung Woo Park, M.D.1, Dongheon Lee, Ph.D.2, Han Gil Seo, M.D., Ph.D.1,7, Tai Ryoon Han, M.D., Ph.D.1, Jung Chan Lee,"
+      }
+    },
+    {
+      "url": "https://wiki.edu.vn/en/wiki14/topological-sorting-wikipedia/",
+      "text_sha256": "4f33fd85630f2558799ce8078e10b5d3fa986616d660e5684d450189749858a8",
+      "source_shard": "data/train-00108-of-00114-b910fc59043684fa.parquet",
+      "row_group": 36,
+      "row_in_group": 857,
+      "document_tokens_with_eos": 3875,
+      "used_tokens": 3875,
+      "token_offset": 865494511,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 15749,
+        "text_prefix": "# Topological sorting – Wikipedia\n\nNode ordering for directed acyclic graphs\n\nIn computer science, a topological sort or topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering. For instance, the vertices of the graph may represent tasks to be performed, and the edges may represen"
+      }
+    },
+    {
+      "url": "https://motls.blogspot.com/2010/11/penn-teller-bullshit-global-warming.html?m=1",
+      "text_sha256": "4747438b9758f25045bdd415e1325b9264358f3e6257e602484dbebd3b1b08fa",
+      "source_shard": "data/train-00108-of-00114-b910fc59043684fa.parquet",
+      "row_group": 36,
+      "row_in_group": 302,
+      "document_tokens_with_eos": 149,
+      "used_tokens": 149,
+      "token_offset": 865498386,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 613,
+        "text_prefix": "## Monday, November 22, 2010\n\n### Penn & Teller Bullshit: Global Warming\n\nIf you have 2x 15 minutes for some great fun, here is the Penn & Teller show on global warming:\n\nSee the playlist on YouTube... Go to the individual page if you see no video above.\n\nIt's hilariously entertaining and most of the people who fight against global warming in various ways - by stones in their pocket indulgences, a"
+      }
+    },
+    {
+      "url": "http://midnattssolsrallyt.com.php54.levonline.com/k7ueskrz/553e18-transitive-boolean-matrix",
+      "text_sha256": "5f5c919c5badaedfee3fe8cc3859fc82a7cc64d29322903ab4e3340c2528a0e9",
+      "source_shard": "data/train-00108-of-00114-b910fc59043684fa.parquet",
+      "row_group": 36,
+      "row_in_group": 170,
+      "document_tokens_with_eos": 5039,
+      "used_tokens": 5039,
+      "token_offset": 865498535,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 20461,
+        "text_prefix": "This is interesting, but not directly helpful. Ok, I have a 5x5 matrix here. It then shows how to find if a given relation is reflexive, symmetric, antisymmetric, or transitive and explains the logic behind the answer, then shows how to find the Boolean … Instead of using arithmetic operations, we can use logical operations. asked Mar 10 '09 at 21:48. Then, we add a single edge from one component "
+      }
+    },
+    {
+      "url": "http://observations.rene-grothmann.de/page/2/",
+      "text_sha256": "abe6d0fd9868c58be07d0b17047bf4a27d38818cd183c0ffe467e5867b305930",
+      "source_shard": "data/train-00060-of-00114-74ce66249e0d849b.parquet",
+      "row_group": 53,
+      "row_in_group": 793,
+      "document_tokens_with_eos": 6743,
+      "used_tokens": 6743,
+      "token_offset": 1830004092,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 21636,
+        "text_prefix": "## Journalists and Logic\n\nThe „Zeit“ titles „Die größte bekannte Primzahl ist gefunden“, in English „The biggest known prime number has been found“. The logic of this heading is so bizarre! The article is not saying much anyways.\n\n06. Januar 2018 von mga010\nKategorien: Uncategorized | Schreibe einen Kommentar\n\n## A Geometric Problem\n\nI found the following problem on my Google+ account: In the imag"
+      }
+    },
+    {
+      "url": "http://mondoleskiteampratonevoso.it/dnlk/gradient-descent-contour-plot-python.html",
+      "text_sha256": "ca306240206f1f7cb6dd6681a28f6386ada1ca5e257cdd2b5d47be6340284e26",
+      "source_shard": "data/train-00061-of-00114-d55caeba8fd91a9d.parquet",
+      "row_group": 51,
+      "row_in_group": 856,
+      "document_tokens_with_eos": 11763,
+      "used_tokens": 11763,
+      "token_offset": 1967618163,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 55012,
+        "text_prefix": "# Gradient Descent Contour Plot Python\n\nif not max. Gradient Descent Derivation 04 Mar 2014. A function to plot learning curves for classifiers. Do I have a mistake in the algorithm? The Algorithm : x = 0:0. 2D Contour Plot and Gradient Vector algorithms with a little too much momentum in the gradient descent update rule, as they may overshoot and end up in some local. The gradient descent algorit"
+      }
+    },
+    {
+      "url": "https://mathematica.stackexchange.com/posts/82922/revisions",
+      "text_sha256": "3f0254ffc4f4b0256f8734173a260f890d6185c28ad43f5b65e90e1794f04c27",
+      "source_shard": "data/train-00043-of-00114-2313cb610d98e99d.parquet",
+      "row_group": 28,
+      "row_in_group": 174,
+      "document_tokens_with_eos": 8204,
+      "used_tokens": 8204,
+      "token_offset": 3404912703,
+      "prefix_truncated": false,
+      "source_resolution": {
+        "url_equal": true,
+        "normalized_text_sha256_equal": true,
+        "token_roundtrip_equal": true,
+        "original_document_token_count_equal": true,
+        "text_characters": 20710,
+        "text_prefix": "# Return to Question\n\n Post Closed as \"off-topic\" by user9660, m_goldberg, MarcoB, Yves Klett, Öskå occurred Dec 24 '15 at 10:44 4 added 531 characters in body edited May 9 '15 at 15:32 André Oliveira 5355 bronze badges  Tsup[Φ_] := To + ΔT * Cos[Φ]; Rsup[Φ_] := Ro + ΔR * Cos[Φ + π]; To=2200 Ro=2.1 ΔT=440 ΔR=0.25  Having t[r_,Φ_] for each 'r', I can calculate 'k', wich goes from k1 to k143, to eac"
+      }
+    }
+  ],
+  "comparison_successful_batches": [
+    {
+      "step": 175996,
+      "indices": [
+        1249118,
+        1041362,
+        296628,
+        1416934,
+        59487,
+        1172849,
+        1334535,
+        620345,
+        1273043,
+        869815,
+        1402750,
+        336463,
+        249062,
+        1378036,
+        1849827,
+        1358925
+      ],
+      "block_statistics": [
+        {
+          "unique_tokens": 632,
+          "token_entropy_bits": 8.068431068271963,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 3
+          }
+        },
+        {
+          "unique_tokens": 577,
+          "token_entropy_bits": 7.523828693961379,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 183,
+          "token_entropy_bits": 5.041952851296645,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 684,
+          "token_entropy_bits": 8.403067398032793,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 677,
+          "token_entropy_bits": 8.35734539502901,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 518,
+          "token_entropy_bits": 7.540480445089728,
+          "longest_same_token_run": 9,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 304,
+          "token_entropy_bits": 6.626855815575826,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 686,
+          "token_entropy_bits": 8.182811653961306,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 3
+          }
+        },
+        {
+          "unique_tokens": 651,
+          "token_entropy_bits": 8.321328938244429,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 164,
+          "token_entropy_bits": 5.674643664614001,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 706,
+          "token_entropy_bits": 7.934806986783864,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 648,
+          "token_entropy_bits": 8.20311793639135,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 382,
+          "token_entropy_bits": 7.134331458696247,
+          "longest_same_token_run": 1,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 632,
+          "token_entropy_bits": 7.250567201623134,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 589,
+          "token_entropy_bits": 7.852185696909119,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 734,
+          "token_entropy_bits": 8.465360116122572,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        }
+      ]
+    },
+    {
+      "step": 175995,
+      "indices": [
+        1948116,
+        1527098,
+        337022,
+        784853,
+        1754617,
+        530442,
+        792879,
+        1665001,
+        1400405,
+        560560,
+        638167,
+        658740,
+        1814322,
+        688182,
+        887,
+        610421
+      ],
+      "block_statistics": [
+        {
+          "unique_tokens": 625,
+          "token_entropy_bits": 8.135243777421074,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 607,
+          "token_entropy_bits": 8.085394411233281,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 832,
+          "token_entropy_bits": 8.607678905424944,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 655,
+          "token_entropy_bits": 7.661639920894741,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 127,
+          "token_entropy_bits": 5.22386607782657,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 508,
+          "token_entropy_bits": 7.5584642577680805,
+          "longest_same_token_run": 13,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 800,
+          "token_entropy_bits": 8.626248822645328,
+          "longest_same_token_run": 6,
+          "special_counts": {
+            "151643": 4
+          }
+        },
+        {
+          "unique_tokens": 548,
+          "token_entropy_bits": 7.85888477579602,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 511,
+          "token_entropy_bits": 7.781983583592099,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 4
+          }
+        },
+        {
+          "unique_tokens": 515,
+          "token_entropy_bits": 7.643545556184092,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 174,
+          "token_entropy_bits": 4.4574133140339525,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 509,
+          "token_entropy_bits": 7.625103231153576,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 300,
+          "token_entropy_bits": 6.819080143561674,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 459,
+          "token_entropy_bits": 7.113728203717092,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 835,
+          "token_entropy_bits": 8.639022974304124,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 584,
+          "token_entropy_bits": 7.386715719232505,
+          "longest_same_token_run": 5,
+          "special_counts": {}
+        }
+      ]
+    },
+    {
+      "step": 175987,
+      "indices": [
+        1451663,
+        2239010,
+        1313307,
+        2316291,
+        1499429,
+        1838116,
+        2296806,
+        2104276,
+        1717793,
+        280237,
+        50177,
+        746582,
+        1849975,
+        2361304,
+        1120820,
+        1072059
+      ],
+      "block_statistics": [
+        {
+          "unique_tokens": 682,
+          "token_entropy_bits": 8.2439972025124,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 866,
+          "token_entropy_bits": 8.566735433275438,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 777,
+          "token_entropy_bits": 8.378309123243923,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 420,
+          "token_entropy_bits": 7.705271697034968,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 680,
+          "token_entropy_bits": 8.00099452328642,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 594,
+          "token_entropy_bits": 8.03346074941117,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 811,
+          "token_entropy_bits": 8.397994163084165,
+          "longest_same_token_run": 6,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 628,
+          "token_entropy_bits": 8.247132465517765,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 635,
+          "token_entropy_bits": 8.083512425911728,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 347,
+          "token_entropy_bits": 6.69962242101828,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 751,
+          "token_entropy_bits": 8.287684024333602,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 426,
+          "token_entropy_bits": 6.779253262478721,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 633,
+          "token_entropy_bits": 8.065569188738806,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 469,
+          "token_entropy_bits": 7.802545580096355,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 603,
+          "token_entropy_bits": 8.038324743145157,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 772,
+          "token_entropy_bits": 8.297385490742506,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        }
+      ]
+    },
+    {
+      "step": 175897,
+      "indices": [
+        931418,
+        1787200,
+        1375314,
+        417719,
+        1938135,
+        1710141,
+        948365,
+        2384890,
+        730688,
+        1632289,
+        1393092,
+        209289,
+        582610,
+        753545,
+        1200556,
+        774899
+      ],
+      "block_statistics": [
+        {
+          "unique_tokens": 600,
+          "token_entropy_bits": 8.076102664930623,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 4
+          }
+        },
+        {
+          "unique_tokens": 556,
+          "token_entropy_bits": 7.789464439373786,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 714,
+          "token_entropy_bits": 8.393696476231877,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 640,
+          "token_entropy_bits": 8.180541699720461,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 601,
+          "token_entropy_bits": 7.826608089861048,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 651,
+          "token_entropy_bits": 8.144086564707914,
+          "longest_same_token_run": 12,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 642,
+          "token_entropy_bits": 8.110526360401783,
+          "longest_same_token_run": 4,
+          "special_counts": {
+            "151643": 3
+          }
+        },
+        {
+          "unique_tokens": 646,
+          "token_entropy_bits": 8.213237433260376,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 208,
+          "token_entropy_bits": 5.745837951536451,
+          "longest_same_token_run": 3,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 683,
+          "token_entropy_bits": 8.0264241703705,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 560,
+          "token_entropy_bits": 7.971195688735849,
+          "longest_same_token_run": 2,
+          "special_counts": {
+            "151643": 1
+          }
+        },
+        {
+          "unique_tokens": 707,
+          "token_entropy_bits": 7.914862273626467,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 3
+          }
+        },
+        {
+          "unique_tokens": 711,
+          "token_entropy_bits": 8.19252803979063,
+          "longest_same_token_run": 2,
+          "special_counts": {}
+        },
+        {
+          "unique_tokens": 650,
+          "token_entropy_bits": 8.072584051519623,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 2
+          }
+        },
+        {
+          "unique_tokens": 697,
+          "token_entropy_bits": 8.275018908762625,
+          "longest_same_token_run": 5,
+          "special_counts": {
+            "151643": 4
+          }
+        },
+        {
+          "unique_tokens": 636,
+          "token_entropy_bits": 8.266047759304627,
+          "longest_same_token_run": 3,
+          "special_counts": {
+            "151643": 5
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No failed-step forward loss or gradient tensors were saved; this CPU report cannot determine the numerical root cause.",
+    "Token range/repetition checks cannot prove a mathematically normal model gradient."
+  ],
+  "all_token_ids_within_model_vocab": true,
+  "model_vocab_size": 151936,
+  "same_blocks_previously_trained_in_epoch_one": [
+    {
+      "block_index": 1931057,
+      "step": 151386,
+      "position_in_microbatch": 10,
+      "successful_record": {
+        "step": 151386,
+        "loss": 1.9437791109085083,
+        "grad_norm": 2.1057851314544678,
+        "epoch": 1,
+        "step_in_epoch": 151386,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 4960614912,
+        "seconds": 0.335195963998558,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 986267,
+      "step": 24694,
+      "position_in_microbatch": 7,
+      "successful_record": {
+        "step": 24694,
+        "loss": 1.799182415008545,
+        "grad_norm": 1.5434577465057373,
+        "epoch": 1,
+        "step_in_epoch": 24694,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 809172992,
+        "seconds": 0.35452184999303427,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 1838901,
+      "step": 44644,
+      "position_in_microbatch": 9,
+      "successful_record": {
+        "step": 44644,
+        "loss": 1.9644876718521118,
+        "grad_norm": 1.5962095260620117,
+        "epoch": 1,
+        "step_in_epoch": 44644,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 1462894592,
+        "seconds": 0.34182408000924625,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 1666841,
+      "step": 89193,
+      "position_in_microbatch": 6,
+      "successful_record": {
+        "step": 89193,
+        "loss": 2.0272185802459717,
+        "grad_norm": 2.122831106185913,
+        "epoch": 1,
+        "step_in_epoch": 89193,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 2922676224,
+        "seconds": 0.3363375439948868,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 671534,
+      "step": 133008,
+      "position_in_microbatch": 9,
+      "successful_record": {
+        "step": 133008,
+        "loss": 2.2248170375823975,
+        "grad_norm": 2.391213893890381,
+        "epoch": 1,
+        "step_in_epoch": 133008,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 4358406144,
+        "seconds": 0.33448635501554236,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 212149,
+      "step": 129699,
+      "position_in_microbatch": 14,
+      "successful_record": {
+        "step": 129699,
+        "loss": 1.9554215669631958,
+        "grad_norm": 2.002889633178711,
+        "epoch": 1,
+        "step_in_epoch": 129699,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 4249976832,
+        "seconds": 0.3327703319955617,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 1982794,
+      "step": 5170,
+      "position_in_microbatch": 0,
+      "successful_record": {
+        "step": 5170,
+        "loss": 2.1027584075927734,
+        "grad_norm": 1.5368627309799194,
+        "epoch": 1,
+        "step_in_epoch": 5170,
+        "lr": 3.38816436201586e-06,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 169410560,
+        "seconds": 0.3357294560119044,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 2384173,
+      "step": 45730,
+      "position_in_microbatch": 14,
+      "successful_record": {
+        "step": 45730,
+        "loss": 1.966706395149231,
+        "grad_norm": 4.209113597869873,
+        "epoch": 1,
+        "step_in_epoch": 45730,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 1498480640,
+        "seconds": 0.3329727460077265,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 2288213,
+      "step": 40997,
+      "position_in_microbatch": 8,
+      "successful_record": {
+        "step": 40997,
+        "loss": 1.8587820529937744,
+        "grad_norm": 1.5898491144180298,
+        "epoch": 1,
+        "step_in_epoch": 40997,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 1343389696,
+        "seconds": 0.3402297869906761,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 1860944,
+      "step": 12915,
+      "position_in_microbatch": 5,
+      "successful_record": {
+        "step": 12915,
+        "loss": 1.9763782024383545,
+        "grad_norm": 1.5856443643569946,
+        "epoch": 1,
+        "step_in_epoch": 12915,
+        "lr": 8.463857395635364e-06,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 423198720,
+        "seconds": 0.3422296060016379,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 42451,
+      "step": 57321,
+      "position_in_microbatch": 6,
+      "successful_record": {
+        "step": 57321,
+        "loss": 1.9979406595230103,
+        "grad_norm": 2.123704671859741,
+        "epoch": 1,
+        "step_in_epoch": 57321,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 1878294528,
+        "seconds": 0.333946691986057,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 2097679,
+      "step": 51006,
+      "position_in_microbatch": 14,
+      "successful_record": {
+        "step": 51006,
+        "loss": 2.006786823272705,
+        "grad_norm": 1.7416439056396484,
+        "epoch": 1,
+        "step_in_epoch": 51006,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 1671364608,
+        "seconds": 0.3367593940056395,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 422606,
+      "step": 34758,
+      "position_in_microbatch": 9,
+      "successful_record": {
+        "step": 34758,
+        "loss": 1.699657917022705,
+        "grad_norm": 1.695537805557251,
+        "epoch": 1,
+        "step_in_epoch": 34758,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 1138950144,
+        "seconds": 0.3392276550002862,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 893558,
+      "step": 76422,
+      "position_in_microbatch": 10,
+      "successful_record": {
+        "step": 76422,
+        "loss": 1.7060534954071045,
+        "grad_norm": 2.00264835357666,
+        "epoch": 1,
+        "step_in_epoch": 76422,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 2504196096,
+        "seconds": 0.3354034399962984,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 960752,
+      "step": 35965,
+      "position_in_microbatch": 2,
+      "successful_record": {
+        "step": 35965,
+        "loss": 2.1473636627197266,
+        "grad_norm": 1.6598371267318726,
+        "epoch": 1,
+        "step_in_epoch": 35965,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 1178501120,
+        "seconds": 0.33612461099983193,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    },
+    {
+      "block_index": 1662557,
+      "step": 130120,
+      "position_in_microbatch": 4,
+      "successful_record": {
+        "step": 130120,
+        "loss": 1.817152500152588,
+        "grad_norm": 2.011382818222046,
+        "epoch": 1,
+        "step_in_epoch": 130120,
+        "lr": 1e-05,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 4263772160,
+        "seconds": 0.33455345602124,
+        "optimizer_applied": true,
+        "first_full_shape_update": false
+      }
+    }
+  ]
+}

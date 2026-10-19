@@ -1,0 +1,23 @@
+panels:
+  - name: sm__cycles_elapsed.sum
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: sm__cycles_elapsed.sum
+            metric: sm__cycles_elapsed.sum
+            color: 0xffff00ff
+  - name: sm__cycles_elapsed.avg
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: sm__cycles_elapsed.avg
+            metric: sm__cycles_elapsed.avg
+            color: 0xff0000ff
+configurations:
+  - name: Generated
+    speed: Low
+    panels:
+      - sm__cycles_elapsed.sum
+      - sm__cycles_elapsed.avg

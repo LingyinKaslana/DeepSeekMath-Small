@@ -1,0 +1,902 @@
+{
+  "status": "complete",
+  "generated_utc": "2026-10-09T03:06:18.987420+00:00",
+  "generated_beijing": "2026-10-09T11:06:18.987420+08:00",
+  "strict_audit_passed": true,
+  "checks": [
+    {
+      "name": "common plan: checkpoint",
+      "passed": true,
+      "detail": {
+        "fast": "f4e35bae188880ffcb0e4061989ad3a54087dad1a70264b35b28c6963d2d8ffa",
+        "native": "f4e35bae188880ffcb0e4061989ad3a54087dad1a70264b35b28c6963d2d8ffa"
+      }
+    },
+    {
+      "name": "common plan: checkpoint_signature",
+      "passed": true,
+      "detail": {
+        "fast": "950cc3f089759744c046d396e2cd4377846ca38d92ea82c87595851d73b3fe78",
+        "native": "950cc3f089759744c046d396e2cd4377846ca38d92ea82c87595851d73b3fe78"
+      }
+    },
+    {
+      "name": "common plan: checkpoint_manifest_sha256",
+      "passed": true,
+      "detail": {
+        "fast": "23700ec6a7bc0fa7bece86b8ca9b616601879b1df0b5d2600e0a8ceb80af9201",
+        "native": "23700ec6a7bc0fa7bece86b8ca9b616601879b1df0b5d2600e0a8ceb80af9201"
+      }
+    },
+    {
+      "name": "common plan: checkpoint_files",
+      "passed": true,
+      "detail": {
+        "fast": "8405019eed9dee360bf1cb7404ad3df7f6aeed7506cf63b97405ecafd698b7ea",
+        "native": "8405019eed9dee360bf1cb7404ad3df7f6aeed7506cf63b97405ecafd698b7ea"
+      }
+    },
+    {
+      "name": "common plan: checkpoint_training_state_file",
+      "passed": true,
+      "detail": {
+        "fast": "a658ed259cd5b36ef1c6da40fdab02c8cf26b1a7b42fabd7eae80197148a52e9",
+        "native": "a658ed259cd5b36ef1c6da40fdab02c8cf26b1a7b42fabd7eae80197148a52e9"
+      }
+    },
+    {
+      "name": "common plan: source_run",
+      "passed": true,
+      "detail": {
+        "fast": "8b7423a76170682333368b3ba144fe4ff4d1b28c901c0db67cee6fe3131a133c",
+        "native": "8b7423a76170682333368b3ba144fe4ff4d1b28c901c0db67cee6fe3131a133c"
+      }
+    },
+    {
+      "name": "common plan: source_directory",
+      "passed": true,
+      "detail": {
+        "fast": "1e6de575616570d431386a15f158e7c6fe5b5cfb984a6c2a794f0ca318a7e8b4",
+        "native": "1e6de575616570d431386a15f158e7c6fe5b5cfb984a6c2a794f0ca318a7e8b4"
+      }
+    },
+    {
+      "name": "common plan: source_sha256",
+      "passed": true,
+      "detail": {
+        "fast": "afa98fb7b7a3a42b551094227bf880c64254f16dee802784a92929cfd81a112a",
+        "native": "afa98fb7b7a3a42b551094227bf880c64254f16dee802784a92929cfd81a112a"
+      }
+    },
+    {
+      "name": "common plan: diagnostic_script_sha256",
+      "passed": true,
+      "detail": {
+        "fast": "beb69dbc3ded9100bf7a2350a90428f6ff3eac49e6fec5e7a5c6fd699ad57eeb",
+        "native": "beb69dbc3ded9100bf7a2350a90428f6ff3eac49e6fec5e7a5c6fd699ad57eeb"
+      }
+    },
+    {
+      "name": "common plan: data",
+      "passed": true,
+      "detail": {
+        "fast": "73a96ccfb17545d12ccda13ed1167ff0c380fa22a26dbb51eeec97a7e339f917",
+        "native": "73a96ccfb17545d12ccda13ed1167ff0c380fa22a26dbb51eeec97a7e339f917"
+      }
+    },
+    {
+      "name": "common plan: data_manifest_sha256",
+      "passed": true,
+      "detail": {
+        "fast": "b731b8be3ebb7830f775108c1151a79a2e128d65f8314b9d0b598f7725607c24",
+        "native": "b731b8be3ebb7830f775108c1151a79a2e128d65f8314b9d0b598f7725607c24"
+      }
+    },
+    {
+      "name": "common plan: data_artifact_sha256",
+      "passed": true,
+      "detail": {
+        "fast": "cbb9a8024e001cede85df104730ca1904861879df5f22503759341d64cd8c452",
+        "native": "cbb9a8024e001cede85df104730ca1904861879df5f22503759341d64cd8c452"
+      }
+    },
+    {
+      "name": "common plan: start_step",
+      "passed": true,
+      "detail": {
+        "fast": "f966641035687f2b701ba47ab306be155f15bc1f71a0b3c74a2121a23d7b45ee",
+        "native": "f966641035687f2b701ba47ab306be155f15bc1f71a0b3c74a2121a23d7b45ee"
+      }
+    },
+    {
+      "name": "common plan: end_step",
+      "passed": true,
+      "detail": {
+        "fast": "4043c648614099c932d4607c249beadd46f67d3b7d29c6eba6b2c581d97288ae",
+        "native": "4043c648614099c932d4607c249beadd46f67d3b7d29c6eba6b2c581d97288ae"
+      }
+    },
+    {
+      "name": "common plan: updates",
+      "passed": true,
+      "detail": {
+        "fast": "40510175845988f13f6162ed8526f0b09f73384467fa855e1e79b44a56562a58",
+        "native": "40510175845988f13f6162ed8526f0b09f73384467fa855e1e79b44a56562a58"
+      }
+    },
+    {
+      "name": "common plan: schedule",
+      "passed": true,
+      "detail": {
+        "fast": "e2b346ed39ac2eae8b19b54d2658f57ad1a5c3ba09ad0c03e37d7aee2a0762e0",
+        "native": "e2b346ed39ac2eae8b19b54d2658f57ad1a5c3ba09ad0c03e37d7aee2a0762e0"
+      }
+    },
+    {
+      "name": "common plan: order_metadata",
+      "passed": true,
+      "detail": {
+        "fast": "114545ef09b16a3d60778eba173ab762be8158b6f5992884661c3da2b6d0fda9",
+        "native": "114545ef09b16a3d60778eba173ab762be8158b6f5992884661c3da2b6d0fda9"
+      }
+    },
+    {
+      "name": "common plan: selected_block_indices_sha256",
+      "passed": true,
+      "detail": {
+        "fast": "b3b58176928ff26aae2efb19156f73cfc44ef53917f2a72041c5eb56c5eca073",
+        "native": "b3b58176928ff26aae2efb19156f73cfc44ef53917f2a72041c5eb56c5eca073"
+      }
+    },
+    {
+      "name": "common plan: selected_training_token_and_label_values_sha256",
+      "passed": true,
+      "detail": {
+        "fast": "2e41afd441b202f26a9e9afba4fecba2b54f5c6fc46a72c7cea781552f004dd0",
+        "native": "2e41afd441b202f26a9e9afba4fecba2b54f5c6fc46a72c7cea781552f004dd0"
+      }
+    },
+    {
+      "name": "common plan: selected_blocks",
+      "passed": true,
+      "detail": {
+        "fast": "2570901c76653e578fecf066b5fc3fa1619f1a051e928e39797bab1b1342bf40",
+        "native": "2570901c76653e578fecf066b5fc3fa1619f1a051e928e39797bab1b1342bf40"
+      }
+    },
+    {
+      "name": "common plan: partial_tail_global_steps",
+      "passed": true,
+      "detail": {
+        "fast": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "native": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    },
+    {
+      "name": "common plan: start_prefix_counts",
+      "passed": true,
+      "detail": {
+        "fast": "fc9e99ccfb0b7b9f1333dce4714564528f3c0f3857e84160ae6e04310e8a600e",
+        "native": "fc9e99ccfb0b7b9f1333dce4714564528f3c0f3857e84160ae6e04310e8a600e"
+      }
+    },
+    {
+      "name": "common plan: end_prefix_counts",
+      "passed": true,
+      "detail": {
+        "fast": "bb3bd6a2bf1f8d684d69e38ae1e61c1cf095101e8a3408b1cd2355fcf46c31d7",
+        "native": "bb3bd6a2bf1f8d684d69e38ae1e61c1cf095101e8a3408b1cd2355fcf46c31d7"
+      }
+    },
+    {
+      "name": "common plan: new_input_tokens",
+      "passed": true,
+      "detail": {
+        "fast": "d1a5d9f1cc2ff3f18fc020c57a9230d0c4777cd68a72ef5c58ca7e572eb5f666",
+        "native": "d1a5d9f1cc2ff3f18fc020c57a9230d0c4777cd68a72ef5c58ca7e572eb5f666"
+      }
+    },
+    {
+      "name": "common plan: new_supervised_tokens",
+      "passed": true,
+      "detail": {
+        "fast": "4c4e7055559b34f2040a25ff30af003dd008ab895e241a6a54035e4b83fb57ae",
+        "native": "4c4e7055559b34f2040a25ff30af003dd008ab895e241a6a54035e4b83fb57ae"
+      }
+    },
+    {
+      "name": "common plan: batch",
+      "passed": true,
+      "detail": {
+        "fast": "b4719a8a07da953bfb15b1e5500a5c282691916907d019a006cfa4c345e05dbe",
+        "native": "b4719a8a07da953bfb15b1e5500a5c282691916907d019a006cfa4c345e05dbe"
+      }
+    },
+    {
+      "name": "common plan: fixed_train_probe",
+      "passed": true,
+      "detail": {
+        "fast": "7d444101355ebdf933a6d672fa65d206dd9675a79b978e93ded0ac1b7711b0d8",
+        "native": "7d444101355ebdf933a6d672fa65d206dd9675a79b978e93ded0ac1b7711b0d8"
+      }
+    },
+    {
+      "name": "common plan: validation",
+      "passed": true,
+      "detail": {
+        "fast": "30c4a87c6451ccecc86ac4d247291fb8b761aef58d84eb8f04de4781493bba94",
+        "native": "30c4a87c6451ccecc86ac4d247291fb8b761aef58d84eb8f04de4781493bba94"
+      }
+    },
+    {
+      "name": "common plan: evaluation_offsets",
+      "passed": true,
+      "detail": {
+        "fast": "e8deccc43dad055caed2bbd256ef87b433650f58104336fbc689dc876452ddf9",
+        "native": "e8deccc43dad055caed2bbd256ef87b433650f58104336fbc689dc876452ddf9"
+      }
+    },
+    {
+      "name": "common plan: precision",
+      "passed": true,
+      "detail": {
+        "fast": "bdf688399d3714b31077fa070250cfcd4bdaa323db07bac280dcbcab08541df5",
+        "native": "bdf688399d3714b31077fa070250cfcd4bdaa323db07bac280dcbcab08541df5"
+      }
+    },
+    {
+      "name": "common plan: optimizer_math",
+      "passed": true,
+      "detail": {
+        "fast": "a14706e0b3e41d1c5edaa69a1660beaf02c274f2388ee3160970ac0bc15a5fd0",
+        "native": "a14706e0b3e41d1c5edaa69a1660beaf02c274f2388ee3160970ac0bc15a5fd0"
+      }
+    },
+    {
+      "name": "common plan: versions",
+      "passed": true,
+      "detail": {
+        "fast": "98e2a769dd61f44a5507a00fc1031ee6e740afd4c3c134317965eb4c8537fff2",
+        "native": "98e2a769dd61f44a5507a00fc1031ee6e740afd4c3c134317965eb4c8537fff2"
+      }
+    },
+    {
+      "name": "common initial Adam tensors and steps",
+      "passed": true
+    },
+    {
+      "name": "common restored CPU/CUDA RNG",
+      "passed": true
+    },
+    {
+      "name": "fast: completed 1000 updates",
+      "passed": true
+    },
+    {
+      "name": "fast: no failure or production mutation",
+      "passed": true
+    },
+    {
+      "name": "fast: all selected batches have matching CPU token/label values",
+      "passed": true
+    },
+    {
+      "name": "fast: recorded selected token hash matches result",
+      "passed": true
+    },
+    {
+      "name": "fast: original Adam state is finite FP32",
+      "passed": true
+    },
+    {
+      "name": "fast: RNG result matches restored-state audit",
+      "passed": true
+    },
+    {
+      "name": "fast: initial_finite_audit all weight/Adam tensors",
+      "passed": true
+    },
+    {
+      "name": "fast: final_finite_audit all weight/Adam tensors",
+      "passed": true
+    },
+    {
+      "name": "fast: all logged losses/norms finite and LR/counts match plan",
+      "passed": true
+    },
+    {
+      "name": "fast: exact total input/target counts",
+      "passed": true
+    },
+    {
+      "name": "fast: evaluation offsets are complete",
+      "passed": true
+    },
+    {
+      "name": "fast: evaluation position 0",
+      "passed": true
+    },
+    {
+      "name": "fast: validation native evaluation 0",
+      "passed": true
+    },
+    {
+      "name": "fast: train_probe native evaluation 0",
+      "passed": true
+    },
+    {
+      "name": "fast: evaluation position 250",
+      "passed": true
+    },
+    {
+      "name": "fast: validation native evaluation 250",
+      "passed": true
+    },
+    {
+      "name": "fast: train_probe native evaluation 250",
+      "passed": true
+    },
+    {
+      "name": "fast: evaluation position 500",
+      "passed": true
+    },
+    {
+      "name": "fast: validation native evaluation 500",
+      "passed": true
+    },
+    {
+      "name": "fast: train_probe native evaluation 500",
+      "passed": true
+    },
+    {
+      "name": "fast: evaluation position 750",
+      "passed": true
+    },
+    {
+      "name": "fast: validation native evaluation 750",
+      "passed": true
+    },
+    {
+      "name": "fast: train_probe native evaluation 750",
+      "passed": true
+    },
+    {
+      "name": "fast: evaluation position 1000",
+      "passed": true
+    },
+    {
+      "name": "fast: validation native evaluation 1000",
+      "passed": true
+    },
+    {
+      "name": "fast: train_probe native evaluation 1000",
+      "passed": true
+    },
+    {
+      "name": "fast: recorded training speeds match update timings",
+      "passed": true
+    },
+    {
+      "name": "native: completed 1000 updates",
+      "passed": true
+    },
+    {
+      "name": "native: no failure or production mutation",
+      "passed": true
+    },
+    {
+      "name": "native: all selected batches have matching CPU token/label values",
+      "passed": true
+    },
+    {
+      "name": "native: recorded selected token hash matches result",
+      "passed": true
+    },
+    {
+      "name": "native: original Adam state is finite FP32",
+      "passed": true
+    },
+    {
+      "name": "native: RNG result matches restored-state audit",
+      "passed": true
+    },
+    {
+      "name": "native: initial_finite_audit all weight/Adam tensors",
+      "passed": true
+    },
+    {
+      "name": "native: final_finite_audit all weight/Adam tensors",
+      "passed": true
+    },
+    {
+      "name": "native: all logged losses/norms finite and LR/counts match plan",
+      "passed": true
+    },
+    {
+      "name": "native: exact total input/target counts",
+      "passed": true
+    },
+    {
+      "name": "native: evaluation offsets are complete",
+      "passed": true
+    },
+    {
+      "name": "native: evaluation position 0",
+      "passed": true
+    },
+    {
+      "name": "native: validation native evaluation 0",
+      "passed": true
+    },
+    {
+      "name": "native: train_probe native evaluation 0",
+      "passed": true
+    },
+    {
+      "name": "native: evaluation position 250",
+      "passed": true
+    },
+    {
+      "name": "native: validation native evaluation 250",
+      "passed": true
+    },
+    {
+      "name": "native: train_probe native evaluation 250",
+      "passed": true
+    },
+    {
+      "name": "native: evaluation position 500",
+      "passed": true
+    },
+    {
+      "name": "native: validation native evaluation 500",
+      "passed": true
+    },
+    {
+      "name": "native: train_probe native evaluation 500",
+      "passed": true
+    },
+    {
+      "name": "native: evaluation position 750",
+      "passed": true
+    },
+    {
+      "name": "native: validation native evaluation 750",
+      "passed": true
+    },
+    {
+      "name": "native: train_probe native evaluation 750",
+      "passed": true
+    },
+    {
+      "name": "native: evaluation position 1000",
+      "passed": true
+    },
+    {
+      "name": "native: validation native evaluation 1000",
+      "passed": true
+    },
+    {
+      "name": "native: train_probe native evaluation 1000",
+      "passed": true
+    },
+    {
+      "name": "native: recorded training speeds match update timings",
+      "passed": true
+    },
+    {
+      "name": "all per-update token counts, order positions and Adam math agree",
+      "passed": true,
+      "detail": "de7331d395c25f12983269d2cd82e14b81cae7bc79149de2ba8c93552e054b86"
+    },
+    {
+      "name": "exactly equal initial native validation losses",
+      "passed": true,
+      "detail": {
+        "fast": 1.9019221067428589,
+        "native": 1.9019221067428589
+      }
+    },
+    {
+      "name": "exactly equal initial native train_probe losses",
+      "passed": true,
+      "detail": {
+        "fast": 1.9109556674957275,
+        "native": 1.9109556674957275
+      }
+    },
+    {
+      "name": "native Adam execution adaptation preserves tensor values",
+      "passed": true
+    },
+    {
+      "name": "native reference is unpatched and uncompiled",
+      "passed": true
+    }
+  ],
+  "start_checkpoint": "./runs/cpt_10b_20261009_resumed/stopped_checkpoint",
+  "start_step": 179939,
+  "end_step": 180939,
+  "updates_per_case": 1000,
+  "additional_input_tokens_per_case": 32768000,
+  "common_plan_fingerprints": {
+    "checkpoint": "f4e35bae188880ffcb0e4061989ad3a54087dad1a70264b35b28c6963d2d8ffa",
+    "checkpoint_signature": "950cc3f089759744c046d396e2cd4377846ca38d92ea82c87595851d73b3fe78",
+    "checkpoint_manifest_sha256": "23700ec6a7bc0fa7bece86b8ca9b616601879b1df0b5d2600e0a8ceb80af9201",
+    "checkpoint_files": "8405019eed9dee360bf1cb7404ad3df7f6aeed7506cf63b97405ecafd698b7ea",
+    "checkpoint_training_state_file": "a658ed259cd5b36ef1c6da40fdab02c8cf26b1a7b42fabd7eae80197148a52e9",
+    "source_run": "8b7423a76170682333368b3ba144fe4ff4d1b28c901c0db67cee6fe3131a133c",
+    "source_directory": "1e6de575616570d431386a15f158e7c6fe5b5cfb984a6c2a794f0ca318a7e8b4",
+    "source_sha256": "afa98fb7b7a3a42b551094227bf880c64254f16dee802784a92929cfd81a112a",
+    "diagnostic_script_sha256": "beb69dbc3ded9100bf7a2350a90428f6ff3eac49e6fec5e7a5c6fd699ad57eeb",
+    "data": "73a96ccfb17545d12ccda13ed1167ff0c380fa22a26dbb51eeec97a7e339f917",
+    "data_manifest_sha256": "b731b8be3ebb7830f775108c1151a79a2e128d65f8314b9d0b598f7725607c24",
+    "data_artifact_sha256": "cbb9a8024e001cede85df104730ca1904861879df5f22503759341d64cd8c452",
+    "start_step": "f966641035687f2b701ba47ab306be155f15bc1f71a0b3c74a2121a23d7b45ee",
+    "end_step": "4043c648614099c932d4607c249beadd46f67d3b7d29c6eba6b2c581d97288ae",
+    "updates": "40510175845988f13f6162ed8526f0b09f73384467fa855e1e79b44a56562a58",
+    "schedule": "e2b346ed39ac2eae8b19b54d2658f57ad1a5c3ba09ad0c03e37d7aee2a0762e0",
+    "order_metadata": "114545ef09b16a3d60778eba173ab762be8158b6f5992884661c3da2b6d0fda9",
+    "selected_block_indices_sha256": "b3b58176928ff26aae2efb19156f73cfc44ef53917f2a72041c5eb56c5eca073",
+    "selected_training_token_and_label_values_sha256": "2e41afd441b202f26a9e9afba4fecba2b54f5c6fc46a72c7cea781552f004dd0",
+    "selected_blocks": "2570901c76653e578fecf066b5fc3fa1619f1a051e928e39797bab1b1342bf40",
+    "partial_tail_global_steps": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "start_prefix_counts": "fc9e99ccfb0b7b9f1333dce4714564528f3c0f3857e84160ae6e04310e8a600e",
+    "end_prefix_counts": "bb3bd6a2bf1f8d684d69e38ae1e61c1cf095101e8a3408b1cd2355fcf46c31d7",
+    "new_input_tokens": "d1a5d9f1cc2ff3f18fc020c57a9230d0c4777cd68a72ef5c58ca7e572eb5f666",
+    "new_supervised_tokens": "4c4e7055559b34f2040a25ff30af003dd008ab895e241a6a54035e4b83fb57ae",
+    "batch": "b4719a8a07da953bfb15b1e5500a5c282691916907d019a006cfa4c345e05dbe",
+    "fixed_train_probe": "7d444101355ebdf933a6d672fa65d206dd9675a79b978e93ded0ac1b7711b0d8",
+    "validation": "30c4a87c6451ccecc86ac4d247291fb8b761aef58d84eb8f04de4781493bba94",
+    "evaluation_offsets": "e8deccc43dad055caed2bbd256ef87b433650f58104336fbc689dc876452ddf9",
+    "precision": "bdf688399d3714b31077fa070250cfcd4bdaa323db07bac280dcbcab08541df5",
+    "optimizer_math": "a14706e0b3e41d1c5edaa69a1660beaf02c274f2388ee3160970ac0bc15a5fd0",
+    "versions": "98e2a769dd61f44a5507a00fc1031ee6e740afd4c3c134317965eb4c8537fff2"
+  },
+  "per_update_data_positions_and_math_sha256": "de7331d395c25f12983269d2cd82e14b81cae7bc79149de2ba8c93552e054b86",
+  "initial_optimizer_tensor_sha256": "6ea0ed229094e7e7239cbf390d6a86df627d76df05375b74ad8ea5036e13091c",
+  "initial_rng": {
+    "cpu_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+    "cuda_sha256": "aefdce03def94ffed42159e55677ec20e91200e1981f25b1f271b6fd99c3c263"
+  },
+  "outcomes": {
+    "fast": {
+      "initial": {
+        "case": "fast",
+        "offset": 0,
+        "global_step": 179939,
+        "cumulative_input_tokens": 5896236032,
+        "additional_input_tokens": 0,
+        "validation_loss": 1.9019221067428589,
+        "validation_perplexity": 6.698757803485171,
+        "train_probe_loss": 1.9109556674957275,
+        "train_probe_perplexity": 6.759545590773625,
+        "evaluation_seconds": 22.704622040997492
+      },
+      "final": {
+        "case": "fast",
+        "offset": 1000,
+        "global_step": 180939,
+        "cumulative_input_tokens": 5929004032,
+        "additional_input_tokens": 32768000,
+        "validation_loss": 1.9014776945114136,
+        "validation_perplexity": 6.695781454993636,
+        "train_probe_loss": 1.9106504917144775,
+        "train_probe_perplexity": 6.757483055900919,
+        "evaluation_seconds": 23.17732281499775
+      },
+      "validation_loss_change": -0.0004444122314453125,
+      "train_probe_loss_change": -0.00030517578125,
+      "steady_tokens_per_second": 98579.96873412943,
+      "tokens_per_second_including_compile": 93932.67069161063,
+      "training_seconds_including_compile": 348.84561206164653,
+      "total_seconds_including_load_eval_save": 540.1050202289771,
+      "peak_allocated_bytes": 127388626944,
+      "peak_reserved_bytes": 137866772480,
+      "first_update_seconds_including_initialization": 16.777825671015307
+    },
+    "native": {
+      "initial": {
+        "case": "native",
+        "offset": 0,
+        "global_step": 179939,
+        "cumulative_input_tokens": 5896236032,
+        "additional_input_tokens": 0,
+        "validation_loss": 1.9019221067428589,
+        "validation_perplexity": 6.698757803485171,
+        "train_probe_loss": 1.9109556674957275,
+        "train_probe_perplexity": 6.759545590773625,
+        "evaluation_seconds": 17.421265405020677
+      },
+      "final": {
+        "case": "native",
+        "offset": 1000,
+        "global_step": 180939,
+        "cumulative_input_tokens": 5929004032,
+        "additional_input_tokens": 32768000,
+        "validation_loss": 1.9014548063278198,
+        "validation_perplexity": 6.695628202472233,
+        "train_probe_loss": 1.910409927368164,
+        "train_probe_perplexity": 6.755857641923016,
+        "evaluation_seconds": 17.513201252004365
+      },
+      "validation_loss_change": -0.0004673004150390625,
+      "train_probe_loss_change": -0.0005457401275634766,
+      "steady_tokens_per_second": 59534.09178175754,
+      "tokens_per_second_including_compile": 59479.526654189496,
+      "training_seconds_including_compile": 550.9122523874685,
+      "total_seconds_including_load_eval_save": 820.1137762030121,
+      "peak_allocated_bytes": 193735492608,
+      "peak_reserved_bytes": 204373753856,
+      "first_update_seconds_including_initialization": 1.0553381339996122
+    }
+  },
+  "differences_at_each_offset": [
+    {
+      "offset": 0,
+      "validation_fast_minus_native": 0.0,
+      "train_probe_fast_minus_native": 0.0
+    },
+    {
+      "offset": 250,
+      "validation_fast_minus_native": 5.733966827392578e-05,
+      "train_probe_fast_minus_native": 4.76837158203125e-07
+    },
+    {
+      "offset": 500,
+      "validation_fast_minus_native": -1.5139579772949219e-05,
+      "train_probe_fast_minus_native": 8.857250213623047e-05
+    },
+    {
+      "offset": 750,
+      "validation_fast_minus_native": -0.0002167224884033203,
+      "train_probe_fast_minus_native": 0.00016951560974121094
+    },
+    {
+      "offset": 1000,
+      "validation_fast_minus_native": 2.288818359375e-05,
+      "train_probe_fast_minus_native": 0.00024056434631347656
+    }
+  ],
+  "fast_to_native_steady_speed_ratio": 1.6558574387177658,
+  "measurements": [
+    {
+      "case": "fast",
+      "offset": 0,
+      "global_step": 179939,
+      "cumulative_input_tokens": 5896236032,
+      "additional_input_tokens": 0,
+      "validation_loss": 1.9019221067428589,
+      "validation_perplexity": 6.698757803485171,
+      "train_probe_loss": 1.9109556674957275,
+      "train_probe_perplexity": 6.759545590773625,
+      "evaluation_seconds": 22.704622040997492
+    },
+    {
+      "case": "fast",
+      "offset": 250,
+      "global_step": 180189,
+      "cumulative_input_tokens": 5904428032,
+      "additional_input_tokens": 8192000,
+      "validation_loss": 1.900506615638733,
+      "validation_perplexity": 6.689282479106402,
+      "train_probe_loss": 1.9106146097183228,
+      "train_probe_perplexity": 6.757240588270029,
+      "evaluation_seconds": 22.480147660011426
+    },
+    {
+      "case": "fast",
+      "offset": 500,
+      "global_step": 180439,
+      "cumulative_input_tokens": 5912620032,
+      "additional_input_tokens": 16384000,
+      "validation_loss": 1.9013404846191406,
+      "validation_perplexity": 6.6948627905678775,
+      "train_probe_loss": 1.9110358953475952,
+      "train_probe_perplexity": 6.760087916350492,
+      "evaluation_seconds": 24.11593602699577
+    },
+    {
+      "case": "fast",
+      "offset": 750,
+      "global_step": 180689,
+      "cumulative_input_tokens": 5920812032,
+      "additional_input_tokens": 24576000,
+      "validation_loss": 1.9015942811965942,
+      "validation_perplexity": 6.696562139465991,
+      "train_probe_loss": 1.911186933517456,
+      "train_probe_perplexity": 6.761109024768708,
+      "evaluation_seconds": 24.990405924007064
+    },
+    {
+      "case": "fast",
+      "offset": 1000,
+      "global_step": 180939,
+      "cumulative_input_tokens": 5929004032,
+      "additional_input_tokens": 32768000,
+      "validation_loss": 1.9014776945114136,
+      "validation_perplexity": 6.695781454993636,
+      "train_probe_loss": 1.9106504917144775,
+      "train_probe_perplexity": 6.757483055900919,
+      "evaluation_seconds": 23.17732281499775
+    },
+    {
+      "case": "native",
+      "offset": 0,
+      "global_step": 179939,
+      "cumulative_input_tokens": 5896236032,
+      "additional_input_tokens": 0,
+      "validation_loss": 1.9019221067428589,
+      "validation_perplexity": 6.698757803485171,
+      "train_probe_loss": 1.9109556674957275,
+      "train_probe_perplexity": 6.759545590773625,
+      "evaluation_seconds": 17.421265405020677
+    },
+    {
+      "case": "native",
+      "offset": 250,
+      "global_step": 180189,
+      "cumulative_input_tokens": 5904428032,
+      "additional_input_tokens": 8192000,
+      "validation_loss": 1.900449275970459,
+      "validation_perplexity": 6.688898928864486,
+      "train_probe_loss": 1.9106141328811646,
+      "train_probe_perplexity": 6.757237366167397,
+      "evaluation_seconds": 18.998927014006767
+    },
+    {
+      "case": "native",
+      "offset": 500,
+      "global_step": 180439,
+      "cumulative_input_tokens": 5912620032,
+      "additional_input_tokens": 16384000,
+      "validation_loss": 1.9013556241989136,
+      "validation_perplexity": 6.694964148744423,
+      "train_probe_loss": 1.910947322845459,
+      "train_probe_perplexity": 6.759489184965039,
+      "evaluation_seconds": 20.479605190979782
+    },
+    {
+      "case": "native",
+      "offset": 750,
+      "global_step": 180689,
+      "cumulative_input_tokens": 5920812032,
+      "additional_input_tokens": 24576000,
+      "validation_loss": 1.9018110036849976,
+      "validation_perplexity": 6.698013592352163,
+      "train_probe_loss": 1.9110174179077148,
+      "train_probe_perplexity": 6.759963008386425,
+      "evaluation_seconds": 21.283386543014785
+    },
+    {
+      "case": "native",
+      "offset": 1000,
+      "global_step": 180939,
+      "cumulative_input_tokens": 5929004032,
+      "additional_input_tokens": 32768000,
+      "validation_loss": 1.9014548063278198,
+      "validation_perplexity": 6.695628202472233,
+      "train_probe_loss": 1.910409927368164,
+      "train_probe_perplexity": 6.755857641923016,
+      "evaluation_seconds": 17.513201252004365
+    }
+  ],
+  "artifacts": {
+    "fast": {
+      "plan.json": {
+        "path": "./runs/cpt_native_compare_20261009/fast/plan.json",
+        "sha256": "3daa1baffdacb56cefcea561ecb9337cd8f2dc2df247511cde8609813bdd64c2",
+        "bytes": 11749
+      },
+      "result.json": {
+        "path": "./runs/cpt_native_compare_20261009/fast/result.json",
+        "sha256": "ad945e6141eba375feffb9a05a2f74fe35dede67d5ef217dfd29027a0b2594c2",
+        "bytes": 4473
+      },
+      "evaluation_history.json": {
+        "path": "./runs/cpt_native_compare_20261009/fast/evaluation_history.json",
+        "sha256": "ce0a8d3957a93e24ccde0d4befa31b2deb0bd934d05b32bea4bd60e9d19e56e2",
+        "bytes": 2989
+      },
+      "training.jsonl": {
+        "path": "./runs/cpt_native_compare_20261009/fast/training.jsonl",
+        "sha256": "d72e6d5e3ab24588875eb1e10b092b39d8b5412ec64eb65e0f42afd7d1319169",
+        "bytes": 301499
+      },
+      "initial_optimizer_audit.json": {
+        "path": "./runs/cpt_native_compare_20261009/fast/initial_optimizer_audit.json",
+        "sha256": "6c7b034c1a7c8dbc0a301c817aa3679c78a971dff6ad99e219cdab86677a60d7",
+        "bytes": 205965
+      },
+      "initial_rng.json": {
+        "path": "./runs/cpt_native_compare_20261009/fast/initial_rng.json",
+        "sha256": "331cceef2c2838c9882a9577c45de44acc31d87b05a591a708c54d4d732b20c8",
+        "bytes": 172
+      },
+      "initial_finite_audit.json": {
+        "path": "./runs/cpt_native_compare_20261009/fast/initial_finite_audit.json",
+        "sha256": "1644ff7f0416f44e2a098482c66f9117bff2fe2c1276f0a17fe8d1428b3d8d1a",
+        "bytes": 123029
+      },
+      "final_finite_audit.json": {
+        "path": "./runs/cpt_native_compare_20261009/fast/final_finite_audit.json",
+        "sha256": "c17f778ea19b076110099f3ca724b2170cce5451b6f286cf8ff35dbef572d323",
+        "bytes": 126747
+      },
+      "backend.json": {
+        "path": "./runs/cpt_native_compare_20261009/fast/backend.json",
+        "sha256": "21660aa60348d7f21a60e6ce691128a780dfcd5ab1d0058ce974c7455f1ef32d",
+        "bytes": 1858
+      },
+      "data/manifest.json": {
+        "path": "./data/processed/openwebmath_5b_s42/manifest.json",
+        "sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8"
+      }
+    },
+    "native": {
+      "plan.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/plan.json",
+        "sha256": "86c54173f5654c604426cad7df44bc599dc88222cf39b756a70e5d635018fe71",
+        "bytes": 11751
+      },
+      "result.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/result.json",
+        "sha256": "ceea08d1b1264037f6df042786e61238119ffe1c88d8f488a7ca1bc53dc12078",
+        "bytes": 4477
+      },
+      "evaluation_history.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/evaluation_history.json",
+        "sha256": "adf5968896467570bf85e58cb89c02fc3ecad8691144e395703dbd215477de56",
+        "bytes": 2989
+      },
+      "training.jsonl": {
+        "path": "./runs/cpt_native_compare_20261009/native/training.jsonl",
+        "sha256": "e8bb942eeb6bca92731286e40c8c191fa60a61a75fc29619ef8df5601aa2b822",
+        "bytes": 300996
+      },
+      "initial_optimizer_audit.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/initial_optimizer_audit.json",
+        "sha256": "6c7b034c1a7c8dbc0a301c817aa3679c78a971dff6ad99e219cdab86677a60d7",
+        "bytes": 205965
+      },
+      "initial_rng.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/initial_rng.json",
+        "sha256": "331cceef2c2838c9882a9577c45de44acc31d87b05a591a708c54d4d732b20c8",
+        "bytes": 172
+      },
+      "initial_finite_audit.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/initial_finite_audit.json",
+        "sha256": "1644ff7f0416f44e2a098482c66f9117bff2fe2c1276f0a17fe8d1428b3d8d1a",
+        "bytes": 123029
+      },
+      "final_finite_audit.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/final_finite_audit.json",
+        "sha256": "c17f778ea19b076110099f3ca724b2170cce5451b6f286cf8ff35dbef572d323",
+        "bytes": 126747
+      },
+      "backend.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/backend.json",
+        "sha256": "54230c4a706102c265e49a6dff15d8ea63af526e6132a03dbe4d75ab0aee6bc6",
+        "bytes": 277
+      },
+      "optimizer_implementation_adaptation.json": {
+        "path": "./runs/cpt_native_compare_20261009/native/optimizer_implementation_adaptation.json",
+        "sha256": "8ae86f2f8327531490e81d4c5160ed44cae26a460a53b183329cb775a425a85e"
+      },
+      "data/manifest.json": {
+        "path": "./data/processed/openwebmath_5b_s42/manifest.json",
+        "sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8"
+      }
+    }
+  },
+  "script_sha256": "1d52835f2274c9a376c558edaad135faae3c1f4face0d6a44fa106740af5d012",
+  "matplotlib_version": "3.11.2",
+  "limits": [
+    "Only this checkpoint and a short 1000-update window are compared; this does not establish the cause of the earlier long-run loss rise or outcomes from the base model.",
+    "This compares implementation packages: model compilation, optimizer execution, batch construction and mask representation all differ. It does not isolate model compilation alone.",
+    "FlashAttention training is nondeterministic. One trajectory per case is insufficient for a statistical confidence interval.",
+    "Both validation and the fixed training-corpus probe use the same unpatched native eager evaluation. The probe is not a held-out validation split or benchmark score.",
+    "Per-update timing includes data/H2D, finite-loss synchronization, backward, clipping, AdamW and GPU synchronization; excludes evaluation, JSON logging, loading and saving. Steady speed excludes the first update in each case.",
+    "The report compares recorded checkpoint/data fingerprints and runner audits. It does not re-read the large checkpoint or full 5B token file. Per-update checks compare logged positions/counts/LR; token/label value parity was checked for every selected batch in the runner CPU preflight."
+  ]
+}

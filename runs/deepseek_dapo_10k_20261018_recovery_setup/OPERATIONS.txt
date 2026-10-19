@@ -1,0 +1,22 @@
+Resume from complete2200 checkpoint after original round2231 hit512 candidates
+with only29 mixed groups. Previous completed2201..2230 and unfinished2231 logs
+are preserved as before_recovery_*.jsonl; current append logs trimmed to2200.
+
+Changes: candidate capacity512->2048; rolling full recovery checkpoint every10
+completed rounds; immutable archives + heldout validation remain every100 rounds.
+On capacity exhaustion, no optimizer update has occurred for that round. The
+trainer restores deep-copied round-start history, data cursor and CPU/CUDA RNG,
+saves current unchanged weights/Adam with that metadata to recovery_checkpoint,
+and reports an explicit saved-checkpoint failure. This preserves every completed
+update and allows trimming only the unfinished rollout on the next restart.
+
+For future recovery, select the highest completed_rounds among valid full
+latest_checkpoint, recovery_checkpoint and best_checkpoint. Archive raw logs and
+trim training/rollout JSONL to that checkpoint before resuming. Do not blindly
+rerun this initial run.sh into later append logs; its resume source is2200.
+
+Formal policy remains history_rank (75% priority +25% exploration),32 used groups
+x8 responses,4 optimizer updates/round, LR1e-6,2048 answer cap,micro16,rollout32.
+No relative-length or batch-tail cancellation is enabled.
+Execution ledger runs/dapo_execution_ledger.json preserves counts of abandoned
+formal branches in addition to live group_totals.json weight-lineage counters.

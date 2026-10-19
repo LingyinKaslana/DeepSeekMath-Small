@@ -1,0 +1,1 @@
+{"status": "captured", "utc": "2026-10-15T14:59:00.150334+00:00", "completed_rounds": 75, "checkpoint": "./runs/deepseek_dapo_decode_20261015/resume_checkpoint", "old_pid": 1881317, "old_launcher_pid": 1881213, "no_completed_round_rollback": true}

@@ -1,0 +1,20 @@
+{
+  "all_weights_finite": true,
+  "weight_parameters": 1346471936,
+  "weight_tensors": 219,
+  "dtypes": [
+    "torch.bfloat16"
+  ],
+  "layers": 24,
+  "model_type": "llama",
+  "vocab_rows": 32256,
+  "tokenizer_length": 32022,
+  "eos_token_id": 32014,
+  "bos_token_id": 32013,
+  "pad_token_id": 32014,
+  "native_model_no_remote_code": true,
+  "status": "passed",
+  "cpu_only": true,
+  "elapsed_seconds": 6.588010576029774,
+  "verified_utc": "2026-10-12T06:19:28.578666+00:00"
+}

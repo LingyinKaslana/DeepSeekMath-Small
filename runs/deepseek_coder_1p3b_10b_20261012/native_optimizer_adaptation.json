@@ -1,0 +1,27 @@
+{
+  "checkpoint": "./runs/deepseek_coder_1p3b_500m_20261012/final_checkpoint",
+  "completed_steps": 15259,
+  "tensor_values_unchanged": true,
+  "before_tensor_sha256": "47afa3c3c51a6e6c3a04094e8f659859bfe5c23261ad9227e4071a8a5768ef90",
+  "after_tensor_sha256": "47afa3c3c51a6e6c3a04094e8f659859bfe5c23261ad9227e4071a8a5768ef90",
+  "groups": [
+    {
+      "before": {
+        "lr": 3.000000106112566e-06,
+        "lr_type": "float",
+        "capturable": false,
+        "foreach": true,
+        "fused": false
+      },
+      "after": {
+        "lr": 3.000000106112566e-06,
+        "lr_type": "float",
+        "capturable": false,
+        "foreach": true,
+        "fused": false
+      }
+    }
+  ],
+  "step_device": "CPU scalar; checkpoint CPU mapping preserved",
+  "scope": "Execution flags and numerically identical LR representation only; moment values/step counts/parameter ordering unchanged"
+}

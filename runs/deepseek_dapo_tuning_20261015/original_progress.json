@@ -1,0 +1,19 @@
+{
+  "status": "updating",
+  "utc": "2026-10-15T13:59:07.690275+00:00",
+  "completed_rounds": 54,
+  "target_rounds": 100,
+  "round": 55,
+  "effective_groups": 32,
+  "target_groups": 32,
+  "candidate_groups": 80,
+  "counts": {
+    "all_wrong": 35,
+    "correct_responses": 179,
+    "truncated_responses": 0,
+    "mixed": 38,
+    "all_correct": 7
+  },
+  "rollout_seconds": 52.158396531129256,
+  "generation_tokens_per_second": 1051.7769649467457
+}

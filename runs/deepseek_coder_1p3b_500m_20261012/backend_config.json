@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "validated": true,
+  "model": "deepseek-ai/deepseek-coder-1.3b-base",
+  "revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "sequence_length": 2048,
+  "effective_batch": 16,
+  "micro_batch": 16,
+  "mask_policy": "ones",
+  "fused_optimizer": false,
+  "compiled_optimizer": false,
+  "execution_mode": "standard_native",
+  "options": {
+    "kernels": "native",
+    "loss": "native",
+    "compile_scope": "none",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_fullgraph": false,
+    "compile_dynamic": false,
+    "compile_label_alias": "any",
+    "preserve_silu": false
+  },
+  "purpose": "Fresh DeepSeek-Coder 1.3B native-HF mathematical CPT pilot; actual GPU smoke result recorded before production launch",
+  "validation_evidence": {
+    "structural_model_check": "./runs/deepseek_coder_1p3b_500m_20261012_setup/original_model_cpu_review.json",
+    "gpu_smoke_result": "./runs/deepseek_coder_1p3b_smoke_20261012/result.json",
+    "gpu_smoke_updates": 32,
+    "gpu_smoke_steady_tokens_per_second": 59058.97303906671,
+    "checkpoint_reload": "./runs/deepseek_coder_1p3b_500m_20261012_setup/smoke_checkpoint_verification.json",
+    "model_parameters": 1346471936,
+    "semantics": "Unpatched native HF Llama SDPA; FP32 parameters/gradients/Adam moments, BF16 forward autocast; ordinary uncompiled foreach AdamW; fresh model and optimizer for production"
+  },
+  "precision": "FP32 parameters, gradients and optimizer moments; BF16 forward autocast"
+}

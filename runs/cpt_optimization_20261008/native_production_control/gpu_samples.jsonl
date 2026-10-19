@@ -1,0 +1,12 @@
+{"time":1791437221.979434,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":149.89}
+{"time":1791437222.5249307,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":150.54}
+{"time":1791437223.0742612,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":150.7}
+{"time":1791437223.6136773,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":150.7}
+{"time":1791437224.15319,"phase":"loading","utilization":1.0,"memory_mib":689.0,"power_w":162.7}
+{"time":1791437224.6870103,"phase":"loading","utilization":7.0,"memory_mib":2129.0,"power_w":196.01}
+{"time":1791437225.2270072,"phase":"loading","utilization":5.0,"memory_mib":4515.0,"power_w":213.84}
+{"time":1791437225.9368403,"phase":"native_flash_reference","utilization":0.0,"memory_mib":6977.0,"power_w":213.46}
+{"time":1791437226.4780817,"phase":"native_flash_reference","utilization":1.0,"memory_mib":7645.0,"power_w":213.66}
+{"time":1791437227.0173125,"phase":"native_flash_reference","utilization":71.0,"memory_mib":183819.0,"power_w":420.34}
+{"time":1791437227.5544558,"phase":"selected_backend_flash","utilization":76.0,"memory_mib":183823.0,"power_w":802.61}
+{"time":1791437228.1953537,"phase":"native_restoration_control","utilization":45.0,"memory_mib":183823.0,"power_w":1001.69}

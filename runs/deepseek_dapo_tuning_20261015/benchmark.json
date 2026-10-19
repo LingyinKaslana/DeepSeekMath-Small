@@ -1,0 +1,131 @@
+{
+  "status": "complete",
+  "checkpoint": "./runs/deepseek_dapo_tuning_20261015/resume_checkpoint",
+  "resume_round": 55,
+  "baseline_config": {
+    "algorithm": "DAPO",
+    "rounds": 100,
+    "groups": 32,
+    "samples": 8,
+    "rollout_prompts": 16,
+    "micro_batch": 2,
+    "update_batch": 64,
+    "max_new_tokens": 2048,
+    "soft_start": 1536,
+    "clip_low": 0.2,
+    "clip_high": 0.28,
+    "lr": 1e-06,
+    "warmup_rounds": 10,
+    "seed": 42,
+    "max_candidate_groups_per_round": 512,
+    "validation_size": 256,
+    "validation_every": 10,
+    "save_every": 5,
+    "precision": "FP32 parameters/gradients/Adam; BF16 autocast; native SDPA",
+    "kl_coefficient": 0.0,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "epochs_per_rollout": 1,
+    "dynamic_sampling": "Keep groups with both correct and incorrect responses; resample within bounded attempts",
+    "reward": "Strict first explicit numeric answer marker: correct +1, incorrect -1; soft length penalty 1536..2048",
+    "prompt": "Existing zero-shot Q/A SFT prompt; no few-shot or chat template",
+    "source_checkpoint": "./runs/deepseek_sft_gsm_math_20261015/best_checkpoint",
+    "source_checkpoint_manifest_sha256": "f1b7a79dcf74da7617cdaa8e508538ee9d4a34b1cedf4599ce1f4265a3a9a4a5",
+    "source_weights_sha256": {
+      "model-00001-of-00002.safetensors": "7c386c6bb99abf61cbe703d1c0ba04a06587250807bc065a6159f91d0e4e4971",
+      "model-00002-of-00002.safetensors": "efac0fb004426ab9c10815ce557568765567ac88763f90a89c6e01805e2f5367"
+    },
+    "data_manifest_sha256": "ab79f4f38407238355f4062d89aa0258f184f17cef132f00030c9ebe38b88d4a",
+    "script_sha256": "d898077c41f717b4f408c8b07b72b3addd26dc2908f233ebc539b0f5b33782d7"
+  },
+  "updates": [
+    {
+      "micro_batch": 2,
+      "seconds": 26.808249352965504,
+      "response_tokens_per_second": 792.5172479660552,
+      "peak_allocated_gib": 25.42204999923706,
+      "updates": 4,
+      "response_tokens": 21246,
+      "max_abs_sampled_parameter_diff_vs_micro2": 0.0,
+      "first_minibatch_policy_loss": -0.02735964024933697,
+      "status": "passed"
+    },
+    {
+      "micro_batch": 8,
+      "seconds": 7.019615969969891,
+      "response_tokens_per_second": 3026.66130040318,
+      "peak_allocated_gib": 28.907913208007812,
+      "updates": 4,
+      "response_tokens": 21246,
+      "max_abs_sampled_parameter_diff_vs_micro2": 8.456408977508545e-07,
+      "first_minibatch_policy_loss": -0.02736098926173166,
+      "status": "passed"
+    },
+    {
+      "micro_batch": 16,
+      "seconds": 4.455331378965639,
+      "response_tokens_per_second": 4768.668858237101,
+      "peak_allocated_gib": 35.00625658035278,
+      "updates": 4,
+      "response_tokens": 21246,
+      "max_abs_sampled_parameter_diff_vs_micro2": 1.255422830581665e-06,
+      "first_minibatch_policy_loss": -0.02736099250368401,
+      "status": "passed"
+    },
+    {
+      "micro_batch": 32,
+      "seconds": 2.3537799830082804,
+      "response_tokens_per_second": 9026.332177762113,
+      "peak_allocated_gib": 46.881622314453125,
+      "updates": 4,
+      "response_tokens": 21246,
+      "max_abs_sampled_parameter_diff_vs_micro2": 1.3168901205062866e-06,
+      "first_minibatch_policy_loss": -0.0273609885412978,
+      "status": "passed"
+    }
+  ],
+  "rollouts": [
+    {
+      "prompt_batch": 16,
+      "concurrent_responses": 128,
+      "seconds": 23.172610258101486,
+      "generated_tokens": 22008,
+      "tokens_per_second": 949.7419477076684,
+      "correct_responses": 102,
+      "maximum_response_tokens": 278,
+      "peak_allocated_gib": 22.06188440322876,
+      "status": "passed"
+    },
+    {
+      "prompt_batch": 32,
+      "concurrent_responses": 256,
+      "seconds": 16.36804421909619,
+      "generated_tokens": 21671,
+      "tokens_per_second": 1323.9822491875348,
+      "correct_responses": 97,
+      "maximum_response_tokens": 239,
+      "peak_allocated_gib": 33.72357511520386,
+      "status": "passed"
+    }
+  ],
+  "response_alignment": {
+    "status": "passed",
+    "response_tokens": 39,
+    "selected_response_nll": 0.28312352299690247,
+    "native_hf_answer_only_ce": 0.28312352299690247,
+    "absolute_difference": 0.0,
+    "tolerance": 0.03
+  },
+  "stress": {
+    "status": "passed",
+    "micro_batch": 32,
+    "response_length": 2048,
+    "peak_allocated_gib": 217.58620643615723,
+    "adam_headroom_gib": 11
+  },
+  "finished_utc": "2026-10-15T14:02:57.766501+00:00",
+  "selected_micro_batch": 16,
+  "selected_rollout_prompts": 32,
+  "source_checkpoint_unchanged": true
+}

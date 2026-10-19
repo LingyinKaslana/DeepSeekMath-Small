@@ -1,0 +1,13 @@
+group,name,questions,correct,accuracy_percent
+by_type,Algebra,1187,440,37.06823925863522
+by_type,Counting & Probability,474,96,20.253164556962027
+by_type,Geometry,479,99,20.668058455114824
+by_type,Intermediate Algebra,903,109,12.070874861572536
+by_type,Number Theory,540,81,15.0
+by_type,Prealgebra,871,348,39.9540757749713
+by_type,Precalculus,546,70,12.82051282051282
+by_level,Level 1,437,257,58.81006864988558
+by_level,Level 2,894,351,39.261744966442954
+by_level,Level 3,1131,325,28.735632183908045
+by_level,Level 4,1214,203,16.72158154859967
+by_level,Level 5,1324,107,8.08157099697885

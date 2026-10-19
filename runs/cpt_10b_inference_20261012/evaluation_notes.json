@@ -1,0 +1,44 @@
+{
+  "official_main_scores_unchanged": true,
+  "gsm8k": {
+    "official_correct": 671,
+    "official_total": 1319,
+    "comma_normalized_secondary_correct": 690,
+    "secondary_label": "Diagnostic only: remove thousands separators before using the same official extractor and evaluator",
+    "wrong_to_correct": 19,
+    "correct_to_wrong": 0,
+    "detail": "./runs/cpt_10b_inference_20261012/gsm8k_completed_review.json"
+  },
+  "math": {
+    "known_official_parser_limits": [
+      {
+        "dataset_index": 778,
+        "gold": "-7",
+        "generated_answer": "-7, followed by I hope it is correct",
+        "effect": "Official parser retains the following text and marks this answer incorrect; main result is unchanged."
+      },
+      {
+        "dataset_index": 82,
+        "original_gold": "Saturday",
+        "official_extracted_gold": [
+          ""
+        ],
+        "prediction": [
+          "7"
+        ],
+        "correct": false,
+        "effect": "Official parser removes the mbox gold; correcting this gold would not change this model answer from incorrect."
+      }
+    ]
+  },
+  "interpretation_limits": [
+    "This checkpoint has CPT only, with no SFT/RL.",
+    "No GSM8K/MATH decontamination of the CPT corpus was performed.",
+    "HF backend differs from the paper's vLLM backend; outputs can differ with numerical rounding.",
+    "Answers exceeding 1024 new tokens are truncated and remain in the score denominator."
+  ],
+  "length_stopped_questions": {
+    "gsm8k": 70,
+    "math": 840
+  }
+}

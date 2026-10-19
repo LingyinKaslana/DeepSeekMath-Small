@@ -1,0 +1,101 @@
+[
+  {
+    "step": 181650,
+    "cumulative_tokens": 5952302080,
+    "loss": 1.9102617502212524,
+    "perplexity": 6.7548566523764135,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 181654,
+    "cumulative_tokens": 5952433152,
+    "loss": 1.9101834297180176,
+    "perplexity": 6.754327629321066,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 181654,
+    "cumulative_tokens": 5952433152,
+    "loss": 1.9101834297180176,
+    "perplexity": 6.754327629321066,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 182000,
+    "cumulative_tokens": 5963770880,
+    "loss": 1.9103487730026245,
+    "perplexity": 6.75544450436796,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 183000,
+    "cumulative_tokens": 5996538880,
+    "loss": 1.9100505113601685,
+    "perplexity": 6.753429914846891,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 184000,
+    "cumulative_tokens": 6029306880,
+    "loss": 1.9112775325775146,
+    "perplexity": 6.761721602640376,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 185000,
+    "cumulative_tokens": 6062074880,
+    "loss": 1.9120635986328125,
+    "perplexity": 6.767038852048426,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 186000,
+    "cumulative_tokens": 6094842880,
+    "loss": 1.910573959350586,
+    "perplexity": 6.756965909538162,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 186317,
+    "cumulative_tokens": 6105230336,
+    "loss": 1.9107840061187744,
+    "perplexity": 6.758385337458126,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  }
+]

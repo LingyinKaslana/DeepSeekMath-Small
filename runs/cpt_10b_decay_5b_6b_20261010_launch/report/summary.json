@@ -1,0 +1,185 @@
+{
+  "generated_utc": "2026-10-12T01:34:45.726744+00:00",
+  "generated_beijing": "2026-10-12T09:34:45.726744+08:00",
+  "run": "./runs/cpt_10b_decay_5b_6b_20261010",
+  "previous_run": "./runs/cpt_10b_lr3e6_20261009",
+  "resume_step": 140508,
+  "common_evaluation_step": 305176,
+  "latest": {
+    "step": 305176,
+    "input_tokens": 10000000000,
+    "input_tokens_b": 10.0,
+    "validation_loss": 1.850541591644287,
+    "fixed_train_probe_loss": 1.8812915086746216
+  },
+  "baseline": {
+    "step": 0,
+    "input_tokens": 0,
+    "input_tokens_b": 0.0,
+    "validation_loss": 1.86186945438385,
+    "fixed_train_probe_loss": 1.931435465812683
+  },
+  "requested_cutoff_step": null,
+  "last_fixed_evaluation_before_decay": {
+    "step": 152000,
+    "input_tokens": 4980734464,
+    "input_tokens_b": 4.980734464,
+    "validation_loss": 1.8534609079360962,
+    "fixed_train_probe_loss": 1.8935481309890747
+  },
+  "changes_since_last_pre_decay_evaluation": {
+    "validation_loss": -0.002919316291809082,
+    "fixed_train_probe_loss": -0.012256622314453125
+  },
+  "best_validation": {
+    "step": 13000,
+    "input_tokens": 425984000,
+    "input_tokens_b": 0.425984,
+    "validation_loss": 1.8205416202545166,
+    "fixed_train_probe_loss": 1.893743634223938
+  },
+  "best_fixed_train_probe": {
+    "step": 282000,
+    "input_tokens": 9240570880,
+    "input_tokens_b": 9.24057088,
+    "validation_loss": 1.849794626235962,
+    "fixed_train_probe_loss": 1.8809815645217896
+  },
+  "latest_applied_lr": {
+    "step": 305176,
+    "input_tokens": 10000000000,
+    "input_tokens_b": 10.0,
+    "nominal_lr": 3e-07,
+    "effective_fp32_lr": 3.000000106112566e-07
+  },
+  "batch_mean_latest": {
+    "start_step": 304001,
+    "end_step": 305000,
+    "input_tokens_b": 9.99423488,
+    "updates": 1000,
+    "supervised_tokens": 32752000,
+    "token_weighted_batch_loss": 1.8688466327190398
+  },
+  "batch_mean_excluded_tail_updates": 176,
+  "batch_mean_window_updates": 1000,
+  "batch_mean_weighting": "Supervised-token weighted, complete nonoverlapping windows, x at window end",
+  "fixed_evaluation_point_count": 308,
+  "training_rows": 305176,
+  "source_training_row_counts": {
+    "./runs/cpt_10b_lr3e6_20261009": 140508,
+    "./runs/cpt_10b_decay_5b_6b_20261010": 164668
+  },
+  "checks": {
+    "checkpoint_chain": true,
+    "same_fixed_train_probe": true,
+    "same_dataset_and_orders": true,
+    "continuous_training_steps": true,
+    "overlap_consistency": true,
+    "exact_input_token_prefix": true,
+    "observed_lr_matches_intervention": true
+  },
+  "train_probe_indices_sha256": "0275fe980c1fd3bf853fa63d40c27291d4368b0eb41b4c183127d9f964169a81",
+  "train_probe_tokens_sha256": "f2d447c272813ee27c047b0a895234932d1d05cb1e4275b11b982dfedee42619",
+  "policy": {
+    "schema_version": 1,
+    "type": "linear_input_tokens",
+    "start_input_tokens": 5000000000,
+    "end_input_tokens": 6000000000,
+    "start_lr": 3e-06,
+    "end_lr": 3e-07,
+    "after": "hold"
+  },
+  "sources": [
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/manifest.json",
+      "bytes": 13958,
+      "sha256": "1f32c239018554ff0b38b6807b1eae467bf32c4e0a1598773ec00acabcf5af7f"
+    },
+    {
+      "path": "./runs/cpt_10b_decay_5b_6b_20261010/manifest.json",
+      "bytes": 20167,
+      "sha256": "0d9077ab364002109572c6a15fabe63ece57d33558b56e0908fc6ca0acbbf55b"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/result.json",
+      "bytes": 99287,
+      "sha256": "3a753703db4242c2d6beb02e30580c5af3c64548cbfbd061fa832db37b2a46a1"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/stopped_checkpoint/checkpoint_manifest.json",
+      "bytes": 57455,
+      "sha256": "5bd32c5a06d5ccf5eb4516c2aa4202642b1c536f056bf447f6003beab55f81ce"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/train_probe.json",
+      "bytes": 3638,
+      "sha256": "4b247c3c567569bc985020ebd14ed22689f569bb64eccbf43ade50610e665c42"
+    },
+    {
+      "path": "./runs/cpt_10b_decay_5b_6b_20261010/train_probe.json",
+      "bytes": 3638,
+      "sha256": "4b247c3c567569bc985020ebd14ed22689f569bb64eccbf43ade50610e665c42"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/validation_before.json",
+      "bytes": 237,
+      "sha256": "212fce849707cb6f1412cc4e01b897f51f3f56e4647e810b4801b3d15e4e481c"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/validation_history.json",
+      "bytes": 37082,
+      "sha256": "5da318fbbbbca308b353c5b7aee5a5bad4e47d3435d9ce9a04fd8cd4d92c545a"
+    },
+    {
+      "path": "./runs/cpt_10b_decay_5b_6b_20261010/validation_history.json",
+      "bytes": 80879,
+      "sha256": "43f37c799e923afe159b5a0a9dbdf3b9898c33188bbea5cd00ed819b50ecbae4"
+    },
+    {
+      "path": "./runs/cpt_10b_decay_5b_6b_20261010/validation_before.json",
+      "bytes": 243,
+      "sha256": "16a9b77b375f0b76c5469173ef43e06b4221c69ca4ac4bd5cfb8c198d6eddb7a"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/train_probe_history.json",
+      "bytes": 42841,
+      "sha256": "3bd4583088fa0f2f2c0e07414f00b0a07d6a53ffd39a2a315f3552a397eb1f7b"
+    },
+    {
+      "path": "./runs/cpt_10b_decay_5b_6b_20261010/train_probe_history.json",
+      "bytes": 93406,
+      "sha256": "793e55dff4564f0865d7ecbb9a40f180375f1925de4c6eaf9975a4866c509cb5"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/training.jsonl",
+      "bytes": 53221915,
+      "sha256": "63666ef96ccf16a209e152b12441dd9bd6f5e239cca2d650a97a4cb6505150ed"
+    },
+    {
+      "path": "./runs/cpt_10b_decay_5b_6b_20261010/training.jsonl",
+      "bytes": 67785268,
+      "sha256": "fa61187416a44ae69f736b3167ee7f06d3d5494cee2c3808038cf33cf860c9eb"
+    },
+    {
+      "path": "./scripts/plot_cpt_train_validation.py",
+      "bytes": 12303,
+      "sha256": "c68210b0d678f24cb10ab8153dd07ff7f570ab3599886ff8f9ddd29a91904ff0"
+    }
+  ],
+  "script_sha256": "86cf49c1bf8e605604bbab189402af0b65d8d69a243a16ae474655587af754b1",
+  "fixed_curves_smoothed": false,
+  "training_unchanged": true,
+  "limits": [
+    "Different fixed sample losses do not measure overfitting by their absolute gap.",
+    "This observational trajectory includes a first-to-second-epoch transition at 5B as LR decay begins.",
+    "Dashed future LR comes from the current policy, not observed training."
+  ],
+  "artifacts": [
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_overview.png",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_overview.svg",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_overview.pdf",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_recent.png",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_recent.svg",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_recent.pdf"
+  ]
+}

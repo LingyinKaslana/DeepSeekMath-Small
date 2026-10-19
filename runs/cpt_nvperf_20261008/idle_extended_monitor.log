@@ -1,0 +1,12 @@
+NVPERF|INF|04:26:36:761|Initialize || Setting library load paths: /external/nvidia-perfsdk/Samples/NvPerfUtility/tools/build/bin
+NVPERF|INF|04:26:36:992|Initialize || Loaded NvPerf Vulkan backend
+NVPERF|INF|04:26:36:992|SelectDevice || Detected 1 NvPerf device(s)
+NVPERF|INF|04:26:36:993|SelectDevice || [0] NVIDIA GB300 (LOCAL_GPU_HOST), periodic-sampler-supported=yes
+NVPERF|INF|04:26:37:003|main || Loaded 13 metrics [gb110-llm-extended.yaml]
+NVPERF|ERR|04:26:37:020|BeginSession || NVPW_GPU_PeriodicSampler_BeginSession_V2 failed, nvpaStatus = NVPA_STATUS_INSUFFICIENT_PRIVILEGE(Profiling permission not granted; see https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters), deviceIndex = 0
+NVPERF|ERR|04:26:37:020|RunHudSamplingLoop || BeginSession failed
+NVPERF|WRN|04:26:37:020|main || failed to query SM number from sm__cycles_elapsed.sum/sm__cycles_elapsed.avg, SM will be shown as N/A
+NVPERF|INF|04:26:37:020|main || CSV mode: UTF-8 comma-separated values -> idle_extended.csv. Monitoring will stop when CSV GPU duration expires.
+NVPERF|ERR|04:26:37:040|BeginSession || NVPW_GPU_PeriodicSampler_BeginSession_V2 failed, nvpaStatus = NVPA_STATUS_INSUFFICIENT_PRIVILEGE(Profiling permission not granted; see https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters), deviceIndex = 0
+NVPERF|ERR|04:26:37:041|RunHudSamplingLoop || BeginSession failed
+NVPERF|INF|04:26:37:041|main || Monitoring finished

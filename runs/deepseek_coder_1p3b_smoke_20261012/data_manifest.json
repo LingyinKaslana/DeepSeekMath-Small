@@ -1,0 +1,1008 @@
+{
+  "status": "ready",
+  "purpose": "Fresh DeepSeek-Coder mathematical CPT pilot",
+  "source_repo": "open-web-math/open-web-math",
+  "source_revision": "fde8ef8de2300f5e778f56261843dab89f230815",
+  "source_manifest": "./data/raw/openwebmath_20261008/manifest.json",
+  "source_manifest_sha256": "44682c262b71ad38a3a157434f74d96e6764f2ad9ee41df83c8b5723a5780805",
+  "reference_data": "./data/processed/openwebmath_5b_s42",
+  "reference_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+  "reference_metadata_sha256": {
+    "train.jsonl": "d57a90e3159a578f8d3eb4858447cc96b6614ae41d645dc04fda210ebb608094",
+    "validation.jsonl": "87219a11508a2db926526b35b70093c4b0818365dca576d9e495a029f426c5d3"
+  },
+  "tokenizer": "deepseek-ai/deepseek-coder-1.3b-base",
+  "tokenizer_revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "tokenizer_eos_token_id": 32014,
+  "tokenizer_vocabulary_size": 32022,
+  "seed": 42,
+  "packing": "document text + EOS, concatenated within each split; no cross-document attention mask",
+  "sampling": "equal NEW-token quota per source shard; prefix of existing reference-selected document order",
+  "split": "existing reference train/validation document membership; no fresh split or document resampling",
+  "block_length": 2048,
+  "dtype": "uint32",
+  "splits": {
+    "train": {
+      "tokens": 1140000,
+      "documents": 713,
+      "full_blocks": 556,
+      "tokens_in_full_blocks": 1138688,
+      "remainder_tokens": 1312,
+      "prefix_truncated_documents": 114,
+      "source_shards": 114,
+      "all_metadata_records_audited": true,
+      "all_selected_documents_match_reference_split": true,
+      "all_token_ids_range_checked": true,
+      "source_token_roundtrip_samples": 283,
+      "all_document_token_roundtrip": false
+    },
+    "validation": {
+      "tokens": 3190317,
+      "documents": 1501,
+      "full_blocks": 1557,
+      "tokens_in_full_blocks": 3188736,
+      "remainder_tokens": 1581,
+      "prefix_truncated_documents": 0,
+      "source_shards": 114,
+      "all_metadata_records_audited": true,
+      "all_selected_documents_match_reference_split": true,
+      "all_token_ids_range_checked": true,
+      "source_token_roundtrip_samples": 323,
+      "all_document_token_roundtrip": true
+    }
+  },
+  "train_validation_text_hash_overlap": 0,
+  "train_validation_url_overlap": 0,
+  "exact_selected_text_and_url_deduplication": true,
+  "all_used_source_files_sha256_verified": true,
+  "train_metadata_has_original_text": false,
+  "train_metadata_source_resolution": "source_shard + row_group + row_in_group resolves original text in pinned source parquet",
+  "validation_policy": "all reference validation documents, complete original text; old prefixes restored",
+  "reference_validation_documents": 1501,
+  "reference_validation_prefix_truncated_documents": 228,
+  "validation_loss_comparison": "New tokenizer and restored full held-out text; absolute loss is not directly comparable to the Qwen run",
+  "shard_sampling": [
+    {
+      "shard": "data/train-00070-of-00114-00d409298080d3b4.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22024,
+      "quota": 10000,
+      "source_sha256": "d4849f727e8658c033f20e93e7b0314838ddb6022e3d1262a63d97f69bf5d522"
+    },
+    {
+      "shard": "data/train-00080-of-00114-7e0742992331e6e4.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 22126,
+      "quota": 10000,
+      "source_sha256": "cb92f3dff7ac368a38f6a66f61cd88ac1106e51d53de248c3dfb0971ed89d32a"
+    },
+    {
+      "shard": "data/train-00034-of-00114-627b0a1638e867d2.parquet",
+      "tokens": 10000,
+      "documents": 10,
+      "reference_documents": 22296,
+      "quota": 10000,
+      "source_sha256": "52dc8a70fea37dbcc83a697c0a55d57e24fd385075dc56168c7d07428e8e6f7c"
+    },
+    {
+      "shard": "data/train-00088-of-00114-21dc7966e8cf32b9.parquet",
+      "tokens": 10000,
+      "documents": 12,
+      "reference_documents": 22664,
+      "quota": 10000,
+      "source_sha256": "c67ddb3ad337e10f9d31cf20284904cdf4474f1f6898173deedc85a057cbd0d1"
+    },
+    {
+      "shard": "data/train-00026-of-00114-895ba22c761501e9.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 21909,
+      "quota": 10000,
+      "source_sha256": "2cdf9291f710a1d7f525e8a40cabba7bc4c8e314a7bc62a193c7d1e2f3d4af4f"
+    },
+    {
+      "shard": "data/train-00063-of-00114-7455c94d26bc436a.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22569,
+      "quota": 10000,
+      "source_sha256": "fec2ca418c4623257c115ffa94ae2aab266c3bbe6bf08b89a91045cd39daef7c"
+    },
+    {
+      "shard": "data/train-00041-of-00114-c6d5c710a54b7159.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22255,
+      "quota": 10000,
+      "source_sha256": "95349cbdd673ab94a83db2686718e08f3f28e362c6dda7a4400cbc33d6c34f0a"
+    },
+    {
+      "shard": "data/train-00021-of-00114-64c103f9fbdf2cf4.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22282,
+      "quota": 10000,
+      "source_sha256": "7edf003c283efb5b773921b7ba24f382a92966ec6a554ea24b166f2608b9b592"
+    },
+    {
+      "shard": "data/train-00089-of-00114-6bed8732922b7f79.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22007,
+      "quota": 10000,
+      "source_sha256": "305ae974d9ff6e3963a766ae1962964427f4573276feedae498f5c2b85469864"
+    },
+    {
+      "shard": "data/train-00074-of-00114-b9ba5eaf8a91adb0.parquet",
+      "tokens": 10000,
+      "documents": 10,
+      "reference_documents": 22037,
+      "quota": 10000,
+      "source_sha256": "2b474bf7f1f268e1f4d095190d18f7101fdfcee0e13c0201759195eac27637b1"
+    },
+    {
+      "shard": "data/train-00009-of-00114-691ac94b115fea46.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 22097,
+      "quota": 10000,
+      "source_sha256": "e6d396fdd6e6642e80c563586410fcc671335bef88252062a34717e8df4740c1"
+    },
+    {
+      "shard": "data/train-00090-of-00114-81a5f980ee29b128.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22563,
+      "quota": 10000,
+      "source_sha256": "3d73381f0e5c8f2d1aa0182336a323099f53bc55cda66624506e378d4925e16d"
+    },
+    {
+      "shard": "data/train-00016-of-00114-7b0ca70e75bb60ee.parquet",
+      "tokens": 10000,
+      "documents": 3,
+      "reference_documents": 22226,
+      "quota": 10000,
+      "source_sha256": "3d671ec17054d50d2e18fcd2b5c43e318c1c3af59add9c7d161c072c1d8d251b"
+    },
+    {
+      "shard": "data/train-00032-of-00114-4fee32b54661f280.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22215,
+      "quota": 10000,
+      "source_sha256": "d5880b4daf97e9ba122d4a4a5ffcbe51c0ffc940693549ac422614ed450bade9"
+    },
+    {
+      "shard": "data/train-00047-of-00114-c530007ea6bb7ee1.parquet",
+      "tokens": 10000,
+      "documents": 12,
+      "reference_documents": 21920,
+      "quota": 10000,
+      "source_sha256": "e0db38e94af96cf76d2f85af2a0097bfdabfe08e2e62914f2356729fe34e0b00"
+    },
+    {
+      "shard": "data/train-00082-of-00114-5f74aaa3f0e5e23d.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22150,
+      "quota": 10000,
+      "source_sha256": "01a7902c17787db616304475e0bc21c31dc3232ec6a164ae0557cf93d1eb984a"
+    },
+    {
+      "shard": "data/train-00050-of-00114-641de5515646eb38.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22580,
+      "quota": 10000,
+      "source_sha256": "05b8ed7a3b83f76c859b44ca5c12dac496bebc830a21803f155d565b57ecfa26"
+    },
+    {
+      "shard": "data/train-00078-of-00114-fad2b3b99f01b927.parquet",
+      "tokens": 10000,
+      "documents": 2,
+      "reference_documents": 22002,
+      "quota": 10000,
+      "source_sha256": "046ab9eed8904836beb7a89cebc6ab5382d9ffb2e547ae5d9934442f84500288"
+    },
+    {
+      "shard": "data/train-00001-of-00114-e32fc2813a15f61c.parquet",
+      "tokens": 10000,
+      "documents": 10,
+      "reference_documents": 22687,
+      "quota": 10000,
+      "source_sha256": "d51cde7eeceb64d1814df384a0a05340422e40543db095200de38da41044dda1"
+    },
+    {
+      "shard": "data/train-00108-of-00114-b910fc59043684fa.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22111,
+      "quota": 10000,
+      "source_sha256": "4be4c2b16d52a4b383ba14f24679a63824c143b31eb1eeaa4df6f7da6cf0d3cc"
+    },
+    {
+      "shard": "data/train-00084-of-00114-77bf15a870bfc644.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22351,
+      "quota": 10000,
+      "source_sha256": "401b8de5fe74c7d73b16879fc4f1b8ba61e4d2ec15c0e9ca95952b291c51c7cc"
+    },
+    {
+      "shard": "data/train-00030-of-00114-890f9615f1b85726.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22373,
+      "quota": 10000,
+      "source_sha256": "ec7d034819d75fc51e3a2935d201dd03dc8c3ef04ecc634ad5f9ea2ee67c2602"
+    },
+    {
+      "shard": "data/train-00092-of-00114-0dbff189ab34173d.parquet",
+      "tokens": 10000,
+      "documents": 3,
+      "reference_documents": 22085,
+      "quota": 10000,
+      "source_sha256": "2f5a9e33774573d19b4d4de541aa7c491cbaba6969c159586b168cb9e6b37001"
+    },
+    {
+      "shard": "data/train-00079-of-00114-1e830c9406ba82ba.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22511,
+      "quota": 10000,
+      "source_sha256": "69aa582eb9b14a5ef86d4e45111a7e6a7efff936c74a88885c5e9df3c3940180"
+    },
+    {
+      "shard": "data/train-00008-of-00114-bf41cf8843148a70.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22495,
+      "quota": 10000,
+      "source_sha256": "ace0619be7224cb512b841ead1077e0781aa2fae8a81309178d38e595b382bae"
+    },
+    {
+      "shard": "data/train-00051-of-00114-4e33803d64064533.parquet",
+      "tokens": 10000,
+      "documents": 10,
+      "reference_documents": 21886,
+      "quota": 10000,
+      "source_sha256": "dc5c53af9c38a063b9368828d52e79fecefb9d218b812d5482b14add4b135ef3"
+    },
+    {
+      "shard": "data/train-00073-of-00114-daa3ea18691223ea.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 22095,
+      "quota": 10000,
+      "source_sha256": "7ab93b9e5cab2c3d4ca2d814f163dda84ded87162bbc2b87878fde656e77c0a6"
+    },
+    {
+      "shard": "data/train-00067-of-00114-00b0cfdec58c88e3.parquet",
+      "tokens": 10000,
+      "documents": 12,
+      "reference_documents": 21960,
+      "quota": 10000,
+      "source_sha256": "958ef0222ea92cb2cc1890b0e66b1e20bad8431e07dfc6f5c6b31cf80bda47fc"
+    },
+    {
+      "shard": "data/train-00007-of-00114-36c74b525c9694d4.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22719,
+      "quota": 10000,
+      "source_sha256": "dab1dd7389d116f6c910e06dbdd942e05adc1f103561d44d761d74668073d41d"
+    },
+    {
+      "shard": "data/train-00052-of-00114-19ab8807098890f2.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22521,
+      "quota": 10000,
+      "source_sha256": "7613f2bb8c23af60457bbd99ff1e44e81cb31c2a511f9eeb02fefdf6931d3551"
+    },
+    {
+      "shard": "data/train-00066-of-00114-111c17033ab8bd4a.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22369,
+      "quota": 10000,
+      "source_sha256": "3ed7b323bde320c92cd3fa3cf331909cdfa918e52597dde82f33ad470d7b81a7"
+    },
+    {
+      "shard": "data/train-00037-of-00114-18f228cb81d4f382.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22251,
+      "quota": 10000,
+      "source_sha256": "069da19c756680e5f0d19bdb55c7cc8634c99a3157e9ca905c12d909d5953cd2"
+    },
+    {
+      "shard": "data/train-00049-of-00114-4fefd2e02ac88ef4.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22476,
+      "quota": 10000,
+      "source_sha256": "de0bae0d99100907e4d58af91cb81deb47325220106ad8589799dde562b30b05"
+    },
+    {
+      "shard": "data/train-00055-of-00114-01e9c7d6d954e951.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22496,
+      "quota": 10000,
+      "source_sha256": "57ce63c1d3ee4a476769a19101d68ea22c1a661924c88af59f7afad16f111ab5"
+    },
+    {
+      "shard": "data/train-00072-of-00114-59c4ddad7738c3c1.parquet",
+      "tokens": 10000,
+      "documents": 11,
+      "reference_documents": 21670,
+      "quota": 10000,
+      "source_sha256": "43228d35572c5ce17778baaca91ee449e46b413ac398be482dd1d65a194e9e32"
+    },
+    {
+      "shard": "data/train-00022-of-00114-4d18242ef5fd3198.parquet",
+      "tokens": 10000,
+      "documents": 2,
+      "reference_documents": 22727,
+      "quota": 10000,
+      "source_sha256": "b290c4d80eb4f140a9bd5928fc0b02af4feab54cd312d617f8ee7d8911c80749"
+    },
+    {
+      "shard": "data/train-00038-of-00114-59d446a886db42d5.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22544,
+      "quota": 10000,
+      "source_sha256": "54922a38ebe8715b652da672c7f80abd442f4cf2ca89083271eda789ed1665d8"
+    },
+    {
+      "shard": "data/train-00010-of-00114-5805e25b4884966e.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 22678,
+      "quota": 10000,
+      "source_sha256": "0c9266284eca0615a83db6c3f70716c63fa3639694ac9ce63a84732fa4d8472c"
+    },
+    {
+      "shard": "data/train-00056-of-00114-78b64b52f016ba8f.parquet",
+      "tokens": 10000,
+      "documents": 2,
+      "reference_documents": 22457,
+      "quota": 10000,
+      "source_sha256": "1711cb83a6ccdb487e1a64afd8afece48f3f4ca230b036bc62ed01276ddaf31c"
+    },
+    {
+      "shard": "data/train-00093-of-00114-8277bc96af326305.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22389,
+      "quota": 10000,
+      "source_sha256": "bc612498cc1791b704fc58dab984a0a55c464f1d86828fd0aea77d3ffbb7ed63"
+    },
+    {
+      "shard": "data/train-00106-of-00114-dee47fa03a21acb7.parquet",
+      "tokens": 10000,
+      "documents": 14,
+      "reference_documents": 22608,
+      "quota": 10000,
+      "source_sha256": "2ccf2d9376183f0f9d0c3c5fc21ff65c37ce9d4b21340dedf64cc81635d13899"
+    },
+    {
+      "shard": "data/train-00060-of-00114-74ce66249e0d849b.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 21696,
+      "quota": 10000,
+      "source_sha256": "e9dcc2ae73a70dbeb4b744f729646d91b4c05c62f0a9e03204adf42485243960"
+    },
+    {
+      "shard": "data/train-00006-of-00114-c82ec070af45d226.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22479,
+      "quota": 10000,
+      "source_sha256": "4efde2737534a901103f5250f5ff796f07c2b86c215e507921c5f46da51019fd"
+    },
+    {
+      "shard": "data/train-00046-of-00114-aae2216d332a8bb9.parquet",
+      "tokens": 10000,
+      "documents": 3,
+      "reference_documents": 22283,
+      "quota": 10000,
+      "source_sha256": "ccb8d01a0f3365db58a64f0f7677a5a8b37c8391a91d9cf3dd1596648309886b"
+    },
+    {
+      "shard": "data/train-00061-of-00114-d55caeba8fd91a9d.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22531,
+      "quota": 10000,
+      "source_sha256": "d7bf1b1c13dea984e3589733d8d06bf7b79e1a6c6f89b44efeed9ad226544b68"
+    },
+    {
+      "shard": "data/train-00087-of-00114-c00ab7c9d82d4699.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22589,
+      "quota": 10000,
+      "source_sha256": "ef81798e6818a48cad0830f08abe2455e98ec1264848a40e101e3291573c1615"
+    },
+    {
+      "shard": "data/train-00112-of-00114-5fdaac128cc9daa8.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 21996,
+      "quota": 10000,
+      "source_sha256": "66e1c7fbac0b1b77a70d809ad3a9f46c738383d8e7b5aa43eb86beda2f22596b"
+    },
+    {
+      "shard": "data/train-00042-of-00114-ae04fe2a9c830269.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22479,
+      "quota": 10000,
+      "source_sha256": "025dde0780001b5ed8872860d9b86a3bb13bd5eae330d5c32ffb3b40adc40441"
+    },
+    {
+      "shard": "data/train-00002-of-00114-1429d96b99aec578.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22486,
+      "quota": 10000,
+      "source_sha256": "4be3d8421bbbdd687d49810e8a024d5ec6eaf6febd7b21c8308c92741356331f"
+    },
+    {
+      "shard": "data/train-00097-of-00114-933ac1d225e0727d.parquet",
+      "tokens": 10000,
+      "documents": 2,
+      "reference_documents": 22476,
+      "quota": 10000,
+      "source_sha256": "d9b56c5767cab5990118b48b1662928663f0be8725dfd764f5ab090d8a6ead80"
+    },
+    {
+      "shard": "data/train-00068-of-00114-f8df664e88fabafd.parquet",
+      "tokens": 10000,
+      "documents": 2,
+      "reference_documents": 22436,
+      "quota": 10000,
+      "source_sha256": "351f4d87931a4aa18c87151e56108dcf6a25a2310b88279ee661eda8efd2e7c2"
+    },
+    {
+      "shard": "data/train-00103-of-00114-84c1737cd9539026.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 21865,
+      "quota": 10000,
+      "source_sha256": "5b420278030ce34e54be233285b75654f5f4c49cd60a40995f834f236f9bac0c"
+    },
+    {
+      "shard": "data/train-00036-of-00114-b346e68b971d3476.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 21903,
+      "quota": 10000,
+      "source_sha256": "e921c49ab4cc6c1a342c6b8e22ab1f520a51a63af74ae45b7dc8de1a122b27ff"
+    },
+    {
+      "shard": "data/train-00023-of-00114-9ec2a6a02bf1d9d0.parquet",
+      "tokens": 10000,
+      "documents": 2,
+      "reference_documents": 22417,
+      "quota": 10000,
+      "source_sha256": "ea5a812e82c7cef1fb46c9c99c675c612d636df6226395980f2a5aee5a7a8f94"
+    },
+    {
+      "shard": "data/train-00039-of-00114-7eb5d8ce001f3504.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22645,
+      "quota": 10000,
+      "source_sha256": "10163789cbdf5e29ca263d9a785792fdf9a7cd470af59334be2ac7397257023d"
+    },
+    {
+      "shard": "data/train-00040-of-00114-67f9d4881b81ae18.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 21770,
+      "quota": 10000,
+      "source_sha256": "7fbdd87cacfd2a29ccf8ba054d8d2a6800fb3899c8b1baf131235027996b2f8b"
+    },
+    {
+      "shard": "data/train-00085-of-00114-8d3357e0c795d8ff.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22183,
+      "quota": 10000,
+      "source_sha256": "c2a896c4eedc4b1715bf47df9f7fb6c44a47598bd823e7fcf360c048bd9e6b2c"
+    },
+    {
+      "shard": "data/train-00018-of-00114-f187dd9c797b315c.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 22290,
+      "quota": 10000,
+      "source_sha256": "baa33f445e6a2a9ab9cc9884feaf22a94ab655eabc8241b720d8a01087b79b47"
+    },
+    {
+      "shard": "data/train-00076-of-00114-4abc935890da0ff3.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22350,
+      "quota": 10000,
+      "source_sha256": "77ed0e7dbc37f637b8d842164d1fbe37381fed04f18930772f12bdbfdaaa84cb"
+    },
+    {
+      "shard": "data/train-00065-of-00114-9d2d2227194ee947.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 22139,
+      "quota": 10000,
+      "source_sha256": "f6a3e98dfa7ee91fe6f89c5b482f88f37cd59d52f26b6e650f1851c5bfc63a5f"
+    },
+    {
+      "shard": "data/train-00024-of-00114-92f9f033a294f332.parquet",
+      "tokens": 10000,
+      "documents": 12,
+      "reference_documents": 22380,
+      "quota": 10000,
+      "source_sha256": "63dd331f5bb456d623f86cce3e806e791c0d00e97e8c62d830d6bba3dd43806f"
+    },
+    {
+      "shard": "data/train-00059-of-00114-b500637ee2ebb297.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22455,
+      "quota": 10000,
+      "source_sha256": "c95499aa41c9963af87d7daaef4ea660931c30d8fd7b384706daa07226146f77"
+    },
+    {
+      "shard": "data/train-00062-of-00114-7ee2ae4258482339.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 22312,
+      "quota": 10000,
+      "source_sha256": "a94f869112a49b0f2c5a64e1c783b3e218d76f3f8bb14bd9e974a7e2e381bafe"
+    },
+    {
+      "shard": "data/train-00015-of-00114-e65817847eac684c.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 22327,
+      "quota": 10000,
+      "source_sha256": "7648bf7b0909461f881a693bac6c60fbcd3bb8f64a7ba13d765597ad23ff087f"
+    },
+    {
+      "shard": "data/train-00058-of-00114-bf8a0e1e48110acd.parquet",
+      "tokens": 10000,
+      "documents": 11,
+      "reference_documents": 22379,
+      "quota": 10000,
+      "source_sha256": "fde2910e6de71de0e5bce4995c2f56e17055da2fc3500d7659f04c357353da0b"
+    },
+    {
+      "shard": "data/train-00005-of-00114-c525c7efee442287.parquet",
+      "tokens": 10000,
+      "documents": 2,
+      "reference_documents": 22063,
+      "quota": 10000,
+      "source_sha256": "067ffed72fffee814a0bf7b57628dbbdf23584012031ccae33193d17dc6e2237"
+    },
+    {
+      "shard": "data/train-00033-of-00114-d20028bef60057cc.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 22501,
+      "quota": 10000,
+      "source_sha256": "67e25bef8c823bb31a5aab3bcabf6d7efc47a8cc568fe0e8013e25c2a37afefc"
+    },
+    {
+      "shard": "data/train-00044-of-00114-45624487e9a41275.parquet",
+      "tokens": 10000,
+      "documents": 11,
+      "reference_documents": 22758,
+      "quota": 10000,
+      "source_sha256": "97d41e218db3c74a6017f378e60ae7ad6b4f7db6454bdc82524ce492fbd2ebf8"
+    },
+    {
+      "shard": "data/train-00045-of-00114-dae3a4ce38fbb868.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22149,
+      "quota": 10000,
+      "source_sha256": "abc08502e14881a9666fff585c3d511fd98f6bc271bee6eaf7bbd95f3d5ac6e6"
+    },
+    {
+      "shard": "data/train-00012-of-00114-7252b11ca4b39acd.parquet",
+      "tokens": 10000,
+      "documents": 2,
+      "reference_documents": 22391,
+      "quota": 10000,
+      "source_sha256": "c0341ae8a5b4b7d26b560fb803a032dd297ff504459f702ad5508249262bc8f6"
+    },
+    {
+      "shard": "data/train-00048-of-00114-adbd9ee1526b2f80.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 22125,
+      "quota": 10000,
+      "source_sha256": "a50d650e8f82e6362ee4d4b1a2d03849b6cf54b0dac86f4ad36e33e51b135311"
+    },
+    {
+      "shard": "data/train-00095-of-00114-6e5bde2b7ac4ae1a.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 21917,
+      "quota": 10000,
+      "source_sha256": "a5f7a0ebfd4105667115e8632acabf252650a3e39df5a81243472f5fa71b068e"
+    },
+    {
+      "shard": "data/train-00104-of-00114-f8032e7edb2aed2f.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 22704,
+      "quota": 10000,
+      "source_sha256": "982cfab11420577c656458bc087188208f2b2ab9ec6ef72cb91cf2b72b8a696e"
+    },
+    {
+      "shard": "data/train-00091-of-00114-8f1b9b8cb25b9bcf.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22432,
+      "quota": 10000,
+      "source_sha256": "a4ae765edb77f54e2b7b2a13aac195a23851881561e4052353d372e104cd8c12"
+    },
+    {
+      "shard": "data/train-00102-of-00114-cc1e36c47fea807a.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 21926,
+      "quota": 10000,
+      "source_sha256": "ed09b8f1753c920706ce648e5ab8ce7a66adecbf5eeb95e52fdcb96e46635cc6"
+    },
+    {
+      "shard": "data/train-00019-of-00114-95e7ebe4402c9bfb.parquet",
+      "tokens": 10000,
+      "documents": 10,
+      "reference_documents": 22082,
+      "quota": 10000,
+      "source_sha256": "c5d3a81d09b95be0fe994371d8903b77c04f6e76c2c2e6b6ce192de828d9125b"
+    },
+    {
+      "shard": "data/train-00113-of-00114-c2949ce8a6072e67.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22165,
+      "quota": 10000,
+      "source_sha256": "36c2700e8572e6d83103b0be2f3c303333d4d2a22cd0751f21e1f821c8f32fec"
+    },
+    {
+      "shard": "data/train-00043-of-00114-2313cb610d98e99d.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22250,
+      "quota": 10000,
+      "source_sha256": "6ca03f273348f7ae652ae742b519dce24d87dbaea2d376a3bee808863dd05f3b"
+    },
+    {
+      "shard": "data/train-00098-of-00114-526e74a33c317af0.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 21981,
+      "quota": 10000,
+      "source_sha256": "6ec0728448095d01c9f76874f5c8eb400c5b1d383fa7e0a18c458046a2d19bad"
+    },
+    {
+      "shard": "data/train-00020-of-00114-49f2b2f31d348847.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 22341,
+      "quota": 10000,
+      "source_sha256": "1f5dfbf8c353822ec261dde49665763b6a8c85ed94b8cff4eae8a239d7d6901b"
+    },
+    {
+      "shard": "data/train-00000-of-00114-5a023365406cb9c4.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22302,
+      "quota": 10000,
+      "source_sha256": "18d7ef70a6ef61f09c020950626d7e6e61d1300f3f85beddbd3b3c6801071a41"
+    },
+    {
+      "shard": "data/train-00109-of-00114-0b4af773d9477cc3.parquet",
+      "tokens": 10000,
+      "documents": 1,
+      "reference_documents": 22156,
+      "quota": 10000,
+      "source_sha256": "240ae43891a0d1bb6da5aaf135ea5c9928b17ba163c76b409ffc4f4aaf3006d9"
+    },
+    {
+      "shard": "data/train-00099-of-00114-c587048e642b131a.parquet",
+      "tokens": 10000,
+      "documents": 16,
+      "reference_documents": 21962,
+      "quota": 10000,
+      "source_sha256": "e7861eaf93556e2f381f884db0461bdca71c5d36e39ed1df16804e8ceb509c5c"
+    },
+    {
+      "shard": "data/train-00057-of-00114-f45202cfdbcd2809.parquet",
+      "tokens": 10000,
+      "documents": 13,
+      "reference_documents": 22012,
+      "quota": 10000,
+      "source_sha256": "385e31c4aae48c6a2b0e13a529c8adaa926446994d2bebb841d3ef6563e92c06"
+    },
+    {
+      "shard": "data/train-00107-of-00114-0356b6d64e39bc40.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 22388,
+      "quota": 10000,
+      "source_sha256": "199125d04d6f6678cba27a255aec59d581609ceadbe18dac75291f834eac502f"
+    },
+    {
+      "shard": "data/train-00053-of-00114-974473259757634e.parquet",
+      "tokens": 10000,
+      "documents": 3,
+      "reference_documents": 22592,
+      "quota": 10000,
+      "source_sha256": "96db1b39153403e96e51e2a24a33d1a641c2088330b978606973401c9b86646b"
+    },
+    {
+      "shard": "data/train-00101-of-00114-312d73b894e70a8a.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22505,
+      "quota": 10000,
+      "source_sha256": "7814ce414df2947454f626851a3b9b798b2ea0ec15804f4da7b1e0413a10956e"
+    },
+    {
+      "shard": "data/train-00083-of-00114-42a01c2d531e71a7.parquet",
+      "tokens": 10000,
+      "documents": 10,
+      "reference_documents": 22271,
+      "quota": 10000,
+      "source_sha256": "59308b64ab2587402bc631e080c74cbf9a08aed0db85a8fd5371cbab3e35f87d"
+    },
+    {
+      "shard": "data/train-00025-of-00114-f8488d391fad9074.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22384,
+      "quota": 10000,
+      "source_sha256": "4cb9e167992ce5c7e03d08ce2f57097a16fe11bfd70c1e69983f269ae667827b"
+    },
+    {
+      "shard": "data/train-00071-of-00114-9b92b6565dc971f4.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22539,
+      "quota": 10000,
+      "source_sha256": "d5bc0e4dc91ddeba242d01d4fa977ed1db5673c96cb796d4839e9dfb8b223f0c"
+    },
+    {
+      "shard": "data/train-00096-of-00114-1c45362bad7ef7b7.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22118,
+      "quota": 10000,
+      "source_sha256": "58be687f0b462bb3e7c144764f9b87a7426390647c0c534d9e547ad0ff459266"
+    },
+    {
+      "shard": "data/train-00077-of-00114-82832e79c319ea83.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22615,
+      "quota": 10000,
+      "source_sha256": "7396c458951636a191ffab184304d2468ef7a65df30b53537a9653c8e71811c4"
+    },
+    {
+      "shard": "data/train-00064-of-00114-a54c530c88d036c8.parquet",
+      "tokens": 10000,
+      "documents": 16,
+      "reference_documents": 22054,
+      "quota": 10000,
+      "source_sha256": "ae54f5436cef3e53cda9e3ff71ed064b63ea5d58b49a8e249d8414a4a40528cb"
+    },
+    {
+      "shard": "data/train-00029-of-00114-5c297df81e0ef9b5.parquet",
+      "tokens": 10000,
+      "documents": 3,
+      "reference_documents": 22030,
+      "quota": 10000,
+      "source_sha256": "e2954ba16060c8983b799693d809358d9ccfcbd99fe410fff5ccc31df9c4294f"
+    },
+    {
+      "shard": "data/train-00027-of-00114-97a6e351f6fc32df.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 22324,
+      "quota": 10000,
+      "source_sha256": "739b967c8fda10884996115275548359b640bf97d75e142ce7a5ff355b9cfe87"
+    },
+    {
+      "shard": "data/train-00100-of-00114-756242e207ced023.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22390,
+      "quota": 10000,
+      "source_sha256": "6d1ec09bcca15d237120282fe0685d40d7e91f3b3b25d5e80070722ffdc48938"
+    },
+    {
+      "shard": "data/train-00111-of-00114-72f184ecf01de395.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22312,
+      "quota": 10000,
+      "source_sha256": "a48875a33549ed0235bbcd8ebf146bc6555bf462c41692888f76206affb97f54"
+    },
+    {
+      "shard": "data/train-00004-of-00114-3158c787ea8296d3.parquet",
+      "tokens": 10000,
+      "documents": 11,
+      "reference_documents": 22335,
+      "quota": 10000,
+      "source_sha256": "46630335189a45afb163641c5644605d21dbd1768faf27185ec80c4c92f008f2"
+    },
+    {
+      "shard": "data/train-00054-of-00114-84e7f6d0ab717c31.parquet",
+      "tokens": 10000,
+      "documents": 11,
+      "reference_documents": 22503,
+      "quota": 10000,
+      "source_sha256": "d4c3addaac5478099175b72cb83f456b4ec8d9484e1e3f75e209973624d68de0"
+    },
+    {
+      "shard": "data/train-00075-of-00114-918d14857d807f1e.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22427,
+      "quota": 10000,
+      "source_sha256": "84244391aee2f2c6e40d56ba4619b90ef5698764a552abdd841449e711decfb3"
+    },
+    {
+      "shard": "data/train-00011-of-00114-da8ee2fcf07be148.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 21817,
+      "quota": 10000,
+      "source_sha256": "4a690a0b3b5db4a10d04ae526c5856d83f859d4a8f4b3fea379ecff1342005c2"
+    },
+    {
+      "shard": "data/train-00069-of-00114-3d5279cf4c88ec22.parquet",
+      "tokens": 10000,
+      "documents": 10,
+      "reference_documents": 22530,
+      "quota": 10000,
+      "source_sha256": "01d122ce074e562472dc8a82edc0a786b21d6dd12d6a1cce1e23df78855727b9"
+    },
+    {
+      "shard": "data/train-00105-of-00114-880aef5103d3d45f.parquet",
+      "tokens": 10000,
+      "documents": 8,
+      "reference_documents": 22740,
+      "quota": 10000,
+      "source_sha256": "362e4648eddb2b6eefd330fac17adaae38482603a04a85529daaee0e3ec79392"
+    },
+    {
+      "shard": "data/train-00086-of-00114-8801fbceef8a172f.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22355,
+      "quota": 10000,
+      "source_sha256": "adcf9eef06fe76bd46ab84fb9e3a2c1f396fdad735b24bf1edb134d8c319d6ce"
+    },
+    {
+      "shard": "data/train-00013-of-00114-a189dcaf5ac68c7e.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 21918,
+      "quota": 10000,
+      "source_sha256": "5ce6eef4742dacd142bf0db6946e3ca54695bbb151d18fda0e9747a3b410972d"
+    },
+    {
+      "shard": "data/train-00110-of-00114-f2afd5ad9654800e.parquet",
+      "tokens": 10000,
+      "documents": 7,
+      "reference_documents": 21896,
+      "quota": 10000,
+      "source_sha256": "7c4cabcb7084f7a7482d4d91f18f1bc0f3377406cc769c7840318c25c485e653"
+    },
+    {
+      "shard": "data/train-00017-of-00114-7680a1785b342d09.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22533,
+      "quota": 10000,
+      "source_sha256": "c62fdea5a21b49ea960cc0bd365872c250d42bc5537ca9d2eaf07075e6752efd"
+    },
+    {
+      "shard": "data/train-00028-of-00114-0d11fc4f464d6d6e.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22313,
+      "quota": 10000,
+      "source_sha256": "dc2530c4cb0c80391d399ad9534c776a604ebdaadd3413f93c4e3578c818c773"
+    },
+    {
+      "shard": "data/train-00031-of-00114-d06b98184be0a920.parquet",
+      "tokens": 10000,
+      "documents": 5,
+      "reference_documents": 22270,
+      "quota": 10000,
+      "source_sha256": "c7e3d8ae03483f163262756be699afde3b2382f38dd8c7b9be3cc413065900f2"
+    },
+    {
+      "shard": "data/train-00035-of-00114-5c1b8e81c0be03c6.parquet",
+      "tokens": 10000,
+      "documents": 3,
+      "reference_documents": 22321,
+      "quota": 10000,
+      "source_sha256": "14f3b788ebe9b84fa78f0aff3d3f36d13815fb50519abb4e24fa355fee61cac7"
+    },
+    {
+      "shard": "data/train-00094-of-00114-baedcd5a73cc7d8d.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22075,
+      "quota": 10000,
+      "source_sha256": "f80f0aa8d997f257516b277b01c828211259ff7629046342559b226303584154"
+    },
+    {
+      "shard": "data/train-00003-of-00114-e7fc257ef044bc03.parquet",
+      "tokens": 10000,
+      "documents": 9,
+      "reference_documents": 22022,
+      "quota": 10000,
+      "source_sha256": "b0298ffe842ee4fadb52a6d193dc755568f1c5f200822ca22473c5b281b13c56"
+    },
+    {
+      "shard": "data/train-00014-of-00114-23a118ee3aaea5c3.parquet",
+      "tokens": 10000,
+      "documents": 6,
+      "reference_documents": 22193,
+      "quota": 10000,
+      "source_sha256": "556f8b9763dc348211703e991249f4b87c8114337c12ff3da1cdb0e694d86d3b"
+    },
+    {
+      "shard": "data/train-00081-of-00114-7687eb97c0e83e34.parquet",
+      "tokens": 10000,
+      "documents": 4,
+      "reference_documents": 22023,
+      "quota": 10000,
+      "source_sha256": "3bf34d5e0b298646106a153cf0335e6de526480cb688a9ac17408db0e901fb95"
+    }
+  ],
+  "old_token_arrays_reused": false,
+  "preparation_signature": "c7755d78b0b8bd8b5a304a43a4714119b8e5732daed17adb1339101ae83b7f20",
+  "script_sha256": "26e01cd33ba23f62c3031dda109daf3462a68ef5fd0a19a547a2781aec549031",
+  "artifacts": {
+    "train_tokens.npy": {
+      "bytes": 4560128,
+      "sha256": "f1507d4df38ba0886de7fb0b526f151afa9013f9c75abf2066d6da0aba3c82fe"
+    },
+    "validation_tokens.npy": {
+      "bytes": 12761396,
+      "sha256": "97a52c2cbec0041e2a480f7e5069d16efc30caf324aa60b14410d274daf415bd"
+    },
+    "train.jsonl": {
+      "bytes": 401824,
+      "sha256": "7c5d76375879e859a099d0812b8112fdfd8bb8f04d2a3ecdbb729200f99505d5"
+    },
+    "validation.jsonl": {
+      "bytes": 11523026,
+      "sha256": "73a037bf652bf1f05ce11470d87a16422c5a83882b94d88c467d62bdcdfaf7c2"
+    },
+    "settings.json": {
+      "bytes": 7452,
+      "sha256": "55f4e77512401780aa0fe09a34dacc701050d4d2bb831e665cfebacc64ce6e64"
+    }
+  },
+  "benchmark_decontamination": "not performed; held-out text loss only, no benchmark generalization claims",
+  "license": "ODC-By-1.0; underlying content licenses retained; see source README",
+  "source_url": "https://huggingface.co/datasets/open-web-math/open-web-math",
+  "started_utc": "2026-10-12T06:21:44.799761+00:00",
+  "completed_utc": "2026-10-12T06:23:08.685509+00:00"
+}

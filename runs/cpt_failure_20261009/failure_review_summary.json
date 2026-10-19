@@ -1,0 +1,97 @@
+{
+  "status": "diagnosis_complete_cause_unresolved",
+  "original_failure_step": 175997,
+  "original_last_successful_step": 175996,
+  "original_last_saved_checkpoint_step": 175000,
+  "target_batch_shape": [
+    16,
+    2048
+  ],
+  "tail_batch": false,
+  "quick_same_batch_at_saved_weights": {
+    "status": "complete",
+    "mode": "quick",
+    "cases": [
+      {
+        "case": "fast",
+        "weights_updated": false,
+        "loss": 2.0264227390289307,
+        "loss_finite": true,
+        "seconds_including_compile_and_grad_audit": 8.280127112026094,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "all_gradients_finite": true,
+        "tensor_count": 338,
+        "total_norm_fp32": 4.813408374786377,
+        "total_norm_fp64": 4.813408803332931,
+        "nonfinite_tensor_names": []
+      },
+      {
+        "case": "native",
+        "weights_updated": false,
+        "loss": 2.0264430046081543,
+        "loss_finite": true,
+        "seconds_including_compile_and_grad_audit": 0.8292333069839515,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "all_gradients_finite": true,
+        "tensor_count": 338,
+        "total_norm_fp32": 5.1409525871276855,
+        "total_norm_fp64": 5.1409521431606215,
+        "nonfinite_tensor_names": []
+      },
+      {
+        "case": "strict_mlp",
+        "weights_updated": false,
+        "loss": 2.0264430046081543,
+        "loss_finite": true,
+        "seconds_including_compile_and_grad_audit": 0.8712992799992207,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "all_gradients_finite": true,
+        "tensor_count": 338,
+        "total_norm_fp32": 5.142669200897217,
+        "total_norm_fp64": 5.142669108654387,
+        "nonfinite_tensor_names": []
+      }
+    ],
+    "weights_step": 175000
+  },
+  "restored_replay": {
+    "status": "no_failure_in_replayed_window",
+    "start_step": 175000,
+    "end_step": 176020,
+    "target_step": 175997,
+    "failure": null,
+    "production_run_resumed": false,
+    "limitation": "Production Flash attention nondeterminism prevents asserting an identical weight trajectory."
+  },
+  "replay_target_unclipped_gradient_check": {
+    "all_gradients_finite": true,
+    "tensor_count": 338,
+    "total_norm_fp32": 2.986797332763672,
+    "total_norm_fp64": 2.986797458476739,
+    "nonfinite_tensor_names": [],
+    "step": 175997,
+    "loss": 2.0257256031036377,
+    "loss_finite": true
+  },
+  "evidence_limits": [
+    "Original failing gradient tensors were not saved.",
+    "Restored production Flash attention is nondeterministic; replay differed from original trajectory.",
+    "No evidence establishes compiler rounding, Flash attention, or FP32 norm overflow as the original cause."
+  ],
+  "recommended_recovery": [
+    "Keep error_if_nonfinite=True and preserve the exact dataset order and LR schedule.",
+    "Restore from checkpoint step 175000, without reusing diagnostic updates as production progress.",
+    "Capture original loss, per-gradient finite/max and FP64 norm on recurrence before any optimizer update.",
+    "Save last-good weights and optimizer state on recurrence; compare same-weight native backward on the same batch."
+  ],
+  "artifacts": {
+    "script": "./scripts/replay_cpt_failure.py",
+    "quick": "./runs/cpt_failure_20261009/failure_review_quick",
+    "replay": "./runs/cpt_failure_20261009/failure_review_replay",
+    "replay_log": "./runs/cpt_failure_20261009/failure_review_replay.log"
+  },
+  "completed_utc": "2026-10-09T02:01:37.762376+00:00"
+}

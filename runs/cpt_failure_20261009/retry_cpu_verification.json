@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "passed": true,
+  "generated_utc": "2026-10-09T02:05:12.550221+00:00",
+  "gpu_execution": false,
+  "test_count": 19,
+  "evidence": "Observed completed unittest command outputs; all named tests reported ok and both processes exited 0. This report does not imply GPU retry correctness or a numerical root-cause diagnosis.",
+  "commands": [
+    {
+      "command": ".venv/bin/python scripts/test_cpt_nonfinite_retry.py",
+      "exit_code": 0,
+      "test_count": 10,
+      "reported_suite_seconds": 0.316
+    },
+    {
+      "command": ".venv/bin/python scripts/test_cpt_epochs.py",
+      "exit_code": 0,
+      "test_count": 9,
+      "reported_suite_seconds": 0.3
+    },
+    {
+      "command": ".venv/bin/python -m py_compile scripts/train_cpt.py scripts/nonfinite_retry.py scripts/source_migration.py scripts/verify_cpt_checkpoint.py scripts/verify_cpt_pipeline.py scripts/test_cpt_nonfinite_retry.py",
+      "exit_code": 0
+    }
+  ],
+  "checks": [
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_continuous_original_signature_audit_and_tampering_rejection",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_default_flags_and_source_only_authorization",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_migration_snapshot_hashes_are_checked",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_resume_keeps_counters_order_and_lr_strict",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_disabled_retry_keeps_strict_failure_and_zero_updates",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_native_failure_keeps_weights_moments_rng_and_zero_updates",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_nonfinite_loss_with_finite_gradient_also_retries",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_one_native_retry_same_rng_exact_single_update",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_trainer_reuses_batches_and_keeps_counts",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_nonfinite_retry.py",
+      "name": "test_unrelated_runtime_error_does_not_retry",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_all_tail_prefixes_and_zero_target_updates",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_checksum_and_tail_metadata_rejection",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_five_billion_budget_without_large_python_lists",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_historical_first_shuffle_and_distinct_second",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_legacy_list_counter_and_rejection",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_masked_tail_does_not_claim_compile_initialization",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_multi_epoch_stop_resume_pipeline_evidence",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_periodic_retention_preserves_foreign_and_epoch_checkpoints",
+      "status": "passed",
+      "passed": true
+    },
+    {
+      "suite": "test_cpt_epochs.py",
+      "name": "test_resume_on_both_sides_of_epoch_boundary_and_global_lr",
+      "status": "passed",
+      "passed": true
+    }
+  ],
+  "coverage": [
+    "The retry switch and source-migration switch default to false.",
+    "Nonfinite norm or loss on the fast attempt causes zero optimizer mutation before retry.",
+    "Successful retry restores the same RNG and matches a direct native toy update including resulting RNG and weights.",
+    "Native retry failure leaves parameters and existing AdamW moments unchanged, clears gradients, restores the original RNG, and applies zero optimizer updates.",
+    "Trainer update reuses identical batch tensor objects, invokes its provider only once, and preserves input/target counts.",
+    "Failure-only diagnostic records nonfinite tensor names and element counts.",
+    "Only source_sha256 differences are allowed with the explicit migration flag; all other signature and LR/counter differences are rejected.",
+    "Original signatures, continuous migration audits, and frozen historical source snapshot hashes are checked.",
+    "Historical multi-epoch order, schedule, resume and 24-check pipeline tests still pass."
+  ],
+  "frozen_source_directory": "./runs/cpt_10b_20261009_resume_launch/source",
+  "frozen_source_matches_current": true,
+  "source_sha256": {
+    "train_cpt.py": "e402087acbaebdd177917f85bae8d87453a80b8f452b03f9214a958084b997d6",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "0b95360c9051bdb2d0fc0a646cd26477a297434d114b3183742565dd8823c5f0"
+  },
+  "test_source_sha256": {
+    "test_cpt_nonfinite_retry.py": "2696164e5a2c53809d1fbbe2a259170966fb084dd60561a6534ce13a4bc7e1b1",
+    "test_cpt_epochs.py": "4eb3ca35e78f06293ed4bec8a2cc5976ec5b3b67d4d8352a95e36dd685d5ab20"
+  },
+  "limitations": [
+    "CPU toy tests do not execute CUDA, torch.compile, native production Flash attention, or the compiled AdamW kernel.",
+    "A finite native retry is a safety mechanism for a bad update, not proof of the original failure cause."
+  ]
+}

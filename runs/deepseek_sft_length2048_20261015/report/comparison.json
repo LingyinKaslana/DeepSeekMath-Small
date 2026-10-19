@@ -1,0 +1,153 @@
+{
+  "status": "complete_verified",
+  "verified_utc": "2026-10-15T09:38:06.168668+00:00",
+  "evaluation_mode": "selective_length_extension",
+  "models": {
+    "sft": {
+      "status": "complete_verified",
+      "verified_utc": "2026-10-15T09:38:06.167443+00:00",
+      "questions": 6319,
+      "rerun_questions": 561,
+      "source_run": "./runs/deepseek_sft_gsm_math_20261015_setup/evaluation",
+      "checkpoint": "./runs/deepseek_sft_gsm_math_20261015/best_checkpoint",
+      "evaluation_mode": "selective_length_extension",
+      "max_new_tokens": 2048,
+      "benchmarks": {
+        "gsm8k": {
+          "original_1024": {
+            "correct": 281,
+            "total": 1319,
+            "accuracy_percent": 21.30401819560273
+          },
+          "selectively_extended_2048": {
+            "correct": 281,
+            "total": 1319,
+            "accuracy_percent": 21.30401819560273
+          },
+          "delta_percentage_points": 0.0,
+          "rerun_questions": 14,
+          "retained_questions": 1305,
+          "original_truncated_correct": 0,
+          "retry_correct": 0,
+          "gained": 0,
+          "lost": 0,
+          "still_truncated_2048": 13,
+          "prefix_identical_questions": 10,
+          "prefix_groups": {
+            "True": {
+              "old": {
+                "correct": 0,
+                "total": 10,
+                "accuracy_percent": 0.0
+              },
+              "new": {
+                "correct": 0,
+                "total": 10,
+                "accuracy_percent": 0.0
+              }
+            },
+            "False": {
+              "old": {
+                "correct": 0,
+                "total": 4,
+                "accuracy_percent": 0.0
+              },
+              "new": {
+                "correct": 0,
+                "total": 4,
+                "accuracy_percent": 0.0
+              }
+            }
+          },
+          "errors": 0,
+          "timeouts": 0
+        },
+        "math": {
+          "original_1024": {
+            "correct": 307,
+            "total": 5000,
+            "accuracy_percent": 6.14
+          },
+          "selectively_extended_2048": {
+            "correct": 305,
+            "total": 5000,
+            "accuracy_percent": 6.1
+          },
+          "delta_percentage_points": -0.040000000000000036,
+          "rerun_questions": 547,
+          "retained_questions": 4453,
+          "original_truncated_correct": 11,
+          "retry_correct": 9,
+          "gained": 5,
+          "lost": 7,
+          "still_truncated_2048": 338,
+          "prefix_identical_questions": 185,
+          "prefix_groups": {
+            "True": {
+              "old": {
+                "correct": 5,
+                "total": 185,
+                "accuracy_percent": 2.7027027027027026
+              },
+              "new": {
+                "correct": 4,
+                "total": 185,
+                "accuracy_percent": 2.1621621621621623
+              }
+            },
+            "False": {
+              "old": {
+                "correct": 6,
+                "total": 362,
+                "accuracy_percent": 1.6574585635359116
+              },
+              "new": {
+                "correct": 5,
+                "total": 362,
+                "accuracy_percent": 1.3812154696132597
+              }
+            }
+          },
+          "errors": 0,
+          "timeouts": 0
+        }
+      },
+      "training_modified": false
+    }
+  },
+  "comparison": {
+    "gsm8k": {
+      "sft": {
+        "correct": 281,
+        "total": 1319,
+        "accuracy_percent": 21.30401819560273
+      },
+      "cpt": {
+        "correct": 118,
+        "total": 1319,
+        "accuracy_percent": 8.946171341925702
+      },
+      "sft_minus_cpt_percentage_points": 12.357846853677028
+    },
+    "math": {
+      "sft": {
+        "correct": 305,
+        "total": 5000,
+        "accuracy_percent": 6.1
+      },
+      "cpt": {
+        "correct": 286,
+        "total": 5000,
+        "accuracy_percent": 5.72
+      },
+      "sft_minus_cpt_percentage_points": 0.3799999999999999
+    }
+  },
+  "limits": [
+    "Only each model's own originally length-limited answers were regenerated.",
+    "All other original answers retained exactly. Full denominators are unchanged.",
+    "This is a selectively extended evaluation, not an independent full-set 2048 run.",
+    "Regeneration batch/shape changes can change the first1024 tokens; prefix equality and separate groups are reported."
+  ],
+  "training_modified": false
+}

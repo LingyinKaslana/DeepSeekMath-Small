@@ -1,0 +1,147 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-09T13:31:03.633136+00:00",
+  "training_updates": 0,
+  "production_files_modified": false,
+  "cases": {
+    "base": {
+      "metrics": {
+        "validation": {
+          "loss": 1.86186945438385,
+          "perplexity": 6.4357568863247065,
+          "supervised_tokens": 2096128,
+          "input_tokens": 2097152,
+          "blocks": 1024,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "uniform_train": {
+          "loss": 1.931435465812683,
+          "perplexity": 6.899406999528651,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "seen_train": {
+          "loss": 1.904410719871521,
+          "perplexity": 6.715449180676447,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "unseen_train": {
+          "loss": 1.8848373889923096,
+          "perplexity": 6.585283515356837,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        }
+      },
+      "probes_sha256": "e6cea904ec9bad158832bbb9ad1ad97379213e44645704982c08924a0dc43ecb"
+    },
+    "step20000": {
+      "metrics": {
+        "validation": {
+          "loss": 1.8604923486709595,
+          "perplexity": 6.426900268399001,
+          "supervised_tokens": 2096128,
+          "input_tokens": 2097152,
+          "blocks": 1024,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "uniform_train": {
+          "loss": 1.931922435760498,
+          "perplexity": 6.902767621589729,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "seen_train": {
+          "loss": 1.8369916677474976,
+          "perplexity": 6.277624645380989,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "unseen_train": {
+          "loss": 1.882137417793274,
+          "perplexity": 6.567527420786459,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        }
+      },
+      "probes_sha256": "e6cea904ec9bad158832bbb9ad1ad97379213e44645704982c08924a0dc43ecb"
+    },
+    "step30860": {
+      "metrics": {
+        "validation": {
+          "loss": 1.8750613927841187,
+          "perplexity": 6.52121946385962,
+          "supervised_tokens": 2096128,
+          "input_tokens": 2097152,
+          "blocks": 1024,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "uniform_train": {
+          "loss": 1.933874487876892,
+          "perplexity": 6.91625534381987,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "seen_train": {
+          "loss": 1.8680853843688965,
+          "perplexity": 6.475885690241386,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "unseen_train": {
+          "loss": 1.891266107559204,
+          "perplexity": 6.627754821524965,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        }
+      },
+      "probes_sha256": "e6cea904ec9bad158832bbb9ad1ad97379213e44645704982c08924a0dc43ecb"
+    }
+  },
+  "completed_utc": "2026-10-09T13:34:31.531200+00:00",
+  "loss_changes_from_base": {
+    "step20000": {
+      "validation": -0.001377105712890625,
+      "uniform_train": 0.0004869699478149414,
+      "seen_train": -0.06741905212402344,
+      "unseen_train": -0.0026999711990356445
+    },
+    "step30860": {
+      "validation": 0.013191938400268555,
+      "uniform_train": 0.0024390220642089844,
+      "seen_train": -0.03632533550262451,
+      "unseen_train": 0.006428718566894531
+    }
+  },
+  "limit": "These fixed samples distinguish previously seen and unseen blocks. Three observational snapshots do not establish a cause or exhaustive absence of memorization."
+}

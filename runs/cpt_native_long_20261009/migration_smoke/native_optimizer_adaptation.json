@@ -1,0 +1,27 @@
+{
+  "checkpoint": "./runs/cpt_10b_20261009_after_native_compare/stopped_checkpoint",
+  "completed_steps": 181650,
+  "tensor_values_unchanged": true,
+  "before_tensor_sha256": "d597bc3437d4fb4cad900f3b385012a538ffccf87f2f6812c3cfc1dd35c0fb21",
+  "after_tensor_sha256": "d597bc3437d4fb4cad900f3b385012a538ffccf87f2f6812c3cfc1dd35c0fb21",
+  "groups": [
+    {
+      "before": {
+        "lr": 9.999999747378752e-06,
+        "lr_type": "Tensor",
+        "capturable": true,
+        "foreach": true,
+        "fused": false
+      },
+      "after": {
+        "lr": 9.999999747378752e-06,
+        "lr_type": "float",
+        "capturable": false,
+        "foreach": true,
+        "fused": false
+      }
+    }
+  ],
+  "step_device": "CPU scalar; checkpoint CPU mapping preserved",
+  "scope": "Execution flags and numerically identical LR representation only; moment values/step counts/parameter ordering unchanged"
+}

@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "status": "completed_cpu_readonly_review",
+  "reviewed_run": "runs/cpt_native_from0_5h_20261009",
+  "gpu_execution": false,
+  "production_files_modified": false,
+  "prior_packing_loss_tests_repeated": false,
+  "conclusion": {
+    "supported": "No LR indexing, optimizer direction, accumulation weighting, clip order, or update-count defect was found in the actual native 5h source, all 30860 update records, and saved optimizer metadata.",
+    "not_established": "A correct implementation does not establish that the training recipe is appropriate. LR, small-batch optimization dynamics, weight decay, and memorization versus unseen-text behavior remain untested causal hypotheses.",
+    "priority": "First obtain seen-versus-unseen probe losses, then compare identical-checkpoint continuation at baseline LR versus a lower LR. Preserve the complete optimizer/data-order/RNG state."
+  },
+  "schedule": {
+    "total_steps": 305176,
+    "peak_lr": 1e-05,
+    "warmup_steps": 15259,
+    "warmup_input_tokens": 500006912,
+    "decay_80_zero_based_step": 244141,
+    "decay_90_zero_based_step": 274659,
+    "fresh_start": true,
+    "all_30860_recorded_lrs_match_saved_schedule": true,
+    "all_30860_effective_lrs_match_fp32_rounding": true,
+    "indexing": "For completed record step n, update used learning_rate(schedule, n-1). Warmup factor is n/15259 through n=15259. LR is assigned before forward/backward/optimizer.step. Thus update 15259 reaches peak; update 15260 retains peak.",
+    "boundary_values": {
+      "step_1_lr": 6.553509404285996e-10,
+      "step_5000_lr": 3.276754702142998e-06,
+      "step_15258_lr": 9.999344649059573e-06,
+      "step_15259_lr": 1e-05,
+      "step_15260_lr": 1e-05
+    },
+    "five_hour_limit_changes_schedule": false
+  },
+  "native_update_review": {
+    "source": "runs/cpt_native_from0_5h_20261009/source/standard_native.py",
+    "sequence": [
+      "set current LR",
+      "model.train",
+      "zero_grad(set_to_none=True)",
+      "BF16-autocast native HF mean loss",
+      "weight each microbatch by its supervised-target count / total targets",
+      "backward outside autocast",
+      "reject nonfinite total loss",
+      "clip_grad_norm_(max_norm=1, error_if_nonfinite=True)",
+      "standard torch.optim.AdamW.step",
+      "increment completed steps and token counters"
+    ],
+    "effective_batch_sequences": 16,
+    "microbatch_sequences": 16,
+    "actual_accumulation_microbatches_per_update": 1,
+    "gradient_weighting_valid_if_partial_batch": true,
+    "all_records_consecutive_one_based": true,
+    "all_updates_applied": true,
+    "all_records_input_tokens": 32768,
+    "all_records_supervised_tokens": 32752,
+    "all_token_counters_match_step_times_32768": true,
+    "all_logged_losses_and_norms_finite": true,
+    "optimizer_steps_match_completed_steps": true,
+    "optimizer_state_tensors": 338,
+    "all_optimizer_scalar_steps": 30860,
+    "all_parameters_single_unique_group": true,
+    "optimizer": {
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.1,
+      "maximize": false,
+      "differentiable": false,
+      "capturable": false,
+      "foreach": true,
+      "fused": false,
+      "moment_dtype": "torch.float32"
+    },
+    "checkpoint_inspection": "torch.load(map_location=cpu, mmap=True, weights_only=True); read param-group metadata and 338 scalar steps, without materializing large Adam moment values"
+  },
+  "new_curve_evidence": {
+    "native_validation_base": 1.86186945438385,
+    "native_validation_minimum": {
+      "step": 5000,
+      "loss": 1.8254090547561646
+    },
+    "native_validation_final": {
+      "step": 30860,
+      "loss": 1.8750613927841187
+    },
+    "fixed_train_probe_base": 1.931435465812683,
+    "fixed_train_probe_minimum": {
+      "step": 5000,
+      "loss": 1.897996425628662
+    },
+    "fixed_train_probe_final": {
+      "step": 30860,
+      "loss": 1.933874487876892
+    },
+    "interpretation": "Both fixed curves bottom at 5000 while LR is about 3.28e-6 and rise during the remainder of warmup. That correlation motivates a lower-LR intervention; it does not prove the LR is excessive or exclude overfitting. The fixed train probe samples the entire corpus, mostly unconsumed text at this point.",
+    "probe_seen_counts_from_real_shuffle_order": [
+      {
+        "completed_steps": 5000,
+        "seen": 10,
+        "unseen": 246,
+        "seen_fraction": 0.0390625
+      },
+      {
+        "completed_steps": 15259,
+        "seen": 26,
+        "unseen": 230,
+        "seen_fraction": 0.1015625
+      },
+      {
+        "completed_steps": 30000,
+        "seen": 54,
+        "unseen": 202,
+        "seen_fraction": 0.2109375
+      },
+      {
+        "completed_steps": 30860,
+        "seen": 55,
+        "unseen": 201,
+        "seen_fraction": 0.21484375
+      }
+    ],
+    "probe_counts_method": "np.isin(fixed_probe.indices, order_epoch_00000[:completed_steps*16]); complete full-length batches only in this observed prefix"
+  },
+  "clip_and_decay_evidence": {
+    "clip_trigger_fraction_all_updates": 1.0,
+    "grad_norm_window_medians": [
+      {
+        "steps": [
+          1,
+          5000
+        ],
+        "median": 1.5639338493347168
+      },
+      {
+        "steps": [
+          5001,
+          10000
+        ],
+        "median": 1.4977372288703918
+      },
+      {
+        "steps": [
+          10001,
+          15259
+        ],
+        "median": 1.4981638193130493
+      },
+      {
+        "steps": [
+          15260,
+          20000
+        ],
+        "median": 1.5318883657455444
+      },
+      {
+        "steps": [
+          20001,
+          25000
+        ],
+        "median": 1.5644811391830444
+      },
+      {
+        "steps": [
+          25001,
+          30860
+        ],
+        "median": 1.6031909584999084
+      }
+    ],
+    "clip_interpretation": "Clipping is active every update, without an abrupt norm transition at the loss minimum. The logs record the pre-clip norm. This establishes actual clipping, not that clip=1 is an optimal recipe.",
+    "decay_only_real_arithmetic_multiplier_at_30860": 0.9770367524902168,
+    "decay_formula": "exp(fsum(log1p(-0.1 * logged_effective_fp32_lr)))",
+    "decay_interpretation": "A roughly 2.3% counterfactual multiplicative shrinkage omitting all gradient-derived updates. It is not actual total parameter change and does not by itself explain the observed loss rise."
+  },
+  "recommended_single_knob_intervention": {
+    "status": "proposal_only_not_launched",
+    "preferred_start": "runs/cpt_native_from0_5h_20261009/checkpoint_step_00020000",
+    "start_reason": "Earliest retained native checkpoint; the original next 3000-step interval has validation loss 1.860492349 -> 1.865677357, a stronger local trend than the near-plateau after 30000.",
+    "arms": [
+      {
+        "name": "control",
+        "lr_multiplier": 1.0,
+        "resulting_platform_lr": 1e-05
+      },
+      {
+        "name": "lower_lr",
+        "lr_multiplier": 0.3,
+        "resulting_platform_lr": 3e-06
+      }
+    ],
+    "steps_each": 3000,
+    "input_tokens_each": 98304000,
+    "rough_total_training_minutes_native": 56,
+    "evaluation_every_steps": 500,
+    "freeze": [
+      "starting model weights",
+      "all Adam first/second moments and scalar step counters",
+      "optimizer betas, eps and WD",
+      "global schedule progress",
+      "shuffle order and cursor",
+      "CPU/CUDA RNG",
+      "native backend, precision, batch size and clip",
+      "fixed validation and fixed probes"
+    ],
+    "measurement": [
+      "full fixed validation at shared step offsets",
+      "fixed already-seen training blocks from the start checkpoint prefix",
+      "fixed future/unseen training blocks",
+      "original uniform train probe",
+      "finite losses, pre-clip norm and logged effective LR"
+    ],
+    "prevent_false_comparisons": [
+      "Do not restart Adam or warmup",
+      "Do not compare arms that consume different blocks",
+      "Treat forked diagnostic tokens separately from the paused main 10B run",
+      "Record the intervention explicitly rather than falsifying original checkpoint provenance"
+    ],
+    "limitations": [
+      "This tests local continuation behavior; it cannot alone establish why loss first turned upward at 5000",
+      "Changing LR also changes decoupled LR-times-WD shrinkage even when the WD coefficient is fixed",
+      "If lower LR helps, a separate WD-only control is needed to distinguish gradient-update scale from decay contribution",
+      "One deterministic branch comparison is evidence for this configuration, not multi-seed robustness"
+    ]
+  },
+  "secondary_wd_only_intervention": {
+    "status": "proposal_only_not_launched",
+    "same_checkpoint_and_3000_steps": true,
+    "keep_original_lr": true,
+    "change_only_weight_decay_coefficient": {
+      "control": 0.1,
+      "intervention": 0.0
+    },
+    "reason": "Tests the total decay contribution without simultaneously changing LR. Excluding bias/RMSNorm only could follow, but should be a separate experiment rather than conflating two interventions."
+  },
+  "inputs": [
+    "runs/cpt_native_from0_5h_20261009/manifest.json",
+    "runs/cpt_native_from0_5h_20261009/training.jsonl",
+    "runs/cpt_native_from0_5h_20261009/result.json",
+    "runs/cpt_native_from0_5h_20261009/validation_history.json",
+    "runs/cpt_native_from0_5h_20261009/train_probe_history.json",
+    "runs/cpt_native_from0_5h_20261009/train_probe.json",
+    "runs/cpt_native_from0_5h_20261009/orders/order_epoch_00000.npy",
+    "runs/cpt_native_from0_5h_20261009/stopped_checkpoint/training_state.pt",
+    "runs/cpt_native_from0_5h_20261009/source/train_cpt.py",
+    "runs/cpt_native_from0_5h_20261009/source/standard_native.py",
+    "runs/cpt_native_long_20261009/other_causes_review.json",
+    "runs/cpt_native_long_20261009/other_causes_technical_checks.json"
+  ]
+}

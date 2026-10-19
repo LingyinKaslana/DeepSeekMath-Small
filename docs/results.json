@@ -1,0 +1,119 @@
+{
+  "snapshot_started_utc": "2026-10-18T15:06:01.091420+00:00",
+  "snapshot_finished_utc": "2026-10-18T15:09:36.897614+00:00",
+  "cpt": {
+    "status": "complete",
+    "input_tokens": 10000000000,
+    "initial_validation_loss": 2.1084015369415283,
+    "final_validation_loss": 1.7536568641662598,
+    "steps": 305176
+  },
+  "sft": {
+    "status": "complete",
+    "completed_steps": 1356,
+    "sft_input_tokens": 10866690,
+    "sft_supervised_tokens": 7408092,
+    "best_step": 904,
+    "best_validation_loss": 0.7081043124198914
+  },
+  "rl": {
+    "status": "in_progress_at_snapshot",
+    "completed_rounds": 2411,
+    "last_completed_utc": "2026-10-18T15:06:18.312490+00:00",
+    "target_rounds": 10000,
+    "gradient_updates": 9644,
+    "effective_groups_found": 85737,
+    "effective_groups_used": 77152,
+    "best_validation_round": 800,
+    "best_validation_accuracy": 0.4140625,
+    "latest_validation": {
+      "round": 2400,
+      "examples": 256,
+      "correct": 99,
+      "accuracy": 0.38671875,
+      "truncated": 0,
+      "seconds": 102.01925097091589,
+      "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
+    },
+    "last100_seconds_per_round": 205.7721646969697,
+    "last100_rounds_per_hour": 17.495077652031014,
+    "last100_mixed_fraction": 0.06832837301587301,
+    "snapshot_progress": {
+      "status": "sampling",
+      "utc": "2026-10-18T15:07:21.446733+00:00",
+      "completed_rounds": 2411,
+      "round": 2412,
+      "target_rounds": 10000,
+      "effective_groups": 11,
+      "target_groups": 32,
+      "candidate_groups": 160,
+      "batch_in_flight": true,
+      "sampling_policy": "history_rank",
+      "cumulative_effective_groups_found": 85737,
+      "cumulative_effective_groups_used": 77152,
+      "allocated_gib": 15.274803638458252,
+      "reserved_gib": 163.056640625
+    }
+  },
+  "full_test_1024": [
+    {
+      "checkpoint": "Original DeepSeek-Coder-1.3B",
+      "gsm8k": 63,
+      "math": 208,
+      "source": "runs/deepseek_coder_base_inference_20261015/scores.json"
+    },
+    {
+      "checkpoint": "CPT10B",
+      "gsm8k": 114,
+      "math": 282,
+      "source": "runs/deepseek_coder_10b_inference_20261015/scores.json"
+    },
+    {
+      "checkpoint": "SFT best step904",
+      "gsm8k": 281,
+      "math": 307,
+      "source": "runs/deepseek_sft_gsm_math_20261015_setup/evaluation/scores.json"
+    },
+    {
+      "checkpoint": "Early RL round80",
+      "gsm8k": 313,
+      "math": 267,
+      "source": "runs/deepseek_dapo_100r_20261015_setup_v5/evaluation/scores.json"
+    }
+  ],
+  "sampling_probe_256": {
+    "uniform": {
+      "effective_groups_per_second": 0.29567227085489206,
+      "mean_mixed_fraction": 0.103125,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 1.0
+    },
+    "history_rank": {
+      "effective_groups_per_second": 0.5552349922716441,
+      "mean_mixed_fraction": 0.28125,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 1.877873060825979
+    }
+  },
+  "discarded_formal_branches": {
+    "definition": "Live group_totals.json counts the current weight lineage. To count all formal executed updates including discarded branches, add these abandoned totals. Disposable benchmark smoke updates are excluded.",
+    "abandoned_groups_used": 2720,
+    "abandoned_gradient_updates": 340,
+    "events": [
+      {
+        "resume_round": 1900,
+        "abandoned_completed_rounds": 55,
+        "abandoned_groups_used": 1760,
+        "abandoned_gradient_updates": 220,
+        "evidence": "runs/deepseek_dapo_10k_20261017_tail_setup/boundary.json"
+      },
+      {
+        "resume_round": 2200,
+        "abandoned_completed_rounds": 30,
+        "abandoned_groups_used": 960,
+        "abandoned_gradient_updates": 120,
+        "evidence": "runs/deepseek_dapo_10k_20261018_recovery_setup/recovery.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "measured_utc": "2026-10-08T04:17:38.335383+00:00",
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "sequence_length": 2048,
+  "micro_batch": 16,
+  "effective_batch": 16,
+  "precision": "BF16 autocast; FP32 parameters/gradients/AdamW moments",
+  "checkpoint_untouched": true,
+  "comparisons": [
+    {
+      "kind": "cpu_mmap",
+      "round": 0,
+      "steps": 12,
+      "rows": [
+        {
+          "seconds": 0.5494054450100521,
+          "tokens": 32768,
+          "loss": 1.9765722751617432,
+          "grad_norm": 1.8528923988342285
+        },
+        {
+          "seconds": 0.5493768680025823,
+          "tokens": 32768,
+          "loss": 1.9308956861495972,
+          "grad_norm": 1.8109627962112427
+        },
+        {
+          "seconds": 0.5504835019964958,
+          "tokens": 32768,
+          "loss": 1.9966319799423218,
+          "grad_norm": 1.743734359741211
+        },
+        {
+          "seconds": 0.5488207040034467,
+          "tokens": 32768,
+          "loss": 1.5792421102523804,
+          "grad_norm": 1.6408182382583618
+        },
+        {
+          "seconds": 0.5502389560133452,
+          "tokens": 32768,
+          "loss": 1.9512460231781006,
+          "grad_norm": 1.6245182752609253
+        },
+        {
+          "seconds": 0.5479038319899701,
+          "tokens": 32768,
+          "loss": 2.043347120285034,
+          "grad_norm": 1.9611659049987793
+        },
+        {
+          "seconds": 0.5503554360038834,
+          "tokens": 32768,
+          "loss": 1.5613330602645874,
+          "grad_norm": 1.650822639465332
+        },
+        {
+          "seconds": 0.5483119319978869,
+          "tokens": 32768,
+          "loss": 1.835183024406433,
+          "grad_norm": 1.7664594650268555
+        },
+        {
+          "seconds": 0.5506844949995866,
+          "tokens": 32768,
+          "loss": 1.8774759769439697,
+          "grad_norm": 1.7139400243759155
+        },
+        {
+          "seconds": 0.5482435149897356,
+          "tokens": 32768,
+          "loss": 2.1484344005584717,
+          "grad_norm": 1.8570466041564941
+        },
+        {
+          "seconds": 0.5484488290094305,
+          "tokens": 32768,
+          "loss": 2.107520580291748,
+          "grad_norm": 1.7560782432556152
+        },
+        {
+          "seconds": 0.5504931010073051,
+          "tokens": 32768,
+          "loss": 1.9898732900619507,
+          "grad_norm": 1.6646274328231812
+        }
+      ],
+      "tokens_per_second": 59643.5492049623,
+      "seconds_per_step": 0.5493972179186434,
+      "disk_read_bytes": 0,
+      "major_faults": 0,
+      "peak_allocated_bytes": 200953945600,
+      "peak_reserved_bytes": 218948960256
+    },
+    {
+      "kind": "gpu_resident",
+      "round": 1,
+      "steps": 12,
+      "rows": [
+        {
+          "seconds": 0.5514135249977699,
+          "tokens": 32768,
+          "loss": 1.9763052463531494,
+          "grad_norm": 1.8443104028701782
+        },
+        {
+          "seconds": 0.5497786640044069,
+          "tokens": 32768,
+          "loss": 1.931267499923706,
+          "grad_norm": 1.8128182888031006
+        },
+        {
+          "seconds": 0.5504637569974875,
+          "tokens": 32768,
+          "loss": 1.9968785047531128,
+          "grad_norm": 1.6583802700042725
+        },
+        {
+          "seconds": 0.5495793339941883,
+          "tokens": 32768,
+          "loss": 1.5795464515686035,
+          "grad_norm": 1.6422815322875977
+        },
+        {
+          "seconds": 0.549277666999842,
+          "tokens": 32768,
+          "loss": 1.9511115550994873,
+          "grad_norm": 1.6280388832092285
+        },
+        {
+          "seconds": 0.5508908000047086,
+          "tokens": 32768,
+          "loss": 2.0434224605560303,
+          "grad_norm": 1.963464379310608
+        },
+        {
+          "seconds": 0.5508508330094628,
+          "tokens": 32768,
+          "loss": 1.5613951683044434,
+          "grad_norm": 1.6529382467269897
+        },
+        {
+          "seconds": 0.5502419639960863,
+          "tokens": 32768,
+          "loss": 1.8350260257720947,
+          "grad_norm": 1.7795765399932861
+        },
+        {
+          "seconds": 0.5503269559994806,
+          "tokens": 32768,
+          "loss": 1.8770800828933716,
+          "grad_norm": 1.7150040864944458
+        },
+        {
+          "seconds": 0.5523286359966733,
+          "tokens": 32768,
+          "loss": 2.1481966972351074,
+          "grad_norm": 1.8557536602020264
+        },
+        {
+          "seconds": 0.5520336260087788,
+          "tokens": 32768,
+          "loss": 2.107494354248047,
+          "grad_norm": 1.7551546096801758
+        },
+        {
+          "seconds": 0.5520380739908433,
+          "tokens": 32768,
+          "loss": 1.9903806447982788,
+          "grad_norm": 1.6642528772354126
+        }
+      ],
+      "tokens_per_second": 59495.03447866222,
+      "seconds_per_step": 0.5507686529999773,
+      "disk_read_bytes": 0,
+      "major_faults": 0,
+      "peak_allocated_bytes": 200955649536,
+      "peak_reserved_bytes": 218999291904
+    },
+    {
+      "kind": "gpu_resident",
+      "round": 2,
+      "steps": 12,
+      "rows": [
+        {
+          "seconds": 0.5527289909950923,
+          "tokens": 32768,
+          "loss": 1.9764324426651,
+          "grad_norm": 1.8455018997192383
+        },
+        {
+          "seconds": 0.550238668001839,
+          "tokens": 32768,
+          "loss": 1.9309816360473633,
+          "grad_norm": 1.8120557069778442
+        },
+        {
+          "seconds": 0.5518827129999408,
+          "tokens": 32768,
+          "loss": 1.9967454671859741,
+          "grad_norm": 1.6747305393218994
+        },
+        {
+          "seconds": 0.5519277050043456,
+          "tokens": 32768,
+          "loss": 1.5794175863265991,
+          "grad_norm": 1.6418499946594238
+        },
+        {
+          "seconds": 0.5504058689984959,
+          "tokens": 32768,
+          "loss": 1.9512102603912354,
+          "grad_norm": 1.6240384578704834
+        },
+        {
+          "seconds": 0.5513654609967489,
+          "tokens": 32768,
+          "loss": 2.043401002883911,
+          "grad_norm": 1.968613624572754
+        },
+        {
+          "seconds": 0.5494147249992238,
+          "tokens": 32768,
+          "loss": 1.5611324310302734,
+          "grad_norm": 1.6447526216506958
+        },
+        {
+          "seconds": 0.5533425329922466,
+          "tokens": 32768,
+          "loss": 1.8353182077407837,
+          "grad_norm": 1.7705731391906738
+        },
+        {
+          "seconds": 0.5502345069980947,
+          "tokens": 32768,
+          "loss": 1.8770917654037476,
+          "grad_norm": 1.7152471542358398
+        },
+        {
+          "seconds": 0.551515732993721,
+          "tokens": 32768,
+          "loss": 2.148359775543213,
+          "grad_norm": 1.8553473949432373
+        },
+        {
+          "seconds": 0.5528545920096803,
+          "tokens": 32768,
+          "loss": 2.1073927879333496,
+          "grad_norm": 1.7548011541366577
+        },
+        {
+          "seconds": 0.5494789820077131,
+          "tokens": 32768,
+          "loss": 1.9899498224258423,
+          "grad_norm": 1.6635247468948364
+        }
+      ],
+      "tokens_per_second": 59439.575222112886,
+      "seconds_per_step": 0.5512825399164285,
+      "disk_read_bytes": 0,
+      "major_faults": 0,
+      "peak_allocated_bytes": 200955649536,
+      "peak_reserved_bytes": 218999291904
+    },
+    {
+      "kind": "cpu_mmap",
+      "round": 3,
+      "steps": 12,
+      "rows": [
+        {
+          "seconds": 0.5502667629916687,
+          "tokens": 32768,
+          "loss": 1.9764217138290405,
+          "grad_norm": 1.8465385437011719
+        },
+        {
+          "seconds": 0.5521795789973112,
+          "tokens": 32768,
+          "loss": 1.930740237236023,
+          "grad_norm": 1.8149662017822266
+        },
+        {
+          "seconds": 0.5530320340039907,
+          "tokens": 32768,
+          "loss": 1.9970108270645142,
+          "grad_norm": 1.659254789352417
+        },
+        {
+          "seconds": 0.5538879450032255,
+          "tokens": 32768,
+          "loss": 1.5794106721878052,
+          "grad_norm": 1.6405086517333984
+        },
+        {
+          "seconds": 0.5532952990033664,
+          "tokens": 32768,
+          "loss": 1.9507311582565308,
+          "grad_norm": 1.6239985227584839
+        },
+        {
+          "seconds": 0.5514720849896548,
+          "tokens": 32768,
+          "loss": 2.0433435440063477,
+          "grad_norm": 1.9609482288360596
+        },
+        {
+          "seconds": 0.5529918090032879,
+          "tokens": 32768,
+          "loss": 1.5612192153930664,
+          "grad_norm": 1.6376953125
+        },
+        {
+          "seconds": 0.5531938909989549,
+          "tokens": 32768,
+          "loss": 1.8351553678512573,
+          "grad_norm": 1.7716782093048096
+        },
+        {
+          "seconds": 0.5499386649898952,
+          "tokens": 32768,
+          "loss": 1.8774176836013794,
+          "grad_norm": 1.7149614095687866
+        },
+        {
+          "seconds": 0.5527846399927512,
+          "tokens": 32768,
+          "loss": 2.148237705230713,
+          "grad_norm": 1.8569620847702026
+        },
+        {
+          "seconds": 0.5522086030105129,
+          "tokens": 32768,
+          "loss": 2.107693910598755,
+          "grad_norm": 1.8017975091934204
+        },
+        {
+          "seconds": 0.5509092649881495,
+          "tokens": 32768,
+          "loss": 1.9899780750274658,
+          "grad_norm": 1.6658471822738647
+        }
+      ],
+      "tokens_per_second": 59342.96269655178,
+      "seconds_per_step": 0.5521800481643974,
+      "disk_read_bytes": 0,
+      "major_faults": 0,
+      "peak_allocated_bytes": 200956173824,
+      "peak_reserved_bytes": 219001389056
+    }
+  ],
+  "diagnostic_extra_reference_bytes": 7108352000,
+  "diagnostic_resident_token_bytes": 40000000,
+  "cpu_batch_submit_median_ms": 0.9115110005950555,
+  "cpu_batch_complete_median_ms": 0.9391910061822273,
+  "cuda_memcpy_profile": null,
+  "cuda_kernel_total_profile_us": null,
+  "profile_caution": "Profiler adds CPU launch overhead; operator durations are attribution, not unprofiled utilization",
+  "script_sha256": "38a8c3acbb900b37bd8691d27a74b030c054d31db6b70fb6f590a824a5bf0e4c",
+  "aggregate": {
+    "cpu_mmap": {
+      "tokens_per_second": 59492.876276424235,
+      "seconds_per_step": 0.5507886330415204,
+      "measured_steps": 24
+    },
+    "gpu_resident": {
+      "tokens_per_second": 59467.29192005069,
+      "seconds_per_step": 0.5510255964582029,
+      "measured_steps": 24
+    }
+  },
+  "cuda_profile_status": "unavailable: trace contains CPU events only; independent minimal probes also lacked CUDA events",
+  "summary_script_sha256": "d53eaa7c7a02de151640e9d6f1493173f01263eab75dea0320ee915a34401922"
+}

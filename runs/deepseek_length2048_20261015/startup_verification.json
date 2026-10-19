@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-15T04:12:19.990239+00:00",
+  "selection_counts": {
+    "base": {
+      "gsm8k": 113,
+      "math": 1964
+    },
+    "cpt": {
+      "gsm8k": 160,
+      "math": 1860
+    }
+  },
+  "total_rerun_questions": 4097,
+  "only_original_1024_length_limited_selected": true,
+  "retained_answer_merge_preserves_dictionaries": true,
+  "merge_rejects_missing_extra_and_changed_identity": true,
+  "prepare_only_both_models": "passed",
+  "new_max_new_tokens": 2048,
+  "batch_size": 128,
+  "training_modified": false
+}

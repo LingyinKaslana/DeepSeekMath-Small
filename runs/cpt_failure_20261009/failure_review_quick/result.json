@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "mode": "quick",
+  "cases": [
+    {
+      "case": "fast",
+      "weights_updated": false,
+      "loss": 2.0264227390289307,
+      "loss_finite": true,
+      "seconds_including_compile_and_grad_audit": 8.280127112026094,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "all_gradients_finite": true,
+      "tensor_count": 338,
+      "total_norm_fp32": 4.813408374786377,
+      "total_norm_fp64": 4.813408803332931,
+      "nonfinite_tensor_names": []
+    },
+    {
+      "case": "native",
+      "weights_updated": false,
+      "loss": 2.0264430046081543,
+      "loss_finite": true,
+      "seconds_including_compile_and_grad_audit": 0.8292333069839515,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "all_gradients_finite": true,
+      "tensor_count": 338,
+      "total_norm_fp32": 5.1409525871276855,
+      "total_norm_fp64": 5.1409521431606215,
+      "nonfinite_tensor_names": []
+    },
+    {
+      "case": "strict_mlp",
+      "weights_updated": false,
+      "loss": 2.0264430046081543,
+      "loss_finite": true,
+      "seconds_including_compile_and_grad_audit": 0.8712992799992207,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "all_gradients_finite": true,
+      "tensor_count": 338,
+      "total_norm_fp32": 5.142669200897217,
+      "total_norm_fp64": 5.142669108654387,
+      "nonfinite_tensor_names": []
+    }
+  ],
+  "weights_step": 175000
+}

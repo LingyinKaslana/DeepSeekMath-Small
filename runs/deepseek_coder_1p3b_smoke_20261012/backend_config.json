@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "validated": true,
+  "model": "deepseek-ai/deepseek-coder-1.3b-base",
+  "revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "sequence_length": 2048,
+  "effective_batch": 16,
+  "micro_batch": 16,
+  "mask_policy": "ones",
+  "fused_optimizer": false,
+  "compiled_optimizer": false,
+  "execution_mode": "standard_native",
+  "options": {
+    "kernels": "native",
+    "loss": "native",
+    "compile_scope": "none",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_fullgraph": false,
+    "compile_dynamic": false,
+    "compile_label_alias": "any",
+    "preserve_silu": false
+  },
+  "purpose": "Fresh DeepSeek-Coder 1.3B native-HF mathematical CPT pilot; actual GPU smoke result recorded before production launch",
+  "validation_evidence": {
+    "structural_model_check": "./runs/deepseek_coder_1p3b_500m_20261012_setup/original_model_cpu_review.json",
+    "gpu_smoke": "pending; this candidate config is used to perform the smoke",
+    "semantics": "No custom attention/loss/kernel patches; standard native HF Llama SDPA and ordinary PyTorch AdamW"
+  },
+  "precision": "FP32 parameters, gradients and optimizer moments; BF16 forward autocast"
+}

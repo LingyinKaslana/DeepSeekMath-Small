@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "diagnostic_only": true,
+  "automatic_production_resume": false,
+  "production_files_modified": false,
+  "completed_utc": "2026-10-09T14:18:43.416374+00:00",
+  "report": "./runs/cpt_causes_20261009/report/summary.json",
+  "endpoint_comparison": {
+    "baseline": {
+      "validation": {
+        "loss": 1.8623371124267578,
+        "delta_from_fork": 0.0018447637557983398,
+        "delta_from_baseline_endpoint": 0.0
+      },
+      "uniform_train": {
+        "loss": 1.9320671558380127,
+        "delta_from_fork": 0.00014472007751464844,
+        "delta_from_baseline_endpoint": 0.0
+      },
+      "seen_train": {
+        "loss": 1.8415130376815796,
+        "delta_from_fork": 0.004521369934082031,
+        "delta_from_baseline_endpoint": 0.0
+      },
+      "unseen_train": {
+        "loss": 1.883710503578186,
+        "delta_from_fork": 0.0015730857849121094,
+        "delta_from_baseline_endpoint": 0.0
+      }
+    },
+    "lr_0p3": {
+      "validation": {
+        "loss": 1.847996711730957,
+        "delta_from_fork": -0.012495636940002441,
+        "delta_from_baseline_endpoint": -0.014340400695800781
+      },
+      "uniform_train": {
+        "loss": 1.9182960987091064,
+        "delta_from_fork": -0.013626337051391602,
+        "delta_from_baseline_endpoint": -0.01377105712890625
+      },
+      "seen_train": {
+        "loss": 1.8242173194885254,
+        "delta_from_fork": -0.012774348258972168,
+        "delta_from_baseline_endpoint": -0.0172957181930542
+      },
+      "unseen_train": {
+        "loss": 1.8693515062332153,
+        "delta_from_fork": -0.012785911560058594,
+        "delta_from_baseline_endpoint": -0.014358997344970703
+      }
+    },
+    "wd_zero": {
+      "validation": {
+        "loss": 1.8622015714645386,
+        "delta_from_fork": 0.0017092227935791016,
+        "delta_from_baseline_endpoint": -0.00013554096221923828
+      },
+      "uniform_train": {
+        "loss": 1.9319449663162231,
+        "delta_from_fork": 2.2530555725097656e-05,
+        "delta_from_baseline_endpoint": -0.00012218952178955078
+      },
+      "seen_train": {
+        "loss": 1.8412917852401733,
+        "delta_from_fork": 0.004300117492675781,
+        "delta_from_baseline_endpoint": -0.00022125244140625
+      },
+      "unseen_train": {
+        "loss": 1.883523941040039,
+        "delta_from_fork": 0.0013865232467651367,
+        "delta_from_baseline_endpoint": -0.00018656253814697266
+      }
+    }
+  },
+  "interpretation_limitations": [
+    "这是 1000 步、0.032768B tokens 的局部干预，仅筛查立即变化方向。",
+    "学习率缩放同时改变 Adam 更新和 LR×WD 衰减；需要结合 WD=0 臂分析。",
+    "局部响应不能证明长期效果或最初第 5000 步拐点的原因。",
+    "seen/unseen 指本次 CPT 的块级训练历史，不保证文档或基座预训练没有重叠。",
+    "应比较各固定组跨模型的变化；组间绝对难度差异不能作为过拟合证据。"
+  ]
+}

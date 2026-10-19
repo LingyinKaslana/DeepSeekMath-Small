@@ -1,0 +1,40 @@
+{
+  "fixed_terminal_exact_10b": true,
+  "terminal_step": 305176,
+  "complete_batch_windows": 305,
+  "excluded_tail_updates": 176,
+  "training_log_hashes_unchanged": true,
+  "training_log_sha256": {
+    "./runs/cpt_10b_lr3e6_20261009/training.jsonl": "63666ef96ccf16a209e152b12441dd9bd6f5e239cca2d650a97a4cb6505150ed",
+    "./runs/cpt_10b_decay_5b_6b_20261010/training.jsonl": "fa61187416a44ae69f736b3167ee7f06d3d5494cee2c3808038cf33cf860c9eb"
+  },
+  "summary_checks": {
+    "checkpoint_chain": true,
+    "same_fixed_train_probe": true,
+    "same_dataset_and_orders": true,
+    "continuous_training_steps": true,
+    "overlap_consistency": true,
+    "exact_input_token_prefix": true,
+    "observed_lr_matches_intervention": true
+  },
+  "images": [
+    {
+      "path": "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_overview.png",
+      "size": [
+        2412,
+        1944
+      ],
+      "mode": "RGBA",
+      "bytes": 464358
+    },
+    {
+      "path": "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_recent.png",
+      "size": [
+        2412,
+        1944
+      ],
+      "mode": "RGBA",
+      "bytes": 455141
+    }
+  ]
+}

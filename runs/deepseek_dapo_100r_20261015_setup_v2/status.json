@@ -1,0 +1,11 @@
+{
+  "status": "running",
+  "phase": "formal_diagnostic_and_training",
+  "utc": "2026-10-15T11:35:22.862715+00:00",
+  "setup": "./runs/deepseek_dapo_100r_20261015_setup_v2",
+  "run": "./runs/deepseek_dapo_100r_20261015",
+  "rounds": 100,
+  "effective_groups_per_round": 32,
+  "responses_per_group": 8,
+  "accepted_response_budget": 25600
+}

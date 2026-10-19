@@ -1,0 +1,78 @@
+{
+  "generated_utc": "2026-10-12T09:12:05.729220+00:00",
+  "generated_beijing": "2026-10-12T17:12:05.729220+08:00",
+  "run": "./runs/deepseek_coder_1p3b_500m_20261012",
+  "common_evaluation_step": 15259,
+  "baseline": {
+    "step": 0,
+    "input_tokens": 0,
+    "input_tokens_b": 0.0,
+    "validation_loss": 2.1084015369415283,
+    "fixed_train_probe_loss": 2.113933563232422
+  },
+  "latest": {
+    "step": 15259,
+    "input_tokens": 500006912,
+    "input_tokens_b": 0.500006912,
+    "validation_loss": 1.9149794578552246,
+    "fixed_train_probe_loss": 1.8899461030960083
+  },
+  "best_validation": {
+    "step": 15259,
+    "input_tokens": 500006912,
+    "input_tokens_b": 0.500006912,
+    "validation_loss": 1.9149794578552246,
+    "fixed_train_probe_loss": 1.8899461030960083
+  },
+  "best_fixed_train_probe": {
+    "step": 15259,
+    "input_tokens": 500006912,
+    "input_tokens_b": 0.500006912,
+    "validation_loss": 1.9149794578552246,
+    "fixed_train_probe_loss": 1.8899461030960083
+  },
+  "train_probe_seen_blocks": 246,
+  "train_probe_unseen_blocks": 10,
+  "batch_mean_window_updates": 500,
+  "batch_mean_latest": {
+    "start_step": 14501,
+    "end_step": 15000,
+    "input_tokens_b": 0.49152,
+    "supervised_tokens": 16376000,
+    "updates": 500,
+    "token_weighted_batch_loss": 1.9599259190559388
+  },
+  "batch_mean_weighting": "supervised-token weighted, non-overlapping complete windows, x at window end",
+  "fixed_evaluation_point_count": 32,
+  "batch_mean_point_count": 30,
+  "observed_training_rows_through_cutoff": 15259,
+  "sources": [
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/manifest.json",
+      "sha256": "373d8ecf12c4177d24b0332f4fc03149b62cdadfe471c88fbfefce3ce8845709"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/data_manifest.json",
+      "sha256": "4f4dd782fb666031bd7fbf3e072998f06c0362f5ddc5e25ab1fe1c92d222e902"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/validation_before.json",
+      "sha256": "cc21b8cc2b44f650364e3505f377c2667e10d5babe281928dbfd6b4333eea9f1"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/validation_history.json",
+      "sha256": "4d5e0ef5b8c93f5cb940411180cc7ed689636e4800797f74f25ae1d135eadfe4"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/train_probe_history.json",
+      "sha256": "c37445acb838aace8aeb4e860814a0787714f4eefcb3b0b29c6c832d6864bc20"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/training.jsonl",
+      "sha256": "5c133895d23512470e163a6a4881551fdc7330cfad27259b92c0ff97410661e9"
+    }
+  ],
+  "script_sha256": "4d7806adb9dc94a287353bdb07696496889c18f5b209dac6d4873eb436035a70",
+  "fixed_curves_smoothed": false,
+  "training_unchanged": true
+}

@@ -1,0 +1,26 @@
+{
+  "requested_utc": "2026-10-10T06:48:31.095115+00:00",
+  "pid": 621138,
+  "proc_starttime": "21240311",
+  "signal": "SIGTERM",
+  "reason": "User-requested future LR transition from 5B to 6B tokens; checkpoint and resume preserving the completed prefix",
+  "last_logged_progress": {
+    "step": 140500,
+    "loss": 2.1311404705047607,
+    "grad_norm": 2.33217191696167,
+    "epoch": 1,
+    "step_in_epoch": 140500,
+    "lr": 3e-06,
+    "effective_fp32_lr": 3.000000106112566e-06,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 4603904000,
+    "seconds": 0.3326449729502201,
+    "native_retry_applied": false,
+    "optimizer_applied": true,
+    "first_full_shape_update": false
+  },
+  "expected_stopped_checkpoint": "./runs/cpt_10b_lr3e6_20261009/stopped_checkpoint",
+  "preflight": "passed",
+  "source_review": "passed"
+}

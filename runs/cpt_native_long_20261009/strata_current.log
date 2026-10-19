@@ -1,0 +1,6 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 65.22it/s]
+{"event": "evaluation_progress", "blocks": 256}
+{"event": "evaluation_progress", "blocks": 512}
+{"event": "evaluation_progress", "blocks": 768}
+{"event": "evaluation_progress", "blocks": 1024}
+{"status": "complete", "native_loss": 1.9010149240493774, "strata_loss": 1.9010153249141635, "output": "runs/cpt_native_long_20261009/strata_current"}

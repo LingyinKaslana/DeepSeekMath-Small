@@ -1,0 +1,323 @@
+{
+  "status": "complete",
+  "stop_reason": null,
+  "completed_steps": 66,
+  "optimizer_updates": 66,
+  "configured_steps": 66,
+  "trained_tokens": 2098176,
+  "supervised_tokens": 2097150,
+  "configured_input_tokens": 2098176,
+  "dataset_input_tokens": 1049088,
+  "epochs": 2,
+  "epoch_steps": 33,
+  "epoch_cursor": {
+    "completed_epochs": 2,
+    "step_in_epoch": 0
+  },
+  "order_metadata": {
+    "schema_version": 1,
+    "dataset_blocks": 513,
+    "effective_batch": 16,
+    "epochs": 2,
+    "seed": 42,
+    "generator": "torch.randperm(cpu), sequential seeded generator",
+    "files": [
+      {
+        "name": "order_epoch_00000.npy",
+        "sha256": "76fb9d6ffb5949d1ed4c5307c0cb3448186623d039ce42cba6507b398b6ae8da",
+        "dtype": "int32",
+        "blocks": 513,
+        "tail_position": 202
+      },
+      {
+        "name": "order_epoch_00001.npy",
+        "sha256": "9c7ebd1b0836e63b29119782c9066f4d85e78258c10e148b222e375141d3adaf",
+        "dtype": "int32",
+        "blocks": 513,
+        "tail_position": 127
+      }
+    ]
+  },
+  "all_dataset_tokens_consumed": true,
+  "train_seconds_excluding_validation_and_save": 57.48045199806802,
+  "tokens_per_second_including_first_update": 36502.42694804352,
+  "steady_tokens_per_second": 92606.22424215234,
+  "steady_tokens": 2032640,
+  "steady_seconds": 21.949280587068642,
+  "steady_definition": "Exclude the first full-shape update in each invocation; loop timings include data/H2D, synchronization and logging, and exclude validation/save sections",
+  "invocations": [
+    {
+      "output": "./runs/cpt_multiepoch_smoke_20261008_part1",
+      "start_step": 0,
+      "first_full_shape_update_seconds_including_compile": 18.29975499700231,
+      "train_seconds": 29.60477052803617,
+      "input_tokens": 1081856,
+      "steady_seconds": 11.302394801037735,
+      "steady_tokens": 1049088,
+      "optimizer_compile": {
+        "optimizer": "torch.optim.AdamW",
+        "implementation": "compiled_foreach",
+        "compile": {
+          "fullgraph": false,
+          "dynamic": false,
+          "mode": "default"
+        },
+        "compile_wrapper_setup_seconds": 1.1111003719997825,
+        "first_step_seconds_including_compilation": 9.301868511000066,
+        "compile_seconds": null,
+        "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+        "precision": {
+          "parameters": "float32",
+          "gradients": "float32",
+          "exp_avg": "float32",
+          "exp_avg_sq": "float32",
+          "learning_rate": "CUDA float32 scalar"
+        },
+        "device": "cuda:0",
+        "parameter_tensors": 338,
+        "parameter_elements": 1543714304,
+        "capturable": true,
+        "foreach": true,
+        "fused": false,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "weight_decay": 0.1,
+        "eps": 1e-08
+      },
+      "end_step": 34,
+      "stop_reason": "stop_after"
+    },
+    {
+      "output": "./runs/cpt_multiepoch_smoke_20261008",
+      "start_step": 34,
+      "first_full_shape_update_seconds_including_compile": 17.225934567992226,
+      "train_seconds": 27.87568147003185,
+      "input_tokens": 1016320,
+      "steady_seconds": 10.646885786030907,
+      "steady_tokens": 983552,
+      "optimizer_compile": {
+        "optimizer": "torch.optim.AdamW",
+        "implementation": "compiled_foreach",
+        "compile": {
+          "fullgraph": false,
+          "dynamic": false,
+          "mode": "default"
+        },
+        "compile_wrapper_setup_seconds": 1.2728047730051912,
+        "first_step_seconds_including_compilation": 9.088255866008694,
+        "compile_seconds": null,
+        "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+        "precision": {
+          "parameters": "float32",
+          "gradients": "float32",
+          "exp_avg": "float32",
+          "exp_avg_sq": "float32",
+          "learning_rate": "CUDA float32 scalar"
+        },
+        "device": "cuda:0",
+        "parameter_tensors": 338,
+        "parameter_elements": 1543714304,
+        "capturable": true,
+        "foreach": true,
+        "fused": false,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "weight_decay": 0.1,
+        "eps": 1e-08
+      },
+      "end_step": 66,
+      "stop_reason": null
+    }
+  ],
+  "schedule": {
+    "total_steps": 66,
+    "peak_lr": 1e-05,
+    "warmup_steps": 4,
+    "decay_80_step": 53,
+    "decay_90_step": 60,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1
+  },
+  "backend": {
+    "kernels": "native",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "model",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_label_alias": "same_as_input",
+    "compile_fullgraph": true,
+    "compile_dynamic": false,
+    "rms_in_place": false,
+    "emulate_precision_casts": true,
+    "preserve_silu": false,
+    "ce_chunk_rows": 4096,
+    "master_parameter_dtype": "float32",
+    "forward_autocast_dtype": "bfloat16",
+    "backward_autocast": "off",
+    "instance_local": true,
+    "torch_version": "2.9.1+cu130",
+    "transformers_version": "4.55.4",
+    "liger_version": "0.8.4",
+    "native_validation": "with eager_native(model): model(**batch)",
+    "notes": [
+      "Training-loop code must still verify FP32 gradients and optimizer states.",
+      "RoPE and BF16 CE change intermediate rounding; verify before selecting them.",
+      "Pass an already-resolved attention mask dictionary to compiled forwards."
+    ],
+    "optimizer_compile": {
+      "optimizer": "torch.optim.AdamW",
+      "implementation": "compiled_foreach",
+      "compile": {
+        "fullgraph": false,
+        "dynamic": false,
+        "mode": "default"
+      },
+      "compile_wrapper_setup_seconds": 1.2728047730051912,
+      "first_step_seconds_including_compilation": 9.088255866008694,
+      "compile_seconds": null,
+      "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+      "precision": {
+        "parameters": "float32",
+        "gradients": "float32",
+        "exp_avg": "float32",
+        "exp_avg_sq": "float32",
+        "learning_rate": "CUDA float32 scalar"
+      },
+      "device": "cuda:0",
+      "parameter_tensors": 338,
+      "parameter_elements": 1543714304,
+      "capturable": true,
+      "foreach": true,
+      "fused": false,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "weight_decay": 0.1,
+      "eps": 1e-08
+    }
+  },
+  "optimizer_compile": {
+    "optimizer": "torch.optim.AdamW",
+    "implementation": "compiled_foreach",
+    "compile": {
+      "fullgraph": false,
+      "dynamic": false,
+      "mode": "default"
+    },
+    "compile_wrapper_setup_seconds": 1.2728047730051912,
+    "first_step_seconds_including_compilation": 9.088255866008694,
+    "compile_seconds": null,
+    "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+    "precision": {
+      "parameters": "float32",
+      "gradients": "float32",
+      "exp_avg": "float32",
+      "exp_avg_sq": "float32",
+      "learning_rate": "CUDA float32 scalar"
+    },
+    "device": "cuda:0",
+    "parameter_tensors": 338,
+    "parameter_elements": 1543714304,
+    "capturable": true,
+    "foreach": true,
+    "fused": false,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "weight_decay": 0.1,
+    "eps": 1e-08
+  },
+  "validation_before": {
+    "loss": 1.8800569772720337,
+    "perplexity": 6.553878273658338,
+    "supervised_tokens": 262016,
+    "input_tokens": 262144,
+    "blocks": 128,
+    "loss_backend": "native eager",
+    "attention_mask": "cached all-ones tensor"
+  },
+  "validation_after": {
+    "step": 66,
+    "loss": 1.8736268281936646,
+    "perplexity": 6.511871060377725,
+    "supervised_tokens": 262016,
+    "input_tokens": 262144,
+    "blocks": 128,
+    "loss_backend": "native eager",
+    "attention_mask": "cached all-ones tensor"
+  },
+  "validation_history": [
+    {
+      "step": 20,
+      "loss": 1.853750467300415,
+      "perplexity": 6.383716602354622,
+      "supervised_tokens": 262016,
+      "input_tokens": 262144,
+      "blocks": 128,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    {
+      "step": 34,
+      "loss": 1.8523313999176025,
+      "perplexity": 6.3746641029155695,
+      "supervised_tokens": 262016,
+      "input_tokens": 262144,
+      "blocks": 128,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    {
+      "step": 40,
+      "loss": 1.8632571697235107,
+      "perplexity": 6.4446940845875105,
+      "supervised_tokens": 262016,
+      "input_tokens": 262144,
+      "blocks": 128,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    {
+      "step": 60,
+      "loss": 1.8736391067504883,
+      "perplexity": 6.511951017247445,
+      "supervised_tokens": 262016,
+      "input_tokens": 262144,
+      "blocks": 128,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    {
+      "step": 66,
+      "loss": 1.8736268281936646,
+      "perplexity": 6.511871060377725,
+      "supervised_tokens": 262016,
+      "input_tokens": 262144,
+      "blocks": 128,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    }
+  ],
+  "peak_allocated_bytes": 193736781312,
+  "peak_reserved_bytes": 207632728064,
+  "gpu_training_this_invocation": {
+    "samples": 19,
+    "utilization": 92.3157894736842,
+    "memory_mib": 188392.47368421053,
+    "power_w": 1093.3063157894737
+  },
+  "checkpoint": "./runs/cpt_multiepoch_smoke_20261008/final_checkpoint",
+  "full_parameter_training": true,
+  "wall_seconds_this_invocation": 96.19502868800191,
+  "checkpoint_verification": "Atomic publication; independent reload/resume verification is separate"
+}

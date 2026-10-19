@@ -1,0 +1,434 @@
+{
+  "status": "passed",
+  "checkpoint": "./runs/cpt_native_long_20261009/migration_smoke/stopped_checkpoint",
+  "cpu_only": true,
+  "weights": {
+    "serialized_tensors_compared_exactly": 338,
+    "reloaded_state_tensors": 339,
+    "serialized_tensor_elements": 1543714304,
+    "serialized_tensor_bytes": 6174857216,
+    "model_parameters": 1543714304,
+    "unique_parameter_tensors": 338,
+    "tied_aliases": {
+      "lm_head.weight": "model.embed_tokens.weight"
+    },
+    "shards": 2
+  },
+  "optimizer": {
+    "parameter_groups": 1,
+    "parameter_ids": 338,
+    "initialized_states": 338,
+    "state_tensors_checked": 1014,
+    "moment_elements": 3087428608,
+    "moment_bytes": 12349714432,
+    "moment_dtype": "float32",
+    "optimizer_step": 181654,
+    "cpu_adamw_load_state_dict_passed": true
+  },
+  "tokenizer": {
+    "model_vocabulary": 151936,
+    "tokenizer_size": 151665,
+    "eos_token_id": 151643,
+    "eos_token": "<|endoftext|>",
+    "tied_word_embeddings": true
+  },
+  "training": {
+    "execution_mode": "standard_native",
+    "compiled_optimizer": false,
+    "completed_steps": 181654,
+    "configured_steps": 305176,
+    "optimizer_updates": 181654,
+    "trained_tokens": 5952433152,
+    "supervised_tokens": 5949526689,
+    "dataset_tokens": 5000000000,
+    "shuffle_blocks": 2441407,
+    "epochs": 2,
+    "epoch_steps": 152588,
+    "order_storage": "checksummed mmap NumPy files",
+    "schedule_complete": false,
+    "schedule": {
+      "total_steps": 305176,
+      "peak_lr": 1e-05,
+      "warmup_steps": 15259,
+      "decay_80_step": 244141,
+      "decay_90_step": 274659,
+      "decay_80_factor": 0.316,
+      "decay_90_factor": 0.1
+    },
+    "source_sha256": {
+      "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+      "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+      "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+      "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+      "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+      "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+      "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+      "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+      "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+      "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+      "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+      "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+    },
+    "signature": {
+      "backend_config_sha256": "f727e399f12bfc95d7a60a5e1b95606f8340fbb59223a0be0240491fa5cbbee1",
+      "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+      "token_file_sha256": {
+        "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+        "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+      },
+      "peak_lr": 1e-05,
+      "seed": 42,
+      "sequence_length": 2048,
+      "effective_batch": 16,
+      "epochs": 2,
+      "source_sha256": {
+        "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+        "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+        "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+        "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+        "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+        "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+        "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+        "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+        "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+        "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+        "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+        "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+      }
+    },
+    "original_signature": {
+      "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+      "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+      "token_file_sha256": {
+        "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+        "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+      },
+      "peak_lr": 1e-05,
+      "seed": 42,
+      "sequence_length": 2048,
+      "effective_batch": 16,
+      "epochs": 2,
+      "source_sha256": {
+        "train_cpt.py": "319197b0fb29b3425ba6f6cb7c10bb9c3c62ff25d21333ff55c37d614c274aa3",
+        "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+        "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+        "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+        "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+        "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+        "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+        "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+        "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+      }
+    },
+    "source_migrations": [
+      {
+        "authorized_by": "--allow-source-migration",
+        "changed_fields": [
+          "source_sha256"
+        ],
+        "completed_steps": 175000,
+        "from_signature": {
+          "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+          "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+          "token_file_sha256": {
+            "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+            "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+          },
+          "peak_lr": 1e-05,
+          "seed": 42,
+          "sequence_length": 2048,
+          "effective_batch": 16,
+          "epochs": 2,
+          "source_sha256": {
+            "train_cpt.py": "319197b0fb29b3425ba6f6cb7c10bb9c3c62ff25d21333ff55c37d614c274aa3",
+            "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+            "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+            "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+            "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+            "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+            "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+            "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+            "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+          }
+        },
+        "to_signature": {
+          "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+          "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+          "token_file_sha256": {
+            "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+            "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+          },
+          "peak_lr": 1e-05,
+          "seed": 42,
+          "sequence_length": 2048,
+          "effective_batch": 16,
+          "epochs": 2,
+          "source_sha256": {
+            "train_cpt.py": "e402087acbaebdd177917f85bae8d87453a80b8f452b03f9214a958084b997d6",
+            "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+            "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+            "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+            "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+            "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+            "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+            "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+            "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+            "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+            "source_migration.py": "0b95360c9051bdb2d0fc0a646cd26477a297434d114b3183742565dd8823c5f0"
+          }
+        },
+        "resumed_checkpoint": "./runs/cpt_10b_20261008/checkpoint_step_00175000",
+        "from_source_directory": "./runs/cpt_10b_20261008/source",
+        "to_source_directory": "./runs/cpt_resume_guard_smoke_20261009/source",
+        "saved_utc": "2026-10-09T02:05:30.362534+00:00"
+      },
+      {
+        "authorized_by": "--allow-native-backend-migration",
+        "changed_fields": [
+          "backend_config_sha256",
+          "source_sha256"
+        ],
+        "completed_steps": 181650,
+        "from_signature": {
+          "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+          "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+          "token_file_sha256": {
+            "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+            "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+          },
+          "peak_lr": 1e-05,
+          "seed": 42,
+          "sequence_length": 2048,
+          "effective_batch": 16,
+          "epochs": 2,
+          "source_sha256": {
+            "train_cpt.py": "e402087acbaebdd177917f85bae8d87453a80b8f452b03f9214a958084b997d6",
+            "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+            "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+            "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+            "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+            "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+            "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+            "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+            "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+            "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+            "source_migration.py": "0b95360c9051bdb2d0fc0a646cd26477a297434d114b3183742565dd8823c5f0"
+          }
+        },
+        "to_signature": {
+          "backend_config_sha256": "f727e399f12bfc95d7a60a5e1b95606f8340fbb59223a0be0240491fa5cbbee1",
+          "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+          "token_file_sha256": {
+            "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+            "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+          },
+          "peak_lr": 1e-05,
+          "seed": 42,
+          "sequence_length": 2048,
+          "effective_batch": 16,
+          "epochs": 2,
+          "source_sha256": {
+            "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+            "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+            "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+            "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+            "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+            "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+            "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+            "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+            "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+            "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+            "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+            "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+          }
+        },
+        "resumed_checkpoint": "./runs/cpt_10b_20261009_after_native_compare/stopped_checkpoint",
+        "from_source_directory": "./runs/cpt_10b_20261009_after_native_compare/source",
+        "to_source_directory": "./runs/cpt_native_long_20261009/migration_smoke/source",
+        "saved_utc": "2026-10-09T03:30:18.572202+00:00",
+        "from_backend_config": {
+          "schema_version": 1,
+          "validated": true,
+          "model": "Qwen/Qwen2.5-Coder-1.5B",
+          "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+          "sequence_length": 2048,
+          "effective_batch": 16,
+          "micro_batch": 16,
+          "mask_policy": "causal",
+          "fused_optimizer": false,
+          "options": {
+            "kernels": "native",
+            "loss": "native",
+            "chunk_mem_const": 1,
+            "compile_scope": "model",
+            "compile_mode": "default",
+            "compile_shape": [
+              16,
+              2048
+            ],
+            "compile_fullgraph": true,
+            "rms_in_place": false,
+            "emulate_precision_casts": true,
+            "compile_label_alias": "same_as_input",
+            "preserve_silu": false,
+            "ce_chunk_rows": 4096
+          },
+          "validation_evidence": {
+            "benchmark_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam_tailguard/result.json",
+            "production_numerical_result": "./runs/cpt_optimization_20261008/production_flash_numerics_deterministic/result.json",
+            "optimizer_check_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam/optimizer_check.json",
+            "strict_production_numerical_check_passed": false,
+            "initial_10m_training_result": "./runs/cpt_optimized_pilot_10m_20261008/result.json",
+            "checkpoint_verification": "./runs/cpt_optimization_20261008/initial_final_checkpoint_verification.json",
+            "native_ulp_sensitivity": "./runs/cpt_optimization_20261008/native_ulp_sensitivity.json",
+            "policy": "Useful for learning workflow/throughput experiments; not for a strictly identical native-gradient comparison. All numerical differences remain recorded; strict per-probe threshold is not relaxed or claimed passed.",
+            "selection_context": "User prioritizes learning the workflow, not paper metrics. Keep strict alternative and all drift diagnostics; no claim of per-probe equivalence."
+          },
+          "purpose": "High-throughput learning-workflow CPT backend with recorded compiler rounding differences",
+          "compiled_optimizer": true
+        },
+        "to_backend_config": {
+          "schema_version": 1,
+          "validated": true,
+          "model": "Qwen/Qwen2.5-Coder-1.5B",
+          "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+          "sequence_length": 2048,
+          "effective_batch": 16,
+          "micro_batch": 16,
+          "mask_policy": "ones",
+          "fused_optimizer": false,
+          "options": {
+            "kernels": "native",
+            "loss": "native",
+            "chunk_mem_const": 1,
+            "compile_scope": "none",
+            "compile_mode": "default",
+            "compile_shape": [
+              16,
+              2048
+            ],
+            "compile_fullgraph": true,
+            "rms_in_place": false,
+            "emulate_precision_casts": true,
+            "compile_label_alias": "same_as_input",
+            "preserve_silu": false,
+            "ce_chunk_rows": 4096
+          },
+          "validation_evidence": {
+            "native_reference_training_result": "runs/cpt_native_compare_20261009/native/result.json",
+            "same_checkpoint_comparison": "runs/cpt_native_compare_20261009/report/summary.json",
+            "uncompiled_reference_completed_updates": 1000,
+            "native_model": "unpatched HF AutoModelForCausalLM",
+            "optimizer": "standard torch.optim.AdamW, foreach=True, capturable=False, fused=False",
+            "migration_validation_artifacts": "runs/cpt_native_long_20261009/migration_smoke",
+            "policy": "Retain Adam tensors, RNG, exact data-order prefix, schedule and all mathematical hyperparameters; compiler options are inactive in standard_native mode"
+          },
+          "purpose": "Standard uncompiled Hugging Face CPT with ordinary PyTorch AdamW; BF16 autocast, FP32 parameters/gradients/moments",
+          "compiled_optimizer": false,
+          "execution_mode": "standard_native"
+        },
+        "from_backend_config_path": "./runs/cpt_10b_20261009_after_native_compare/backend_config.json",
+        "to_backend_config_path": "./runs/cpt_native_long_20261009/migration_smoke/backend_config.json",
+        "backend_changes": [
+          {
+            "field": "compiled_optimizer",
+            "before": true,
+            "after": false,
+            "kind": "execution"
+          },
+          {
+            "field": "execution_mode",
+            "before": null,
+            "after": "standard_native",
+            "kind": "execution"
+          },
+          {
+            "field": "mask_policy",
+            "before": "causal",
+            "after": "ones",
+            "kind": "execution"
+          },
+          {
+            "field": "options.compile_scope",
+            "before": "model",
+            "after": "none",
+            "kind": "execution"
+          },
+          {
+            "field": "purpose",
+            "before": "High-throughput learning-workflow CPT backend with recorded compiler rounding differences",
+            "after": "Standard uncompiled Hugging Face CPT with ordinary PyTorch AdamW; BF16 autocast, FP32 parameters/gradients/moments",
+            "kind": "description_only"
+          },
+          {
+            "field": "validation_evidence",
+            "before": {
+              "benchmark_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam_tailguard/result.json",
+              "production_numerical_result": "./runs/cpt_optimization_20261008/production_flash_numerics_deterministic/result.json",
+              "optimizer_check_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam/optimizer_check.json",
+              "strict_production_numerical_check_passed": false,
+              "initial_10m_training_result": "./runs/cpt_optimized_pilot_10m_20261008/result.json",
+              "checkpoint_verification": "./runs/cpt_optimization_20261008/initial_final_checkpoint_verification.json",
+              "native_ulp_sensitivity": "./runs/cpt_optimization_20261008/native_ulp_sensitivity.json",
+              "policy": "Useful for learning workflow/throughput experiments; not for a strictly identical native-gradient comparison. All numerical differences remain recorded; strict per-probe threshold is not relaxed or claimed passed.",
+              "selection_context": "User prioritizes learning the workflow, not paper metrics. Keep strict alternative and all drift diagnostics; no claim of per-probe equivalence."
+            },
+            "after": {
+              "native_reference_training_result": "runs/cpt_native_compare_20261009/native/result.json",
+              "same_checkpoint_comparison": "runs/cpt_native_compare_20261009/report/summary.json",
+              "uncompiled_reference_completed_updates": 1000,
+              "native_model": "unpatched HF AutoModelForCausalLM",
+              "optimizer": "standard torch.optim.AdamW, foreach=True, capturable=False, fused=False",
+              "migration_validation_artifacts": "runs/cpt_native_long_20261009/migration_smoke",
+              "policy": "Retain Adam tensors, RNG, exact data-order prefix, schedule and all mathematical hyperparameters; compiler options are inactive in standard_native mode"
+            },
+            "kind": "description_only"
+          }
+        ]
+      }
+    ],
+    "source_only_migration_count": 1,
+    "native_backend_migration_count": 1
+  },
+  "checkpoint_bytes": 18560430017,
+  "checkpoint_files": {
+    "generation_config.json": 117,
+    "added_tokens.json": 605,
+    "chat_template.jinja": 2507,
+    "training_state.pt": 12350067605,
+    "model-00002-of-00002.safetensors": 1178224960,
+    "tokenizer_config.json": 4688,
+    "checkpoint_manifest.json": 27310,
+    "model-00001-of-00002.safetensors": 4996670464,
+    "merges.txt": 1671853,
+    "tokenizer.json": 11421896,
+    "special_tokens_map.json": 616,
+    "model.safetensors.index.json": 27729,
+    "config.json": 1322,
+    "vocab.json": 2776833
+  },
+  "checkpoint_order_files": {
+    "orders/order_epoch_00000.npy": 9765756,
+    "orders/order_epoch_00001.npy": 9765756
+  },
+  "checkpoint_config_sha256": "b3acdef5a51b13f9badea41d138def143a4a63745d6404ccfb772e2f2b26a714",
+  "checkpoint_manifest_sha256": "880446bc04f5b205f066dc53aaa1fc808dd9ff07e6637c130ff2e57acc3ae797",
+  "checkpoint_source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+  },
+  "scope": "Exact serialized weight reload; FP32 finite weights/moments; optimizer binding/counters; source/config/data signatures. No live-model comparison or training resume execution.",
+  "seconds": 22.434088442998473,
+  "verified_utc": "2026-10-09T03:33:52.962564+00:00",
+  "verifier_source_sha256": "7047edb6dc77ad174018c59a5668f56c3bb0170345708a6303530918c65555e0"
+}

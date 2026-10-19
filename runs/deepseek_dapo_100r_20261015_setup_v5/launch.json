@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-15T14:59:00.460600+00:00",
+  "started_beijing": "2026-10-15T22:59:00.460600+08:00",
+  "tmux_session": "deepseek-dapo-100r-v5-20261015",
+  "resume_round": 75,
+  "pipeline": "Native-vs-compacted decoding benchmark + numerical checks + disposable4update smoke -> restore original checkpoint and finish100 rounds -> full benchmarks"
+}

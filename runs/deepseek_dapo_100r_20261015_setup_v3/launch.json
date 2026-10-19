@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-15T14:00:02.148581+00:00",
+  "started_beijing": "2026-10-15T22:00:02.148581+08:00",
+  "tmux_session": "deepseek-dapo-100r-v3-20261015",
+  "resume_round": 55,
+  "pipeline": "Isolated throughput/numerical/memory benchmark -> restore checkpoint/Adam/RNG -> finish100 rounds -> full benchmarks"
+}

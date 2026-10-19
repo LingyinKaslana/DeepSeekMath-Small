@@ -1,0 +1,13 @@
+kind,step,native_updates,input_tokens,new_input_tokens,new_input_tokens_m,loss,perplexity,evaluated_input_tokens,evaluated_targets,evaluated_blocks,sources
+train_probe,181650,0,5952302080,0,0.0,1.9102617502212524,6.7548566523764135,524288,524032,256,./runs/cpt_native_long_20261009/migration_smoke/train_probe_history.json;./runs/cpt_10b_20261009_native/train_probe_history.json
+validation,181650,0,5952302080,0,0.0,1.9010149240493774,6.692683561977993,2097152,2096128,1024,./runs/cpt_native_long_20261009/migration_smoke/validation_before.json;./runs/cpt_native_long_20261009/migration_smoke/validation_history.json;./runs/cpt_10b_20261009_native/validation_history.json
+train_probe,181654,4,5952433152,131072,0.131072,1.9101834297180176,6.754327629321066,524288,524032,256,./runs/cpt_native_long_20261009/migration_smoke/train_probe_history.json;./runs/cpt_10b_20261009_native/train_probe_history.json;./runs/cpt_10b_20261009_native/train_probe_history.json
+validation,181654,4,5952433152,131072,0.131072,1.90091872215271,6.6920397440942825,2097152,2096128,1024,./runs/cpt_native_long_20261009/migration_smoke/validation_history.json;./runs/cpt_10b_20261009_native/validation_before.json;./runs/cpt_10b_20261009_native/validation_history.json
+train_probe,182000,350,5963770880,11468800,11.4688,1.9103487730026245,6.75544450436796,524288,524032,256,./runs/cpt_10b_20261009_native/train_probe_history.json
+validation,182000,350,5963770880,11468800,11.4688,1.9011472463607788,6.693569211930724,2097152,2096128,1024,./runs/cpt_10b_20261009_native/validation_history.json
+train_probe,183000,1350,5996538880,44236800,44.2368,1.9100505113601685,6.753429914846891,524288,524032,256,./runs/cpt_10b_20261009_native/train_probe_history.json
+validation,183000,1350,5996538880,44236800,44.2368,1.9007314443588257,6.690786591001959,2097152,2096128,1024,./runs/cpt_10b_20261009_native/validation_history.json
+train_probe,184000,2350,6029306880,77004800,77.0048,1.9112775325775146,6.761721602640376,524288,524032,256,./runs/cpt_10b_20261009_native/train_probe_history.json
+validation,184000,2350,6029306880,77004800,77.0048,1.9013671875,6.695041565078231,2097152,2096128,1024,./runs/cpt_10b_20261009_native/validation_history.json
+train_probe,185000,3350,6062074880,109772800,109.7728,1.9120635986328125,6.767038852048426,524288,524032,256,./runs/cpt_10b_20261009_native/train_probe_history.json
+validation,185000,3350,6062074880,109772800,109.7728,1.9000955820083618,6.68653352403963,2097152,2096128,1024,./runs/cpt_10b_20261009_native/validation_history.json

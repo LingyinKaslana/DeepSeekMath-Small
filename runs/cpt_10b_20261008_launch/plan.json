@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "purpose": "Learn mathematical continued pretraining with 5B distinct sampled tokens and two epochs",
+  "training": "full_parameters",
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "model_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "initialization": "fresh pinned Coder base; use the same complete 10B schedule after any restart",
+  "backend_config": "configs/cpt_backend.json",
+  "precision": "BF16 autocast compute; FP32 parameters, gradients and AdamW moments",
+  "data": "data/processed/openwebmath_5b_s42",
+  "source": "OpenWebMath only; exact selected text/URL deduplication, not near-deduplication",
+  "dataset_input_tokens": 5000000000,
+  "validation_input_tokens": 2097152,
+  "validation_policy": "Retain the pilot validation token prefix; exclude all pilot validation text hashes and URLs from training; keep split decisions independent of token budgets",
+  "epochs": 2,
+  "shuffle": "Independent deterministic block permutation for each epoch",
+  "configured_input_tokens": 10000000000,
+  "configured_supervised_tokens": 9995117186,
+  "sequence_length": 2048,
+  "effective_batch_sequences": 16,
+  "effective_batch_input_tokens": 32768,
+  "blocks_per_epoch": 2441407,
+  "tail_input_tokens_per_epoch": 512,
+  "steps_per_epoch": 152588,
+  "total_steps": 305176,
+  "peak_learning_rate": 1e-05,
+  "learning_rate_schedule": {
+    "warmup_steps": 15259,
+    "decay_80_step": 244141,
+    "decay_90_step": 274659,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1
+  },
+  "evaluation_every_steps": 5000,
+  "checkpoint_every_steps": 5000,
+  "keep_recent_periodic_checkpoints": 3,
+  "log_every_steps": 100,
+  "timing": {
+    "previous_steady_tokens_per_second": 97302.3190995,
+    "estimated_pure_training_hours": 28.547909273747738,
+    "target_training_wall_hours": 30,
+    "target_is_estimate_not_hard_stop": true,
+    "data_preparation_time_is_separate": true,
+    "note": "Re-estimate from long-run measured throughput and actual evaluation/save overhead; complete the fixed 10B budget"
+  },
+  "limitations": [
+    "Fast backend has recorded compiler rounding differences and did not pass strict per-probe native-gradient equivalence",
+    "No GSM8K/MATH benchmark decontamination has been performed; no paper metric reproduction claim",
+    "Corpus size is measured using the pinned Qwen tokenizer, not the paper tokenizer"
+  ],
+  "entrypoint": "scripts/run_cpt_10b.sh",
+  "status": "preparing"
+}

@@ -1,0 +1,8 @@
+{
+  "examples": 4,
+  "correct": 1,
+  "accuracy": 0.25,
+  "truncated": 0,
+  "seconds": 4.501962797949091,
+  "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
+}

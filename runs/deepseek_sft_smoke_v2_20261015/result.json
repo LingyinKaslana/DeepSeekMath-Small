@@ -1,0 +1,31 @@
+{
+  "status": "stopped",
+  "stage": "sft",
+  "completed_steps": 16,
+  "configured_steps": 1356,
+  "sft_input_tokens": 189396,
+  "sft_supervised_tokens": 133204,
+  "validation_before": {
+    "loss": 0.9544458389282227,
+    "supervised_tokens": 86171,
+    "input_tokens": 126981,
+    "examples": 512,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  "validation_after": {
+    "step": 16,
+    "loss": 0.8428868651390076,
+    "supervised_tokens": 86171,
+    "input_tokens": 126981,
+    "examples": 512,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  "best_step": 16,
+  "best_validation_loss": 0.8428868651390076,
+  "final_checkpoint": "./runs/deepseek_sft_smoke_v2_20261015/stopped_checkpoint",
+  "evaluation_checkpoint": "./runs/deepseek_sft_smoke_v2_20261015/stopped_checkpoint",
+  "wall_seconds": 139.44542904698756,
+  "peak_allocated_gib": 86.74993705749512,
+  "finished_utc": "2026-10-15T06:23:02.504463+00:00",
+  "cpt_checkpoint_modified": false
+}

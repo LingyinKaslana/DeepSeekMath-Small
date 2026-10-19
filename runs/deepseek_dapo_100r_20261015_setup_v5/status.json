@@ -1,0 +1,12 @@
+{
+  "status": "complete_verified",
+  "phase": "finished",
+  "utc": "2026-10-15T16:21:10.691348+00:00",
+  "setup": "./runs/deepseek_dapo_100r_20261015_setup_v5",
+  "run": "./runs/deepseek_dapo_100r_20261015",
+  "rounds": 100,
+  "effective_groups_per_round": 32,
+  "responses_per_group": 8,
+  "accepted_response_budget": 25600,
+  "exit_code": 0
+}

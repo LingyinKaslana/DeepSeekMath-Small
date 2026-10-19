@@ -1,0 +1,26 @@
+{
+  "status": "completed_local_sensitivity_experiment",
+  "reviewed_utc": "2026-10-09T14:38:24.786947+00:00",
+  "suite_completed_utc": "2026-10-09T14:18:44.324425+00:00",
+  "all_arms_completed_1000_updates": true,
+  "same_checkpoint_adam_rng_data_order_eval_verified": true,
+  "starting_validation_loss": 1.8604923486709595,
+  "end_validation_losses": {
+    "baseline": 1.8623371124267578,
+    "lr_0p3": 1.847996711730957,
+    "wd_zero": 1.8622015714645386
+  },
+  "lower_lr_gain_vs_baseline": 0.014340400695800781,
+  "zero_wd_gain_vs_baseline": 0.00013554096221923828,
+  "lower_lr_gain_over_zero_wd_gain_ratio": 105.80123131046614,
+  "baseline_replay_vs_original_native_abs_diff": 1.895427703857422e-05,
+  "supported": "At the native20k checkpoint, changing the LR multiplier from1 to0.3 substantially improved all four fixed evaluated groups over1000 updates; the WD0-only intervention had a much smaller local effect. LR/update magnitude is the priority hypothesis for the current degradation.",
+  "not_established": [
+    "No claim that3e-6 is globally optimal",
+    "No from0 low-LR curve yet; the first5000-step turning point is not causally isolated",
+    "WD0 does not undo accumulated prior weight decay",
+    "LR multiplier intrinsically scales both Adam update andlr*WD; these three arms narrow but do not exhaust all mechanisms"
+  ],
+  "next_experiment": "Extend the low-LR branch or repeat a fresh-base low-LR run with matched token progress; retain the original baseline",
+  "original_production_paused": true
+}

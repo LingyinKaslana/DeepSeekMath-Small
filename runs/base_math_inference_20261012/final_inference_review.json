@@ -1,0 +1,909 @@
+{
+  "audit": "Final independent read-only original-model complete coverage, arithmetic, protocol and source review; no repeated symbolic scoring or GPU",
+  "status": "passed",
+  "completed_utc": "2026-10-12T04:22:47.793105+00:00",
+  "checks_count": 130,
+  "passed_checks": 130,
+  "failed_checks": [],
+  "checks": [
+    {
+      "check": "Suite status complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Scoring complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Generation complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Status generation exactly bound",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Training untouched",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pinned original model identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pinned original snapshot path",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Original is not CPT checkpoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pinned model weight SHA unchanged: model.safetensors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Original single weight included",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Stored BF16 parameters agree actual header",
+      "passed": true,
+      "detail": {
+        "BF16": 338
+      }
+    },
+    {
+      "check": "Same FP32 parameters BF16 compute as CPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: benchmarks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: prompt_format",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: chat_template",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: do_sample",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: num_beams",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: max_new_tokens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: n",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: batch_size",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: stops",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: backend",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: torch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: transformers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: smoke_limit_per_dataset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: prompt_statistics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference protocol identical: official_repository_commit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reference manifest unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source SHA unchanged: ./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/datasets/gsm8k/test.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source SHA unchanged: ./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/datasets/math/test.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source SHA unchanged: ./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/cot_gsm_8_shot.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source SHA unchanged: ./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/cot_minerva_math_4_shot.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source SHA unchanged: ./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/few_shot_prompting.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source SHA unchanged: ./runs/base_math_inference_20261012/source/run_math_inference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source SHA unchanged: ./runs/base_math_inference_20261012/source/math_benchmark_protocol.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Frozen source SHA unchanged: score_math_benchmarks.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Frozen source SHA unchanged: math_benchmark_protocol.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Frozen source SHA unchanged: run_math_inference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pinned official repository HEAD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Generation AST identical to CPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Official scoring source identical to CPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k counts prediction/scored/prompt/gold",
+      "passed": true,
+      "detail": {
+        "predictions": 1319,
+        "scored": 1319,
+        "prompts": 1319,
+        "gold": 1319
+      }
+    },
+    {
+      "check": "gsm8k predictions unique full indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k scored unique full indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k prompts unique full indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k strict gold ID/question/index join",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k unchanged scored generation fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k gold extraction matches official gold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k exact fewshot prompt with blank target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k prompt file byte identical to CPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k metric arithmetic: total",
+      "passed": true,
+      "detail": 1319
+    },
+    {
+      "check": "gsm8k metric arithmetic: correct",
+      "passed": true,
+      "detail": 818
+    },
+    {
+      "check": "gsm8k metric arithmetic: accuracy",
+      "passed": true,
+      "detail": 0.620166793025019
+    },
+    {
+      "check": "gsm8k metric arithmetic: accuracy_percent",
+      "passed": true,
+      "detail": 62.0166793025019
+    },
+    {
+      "check": "gsm8k metric arithmetic: timeouts",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "gsm8k metric arithmetic: errors",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "gsm8k metric arithmetic: empty_predictions",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "gsm8k metric arithmetic: truncated_generations",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "gsm8k metric arithmetic: missing_generations",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "gsm8k zero missing/errors/timeouts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k correct flags are boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k empty flags agree official extraction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k truncation exactly length finish",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k max new token boundary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k valid generated counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k stops removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k generation summary agrees actual records",
+      "passed": true,
+      "detail": {
+        "questions": 1319,
+        "finish_reasons": {
+          "eos": 594,
+          "stop_string": 724,
+          "length": 1
+        },
+        "generated_tokens": 208353,
+        "prediction_sha256": "cfbb7ee5dd118b9313f496e7f15c0f74e085b945a12e86ac8336f39352b88f02"
+      }
+    },
+    {
+      "check": "gsm8k scorer bound same prediction SHA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GSM official independently scored same 818",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GSM secondary independently scored same 842",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GSM independent per-question official and secondary flags",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GSM secondary arithmetic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GSM secondary changed prediction arithmetic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math counts prediction/scored/prompt/gold",
+      "passed": true,
+      "detail": {
+        "predictions": 5000,
+        "scored": 5000,
+        "prompts": 5000,
+        "gold": 5000
+      }
+    },
+    {
+      "check": "math predictions unique full indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math scored unique full indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math prompts unique full indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math strict gold ID/question/index join",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math unchanged scored generation fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math gold extraction matches official gold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math exact fewshot prompt with blank target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math prompt file byte identical to CPT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math metric arithmetic: total",
+      "passed": true,
+      "detail": 5000
+    },
+    {
+      "check": "math metric arithmetic: correct",
+      "passed": true,
+      "detail": 1498
+    },
+    {
+      "check": "math metric arithmetic: accuracy",
+      "passed": true,
+      "detail": 0.2996
+    },
+    {
+      "check": "math metric arithmetic: accuracy_percent",
+      "passed": true,
+      "detail": 29.959999999999997
+    },
+    {
+      "check": "math metric arithmetic: timeouts",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "math metric arithmetic: errors",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "math metric arithmetic: empty_predictions",
+      "passed": true,
+      "detail": 30
+    },
+    {
+      "check": "math metric arithmetic: truncated_generations",
+      "passed": true,
+      "detail": 586
+    },
+    {
+      "check": "math metric arithmetic: missing_generations",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "math zero missing/errors/timeouts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math correct flags are boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math empty flags agree official extraction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math truncation exactly length finish",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math max new token boundary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math valid generated counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math stops removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math generation summary agrees actual records",
+      "passed": true,
+      "detail": {
+        "questions": 5000,
+        "finish_reasons": {
+          "stop_string": 4198,
+          "eos": 216,
+          "length": 586
+        },
+        "generated_tokens": 1438762,
+        "prediction_sha256": "9a060869bd9bf5c1c2bea7fe4270e8344f26c506822a5c63b5b94ef7bfc5dc35"
+      }
+    },
+    {
+      "check": "math scorer bound same prediction SHA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type group names",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type totals and correct sum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Number Theory metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Prealgebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Geometry metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Precalculus metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Intermediate Algebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Algebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Counting & Probability metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level group names",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level totals and correct sum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 1 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 3 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 4 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 5 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 2 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category group names",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category totals and correct sum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category number_theory metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category prealgebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category geometry metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category precalculus metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category intermediate_algebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category algebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category counting_and_probability metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Known empty official MATH gold remains sole index82",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "All formal output files unchanged during audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Actual loaded runtime parameters float32",
+      "passed": true,
+      "detail": [
+        {
+          "event": "model_loaded",
+          "seconds": 2.8726091000135057,
+          "gpu": "NVIDIA GB300",
+          "parameter_dtype": "float32"
+        }
+      ]
+    },
+    {
+      "check": "Pinned official vendor working tree clean",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "benchmarks": {
+    "gsm8k": {
+      "total": 1319,
+      "correct": 818,
+      "accuracy": 0.620166793025019,
+      "accuracy_percent": 62.0166793025019,
+      "timeouts": 0,
+      "errors": 0,
+      "empty_predictions": 0,
+      "truncated_generations": 1,
+      "missing_generations": 0,
+      "questions": 1319,
+      "finish_reasons": {
+        "eos": 594,
+        "stop_string": 724,
+        "length": 1
+      },
+      "generated_tokens": 208353,
+      "prediction_sha256": "cfbb7ee5dd118b9313f496e7f15c0f74e085b945a12e86ac8336f39352b88f02",
+      "empty_completion_count": 0,
+      "empty_official_gold_count": 0,
+      "scoring_issues": [],
+      "secondary": {
+        "correct": 842,
+        "accuracy_percent": 63.83623957543594,
+        "changed_predictions": 37,
+        "wrong_to_correct_indices": [
+          88,
+          129,
+          173,
+          230,
+          265,
+          299,
+          325,
+          331,
+          343,
+          349,
+          401,
+          451,
+          514,
+          582,
+          613,
+          629,
+          715,
+          819,
+          829,
+          927,
+          1043,
+          1180,
+          1285,
+          1293
+        ],
+        "correct_to_wrong_indices": []
+      }
+    },
+    "math": {
+      "total": 5000,
+      "correct": 1498,
+      "accuracy": 0.2996,
+      "accuracy_percent": 29.959999999999997,
+      "timeouts": 0,
+      "errors": 0,
+      "empty_predictions": 30,
+      "truncated_generations": 586,
+      "missing_generations": 0,
+      "questions": 5000,
+      "finish_reasons": {
+        "stop_string": 4198,
+        "eos": 216,
+        "length": 586
+      },
+      "generated_tokens": 1438762,
+      "prediction_sha256": "9a060869bd9bf5c1c2bea7fe4270e8344f26c506822a5c63b5b94ef7bfc5dc35",
+      "empty_completion_count": 0,
+      "empty_official_gold_count": 1,
+      "scoring_issues": [],
+      "type_correct_total": {
+        "Algebra": {
+          "correct": 511,
+          "total": 1187
+        },
+        "Counting & Probability": {
+          "correct": 112,
+          "total": 474
+        },
+        "Geometry": {
+          "correct": 125,
+          "total": 479
+        },
+        "Intermediate Algebra": {
+          "correct": 129,
+          "total": 903
+        },
+        "Number Theory": {
+          "correct": 121,
+          "total": 540
+        },
+        "Prealgebra": {
+          "correct": 409,
+          "total": 871
+        },
+        "Precalculus": {
+          "correct": 91,
+          "total": 546
+        }
+      },
+      "level_correct_total": {
+        "Level 1": {
+          "correct": 310,
+          "total": 437
+        },
+        "Level 2": {
+          "correct": 412,
+          "total": 894
+        },
+        "Level 3": {
+          "correct": 400,
+          "total": 1131
+        },
+        "Level 4": {
+          "correct": 261,
+          "total": 1214
+        },
+        "Level 5": {
+          "correct": 115,
+          "total": 1324
+        }
+      },
+      "category_correct_total": {
+        "algebra": {
+          "correct": 511,
+          "total": 1187
+        },
+        "counting_and_probability": {
+          "correct": 112,
+          "total": 474
+        },
+        "geometry": {
+          "correct": 125,
+          "total": 479
+        },
+        "intermediate_algebra": {
+          "correct": 129,
+          "total": 903
+        },
+        "number_theory": {
+          "correct": 121,
+          "total": 540
+        },
+        "prealgebra": {
+          "correct": 409,
+          "total": 871
+        },
+        "precalculus": {
+          "correct": 91,
+          "total": 546
+        }
+      },
+      "correct_with_empty_prediction_indices": []
+    }
+  },
+  "model_weights_verified": {
+    "model.safetensors": "535485b26038ac24f4e8a86e1a73ed417d8992e3192f6305b7fcc4fb92efa210"
+  },
+  "stored_parameter_dtypes": {
+    "BF16": 338
+  },
+  "runtime_compute_precision": {
+    "parameters": "float32",
+    "autocast": "bfloat16",
+    "kv_cache": "native HF cache"
+  },
+  "notes": [
+    {
+      "kind": "official_math_gold_parser_empty",
+      "dataset_index": 82,
+      "dataset_id": "test-880.json-0",
+      "official_gold": [
+        ""
+      ],
+      "original_solution_tail": "Since $31 \\equiv 3$ (mod 7), he made his wife disappear 3 days before a Tuesday, or $\\boxed{\\mbox{Saturday}}$.",
+      "model_prediction": [
+        "3"
+      ],
+      "official_correct": false,
+      "finish_reason": "stop_string",
+      "model_completion_tail": " \nIf the magician said that he made his wife disappear 31 days ago, then he must have made her disappear on a Tuesday. This is because 31 days is equivalent to 4 weeks and 3 days, which means that the day of the week will repeat every 7 days. Since 31 days is equivalent to 4 weeks and 3 days, the day of the week will be the same as the day of the week 3 days before Tuesday, which is a Tuesday. Therefore, the magician made his wife disappear on a Tuesday. \nFinal Answer: The final answer is Tuesday. I hope it is correct.\n",
+      "day_names_in_completion": [
+        "Tuesday",
+        "Tuesday",
+        "Tuesday",
+        "Tuesday",
+        "Tuesday"
+      ],
+      "model_completion": " \nIf the magician said that he made his wife disappear 31 days ago, then he must have made her disappear on a Tuesday. This is because 31 days is equivalent to 4 weeks and 3 days, which means that the day of the week will repeat every 7 days. Since 31 days is equivalent to 4 weeks and 3 days, the day of the week will be the same as the day of the week 3 days before Tuesday, which is a Tuesday. Therefore, the magician made his wife disappear on a Tuesday. \nFinal Answer: The final answer is Tuesday. I hope it is correct.\n",
+      "main_correct_count_changed": false,
+      "interpretation": "The unchanged official parser erases mbox Saturday from gold, but this base prediction extracts as nonempty 3 and is marked incorrect. The visible final answer is Tuesday, which is also wrong versus Saturday. This known parser defect does not give the base model an extra correct answer; unchanged main correct count remains 1498/5000.",
+      "visible_model_final_answer": "Tuesday",
+      "visible_original_gold_answer": "Saturday"
+    }
+  ],
+  "formal_outputs_unchanged": true,
+  "training_modified": false,
+  "audit_wait_plus_run_seconds": 1184.4550071810372,
+  "actual_model_loaded_events": [
+    {
+      "event": "model_loaded",
+      "seconds": 2.8726091000135057,
+      "gpu": "NVIDIA GB300",
+      "parameter_dtype": "float32"
+    }
+  ]
+}

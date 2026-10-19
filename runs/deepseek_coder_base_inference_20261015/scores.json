@@ -1,0 +1,260 @@
+{
+  "protocol": "Official DeepSeekMath base-model few-shot CoT, greedy single completion",
+  "status": "complete",
+  "run": "./runs/deepseek_coder_base_inference_20261015",
+  "vendor": "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math",
+  "workers": 4,
+  "per_item_timeout_seconds": 15,
+  "denominator": "All official test rows; timeouts/errors/missing count as incorrect",
+  "generated_python_execution": false,
+  "benchmarks": {
+    "gsm8k": {
+      "total": 1319,
+      "correct": 63,
+      "accuracy": 0.047763457164518575,
+      "accuracy_percent": 4.776345716451857,
+      "timeouts": 0,
+      "errors": 0,
+      "empty_predictions": 0,
+      "truncated_generations": 113,
+      "missing_generations": 0,
+      "scored_file": "./runs/deepseek_coder_base_inference_20261015/gsm8k_scored.jsonl",
+      "prediction_sha256": "faee7a7662c8060517ade5365b77fe0a03337001aea1ce3a3339fc48ce073d6d",
+      "secondary_comma_normalized": {
+        "label": "Diagnostic only; not official main score",
+        "correct": 65,
+        "total": 1319,
+        "accuracy": 0.04927975739196361,
+        "changed_predictions": 28
+      }
+    },
+    "math": {
+      "total": 5000,
+      "correct": 208,
+      "accuracy": 0.0416,
+      "accuracy_percent": 4.16,
+      "timeouts": 0,
+      "errors": 0,
+      "empty_predictions": 203,
+      "truncated_generations": 1964,
+      "missing_generations": 0,
+      "scored_file": "./runs/deepseek_coder_base_inference_20261015/math_scored.jsonl",
+      "prediction_sha256": "7782193d0b9f722b330bfe92446d6ada0a9982b027ed00e81469a30b4e49295a",
+      "by_type": {
+        "Algebra": {
+          "total": 1187,
+          "correct": 51,
+          "accuracy": 0.04296545914069082,
+          "accuracy_percent": 4.296545914069082,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 21,
+          "truncated_generations": 416,
+          "missing_generations": 0
+        },
+        "Counting & Probability": {
+          "total": 474,
+          "correct": 22,
+          "accuracy": 0.046413502109704644,
+          "accuracy_percent": 4.641350210970464,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 20,
+          "truncated_generations": 121,
+          "missing_generations": 0
+        },
+        "Geometry": {
+          "total": 479,
+          "correct": 9,
+          "accuracy": 0.018789144050104383,
+          "accuracy_percent": 1.8789144050104383,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 39,
+          "truncated_generations": 137,
+          "missing_generations": 0
+        },
+        "Intermediate Algebra": {
+          "total": 903,
+          "correct": 39,
+          "accuracy": 0.04318936877076412,
+          "accuracy_percent": 4.318936877076411,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 31,
+          "truncated_generations": 517,
+          "missing_generations": 0
+        },
+        "Number Theory": {
+          "total": 540,
+          "correct": 22,
+          "accuracy": 0.040740740740740744,
+          "accuracy_percent": 4.074074074074074,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 23,
+          "truncated_generations": 271,
+          "missing_generations": 0
+        },
+        "Prealgebra": {
+          "total": 871,
+          "correct": 49,
+          "accuracy": 0.05625717566016074,
+          "accuracy_percent": 5.625717566016074,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 27,
+          "truncated_generations": 255,
+          "missing_generations": 0
+        },
+        "Precalculus": {
+          "total": 546,
+          "correct": 16,
+          "accuracy": 0.029304029304029304,
+          "accuracy_percent": 2.93040293040293,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 42,
+          "truncated_generations": 247,
+          "missing_generations": 0
+        }
+      },
+      "by_level": {
+        "Level 1": {
+          "total": 437,
+          "correct": 41,
+          "accuracy": 0.09382151029748284,
+          "accuracy_percent": 9.382151029748284,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 18,
+          "truncated_generations": 121,
+          "missing_generations": 0
+        },
+        "Level 2": {
+          "total": 894,
+          "correct": 54,
+          "accuracy": 0.06040268456375839,
+          "accuracy_percent": 6.0402684563758395,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 42,
+          "truncated_generations": 266,
+          "missing_generations": 0
+        },
+        "Level 3": {
+          "total": 1131,
+          "correct": 54,
+          "accuracy": 0.04774535809018567,
+          "accuracy_percent": 4.774535809018567,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 37,
+          "truncated_generations": 415,
+          "missing_generations": 0
+        },
+        "Level 4": {
+          "total": 1214,
+          "correct": 32,
+          "accuracy": 0.026359143327841845,
+          "accuracy_percent": 2.6359143327841847,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 45,
+          "truncated_generations": 525,
+          "missing_generations": 0
+        },
+        "Level 5": {
+          "total": 1324,
+          "correct": 27,
+          "accuracy": 0.02039274924471299,
+          "accuracy_percent": 2.0392749244712993,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 61,
+          "truncated_generations": 637,
+          "missing_generations": 0
+        }
+      },
+      "by_category": {
+        "algebra": {
+          "total": 1187,
+          "correct": 51,
+          "accuracy": 0.04296545914069082,
+          "accuracy_percent": 4.296545914069082,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 21,
+          "truncated_generations": 416,
+          "missing_generations": 0
+        },
+        "counting_and_probability": {
+          "total": 474,
+          "correct": 22,
+          "accuracy": 0.046413502109704644,
+          "accuracy_percent": 4.641350210970464,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 20,
+          "truncated_generations": 121,
+          "missing_generations": 0
+        },
+        "geometry": {
+          "total": 479,
+          "correct": 9,
+          "accuracy": 0.018789144050104383,
+          "accuracy_percent": 1.8789144050104383,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 39,
+          "truncated_generations": 137,
+          "missing_generations": 0
+        },
+        "intermediate_algebra": {
+          "total": 903,
+          "correct": 39,
+          "accuracy": 0.04318936877076412,
+          "accuracy_percent": 4.318936877076411,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 31,
+          "truncated_generations": 517,
+          "missing_generations": 0
+        },
+        "number_theory": {
+          "total": 540,
+          "correct": 22,
+          "accuracy": 0.040740740740740744,
+          "accuracy_percent": 4.074074074074074,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 23,
+          "truncated_generations": 271,
+          "missing_generations": 0
+        },
+        "prealgebra": {
+          "total": 871,
+          "correct": 49,
+          "accuracy": 0.05625717566016074,
+          "accuracy_percent": 5.625717566016074,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 27,
+          "truncated_generations": 255,
+          "missing_generations": 0
+        },
+        "precalculus": {
+          "total": 546,
+          "correct": 16,
+          "accuracy": 0.029304029304029304,
+          "accuracy_percent": 2.93040293040293,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 42,
+          "truncated_generations": 247,
+          "missing_generations": 0
+        }
+      }
+    }
+  }
+}

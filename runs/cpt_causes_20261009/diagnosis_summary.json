@@ -1,0 +1,37 @@
+{
+  "status": "initial_diagnosis_and_three_arm_experiment_complete",
+  "observed_utc": "2026-10-09T13:36:52.230600+00:00",
+  "production_settings_changed": false,
+  "preserved_original_production_step": 186317,
+  "source_5h_experiment_step": 30860,
+  "findings": {
+    "all_30860_lrs_update_counts_and_adam_steps_correct": true,
+    "uniform_probe_unseen_blocks_at_step30860": 201,
+    "uniform_probe_total_blocks": 256,
+    "uniform_probe_same_direction_does_not_rule_out_seen_memorization": true,
+    "fixed_seen_loss_base": 1.904410719871521,
+    "fixed_seen_loss_step20000": 1.8369916677474976,
+    "fixed_seen_loss_step30860": 1.8680853843688965,
+    "fixed_unseen_loss_base": 1.8848373889923096,
+    "fixed_unseen_loss_step20000": 1.882137417793274,
+    "fixed_unseen_loss_step30860": 1.891266107559204,
+    "seen_and_unseen_both_worsen_step20000_to30860": true,
+    "all_parameter_decay_applies_to_norm_and_bias": true,
+    "cumulative_real_decay_only_multiplier_at30860": 0.97703675,
+    "root_cause_confirmed": false
+  },
+  "ongoing_experiment": "runs/cpt_causes_20261009/control.json",
+  "sources": [
+    "schedule_review.json",
+    "decay_review.json",
+    "probe_evaluation_summary.json",
+    "independent_pipeline_review.json"
+  ],
+  "limitations": [
+    "Seen/unseen is defined by block occurrence in this local CPT only",
+    "Same token count does not preserve paper-scale optimization dynamics",
+    "These observational facts do not isolate causal LR/WD effects",
+    "Lowering LR also lowers per-update AdamW decay"
+  ],
+  "local_sensitivity_findings": "runs/cpt_causes_20261009/local_sensitivity_findings.json"
+}

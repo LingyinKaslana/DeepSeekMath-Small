@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "native_loss": 1.820206642150879,
+  "backend_loss": 1.8185762166976929,
+  "absolute_loss_difference": 0.0016304254531860352,
+  "global_gradient_relative_l2": 0.027098258957266808,
+  "probe_gradient_relative_l2": {
+    "model.embed_tokens.weight": 0.01881950907409191,
+    "model.layers.0.self_attn.q_proj.weight": 0.03721794858574867,
+    "model.layers.0.mlp.down_proj.weight": 0.03466426208615303,
+    "model.layers.0.input_layernorm.weight": 0.03461705148220062,
+    "model.layers.27.self_attn.q_proj.weight": 0.03348903730511665,
+    "model.layers.27.mlp.down_proj.weight": 0.018977906554937363,
+    "model.layers.27.input_layernorm.weight": 0.034815091639757156,
+    "model.norm.weight": 0.017656389623880386
+  },
+  "attention": "math",
+  "sequence_length": 512,
+  "compiled_check": "eager backend",
+  "seconds_including_small_shape_compile": 2.284620742997504
+}

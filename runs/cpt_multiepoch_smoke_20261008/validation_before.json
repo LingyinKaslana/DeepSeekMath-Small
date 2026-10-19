@@ -1,0 +1,10 @@
+{
+  "step": 34,
+  "loss": 1.8523313999176025,
+  "perplexity": 6.3746641029155695,
+  "supervised_tokens": 262016,
+  "input_tokens": 262144,
+  "blocks": 128,
+  "loss_backend": "native eager",
+  "attention_mask": "cached all-ones tensor"
+}

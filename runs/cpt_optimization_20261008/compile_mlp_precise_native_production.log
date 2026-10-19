@@ -1,0 +1,2 @@
+{"event": "model_loaded", "seconds": 3.4496249000076205, "parameters": 1543714304}
+{"event": "production_flash_numerical_check", "status": "rejected_numerical_check", "absolute_loss_difference": 0.0, "global_gradient_relative_l2": 0.01032331120222807, "native_restore_control_passed": true}

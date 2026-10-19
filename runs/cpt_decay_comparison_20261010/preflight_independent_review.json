@@ -1,0 +1,377 @@
+{
+  "status": "passed_static_cpu",
+  "completed_utc": "2026-10-10T03:20:44.260591+00:00",
+  "reviewer": "decay_audit independent agent",
+  "checks_passed": 69,
+  "checks_total": 69,
+  "runner_sha256": "1fa72113f917aee05280d6aa440affce3bcfcb26b39e8364e8d1266b4bd848dd",
+  "experiment_plan_sha256": "fac7914141f71a05550ce63ad6bc53209e003a99484eb3c511494601c57dcbf4",
+  "frozen_checkpoint_hardlinked_files": 16,
+  "checks": [
+    {
+      "name": "linear_first_last",
+      "passed": true,
+      "details": [
+        3e-06,
+        3.000000000000001e-07
+      ]
+    },
+    {
+      "name": "linear_strictly_decreases_positive",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_all_updates_same",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "LR_offset_rejects_zero",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "FP32_lr_endpoints",
+      "passed": true,
+      "details": [
+        3.000000106112566e-06,
+        3.000000106112566e-07
+      ]
+    },
+    {
+      "name": "explicit_actual_LR_check",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_checkpoint_manifest",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "checkpoint_signature_matches_run",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "fork_steps_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "input_token_budget_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "micro8_accumulation_effective16",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compile_shape_override",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "memory_fraction_cap",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_standard_native.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "backend_config_checksum",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "data_manifest_checksum",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_generation_config.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_added_tokens.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_chat_template.jinja",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_training_state.pt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_model-00002-of-00002.safetensors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_tokenizer_config.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_checkpoint_manifest.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_model-00001-of-00002.safetensors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_merges.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_tokenizer.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_special_tokens_map.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_model.safetensors.index.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_config.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_vocab.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_orders/order_epoch_00000.npy",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "hardlink_orders/order_epoch_00001.npy",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no_partial_tail_in_branch",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "probe_file_checksum",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_train_unique_full_blocks",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_train_indices_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_train_tokens_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_unique_full_blocks",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_indices_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_tokens_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_consumed_by_early15000",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_unique_full_blocks",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_indices_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_tokens_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_through_branch_end",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_probe_matches_production",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_probe_matches_previous",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "eval_offsets_include_start_finish",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_validation_matches_production",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "restore_before_initial_eval",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evaluation_rng_checked",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compiled_optimizer_restored",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "fullprecision_guard_present",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "nonfinite_retry_disabled",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no_nonfinite_batch_skip",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "diagnostic_final_state_only",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "output_directory_isolated",
+      "passed": true,
+      "details": "AST Namespace.output rooted at DIAG, with preflight_ or branch_ prefix selected by plan-only"
+    },
+    {
+      "name": "main_PID_alive",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "blocking_findings": [],
+  "runtime_pending": [
+    "Source initial native validation <=1e-6 and both arm start evaluations equal",
+    "Restored Adam FP32 finite counters, saved optimizer combined SHA equal between arms",
+    "Runtime applied FP32 LR logs follow constant/linear plan on all6104updates",
+    "No OOM/nonfinite/skipped updates; final finite audits all pass",
+    "Main PID/starttime/source/config unchanged throughout comparison"
+  ],
+  "limitations": [
+    "Both branches share micro8 accumulation, and are not bitwise replicas of production micro16",
+    "LR also scales AdamW decay; this is not a uniquely isolated gradient scale intervention",
+    "Unseen refers to these diagnostic forks; continuing production may consume those blocks",
+    "Static review cannot establish runtime throughput or sufficient memory"
+  ]
+}

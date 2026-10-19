@@ -1,0 +1,23 @@
+{
+  "through_round": 80,
+  "candidate_groups": 5792,
+  "all_wrong": {
+    "groups": 2401,
+    "percent": 41.453729281767956
+  },
+  "all_correct": {
+    "groups": 374,
+    "percent": 6.457182320441989
+  },
+  "mixed": {
+    "groups": 3017,
+    "percent": 52.08908839779006
+  },
+  "accepted_groups": 2560,
+  "accepted_percent": 44.19889502762431,
+  "surplus_mixed_groups": 457,
+  "surplus_mixed_percent": 7.890193370165746,
+  "generated_response_tokens": 4089113,
+  "trained_response_tokens": 1679469,
+  "trained_token_fraction": 0.4107171897670717
+}

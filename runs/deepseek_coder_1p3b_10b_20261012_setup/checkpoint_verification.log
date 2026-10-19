@@ -1,0 +1,2 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 46.21it/s]
+{"status": "passed", "output": "./runs/deepseek_coder_1p3b_10b_20261012_setup/final_checkpoint_verification.json", "seconds": 45.94679769303184, "error": null}

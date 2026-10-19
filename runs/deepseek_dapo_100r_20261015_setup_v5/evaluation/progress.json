@@ -1,0 +1,34 @@
+{
+  "status": "generation_complete",
+  "finished_utc": "2026-10-15T16:20:40.164518+00:00",
+  "questions": 6319,
+  "benchmarks": {
+    "gsm8k": {
+      "questions": 1319,
+      "finish_reasons": {
+        "eos": 1234,
+        "stop_string": 83,
+        "length": 2
+      },
+      "generated_tokens": 116022,
+      "prediction_sha256": "4205d2b3d5a454a43d7eacc72906ecd1f40ccc6c0b9358fb0353ca172beea207"
+    },
+    "math": {
+      "questions": 5000,
+      "finish_reasons": {
+        "eos": 4773,
+        "length": 184,
+        "stop_string": 43
+      },
+      "generated_tokens": 964826,
+      "prediction_sha256": "5ac889a8165c619e97bbad1033ba272e89945e922b1e1dbbcd150d6530a76168"
+    }
+  },
+  "manifest": "./runs/deepseek_dapo_100r_20261015_setup_v5/evaluation/manifest.json",
+  "generation_seconds_this_invocation": 2821.5668148949044,
+  "generation_tokens_per_second": 383.06659771239856,
+  "wall_seconds_this_invocation": 2965.9307661409257,
+  "peak_allocated_gib": 156.25416707992554,
+  "scoring": "pending",
+  "training_modified": false
+}

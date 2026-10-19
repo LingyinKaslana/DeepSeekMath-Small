@@ -1,0 +1,23 @@
+{
+  "status": "running",
+  "stage": "generation",
+  "started_utc": "2026-10-15T03:00:58.012420+00:00",
+  "started_beijing": "2026-10-15T11:00:58.012420+08:00",
+  "run": "./runs/deepseek_coder_base_inference_20261015",
+  "tmux_session": "deepseek-base-eval-20261015",
+  "checkpoint": "./.cache/huggingface/hub/models--deepseek-ai--deepseek-coder-1.3b-base/snapshots/c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "model": "Original DeepSeek-Coder-1.3B-Base before our CPT",
+  "trained_input_tokens": 0,
+  "benchmarks": {
+    "gsm8k": 1319,
+    "math": 5000
+  },
+  "batch_size": 256,
+  "max_new_tokens": 1024,
+  "progress": "./runs/deepseek_coder_base_inference_20261015/progress.json",
+  "reference_run": "./runs/deepseek_coder_10b_inference_20261015",
+  "comparison_output": "./runs/deepseek_base_vs_10b_20261015",
+  "automatic_scoring_and_verification": true,
+  "automatic_paired_comparison": true,
+  "training_modified": false
+}

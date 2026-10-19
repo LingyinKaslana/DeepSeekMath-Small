@@ -1,0 +1,14 @@
+{
+  "status": "failed",
+  "started_utc": "2026-10-10T03:21:42.942684+00:00",
+  "coordinator_pid": 793503,
+  "production_pid": 621138,
+  "production_files_modified": false,
+  "active_case": null,
+  "branch_pid": null,
+  "cases": {},
+  "report": null,
+  "error": "Independent preflight did not pass",
+  "traceback": "Traceback (most recent call last):\n  File \"./runs/cpt_decay_comparison_20261010/tools/run_comparison.py\", line 79, in <module>\n    main()\n  File \"./runs/cpt_decay_comparison_20261010/tools/run_comparison.py\", line 31, in main\n    raise RuntimeError('Independent preflight did not pass')\nRuntimeError: Independent preflight did not pass\n",
+  "finished_utc": "2026-10-10T03:21:42.945374+00:00"
+}

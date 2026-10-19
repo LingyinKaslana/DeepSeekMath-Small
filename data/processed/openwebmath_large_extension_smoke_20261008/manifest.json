@@ -1,0 +1,134 @@
+{
+  "status": "ready",
+  "purpose": "OpenWebMath-only full-parameter CPT training dataset",
+  "source_repo": "synthetic-extension-smoke",
+  "source_revision": "local-fixture-v1",
+  "source_manifest": "./runs/data_prepare_5b_20261008/extension_fixture/manifest.json",
+  "source_manifest_sha256": "6a7983e2cd8ac68c0bab269c60892e810e9838bd37904bd7694d25564a768c0f",
+  "tokenizer": "Qwen/Qwen2.5-Coder-1.5B",
+  "tokenizer_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "seed": 42,
+  "sampling": "equal train and new-validation token quotas across fixed-seed shuffled source shards; shuffled row groups and rows",
+  "split": "fixed normalized-text SHA256 threshold independent of budgets; all pilot validation text hashes/URLs reserved first",
+  "validation_fraction": 0.001,
+  "validation_hash_threshold": 18446744073709552,
+  "packing": "document text + EOS, concatenated within each split; no cross-document attention mask",
+  "block_length": 2048,
+  "dtype": "uint32",
+  "splits": {
+    "train": {
+      "tokens": 100000,
+      "documents": 114,
+      "full_blocks": 48,
+      "tokens_in_full_blocks": 98304,
+      "remainder_tokens": 1696,
+      "prefix_truncated_documents": 2,
+      "source_shards": 2,
+      "source_token_roundtrip_samples": 6,
+      "all_metadata_records_audited": true,
+      "all_token_ids_range_checked": true,
+      "all_document_token_roundtrip": false
+    },
+    "validation": {
+      "tokens": 262144,
+      "documents": 334,
+      "full_blocks": 128,
+      "tokens_in_full_blocks": 262144,
+      "remainder_tokens": 0,
+      "prefix_truncated_documents": 114,
+      "source_shards": 114,
+      "source_token_roundtrip_samples": 239,
+      "all_metadata_records_audited": true,
+      "all_token_ids_range_checked": true,
+      "all_document_token_roundtrip": true
+    }
+  },
+  "train_validation_text_hash_overlap": 0,
+  "train_validation_url_overlap": 0,
+  "exact_global_selected_text_and_url_deduplication": true,
+  "preserved_pilot_validation_tokens": 262144,
+  "preserved_pilot_validation_documents": 334,
+  "pilot_validation_jsonl_sha256": "dd280d31c277cbb50fef391e9c5fdb65b51822718023a794c99ad884aabc13b0",
+  "pilot_validation_tokens_sha256": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93",
+  "all_used_source_files_sha256_verified": true,
+  "train_metadata_has_original_text": false,
+  "train_metadata_source_resolution": "source_shard + row_group + row_in_group resolves original text in pinned source parquet",
+  "rejected_global_text_or_url_duplicates": 94,
+  "artifacts": {
+    "train_tokens.npy": {
+      "bytes": 400128,
+      "sha256": "5fbdb1a76432b534fd43591d2d18388ebb7b47ff882bf6ce9bc75fe62c08fec4"
+    },
+    "validation_tokens.npy": {
+      "bytes": 1048704,
+      "sha256": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93"
+    },
+    "train.jsonl": {
+      "bytes": 33808,
+      "sha256": "bc109f9ee2e5b5f93dd8595cd019768eaf4b8d4234cf368d892c002be3fa0690"
+    },
+    "validation.jsonl": {
+      "bytes": 2158963,
+      "sha256": "dd280d31c277cbb50fef391e9c5fdb65b51822718023a794c99ad884aabc13b0"
+    },
+    "selected.sqlite": {
+      "bytes": 188416,
+      "sha256": "e0defa307659fbf44c44e7be2408cb9a18ec53041c9ac3b1fcd4def672459dc9"
+    },
+    "settings.json": {
+      "bytes": 841,
+      "sha256": "c784d3d0f24a36814a85ab55e2418124a0569d3f251421eeb9adce24bdbacdb2"
+    }
+  },
+  "shard_sampling": [
+    {
+      "shard": "fixture-1.parquet",
+      "tokens": {
+        "train": 50000,
+        "validation": 0
+      },
+      "documents": {
+        "train": 57,
+        "validation": 0
+      },
+      "candidate_tokens": {
+        "train": 87177,
+        "validation": 0
+      },
+      "candidate_documents": {
+        "train": 98,
+        "validation": 0
+      },
+      "scanned_documents": 200,
+      "source_sha256": "1c2932fe0afc2167eb833b669c2ccf68bd6c131b2517d8ebbb4a817c9c96645b"
+    },
+    {
+      "shard": "fixture-0.parquet",
+      "tokens": {
+        "train": 50000,
+        "validation": 0
+      },
+      "documents": {
+        "train": 57,
+        "validation": 0
+      },
+      "candidate_tokens": {
+        "train": 99621,
+        "validation": 0
+      },
+      "candidate_documents": {
+        "train": 112,
+        "validation": 0
+      },
+      "scanned_documents": 200,
+      "source_sha256": "a7c7c043b76135738fc6d6fe6914c1ccae557c1e5ebcd29fce7fbab3bf8b2ccc"
+    }
+  ],
+  "preparation_signature": "c10d1bd27244f163d8730ef8c085682843672d6769e73325fe7ec90d16313359",
+  "script_sha256": "7a5f062e25ff62ee2b248051f1998046acf56ef3be702a6c946781b9e68df98c",
+  "benchmark_decontamination": "not performed; held-out text loss only, no benchmark generalization claims",
+  "license": "ODC-By-1.0; underlying content licenses retained; see source README",
+  "source_url": "https://huggingface.co/datasets/open-web-math/open-web-math",
+  "started_utc": "2026-10-08T06:39:00.267889+00:00",
+  "completed_utc": "2026-10-08T06:39:15.504671+00:00"
+}

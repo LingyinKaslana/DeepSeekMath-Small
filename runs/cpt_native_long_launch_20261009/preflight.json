@@ -1,0 +1,23 @@
+{
+  "verified_utc": "2026-10-09T03:36:54.492022+00:00",
+  "passed": true,
+  "checks": {
+    "smoke_stopped_at_exact_4update_prefix": true,
+    "configured_exact_10b": true,
+    "native_checkpoint_cpu_reload": true,
+    "native_signature_matches_frozen_source": true,
+    "all_frozen_files_unchanged": true,
+    "native_backend_unchanged": true,
+    "schedule_unchanged": true,
+    "order_metadata_unchanged": true,
+    "initial_native_loss_matches_prior_checkpoint": true,
+    "correct_production_token_prefix": true,
+    "backend_standard_native": true,
+    "no_compiled_optimizer": true,
+    "output_is_new": true
+  },
+  "resume_checkpoint": "./runs/cpt_native_long_20261009/migration_smoke/stopped_checkpoint",
+  "resume_step": 181654,
+  "resume_input_tokens": 5952433152,
+  "experimental_branch_used": false
+}

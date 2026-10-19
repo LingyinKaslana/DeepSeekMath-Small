@@ -1,0 +1,14 @@
+{"shards_done": 10, "tokens": {"train": 877200, "validation": 23000}, "documents": {"train": 489, "validation": 28}}
+{"shards_done": 20, "tokens": {"train": 1754400, "validation": 46000}, "documents": {"train": 967, "validation": 50}}
+Token indices sequence length is longer than the specified maximum sequence length for this model (55139 > 32768). Running this sequence through the model will result in indexing errors
+{"shards_done": 30, "tokens": {"train": 2631600, "validation": 69000}, "documents": {"train": 1404, "validation": 77}}
+{"shards_done": 40, "tokens": {"train": 3508794, "validation": 92000}, "documents": {"train": 1927, "validation": 102}}
+{"shards_done": 50, "tokens": {"train": 4385984, "validation": 115000}, "documents": {"train": 2438, "validation": 131}}
+{"shards_done": 60, "tokens": {"train": 5263174, "validation": 137998}, "documents": {"train": 2936, "validation": 165}}
+{"shards_done": 70, "tokens": {"train": 6140364, "validation": 160988}, "documents": {"train": 3360, "validation": 193}}
+{"shards_done": 80, "tokens": {"train": 7017554, "validation": 183978}, "documents": {"train": 3824, "validation": 225}}
+{"shards_done": 90, "tokens": {"train": 7894744, "validation": 206968}, "documents": {"train": 4319, "validation": 252}}
+{"shards_done": 100, "tokens": {"train": 8771934, "validation": 229958}, "documents": {"train": 4755, "validation": 286}}
+{"shards_done": 110, "tokens": {"train": 9649124, "validation": 252948}, "documents": {"train": 5209, "validation": 319}}
+{"shards_done": 114, "tokens": {"train": 10000000, "validation": 262144}, "documents": {"train": 5367, "validation": 334}}
+{"status": "ready", "splits": {"train": {"tokens": 10000000, "documents": 5367, "full_blocks": 4882, "tokens_in_full_blocks": 9998336, "remainder_tokens": 1664, "prefix_truncated_documents": 114}, "validation": {"tokens": 262144, "documents": 334, "full_blocks": 128, "tokens_in_full_blocks": 262144, "remainder_tokens": 0, "prefix_truncated_documents": 114}}}

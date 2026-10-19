@@ -1,0 +1,8 @@
+torch==2.9.1
+transformers==4.55.4
+pyarrow==25.0.1
+numpy==2.5.3
+huggingface-hub==0.36.2
+accelerate==1.10.1
+liger-kernel==0.8.4
+nvidia-cuda-nvcc==13.0.88

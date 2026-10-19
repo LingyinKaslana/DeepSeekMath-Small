@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-12T14:22:46.775216+00:00",
+  "run": "./runs/deepseek_coder_1p3b_10b_20261012",
+  "training_alive": true,
+  "tmux_session": "deepseek-coder-1p3b-10b-20261012",
+  "resumed_step": 15259,
+  "resumed_input_tokens": 500006912,
+  "first_new_step": 15260,
+  "observed_new_updates": 341,
+  "last_observed_step": 15600,
+  "last_observed_input_tokens": 511180800,
+  "all_observed_updates_finite_and_applied": true,
+  "observed_native_retries": 0,
+  "repeated_32_updates_counters_and_lr_identical": true,
+  "repeated_32_updates_numerical_observation": {
+    "loss": {
+      "bitwise_equal": false,
+      "max_absolute_difference": 0.000695347785949707
+    },
+    "grad_norm": {
+      "bitwise_equal": false,
+      "max_absolute_difference": 0.030422747135162354
+    },
+    "review": {
+      "initial_validation_and_probe_exactly_equal": true,
+      "initial_adam_tensor_sha_exactly_equal": true,
+      "saved_cpu_cuda_rng_sha_equal": true,
+      "training_data_order_and_source_equal": true,
+      "first_update_forward_loss_equal": true,
+      "attention_dropout": 0.0,
+      "torch_deterministic_algorithms_explicitly_enabled": false,
+      "related_deterministic_environment_variables_set": false,
+      "interpretation": "Cross-process GPU backward updates are not guaranteed bitwise deterministic in this unchanged native configuration. The observed small differences do not invalidate restored checkpoint identity; a unique kernel cause has not been established.",
+      "training_paused_for_this_observation": false,
+      "reviewer": "extend_deepseek_resume_design"
+    }
+  },
+  "validation_before": {
+    "step": 15259,
+    "loss": 1.9149794578552246,
+    "perplexity": 6.786799380151928,
+    "supervised_tokens": 3187179,
+    "input_tokens": 3188736,
+    "blocks": 1557,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  "fixed_train_probe_before": {
+    "step": 15259,
+    "cumulative_tokens": 500006912,
+    "loss": 1.8899461030960083,
+    "perplexity": 6.61901192717884,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  "adam_restore_tensor_sha256": "47afa3c3c51a6e6c3a04094e8f659859bfe5c23261ad9227e4071a8a5768ef90",
+  "lr": 3e-06,
+  "warmup_repeated": false,
+  "target_input_tokens": 10000000000,
+  "target_steps": 305176,
+  "data_tokens": 5000000000,
+  "epochs": 2,
+  "source_checkpoint": "./runs/deepseek_coder_1p3b_500m_20261012/final_checkpoint",
+  "source_signature_matches_verified_smoke": true,
+  "order_metadata_matches_verified_smoke": true,
+  "progress_snapshot": {
+    "step": 15600,
+    "loss": 1.7810550928115845,
+    "grad_norm": 0.65333092212677,
+    "epoch": 1,
+    "step_in_epoch": 15600,
+    "lr": 3e-06,
+    "effective_fp32_lr": 3.000000106112566e-06,
+    "lr_input_tokens": 511148032,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 511180800,
+    "seconds": 0.5529151509981602,
+    "native_retry_applied": false,
+    "optimizer_applied": true,
+    "first_full_shape_update": false
+  },
+  "scope": "Restored native training state, preserved data order/counters, identical validation and fixed-probe baseline, and healthy actual updates. GPU backward bitwise determinism is not asserted."
+}

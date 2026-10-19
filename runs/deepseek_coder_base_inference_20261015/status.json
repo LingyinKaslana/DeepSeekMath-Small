@@ -1,0 +1,14 @@
+{
+  "status": "complete_verified",
+  "stage": "finished",
+  "exit_code": 0,
+  "updated_utc": "2026-10-15T03:53:25.898299+00:00",
+  "run": "./runs/deepseek_coder_base_inference_20261015",
+  "model": "Original DeepSeek-Coder-1.3B-Base before our CPT",
+  "benchmarks": {
+    "gsm8k": 1319,
+    "math": 5000
+  },
+  "training_modified": false,
+  "result": "./runs/deepseek_coder_base_inference_20261015/result.json"
+}

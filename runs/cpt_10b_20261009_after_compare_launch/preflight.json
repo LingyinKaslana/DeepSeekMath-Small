@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-10-09T02:50:37.817636+00:00",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "train_cpt.py",
+      "passed": true,
+      "sha256": "e402087acbaebdd177917f85bae8d87453a80b8f452b03f9214a958084b997d6"
+    },
+    {
+      "name": "model_backends.py",
+      "passed": true,
+      "sha256": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa"
+    },
+    {
+      "name": "token_batches.py",
+      "passed": true,
+      "sha256": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4"
+    },
+    {
+      "name": "compiled_adamw.py",
+      "passed": true,
+      "sha256": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77"
+    },
+    {
+      "name": "native_ops.py",
+      "passed": true,
+      "sha256": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57"
+    },
+    {
+      "name": "native_chunked_ce.py",
+      "passed": true,
+      "sha256": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad"
+    },
+    {
+      "name": "cpt.py",
+      "passed": true,
+      "sha256": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2"
+    },
+    {
+      "name": "packed_data.py",
+      "passed": true,
+      "sha256": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b"
+    },
+    {
+      "name": "cpt_orders.py",
+      "passed": true,
+      "sha256": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+    },
+    {
+      "name": "nonfinite_retry.py",
+      "passed": true,
+      "sha256": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b"
+    },
+    {
+      "name": "source_migration.py",
+      "passed": true,
+      "sha256": "0b95360c9051bdb2d0fc0a646cd26477a297434d114b3183742565dd8823c5f0"
+    },
+    {
+      "name": "backend_config",
+      "passed": true,
+      "sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4"
+    }
+  ],
+  "resume_checkpoint": "./runs/cpt_10b_20261009_resumed/stopped_checkpoint",
+  "resume_step": 179939,
+  "resume_input_tokens": 5896236032,
+  "resume_from_comparison_branch": false,
+  "no_source_migration": true,
+  "comparison_must_finish_before_launch": true
+}

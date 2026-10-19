@@ -1,0 +1,55 @@
+{
+  "purpose": "Native deterministic backward sensitivity to one FP32 ULP scalar gradient multiplier; diagnostic only",
+  "loss_before_scale": 1.8080735206604004,
+  "scaled_loss": 1.8080737590789795,
+  "gradient_multiplier": 1.0000001192092896,
+  "global_gradient_relative_l2": 0.009919713251292706,
+  "probes": {
+    "model.embed_tokens.weight": {
+      "relative_l2": 0.013743037357926369,
+      "native_gradient_l2": 0.9379475116729736,
+      "difference_l2": 0.012890247628092766
+    },
+    "model.layers.0.self_attn.q_proj.weight": {
+      "relative_l2": 0.12000968307256699,
+      "native_gradient_l2": 0.034856293350458145,
+      "difference_l2": 0.004183092620223761
+    },
+    "model.layers.0.mlp.down_proj.weight": {
+      "relative_l2": 0.010264932177960873,
+      "native_gradient_l2": 0.12431643903255463,
+      "difference_l2": 0.0012760998215526342
+    },
+    "model.layers.0.input_layernorm.weight": {
+      "relative_l2": 0.04925992339849472,
+      "native_gradient_l2": 0.007922204211354256,
+      "difference_l2": 0.00039024720899760723
+    },
+    "model.layers.27.self_attn.q_proj.weight": {
+      "relative_l2": 0.0006439095013774931,
+      "native_gradient_l2": 0.04348054900765419,
+      "difference_l2": 2.7997541110380553e-05
+    },
+    "model.layers.27.mlp.down_proj.weight": {
+      "relative_l2": 0.00014299630129244179,
+      "native_gradient_l2": 0.300284206867218,
+      "difference_l2": 4.2939529521390796e-05
+    },
+    "model.layers.27.input_layernorm.weight": {
+      "relative_l2": 0.0008157520205713809,
+      "native_gradient_l2": 0.0009296032367274165,
+      "difference_l2": 7.583257115584274e-07
+    },
+    "model.norm.weight": {
+      "relative_l2": 2.2110267309471965e-05,
+      "native_gradient_l2": 0.0020040932577103376,
+      "difference_l2": 4.431103661772795e-08
+    }
+  },
+  "deterministic_algorithms": true,
+  "attention": "flash_only",
+  "shape": [
+    16,
+    2048
+  ]
+}

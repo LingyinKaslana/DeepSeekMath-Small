@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "completed_steps": 306,
+  "optimizer_updates": 306,
+  "trained_tokens": 10000000,
+  "supervised_tokens": 9995117,
+  "signature": {
+    "backend_config_sha256": "c4b7bd23c5e85007e070d734a78c19e6cf48537c2354eff784edefff9d15f2ec",
+    "data_manifest_sha256": "c76fa6d41ae3b4c007c9323bcee58ef5d13e3564a038d767d62278fec89e26a8",
+    "token_file_sha256": {
+      "train_tokens.npy": "08cfabb9519e29052d937a9184a15aaf5270049178270508bb2564e4e0a0d8e2",
+      "validation_tokens.npy": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93"
+    },
+    "peak_lr": 1e-05,
+    "seed": 42,
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "source_sha256": {
+      "train_cpt.py": "c6a55cbdfb6d6fd23c79bbe1d270c4c0ae58143af6d9d56b2e34be313fde3661",
+      "model_backends.py": "b3cb372d1a9f807e2d72d4f7c31e7c103e9490a66ead0cbe3052bd2dabeb2802",
+      "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+      "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+      "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+      "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b"
+    }
+  },
+  "schedule": {
+    "total_steps": 306,
+    "peak_lr": 1e-05,
+    "warmup_steps": 16,
+    "decay_80_step": 245,
+    "decay_90_step": 276,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1
+  },
+  "backend": {
+    "kernels": "native",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "model",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_fullgraph": true,
+    "compile_dynamic": false,
+    "rms_in_place": false,
+    "emulate_precision_casts": true,
+    "master_parameter_dtype": "float32",
+    "forward_autocast_dtype": "bfloat16",
+    "backward_autocast": "off",
+    "instance_local": true,
+    "torch_version": "2.9.1+cu130",
+    "transformers_version": "4.55.4",
+    "liger_version": "0.8.4",
+    "native_validation": "with eager_native(model): model(**batch)",
+    "notes": [
+      "Training-loop code must still verify FP32 gradients and optimizer states.",
+      "RoPE and BF16 CE change intermediate rounding; verify before selecting them.",
+      "Pass an already-resolved attention mask dictionary to compiled forwards."
+    ],
+    "optimizer_compile": {
+      "optimizer": "torch.optim.AdamW",
+      "implementation": "compiled_foreach",
+      "compile": {
+        "fullgraph": false,
+        "dynamic": false,
+        "mode": "default"
+      },
+      "compile_wrapper_setup_seconds": 0.9389699940074934,
+      "first_step_seconds_including_compilation": 8.79856767799356,
+      "compile_seconds": null,
+      "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+      "precision": {
+        "parameters": "float32",
+        "gradients": "float32",
+        "exp_avg": "float32",
+        "exp_avg_sq": "float32",
+        "learning_rate": "CUDA float32 scalar"
+      },
+      "device": "cuda:0",
+      "parameter_tensors": 338,
+      "parameter_elements": 1543714304,
+      "capturable": true,
+      "foreach": true,
+      "fused": false,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "weight_decay": 0.1,
+      "eps": 1e-08
+    }
+  },
+  "saved_utc": "2026-10-08T05:20:49.721496+00:00",
+  "files": {
+    "generation_config.json": 117,
+    "added_tokens.json": 605,
+    "chat_template.jinja": 2507,
+    "training_state.pt": 12350064999,
+    "model-00002-of-00002.safetensors": 1178224960,
+    "tokenizer_config.json": 4688,
+    "model-00001-of-00002.safetensors": 4996670464,
+    "merges.txt": 1671853,
+    "tokenizer.json": 11421896,
+    "special_tokens_map.json": 616,
+    "model.safetensors.index.json": 27729,
+    "config.json": 1322,
+    "vocab.json": 2776833
+  },
+  "verification": "Atomic complete-directory publication; full tensor comparison is a separate diagnostic"
+}

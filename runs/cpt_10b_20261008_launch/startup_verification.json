@@ -1,0 +1,25 @@
+{
+  "checked_utc": "2026-10-08T07:00:31.844174+00:00",
+  "process_pid": 215535,
+  "process_alive": true,
+  "manifest_matches_frozen_source": true,
+  "configured_input_tokens": 10000000000,
+  "configured_steps": 305176,
+  "latest_completed_log_step": 954,
+  "latest_completed_log_input_tokens": 31260672,
+  "recent_regular_update_tokens_per_second": 97452.6554825208,
+  "throughput_scope": "per-update timings, excludes evaluation/save and some logging",
+  "native_validation_before": {
+    "step": 0,
+    "loss": 1.86186945438385,
+    "perplexity": 6.4357568863247065,
+    "supervised_tokens": 2096128,
+    "input_tokens": 2097152,
+    "blocks": 1024,
+    "loss_backend": "native eager",
+    "attention_mask": "cached all-ones tensor"
+  },
+  "pipeline_verification": "runs/cpt_multiepoch_smoke_pipeline_verification.json",
+  "data_manifest": "data/processed/openwebmath_5b_s42/manifest.json",
+  "training_status": "running"
+}

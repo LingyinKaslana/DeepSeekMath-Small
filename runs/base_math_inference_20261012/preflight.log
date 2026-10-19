@@ -1,0 +1,1 @@
+{"event": "prepared", "prompt_statistics": {"gsm8k": {"questions": 1319, "minimum_tokens": 726, "maximum_tokens": 891, "mean_tokens": 764.0310841546626}, "math": {"questions": 5000, "minimum_tokens": 650, "maximum_tokens": 1978, "mean_tokens": 710.9452}}, "prepare_only": true}

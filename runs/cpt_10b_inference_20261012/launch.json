@@ -1,0 +1,30 @@
+{
+  "status": "complete_verified",
+  "started_utc": "2026-10-12T01:49:54.156497+00:00",
+  "updated_utc": "2026-10-12T02:41:32.471964+00:00",
+  "run": "./runs/cpt_10b_inference_20261012",
+  "checkpoint": "./runs/cpt_10b_decay_5b_6b_20261010/final_checkpoint",
+  "trained_input_tokens": 10000000000,
+  "tmux_session": "deepseekmath-inference-10b-20261012",
+  "benchmarks": {
+    "gsm8k": 1319,
+    "math": 5000
+  },
+  "settings": {
+    "batch_size": 512,
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "n": 1
+  },
+  "gpu_smoke": {
+    "generated": 8,
+    "generation_complete": true,
+    "scoring_completed": true,
+    "scope": "first4 each; separate smoke directory, excluded from official full run"
+  },
+  "training_modified": false,
+  "finished_utc": "2026-10-12T02:36:57.076539+00:00",
+  "result": "./runs/cpt_10b_inference_20261012/result.json",
+  "scores": "./runs/cpt_10b_inference_20261012/scores.json",
+  "independent_review": "./runs/cpt_10b_inference_20261012/final_inference_review.json"
+}

@@ -1,0 +1,705 @@
+{
+  "audit": "Final independent read-only full benchmark coverage and arithmetic review; no repeated symbolic scoring or GPU",
+  "status": "passed",
+  "completed_utc": "2026-10-12T02:37:55.302867+00:00",
+  "checks_count": 99,
+  "passed_checks": 99,
+  "failed_checks": [],
+  "checks": [
+    {
+      "check": "Suite status complete",
+      "passed": true,
+      "detail": {
+        "status": "complete",
+        "stage": "finished",
+        "exit_code": 0,
+        "updated_utc": "2026-10-12T02:36:57.076539+00:00",
+        "run": "./runs/cpt_10b_inference_20261012",
+        "model": "final 10B CPT checkpoint",
+        "benchmarks": {
+          "gsm8k": 1319,
+          "math": 5000
+        },
+        "training_modified": false,
+        "generation": {
+          "status": "generation_complete",
+          "finished_utc": "2026-10-12T02:36:45.015768+00:00",
+          "questions": 6319,
+          "benchmarks": {
+            "gsm8k": {
+              "questions": 1319,
+              "finish_reasons": {
+                "stop_string": 1187,
+                "length": 70,
+                "eos": 62
+              },
+              "generated_tokens": 219144,
+              "prediction_sha256": "483cd11a8dddd317fb0e0d5ef67ebb669e6a2578118960fb514797691ad78800"
+            },
+            "math": {
+              "questions": 5000,
+              "finish_reasons": {
+                "stop_string": 3944,
+                "eos": 216,
+                "length": 840
+              },
+              "generated_tokens": 1540879,
+              "prediction_sha256": "a064bb0b9565c8765d81fe8800bc1deaf783b919ef905db7cdc4c113e8023f22"
+            }
+          },
+          "manifest": "./runs/cpt_10b_inference_20261012/manifest.json",
+          "generation_seconds_this_invocation": 2716.6349222360877,
+          "generation_tokens_per_second": 647.8687973838267,
+          "wall_seconds_this_invocation": 2810.8548265799764,
+          "peak_allocated_gib": 98.4581823348999,
+          "scoring": "pending",
+          "training_modified": false
+        },
+        "scores": "./runs/cpt_10b_inference_20261012/scores.json"
+      }
+    },
+    {
+      "check": "Generation complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Scores complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Training untouched status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Status bound to generation result",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Final 10B model checkpoint",
+      "passed": true,
+      "detail": "./runs/cpt_10b_decay_5b_6b_20261010/final_checkpoint"
+    },
+    {
+      "check": "Model checkpoint manifest hash unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Model shard hash model-00001-of-00002.safetensors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Model shard hash model-00002-of-00002.safetensors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source hash test.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source hash test.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source hash cot_gsm_8_shot.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source hash cot_minerva_math_4_shot.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source hash few_shot_prompting.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source hash run_math_inference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Protocol source hash math_benchmark_protocol.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Frozen source hash run_math_inference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Frozen source hash math_benchmark_protocol.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Frozen source hash score_math_benchmarks.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Official vendor commit pinned",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Base generation protocol bound",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k full prediction/scored/prompt counts",
+      "passed": true,
+      "detail": {
+        "prediction": 1319,
+        "scored": 1319,
+        "prompts": 1319,
+        "expected": 1319
+      }
+    },
+    {
+      "check": "gsm8k prediction contiguous unique indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k scored contiguous unique indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k prompts contiguous unique indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k index/id/question strict gold join",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k exact official prompts blank target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k scored predictions same underlying generation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k extracted gold matches original official gold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k metric total",
+      "passed": true,
+      "detail": 1319
+    },
+    {
+      "check": "gsm8k metric correct",
+      "passed": true,
+      "detail": 671
+    },
+    {
+      "check": "gsm8k metric timeouts",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "gsm8k metric errors",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "gsm8k metric empty_predictions",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "gsm8k metric truncated_generations",
+      "passed": true,
+      "detail": 70
+    },
+    {
+      "check": "gsm8k metric missing_generations",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "gsm8k primary fractions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k no missing generation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k empty flags agree extracted answers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k valid generation termination",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k length/truncation flags",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k length boundary max1024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k generated token counts bounded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k generation stop removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k prediction SHA matches metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "gsm8k generation summary agrees outputs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GSM independent full CPU prior official correct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GSM secondary metrics recompute",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GSM secondary agrees independent prior",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math full prediction/scored/prompt counts",
+      "passed": true,
+      "detail": {
+        "prediction": 5000,
+        "scored": 5000,
+        "prompts": 5000,
+        "expected": 5000
+      }
+    },
+    {
+      "check": "math prediction contiguous unique indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math scored contiguous unique indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math prompts contiguous unique indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math index/id/question strict gold join",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math exact official prompts blank target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math scored predictions same underlying generation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math extracted gold matches original official gold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math metric total",
+      "passed": true,
+      "detail": 5000
+    },
+    {
+      "check": "math metric correct",
+      "passed": true,
+      "detail": 1243
+    },
+    {
+      "check": "math metric timeouts",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "math metric errors",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "math metric empty_predictions",
+      "passed": true,
+      "detail": 32
+    },
+    {
+      "check": "math metric truncated_generations",
+      "passed": true,
+      "detail": 840
+    },
+    {
+      "check": "math metric missing_generations",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "check": "math primary fractions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math no missing generation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math empty flags agree extracted answers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math valid generation termination",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math length/truncation flags",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math length boundary max1024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math generated token counts bounded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math generation stop removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math prediction SHA matches metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "math generation summary agrees outputs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type group count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type totals/correct sum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Number Theory metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Prealgebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Geometry metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Precalculus metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Intermediate Algebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Algebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH type Counting & Probability metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level group count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level totals/correct sum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 1 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 3 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 4 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 5 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH level Level 2 metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category group count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category totals/correct sum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category number_theory metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category prealgebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category geometry metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category precalculus metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category intermediate_algebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category algebra metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MATH category counting_and_probability metrics",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "benchmarks": {
+    "gsm8k": {
+      "total": 1319,
+      "correct": 671,
+      "timeouts": 0,
+      "errors": 0,
+      "empty_predictions": 1,
+      "truncated_generations": 70,
+      "missing_generations": 0,
+      "accuracy_percent": 50.87187263078089,
+      "finish_reasons": {
+        "stop_string": 1187,
+        "length": 70,
+        "eos": 62
+      },
+      "prediction_sha256": "483cd11a8dddd317fb0e0d5ef67ebb669e6a2578118960fb514797691ad78800",
+      "empty_completion_count": 0,
+      "empty_official_gold_count": 0,
+      "secondary": {
+        "correct": 690,
+        "accuracy_percent": 52.31235784685367,
+        "wrong_to_correct_indices": [
+          129,
+          246,
+          299,
+          325,
+          331,
+          343,
+          401,
+          451,
+          467,
+          582,
+          613,
+          629,
+          657,
+          715,
+          759,
+          819,
+          1026,
+          1043,
+          1285
+        ],
+        "correct_to_wrong_indices": [],
+        "changed_predictions": 35
+      },
+      "scoring_issues": []
+    },
+    "math": {
+      "total": 5000,
+      "correct": 1243,
+      "timeouts": 0,
+      "errors": 0,
+      "empty_predictions": 32,
+      "truncated_generations": 840,
+      "missing_generations": 0,
+      "accuracy_percent": 24.86,
+      "finish_reasons": {
+        "stop_string": 3944,
+        "eos": 216,
+        "length": 840
+      },
+      "prediction_sha256": "a064bb0b9565c8765d81fe8800bc1deaf783b919ef905db7cdc4c113e8023f22",
+      "empty_completion_count": 0,
+      "empty_official_gold_count": 1,
+      "type_correct_total": {
+        "Algebra": {
+          "correct": 440,
+          "total": 1187
+        },
+        "Counting & Probability": {
+          "correct": 96,
+          "total": 474
+        },
+        "Geometry": {
+          "correct": 99,
+          "total": 479
+        },
+        "Intermediate Algebra": {
+          "correct": 109,
+          "total": 903
+        },
+        "Number Theory": {
+          "correct": 81,
+          "total": 540
+        },
+        "Prealgebra": {
+          "correct": 348,
+          "total": 871
+        },
+        "Precalculus": {
+          "correct": 70,
+          "total": 546
+        }
+      },
+      "level_correct_total": {
+        "Level 1": {
+          "correct": 257,
+          "total": 437
+        },
+        "Level 2": {
+          "correct": 351,
+          "total": 894
+        },
+        "Level 3": {
+          "correct": 325,
+          "total": 1131
+        },
+        "Level 4": {
+          "correct": 203,
+          "total": 1214
+        },
+        "Level 5": {
+          "correct": 107,
+          "total": 1324
+        }
+      },
+      "scoring_issues": []
+    }
+  },
+  "model_shards_verified": {
+    "model-00001-of-00002.safetensors": "092a771695629efcff43aba812b5017fc806a48c0357e3089e4621e535338551",
+    "model-00002-of-00002.safetensors": "2d6e7deb60eb88c76ed00155d4617b742956aba1d8818a3562b1ed179e986f54"
+  },
+  "training_modified": false,
+  "notes": [
+    {
+      "kind": "official_math_gold_parser_empty",
+      "dataset_index": 82,
+      "dataset_id": "test-880.json-0",
+      "official_gold": [
+        ""
+      ],
+      "original_solution_tail": "Since $31 \\equiv 3$ (mod 7), he made his wife disappear 3 days before a Tuesday, or $\\boxed{\\mbox{Saturday}}$.",
+      "reason": "Official strip_string removes \\mbox{Saturday} entirely, leaving empty gold.",
+      "model_prediction": [
+        "7"
+      ],
+      "official_correct": false,
+      "finish_reason": "length",
+      "main_correct_count_changed": false,
+      "interpretation": "This official-parser defect does not give this model an extra correct answer; the unchanged official main count remains 1243/5000."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "updated_utc": "2026-10-09T09:31:58.697553+00:00",
+  "stage": "finished",
+  "exit_code": 0,
+  "status": "completed_observation",
+  "run": "./runs/cpt_native_from0_5h_20261009",
+  "training_status": "stopped",
+  "stop_reason": "max_seconds",
+  "completed_steps": 30860,
+  "trained_tokens": 1011220480,
+  "configured_reference_tokens": 10000000000,
+  "production_budget_complete": false,
+  "old_production_resumed": false,
+  "checkpoint_verification": "./runs/cpt_native_from0_5h_20261009_setup/final_checkpoint_verification.json",
+  "report": "./runs/cpt_native_from0_5h_20261009_setup/report"
+}

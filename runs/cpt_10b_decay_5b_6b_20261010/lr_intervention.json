@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "type": "linear_input_tokens",
+  "start_input_tokens": 5000000000,
+  "end_input_tokens": 6000000000,
+  "start_lr": 3e-06,
+  "end_lr": 3e-07,
+  "after": "hold"
+}

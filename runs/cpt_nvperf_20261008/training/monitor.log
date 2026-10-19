@@ -1,0 +1,16 @@
+NVPERF|INF|04:29:48:087|Initialize || Setting library load paths: /external/nvidia-perfsdk/Samples/NvPerfUtility/tools/build/bin
+NVPERF|INF|04:29:48:293|Initialize || Loaded NvPerf Vulkan backend
+NVPERF|INF|04:29:48:294|SelectDevice || Detected 1 NvPerf device(s)
+NVPERF|INF|04:29:48:294|SelectDevice || [0] NVIDIA GB300 (LOCAL_GPU_HOST), periodic-sampler-supported=yes
+NVPERF|INF|04:29:48:301|main || Loaded 13 metrics [gb110-llm-extended.yaml]
+NVPERF|INF|04:29:48:429|main || CSV mode: UTF-8 comma-separated values -> ./runs/cpt_nvperf_20261008/training/training.csv. Monitoring will stop when CSV GPU duration expires.
+NVPERF|WRN|04:29:51:398|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|WRN|04:29:54:017|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|WRN|04:29:55:546|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|WRN|04:29:58:831|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|WRN|04:29:59:909|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|WRN|04:30:04:320|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|WRN|04:30:05:793|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|WRN|04:30:06:354|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|WRN|04:30:06:582|RunHudSamplingLoop || GPU record buffer overflow; stopping then SetConfig + StartSampling.
+NVPERF|INF|04:30:34:999|main || Monitoring finished

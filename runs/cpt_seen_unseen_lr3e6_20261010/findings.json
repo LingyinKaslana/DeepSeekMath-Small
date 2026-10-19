@@ -1,0 +1,65 @@
+{
+  "status": "complete_verified",
+  "verified_utc": "2026-10-10T02:47:07.796578+00:00",
+  "diagnostic": "./runs/cpt_seen_unseen_lr3e6_20261010",
+  "metrics": {
+    "base": {
+      "validation": 1.86186945438385,
+      "uniform_train": 1.931435465812683,
+      "seen_train": 1.8855924606323242,
+      "unseen_train": 1.881611943244934
+    },
+    "step15000": {
+      "validation": 1.821273684501648,
+      "uniform_train": 1.8938571214675903,
+      "seen_train": 1.8218846321105957,
+      "unseen_train": 1.8416863679885864
+    },
+    "step110000": {
+      "validation": 1.8481593132019043,
+      "uniform_train": 1.8970496654510498,
+      "seen_train": 1.8542757034301758,
+      "unseen_train": 1.8536157608032227
+    }
+  },
+  "loss_changes": {
+    "validation": {
+      "base_to_early": -0.04059576988220215,
+      "early_to_late": 0.026885628700256348,
+      "base_to_late": -0.0137101411819458
+    },
+    "uniform_train": {
+      "base_to_early": -0.03757834434509277,
+      "early_to_late": 0.0031925439834594727,
+      "base_to_late": -0.0343858003616333
+    },
+    "seen_train": {
+      "base_to_early": -0.06370782852172852,
+      "early_to_late": 0.03239107131958008,
+      "base_to_late": -0.03131675720214844
+    },
+    "unseen_train": {
+      "base_to_early": -0.039925575256347656,
+      "early_to_late": 0.01192939281463623,
+      "base_to_late": -0.027996182441711426
+    }
+  },
+  "supported": [
+    "The same256 early-seen blocks have higher average loss at110k than15k; deterioration is not only a consequence of changing evaluated samples",
+    "The same256 blocks still unseen by late checkpoint also have higher average loss at110k than15k",
+    "Both diagnostic training groups and validation remain better than their base-model losses",
+    "The observations show partial loss of early gains, not a unique established mechanism"
+  ],
+  "limits": [
+    "Seen/unseen refers to occurrence of an exact2048-token block in this local CPT only; neighboring document fragments and prior base pretraining overlap are not excluded",
+    "Three observational snapshots and sample averages do not establish a unique cause or whole-corpus seen-loss behavior",
+    "Different groups may have different intrinsic difficulty; compare each same group across snapshots"
+  ],
+  "fixed_seen_loss_delta": 0.03239107131958008,
+  "fixed_unseen_loss_delta": 0.01192939281463623,
+  "production_trainer_pid": 621138,
+  "production_continues": true,
+  "runtime_review": "./runs/cpt_seen_unseen_lr3e6_20261010/runtime_review.json",
+  "report": "./runs/cpt_seen_unseen_lr3e6_20261010/report/seen_unseen_comparison.png",
+  "new_training_updates": 0
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "gpu_used": false,
+  "actual_baseline_plan_accepted": true,
+  "invalid_boundaries_rejected": [
+    "end_step",
+    "lr_multiplier",
+    "unseen_exclusion_through_step",
+    "automatic_production_resume"
+  ],
+  "actual_snapshot_table_status": "complete",
+  "actual_snapshot_table_rows": 12,
+  "report_script_sha256": "b93ec3f16ebc1f23b224cbb3fcf352ad031d16ae02e67cb20b51f719db621bf6"
+}

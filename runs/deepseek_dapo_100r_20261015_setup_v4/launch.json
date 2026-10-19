@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-15T14:29:21.439959+00:00",
+  "started_beijing": "2026-10-15T22:29:21.439959+08:00",
+  "tmux_session": "deepseek-dapo-100r-v4-20261015",
+  "resume_round": 60,
+  "reason": "Recover fully written round60 checkpoint after stale backup assertion; unique backup commit fix; no training rollback"
+}

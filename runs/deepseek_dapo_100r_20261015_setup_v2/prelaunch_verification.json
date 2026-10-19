@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "training_examples": 7217,
+  "validation_examples": 256,
+  "all_gold_answers_parsed": true,
+  "previous_setup": "./runs/deepseek_dapo_100r_20261015_setup",
+  "previous_failure": "Gold extraction ambiguity; failed before model loading or any parameter update",
+  "formal_initialization": "Unchanged SFT best checkpoint; fresh AdamW"
+}

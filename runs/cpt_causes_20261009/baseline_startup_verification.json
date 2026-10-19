@@ -1,0 +1,20 @@
+{
+  "status": "passed_native_baseline_startup",
+  "checked_utc": "2026-10-09T13:40:43.985357+00:00",
+  "initial_step": 20000,
+  "observed_latest_step": 20125,
+  "initial_validation_loss": 1.8604923486709595,
+  "expected_initial_validation_loss": 1.8604923486709595,
+  "initial_adam_state_tensors": 338,
+  "initial_adam_steps": [
+    20000.0
+  ],
+  "initial_adam_combined_sha256": "cda150cb2677247fc2f9ab39a18dc0237d6cad7e80f1bf3d1c35c77748d7336b",
+  "new_updates_finite": true,
+  "same_source_uniform_seen_unseen_initial_losses": true,
+  "original_trajectory_max_observed_loss_abs_diff": 0.013743996620178223,
+  "original_trajectory_max_observed_grad_norm_abs_diff": 2.389160633087158,
+  "diagnostic_only": true,
+  "changed_production_settings": false,
+  "original_trajectory_comparison_limit": "Native GPU trajectories are not bitwise deterministic after checkpoint restore. Initial full validation and all fixed probe losses match; first minibatch loss also matches exactly. Later individual gradient spikes can differ, so final held-out branch effects must exceed observed control trajectory differences."
+}

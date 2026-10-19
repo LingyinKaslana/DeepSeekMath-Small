@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-08T05:47:17.109461+00:00",
+  "backend_config_path": "./runs/cpt_optimization_20261008/compile_mlp_native_silu_chunked.backend.json",
+  "backend_config_sha256": "20e259573b6ca12b5aaf80a1b0f14fcb681def45d7751459b88d83c433f70cc0",
+  "backend_config": {
+    "schema_version": 1,
+    "validated": true,
+    "model": "Qwen/Qwen2.5-Coder-1.5B",
+    "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "micro_batch": 16,
+    "mask_policy": "causal",
+    "fused_optimizer": false,
+    "options": {
+      "kernels": "native",
+      "loss": "native_chunked",
+      "chunk_mem_const": 1,
+      "compile_scope": "mlp",
+      "compile_mode": "default",
+      "compile_shape": [
+        16,
+        2048
+      ],
+      "compile_fullgraph": true,
+      "rms_in_place": false,
+      "emulate_precision_casts": true,
+      "compile_label_alias": "same_as_input",
+      "preserve_silu": true,
+      "ce_chunk_rows": 4096
+    },
+    "validation_evidence": {},
+    "purpose": "Candidate for production-shape numeric screening; not the selected default",
+    "compiled_optimizer": true
+  },
+  "data_path": "./data/processed/openwebmath_10m_s42",
+  "data_manifest_sha256": "c76fa6d41ae3b4c007c9323bcee58ef5d13e3564a038d767d62278fec89e26a8",
+  "token_file_sha256": {
+    "train_tokens.npy": "08cfabb9519e29052d937a9184a15aaf5270049178270508bb2564e4e0a0d8e2",
+    "validation_tokens.npy": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93"
+  },
+  "source_sha256": {
+    "verify_backend_numerics.py": "0493c813a9c60dbe68b63f6ec4670f40c0440e11376978a02a51fbaaa0b05234",
+    "benchmark_backends.py": "032b4d09d289da242f93bff360cce50ede77a67a8854294696d8901665cf650e",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "train_cpt.py": "1326a7cfe3ae5434bdd6c5e6c56f989d3054ec0270a0409854558d7efd48d881",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad"
+  },
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "model_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "shape": [
+    16,
+    2048
+  ],
+  "sampling": "First microbatch from the same seed-42 one-epoch shuffled block order; includes tail in the shuffle",
+  "thresholds": {
+    "absolute_loss_difference": 0.003,
+    "global_gradient_relative_l2": 0.05,
+    "each_existing_probe_relative_l2": 0.05,
+    "native_restore_control_absolute_loss_difference": 1e-06
+  },
+  "precision": "BF16 forward autocast; FP32 master weights/gradients; backward outside autocast",
+  "attention": "FLASH_ATTENTION exclusively for both forward/backward paths; no fallback",
+  "deterministic_algorithms": true,
+  "allow_nondeterministic_flash": false,
+  "cublas_workspace_config": ":4096:8",
+  "determinism_note": "Deterministic checks isolate compiler rounding from production nondeterministic Flash backward; this script does not change training settings",
+  "optimizer_updates": 0,
+  "versions": {
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4",
+    "liger-kernel": "0.8.4",
+    "numpy": "2.5.3"
+  },
+  "device": {
+    "name": "NVIDIA GB300",
+    "capability": [
+      10,
+      3
+    ],
+    "index": 0,
+    "total_memory_bytes": 268230393856,
+    "torch_cuda_runtime": "13.0"
+  },
+  "block_indices": [
+    1554,
+    1102,
+    3351,
+    4577,
+    3921,
+    340,
+    825,
+    2203,
+    1833,
+    3364,
+    2618,
+    177,
+    3828,
+    1827,
+    4712,
+    1819
+  ],
+  "control_block_index": 1043,
+  "input_tokens": 32768,
+  "supervised_tokens": 32752,
+  "parameter_tensors": 338
+}

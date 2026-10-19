@@ -1,0 +1,145 @@
+{"event": "prepared", "prompt_statistics": {"gsm8k": {"questions": 1319, "minimum_tokens": 760, "maximum_tokens": 926, "mean_tokens": 802.1576952236543}, "math": {"questions": 5000, "minimum_tokens": 738, "maximum_tokens": 2163, "mean_tokens": 802.352}}, "prepare_only": false}
+{"event": "model_loaded", "seconds": 2.8453495299909264, "gpu": "NVIDIA GB300", "parameter_dtype": "float32"}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:04:25.877584+00:00", "benchmark": "gsm8k", "dataset_finished": 256, "dataset_total": 1319, "finished": 256, "total": 6319, "batch_seconds": 166.60226539894938, "generated_tokens_this_invocation": 25923, "generation_seconds_this_invocation": 166.60226539894938, "generation_tokens_per_second": 155.59812429875564, "peak_allocated_gib": 137.96890306472778}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:06:24.551485+00:00", "benchmark": "gsm8k", "dataset_finished": 512, "dataset_total": 1319, "finished": 512, "total": 6319, "batch_seconds": 118.00251650309656, "generated_tokens_this_invocation": 55792, "generation_seconds_this_invocation": 284.60478190204594, "generation_tokens_per_second": 196.0332487287661, "peak_allocated_gib": 138.69380283355713}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:08:24.202982+00:00", "benchmark": "gsm8k", "dataset_finished": 768, "dataset_total": 1319, "finished": 768, "total": 6319, "batch_seconds": 118.94882997509558, "generated_tokens_this_invocation": 98752, "generation_seconds_this_invocation": 403.5536118771415, "generation_tokens_per_second": 244.70602441309387, "peak_allocated_gib": 139.41646146774292}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:10:24.444467+00:00", "benchmark": "gsm8k", "dataset_finished": 1024, "dataset_total": 1319, "finished": 1024, "total": 6319, "batch_seconds": 119.52516791899689, "generated_tokens_this_invocation": 150459, "generation_seconds_this_invocation": 523.0787797961384, "generation_tokens_per_second": 287.6411848682506, "peak_allocated_gib": 140.49979305267334}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:12:30.229515+00:00", "benchmark": "gsm8k", "dataset_finished": 1280, "dataset_total": 1319, "finished": 1280, "total": 6319, "batch_seconds": 125.01614888792392, "generated_tokens_this_invocation": 214998, "generation_seconds_this_invocation": 648.0949286840623, "generation_tokens_per_second": 331.7384390532836, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:13:13.661792+00:00", "benchmark": "gsm8k", "dataset_finished": 1319, "dataset_total": 1319, "finished": 1319, "total": 6319, "batch_seconds": 43.25882298999932, "generated_tokens_this_invocation": 222927, "generation_seconds_this_invocation": 691.3537516740616, "generation_tokens_per_second": 322.44997508178534, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:15:07.172099+00:00", "benchmark": "math", "dataset_finished": 256, "dataset_total": 5000, "finished": 1575, "total": 6319, "batch_seconds": 112.83370574901346, "generated_tokens_this_invocation": 290571, "generation_seconds_this_invocation": 804.1874574230751, "generation_tokens_per_second": 361.32247191606405, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:17:01.187852+00:00", "benchmark": "math", "dataset_finished": 512, "dataset_total": 5000, "finished": 1831, "total": 6319, "batch_seconds": 113.23945230594836, "generated_tokens_this_invocation": 401031, "generation_seconds_this_invocation": 917.4269097290235, "generation_tokens_per_second": 437.1258306762016, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:18:55.472247+00:00", "benchmark": "math", "dataset_finished": 768, "dataset_total": 5000, "finished": 2087, "total": 6319, "batch_seconds": 113.52252505207434, "generated_tokens_this_invocation": 497492, "generation_seconds_this_invocation": 1030.9494347810978, "generation_tokens_per_second": 482.55712958961254, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:20:50.046401+00:00", "benchmark": "math", "dataset_finished": 1024, "dataset_total": 5000, "finished": 2343, "total": 6319, "batch_seconds": 113.76555130199995, "generated_tokens_this_invocation": 611127, "generation_seconds_this_invocation": 1144.7149860830978, "generation_tokens_per_second": 533.8682619078045, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:22:44.815228+00:00", "benchmark": "math", "dataset_finished": 1280, "dataset_total": 5000, "finished": 2599, "total": 6319, "batch_seconds": 113.92796942696441, "generated_tokens_this_invocation": 722569, "generation_seconds_this_invocation": 1258.6429555100622, "generation_tokens_per_second": 574.0857618411574, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:24:40.491366+00:00", "benchmark": "math", "dataset_finished": 1536, "dataset_total": 5000, "finished": 2855, "total": 6319, "batch_seconds": 114.86706414294895, "generated_tokens_this_invocation": 841057, "generation_seconds_this_invocation": 1373.510019653011, "generation_tokens_per_second": 612.3413647994178, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:26:36.289808+00:00", "benchmark": "math", "dataset_finished": 1792, "dataset_total": 5000, "finished": 3111, "total": 6319, "batch_seconds": 114.98837432998698, "generated_tokens_this_invocation": 949365, "generation_seconds_this_invocation": 1488.498393982998, "generation_tokens_per_second": 637.800486609624, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:28:32.051834+00:00", "benchmark": "math", "dataset_finished": 2048, "dataset_total": 5000, "finished": 3367, "total": 6319, "batch_seconds": 114.91158592805732, "generated_tokens_this_invocation": 1056623, "generation_seconds_this_invocation": 1603.4099799110554, "generation_tokens_per_second": 658.9849216596576, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:30:28.811871+00:00", "benchmark": "math", "dataset_finished": 2304, "dataset_total": 5000, "finished": 3623, "total": 6319, "batch_seconds": 115.94441322796047, "generated_tokens_this_invocation": 1173633, "generation_seconds_this_invocation": 1719.3543931390159, "generation_tokens_per_second": 682.6009836502087, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:32:25.053316+00:00", "benchmark": "math", "dataset_finished": 2560, "dataset_total": 5000, "finished": 3879, "total": 6319, "batch_seconds": 115.41061919101048, "generated_tokens_this_invocation": 1294839, "generation_seconds_this_invocation": 1834.7650123300264, "generation_tokens_per_second": 705.7247065964283, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:34:21.687713+00:00", "benchmark": "math", "dataset_finished": 2816, "dataset_total": 5000, "finished": 4135, "total": 6319, "batch_seconds": 115.7611502619693, "generated_tokens_this_invocation": 1420740, "generation_seconds_this_invocation": 1950.5261625919957, "generation_tokens_per_second": 728.3880766367272, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:36:18.577202+00:00", "benchmark": "math", "dataset_finished": 3072, "dataset_total": 5000, "finished": 4391, "total": 6319, "batch_seconds": 116.0229469339829, "generated_tokens_this_invocation": 1543345, "generation_seconds_this_invocation": 2066.5491095259786, "generation_tokens_per_second": 746.8223198208968, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:38:17.029645+00:00", "benchmark": "math", "dataset_finished": 3328, "dataset_total": 5000, "finished": 4647, "total": 6319, "batch_seconds": 117.51186526194215, "generated_tokens_this_invocation": 1685230, "generation_seconds_this_invocation": 2184.0609747879207, "generation_tokens_per_second": 771.6039155745829, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:40:16.638232+00:00", "benchmark": "math", "dataset_finished": 3584, "dataset_total": 5000, "finished": 4903, "total": 6319, "batch_seconds": 118.63725717610214, "generated_tokens_this_invocation": 1824861, "generation_seconds_this_invocation": 2302.698231964023, "generation_tokens_per_second": 792.4881231369753, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:42:15.553172+00:00", "benchmark": "math", "dataset_finished": 3840, "dataset_total": 5000, "finished": 5159, "total": 6319, "batch_seconds": 117.9826130270958, "generated_tokens_this_invocation": 1980288, "generation_seconds_this_invocation": 2420.6808449911186, "generation_tokens_per_second": 818.0706697033684, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:44:16.140550+00:00", "benchmark": "math", "dataset_finished": 4096, "dataset_total": 5000, "finished": 5415, "total": 6319, "batch_seconds": 119.5698611130938, "generated_tokens_this_invocation": 2140130, "generation_seconds_this_invocation": 2540.2507061042124, "generation_tokens_per_second": 842.4877099166929, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:46:19.113629+00:00", "benchmark": "math", "dataset_finished": 4352, "dataset_total": 5000, "finished": 5671, "total": 6319, "batch_seconds": 122.02317641605623, "generated_tokens_this_invocation": 2291357, "generation_seconds_this_invocation": 2662.2738825202687, "generation_tokens_per_second": 860.6766625494082, "peak_allocated_gib": 143.53561544418335}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:48:29.170688+00:00", "benchmark": "math", "dataset_finished": 4608, "dataset_total": 5000, "finished": 5927, "total": 6319, "batch_seconds": 129.042386799003, "generated_tokens_this_invocation": 2439355, "generation_seconds_this_invocation": 2791.3162693192717, "generation_tokens_per_second": 873.9084950036472, "peak_allocated_gib": 146.64255380630493}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:50:58.307587+00:00", "benchmark": "math", "dataset_finished": 4864, "dataset_total": 5000, "finished": 6183, "total": 6319, "batch_seconds": 148.14296965801623, "generated_tokens_this_invocation": 2535558, "generation_seconds_this_invocation": 2939.459238977288, "generation_tokens_per_second": 862.5933526746861, "peak_allocated_gib": 156.25416707992554}
+{"event": "generation_progress", "status": "generating", "updated_utc": "2026-10-15T03:53:07.631673+00:00", "benchmark": "math", "dataset_finished": 5000, "dataset_total": 5000, "finished": 6319, "total": 6319, "batch_seconds": 128.65830474998802, "generated_tokens_this_invocation": 2601176, "generation_seconds_this_invocation": 3068.117543727276, "generation_tokens_per_second": 847.8084567907342, "peak_allocated_gib": 156.25416707992554}
+{"status": "generation_complete", "finished_utc": "2026-10-15T03:53:07.695562+00:00", "questions": 6319, "benchmarks": {"gsm8k": {"questions": 1319, "finish_reasons": {"stop_string": 1206, "length": 113}, "generated_tokens": 222927, "prediction_sha256": "faee7a7662c8060517ade5365b77fe0a03337001aea1ce3a3339fc48ce073d6d"}, "math": {"questions": 5000, "finish_reasons": {"stop_string": 3027, "length": 1964, "eos": 9}, "generated_tokens": 2378249, "prediction_sha256": "7782193d0b9f722b330bfe92446d6ada0a9982b027ed00e81469a30b4e49295a"}}, "manifest": "./runs/deepseek_coder_base_inference_20261015/manifest.json", "generation_seconds_this_invocation": 3068.117543727276, "generation_tokens_per_second": 847.8084567907342, "wall_seconds_this_invocation": 3091.9642501780763, "peak_allocated_gib": 156.25416707992554, "scoring": "pending", "training_modified": false}
+{"event": "scoring_progress", "scored": 100, "total": 6319}
+{"event": "scoring_progress", "scored": 200, "total": 6319}
+{"event": "scoring_progress", "scored": 300, "total": 6319}
+{"event": "scoring_progress", "scored": 400, "total": 6319}
+{"event": "scoring_progress", "scored": 500, "total": 6319}
+{"event": "scoring_progress", "scored": 600, "total": 6319}
+{"event": "scoring_progress", "scored": 700, "total": 6319}
+{"event": "scoring_progress", "scored": 800, "total": 6319}
+{"event": "scoring_progress", "scored": 900, "total": 6319}
+{"event": "scoring_progress", "scored": 1000, "total": 6319}
+{"event": "scoring_progress", "scored": 1100, "total": 6319}
+{"event": "scoring_progress", "scored": 1200, "total": 6319}
+{"event": "scoring_progress", "scored": 1300, "total": 6319}
+{"event": "scoring_progress", "scored": 1400, "total": 6319}
+{"event": "scoring_progress", "scored": 1500, "total": 6319}
+{"event": "scoring_progress", "scored": 1600, "total": 6319}
+{"event": "scoring_progress", "scored": 1700, "total": 6319}
+{"event": "scoring_progress", "scored": 1800, "total": 6319}
+{"event": "scoring_progress", "scored": 1900, "total": 6319}
+{"event": "scoring_progress", "scored": 2000, "total": 6319}
+{"event": "scoring_progress", "scored": 2100, "total": 6319}
+{"event": "scoring_progress", "scored": 2200, "total": 6319}
+{"event": "scoring_progress", "scored": 2300, "total": 6319}
+{"event": "scoring_progress", "scored": 2400, "total": 6319}
+{"event": "scoring_progress", "scored": 2500, "total": 6319}
+{"event": "scoring_progress", "scored": 2600, "total": 6319}
+{"event": "scoring_progress", "scored": 2700, "total": 6319}
+{"event": "scoring_progress", "scored": 2800, "total": 6319}
+{"event": "scoring_progress", "scored": 2900, "total": 6319}
+{"event": "scoring_progress", "scored": 3000, "total": 6319}
+{"event": "scoring_progress", "scored": 3100, "total": 6319}
+{"event": "scoring_progress", "scored": 3200, "total": 6319}
+{"event": "scoring_progress", "scored": 3300, "total": 6319}
+{"event": "scoring_progress", "scored": 3400, "total": 6319}
+{"event": "scoring_progress", "scored": 3500, "total": 6319}
+{"event": "scoring_progress", "scored": 3600, "total": 6319}
+{"event": "scoring_progress", "scored": 3700, "total": 6319}
+{"event": "scoring_progress", "scored": 3800, "total": 6319}
+{"event": "scoring_progress", "scored": 3900, "total": 6319}
+{"event": "scoring_progress", "scored": 4000, "total": 6319}
+{"event": "scoring_progress", "scored": 4100, "total": 6319}
+{"event": "scoring_progress", "scored": 4200, "total": 6319}
+{"event": "scoring_progress", "scored": 4300, "total": 6319}
+{"event": "scoring_progress", "scored": 4400, "total": 6319}
+{"event": "scoring_progress", "scored": 4500, "total": 6319}
+{"event": "scoring_progress", "scored": 4600, "total": 6319}
+{"event": "scoring_progress", "scored": 4700, "total": 6319}
+{"event": "scoring_progress", "scored": 4800, "total": 6319}
+{"event": "scoring_progress", "scored": 4900, "total": 6319}
+{"event": "scoring_progress", "scored": 5000, "total": 6319}
+{"event": "scoring_progress", "scored": 5100, "total": 6319}
+{"event": "scoring_progress", "scored": 5200, "total": 6319}
+{"event": "scoring_progress", "scored": 5300, "total": 6319}
+{"event": "scoring_progress", "scored": 5400, "total": 6319}
+{"event": "scoring_progress", "scored": 5500, "total": 6319}
+{"event": "scoring_progress", "scored": 5600, "total": 6319}
+{"event": "scoring_progress", "scored": 5700, "total": 6319}
+{"event": "scoring_progress", "scored": 5800, "total": 6319}
+{"event": "scoring_progress", "scored": 5900, "total": 6319}
+{"event": "scoring_progress", "scored": 6000, "total": 6319}
+{"event": "scoring_progress", "scored": 6100, "total": 6319}
+{"event": "scoring_progress", "scored": 6200, "total": 6319}
+{"event": "scoring_progress", "scored": 6300, "total": 6319}
+{"event": "scoring_progress", "scored": 6319, "total": 6319}
+{"protocol": "Official DeepSeekMath base-model few-shot CoT, greedy single completion", "status": "complete", "run": "./runs/deepseek_coder_base_inference_20261015", "vendor": "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math", "workers": 4, "per_item_timeout_seconds": 15, "denominator": "All official test rows; timeouts/errors/missing count as incorrect", "generated_python_execution": false, "benchmarks": {"gsm8k": {"total": 1319, "correct": 63, "accuracy": 0.047763457164518575, "accuracy_percent": 4.776345716451857, "timeouts": 0, "errors": 0, "empty_predictions": 0, "truncated_generations": 113, "missing_generations": 0, "scored_file": "./runs/deepseek_coder_base_inference_20261015/gsm8k_scored.jsonl", "prediction_sha256": "faee7a7662c8060517ade5365b77fe0a03337001aea1ce3a3339fc48ce073d6d", "secondary_comma_normalized": {"label": "Diagnostic only; not official main score", "correct": 65, "total": 1319, "accuracy": 0.04927975739196361, "changed_predictions": 28}}, "math": {"total": 5000, "correct": 208, "accuracy": 0.0416, "accuracy_percent": 4.16, "timeouts": 0, "errors": 0, "empty_predictions": 203, "truncated_generations": 1964, "missing_generations": 0, "scored_file": "./runs/deepseek_coder_base_inference_20261015/math_scored.jsonl", "prediction_sha256": "7782193d0b9f722b330bfe92446d6ada0a9982b027ed00e81469a30b4e49295a", "by_type": {"Algebra": {"total": 1187, "correct": 51, "accuracy": 0.04296545914069082, "accuracy_percent": 4.296545914069082, "timeouts": 0, "errors": 0, "empty_predictions": 21, "truncated_generations": 416, "missing_generations": 0}, "Counting & Probability": {"total": 474, "correct": 22, "accuracy": 0.046413502109704644, "accuracy_percent": 4.641350210970464, "timeouts": 0, "errors": 0, "empty_predictions": 20, "truncated_generations": 121, "missing_generations": 0}, "Geometry": {"total": 479, "correct": 9, "accuracy": 0.018789144050104383, "accuracy_percent": 1.8789144050104383, "timeouts": 0, "errors": 0, "empty_predictions": 39, "truncated_generations": 137, "missing_generations": 0}, "Intermediate Algebra": {"total": 903, "correct": 39, "accuracy": 0.04318936877076412, "accuracy_percent": 4.318936877076411, "timeouts": 0, "errors": 0, "empty_predictions": 31, "truncated_generations": 517, "missing_generations": 0}, "Number Theory": {"total": 540, "correct": 22, "accuracy": 0.040740740740740744, "accuracy_percent": 4.074074074074074, "timeouts": 0, "errors": 0, "empty_predictions": 23, "truncated_generations": 271, "missing_generations": 0}, "Prealgebra": {"total": 871, "correct": 49, "accuracy": 0.05625717566016074, "accuracy_percent": 5.625717566016074, "timeouts": 0, "errors": 0, "empty_predictions": 27, "truncated_generations": 255, "missing_generations": 0}, "Precalculus": {"total": 546, "correct": 16, "accuracy": 0.029304029304029304, "accuracy_percent": 2.93040293040293, "timeouts": 0, "errors": 0, "empty_predictions": 42, "truncated_generations": 247, "missing_generations": 0}}, "by_level": {"Level 1": {"total": 437, "correct": 41, "accuracy": 0.09382151029748284, "accuracy_percent": 9.382151029748284, "timeouts": 0, "errors": 0, "empty_predictions": 18, "truncated_generations": 121, "missing_generations": 0}, "Level 2": {"total": 894, "correct": 54, "accuracy": 0.06040268456375839, "accuracy_percent": 6.0402684563758395, "timeouts": 0, "errors": 0, "empty_predictions": 42, "truncated_generations": 266, "missing_generations": 0}, "Level 3": {"total": 1131, "correct": 54, "accuracy": 0.04774535809018567, "accuracy_percent": 4.774535809018567, "timeouts": 0, "errors": 0, "empty_predictions": 37, "truncated_generations": 415, "missing_generations": 0}, "Level 4": {"total": 1214, "correct": 32, "accuracy": 0.026359143327841845, "accuracy_percent": 2.6359143327841847, "timeouts": 0, "errors": 0, "empty_predictions": 45, "truncated_generations": 525, "missing_generations": 0}, "Level 5": {"total": 1324, "correct": 27, "accuracy": 0.02039274924471299, "accuracy_percent": 2.0392749244712993, "timeouts": 0, "errors": 0, "empty_predictions": 61, "truncated_generations": 637, "missing_generations": 0}}, "by_category": {"algebra": {"total": 1187, "correct": 51, "accuracy": 0.04296545914069082, "accuracy_percent": 4.296545914069082, "timeouts": 0, "errors": 0, "empty_predictions": 21, "truncated_generations": 416, "missing_generations": 0}, "counting_and_probability": {"total": 474, "correct": 22, "accuracy": 0.046413502109704644, "accuracy_percent": 4.641350210970464, "timeouts": 0, "errors": 0, "empty_predictions": 20, "truncated_generations": 121, "missing_generations": 0}, "geometry": {"total": 479, "correct": 9, "accuracy": 0.018789144050104383, "accuracy_percent": 1.8789144050104383, "timeouts": 0, "errors": 0, "empty_predictions": 39, "truncated_generations": 137, "missing_generations": 0}, "intermediate_algebra": {"total": 903, "correct": 39, "accuracy": 0.04318936877076412, "accuracy_percent": 4.318936877076411, "timeouts": 0, "errors": 0, "empty_predictions": 31, "truncated_generations": 517, "missing_generations": 0}, "number_theory": {"total": 540, "correct": 22, "accuracy": 0.040740740740740744, "accuracy_percent": 4.074074074074074, "timeouts": 0, "errors": 0, "empty_predictions": 23, "truncated_generations": 271, "missing_generations": 0}, "prealgebra": {"total": 871, "correct": 49, "accuracy": 0.05625717566016074, "accuracy_percent": 5.625717566016074, "timeouts": 0, "errors": 0, "empty_predictions": 27, "truncated_generations": 255, "missing_generations": 0}, "precalculus": {"total": 546, "correct": 16, "accuracy": 0.029304029304029304, "accuracy_percent": 2.93040293040293, "timeouts": 0, "errors": 0, "empty_predictions": 42, "truncated_generations": 247, "missing_generations": 0}}}}}
+{"status": "complete_verified", "benchmarks": {"gsm8k": {"correct": 63, "total": 1319, "accuracy_percent": 4.776345716451857, "truncated_generations": 113, "timeouts": 0, "errors": 0}, "math": {"correct": 208, "total": 5000, "accuracy_percent": 4.16, "truncated_generations": 1964, "timeouts": 0, "errors": 0}}}
+{
+  "status": "complete_protocol_matched_comparison",
+  "output": "./runs/deepseek_base_vs_10b_20261015",
+  "benchmarks": {
+    "gsm8k": {
+      "total": 1319,
+      "base": {
+        "total": 1319,
+        "correct": 63,
+        "accuracy": 0.047763457164518575,
+        "accuracy_percent": 4.776345716451857
+      },
+      "cpt": {
+        "total": 1319,
+        "correct": 114,
+        "accuracy": 0.08642911296436695,
+        "accuracy_percent": 8.642911296436695
+      },
+      "delta_percentage_points": 3.8665655799848384,
+      "paired": {
+        "both_correct": 23,
+        "base_only_correct": 40,
+        "cpt_only_correct": 91,
+        "both_wrong": 1165
+      }
+    },
+    "math": {
+      "total": 5000,
+      "base": {
+        "total": 5000,
+        "correct": 208,
+        "accuracy": 0.0416,
+        "accuracy_percent": 4.16
+      },
+      "cpt": {
+        "total": 5000,
+        "correct": 282,
+        "accuracy": 0.0564,
+        "accuracy_percent": 5.64
+      },
+      "delta_percentage_points": 1.4799999999999995,
+      "paired": {
+        "both_correct": 65,
+        "base_only_correct": 143,
+        "cpt_only_correct": 217,
+        "both_wrong": 4575
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-15T06:29:04.603246+00:00",
+  "run": "./runs/deepseek_sft_gsm_math_20261015",
+  "baseline_validation_exactly_matches_smoke": true,
+  "configuration_matches_verified_smoke": true,
+  "source_cpt_weights_only": true,
+  "fresh_sft_optimizer": true,
+  "smoke_not_resumed": true,
+  "normal_random_batches_only": true,
+  "observed_steps": 98,
+  "all_observed_updates_finite_and_applied": true,
+  "initial_validation": {
+    "loss": 0.9544458389282227,
+    "supervised_tokens": 86171,
+    "input_tokens": 126981,
+    "examples": 512,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  "progress_snapshot": {
+    "step": 90,
+    "epoch": 1,
+    "loss": 0.7594151496887207,
+    "grad_norm": 1.082648754119873,
+    "lr": 9.970399618324093e-06,
+    "input_tokens": 11557,
+    "supervised_tokens": 9038,
+    "seconds": 1.0777302860515192,
+    "cumulative_sft_input_tokens": 714468,
+    "stress_longest": false,
+    "optimizer_applied": true,
+    "max_sequence_in_batch": 2174,
+    "peak_allocated_gib": 91.45814561843872
+  },
+  "background_session_alive": true
+}

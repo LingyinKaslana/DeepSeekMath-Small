@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "./runs/deepseek_sft_gsm_math_20261015_setup/source/train_math_sft.py", line 247, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "./runs/deepseek_sft_gsm_math_20261015_setup/source/train_math_sft.py", line 144, in main
+    train=Examples(a.data/'train.jsonl',tokenizer.eos_token_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./runs/deepseek_sft_gsm_math_20261015_setup/source/train_math_sft.py", line 34, in __init__
+    self.rows=[json.loads(line) for line in path.read_text().splitlines()]
+               ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 89 (char 88)

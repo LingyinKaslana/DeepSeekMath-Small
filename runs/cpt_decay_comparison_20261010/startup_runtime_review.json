@@ -1,0 +1,403 @@
+{
+  "status": "passed_startup_runtime",
+  "completed_utc": "2026-10-10T03:26:10.120667+00:00",
+  "reviewer": "decay_audit independent agent",
+  "scope": "One read-only startup review of constant arm; no GPU actions; does not wait for branch completion",
+  "checks_passed": 63,
+  "checks_total": 63,
+  "checks": [
+    {
+      "name": "saved_rng_matches_branch_record",
+      "passed": true,
+      "details": {
+        "cpu_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+        "cuda_sha256": "aefdce03def94ffed42159e55677ec20e91200e1981f25b1f271b6fd99c3c263"
+      }
+    },
+    {
+      "name": "initial_state_counters",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_state_Adam_counter_values",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_state_Adam_moments_FP32",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_optimizer_finite",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_optimizer_counter_audit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_338_parameter_states",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_finite_audit_passed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_finite_audit_counter_values",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_eval_step",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_validation_matches_reference",
+      "passed": true,
+      "details": {
+        "actual": 1.848425030708313,
+        "difference": 0.0
+      }
+    },
+    {
+      "name": "initial_eval_all_finite",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_eval_native",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_val_size",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_probe_sizes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evaluation_completed_RNG_guard_evidence",
+      "passed": true,
+      "details": "Runner checks before/after hashes and checkpoint RNG before writing successful evaluation; reviewed runner SHA pinned"
+    },
+    {
+      "name": "effective16_actualmicro8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compiled_model_shape8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compiled_optimizer_original_flags",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compiled_optimizer_math",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "first_logged_update_start",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "first_actual_FP32_LR",
+      "passed": true,
+      "details": 3.000000106112566e-06
+    },
+    {
+      "name": "first_nominal_constant_LR",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "first_update_finite_applied",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "first_update_target_count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "first_update_prefix_tokens",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "diagnostic_probe_file_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "branch_no_failure_record",
+      "passed": true,
+      "details": "Branch is ongoing; startup check does not claim completion"
+    },
+    {
+      "name": "suite_active_constant",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_train_branch.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_compare_cpt_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_compare_cpt_hyperparameters.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_summarize_comparison.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_run_comparison.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_source_standard_native.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_source_standard_native.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "production_config_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "launch_config_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_same_PID_starttime",
+      "passed": true,
+      "details": {
+        "pid": 621138,
+        "starttime": "21240311"
+      }
+    },
+    {
+      "name": "main_original_command",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "branch_PID_alive",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "reviewed_runner_sha256": "1fa72113f917aee05280d6aa440affce3bcfcb26b39e8364e8d1266b4bd848dd",
+  "main_pid": 621138,
+  "main_proc_starttime": "21240311",
+  "branch_pid": 793636,
+  "observed_progress": {
+    "offset": 1,
+    "step": 115001,
+    "loss": 1.7439690828323364,
+    "grad_norm": 1.6425575017929077,
+    "lr": 3e-06,
+    "effective_fp32_lr": 3.000000106112566e-06,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 3768352768,
+    "seconds": 73.68203901898232,
+    "optimizer_applied": true
+  },
+  "initial_rng": {
+    "cpu_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+    "cuda_sha256": "aefdce03def94ffed42159e55677ec20e91200e1981f25b1f271b6fd99c3c263"
+  },
+  "initial_fixed_evaluation": {
+    "offset": 0,
+    "global_step": 115000,
+    "validation": {
+      "loss": 1.848425030708313,
+      "perplexity": 6.349810885869707,
+      "supervised_tokens": 2096128,
+      "input_tokens": 2097152,
+      "blocks": 1024,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    "uniform_train": {
+      "loss": 1.8963384628295898,
+      "perplexity": 6.6614585550168695,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    "seen_train": {
+      "loss": 1.8540401458740234,
+      "perplexity": 6.38556609614074,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    "unseen_train": {
+      "loss": 1.870314359664917,
+      "perplexity": 6.4903363785954795,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    }
+  },
+  "production_files_modified": false,
+  "blocking_findings": [],
+  "remaining": [
+    "Second arm initial hashes/evaluations must match constant arm",
+    "All6104 updates and full actual LR schedule checked at final report",
+    "Final finite audits/checkpoint and no OOM checked on completion",
+    "Memory bound set in reviewed source; runtime peak allocation will be reported at completion"
+  ]
+}

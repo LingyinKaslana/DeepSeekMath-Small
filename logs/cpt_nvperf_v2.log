@@ -1,0 +1,134 @@
+{"event": "model_loaded", "seconds": 3.8747674039914273, "parameters": 1543714304}
+{
+  "measured_utc": "2026-10-08T04:31:28.946802+00:00",
+  "mode": "disposable full-parameter CPT",
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "sequence_length": 2048,
+  "batch": 16,
+  "precision": "BF16 autocast; FP32 parameters, gradients, AdamW state",
+  "tool_command": [
+    "sudo",
+    "-n",
+    "/external/nvidia-perfsdk/Samples/NvPerfUtility/tools/build/bin/Monitoring",
+    "--device",
+    "0",
+    "--yaml",
+    "./runs/cpt_nvperf_20261008/training_v2/gb110-llm-extended.yaml",
+    "-n",
+    "0.02",
+    "--max-buffer-duration",
+    "60",
+    "--csv",
+    "--output-csv",
+    "./runs/cpt_nvperf_20261008/training_v2/training.csv",
+    "--csv-duration",
+    "24"
+  ],
+  "preset_sha256": "f15061398e84ae2aa93b98caf9322b6a1f3fccac27175820884f10465970ed06",
+  "tool_sha256": "ac49493d785558201f9c6db3d17a7feb84cd2ac1389917a7c9732f91feea2455",
+  "source_sha256": "aba31b34421b37b0b371a3ef84b73c4ed402e6e7908d68f50d5657987f4a6900",
+  "counters_device_wide": true,
+  "csv_start_boundary": 1.0,
+  "csv_end_boundary": 18.8,
+  "steady_samples": 835,
+  "steady_duration_seconds": 16.7,
+  "monitored_tokens_per_second": 59110.159274822945,
+  "unmonitored_before_tokens_per_second": 59414.989654888595,
+  "unmonitored_after_tokens_per_second": 59218.38154631811,
+  "peak_allocated_bytes": 193788576768,
+  "peak_reserved_bytes": 211709591552,
+  "cuda_span_mean_ms": {
+    "input": 1.53982999548316,
+    "forward_loss": 184.94944381713867,
+    "backward": 334.3926057815552,
+    "clip_check": 5.5004399716854095,
+    "optimizer": 25.895648062229156
+  },
+  "cuda_span_caution": "Event-to-event spans include GPU work and host launch/synchronization gaps; not kernel self time",
+  "metrics": {
+    "SM active (%) (%)": {
+      "mean": 93.52427555928143,
+      "p10": 92.1500886,
+      "p50": 94.226683,
+      "p90": 97.32568760000001,
+      "max": 99.874278
+    },
+    "Warp occupancy while SM active (%) (%)": {
+      "mean": 52.769525735329346,
+      "p10": 46.8116962,
+      "p50": 49.751777,
+      "p90": 58.192894,
+      "max": 95.312663
+    },
+    "Tensor pipe active (%) (%)": {
+      "mean": 29.318784365269458,
+      "p10": 5.695545399999999,
+      "p50": 31.570027,
+      "p90": 35.997028,
+      "max": 78.533012
+    },
+    "HBM read (GB/s) (bytes / second)": {
+      "mean": 2074.9941760742513,
+      "p10": 1664.4901274,
+      "p50": 2025.65056,
+      "p90": 2669.4290178,
+      "max": 4212.825997
+    },
+    "HBM write (GB/s) (bytes / second)": {
+      "mean": 1200.8162415556885,
+      "p10": 1041.7389262,
+      "p50": 1132.54583,
+      "p90": 1497.8379624000004,
+      "max": 2435.419814
+    },
+    "L2 hit rate (%) (%)": {
+      "mean": 38.38276762395209,
+      "p10": 33.9810792,
+      "p50": 39.523213,
+      "p90": 44.057257,
+      "max": 62.942184
+    },
+    "SM clock (GHz) (gpc_cycles / second)": {
+      "mean": 1.9511857137724553,
+      "p10": 1.8340174,
+      "p50": 1.970633,
+      "p90": 2.0209488,
+      "max": 2.068718
+    },
+    "L2 clock (GHz) (fbp_cycles / second)": {
+      "mean": 1.9509583676646707,
+      "p10": 1.8668558,
+      "p50": 1.975211,
+      "p90": 1.986526,
+      "max": 2.004769
+    },
+    "PCIe read (GB/s) (bytes / second)": {
+      "mean": 0.002560253892215569,
+      "p10": 0.000896,
+      "p50": 0.002714,
+      "p90": 0.003558,
+      "max": 0.010803
+    },
+    "PCIe write (GB/s) (bytes / second)": {
+      "mean": 0.0022855688622754494,
+      "p10": 0.000666,
+      "p50": 0.002406,
+      "p90": 0.003277,
+      "max": 0.010624
+    },
+    "HBM throughput (%) (%)": {
+      "mean": 45.746226383233534,
+      "p10": 39.8125196,
+      "p50": 43.553941,
+      "p90": 56.024476800000016,
+      "max": 89.779165
+    },
+    "L2 sector traffic (GB/s) (l2_sectors / second)": {
+      "mean": 7810.186701221557,
+      "p10": 6929.9341574,
+      "p50": 7764.46497,
+      "p90": 9170.4883332,
+      "max": 10604.318347
+    }
+  }
+}

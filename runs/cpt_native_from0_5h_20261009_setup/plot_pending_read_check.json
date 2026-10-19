@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-09T04:28:41.330549+00:00",
+  "generated_beijing": "2026-10-09T12:28:41.330549+08:00",
+  "native_run": "./runs/cpt_native_from0_5h_20261009",
+  "original_fast": "./runs/cpt_10b_20261008",
+  "script_sha256": "167c478177033e24d86839c2da5bf42428b33168e1674c67d23e924ac6982f9d",
+  "gpu_execution": false,
+  "observation_budget_seconds": 18000,
+  "configured_training_input_tokens": 10000000000,
+  "interpretation": "Fixed native-eager split loss comparison under matched recipe; not a root-cause determination or a claim of final 10B completion.",
+  "status": "waiting_for_initialization",
+  "missing_artifacts": [
+    "./runs/cpt_native_from0_5h_20261009/manifest.json"
+  ]
+}

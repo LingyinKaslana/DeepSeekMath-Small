@@ -1,0 +1,35 @@
+{
+  "status": "rejected_numerical_check",
+  "options": {
+    "kernels": "rms_swiglu_rope",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "none",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_fullgraph": true
+  },
+  "numerical": {
+    "passed": false,
+    "native_loss": 1.820206642150879,
+    "backend_loss": 1.818359613418579,
+    "absolute_loss_difference": 0.0018470287322998047,
+    "global_gradient_relative_l2": 0.029913784936070442,
+    "probe_gradient_relative_l2": {
+      "model.embed_tokens.weight": 0.017715908586978912,
+      "model.layers.0.self_attn.q_proj.weight": 0.05087709054350853,
+      "model.layers.0.mlp.down_proj.weight": 0.041780781000852585,
+      "model.layers.0.input_layernorm.weight": 0.041642315685749054,
+      "model.layers.27.self_attn.q_proj.weight": 0.03547707200050354,
+      "model.layers.27.mlp.down_proj.weight": 0.017451630905270576,
+      "model.layers.27.input_layernorm.weight": 0.018105853348970413,
+      "model.norm.weight": 0.015976669266819954
+    },
+    "attention": "math",
+    "sequence_length": 512,
+    "compiled_check": "eager backend"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "scope": "Independent read-only CPU/source/data review, plus inspection of parent-run GPU smoke records; reviewer did not run GPU code or modify training files.",
+  "reviewed_utc": "2026-10-12T14:12:42.752962+00:00",
+  "checks_passed": 26,
+  "checks_total": 26,
+  "checks": {
+    "ready_manifest": true,
+    "validation_split_metadata_identical": true,
+    "independent_checksums_match_final_manifest": true,
+    "independent_complete_token_prefix_matches_builder_proof": true,
+    "metadata_prefix_matches_original_manifest": true,
+    "frozen_probe_matches_independent_hash": true,
+    "data_source_and_tokenizer_unchanged": true,
+    "same_all114_source_shards": true,
+    "exact5b_dataset": true,
+    "source_manifest_pin_matches_old_completed_checkpoint": true,
+    "old_pilot_completed_result_retained": true,
+    "reviewed_core_matches_frozen_launch_source": true,
+    "actual_smoke_orders_preserve_all244144_consumed_blocks": true,
+    "actual_smoke_orders_preserve_historical_counters": true,
+    "actual_smoke_order_final_counts_exact10b": true,
+    "actual_smoke_lr_warmup_not_restarted": true,
+    "gpu_smoke_validation_loss_identical_at_resume": true,
+    "gpu_smoke_probe_loss_identical_at_resume": true,
+    "observed_smoke_updates_continue_correct_lr": true,
+    "native_load_native_model_same_ast": true,
+    "native_make_native_optimizer_same_ast": true,
+    "native_set_native_lr_same_ast": true,
+    "native_adapt_native_optimizer_same_ast": true,
+    "native_update_native_same_ast": true,
+    "native_preserve_rng_same_ast": true,
+    "model_restore_update_loop_and_final_save_same_ast": true
+  },
+  "source_sha256": {
+    "train_cpt.py": "7d64680f19ef80655ec3876984848373cfb09bc604dafb535cc2d1108740e036",
+    "cpt_orders.py": "e4af05b4ccd193698c4066448951b3a8f8bcdb188b4529a8418073ab1660e1e0",
+    "source_migration.py": "3045466cf092bddd1c2edcc3bed8ad655422fcf7fae9d4df907073d75b82df47",
+    "standard_native.py": "fbe631466d31653ed9f72561767fefade673d1d7129bfb418b24a0052060ae2d",
+    "training_extension.py": "daf2faa9b62943a6e8b53f13d5f7a07a02fc9640d0525e5cb8c92de94f269c42",
+    "verify_cpt_checkpoint.py": "29d29e0b68f69d6e94962c7c3435cf2792d8782ce0321706cb2a6ca548e79f36"
+  },
+  "policy_sha256": "36fd069b4fdf68db477bba37b51b9c0ddfc3a058759e06e196118778a0bbe7f8",
+  "data_manifest_sha256": "1e8045ecdc70a6c1cc1eb9c88a10ac3f790b1ced7ba4bc56af2bf85c86ea981a",
+  "data_array_evidence": {
+    "status": "passed",
+    "all512m_prefix_tokens_equal": true,
+    "old_logical_prefix_sha256": "df4b5addf8290c5119492d25d776c1cbc5ef0293ef1b277f102ce4bd92a0d992",
+    "new_logical_prefix_sha256": "df4b5addf8290c5119492d25d776c1cbc5ef0293ef1b277f102ce4bd92a0d992",
+    "probe_sha256": "ae19c3159a2850afecf3f2ac0c3db3b8af2066e22c8118c25043c82ba9eb57ff",
+    "probe_blocks": 256,
+    "validation_sha256": {
+      "validation_tokens.npy": "97a52c2cbec0041e2a480f7e5069d16efc30caf324aa60b14410d274daf415bd",
+      "validation.jsonl": "73a037bf652bf1f05ce11470d87a16422c5a83882b94d88c467d62bdcdfaf7c2"
+    },
+    "train_metadata_prefix_sha256": "c0188a950274a99cf8599c5114535f6323e422148295e39d876e136d842719bd",
+    "new_file_sha256": {
+      "train_tokens.npy": "48898b775eae45a4620d692c737e47eaafe14b2bca4bdb1fe76ac897c0c28a04",
+      "train.jsonl": "e4173e9b6b8d248b182b827827474b3de92ec97a453cafc3bfdfc977b7727475",
+      "settings.json": "2df53d524341566b6291f767d75270f2f0d712f639ed478622e22fe8f610dd8a"
+    },
+    "seconds": 15.695275862002745
+  },
+  "old_checkpoint_cpu_evidence": {
+    "adam_states": 219,
+    "adam_step_min": 15259,
+    "adam_step_max": 15259,
+    "moment_dtype": "float32",
+    "cpu_rng_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+    "cuda_rng_sha256": "aefdce03def94ffed42159e55677ec20e91200e1981f25b1f271b6fd99c3c263"
+  },
+  "independent_oracles": {
+    "synthetic_end_to_end_extension": true,
+    "old_checkpoint_bytes_unchanged": true,
+    "frozen_probe_unchanged": true,
+    "source_only_flag_cannot_expand_data": true,
+    "ten_protocol_mutations_rejected": true,
+    "four_order_count_enumeration_cases_including_real_scale": true
+  },
+  "runtime_smoke_resume": {
+    "validation": {
+      "event": "validation_before",
+      "step": 15259,
+      "loss": 1.9149794578552246,
+      "perplexity": 6.786799380151928,
+      "supervised_tokens": 3187179,
+      "input_tokens": 3188736,
+      "blocks": 1557,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    "train_probe": {
+      "event": "train_probe",
+      "step": 15259,
+      "cumulative_tokens": 500006912,
+      "loss": 1.8899461030960083,
+      "perplexity": 6.61901192717884,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    "observed_training_records": 4
+  },
+  "limitations": "Full current GPU parameter/Adam reload validation and production startup are handled by parent. This audit does not claim the 10B training is complete."
+}

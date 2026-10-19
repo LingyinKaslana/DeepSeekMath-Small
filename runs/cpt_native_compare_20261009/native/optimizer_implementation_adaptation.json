@@ -1,0 +1,44 @@
+{
+  "changes": [
+    {
+      "before": {
+        "lr": 9.999999747378752e-06,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.1,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": true,
+        "capturable": true,
+        "differentiable": false,
+        "fused": false,
+        "decoupled_weight_decay": true
+      },
+      "after": {
+        "lr": 9.999999747378752e-06,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.1,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": true,
+        "capturable": false,
+        "differentiable": false,
+        "fused": false,
+        "decoupled_weight_decay": true
+      },
+      "permitted_changes": [
+        "lr tensor -> numerically identical Python float",
+        "capturable=True -> False; foreach=True; fused=False"
+      ]
+    }
+  ],
+  "tensor_values_unchanged": true,
+  "combined_tensor_sha256": "6ea0ed229094e7e7239cbf390d6a86df627d76df05375b74ad8ea5036e13091c"
+}

@@ -1,0 +1,307 @@
+{
+  "status": "passed_startup_runtime",
+  "completed_utc": "2026-10-10T06:53:50.821114+00:00",
+  "reviewer": "decay_audit independent agent",
+  "checks_passed": 51,
+  "checks_total": 51,
+  "checks": [
+    {
+      "name": "handoff_independent_review_passed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_trainer_gone",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_PID_active",
+      "passed": true,
+      "details": {
+        "pid": 843307,
+        "starttime": "26942360"
+      }
+    },
+    {
+      "name": "new_command_uses_new_source",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_resume_actual_stopped_cp",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explicit_source_migration",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explicit_policy_file",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "global_budget_10B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_schedule_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "resumed_global_step",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "resumed_input_count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "saved_Adam_updates140508",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_micro_effective16",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_backend_and_mask",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "signature_nonsource_fields_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_signature_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "exact_one_source_only_migration",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "migration_counter_checkpoint",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "migration_signatures_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_expected",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_audit_saved_prefix",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_audit_file_SHA",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "initial_validation_exact_old_final",
+      "passed": true,
+      "details": {
+        "loss": 1.8521075248718262,
+        "difference": 0.0
+      }
+    },
+    {
+      "name": "initial_train_probe_exact_old_final",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "old_train_probe_history_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_fixed_train_probe",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_order_metadata",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_order_SHA_order_epoch_00000.npy",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_order_SHA_order_epoch_00001.npy",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_standard_native.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_frozen_source_lr_intervention.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_update_logs_start_contiguous",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_inputs_count_from_prefix",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_batch_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_finite_applied_no_retry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_LR3e6_before5B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no_OOM_failure_logs",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no_result_failure",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "checkpoint_Adam_restore_code",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "checkpoint_CPU_CUDA_RNG_restore_code",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "trainer_pid": 843307,
+  "trainer_starttime": "26942360",
+  "resumed_completed_steps": 140508,
+  "resumed_input_tokens": 4604166144,
+  "initial_validation_loss": 1.8521075248718262,
+  "initial_validation_difference": 0.0,
+  "initial_train_probe_loss": 1.8959360122680664,
+  "last_checked_update": {
+    "step": 140800,
+    "loss": 1.8686909675598145,
+    "grad_norm": 1.8901646137237549,
+    "epoch": 1,
+    "step_in_epoch": 140800,
+    "lr": 3e-06,
+    "effective_fp32_lr": 3.000000106112566e-06,
+    "lr_input_tokens": 4613701632,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 4613734400,
+    "seconds": 0.33486067701596767,
+    "native_retry_applied": false,
+    "optimizer_applied": true,
+    "first_full_shape_update": false
+  },
+  "logged_updates_checked": 292,
+  "policy": {
+    "schema_version": 1,
+    "type": "linear_input_tokens",
+    "start_input_tokens": 5000000000,
+    "end_input_tokens": 6000000000,
+    "start_lr": 3e-06,
+    "end_lr": 3e-07,
+    "after": "hold"
+  },
+  "configured_input_tokens": 10000000000,
+  "blocking_findings": [],
+  "scope": "Read-only runtime manifests/history/log consistency, small source/order hashes and unchanged restore code. No GPU operation or live optimizer-state readback. Saved Adam counter/FP32 finite state established by previous independent checkpoint verification; runtime restores its payload through unchanged code."
+}

@@ -1,0 +1,43 @@
+{
+  "status": "complete_verified",
+  "finished_utc": "2026-10-15T11:35:17.644368+00:00",
+  "completed_rounds": 2,
+  "gradient_updates": 8,
+  "accepted_responses": 64,
+  "sampled_responses": 160,
+  "sampled_response_tokens": 17207,
+  "trained_response_tokens": 6767,
+  "trained_input_tokens": 10847,
+  "best_validation_accuracy": 0.5,
+  "best_round": 2,
+  "validation_history": [
+    {
+      "round": 0,
+      "examples": 4,
+      "correct": 1,
+      "accuracy": 0.25,
+      "truncated": 0,
+      "seconds": 4.501962797949091,
+      "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
+    },
+    {
+      "round": 2,
+      "examples": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "truncated": 0,
+      "seconds": 6.472142811049707,
+      "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
+    }
+  ],
+  "training_seconds": 178.10206662793644,
+  "source_sft_unchanged": true,
+  "diagnostic_smoke": true,
+  "verification": {
+    "status": "passed",
+    "weight_tensors": 219,
+    "optimizer_states": 219,
+    "completed_rounds": 2,
+    "gradient_updates": 8
+  }
+}

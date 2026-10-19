@@ -1,0 +1,519 @@
+{
+  "status": "passed_final_runtime",
+  "completed_utc": "2026-10-10T06:24:49.248828+00:00",
+  "reviewer": "decay_audit independent agent",
+  "checks_passed": 87,
+  "checks_total": 87,
+  "checks": [
+    {
+      "name": "constant_status_complete",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_steps_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_input_tokens_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_target_tokens_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_logs_contiguous",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_logged_tokens_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_all_updates_finite_applied",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_all_actual_FP32_LR",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_final_actual_LR",
+      "passed": true,
+      "details": 3.000000106112566e-06
+    },
+    {
+      "name": "constant_final_finite_all338",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_eval_offsets_complete",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_final_same_training_point",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_native_finite_evals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_result_history_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_probe_sha_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_checkpoint_complete",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_no_exception_OOM",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_production_not_modified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_status_complete",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_steps_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_input_tokens_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_target_tokens_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_logs_contiguous",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_logged_tokens_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_all_updates_finite_applied",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_all_actual_FP32_LR",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_final_actual_LR",
+      "passed": true,
+      "details": 3.000000106112566e-07
+    },
+    {
+      "name": "linear_decay_final_finite_all338",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_eval_offsets_complete",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_final_same_training_point",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_native_finite_evals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_result_history_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_probe_sha_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_checkpoint_complete",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_no_exception_OOM",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_production_not_modified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_initial_optimizer_tensor_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_initial_rng",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_checkpoint_files",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_checkpoint_training_state_file",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_checkpoint_manifest_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_selected_block_indices_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_training_token_and_label_values_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_checked_probe_hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_result_probes_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_source_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_data_manifest_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_data_artifact_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_order_metadata",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_actual_training_micro_batch",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_actual_backend_options",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_batch",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_new_input_tokens",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_new_supervised_tokens",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_initial_complete_Adam_audit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_initial_RNG_files",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_initial_validation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_final_sample_size_validation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "summary_loss_match_validation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_initial_seen_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_final_sample_size_seen_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "summary_loss_match_seen_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_initial_unseen_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_final_sample_size_unseen_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "summary_loss_match_unseen_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_initial_uniform_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_final_sample_size_uniform_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "summary_loss_match_uniform_train",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "suite_summary_complete",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "summary_plan_SHA_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "summary_script_SHA_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_all4_improve_from_start",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_all4_better_than_constant",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_same_process_identity",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_backend_config_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_standard_native.py",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "losses": {
+    "validation": {
+      "start": 1.848425030708313,
+      "constant_final": 1.8489423990249634,
+      "decay_final": 1.843106746673584,
+      "constant_change": 0.0005173683166503906,
+      "decay_change": -0.005318284034729004,
+      "decay_vs_constant": -0.0058356523513793945
+    },
+    "seen_train": {
+      "start": 1.8540401458740234,
+      "constant_final": 1.855643630027771,
+      "decay_final": 1.8489348888397217,
+      "constant_change": 0.0016034841537475586,
+      "decay_change": -0.005105257034301758,
+      "decay_vs_constant": -0.006708741188049316
+    },
+    "unseen_train": {
+      "start": 1.870314359664917,
+      "constant_final": 1.871416449546814,
+      "decay_final": 1.865283489227295,
+      "constant_change": 0.0011020898818969727,
+      "decay_change": -0.00503087043762207,
+      "decay_vs_constant": -0.006132960319519043
+    },
+    "uniform_train": {
+      "start": 1.8963384628295898,
+      "constant_final": 1.8960111141204834,
+      "decay_final": 1.889805555343628,
+      "constant_change": -0.0003273487091064453,
+      "decay_change": -0.006532907485961914,
+      "decay_vs_constant": -0.006205558776855469
+    }
+  },
+  "last_training_rows": {
+    "constant": {
+      "offset": 6104,
+      "step": 121104,
+      "loss": 1.8800467252731323,
+      "grad_norm": 1.9374440908432007,
+      "lr": 3e-06,
+      "effective_fp32_lr": 3.000000106112566e-06,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "cumulative_tokens": 3968335872,
+      "seconds": 0.7676905759726651,
+      "optimizer_applied": true
+    },
+    "linear_decay": {
+      "offset": 6104,
+      "step": 121104,
+      "loss": 1.8730287551879883,
+      "grad_norm": 1.787757396697998,
+      "lr": 3.000000000000001e-07,
+      "effective_fp32_lr": 3.000000106112566e-07,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "cumulative_tokens": 3968335872,
+      "seconds": 0.7667314569698647,
+      "optimizer_applied": true
+    }
+  },
+  "main_pid": 621138,
+  "main_proc_starttime": "21240311",
+  "comparison_end_step": 121104,
+  "new_input_tokens_per_arm": 200015872,
+  "production_files_modified": false,
+  "blocking_findings": [],
+  "conclusion": "Linear LR decay improves all four fixed groups versus both the common start and the matched constant-LR endpoint. Constant LR worsens seen/unseen/validation, with a small improvement on the uniform probe.",
+  "limits": [
+    "A single local0.2B-token intervention supports a beneficial local LR-schedule effect, not the unique cause of earlier rebound.",
+    "Both arms share micro8 accumulation; comparison does not claim production micro16 bitwise equivalence.",
+    "Lower LR also reduces AdamW decay magnitude.",
+    "Matched endpoint means same global training step/token count; arms ran sequentially in wall-clock time."
+  ]
+}

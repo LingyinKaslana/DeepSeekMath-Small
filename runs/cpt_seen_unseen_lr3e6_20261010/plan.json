@@ -1,0 +1,78 @@
+{
+  "status": "complete_verified",
+  "created_utc": "2026-10-10T02:19:49.126469+00:00",
+  "purpose": "Determine whether fixed early-seen blocks deteriorate in current lowLR training, separately from blocks unseen by late snapshot",
+  "production_run": "./runs/cpt_10b_lr3e6_20261009",
+  "diagnostic_output": "./runs/cpt_seen_unseen_lr3e6_20261010",
+  "data": "./data/processed/openwebmath_5b_s42",
+  "early_step": 15000,
+  "late_step": 110000,
+  "probe_seed": 20261011,
+  "probe_blocks": 256,
+  "sequence_length": 2048,
+  "effective_training_batch": 16,
+  "cases": [
+    {
+      "label": "base",
+      "model": "Qwen/Qwen2.5-Coder-1.5B",
+      "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+      "step": 0,
+      "trained_tokens": 0,
+      "expected_validation": 1.86186945438385
+    },
+    {
+      "label": "step15000",
+      "model": "./runs/cpt_10b_lr3e6_20261009/checkpoint_step_00015000",
+      "revision": null,
+      "step": 15000,
+      "trained_tokens": 491520000,
+      "expected_validation": 1.821273684501648,
+      "checkpoint_manifest_sha256": "7d19e76f3c0fcba33a781a00b77a8d7c28375b3519044bb65f1632f002ddcd9c"
+    },
+    {
+      "label": "step110000",
+      "model": "./runs/cpt_10b_lr3e6_20261009/checkpoint_step_00110000",
+      "revision": null,
+      "step": 110000,
+      "trained_tokens": 3604480000,
+      "expected_validation": 1.8481593132019043,
+      "checkpoint_manifest_sha256": "ff7755722d75b7fe88eada85f770489ee017eda354099317d32e3f395c27ddfd"
+    }
+  ],
+  "source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+  },
+  "evaluator_sha256": "1e457535ef9a45a3b9f89ba39cc0cbe4d510356179e45dab0a5f069ac657678c",
+  "evaluation": "Unpatched native HF SDPA; FP32 parameters; BF16 autocast; microbatch4; native labels; no gradients or optimizer",
+  "full_validation_reference_guard_atol": 1e-06,
+  "execution": "Three sequential diagnostic processes alongside ongoing production, short GPU contention; production source/config/process untouched",
+  "model_only_no_optimizer_load": true,
+  "limits": [
+    "Seen/unseen refers to occurrence of an exact2048-token block in this local CPT only; neighboring document fragments and prior base pretraining overlap are not excluded",
+    "Three observational snapshots and sample averages do not establish a unique cause or whole-corpus seen-loss behavior",
+    "Different groups may have different intrinsic difficulty; compare each same group across snapshots"
+  ],
+  "diagnostic_tools_sha256": {
+    "tools/build_probes.py": "c4f09acb69a69b4ae2ff1b588217eb6355f9df060f2f79dd03aa3e39973d1abc",
+    "tools/run_evaluations.py": "3a1b0b6d7d0df62eee67b6b277125bae76521cdcdf9252c8756a9c8bb797e5e7",
+    "tools/evaluate_cpt_seen_unseen.py": "1e457535ef9a45a3b9f89ba39cc0cbe4d510356179e45dab0a5f069ac657678c",
+    "run.sh": "1b956c21823972cb2a85d0bbf210249e8230a5b83e762c3ef060f7b00d07c6a0"
+  },
+  "probes_sha256": "e263f671c6efc422d5297460ef4c55a13ec9f26365a9d7afd1bc8152af4f0a20",
+  "launch_requested_utc": "2026-10-10T02:21:32.969707+00:00",
+  "completed_utc": "2026-10-10T02:27:44.325757+00:00",
+  "findings": "./runs/cpt_seen_unseen_lr3e6_20261010/findings.json",
+  "runtime_review": "./runs/cpt_seen_unseen_lr3e6_20261010/runtime_review.json",
+  "plot": "./runs/cpt_seen_unseen_lr3e6_20261010/report/seen_unseen_comparison.png"
+}

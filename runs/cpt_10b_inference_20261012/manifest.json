@@ -1,0 +1,70 @@
+{
+  "started_utc": "2026-10-12T01:49:54.156497+00:00",
+  "protocol": {
+    "checkpoint": "./runs/cpt_10b_decay_5b_6b_20261010/final_checkpoint",
+    "trained_input_tokens": 10000000000,
+    "checkpoint_manifest_sha256": "55cd8041b653a673f450eedb54fb627b510b3a8e9d3f379a764f1441bcb65d62",
+    "model_shards_sha256": {
+      "model-00001-of-00002.safetensors": "092a771695629efcff43aba812b5017fc806a48c0357e3089e4621e535338551",
+      "model-00002-of-00002.safetensors": "2d6e7deb60eb88c76ed00155d4617b742956aba1d8818a3562b1ed179e986f54"
+    },
+    "official_repository_commit": "b8b0f8ce093d80bf8e9a641e44142f06d092c305",
+    "benchmarks": {
+      "gsm8k": 1319,
+      "math": 5000
+    },
+    "prompt_format": {
+      "gsm8k": "Official DeepSeekMath Base 8-shot CoT",
+      "math": "Official DeepSeekMath Base Minerva 4-shot CoT"
+    },
+    "chat_template": false,
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 1024,
+    "n": 1,
+    "batch_size": 512,
+    "stops": {
+      "gsm8k": [
+        "\nQ:"
+      ],
+      "math": [
+        "\nProblem:"
+      ]
+    },
+    "seed": 42,
+    "backend": "Unmodified native Hugging Face generate with SDPA and KV cache",
+    "precision": "FP32 saved parameters retained; BF16 autocast compute, matching CPT precision",
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4",
+    "smoke_limit_per_dataset": null,
+    "prompt_statistics": {
+      "gsm8k": {
+        "questions": 1319,
+        "minimum_tokens": 726,
+        "maximum_tokens": 891,
+        "mean_tokens": 764.0310841546626
+      },
+      "math": {
+        "questions": 5000,
+        "minimum_tokens": 650,
+        "maximum_tokens": 1978,
+        "mean_tokens": 710.9452
+      }
+    },
+    "sources_sha256": {
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/datasets/gsm8k/test.jsonl": "fd32e8e549626b0dcce350eec7bbace9c463ddbcfa1c0303ba5abe9122450839",
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/datasets/math/test.jsonl": "5fc86b7d164f455c6fc51b8777cac60468fac90c5d0a3e1c9b3312a79fe2ee8e",
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/cot_gsm_8_shot.py": "29533d2bdbd38d554348ee2386c8faa00b12d4bb56ae7de826131dc26cd592a0",
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/cot_minerva_math_4_shot.py": "6f3b5abd73d5183add0f7e753cf6ef4fd669faa338bfa3571ece50d4363daac1",
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/few_shot_prompting.py": "039a7b588a2db755a148eadb8d5f78f5815fa8b094ef500209bf05487c86d9d2",
+      "./runs/cpt_10b_inference_20261012/source/run_math_inference.py": "4e2efb4ec1bd3bd66ee2c1270d664a7f55be667d843a7add6574cb905e2b91cd",
+      "./runs/cpt_10b_inference_20261012/source/math_benchmark_protocol.py": "bd3fc2f2eb8649c33c08f34f7d8e1831828334b8eb1032c6000511d519b15608"
+    },
+    "limits": [
+      "This checkpoint has CPT only, with no SFT/RL.",
+      "No GSM8K/MATH decontamination of the CPT corpus was performed.",
+      "HF backend differs from the paper's vLLM backend; outputs can differ with numerical rounding.",
+      "Answers exceeding 1024 new tokens are truncated and remain in the score denominator."
+    ]
+  }
+}

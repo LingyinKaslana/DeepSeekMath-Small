@@ -1,0 +1,261 @@
+{
+  "status": "passed",
+  "device": "NVIDIA GB300",
+  "checks": 14,
+  "data": "data/processed/openwebmath_10m_s42",
+  "source_sha256": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+  "cases": [
+    {
+      "explicit_mask": false,
+      "indices": [
+        0
+      ],
+      "valid_targets": 2047,
+      "input_tokens": 2048,
+      "exact": true
+    },
+    {
+      "explicit_mask": false,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "valid_targets": 32752,
+      "input_tokens": 32768,
+      "exact": true
+    },
+    {
+      "explicit_mask": false,
+      "indices": [
+        4882
+      ],
+      "valid_targets": 1663,
+      "input_tokens": 1664,
+      "exact": true
+    },
+    {
+      "explicit_mask": false,
+      "indices": [
+        4882,
+        0,
+        4882,
+        25
+      ],
+      "valid_targets": 7420,
+      "input_tokens": 7424,
+      "exact": true
+    },
+    {
+      "explicit_mask": false,
+      "indices": [
+        435,
+        3779,
+        3196,
+        2143,
+        2114,
+        4192,
+        419,
+        3405,
+        983,
+        459,
+        2570,
+        4763,
+        3592,
+        3716,
+        3503,
+        3838
+      ],
+      "valid_targets": 32752,
+      "input_tokens": 32768,
+      "exact": true
+    },
+    {
+      "explicit_mask": false,
+      "indices": [
+        3583,
+        3210,
+        2232,
+        2886,
+        2125,
+        3107,
+        2590,
+        1777,
+        1926,
+        3203,
+        4342,
+        4776,
+        2850,
+        853,
+        4205,
+        3097
+      ],
+      "valid_targets": 32752,
+      "input_tokens": 32768,
+      "exact": true
+    },
+    {
+      "explicit_mask": false,
+      "indices": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "valid_targets": 32752,
+      "input_tokens": 32768,
+      "exact": true
+    },
+    {
+      "explicit_mask": true,
+      "indices": [
+        0
+      ],
+      "valid_targets": 2047,
+      "input_tokens": 2048,
+      "exact": true
+    },
+    {
+      "explicit_mask": true,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "valid_targets": 32752,
+      "input_tokens": 32768,
+      "exact": true
+    },
+    {
+      "explicit_mask": true,
+      "indices": [
+        4882
+      ],
+      "valid_targets": 1663,
+      "input_tokens": 1664,
+      "exact": true
+    },
+    {
+      "explicit_mask": true,
+      "indices": [
+        4882,
+        0,
+        4882,
+        25
+      ],
+      "valid_targets": 7420,
+      "input_tokens": 7424,
+      "exact": true
+    },
+    {
+      "explicit_mask": true,
+      "indices": [
+        1400,
+        1291,
+        634,
+        20,
+        2447,
+        4818,
+        1074,
+        2149,
+        4568,
+        3771,
+        19,
+        2444,
+        699,
+        1206,
+        1203,
+        2990
+      ],
+      "valid_targets": 32752,
+      "input_tokens": 32768,
+      "exact": true
+    },
+    {
+      "explicit_mask": true,
+      "indices": [
+        2202,
+        1678,
+        2984,
+        1195,
+        3349,
+        3581,
+        4584,
+        3659,
+        3635,
+        3336,
+        2825,
+        3242,
+        2639,
+        1574,
+        525,
+        2226
+      ],
+      "valid_targets": 32752,
+      "input_tokens": 32768,
+      "exact": true
+    },
+    {
+      "explicit_mask": true,
+      "indices": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "valid_targets": 32752,
+      "input_tokens": 32768,
+      "exact": true
+    }
+  ]
+}

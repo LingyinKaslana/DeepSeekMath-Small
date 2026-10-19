@@ -1,0 +1,91 @@
+{
+  "status": "complete",
+  "trained_tokens": 10000000,
+  "optimizer_updates": 306,
+  "train_seconds_excluding_validation_and_save": 169.58349809197534,
+  "tokens_per_second": 58968.00167771275,
+  "validation_before": {
+    "loss": 1.8800569772720337,
+    "perplexity": 6.553878273658338,
+    "supervised_tokens": 262016,
+    "blocks": 128
+  },
+  "validation_after": {
+    "step": 306,
+    "loss": 1.8423101902008057,
+    "perplexity": 6.311101277208041,
+    "supervised_tokens": 262016,
+    "blocks": 128
+  },
+  "validation_history": [
+    {
+      "step": 153,
+      "loss": 1.8467828035354614,
+      "perplexity": 6.339391611639748,
+      "supervised_tokens": 262016,
+      "blocks": 128
+    },
+    {
+      "step": 306,
+      "loss": 1.8423101902008057,
+      "perplexity": 6.311101277208041,
+      "supervised_tokens": 262016,
+      "blocks": 128
+    }
+  ],
+  "selected_backend": {
+    "name": "native_m16_foreach",
+    "status": "passed",
+    "micro_batch": 16,
+    "effective_batch": 16,
+    "attention_mask": "ones",
+    "fused_optimizer": false,
+    "loss_type": "native",
+    "seconds": 4.404912823010818,
+    "seconds_per_update": 0.5506141028763523,
+    "tokens_per_second": 59511.73395091642,
+    "peak_allocated_bytes": 200875311616,
+    "peak_reserved_bytes": 219051720704,
+    "losses": [
+      1.6990329027175903,
+      1.8931288719177246,
+      2.19480562210083,
+      2.0521745681762695,
+      1.7521839141845703,
+      1.8645485639572144,
+      1.9259107112884521,
+      1.9586666822433472
+    ],
+    "grad_norms": [
+      1.5799533128738403,
+      1.694659948348999,
+      1.9162973165512085,
+      1.9340391159057617,
+      1.9010928869247437,
+      1.8758896589279175,
+      1.8180381059646606,
+      1.7874566316604614
+    ],
+    "telemetry": {
+      "samples": 8,
+      "utilization": 100.0,
+      "memory_mib": 209835.0,
+      "power_w": 1171.97625
+    }
+  },
+  "peak_lr": 1e-05,
+  "warmup_steps": 16,
+  "precision": "BF16 autocast compute; FP32 parameters, gradients and AdamW moments",
+  "peak_allocated_bytes": 193787921920,
+  "peak_reserved_bytes": 211759923200,
+  "gpu_training": {
+    "samples": 312,
+    "utilization": 97.8301282051282,
+    "memory_mib": 202759.66346153847,
+    "power_w": 1182.2173076923077
+  },
+  "checkpoint": "./runs/cpt_pilot_10m_20261008/final_checkpoint",
+  "saved_weight_tensors_verified": 338,
+  "saved_optimizer_states_verified": 338,
+  "full_parameter_training": true
+}

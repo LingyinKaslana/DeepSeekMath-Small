@@ -1,0 +1,3 @@
+benchmark,correct,total,accuracy_percent,truncated_generations,timeouts,errors
+gsm8k,63,1319,4.776345716451857,113,0,0
+math,208,5000,4.16,1964,0,0

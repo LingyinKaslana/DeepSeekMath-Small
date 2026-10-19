@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "./runs/deepseek_dapo_100r_20261015_setup/source/dapo_math.py", line 435, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "./runs/deepseek_dapo_100r_20261015_setup/source/dapo_math.py", line 286, in main
+    train,validation,data_manifest=load_data(a.data)
+                                   ^^^^^^^^^^^^^^^^^
+  File "./runs/deepseek_dapo_100r_20261015_setup/source/dapo_math.py", line 92, in load_data
+    answer=numeric_answer(row['completion']);assert answer is not None
+                                                    ^^^^^^^^^^^^^^^^^^
+AssertionError

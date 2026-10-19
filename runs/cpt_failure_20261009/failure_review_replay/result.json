@@ -1,0 +1,9 @@
+{
+  "status": "no_failure_in_replayed_window",
+  "start_step": 175000,
+  "end_step": 176020,
+  "target_step": 175997,
+  "failure": null,
+  "production_run_resumed": false,
+  "limitation": "Production Flash attention nondeterminism prevents asserting an identical weight trajectory."
+}

@@ -1,0 +1,74 @@
+{
+  "generated_utc": "2026-10-10T02:00:46.648876+00:00",
+  "generated_beijing": "2026-10-10T10:00:46.648876+08:00",
+  "run": "./runs/cpt_10b_lr3e6_20261009",
+  "common_evaluation_step": 108000,
+  "baseline": {
+    "step": 0,
+    "input_tokens": 0,
+    "input_tokens_b": 0.0,
+    "validation_loss": 1.86186945438385,
+    "fixed_train_probe_loss": 1.931435465812683
+  },
+  "latest": {
+    "step": 108000,
+    "input_tokens": 3538944000,
+    "input_tokens_b": 3.538944,
+    "validation_loss": 1.8473873138427734,
+    "fixed_train_probe_loss": 1.8971847295761108
+  },
+  "best_validation": {
+    "step": 13000,
+    "input_tokens": 425984000,
+    "input_tokens_b": 0.425984,
+    "validation_loss": 1.8205416202545166,
+    "fixed_train_probe_loss": 1.893743634223938
+  },
+  "best_fixed_train_probe": {
+    "step": 14000,
+    "input_tokens": 458752000,
+    "input_tokens_b": 0.458752,
+    "validation_loss": 1.8208774328231812,
+    "fixed_train_probe_loss": 1.8931154012680054
+  },
+  "train_probe_seen_blocks": 187,
+  "train_probe_unseen_blocks": 69,
+  "batch_mean_window_updates": 1000,
+  "batch_mean_latest": {
+    "start_step": 107001,
+    "end_step": 108000,
+    "input_tokens_b": 3.538944,
+    "supervised_tokens": 32752000,
+    "updates": 1000,
+    "token_weighted_batch_loss": 1.8894418971538545
+  },
+  "batch_mean_weighting": "supervised-token weighted, non-overlapping complete windows, x at window end",
+  "fixed_evaluation_point_count": 109,
+  "batch_mean_point_count": 108,
+  "observed_training_rows_through_cutoff": 108000,
+  "sources": [
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/manifest.json",
+      "sha256": "1f32c239018554ff0b38b6807b1eae467bf32c4e0a1598773ec00acabcf5af7f"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/validation_before.json",
+      "sha256": "212fce849707cb6f1412cc4e01b897f51f3f56e4647e810b4801b3d15e4e481c"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/validation_history.json",
+      "sha256": "948fbbeb91e76f9c9682de9e90d55900e99aaa43192885f71b9a4213ea2d0a2f"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/train_probe_history.json",
+      "sha256": "88b355d68478a49937de64766314de17edcacbee44a3e8665a1f6913f168f6d1"
+    },
+    {
+      "path": "./runs/cpt_10b_lr3e6_20261009/training.jsonl",
+      "sha256": "fe01f365b9fac04278a3aae091bd441f208b0142802c4105b7d74dc414e80233"
+    }
+  ],
+  "script_sha256": "c68210b0d678f24cb10ab8153dd07ff7f570ab3599886ff8f9ddd29a91904ff0",
+  "fixed_curves_smoothed": false,
+  "training_unchanged": true
+}

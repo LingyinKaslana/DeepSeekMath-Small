@@ -1,0 +1,295 @@
+{
+  "status": "passed_decay_runtime_progress",
+  "checked_utc": "2026-10-10T10:03:02.740424+00:00",
+  "reviewer": "decay_audit independent agent",
+  "checks_passed": 32,
+  "checks_total": 32,
+  "checks": [
+    {
+      "name": "row_steps_contiguous",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "dataset5B_total_budget10B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "saved_policy5B6B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_updates_finite",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_updates_applied",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_updates_no_retry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "native_retry_log_empty",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_rows_LR_formula_and_actual_FP32_match",
+      "passed": true,
+      "details": {
+        "mismatched_steps": []
+      }
+    },
+    {
+      "name": "all_rows_real_order_prefix_counts_match",
+      "passed": true,
+      "details": {
+        "mismatched_steps": [],
+        "special_partial_steps": [
+          {
+            "step": 148538,
+            "pre_tokens": 4867260416,
+            "post_tokens": 4867291648,
+            "input_tokens": 31232,
+            "supervised_tokens": 31216,
+            "lr": 3e-06
+          },
+          {
+            "step": 152588,
+            "pre_tokens": 4999969280,
+            "post_tokens": 5000000000,
+            "input_tokens": 30720,
+            "supervised_tokens": 30705,
+            "lr": 3e-06
+          }
+        ]
+      }
+    },
+    {
+      "name": "5B_boundary_accounting",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "5B_transition_rows_present",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "5B_transition_continuous_nonincreasing",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_actual_LR_monotonic",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_305176step_budget",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no_runtime_failure_record",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no_OOM_exception_log",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_running_process_identity",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual_backend_config_same",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_order_metadata_and_hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_standard_native.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "frozen_runtime_source_lr_intervention.py",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "training_rows_checked": 31172,
+  "first_checked_step": 140509,
+  "last_checked_step": 171680,
+  "last_checked_input_tokens": 5625606656,
+  "last_requested_lr": 1.3109505024e-06,
+  "last_actual_fp32_lr": 1.3109505516695208e-06,
+  "prefix_samples": [
+    {
+      "step": 148538,
+      "pre_update_input_tokens": 4867260416,
+      "post_update_input_tokens": 4867291648,
+      "input_tokens": 31232,
+      "supervised_tokens": 31216,
+      "LR": 3e-06,
+      "actual_FP32_LR": 3.000000106112566e-06
+    },
+    {
+      "step": 152587,
+      "pre_update_input_tokens": 4999936512,
+      "post_update_input_tokens": 4999969280,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "LR": 3e-06,
+      "actual_FP32_LR": 3.000000106112566e-06
+    },
+    {
+      "step": 152588,
+      "pre_update_input_tokens": 4999969280,
+      "post_update_input_tokens": 5000000000,
+      "input_tokens": 30720,
+      "supervised_tokens": 30705,
+      "LR": 3e-06,
+      "actual_FP32_LR": 3.000000106112566e-06
+    },
+    {
+      "step": 152589,
+      "pre_update_input_tokens": 5000000000,
+      "post_update_input_tokens": 5000032768,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "LR": 3e-06,
+      "actual_FP32_LR": 3.000000106112566e-06
+    },
+    {
+      "step": 152590,
+      "pre_update_input_tokens": 5000032768,
+      "post_update_input_tokens": 5000065536,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "LR": 2.9999115264000002e-06,
+      "actual_FP32_LR": 2.999911430379143e-06
+    },
+    {
+      "step": 171676,
+      "pre_update_input_tokens": 5625442816,
+      "post_update_input_tokens": 5625475584,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "LR": 1.3113043968e-06,
+      "actual_FP32_LR": 1.3113043451085105e-06
+    },
+    {
+      "step": 171677,
+      "pre_update_input_tokens": 5625475584,
+      "post_update_input_tokens": 5625508352,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "LR": 1.3112159231999998e-06,
+      "actual_FP32_LR": 1.311215896748763e-06
+    },
+    {
+      "step": 171678,
+      "pre_update_input_tokens": 5625508352,
+      "post_update_input_tokens": 5625541120,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "LR": 1.3111274496e-06,
+      "actual_FP32_LR": 1.3111274483890156e-06
+    },
+    {
+      "step": 171679,
+      "pre_update_input_tokens": 5625541120,
+      "post_update_input_tokens": 5625573888,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "LR": 1.3110389760000002e-06,
+      "actual_FP32_LR": 1.3110390000292682e-06
+    },
+    {
+      "step": 171680,
+      "pre_update_input_tokens": 5625573888,
+      "post_update_input_tokens": 5625606656,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "LR": 1.3109505024e-06,
+      "actual_FP32_LR": 1.3109505516695208e-06
+    }
+  ],
+  "incomplete_trailing_log_line_ignored": false,
+  "trainer_pid": 843307,
+  "trainer_starttime": "26942360",
+  "configured_input_tokens": 10000000000,
+  "blocking_findings": [],
+  "scope": "All logged rows checked against actual saved epoch orders/prefix counts and planned mathematical/FP32 LR; read-only CPU audit, no GPU operation or training changes."
+}

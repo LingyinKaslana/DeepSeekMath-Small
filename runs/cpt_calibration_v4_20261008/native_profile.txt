@@ -1,0 +1,31 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                               aten::mm         8.35%     367.580ms        11.56%     509.151ms     125.530us     133.458ms        26.03%     133.458ms      32.904us          4056  
+                                            aten::copy_         6.54%     288.133ms        12.35%     543.950ms      44.382us     103.318ms        20.15%     103.318ms       8.430us         12256  
+                                              aten::mul         5.75%     253.186ms         9.30%     409.605ms      58.034us      75.396ms        14.70%      75.396ms      10.682us          7058  
+void at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      54.323ms        10.59%      54.323ms      18.024us          3014  
+                        aten::_flash_attention_backward         0.50%      22.051ms         2.13%      93.889ms     419.147us      51.728ms        10.09%      58.101ms     259.379us           224  
+void pytorch_flash::flash_bwd_dq_dk_dv_loop_seqk_par...         0.00%       0.000us         0.00%       0.000us       0.000us      49.050ms         9.57%      49.050ms     280.284us           175  
+                                             aten::add_         2.50%     110.156ms         3.92%     172.635ms      33.250us      31.684ms         6.18%      31.684ms       6.102us          5192  
+               nvjet_tst_128x192_64x7_2x2_2cta_h_bz_NNT         0.00%       0.000us         0.00%       0.000us       0.000us      30.100ms         5.87%      30.100ms      28.585us          1053  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      29.420ms         5.74%      29.420ms      13.864us          2122  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      29.179ms         5.69%      29.179ms       9.639us          3027  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      26.461ms         5.16%      26.461ms       6.578us          4023  
+               nvjet_tst_128x256_64x6_2x2_2cta_h_bz_TNT         0.00%       0.000us         0.00%       0.000us       0.000us      25.332ms         4.94%      25.332ms      71.965us           352  
+               nvjet_tst_256x128_64x5_2x2_2cta_h_bz_NTT         0.00%       0.000us         0.00%       0.000us       0.000us      21.260ms         4.15%      21.260ms      60.398us           352  
+                         aten::_flash_attention_forward         0.22%       9.483ms         0.64%      28.035ms     125.154us      19.603ms         3.82%      19.603ms      87.514us           224  
+void pytorch_flash::flash_fwd_kernel<Flash_fwd_kerne...         0.00%       0.000us         0.00%       0.000us       0.000us      19.603ms         3.82%      19.603ms     113.313us           173  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      19.368ms         3.78%      19.368ms      36.891us           525  
+                                              aten::sum         2.00%      87.914ms         2.85%     125.696ms      61.375us      18.806ms         3.67%      18.806ms       9.183us          2048  
+                    nvjet_tst_176x128_64x5_1x4_h_bz_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      15.854ms         3.09%      15.854ms      45.822us           346  
+void at::native::elementwise_kernel<128, 4, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      15.005ms         2.93%      15.005ms       8.594us          1746  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      12.232ms         2.39%      12.232ms       8.542us          1432  
+                                              aten::add         1.58%      69.730ms         2.58%     113.652ms      84.000us      12.084ms         2.36%      12.084ms       8.931us          1353  
+void at::native::elementwise_kernel<128, 4, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      11.713ms         2.28%      11.713ms      16.927us           692  
+                       aten::_log_softmax_backward_data         0.04%       1.941ms         0.13%       5.856ms     731.950us      11.289ms         2.20%      11.289ms       1.411ms             8  
+void at::native::(anonymous namespace)::cunn_SoftMax...         0.00%       0.000us         0.00%       0.000us       0.000us      11.289ms         2.20%      11.289ms       1.613ms             7  
+               nvjet_tst_128x256_64x6_2x2_2cta_h_bz_NTT         0.00%       0.000us         0.00%       0.000us       0.000us      10.272ms         2.00%      10.272ms      58.366us           176  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.403s
+Self CUDA time total: 512.783ms

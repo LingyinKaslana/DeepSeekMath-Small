@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "status": "rejected_numerical_check",
+  "passed": false,
+  "numerical_passed": false,
+  "finite": true,
+  "native_loss": 1.8080735206604004,
+  "backend_loss": 1.8080735206604004,
+  "absolute_loss_difference": 0.0,
+  "global_gradient_relative_l2": 0.00985186081379652,
+  "probe_gradient_relative_l2": {
+    "model.embed_tokens.weight": 0.011756779626011848,
+    "model.layers.0.self_attn.q_proj.weight": 0.12528373301029205,
+    "model.layers.0.mlp.down_proj.weight": 0.011576223187148571,
+    "model.layers.0.input_layernorm.weight": 0.03936094045639038,
+    "model.layers.27.self_attn.q_proj.weight": 0.0062300171703100204,
+    "model.layers.27.mlp.down_proj.weight": 0.0,
+    "model.layers.27.input_layernorm.weight": 0.014103214256465435,
+    "model.norm.weight": 0.0
+  },
+  "missing_existing_probes": [],
+  "native_restore_control": {
+    "passed": true,
+    "block_index": 1043,
+    "native_loss_before_configuration": 2.4371864795684814,
+    "native_loss_after_configuration": 2.4371864795684814,
+    "absolute_loss_difference": 0.0
+  },
+  "backend_metadata": {
+    "kernels": "native",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "mlp",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_label_alias": "same_as_input",
+    "compile_fullgraph": true,
+    "compile_dynamic": false,
+    "rms_in_place": false,
+    "emulate_precision_casts": true,
+    "master_parameter_dtype": "float32",
+    "forward_autocast_dtype": "bfloat16",
+    "backward_autocast": "off",
+    "instance_local": true,
+    "torch_version": "2.9.1+cu130",
+    "transformers_version": "4.55.4",
+    "liger_version": "0.8.4",
+    "native_validation": "with eager_native(model): model(**batch)",
+    "notes": [
+      "Training-loop code must still verify FP32 gradients and optimizer states.",
+      "RoPE and BF16 CE change intermediate rounding; verify before selecting them.",
+      "Pass an already-resolved attention mask dictionary to compiled forwards."
+    ]
+  },
+  "attention": "flash_only",
+  "shape": [
+    16,
+    2048
+  ],
+  "deterministic_algorithms": true,
+  "allow_nondeterministic_flash": false,
+  "cublas_workspace_config": ":4096:8",
+  "determinism_note": "Deterministic checks isolate compiler rounding from production nondeterministic Flash backward; this script does not change training settings",
+  "block_indices": [
+    1554,
+    1102,
+    3351,
+    4577,
+    3921,
+    340,
+    825,
+    2203,
+    1833,
+    3364,
+    2618,
+    177,
+    3828,
+    1827,
+    4712,
+    1819
+  ],
+  "input_tokens": 32768,
+  "supervised_tokens": 32752,
+  "compared_fp32_gradient_tensors": 338,
+  "native_seconds": 1.4778472570033045,
+  "backend_seconds_including_compile": 3.3150044990034075,
+  "diagnostic_wall_seconds": 12.403538876998937,
+  "peak_allocated_bytes": 181402848768,
+  "peak_reserved_bytes": 191813910528,
+  "thresholds": {
+    "absolute_loss_difference": 0.003,
+    "global_gradient_relative_l2": 0.05,
+    "each_existing_probe_relative_l2": 0.05,
+    "native_restore_control_absolute_loss_difference": 1e-06
+  },
+  "optimizer_updates": 0,
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "model_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "device": {
+    "name": "NVIDIA GB300",
+    "capability": [
+      10,
+      3
+    ],
+    "index": 0,
+    "total_memory_bytes": 268230393856,
+    "torch_cuda_runtime": "13.0"
+  },
+  "backend_config_path": "./runs/cpt_optimization_20261008/compile_mlp_precise_native.backend.json",
+  "backend_config_sha256": "eca2a0bea326b2b1b1e8753444716a4bacce4df4afb5514739e1bb33059e946e",
+  "data_path": "./data/processed/openwebmath_10m_s42",
+  "data_manifest_sha256": "c76fa6d41ae3b4c007c9323bcee58ef5d13e3564a038d767d62278fec89e26a8",
+  "token_file_sha256": {
+    "train_tokens.npy": "08cfabb9519e29052d937a9184a15aaf5270049178270508bb2564e4e0a0d8e2",
+    "validation_tokens.npy": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93"
+  },
+  "source_sha256": {
+    "verify_backend_numerics.py": "84b88f9b851377f6dbe5067a459309eefb188e1ee3c4b6dc4c710734a1e58b0d",
+    "benchmark_backends.py": "61fa27e5d4d5999cb62598906f121c68bc58ecc47f10d188c9899d6517cd11cd",
+    "model_backends.py": "6f776d18898b078d3f8b8db566f0c2da8e1889c18701bed1226af9dc8d6a56b4",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "train_cpt.py": "c6a55cbdfb6d6fd23c79bbe1d270c4c0ae58143af6d9d56b2e34be313fde3661",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77"
+  }
+}

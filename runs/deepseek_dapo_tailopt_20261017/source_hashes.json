@@ -1,0 +1,9 @@
+{
+  "dapo_math.py": "8ecfd7688d72988eb77bf4731cfbb784aa662408caa66203b461dd8ec7982562",
+  "dapo_longrun.py": "350c3c47548a528480cc8060577d03ed0e71bd24eeef2de0865c360b1a1681d4",
+  "compact_decode.py": "e27200a3cab1bd47c66a8b1493b9b1bcd5c02610fb597624fe687b23e7d69fed",
+  "group_length_shadow.py": "2aac6fa3f167c5043b54c14812314f6addbb6902f0f52e75b17146719f744aee",
+  "dapo_tail_sampling.py": "84b62a7e9d09fcb79801e006d870e5c86f1a1d3c3a681d631d0ca4e3d0843517",
+  "test_dapo_tail_sampling.py": "2ca48d235457ea7334c93b28eca85d7d843e350aa82438f0e7a3e03c4eb85e87",
+  "benchmark_dapo_tailopt.py": "d6478ecde87f25a37d6df409d414675e3ec0ec36c6697d9bf77f1a20000e5633"
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "validated": true,
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "sequence_length": 2048,
+  "effective_batch": 16,
+  "micro_batch": 16,
+  "mask_policy": "causal",
+  "fused_optimizer": false,
+  "options": {
+    "kernels": "native",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "model",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_fullgraph": true,
+    "rms_in_place": false,
+    "emulate_precision_casts": true
+  },
+  "validation_evidence": {
+    "benchmark_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam/result.json",
+    "numerical": {
+      "passed": true,
+      "native_loss": 1.820206642150879,
+      "backend_loss": 1.819075345993042,
+      "absolute_loss_difference": 0.001131296157836914,
+      "global_gradient_relative_l2": 0.031219622120261192,
+      "probe_gradient_relative_l2": {
+        "model.embed_tokens.weight": 0.018463272601366043,
+        "model.layers.0.self_attn.q_proj.weight": 0.04818228259682655,
+        "model.layers.0.mlp.down_proj.weight": 0.041955336928367615,
+        "model.layers.0.input_layernorm.weight": 0.04062896594405174,
+        "model.layers.27.self_attn.q_proj.weight": 0.02789139933884144,
+        "model.layers.27.mlp.down_proj.weight": 0.01860824041068554,
+        "model.layers.27.input_layernorm.weight": 0.022028781473636627,
+        "model.norm.weight": 0.014287123456597328
+      },
+      "attention": "math",
+      "sequence_length": 512,
+      "compiled_check": "compiled small-shape math forward/backward",
+      "seconds_including_small_shape_compile": 10.073124540009303
+    },
+    "optimizer_check_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam/optimizer_check.json"
+  },
+  "purpose": "Reusable fixed-batch CPT backend; native validation and eager tail/eval fallback",
+  "compiled_optimizer": true
+}

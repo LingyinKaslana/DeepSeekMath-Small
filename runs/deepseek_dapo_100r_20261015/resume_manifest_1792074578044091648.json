@@ -1,0 +1,52 @@
+{
+  "started_utc": "2026-10-15T14:29:38.044123+00:00",
+  "config": {
+    "algorithm": "DAPO",
+    "rounds": 100,
+    "groups": 32,
+    "samples": 8,
+    "rollout_prompts": 32,
+    "micro_batch": 16,
+    "update_batch": 64,
+    "max_new_tokens": 2048,
+    "soft_start": 1536,
+    "clip_low": 0.2,
+    "clip_high": 0.28,
+    "lr": 1e-06,
+    "warmup_rounds": 10,
+    "seed": 42,
+    "max_candidate_groups_per_round": 512,
+    "validation_size": 256,
+    "validation_every": 10,
+    "save_every": 5,
+    "precision": "FP32 parameters/gradients/Adam; BF16 autocast; native SDPA",
+    "kl_coefficient": 0.0,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "epochs_per_rollout": 1,
+    "dynamic_sampling": "Keep groups with both correct and incorrect responses; resample within bounded attempts",
+    "reward": "Strict first explicit numeric answer marker: correct +1, incorrect -1; soft length penalty 1536..2048",
+    "prompt": "Existing zero-shot Q/A SFT prompt; no few-shot or chat template",
+    "source_checkpoint": "./runs/deepseek_sft_gsm_math_20261015/best_checkpoint",
+    "source_checkpoint_manifest_sha256": "f1b7a79dcf74da7617cdaa8e508538ee9d4a34b1cedf4599ce1f4265a3a9a4a5",
+    "source_weights_sha256": {
+      "model-00001-of-00002.safetensors": "7c386c6bb99abf61cbe703d1c0ba04a06587250807bc065a6159f91d0e4e4971",
+      "model-00002-of-00002.safetensors": "efac0fb004426ab9c10815ce557568765567ac88763f90a89c6e01805e2f5367"
+    },
+    "data_manifest_sha256": "ab79f4f38407238355f4062d89aa0258f184f17cef132f00030c9ebe38b88d4a",
+    "script_sha256": "34823b32cce6da292615a4cb53d5285e5ee1214da8e4aad2f9974e8db8cf3d72"
+  },
+  "training_examples": 7217,
+  "validation_examples": 256,
+  "diagnostic_smoke": false,
+  "optimizer_initialization": "Restore checkpoint AdamW moments and RNG",
+  "resume_checkpoint": "./runs/deepseek_dapo_100r_20261015/latest_checkpoint",
+  "data_sources": [],
+  "paper_differences": [
+    "1.3B SFT initialization; GSM8K only; 8 responses/group; 32 effective groups/round",
+    "2048 generation cap/512 soft buffer; native single-device HF; FP32 master parameters",
+    "Warmup 10 rounds; 64-response optimizer minibatches; +/-1 numeric correctness reward",
+    "GSM8K was already used in SFT; not unseen-task generalization; CPT decontamination incomplete"
+  ]
+}

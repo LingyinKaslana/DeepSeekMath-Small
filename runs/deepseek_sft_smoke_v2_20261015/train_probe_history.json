@@ -1,0 +1,18 @@
+[
+  {
+    "step": 0,
+    "loss": 0.9351039528846741,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 16,
+    "loss": 0.831298828125,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  }
+]

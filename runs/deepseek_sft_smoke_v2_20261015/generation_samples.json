@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "gsm8k",
+    "source_id": "main/train-00000-of-00001.parquet:4",
+    "prompt_sha256": "ba2a63a3123a16f866261249316996908bb2ab26faebedec67585f87b8ecee02",
+    "prompt_characters": 109,
+    "completion_sha256": "83f2011cee5b4437c97b10692f880fc3f19dc889d1f46180f6bc9679fcf2a7db",
+    "completion_characters": 264,
+    "reference": " He writes each friend 3*2=6 pages a week\nSo he writes 6*2=12 pages every week\nThat means he writes 12*52=624 pages a year\nThe answer is 624."
+  },
+  {
+    "dataset": "math",
+    "source_id": "algebra/train-00000-of-00001.parquet:20",
+    "prompt_sha256": "0fb216d8a01429ecd39e9d3500fd1a014d476cd7c94eff65e47b0d41f15cc983",
+    "prompt_characters": 156,
+    "completion_sha256": "7a0d041d878fe067ca9ffdef38e292e082277f8bb2e6d23fb18fb7b952a11220",
+    "completion_characters": 600,
+    "reference": "\nThe $y$-axis is where the $x$-coordinate is $0$.  Using the given points, as the $x$-coordinate decreases by $2$, the $y$-coordinate decreases by $4$.  So as the $x$-coordinate decreases by $1$ from $1$ to $0$, the $y$-coordinate will decrease by $2$ from $7$ to $5$.  The point is $\\boxed{(0,5)}$."
+  }
+]

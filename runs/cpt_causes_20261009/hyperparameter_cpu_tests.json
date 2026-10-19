@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "tests_run": 3,
+  "gpu_execution": false,
+  "failures": 0,
+  "errors": 0,
+  "purpose": "Verify LR-only scaling, WD group-only mutation with exact unchanged Adam values, and disjoint seen/unseen probes excluding all intervention updates"
+}

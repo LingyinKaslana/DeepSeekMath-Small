@@ -1,0 +1,2 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 37.11it/s]
+{"status": "passed", "output": "./runs/cpt_10b_lr3e6_20261009_launch/final_checkpoint_verification.json", "seconds": 19.959984941000585, "error": null}

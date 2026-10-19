@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-10-09T03:29:57.687831+00:00",
+  "status": "paused_for_user_requested_native_from0_experiment",
+  "tmux_session": "deepseekmath-cpt10b-native",
+  "production_output": "./runs/cpt_10b_20261009_native",
+  "original_paused_checkpoint": "./runs/cpt_10b_20261009_after_native_compare/stopped_checkpoint",
+  "resume_after_smoke": "./runs/cpt_native_long_20261009/migration_smoke/stopped_checkpoint",
+  "source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+  },
+  "verification_tools_sha256": {
+    "verify_cpt_checkpoint.py": "7047edb6dc77ad174018c59a5668f56c3bb0170345708a6303530918c65555e0",
+    "verify_cpt_pipeline.py": "03d63d44e99fe0f5ae5ba0d458f4b1c1e0409db0f666291f2d0d1771c835e052",
+    "test_cpt_native_migration.py": "97a5e762456afce378c69d755c2c53e79bafab5a83917579d4c714f354b45f1b"
+  },
+  "backend_config_sha256": "f727e399f12bfc95d7a60a5e1b95606f8340fbb59223a0be0240491fa5cbbee1",
+  "paused_completed_steps": 181650,
+  "paused_input_tokens": 5952302080,
+  "migration_smoke_updates": 4,
+  "data_order_lr_math_and_total_tokens_unchanged": true,
+  "native_first_observation_window_updates": 10000,
+  "native_observation_target_step": 191650,
+  "nearest_periodic_evaluation_after_target_step": 192000,
+  "evaluations_every_steps": 1000,
+  "train_probe_blocks": 256,
+  "smoke_tokens_are_part_of_production_prefix": true,
+  "auto_switch_back_to_fast": false,
+  "started_utc": "2026-10-09T03:36:54.589461+00:00",
+  "pid": 530107,
+  "startup_verified_utc": "2026-10-09T03:42:36.245660+00:00",
+  "startup_verification": "./runs/cpt_native_long_launch_20261009/startup_verification.json",
+  "preserved_checkpoint": {
+    "status": "stopped",
+    "stop_reason": "SIGTERM",
+    "completed_steps": 186317,
+    "optimizer_updates": 186317,
+    "trained_tokens": 6105230336,
+    "supervised_tokens": 6102249265,
+    "checkpoint": "./runs/cpt_10b_20261009_native/stopped_checkpoint"
+  },
+  "auto_resume": false
+}

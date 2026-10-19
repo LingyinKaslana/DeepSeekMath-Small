@@ -1,0 +1,11 @@
+test_actual_backend_changes_are_narrow_and_metadata_classified (__main__.NativeMigrationTests.test_actual_backend_changes_are_narrow_and_metadata_classified) ... ok
+test_actual_probe_matches_prior_ab_hash_and_rng_isolation (__main__.NativeMigrationTests.test_actual_probe_matches_prior_ab_hash_and_rng_isolation) ... ok
+test_native_flag_never_changes_math_data_or_other_kernels (__main__.NativeMigrationTests.test_native_flag_never_changes_math_data_or_other_kernels) ... ok
+test_native_update_ordinary_step_and_failed_gradient_zero_updates (__main__.NativeMigrationTests.test_native_update_ordinary_step_and_failed_gradient_zero_updates) ... ok
+test_optimizer_adaptation_preserves_values_and_cpu_verifier_precision (__main__.NativeMigrationTests.test_optimizer_adaptation_preserves_values_and_cpu_verifier_precision) ... ok
+test_real_checkpoint_native_migration_lineage_and_snapshot_hashes (__main__.NativeMigrationTests.test_real_checkpoint_native_migration_lineage_and_snapshot_hashes) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.404s
+
+OK

@@ -1,0 +1,8 @@
+{
+  "model": "unpatched HF AutoModelForCausalLM",
+  "compile": false,
+  "loss": "native HF causal language modeling loss",
+  "optimizer": "standard torch.optim.AdamW foreach",
+  "mask": "standard 2D all-ones tensor",
+  "labels": "independent clone, standard stacked batches"
+}

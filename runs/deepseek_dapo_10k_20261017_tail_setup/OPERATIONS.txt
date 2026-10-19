@@ -1,0 +1,49 @@
+History-aware DAPO sampling experiment, authorized 2026-10-17.
+
+Original run remains runs/deepseek_dapo_10k_20261016. Frozen original setup remains
+runs/deepseek_dapo_10k_20261016_setup. Original checkpoints and logs are preserved.
+
+1. Isolated small-concurrency benchmark:
+ runs/deepseek_dapo_tailopt_20261017/isolated_benchmark.py pauses original PID1936427
+ with SIGSTOP, keeping weights/Adam/RNG/KV/live rollout exactly in memory. A distinct
+ GPU process compares fixed checkpoint1900 using 64 active responses,2 trials/mode.
+ A try/finally resumes the original process, including on timeout or OOM.
+ Results: benchmark.json, main_pause.json, benchmark.log in that experiment folder.
+ The original process remains paused while these tests run; this is intentional.
+
+2. Safe production transition:
+ transition.py waits for successful small benchmark+restored original process, then
+ waits for a fully saved checkpoint >=2000 whose weights archive also exists.
+ It pauses the original only if its last completed update matches that checkpoint.
+ A hardlinked full resume copy is retained in this setup/resume_checkpoint.
+ All previous JSONL logs are hardlinked here as before_transition_*.jsonl, then
+ copied back with only committed records. Counter consistency is asserted.
+ The original GPU process is then terminated and original status records that the
+ pipeline was superseded intentionally. It does not proceed to obsolete eval.
+ If the original process fails on its own before the boundary, recovery from its
+ last full checkpoint is explicit in boundary.json, including completed-round
+ rollback and preserved abandoned branch records. No such rollback is requested.
+
+3. Production probe and continuation:
+ run.sh compares uniform with the small-benchmark winner at256 active responses
+ on the acquired checkpoint, then does4 real optimizer updates with original
+ minibatch64/micro16. These smoke updates are discarded. A64-question heldout probe
+ catches execution regressions but does not prove equivalent final capability.
+ Require >=15% effective groups/sec improvement; cancelled response fraction <=5%.
+ Tail guard also needs10% gain over plain rank routing in the small experiment.
+ Any failed production probe falls back to the original uniform sampling policy.
+ Formal training reloads the acquired original full checkpoint (including Adam and
+ RNG), keeps32 effective groups x8 responses, LR1e-6 and2048 cap, and continues to
+ cumulative10000 rounds, save/validate every100. Full official eval runs at end.
+
+Sampling is intentionally biased.75% of each batch is difficulty-directed among a
+ shuffled pool,25% is uniform exploration. Skipped proposals do not perform model
+ inference. The data cursor counts proposals; candidate_groups counts generated
+ groups. Router probabilities/history and counters are saved in full checkpoints.
+ Optional tail cancellation forces incomplete answers incorrect. Raw correctness,
+ artificial mixed groups and forced response counts are logged explicitly.
+
+Future graceful stop: touch this setup/save_and_stop. The new trainer finishes its
+ current round, writes a complete optimizer checkpoint, marks checkpointed_stop,
+ and exits without launching evaluation. Remove the stop file before resuming.
+ Do not kill/relaunch the original launcher into existing append-only logs.

@@ -1,0 +1,4 @@
+{"event": "model_loaded", "seconds": 6.144310998992296, "parameters": 1543714304}
+Backend impl 'liger_kernel.ops.backends._cutedsl.cross_entropy' for op 'cross_entropy' could not be imported: ImportError: cutedsl backend requires the NVIDIA CUTLASS Python DSL (CuTe DSL). Install it with `pip install nvidia-cutlass-dsl`, or when installing Liger-Kernel use `pip install 'liger-kernel[cutedsl]'`.
+Backend impl 'liger_kernel.ops.backends._ascend.cross_entropy' for op 'cross_entropy' could not be imported: ImportError: cannot import name 'tanh' from 'triton.language.math' (./.venv/lib/python3.12/site-packages/triton/language/math.py)
+{"event": "production_flash_numerical_check", "status": "rejected_numerical_check", "absolute_loss_difference": 2.384185791015625e-07, "global_gradient_relative_l2": 0.009677777998149395, "native_restore_control_passed": true}

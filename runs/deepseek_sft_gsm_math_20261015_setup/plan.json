@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-15T06:25:33.428180+00:00",
+  "data": "./data/processed/sft_gsm_math_4096_s42_20261015",
+  "source_checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+  "smoke": "./runs/deepseek_sft_smoke_v2_20261015",
+  "smoke_updates": 16,
+  "source_cpt_unchanged": true,
+  "smoke_optimizer_states": 219,
+  "fresh_sft_optimizer": true,
+  "formal_resumes_smoke": false,
+  "max_sequence_length": 4096,
+  "longest_example": 3027,
+  "peak_allocated_gib": 86.74993705749512,
+  "baseline_sft_validation_loss": 0.9544458389282227,
+  "smoke_validation_loss": 0.8428868651390076,
+  "median_normal_step_seconds": 0.793018413009122,
+  "training_examples": 14459,
+  "validation_examples": 512,
+  "epochs": 3,
+  "total_steps": 1356,
+  "expected_sft_input_tokens": 10866690,
+  "expected_sft_supervised_tokens": 7408092,
+  "peak_lr": 1e-05,
+  "min_lr": 1e-06,
+  "warmup_steps": 41,
+  "micro_batch": 8,
+  "effective_batch": 32,
+  "selection": "Best held-out SFT validation checkpoint; final checkpoint also retained",
+  "post_training_evaluation": "Full GSM8K + MATH, same 1024-token few-shot protocol as 10B CPT",
+  "training_wall_minutes_estimate": [
+    20,
+    35
+  ],
+  "evaluation_minutes_estimate": [
+    45,
+    65
+  ],
+  "source_hashes": {
+    "score_math_benchmarks.py": "09b7a92de597dff5801def64924f2f13740f2274bf1f893fa5706a195442d5b7",
+    "standard_native.py": "fbe631466d31653ed9f72561767fefade673d1d7129bfb418b24a0052060ae2d",
+    "prepare_math_sft.py": "31d5f25c359f0079a25a6848ac0646a49d7d67e6c36ecd3e69be6349deba8c0c",
+    "verify_math_sft.py": "bfed470ae308587d09d10ec9c09513f56606751d5ba443312e66c79607dc1f9d",
+    "math_benchmark_protocol.py": "bd3fc2f2eb8649c33c08f34f7d8e1831828334b8eb1032c6000511d519b15608",
+    "run_math_inference.py": "ae6d019e3bdce386d2a0815c782ad78825103f912c2399bb3bde83066443a279",
+    "train_math_sft.py": "0f26e6eb4e2eb92946a4e5f1427b2b741bc9377f4dc08302bfe21c3a0d395a5a",
+    "report_math_sft.py": "5fd9af313922a580006f7c00ae96d607ce2ef73e99f9746f8538f59858de53fc"
+  }
+}

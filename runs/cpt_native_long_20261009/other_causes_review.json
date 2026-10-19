@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "status": "completed_cpu_diagnosis",
+  "observed_utc": "2026-10-09T03:32:17.254148+00:00",
+  "gpu_execution": false,
+  "production_configuration_modified": false,
+  "conclusion": {
+    "supported": "训练/固定验证损失的早期上升真实存在；配额截断丢 EOS 是已证实的数据打包问题；全参数 weight_decay 会累计改变小张量尺度。",
+    "not_established": "没有单一根因得到因果确认。短 A/B 对照没有显示优化实现造成额外损失恶化，但不能排除早期或长期编译误差累计。",
+    "priorities": [
+      "先看已有固定验证集 clean/join 分层 base→current 变化，同时开展未优化原生较长窗口观察。",
+      "若 clean 与固定训练探针也恶化，优先独立测试 decay 分组/强度及 LR 设置；一次只改变一个变量。",
+      "不将普通 GPU/Flash 非确定性、第二轮复用、笼统过拟合或域遗忘当作已确认根因。"
+    ]
+  },
+  "sources": {
+    "loss_diagnostics": "./runs/cpt_validation_curve_20261009/loss_diagnostics.json",
+    "weight_decay_diagnostics": "./runs/cpt_validation_curve_20261009/weight_decay_diagnostics.json",
+    "data_diagnostics": "./runs/cpt_native_long_20261009/data_diagnostics.json",
+    "technical_checks": "./runs/cpt_native_long_20261009/other_causes_technical_checks.json",
+    "short_ab": "./runs/cpt_native_compare_20261009/report/summary.json",
+    "strict_gradient_failure": "./runs/cpt_optimization_20261008/production_flash_numerics_deterministic/result.json"
+  },
+  "official_paper": {
+    "url": "https://arxiv.org/html/2402.03300v3",
+    "version": "v3",
+    "version_date": "2024-04-27",
+    "primary_source": true,
+    "sections": [
+      "2.2.1",
+      "2.3"
+    ],
+    "paraphrase_language": "zh",
+    "verbatim_words": 0,
+    "corpus_quality_1_3b_setting": {
+      "section": "2.2.1",
+      "tokens": 150000000000,
+      "batch_tokens": 4000000,
+      "context": 4096,
+      "peak_lr": 0.00053,
+      "warmup_steps": 2000,
+      "adam_betas": [
+        0.9,
+        0.95
+      ],
+      "weight_decay": 0.1,
+      "decay_progress": [
+        0.8,
+        0.9
+      ],
+      "decay_factors": [
+        0.316,
+        0.1
+      ]
+    },
+    "main_7b_setting": {
+      "section": "2.3",
+      "initializer": "DeepSeek-Coder-Base-v1.5",
+      "tokens": 500000000000,
+      "batch_tokens": 10000000,
+      "peak_lr": 0.00042,
+      "inherits_other_settings_from": "2.2.1",
+      "data_percent": {
+        "DeepSeekMath_Corpus": 56,
+        "AlgebraicStack": 4,
+        "arXiv": 10,
+        "GitHub": 20,
+        "CommonCrawl_natural_language": 10
+      }
+    },
+    "limitations": [
+      "论文没有说明 bias/RMSNorm 是否属于 decay 参数组，不得把 HF 默认分组当作论文参数。",
+      "文中的数学基准成绩进展曲线不是与本地同口径的 CPT held-out loss 曲线。",
+      "主模型 batch 为 10M tokens；4M 是 1.3B 语料质量实验设置。"
+    ]
+  },
+  "observed_loss": {
+    "validation_initial": 1.86186945438385,
+    "validation_minimum_step": 5000,
+    "validation_minimum": 1.8253639936447144,
+    "validation_175000": 1.901714682579,
+    "increase_from_minimum": 0.07635068893428554,
+    "perplexity_relative_increase": 0.0793410207471863,
+    "validation_fixed_input_tokens": 2097152,
+    "validation_fixed_targets": 2096128,
+    "validation_blocks": 1024,
+    "evaluation": "固定原始 token bytes/native eager/BF16、token 加权；原始 long run 内口径一致。",
+    "train_5000_step_window_means": {
+      "1_5000": 1.89006926987,
+      "5001_10000": 1.88621025519,
+      "10001_15000": 1.89504631062,
+      "15001_20000": 1.90727992756,
+      "20001_25000": 1.91555152338,
+      "80001_85000": 1.94535015616,
+      "145001_150000": 1.93648502724,
+      "170001_175000": 1.9024411545
+    },
+    "interpretation": [
+      "训练流中更换 batch 与权重，不是固定训练集探针；编译训练与原生验证不能直接作校准后的泛化 gap。",
+      "最早上升发生在第一轮，早于 step152589 开始第二轮，因此第二轮复用无法解释早期上升。",
+      "训练流 loss 也上升然后平台，现有证据不符合仅训练 loss 一直下降而验证 loss 上升的典型过拟合描述。"
+    ]
+  },
+  "schedule": {
+    "saved": {
+      "total_steps": 305176,
+      "peak_lr": 1e-05,
+      "warmup_steps": 15259,
+      "decay_80_step": 244141,
+      "decay_90_step": 274659,
+      "decay_80_factor": 0.316,
+      "decay_90_factor": 0.1
+    },
+    "effective_batch_sequences": 16,
+    "sequence_length": 2048,
+    "full_batch_input_tokens": 32768,
+    "epochs": 2,
+    "warmup_end_input_tokens": 500006912,
+    "lr_at_recorded_steps": {
+      "5000": 3.2767547021429977e-06,
+      "10000": 6.553509404285995e-06,
+      "15000": 9.830264106428995e-06
+    },
+    "first_decay_1_based_step": 244142,
+    "first_decay_progress_input_tokens_approx": 8000000000,
+    "native_long_start_step": 181650,
+    "native_long_first_window": 10000,
+    "native_long_first_window_input_tokens": 327680000,
+    "native_long_window_constant_lr": true,
+    "interpretation": "原生较长窗口仍处于原全局 peak LR 平台；换实现不是 LR/weight_decay 因果实验，不得重置 schedule 或 moments。"
+  },
+  "weight_decay": {
+    "configuration": {
+      "state_loading": "torch.load(map_location='cpu', mmap=True, weights_only=True); only parameter-group metadata and scalar LR were inspected",
+      "parameter_groups": 1,
+      "parameter_tensors": 338,
+      "initialized_optimizer_states": 338,
+      "weight_decay": 0.1,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "saved_learning_rate_float32": 9.999999747378752e-06,
+      "capturable": true,
+      "foreach": true,
+      "fused": false,
+      "all_parameters_in_one_decay_group": true,
+      "parameter_tensor_categories": {
+        "rmsnorm_weights": 57,
+        "attention_projection_biases": 84,
+        "shared_embedding_lm_head_weight": 1,
+        "other_weight_matrices": 196
+      },
+      "parameter_names_source": "AutoModelForCausalLM.from_config on meta device; matched 338 distinct parameter tensors to the 338 saved optimizer parameter IDs",
+      "lm_head_and_embedding_tied": true,
+      "implementation_sources": [
+        "./scripts/compiled_adamw.py:30",
+        "./scripts/cpt.py:82"
+      ]
+    },
+    "decay_only": {
+      "formula": "product over applied updates i: (1 - weight_decay * lr_i); computed using exp(fsum(log1p(-0.1 * lr_i)))",
+      "interpretation": "Real-arithmetic counterfactual with all gradient-derived Adam updates omitted. This is not the actual total parameter change.",
+      "float32_rounding_included": false,
+      "results": [
+        {
+          "steps": 5000,
+          "sum_lr": 0.008193525132708566,
+          "multiplier": 0.9991809829749116,
+          "shrink_percent": 0.08190170250883533
+        },
+        {
+          "steps": 15259,
+          "sum_lr": 0.0763,
+          "multiplier": 0.992399032034425,
+          "shrink_percent": 0.7600967965574967
+        },
+        {
+          "steps": 25000,
+          "sum_lr": 0.17371,
+          "multiplier": 0.9827789986937374,
+          "shrink_percent": 1.7221001306262584
+        },
+        {
+          "steps": 152588,
+          "sum_lr": 1.4495900000000002,
+          "multiplier": 0.8650576981528206,
+          "shrink_percent": 13.494230184717937
+        },
+        {
+          "steps": 175000,
+          "sum_lr": 1.67371,
+          "multiplier": 0.845885659797262,
+          "shrink_percent": 15.411434020273795
+        },
+        {
+          "steps": 305176,
+          "sum_lr": 2.4920738800000004,
+          "multiplier": 0.7794182221304223,
+          "shrink_percent": 22.058177786957767
+        }
+      ]
+    },
+    "small_tensor_observations": {
+      "loading": "Read only eight small tensors using safetensors.safe_open(device='cpu'); cast base and checkpoint values to float32 for comparison",
+      "comparison": "checkpoint L2 / base L2; relative L2 change is norm(checkpoint-base)/norm(base)",
+      "results": [
+        {
+          "name": "model.layers.0.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.4537677764892578,
+          "checkpoint_mean": 0.40140917897224426,
+          "base_l2": 19.81822967529297,
+          "checkpoint_l2": 17.31332778930664,
+          "l2_ratio": 0.8736061453819275,
+          "relative_l2_change": 0.1299086958169937
+        },
+        {
+          "name": "model.layers.0.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.5452792048454285,
+          "checkpoint_mean": 0.46953263878822327,
+          "base_l2": 21.91900634765625,
+          "checkpoint_l2": 18.837099075317383,
+          "l2_ratio": 0.8593956828117371,
+          "relative_l2_change": 0.1416996568441391
+        },
+        {
+          "name": "model.layers.14.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.3390644788742065,
+          "checkpoint_mean": 1.1420470476150513,
+          "base_l2": 59.56028366088867,
+          "checkpoint_l2": 50.687599182128906,
+          "l2_ratio": 0.851030170917511,
+          "relative_l2_change": 0.1490713357925415
+        },
+        {
+          "name": "model.layers.27.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.2396315336227417,
+          "checkpoint_mean": 1.0567727088928223,
+          "base_l2": 71.48466491699219,
+          "checkpoint_l2": 60.765052795410156,
+          "l2_ratio": 0.8500431776046753,
+          "relative_l2_change": 0.15008129179477692
+        },
+        {
+          "name": "model.layers.27.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.8218892812728882,
+          "checkpoint_mean": 1.5410127639770508,
+          "base_l2": 72.43052673339844,
+          "checkpoint_l2": 61.24106216430664,
+          "l2_ratio": 0.8455145359039307,
+          "relative_l2_change": 0.15460747480392456
+        },
+        {
+          "name": "model.norm.weight",
+          "elements": 1536,
+          "base_mean": 4.622725486755371,
+          "checkpoint_mean": 4.439990520477295,
+          "base_l2": 182.58541870117188,
+          "checkpoint_l2": 175.17141723632812,
+          "l2_ratio": 0.9593943357467651,
+          "relative_l2_change": 0.045718591660261154
+        },
+        {
+          "name": "model.layers.0.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.05588574707508087,
+          "checkpoint_mean": 0.04828178510069847,
+          "base_l2": 107.65518951416016,
+          "checkpoint_l2": 91.04783630371094,
+          "l2_ratio": 0.8457356691360474,
+          "relative_l2_change": 0.15449370443820953
+        },
+        {
+          "name": "model.layers.27.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.04487468674778938,
+          "checkpoint_mean": 0.03780466690659523,
+          "base_l2": 35.05548095703125,
+          "checkpoint_l2": 29.638158798217773,
+          "l2_ratio": 0.8454643487930298,
+          "relative_l2_change": 0.15458640456199646
+        }
+      ]
+    },
+    "local_hf_default": {
+      "version": "4.55.4",
+      "source": "./.venv/lib/python3.12/site-packages/transformers/trainer.py:1194",
+      "behavior": "HF Trainer 默认对 bias / LayerNorm / RMSNorm / 名含 norm 的参数排除 decay；本地单组 wd=.1 有意对全部338参数应用，区别属于配方设置，不是 AdamW 数学实现错误。"
+    },
+    "interpretation": [
+      "175000 步纯 decay 的实数反事实乘数约 .845886，意味着15.41%尺度缩小；真实参数变化同时包含梯度与 FP32 舍入。",
+      "八个小张量中间 RMSNorm 与 q_proj bias 比值多在 .845–.874，接近累计 decay；最终 RMSNorm .959，不能说所有层一致。",
+      "5000 步纯 decay 缩小约0.082%，25000 步约1.722%；仅凭后期尺度比，不能解释所有早期 .04 loss 增幅。",
+      "同 LR、同 token 进度下小 batch 每 token 应用 decay 更频繁；论文 peak LR 更高且总 tokens 不同，不能声称本地总衰减必然比论文大。"
+    ]
+  },
+  "adam_timescale": {
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "beta1_halflife_updates": 6.578813478960585,
+    "beta2_halflife_updates": 13.513407333964874,
+    "beta1_halflife_local_tokens": 215574.56007858046,
+    "beta2_halflife_local_tokens": 442807.331519361,
+    "paper_main_batch_local_batch_ratio": 305.17578125,
+    "interpretation": "保持 beta 并不保持以 tokens 计的 EMA 时间尺度；小 batch 使每 token 的优化动力学与论文不同。这是候选设置原因，未测试因果。"
+  },
+  "data_packing": {
+    "confirmed_defect": "Quota-truncated document prefixes are concatenated with no terminal EOS separator.",
+    "validation_missing_eos_documents": 228,
+    "validation_joins_inside_blocks": 226,
+    "validation_affected_blocks": 226,
+    "validation_affected_block_fraction": 0.220703125,
+    "train_joins_inside_blocks": 113,
+    "train_blocks_including_tail": 2441407,
+    "train_affected_block_fraction": 4.628478578131381e-05,
+    "only_direct_boundary_target_fraction": 0.000107817843185149,
+    "interpretation": [
+      "受影响验证 blocks 为22.1%，训练仅0.00463%；这是打包/代表性不一致，而不是 shuffle 错误。",
+      "226 个直接边界 target 只占验证 targets约0.0108%；单独这些 target 通常难解释平均 loss 增 .076。若有扩大作用应表现为 join 后多 token 条件上下文损失变化。",
+      "固定验证 bytes 没变，所以原曲线仍时间可比；固定样本偏差可使曲线较难代表训练分布，但本身不能证明 loss 随时间升高原因。",
+      "保留既有 reference；新分层 base/current 的 clean blocks、join blocks、post-join tokens 变化比直接重置验证集更有诊断力。"
+    ],
+    "split_and_sampling_limits": [
+      "记录的精确 normalized-text SHA 和 URL train/val overlap 都为0；near duplicates 没有穷尽验证。",
+      "验证只有1501文档/1024 blocks；保留 pilot subset 的 .25Mi tokens 与后续扩充不同抽样政策。",
+      "早先342 train sources 是每 shard 固定 token offset 导致长文档偏样，不足以推断完整训练域比例。"
+    ],
+    "shuffle": "两轮 SHA、seed42 randperm 与全块排列精确通过；每轮 tail一次，未见遗漏/重复/错误顺序。"
+  },
+  "direct_code_checks": {
+    "gpu_execution": false,
+    "checks": [
+      {
+        "name": "hf_loss_single_next_token_shift",
+        "passed": true,
+        "hf_loss": 3.506869077682495,
+        "manual_shifted_loss": 3.506869077682495,
+        "valid_targets": 10,
+        "expected_valid_targets": 10
+      },
+      {
+        "name": "allones_and_resolved_causal_logits_agree_cpu",
+        "passed": true,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "name": "causal_prefix_invariant_to_future_or_ignored_padding_changes",
+        "passed": true,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "name": "hf_loss_does_not_mutate_aliased_input_labels_cpu",
+        "passed": true
+      },
+      {
+        "name": "actual_5b_reader_matches_vectorized_values_and_counts_across_2_pow_32_offset_tail_duplicate",
+        "passed": true,
+        "indices": [
+          0,
+          1,
+          2097151,
+          2097152,
+          2441405,
+          2441406,
+          2441406,
+          0
+        ],
+        "input_tokens": 13312,
+        "supervised_tokens": 13304,
+        "tail_real_length": 512,
+        "tail_padding_labels_ignored": true
+      },
+      {
+        "name": "two_epoch_schedule_exact_total_prefix_counts",
+        "passed": true,
+        "actual": [
+          10000000000,
+          9995117186,
+          305176
+        ],
+        "expected": [
+          10000000000,
+          9995117186,
+          305176
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  "other_correctness_facts": [
+    "HF ForCausalLMLoss float32 logits / ignore_index -100 / 下一 token shift 一次；训练标签未提前 shift。",
+    "Padding 只在最后的训练 tail，labels=-100；完整验证无 pad；counts 为 labels[:,1:] 非忽略数。",
+    "FP32 master parameters、gradients、Adam moments，BF16 forward/backward autocast；AdamW beta(.9,.95)、eps1e-8、minimize，clip1且非有限严格失败。",
+    "10B schedule input 与 targets 数不同是每 block 首 token 不监督及 tail 的结果；不是少训5B。",
+    "短 A/B 初始 weights/moments/steps/RNG、数据顺序、probe、schedule 全一致；未见恢复重置 moments/counter 的证据。",
+    "已有 strict whole-model compile 梯度检验 global relative L2=0.04640090838，first q=0.20065422356；不能称实现梯度等价。"
+  ],
+  "hypotheses": [
+    {
+      "name": "validation packing/representativity mismatch",
+      "support": "具体缺EOS比例差异已证实",
+      "not_yet_proven": "不能只凭226/1024 block占比判断根因",
+      "minimal_test": "使用同native forward比较base与当前weights，在固定reference上分别统计 clean / join / pre-join / post-join，并另加配额边界保留EOS的独立diagnostic set；不改reference。"
+    },
+    {
+      "name": "all-parameter weight decay accumulated scale drift",
+      "support": "单组wd .1与小张量比值及纯decay反事实一致",
+      "not_yet_proven": "八个后期样本包含梯度影响，早期decay很小",
+      "minimal_test": "从相同早期完整checkpoint原生两臂，同数据/RNG/globalLR/moments，仅把bias/RMSNorm decay设0，观察至少5000–10000更新固定train/val；预算更小时先2k方向性探针。"
+    },
+    {
+      "name": "learning rate and token-scale Adam dynamics mismatch",
+      "support": "val最低点仍warmup约1/3；升高跨warmup结束；32768tokens/update与论文10M差异305×",
+      "not_yet_proven": "loss与LR时间相关不等于LR过高；1e-5绝对值低但未按小batch适配不能自动合理",
+      "minimal_test": "单独从同完整checkpoint保留其他设置与schedule进度，比较原native vs明确记录的更低LR，至少5000updates固定probe；不要与wd变更混在同对照。"
+    },
+    {
+      "name": "early or long compiled-gradient trajectory drift",
+      "support": "strict gradient check failed",
+      "not_yet_proven": "从5.896B同checkpoint开始1000updates fast与native终点差只有val+0.00002288818/train+0.00024056435；未出现明显额外fast恶化",
+      "minimal_test": "当前原生较长窗口先观察；若要归因早期，从base或早期相同完整state开始原生/fast匹配5000–10000updates，非确定GPU只能统计而不能bitwise结论。"
+    }
+  ],
+  "next_window_limits": [
+    "计划原生181650→约192000是观察原生可否稳定/改善，未设置预算外 stop，不回fast。",
+    "固定train probe约0.5Mi、均匀completeblocks，可帮助区分当前train/val方向，但不是完整训练loss census。",
+    "普通 GPU/Flash 非确定性只说明不可要求 bitwise trajectory 相同，当前没有证据把它当 loss 上升的原因。",
+    "若长原生窗口稳定不变，不能证明已经形成的早期权重漂移不存在；若下降，同样不能单独证明fast是早期根因。"
+  ]
+}

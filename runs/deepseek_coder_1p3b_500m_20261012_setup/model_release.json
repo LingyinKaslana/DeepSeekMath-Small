@@ -1,0 +1,42 @@
+{
+  "repo": "deepseek-ai/deepseek-coder-1.3b-base",
+  "revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 1519
+    },
+    {
+      "name": "LICENSE",
+      "bytes": 13759
+    },
+    {
+      "name": "README.md",
+      "bytes": 6893
+    },
+    {
+      "name": "config.json",
+      "bytes": 631
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 119
+    },
+    {
+      "name": "pytorch_model.bin",
+      "bytes": 2693014838
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 482
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 1367962
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 793
+    }
+  ]
+}

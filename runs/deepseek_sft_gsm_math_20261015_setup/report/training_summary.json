@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "generated_utc": "2026-10-15T07:48:57.281080+00:00",
+  "latest_validation": {
+    "step": 1356,
+    "loss": 0.7478501200675964,
+    "supervised_tokens": 86171,
+    "input_tokens": 126981,
+    "examples": 512,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  "best_validation": {
+    "step": 904,
+    "loss": 0.7081043124198914,
+    "supervised_tokens": 86171,
+    "input_tokens": 126981,
+    "examples": 512,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  "latest_train_probe": {
+    "step": 1356,
+    "loss": 0.4481588900089264,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  "updates": 1356,
+  "input_tokens": 10866690,
+  "supervised_tokens": 7408092
+}

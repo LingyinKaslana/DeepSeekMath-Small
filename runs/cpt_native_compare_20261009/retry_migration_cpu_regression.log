@@ -1,0 +1,15 @@
+test_continuous_original_signature_audit_and_tampering_rejection (__main__.MigrationTests.test_continuous_original_signature_audit_and_tampering_rejection) ... ok
+test_default_flags_and_source_only_authorization (__main__.MigrationTests.test_default_flags_and_source_only_authorization) ... ok
+test_migration_snapshot_hashes_are_checked (__main__.MigrationTests.test_migration_snapshot_hashes_are_checked) ... ok
+test_resume_keeps_counters_order_and_lr_strict (__main__.MigrationTests.test_resume_keeps_counters_order_and_lr_strict) ... ok
+test_disabled_retry_keeps_strict_failure_and_zero_updates (__main__.RetryTests.test_disabled_retry_keeps_strict_failure_and_zero_updates) ... ok
+test_native_failure_keeps_weights_moments_rng_and_zero_updates (__main__.RetryTests.test_native_failure_keeps_weights_moments_rng_and_zero_updates) ... ok
+test_nonfinite_loss_with_finite_gradient_also_retries (__main__.RetryTests.test_nonfinite_loss_with_finite_gradient_also_retries) ... ok
+test_one_native_retry_same_rng_exact_single_update (__main__.RetryTests.test_one_native_retry_same_rng_exact_single_update) ... ok
+test_trainer_reuses_batches_and_keeps_counts (__main__.RetryTests.test_trainer_reuses_batches_and_keeps_counts) ... ok
+test_unrelated_runtime_error_does_not_retry (__main__.RetryTests.test_unrelated_runtime_error_does_not_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.271s
+
+OK

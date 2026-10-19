@@ -1,0 +1,155 @@
+{
+  "status": "ready",
+  "purpose": "OpenWebMath-only full-parameter CPT training dataset",
+  "source_repo": "open-web-math/open-web-math",
+  "source_revision": "fde8ef8de2300f5e778f56261843dab89f230815",
+  "source_manifest": "./data/raw/openwebmath_20261008/manifest.json",
+  "source_manifest_sha256": "44682c262b71ad38a3a157434f74d96e6764f2ad9ee41df83c8b5723a5780805",
+  "tokenizer": "Qwen/Qwen2.5-Coder-1.5B",
+  "tokenizer_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "seed": 42,
+  "sampling": "equal train and new-validation token quotas across fixed-seed shuffled source shards; shuffled row groups and rows",
+  "split": "fixed normalized-text SHA256 threshold independent of budgets; all pilot validation text hashes/URLs reserved first",
+  "validation_fraction": 0.001,
+  "validation_hash_threshold": 18446744073709552,
+  "packing": "document text + EOS, concatenated within each split; no cross-document attention mask",
+  "block_length": 2048,
+  "dtype": "uint32",
+  "splits": {
+    "train": {
+      "tokens": 3000000,
+      "documents": 1527,
+      "full_blocks": 1464,
+      "tokens_in_full_blocks": 2998272,
+      "remainder_tokens": 1728,
+      "prefix_truncated_documents": 3,
+      "source_shards": 3,
+      "source_token_roundtrip_samples": 9,
+      "all_metadata_records_audited": true,
+      "all_token_ids_range_checked": true,
+      "all_document_token_roundtrip": false
+    },
+    "validation": {
+      "tokens": 278528,
+      "documents": 350,
+      "full_blocks": 136,
+      "tokens_in_full_blocks": 278528,
+      "remainder_tokens": 0,
+      "prefix_truncated_documents": 117,
+      "source_shards": 114,
+      "source_token_roundtrip_samples": 241,
+      "all_metadata_records_audited": true,
+      "all_token_ids_range_checked": true,
+      "all_document_token_roundtrip": true
+    }
+  },
+  "train_validation_text_hash_overlap": 0,
+  "train_validation_url_overlap": 0,
+  "exact_global_selected_text_and_url_deduplication": true,
+  "preserved_pilot_validation_tokens": 262144,
+  "preserved_pilot_validation_documents": 334,
+  "pilot_validation_jsonl_sha256": "dd280d31c277cbb50fef391e9c5fdb65b51822718023a794c99ad884aabc13b0",
+  "pilot_validation_tokens_sha256": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93",
+  "all_used_source_files_sha256_verified": true,
+  "train_metadata_has_original_text": false,
+  "train_metadata_source_resolution": "source_shard + row_group + row_in_group resolves original text in pinned source parquet",
+  "rejected_global_text_or_url_duplicates": 0,
+  "artifacts": {
+    "train_tokens.npy": {
+      "bytes": 12000128,
+      "sha256": "3f66ce8543c8f39a1879f4668c1424c6aa3552d5d7394309bf22612240beb57e"
+    },
+    "validation_tokens.npy": {
+      "bytes": 1114240,
+      "sha256": "a4938acd4b6977e41687210aa4355fbc6b6a58b2359859073416b37f92624d79"
+    },
+    "train.jsonl": {
+      "bytes": 593567,
+      "sha256": "cfe9749d6df46b57d3548df5fcce2d6979aa02baf4f05d532ac1c4843fb6f9ff"
+    },
+    "validation.jsonl": {
+      "bytes": 2247603,
+      "sha256": "192cbecdb4a8c45a18e3c34a8972cbcc725fc3e61a8b5db738ef2463845e8550"
+    },
+    "selected.sqlite": {
+      "bytes": 798720,
+      "sha256": "c2b184d593c32d5fb508a825df4621722a3c90791331627cc71e963d834aa90c"
+    },
+    "settings.json": {
+      "bytes": 966,
+      "sha256": "58ca3854d4785316ec0452ec358f1f66988e3d5e527793b9100316105a11640f"
+    }
+  },
+  "shard_sampling": [
+    {
+      "shard": "data/train-00070-of-00114-00d409298080d3b4.parquet",
+      "tokens": {
+        "train": 1000000,
+        "validation": 5462
+      },
+      "documents": {
+        "train": 495,
+        "validation": 6
+      },
+      "candidate_tokens": {
+        "train": 1200212,
+        "validation": 7395
+      },
+      "candidate_documents": {
+        "train": 583,
+        "validation": 6
+      },
+      "scanned_documents": 3256,
+      "source_sha256": "d4849f727e8658c033f20e93e7b0314838ddb6022e3d1262a63d97f69bf5d522"
+    },
+    {
+      "shard": "data/train-00080-of-00114-7e0742992331e6e4.parquet",
+      "tokens": {
+        "train": 1000000,
+        "validation": 5461
+      },
+      "documents": {
+        "train": 459,
+        "validation": 5
+      },
+      "candidate_tokens": {
+        "train": 1212766,
+        "validation": 7568
+      },
+      "candidate_documents": {
+        "train": 565,
+        "validation": 5
+      },
+      "scanned_documents": 5000,
+      "source_sha256": "cb92f3dff7ac368a38f6a66f61cd88ac1106e51d53de248c3dfb0971ed89d32a"
+    },
+    {
+      "shard": "data/train-00034-of-00114-627b0a1638e867d2.parquet",
+      "tokens": {
+        "train": 1000000,
+        "validation": 5461
+      },
+      "documents": {
+        "train": 573,
+        "validation": 5
+      },
+      "candidate_tokens": {
+        "train": 1200792,
+        "validation": 6916
+      },
+      "candidate_documents": {
+        "train": 691,
+        "validation": 5
+      },
+      "scanned_documents": 3256,
+      "source_sha256": "52dc8a70fea37dbcc83a697c0a55d57e24fd385075dc56168c7d07428e8e6f7c"
+    }
+  ],
+  "preparation_signature": "7cd62cd919fb5a073c795e7aae34b365fe6ba6634ab6111fd1096646181e9109",
+  "script_sha256": "85e3060167cca1deb19cda1feb2fa1635dfbf96a7f3a9e750096f96e79e2cc78",
+  "benchmark_decontamination": "not performed; held-out text loss only, no benchmark generalization claims",
+  "license": "ODC-By-1.0; underlying content licenses retained; see source README",
+  "source_url": "https://huggingface.co/datasets/open-web-math/open-web-math",
+  "started_utc": "2026-10-08T06:35:56.025402+00:00",
+  "completed_utc": "2026-10-08T06:36:11.230952+00:00"
+}

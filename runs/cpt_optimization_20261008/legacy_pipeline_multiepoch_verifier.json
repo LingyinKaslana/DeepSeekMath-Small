@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "passed": true,
+  "generated_utc": "2026-10-08T06:36:26.755529+00:00",
+  "first_run": "./runs/cpt_fast_pilot_10m_20261008_part1",
+  "resumed_run": "./runs/cpt_fast_pilot_10m_20261008",
+  "backend_config": "./configs/cpt_backend_fast.json",
+  "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+  "checks": [
+    {
+      "name": "stopped_then_complete_status",
+      "passed": true
+    },
+    {
+      "name": "valid_stop_boundary",
+      "passed": true,
+      "stopped_step": 64
+    },
+    {
+      "name": "identical_signatures",
+      "passed": true
+    },
+    {
+      "name": "identical_saved_schedules",
+      "passed": true,
+      "schedule": {
+        "total_steps": 306,
+        "peak_lr": 1e-05,
+        "warmup_steps": 16,
+        "decay_80_step": 245,
+        "decay_90_step": 276,
+        "decay_80_factor": 0.316,
+        "decay_90_factor": 0.1
+      }
+    },
+    {
+      "name": "unchanged_shuffle_order",
+      "passed": true
+    },
+    {
+      "name": "current_backend_config_matches_saved_signature",
+      "passed": true,
+      "saved_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+      "current_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+      "backend_config": "./configs/cpt_backend_fast.json"
+    },
+    {
+      "name": "saved_backend_config_snapshots_match",
+      "passed": true
+    },
+    {
+      "name": "resumed_argument_points_to_stopped_checkpoint",
+      "passed": true,
+      "resumed_argument": "DeepSeekMath-Small/runs/cpt_fast_pilot_10m_20261008_part1/stopped_checkpoint",
+      "stopped_checkpoint": "./runs/cpt_fast_pilot_10m_20261008_part1/stopped_checkpoint"
+    },
+    {
+      "name": "resume_started_at_saved_boundary",
+      "passed": true
+    },
+    {
+      "name": "exact_native_validation_continuity",
+      "passed": true,
+      "stopped_native_validation": {
+        "step": 64,
+        "loss": 1.849241852760315,
+        "perplexity": 6.354999670295602,
+        "supervised_tokens": 262016,
+        "input_tokens": 262144,
+        "blocks": 128,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      "resumed_initial_native_validation": {
+        "step": 64,
+        "loss": 1.849241852760315,
+        "perplexity": 6.354999670295602,
+        "supervised_tokens": 262016,
+        "input_tokens": 262144,
+        "blocks": 128,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      }
+    },
+    {
+      "name": "native_validation_backend",
+      "passed": true
+    },
+    {
+      "name": "configured_global_token_budget",
+      "passed": true,
+      "epochs": 1,
+      "expected_input_tokens": 10000000,
+      "expected_supervised_tokens": 9995117
+    },
+    {
+      "name": "shuffle_order_is_exact_dataset_permutation",
+      "passed": true
+    },
+    {
+      "name": "schedule_covers_requested_epochs_or_explicit_cap",
+      "passed": true
+    },
+    {
+      "name": "first_log_covers_stopped_prefix",
+      "passed": true
+    },
+    {
+      "name": "resumed_log_covers_remaining_suffix",
+      "passed": true
+    },
+    {
+      "name": "combined_logs_contiguous_global_steps",
+      "passed": true
+    },
+    {
+      "name": "every_logged_lr_matches_saved_plan",
+      "passed": true,
+      "mismatches": []
+    },
+    {
+      "name": "every_logged_token_count_and_update_flag_matches_order",
+      "passed": true,
+      "mismatches": []
+    },
+    {
+      "name": "exact_configured_inputs_and_targets",
+      "passed": true,
+      "input_tokens": 10000000,
+      "supervised_tokens": 9995117
+    },
+    {
+      "name": "stopped_checkpoint_and_result_counters_match_logs",
+      "passed": true,
+      "completed_steps": 64,
+      "input_tokens": 2097152,
+      "supervised_tokens": 2096128,
+      "optimizer_updates": 64
+    },
+    {
+      "name": "final_checkpoint_and_result_counters_match_logs",
+      "passed": true,
+      "completed_steps": 306,
+      "input_tokens": 10000000,
+      "supervised_tokens": 9995117,
+      "optimizer_updates": 306
+    },
+    {
+      "name": "final_exact_budget_and_updates",
+      "passed": true,
+      "expected_optimizer_updates": 306
+    },
+    {
+      "name": "logged_loss_gradient_norm_and_timing_finite",
+      "passed": true
+    }
+  ],
+  "check_count": 24,
+  "checkpoint_loading": "torch.load(map_location='cpu', mmap=True, weights_only=True); metadata/order/counters only, no full optimizer tensor comparison",
+  "timings": {
+    "first_run": {
+      "result_path": "./runs/cpt_fast_pilot_10m_20261008_part1/result.json",
+      "status": "stopped",
+      "completed_steps": 64,
+      "trained_tokens": 2097152,
+      "peak_allocated_gib": 118.66096115112305,
+      "peak_reserved_gib": 125.98046875,
+      "train_seconds_excluding_validation_and_save": 36.73149066402402,
+      "steady_tokens_per_second": 98130.09535425987,
+      "steady_tokens": 2064384,
+      "steady_seconds": 21.037215877018753,
+      "wall_seconds_this_invocation": 83.12917772900255,
+      "invocations": [
+        {
+          "output": "./runs/cpt_fast_pilot_10m_20261008_part1",
+          "start_step": 0,
+          "first_full_shape_update_seconds_including_compile": 15.691720749004162,
+          "train_seconds": 36.73149066402402,
+          "input_tokens": 2097152,
+          "steady_seconds": 21.037215877018753,
+          "steady_tokens": 2064384,
+          "optimizer_compile": {
+            "optimizer": "torch.optim.AdamW",
+            "implementation": "compiled_foreach",
+            "compile": {
+              "fullgraph": false,
+              "dynamic": false,
+              "mode": "default"
+            },
+            "compile_wrapper_setup_seconds": 1.0394398039934458,
+            "first_step_seconds_including_compilation": 7.3816639319993556,
+            "compile_seconds": null,
+            "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+            "precision": {
+              "parameters": "float32",
+              "gradients": "float32",
+              "exp_avg": "float32",
+              "exp_avg_sq": "float32",
+              "learning_rate": "CUDA float32 scalar"
+            },
+            "device": "cuda:0",
+            "parameter_tensors": 338,
+            "parameter_elements": 1543714304,
+            "capturable": true,
+            "foreach": true,
+            "fused": false,
+            "betas": [
+              0.9,
+              0.95
+            ],
+            "weight_decay": 0.1,
+            "eps": 1e-08
+          },
+          "end_step": 64,
+          "stop_reason": "stop_after"
+        }
+      ],
+      "initial_update_rows": [
+        {
+          "step": 1,
+          "loss": 1.8081305027008057,
+          "grad_norm": 1.681586503982544,
+          "lr": 6.25e-07,
+          "input_tokens": 32768,
+          "supervised_tokens": 32752,
+          "cumulative_tokens": 32768,
+          "seconds": 15.691720749004162,
+          "optimizer_applied": true,
+          "first_full_shape_update": true
+        }
+      ],
+      "optimizer_compile": {
+        "optimizer": "torch.optim.AdamW",
+        "implementation": "compiled_foreach",
+        "compile": {
+          "fullgraph": false,
+          "dynamic": false,
+          "mode": "default"
+        },
+        "compile_wrapper_setup_seconds": 1.0394398039934458,
+        "first_step_seconds_including_compilation": 7.3816639319993556,
+        "compile_seconds": null,
+        "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+        "precision": {
+          "parameters": "float32",
+          "gradients": "float32",
+          "exp_avg": "float32",
+          "exp_avg_sq": "float32",
+          "learning_rate": "CUDA float32 scalar"
+        },
+        "device": "cuda:0",
+        "parameter_tensors": 338,
+        "parameter_elements": 1543714304,
+        "capturable": true,
+        "foreach": true,
+        "fused": false,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "weight_decay": 0.1,
+        "eps": 1e-08
+      }
+    },
+    "resumed_run": {
+      "result_path": "./runs/cpt_fast_pilot_10m_20261008/result.json",
+      "status": "complete",
+      "completed_steps": 306,
+      "trained_tokens": 10000000,
+      "peak_allocated_gib": 180.43143796920776,
+      "peak_reserved_gib": 193.318359375,
+      "train_seconds_excluding_validation_and_save": 133.42189037089702,
+      "steady_tokens_per_second": 97302.31909951668,
+      "steady_tokens": 9934464,
+      "steady_seconds": 102.0989437038952,
+      "wall_seconds_this_invocation": 132.78622991699376,
+      "invocations": [
+        {
+          "output": "./runs/cpt_fast_pilot_10m_20261008_part1",
+          "start_step": 0,
+          "first_full_shape_update_seconds_including_compile": 15.691720749004162,
+          "train_seconds": 36.73149066402402,
+          "input_tokens": 2097152,
+          "steady_seconds": 21.037215877018753,
+          "steady_tokens": 2064384,
+          "optimizer_compile": {
+            "optimizer": "torch.optim.AdamW",
+            "implementation": "compiled_foreach",
+            "compile": {
+              "fullgraph": false,
+              "dynamic": false,
+              "mode": "default"
+            },
+            "compile_wrapper_setup_seconds": 1.0394398039934458,
+            "first_step_seconds_including_compilation": 7.3816639319993556,
+            "compile_seconds": null,
+            "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+            "precision": {
+              "parameters": "float32",
+              "gradients": "float32",
+              "exp_avg": "float32",
+              "exp_avg_sq": "float32",
+              "learning_rate": "CUDA float32 scalar"
+            },
+            "device": "cuda:0",
+            "parameter_tensors": 338,
+            "parameter_elements": 1543714304,
+            "capturable": true,
+            "foreach": true,
+            "fused": false,
+            "betas": [
+              0.9,
+              0.95
+            ],
+            "weight_decay": 0.1,
+            "eps": 1e-08
+          },
+          "end_step": 64,
+          "stop_reason": "stop_after"
+        },
+        {
+          "output": "./runs/cpt_fast_pilot_10m_20261008",
+          "start_step": 64,
+          "first_full_shape_update_seconds_including_compile": 15.626642358009121,
+          "train_seconds": 96.690399706873,
+          "input_tokens": 7902848,
+          "steady_seconds": 81.06172782687645,
+          "steady_tokens": 7870080,
+          "optimizer_compile": {
+            "optimizer": "torch.optim.AdamW",
+            "implementation": "compiled_foreach",
+            "compile": {
+              "fullgraph": false,
+              "dynamic": false,
+              "mode": "default"
+            },
+            "compile_wrapper_setup_seconds": 1.1821035419998225,
+            "first_step_seconds_including_compilation": 7.604670897999313,
+            "compile_seconds": null,
+            "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+            "precision": {
+              "parameters": "float32",
+              "gradients": "float32",
+              "exp_avg": "float32",
+              "exp_avg_sq": "float32",
+              "learning_rate": "CUDA float32 scalar"
+            },
+            "device": "cuda:0",
+            "parameter_tensors": 338,
+            "parameter_elements": 1543714304,
+            "capturable": true,
+            "foreach": true,
+            "fused": false,
+            "betas": [
+              0.9,
+              0.95
+            ],
+            "weight_decay": 0.1,
+            "eps": 1e-08
+          },
+          "end_step": 306,
+          "stop_reason": null
+        }
+      ],
+      "initial_update_rows": [
+        {
+          "step": 65,
+          "loss": 1.883528470993042,
+          "grad_norm": 1.763442039489746,
+          "lr": 1e-05,
+          "input_tokens": 32768,
+          "supervised_tokens": 32752,
+          "cumulative_tokens": 2129920,
+          "seconds": 15.626642358009121,
+          "optimizer_applied": true,
+          "first_full_shape_update": true
+        }
+      ],
+      "optimizer_compile": {
+        "optimizer": "torch.optim.AdamW",
+        "implementation": "compiled_foreach",
+        "compile": {
+          "fullgraph": false,
+          "dynamic": false,
+          "mode": "default"
+        },
+        "compile_wrapper_setup_seconds": 1.1821035419998225,
+        "first_step_seconds_including_compilation": 7.604670897999313,
+        "compile_seconds": null,
+        "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+        "precision": {
+          "parameters": "float32",
+          "gradients": "float32",
+          "exp_avg": "float32",
+          "exp_avg_sq": "float32",
+          "learning_rate": "CUDA float32 scalar"
+        },
+        "device": "cuda:0",
+        "parameter_tensors": 338,
+        "parameter_elements": 1543714304,
+        "capturable": true,
+        "foreach": true,
+        "fused": false,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "weight_decay": 0.1,
+        "eps": 1e-08
+      }
+    },
+    "regular_step_median_seconds": 0.3335360569981276,
+    "mixed_padded_tail_and_final_partial_rows": [
+      {
+        "kind": "mixed_padded_tail",
+        "block_indices": [
+          358,
+          3120,
+          4550,
+          4724,
+          4882,
+          658,
+          3153,
+          1540,
+          4547,
+          1410,
+          768,
+          183,
+          1036,
+          4565,
+          925,
+          2408
+        ],
+        "padded_tail_present": true,
+        "row": {
+          "step": 170,
+          "loss": 1.9390960931777954,
+          "grad_norm": 1.5486488342285156,
+          "lr": 1e-05,
+          "input_tokens": 32384,
+          "supervised_tokens": 32368,
+          "cumulative_tokens": 5570176,
+          "seconds": 0.5721999589877669,
+          "optimizer_applied": true,
+          "first_full_shape_update": false
+        },
+        "seconds_vs_regular_step_median": 1.7155565252454221
+      },
+      {
+        "kind": "partial_final_batch",
+        "block_indices": [
+          2620,
+          1426,
+          4145
+        ],
+        "padded_tail_present": false,
+        "row": {
+          "step": 306,
+          "loss": 1.790213704109192,
+          "grad_norm": 3.708279609680176,
+          "lr": 1.0000000000000002e-06,
+          "input_tokens": 6144,
+          "supervised_tokens": 6141,
+          "cumulative_tokens": 10000000,
+          "seconds": 0.2596006610110635,
+          "optimizer_applied": true,
+          "first_full_shape_update": false
+        },
+        "seconds_vs_regular_step_median": 0.7783286261386752
+      }
+    ],
+    "timing_threshold_applied": false,
+    "note": "Tail durations are reported as evidence; no speed threshold changes verification status"
+  },
+  "evidence": {
+    "first": {
+      "checkpoint_state_path": "./runs/cpt_fast_pilot_10m_20261008_part1/stopped_checkpoint/training_state.pt",
+      "manifest_path": "./runs/cpt_fast_pilot_10m_20261008_part1/manifest.json",
+      "manifest_sha256": "3ea5206d43d49db4ea015b8e27dadb0ceab32fb56b2c63ca37e3f347b630fe26",
+      "training_log_path": "./runs/cpt_fast_pilot_10m_20261008_part1/training.jsonl",
+      "training_log_sha256": "4efb1ab397cb4112fe5d15117a6ad30871e910c93cd4fa53dc0c9d8a43326395"
+    },
+    "resumed": {
+      "checkpoint_state_path": "./runs/cpt_fast_pilot_10m_20261008/final_checkpoint/training_state.pt",
+      "manifest_path": "./runs/cpt_fast_pilot_10m_20261008/manifest.json",
+      "manifest_sha256": "73630961f338c1f517ec9e5e6791e3f49fb3fa332bd73f75cd75c5ff5cf37744",
+      "training_log_path": "./runs/cpt_fast_pilot_10m_20261008/training.jsonl",
+      "training_log_sha256": "8ad5ce38e303b99e61ba820ceda2a91a4c71f5db0187aa4b4323acbe9a8c28eb"
+    }
+  },
+  "limitations": [
+    "This does not prove bitwise training-trajectory equality to a separate uninterrupted run",
+    "Model and optimizer tensor equality belongs to the separate checkpoint diagnostic",
+    "Reported wall time covers each saved invocation; combined training counters include the earlier stopped prefix"
+  ],
+  "gpu_execution": false
+}

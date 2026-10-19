@@ -1,0 +1,30 @@
+[
+  {
+    "loss_type": "native",
+    "status": "passed",
+    "loss": 1.820206642150879,
+    "attention_reference": "math"
+  },
+  {
+    "loss_type": "liger_ce",
+    "status": "passed",
+    "loss": 1.820206880569458,
+    "absolute_loss_difference": 2.384185791015625e-07,
+    "probe_gradient_relative_l2": [
+      0.012436161749064922,
+      0.010075420141220093
+    ],
+    "attention_reference": "math"
+  },
+  {
+    "loss_type": "liger",
+    "status": "passed",
+    "loss": 1.820206880569458,
+    "absolute_loss_difference": 2.384185791015625e-07,
+    "probe_gradient_relative_l2": [
+      0.012949703261256218,
+      0.010643265210092068
+    ],
+    "attention_reference": "math"
+  }
+]

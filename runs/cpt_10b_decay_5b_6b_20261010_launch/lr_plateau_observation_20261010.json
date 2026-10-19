@@ -1,0 +1,986 @@
+{
+  "status": "complete",
+  "created_utc": "2026-10-10T12:30:38.590092+00:00",
+  "production_run": "./runs/cpt_10b_decay_5b_6b_20261010",
+  "snapshot_common_step": 195000,
+  "snapshot_common_input_tokens": 6389754880,
+  "snapshot_common_B": 6.38975488,
+  "source_file_sha256": {
+    "manifest.json": "0d9077ab364002109572c6a15fabe63ece57d33558b56e0908fc6ca0acbbf55b",
+    "validation_history.json": "0cbb28e5bc14d5ccb1e403dec4b320be071a471a69817144efb9f3a7aaa115f2",
+    "train_probe_history.json": "74d0d262e6966e483cbb6af8530713394c6d61473e057aaf0365147cca3e2883",
+    "progress.json": "1dd2125bb27384463da93fa6f43ac557b996bda555ee3f65668bb7642b5d3739"
+  },
+  "data_counting": {
+    "unit": "decimal B = 1e9 cumulative input tokens",
+    "method": "Independent reconstruction from recorded epoch_orders metadata, actual block count, partial-tail lengths, and epoch end batch sizes; validation rows do not use their input_tokens field as training progress",
+    "all_train_probe_recorded_cumulative_tokens_matched": true,
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "dataset_input_tokens": 5000000000,
+    "epoch_steps": 152588,
+    "epoch2_started_at_tokens": 5000000000
+  },
+  "learning_rate_policy": {
+    "schema_version": 1,
+    "type": "linear_input_tokens",
+    "start_input_tokens": 5000000000,
+    "end_input_tokens": 6000000000,
+    "start_lr": 3e-06,
+    "end_lr": 3e-07,
+    "after": "hold"
+  },
+  "recent_progress_record": {
+    "step": 195800,
+    "cumulative_tokens": 6415969280,
+    "lr": 3e-07
+  },
+  "main_comparison_nominal_windows": {
+    "decay_late_B": [
+      5.5,
+      6.0
+    ],
+    "constant_lr_B": [
+      6.0,
+      6.38975488
+    ]
+  },
+  "main_comparison": {
+    "validation": {
+      "decay_late": {
+        "points": 16,
+        "first": {
+          "step": 168000,
+          "input_tokens": 5505020416,
+          "tokens_B": 5.505020416,
+          "loss": 1.8520469665527344
+        },
+        "last": {
+          "step": 183000,
+          "input_tokens": 5996538880,
+          "tokens_B": 5.99653888,
+          "loss": 1.8495455980300903
+        },
+        "observed_span_B": 0.4915184640000003,
+        "loss_change": -0.002501368522644043,
+        "ols_loss_per_B": -0.005273593655961331
+      },
+      "constant_lr": {
+        "points": 12,
+        "first": {
+          "step": 184000,
+          "input_tokens": 6029306880,
+          "tokens_B": 6.02930688,
+          "loss": 1.849487066268921
+        },
+        "last": {
+          "step": 195000,
+          "input_tokens": 6389754880,
+          "tokens_B": 6.38975488,
+          "loss": 1.8490400314331055
+        },
+        "observed_span_B": 0.3604479999999999,
+        "loss_change": -0.0004470348358154297,
+        "ols_loss_per_B": -0.0014030259595923381
+      },
+      "constant_to_decay_slope_magnitude_ratio": 0.2660474149361776,
+      "estimated_reduction_in_descent_rate_fraction": 0.7339525850638224,
+      "both_point_estimates_negative": true
+    },
+    "uniform_train_probe": {
+      "decay_late": {
+        "points": 16,
+        "first": {
+          "step": 168000,
+          "input_tokens": 5505020416,
+          "tokens_B": 5.505020416,
+          "loss": 1.8874695301055908
+        },
+        "last": {
+          "step": 183000,
+          "input_tokens": 5996538880,
+          "tokens_B": 5.99653888,
+          "loss": 1.884421944618225
+        },
+        "observed_span_B": 0.4915184640000003,
+        "loss_change": -0.0030475854873657227,
+        "ols_loss_per_B": -0.0062730241345851975
+      },
+      "constant_lr": {
+        "points": 12,
+        "first": {
+          "step": 184000,
+          "input_tokens": 6029306880,
+          "tokens_B": 6.02930688,
+          "loss": 1.884163737297058
+        },
+        "last": {
+          "step": 195000,
+          "input_tokens": 6389754880,
+          "tokens_B": 6.38975488,
+          "loss": 1.8832587003707886
+        },
+        "observed_span_B": 0.3604479999999999,
+        "loss_change": -0.0009050369262695312,
+        "ols_loss_per_B": -0.0029834987875725404
+      },
+      "constant_to_decay_slope_magnitude_ratio": 0.47560773297898745,
+      "estimated_reduction_in_descent_rate_fraction": 0.5243922670210126,
+      "both_point_estimates_negative": true
+    }
+  },
+  "sensitivity_comparisons": {
+    "validation": {
+      "nominal_equal_width_0.2B": {
+        "decay_late": {
+          "points": 6,
+          "first": {
+            "step": 178000,
+            "input_tokens": 5832700416,
+            "tokens_B": 5.832700416,
+            "loss": 1.8503249883651733
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.8495455980300903
+          },
+          "observed_span_B": 0.16383846400000035,
+          "loss_change": -0.0007793903350830078,
+          "ols_loss_per_B": -0.004745223055718744
+        },
+        "constant_lr": {
+          "points": 6,
+          "first": {
+            "step": 184000,
+            "input_tokens": 6029306880,
+            "tokens_B": 6.02930688,
+            "loss": 1.849487066268921
+          },
+          "last": {
+            "step": 189000,
+            "input_tokens": 6193146880,
+            "tokens_B": 6.19314688,
+            "loss": 1.849313497543335
+          },
+          "observed_span_B": 0.16383999999999954,
+          "loss_change": -0.0001735687255859375,
+          "ols_loss_per_B": -0.0010560532765729116
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.2225508188282531,
+        "estimated_reduction_in_descent_rate_fraction": 0.7774491811717469,
+        "both_point_estimates_negative": true
+      },
+      "nominal_equal_width_0.3B": {
+        "decay_late": {
+          "points": 10,
+          "first": {
+            "step": 174000,
+            "input_tokens": 5701628416,
+            "tokens_B": 5.701628416,
+            "loss": 1.8513072729110718
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.8495455980300903
+          },
+          "observed_span_B": 0.294910464,
+          "loss_change": -0.0017616748809814453,
+          "ols_loss_per_B": -0.0058592819299267875
+        },
+        "constant_lr": {
+          "points": 9,
+          "first": {
+            "step": 184000,
+            "input_tokens": 6029306880,
+            "tokens_B": 6.02930688,
+            "loss": 1.849487066268921
+          },
+          "last": {
+            "step": 192000,
+            "input_tokens": 6291450880,
+            "tokens_B": 6.29145088,
+            "loss": 1.8490126132965088
+          },
+          "observed_span_B": 0.26214400000000015,
+          "loss_change": -0.0004744529724121094,
+          "ols_loss_per_B": -0.0015991948506173974
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.2729335897713629,
+        "estimated_reduction_in_descent_rate_fraction": 0.727066410228637,
+        "both_point_estimates_negative": true
+      },
+      "matched_7_points_first_constant": {
+        "decay_late": {
+          "points": 7,
+          "first": {
+            "step": 177000,
+            "input_tokens": 5799932416,
+            "tokens_B": 5.799932416,
+            "loss": 1.85061514377594
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.8495455980300903
+          },
+          "observed_span_B": 0.19660646400000026,
+          "loss_change": -0.0010695457458496094,
+          "ols_loss_per_B": -0.005193917397110666
+        },
+        "constant_lr": {
+          "points": 7,
+          "first": {
+            "step": 184000,
+            "input_tokens": 6029306880,
+            "tokens_B": 6.02930688,
+            "loss": 1.849487066268921
+          },
+          "last": {
+            "step": 190000,
+            "input_tokens": 6225914880,
+            "tokens_B": 6.22591488,
+            "loss": 1.8492308855056763
+          },
+          "observed_span_B": 0.19660800000000034,
+          "loss_change": -0.0002561807632446289,
+          "ols_loss_per_B": -0.0010971104659672293
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.2112298641055676,
+        "estimated_reduction_in_descent_rate_fraction": 0.7887701358944323,
+        "both_point_estimates_negative": true
+      },
+      "matched_7_points_latest_constant": {
+        "decay_late": {
+          "points": 7,
+          "first": {
+            "step": 177000,
+            "input_tokens": 5799932416,
+            "tokens_B": 5.799932416,
+            "loss": 1.85061514377594
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.8495455980300903
+          },
+          "observed_span_B": 0.19660646400000026,
+          "loss_change": -0.0010695457458496094,
+          "ols_loss_per_B": -0.005193917397110666
+        },
+        "constant_lr": {
+          "points": 7,
+          "first": {
+            "step": 189000,
+            "input_tokens": 6193146880,
+            "tokens_B": 6.19314688,
+            "loss": 1.849313497543335
+          },
+          "last": {
+            "step": 195000,
+            "input_tokens": 6389754880,
+            "tokens_B": 6.38975488,
+            "loss": 1.8490400314331055
+          },
+          "observed_span_B": 0.19660800000000034,
+          "loss_change": -0.0002734661102294922,
+          "ols_loss_per_B": -0.0014541521003203753
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.27997212684385553,
+        "estimated_reduction_in_descent_rate_fraction": 0.7200278731561445,
+        "both_point_estimates_negative": true
+      },
+      "matched_10_points_first_constant": {
+        "decay_late": {
+          "points": 10,
+          "first": {
+            "step": 174000,
+            "input_tokens": 5701628416,
+            "tokens_B": 5.701628416,
+            "loss": 1.8513072729110718
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.8495455980300903
+          },
+          "observed_span_B": 0.294910464,
+          "loss_change": -0.0017616748809814453,
+          "ols_loss_per_B": -0.0058592819299267875
+        },
+        "constant_lr": {
+          "points": 10,
+          "first": {
+            "step": 184000,
+            "input_tokens": 6029306880,
+            "tokens_B": 6.02930688,
+            "loss": 1.849487066268921
+          },
+          "last": {
+            "step": 193000,
+            "input_tokens": 6324218880,
+            "tokens_B": 6.32421888,
+            "loss": 1.8490443229675293
+          },
+          "observed_span_B": 0.29491200000000006,
+          "loss_change": -0.00044274330139160156,
+          "ols_loss_per_B": -0.0015530641769256543
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.2650604964054119,
+        "estimated_reduction_in_descent_rate_fraction": 0.734939503594588,
+        "both_point_estimates_negative": true
+      },
+      "matched_10_points_latest_constant": {
+        "decay_late": {
+          "points": 10,
+          "first": {
+            "step": 174000,
+            "input_tokens": 5701628416,
+            "tokens_B": 5.701628416,
+            "loss": 1.8513072729110718
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.8495455980300903
+          },
+          "observed_span_B": 0.294910464,
+          "loss_change": -0.0017616748809814453,
+          "ols_loss_per_B": -0.0058592819299267875
+        },
+        "constant_lr": {
+          "points": 10,
+          "first": {
+            "step": 186000,
+            "input_tokens": 6094842880,
+            "tokens_B": 6.09484288,
+            "loss": 1.8493938446044922
+          },
+          "last": {
+            "step": 195000,
+            "input_tokens": 6389754880,
+            "tokens_B": 6.38975488,
+            "loss": 1.8490400314331055
+          },
+          "observed_span_B": 0.29491200000000006,
+          "loss_change": -0.00035381317138671875,
+          "ols_loss_per_B": -0.001438699352244535
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.2455419229609441,
+        "estimated_reduction_in_descent_rate_fraction": 0.7544580770390559,
+        "both_point_estimates_negative": true
+      }
+    },
+    "uniform_train_probe": {
+      "nominal_equal_width_0.2B": {
+        "decay_late": {
+          "points": 6,
+          "first": {
+            "step": 178000,
+            "input_tokens": 5832700416,
+            "tokens_B": 5.832700416,
+            "loss": 1.8852391242980957
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.884421944618225
+          },
+          "observed_span_B": 0.16383846400000035,
+          "loss_change": -0.0008171796798706055,
+          "ols_loss_per_B": -0.0057336095120212845
+        },
+        "constant_lr": {
+          "points": 6,
+          "first": {
+            "step": 184000,
+            "input_tokens": 6029306880,
+            "tokens_B": 6.02930688,
+            "loss": 1.884163737297058
+          },
+          "last": {
+            "step": 189000,
+            "input_tokens": 6193146880,
+            "tokens_B": 6.19314688,
+            "loss": 1.8837933540344238
+          },
+          "observed_span_B": 0.16383999999999954,
+          "loss_change": -0.00037038326263427734,
+          "ols_loss_per_B": -0.0027841971521931114
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.48559239103319946,
+        "estimated_reduction_in_descent_rate_fraction": 0.5144076089668006,
+        "both_point_estimates_negative": true
+      },
+      "nominal_equal_width_0.3B": {
+        "decay_late": {
+          "points": 10,
+          "first": {
+            "step": 174000,
+            "input_tokens": 5701628416,
+            "tokens_B": 5.701628416,
+            "loss": 1.8860780000686646
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.884421944618225
+          },
+          "observed_span_B": 0.294910464,
+          "loss_change": -0.0016560554504394531,
+          "ols_loss_per_B": -0.006601166045423315
+        },
+        "constant_lr": {
+          "points": 9,
+          "first": {
+            "step": 184000,
+            "input_tokens": 6029306880,
+            "tokens_B": 6.02930688,
+            "loss": 1.884163737297058
+          },
+          "last": {
+            "step": 192000,
+            "input_tokens": 6291450880,
+            "tokens_B": 6.29145088,
+            "loss": 1.8834580183029175
+          },
+          "observed_span_B": 0.26214400000000015,
+          "loss_change": -0.000705718994140625,
+          "ols_loss_per_B": -0.0029491881529490113
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.44676775779541655,
+        "estimated_reduction_in_descent_rate_fraction": 0.5532322422045834,
+        "both_point_estimates_negative": true
+      },
+      "matched_7_points_first_constant": {
+        "decay_late": {
+          "points": 7,
+          "first": {
+            "step": 177000,
+            "input_tokens": 5799932416,
+            "tokens_B": 5.799932416,
+            "loss": 1.885629653930664
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.884421944618225
+          },
+          "observed_span_B": 0.19660646400000026,
+          "loss_change": -0.0012077093124389648,
+          "ols_loss_per_B": -0.006302595831405179
+        },
+        "constant_lr": {
+          "points": 7,
+          "first": {
+            "step": 184000,
+            "input_tokens": 6029306880,
+            "tokens_B": 6.02930688,
+            "loss": 1.884163737297058
+          },
+          "last": {
+            "step": 190000,
+            "input_tokens": 6225914880,
+            "tokens_B": 6.22591488,
+            "loss": 1.8837755918502808
+          },
+          "observed_span_B": 0.19660800000000034,
+          "loss_change": -0.00038814544677734375,
+          "ols_loss_per_B": -0.0026120687834918486
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.41444332674422524,
+        "estimated_reduction_in_descent_rate_fraction": 0.5855566732557748,
+        "both_point_estimates_negative": true
+      },
+      "matched_7_points_latest_constant": {
+        "decay_late": {
+          "points": 7,
+          "first": {
+            "step": 177000,
+            "input_tokens": 5799932416,
+            "tokens_B": 5.799932416,
+            "loss": 1.885629653930664
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.884421944618225
+          },
+          "observed_span_B": 0.19660646400000026,
+          "loss_change": -0.0012077093124389648,
+          "ols_loss_per_B": -0.006302595831405179
+        },
+        "constant_lr": {
+          "points": 7,
+          "first": {
+            "step": 189000,
+            "input_tokens": 6193146880,
+            "tokens_B": 6.19314688,
+            "loss": 1.8837933540344238
+          },
+          "last": {
+            "step": 195000,
+            "input_tokens": 6389754880,
+            "tokens_B": 6.38975488,
+            "loss": 1.8832587003707886
+          },
+          "observed_span_B": 0.19660800000000034,
+          "loss_change": -0.0005346536636352539,
+          "ols_loss_per_B": -0.0029924974244620118
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.4748039545151711,
+        "estimated_reduction_in_descent_rate_fraction": 0.5251960454848289,
+        "both_point_estimates_negative": true
+      },
+      "matched_10_points_first_constant": {
+        "decay_late": {
+          "points": 10,
+          "first": {
+            "step": 174000,
+            "input_tokens": 5701628416,
+            "tokens_B": 5.701628416,
+            "loss": 1.8860780000686646
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.884421944618225
+          },
+          "observed_span_B": 0.294910464,
+          "loss_change": -0.0016560554504394531,
+          "ols_loss_per_B": -0.006601166045423315
+        },
+        "constant_lr": {
+          "points": 10,
+          "first": {
+            "step": 184000,
+            "input_tokens": 6029306880,
+            "tokens_B": 6.02930688,
+            "loss": 1.884163737297058
+          },
+          "last": {
+            "step": 193000,
+            "input_tokens": 6324218880,
+            "tokens_B": 6.32421888,
+            "loss": 1.883204698562622
+          },
+          "observed_span_B": 0.29491200000000006,
+          "loss_change": -0.0009590387344360352,
+          "ols_loss_per_B": -0.0032996026813193664
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.4998514896632587,
+        "estimated_reduction_in_descent_rate_fraction": 0.5001485103367413,
+        "both_point_estimates_negative": true
+      },
+      "matched_10_points_latest_constant": {
+        "decay_late": {
+          "points": 10,
+          "first": {
+            "step": 174000,
+            "input_tokens": 5701628416,
+            "tokens_B": 5.701628416,
+            "loss": 1.8860780000686646
+          },
+          "last": {
+            "step": 183000,
+            "input_tokens": 5996538880,
+            "tokens_B": 5.99653888,
+            "loss": 1.884421944618225
+          },
+          "observed_span_B": 0.294910464,
+          "loss_change": -0.0016560554504394531,
+          "ols_loss_per_B": -0.006601166045423315
+        },
+        "constant_lr": {
+          "points": 10,
+          "first": {
+            "step": 186000,
+            "input_tokens": 6094842880,
+            "tokens_B": 6.09484288,
+            "loss": 1.8840705156326294
+          },
+          "last": {
+            "step": 195000,
+            "input_tokens": 6389754880,
+            "tokens_B": 6.38975488,
+            "loss": 1.8832587003707886
+          },
+          "observed_span_B": 0.29491200000000006,
+          "loss_change": -0.0008118152618408203,
+          "ols_loss_per_B": -0.003050544447350228
+        },
+        "constant_to_decay_slope_magnitude_ratio": 0.4621220593996746,
+        "estimated_reduction_in_descent_rate_fraction": 0.5378779406003253,
+        "both_point_estimates_negative": true
+      }
+    }
+  },
+  "fixed_observations": {
+    "validation": [
+      {
+        "step": 168000,
+        "input_tokens": 5505020416,
+        "tokens_B": 5.505020416,
+        "loss": 1.8520469665527344
+      },
+      {
+        "step": 169000,
+        "input_tokens": 5537788416,
+        "tokens_B": 5.537788416,
+        "loss": 1.8516387939453125
+      },
+      {
+        "step": 170000,
+        "input_tokens": 5570556416,
+        "tokens_B": 5.570556416,
+        "loss": 1.8520171642303467
+      },
+      {
+        "step": 171000,
+        "input_tokens": 5603324416,
+        "tokens_B": 5.603324416,
+        "loss": 1.8517236709594727
+      },
+      {
+        "step": 172000,
+        "input_tokens": 5636092416,
+        "tokens_B": 5.636092416,
+        "loss": 1.8513303995132446
+      },
+      {
+        "step": 173000,
+        "input_tokens": 5668860416,
+        "tokens_B": 5.668860416,
+        "loss": 1.8513704538345337
+      },
+      {
+        "step": 174000,
+        "input_tokens": 5701628416,
+        "tokens_B": 5.701628416,
+        "loss": 1.8513072729110718
+      },
+      {
+        "step": 175000,
+        "input_tokens": 5734396416,
+        "tokens_B": 5.734396416,
+        "loss": 1.8509758710861206
+      },
+      {
+        "step": 176000,
+        "input_tokens": 5767164416,
+        "tokens_B": 5.767164416,
+        "loss": 1.8508408069610596
+      },
+      {
+        "step": 177000,
+        "input_tokens": 5799932416,
+        "tokens_B": 5.799932416,
+        "loss": 1.85061514377594
+      },
+      {
+        "step": 178000,
+        "input_tokens": 5832700416,
+        "tokens_B": 5.832700416,
+        "loss": 1.8503249883651733
+      },
+      {
+        "step": 179000,
+        "input_tokens": 5865468416,
+        "tokens_B": 5.865468416,
+        "loss": 1.8501577377319336
+      },
+      {
+        "step": 180000,
+        "input_tokens": 5898234880,
+        "tokens_B": 5.89823488,
+        "loss": 1.8500298261642456
+      },
+      {
+        "step": 181000,
+        "input_tokens": 5931002880,
+        "tokens_B": 5.93100288,
+        "loss": 1.8498371839523315
+      },
+      {
+        "step": 182000,
+        "input_tokens": 5963770880,
+        "tokens_B": 5.96377088,
+        "loss": 1.8497068881988525
+      },
+      {
+        "step": 183000,
+        "input_tokens": 5996538880,
+        "tokens_B": 5.99653888,
+        "loss": 1.8495455980300903
+      },
+      {
+        "step": 184000,
+        "input_tokens": 6029306880,
+        "tokens_B": 6.02930688,
+        "loss": 1.849487066268921
+      },
+      {
+        "step": 185000,
+        "input_tokens": 6062074880,
+        "tokens_B": 6.06207488,
+        "loss": 1.8493820428848267
+      },
+      {
+        "step": 186000,
+        "input_tokens": 6094842880,
+        "tokens_B": 6.09484288,
+        "loss": 1.8493938446044922
+      },
+      {
+        "step": 187000,
+        "input_tokens": 6127610880,
+        "tokens_B": 6.12761088,
+        "loss": 1.849318027496338
+      },
+      {
+        "step": 188000,
+        "input_tokens": 6160378880,
+        "tokens_B": 6.16037888,
+        "loss": 1.8492928743362427
+      },
+      {
+        "step": 189000,
+        "input_tokens": 6193146880,
+        "tokens_B": 6.19314688,
+        "loss": 1.849313497543335
+      },
+      {
+        "step": 190000,
+        "input_tokens": 6225914880,
+        "tokens_B": 6.22591488,
+        "loss": 1.8492308855056763
+      },
+      {
+        "step": 191000,
+        "input_tokens": 6258682880,
+        "tokens_B": 6.25868288,
+        "loss": 1.849076747894287
+      },
+      {
+        "step": 192000,
+        "input_tokens": 6291450880,
+        "tokens_B": 6.29145088,
+        "loss": 1.8490126132965088
+      },
+      {
+        "step": 193000,
+        "input_tokens": 6324218880,
+        "tokens_B": 6.32421888,
+        "loss": 1.8490443229675293
+      },
+      {
+        "step": 194000,
+        "input_tokens": 6356986880,
+        "tokens_B": 6.35698688,
+        "loss": 1.8489902019500732
+      },
+      {
+        "step": 195000,
+        "input_tokens": 6389754880,
+        "tokens_B": 6.38975488,
+        "loss": 1.8490400314331055
+      }
+    ],
+    "uniform_train_probe": [
+      {
+        "step": 168000,
+        "input_tokens": 5505020416,
+        "tokens_B": 5.505020416,
+        "loss": 1.8874695301055908
+      },
+      {
+        "step": 169000,
+        "input_tokens": 5537788416,
+        "tokens_B": 5.537788416,
+        "loss": 1.8872603178024292
+      },
+      {
+        "step": 170000,
+        "input_tokens": 5570556416,
+        "tokens_B": 5.570556416,
+        "loss": 1.886812448501587
+      },
+      {
+        "step": 171000,
+        "input_tokens": 5603324416,
+        "tokens_B": 5.603324416,
+        "loss": 1.8867911100387573
+      },
+      {
+        "step": 172000,
+        "input_tokens": 5636092416,
+        "tokens_B": 5.636092416,
+        "loss": 1.8864660263061523
+      },
+      {
+        "step": 173000,
+        "input_tokens": 5668860416,
+        "tokens_B": 5.668860416,
+        "loss": 1.8864314556121826
+      },
+      {
+        "step": 174000,
+        "input_tokens": 5701628416,
+        "tokens_B": 5.701628416,
+        "loss": 1.8860780000686646
+      },
+      {
+        "step": 175000,
+        "input_tokens": 5734396416,
+        "tokens_B": 5.734396416,
+        "loss": 1.8859883546829224
+      },
+      {
+        "step": 176000,
+        "input_tokens": 5767164416,
+        "tokens_B": 5.767164416,
+        "loss": 1.8861517906188965
+      },
+      {
+        "step": 177000,
+        "input_tokens": 5799932416,
+        "tokens_B": 5.799932416,
+        "loss": 1.885629653930664
+      },
+      {
+        "step": 178000,
+        "input_tokens": 5832700416,
+        "tokens_B": 5.832700416,
+        "loss": 1.8852391242980957
+      },
+      {
+        "step": 179000,
+        "input_tokens": 5865468416,
+        "tokens_B": 5.865468416,
+        "loss": 1.8852365016937256
+      },
+      {
+        "step": 180000,
+        "input_tokens": 5898234880,
+        "tokens_B": 5.89823488,
+        "loss": 1.8847962617874146
+      },
+      {
+        "step": 181000,
+        "input_tokens": 5931002880,
+        "tokens_B": 5.93100288,
+        "loss": 1.8846338987350464
+      },
+      {
+        "step": 182000,
+        "input_tokens": 5963770880,
+        "tokens_B": 5.96377088,
+        "loss": 1.884460687637329
+      },
+      {
+        "step": 183000,
+        "input_tokens": 5996538880,
+        "tokens_B": 5.99653888,
+        "loss": 1.884421944618225
+      },
+      {
+        "step": 184000,
+        "input_tokens": 6029306880,
+        "tokens_B": 6.02930688,
+        "loss": 1.884163737297058
+      },
+      {
+        "step": 185000,
+        "input_tokens": 6062074880,
+        "tokens_B": 6.06207488,
+        "loss": 1.8842945098876953
+      },
+      {
+        "step": 186000,
+        "input_tokens": 6094842880,
+        "tokens_B": 6.09484288,
+        "loss": 1.8840705156326294
+      },
+      {
+        "step": 187000,
+        "input_tokens": 6127610880,
+        "tokens_B": 6.12761088,
+        "loss": 1.884090781211853
+      },
+      {
+        "step": 188000,
+        "input_tokens": 6160378880,
+        "tokens_B": 6.16037888,
+        "loss": 1.8838406801223755
+      },
+      {
+        "step": 189000,
+        "input_tokens": 6193146880,
+        "tokens_B": 6.19314688,
+        "loss": 1.8837933540344238
+      },
+      {
+        "step": 190000,
+        "input_tokens": 6225914880,
+        "tokens_B": 6.22591488,
+        "loss": 1.8837755918502808
+      },
+      {
+        "step": 191000,
+        "input_tokens": 6258682880,
+        "tokens_B": 6.25868288,
+        "loss": 1.8835984468460083
+      },
+      {
+        "step": 192000,
+        "input_tokens": 6291450880,
+        "tokens_B": 6.29145088,
+        "loss": 1.8834580183029175
+      },
+      {
+        "step": 193000,
+        "input_tokens": 6324218880,
+        "tokens_B": 6.32421888,
+        "loss": 1.883204698562622
+      },
+      {
+        "step": 194000,
+        "input_tokens": 6356986880,
+        "tokens_B": 6.35698688,
+        "loss": 1.88340163230896
+      },
+      {
+        "step": 195000,
+        "input_tokens": 6389754880,
+        "tokens_B": 6.38975488,
+        "loss": 1.8832587003707886
+      }
+    ]
+  },
+  "interpretation": {
+    "observed": "Fixed validation and fixed uniform training probe both continue to decrease in the fitted post-6B window, but their descent rate is smaller than in late decay; nominal equal-width and matched-point windows support the same qualitative reading.",
+    "possible_explanations": [
+      "Smaller learning rate can reduce update size and learning progress per token.",
+      "Some late-decay improvement may be a transient cooldown response; after holding a small constant LR, that transient can diminish.",
+      "Further training on the same model and corpus can provide diminishing marginal gains."
+    ],
+    "causal_limit": "This single uninterrupted trajectory cannot uniquely separate these mechanisms or establish that another LR reduction would improve future training.",
+    "epoch_control": "All compared observations are within epoch2; the 5B epoch1-to-epoch2 transition is outside these comparison windows.",
+    "statistical_limit": "OLS slopes are descriptive point estimates. Repeated evaluation of the same fixed samples and a temporally correlated trajectory are not treated as independent observations; no p-value or independent-sample confidence interval is reported.",
+    "action_limit": "No automatic LR change is warranted from this observation alone."
+  },
+  "training_modified": false,
+  "gpu_used": false
+}

@@ -1,0 +1,1763 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-09T09:31:58.113698+00:00",
+  "generated_beijing": "2026-10-09T17:31:58.113698+08:00",
+  "native_run": "./runs/cpt_native_from0_5h_20261009",
+  "original_fast": "./runs/cpt_10b_20261008",
+  "script_sha256": "5e267b6fc1372fcd0e63312eb888c368f644a6d98c74cc939dce197276b2a61f",
+  "gpu_execution": false,
+  "observation_budget_seconds": 18000,
+  "configured_training_input_tokens": 10000000000,
+  "interpretation": "Fixed native-eager split loss comparison under matched recipe; not a root-cause determination or a claim of final 10B completion.",
+  "status": "completed_observation",
+  "actual_run_status": "stopped",
+  "stop_reason": "max_seconds",
+  "controls": {
+    "status": "passed",
+    "fresh_lineage_checks": [
+      {
+        "run": "./runs/cpt_native_from0_5h_20261009",
+        "basis": "Explicit original_signature equals own signature; explicit empty migration list"
+      },
+      {
+        "run": "./runs/cpt_10b_20261008",
+        "basis": "Historical pre-lineage trainer: no migration module/CLI, verified source signature, no resume and explicit zero initial counters",
+        "missing_historical_fields": [
+          "original_signature",
+          "source_migrations"
+        ],
+        "inferred_original_signature": {
+          "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+          "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+          "token_file_sha256": {
+            "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+            "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+          },
+          "peak_lr": 1e-05,
+          "seed": 42,
+          "sequence_length": 2048,
+          "effective_batch": 16,
+          "epochs": 2,
+          "source_sha256": {
+            "train_cpt.py": "319197b0fb29b3425ba6f6cb7c10bb9c3c62ff25d21333ff55c37d614c274aa3",
+            "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+            "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+            "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+            "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+            "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+            "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+            "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+            "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+          }
+        },
+        "inferred_migrations": []
+      }
+    ],
+    "same_pinned_base": true,
+    "fresh_weights_and_new_adam_evidence": "CLI has no resume; initial counters zero; native has explicit own signature/empty migrations; historical pre-lineage fast format separately audited; verified fresh-start sources",
+    "initial_tensor_snapshot_checked": false,
+    "same_data_batch_math_order_schedule": true,
+    "same_source": false,
+    "implementation_differences": [
+      "Historical immutable source snapshots differ",
+      "Fast: whole-model compile + compiled capturable AdamW + resolved causal mask + vectorized label alias",
+      "Native: untouched HF eager + standard foreach AdamW + ordinary all-ones masks + independent stacked labels"
+    ],
+    "differences_do_not_invalidate_recipe_comparison": true,
+    "optimizer_math": {
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "weight_decay": 0.1,
+      "eps": 1e-08,
+      "eps_basis": "Explicit source value"
+    },
+    "gradient_clip": {
+      "max_grad_norm": 1.0,
+      "error_if_nonfinite": true
+    },
+    "native_snapshots": {
+      "source_sha256": {
+        "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+        "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+        "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+        "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+        "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+        "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+        "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+        "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+        "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+        "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+        "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+        "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+      },
+      "backend_config_sha256": "f727e399f12bfc95d7a60a5e1b95606f8340fbb59223a0be0240491fa5cbbee1",
+      "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+      "order_sha256": {
+        "order_epoch_00000.npy": "cb620a8596cd8ff50b838e6be94fa676ffbe0d41118c094fcbed66c2817b466b",
+        "order_epoch_00001.npy": "d522f0f1d149346e93da04800c666611fb3789df357343ac221de61a745f6f80"
+      }
+    },
+    "fast_snapshots": {
+      "source_sha256": {
+        "train_cpt.py": "319197b0fb29b3425ba6f6cb7c10bb9c3c62ff25d21333ff55c37d614c274aa3",
+        "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+        "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+        "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+        "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+        "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+        "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+        "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+        "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+      },
+      "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+      "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+      "order_sha256": {
+        "order_epoch_00000.npy": "cb620a8596cd8ff50b838e6be94fa676ffbe0d41118c094fcbed66c2817b466b",
+        "order_epoch_00001.npy": "d522f0f1d149346e93da04800c666611fb3789df357343ac221de61a745f6f80"
+      }
+    },
+    "precision": "BF16 autocast; FP32 parameters, gradients and AdamW moments",
+    "schedule": {
+      "total_steps": 305176,
+      "peak_lr": 1e-05,
+      "warmup_steps": 15259,
+      "decay_80_step": 244141,
+      "decay_90_step": 274659,
+      "decay_80_factor": 0.316,
+      "decay_90_factor": 0.1
+    },
+    "fixed_train_probe": {
+      "schema_version": 1,
+      "seed": 20261009,
+      "blocks": 256,
+      "indices": [
+        18736,
+        19622,
+        21480,
+        22185,
+        31458,
+        36347,
+        37079,
+        50206,
+        71208,
+        94334,
+        107690,
+        135991,
+        138617,
+        152121,
+        154925,
+        166478,
+        169032,
+        178015,
+        185362,
+        188151,
+        188219,
+        188669,
+        211551,
+        213181,
+        222017,
+        225189,
+        226996,
+        232181,
+        246181,
+        247487,
+        253677,
+        258340,
+        267082,
+        267948,
+        274490,
+        291133,
+        293899,
+        297540,
+        303900,
+        306910,
+        331165,
+        362241,
+        375559,
+        389069,
+        389858,
+        397696,
+        398335,
+        407096,
+        407918,
+        413218,
+        442072,
+        445092,
+        450525,
+        453294,
+        463979,
+        486180,
+        491641,
+        510753,
+        513800,
+        529765,
+        544555,
+        566357,
+        577225,
+        581789,
+        593662,
+        665394,
+        672742,
+        674856,
+        683164,
+        691900,
+        702167,
+        711843,
+        716218,
+        720915,
+        722850,
+        727428,
+        728182,
+        754248,
+        787762,
+        792814,
+        802979,
+        814451,
+        820051,
+        832630,
+        841978,
+        863691,
+        891433,
+        912412,
+        923992,
+        934799,
+        936011,
+        942967,
+        947323,
+        953826,
+        955310,
+        962262,
+        963681,
+        980804,
+        992174,
+        1011212,
+        1034215,
+        1034596,
+        1061044,
+        1073698,
+        1077679,
+        1119149,
+        1128000,
+        1131951,
+        1154427,
+        1172114,
+        1172244,
+        1214506,
+        1215512,
+        1221266,
+        1231411,
+        1235334,
+        1246744,
+        1265081,
+        1288697,
+        1303504,
+        1306948,
+        1338577,
+        1344277,
+        1346338,
+        1357343,
+        1362947,
+        1366624,
+        1380886,
+        1383125,
+        1384006,
+        1388075,
+        1390313,
+        1402059,
+        1412630,
+        1415383,
+        1418943,
+        1433949,
+        1435353,
+        1436563,
+        1438866,
+        1448431,
+        1459681,
+        1466358,
+        1470672,
+        1476764,
+        1477543,
+        1493481,
+        1507074,
+        1510822,
+        1512131,
+        1512348,
+        1514012,
+        1541435,
+        1544228,
+        1548706,
+        1560318,
+        1567771,
+        1573302,
+        1577147,
+        1586770,
+        1619023,
+        1622641,
+        1627913,
+        1635699,
+        1637877,
+        1639767,
+        1645120,
+        1650251,
+        1656603,
+        1662887,
+        1670349,
+        1676039,
+        1685812,
+        1686934,
+        1702688,
+        1729137,
+        1729449,
+        1743152,
+        1744466,
+        1763830,
+        1776819,
+        1791722,
+        1803179,
+        1813057,
+        1816872,
+        1819356,
+        1820983,
+        1821424,
+        1831361,
+        1846619,
+        1849819,
+        1852173,
+        1856868,
+        1858643,
+        1883104,
+        1908831,
+        1914013,
+        1915590,
+        1924244,
+        1925625,
+        1927339,
+        1928828,
+        1929734,
+        1953037,
+        1953790,
+        1987830,
+        1995362,
+        2000044,
+        2007711,
+        2016083,
+        2024167,
+        2043010,
+        2043440,
+        2045980,
+        2046929,
+        2047258,
+        2048257,
+        2056027,
+        2062999,
+        2080771,
+        2087742,
+        2112236,
+        2119047,
+        2123795,
+        2124445,
+        2126808,
+        2131525,
+        2131999,
+        2132597,
+        2149770,
+        2159259,
+        2178479,
+        2182513,
+        2212805,
+        2221391,
+        2226858,
+        2230178,
+        2247053,
+        2250776,
+        2272901,
+        2277890,
+        2306872,
+        2324430,
+        2326425,
+        2334062,
+        2334469,
+        2338002,
+        2350991,
+        2356271,
+        2361978,
+        2372230,
+        2393966,
+        2396836,
+        2411973,
+        2416391,
+        2433687
+      ],
+      "indices_sha256": "0275fe980c1fd3bf853fa63d40c27291d4368b0eb41b4c183127d9f964169a81",
+      "tokens_sha256": "f2d447c272813ee27c047b0a895234932d1d05cb1e4275b11b982dfedee42619",
+      "input_tokens": 524288,
+      "supervised_tokens": 524032,
+      "sampling": "Fixed uniform complete training-corpus blocks; private NumPy RNG; not current minibatch"
+    },
+    "seed": 42,
+    "native_eval_every": 1000,
+    "fast_eval_every": 5000
+  },
+  "latest_native_progress": {
+    "step": 30860,
+    "trained_input_tokens": 1011220480,
+    "source": "./runs/cpt_native_from0_5h_20261009/result.json",
+    "trained_tokens_b": 1.01122048
+  },
+  "common_validation_baseline_loss": 1.86186945438385,
+  "full_10b_schedule_completed": false,
+  "series": {
+    "native_validation": [
+      {
+        "series": "native_validation",
+        "step": 0,
+        "trained_input_tokens": 0,
+        "trained_tokens_b": 0.0,
+        "loss": 1.86186945438385,
+        "perplexity": 6.4357568863247065,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_before.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 1000,
+        "trained_input_tokens": 32768000,
+        "trained_tokens_b": 0.032768,
+        "loss": 1.8362267017364502,
+        "perplexity": 6.272824312177116,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 2000,
+        "trained_input_tokens": 65536000,
+        "trained_tokens_b": 0.065536,
+        "loss": 1.8293251991271973,
+        "perplexity": 6.229681445366919,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 3000,
+        "trained_input_tokens": 98304000,
+        "trained_tokens_b": 0.098304,
+        "loss": 1.8265652656555176,
+        "perplexity": 6.212511643681998,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 4000,
+        "trained_input_tokens": 131072000,
+        "trained_tokens_b": 0.131072,
+        "loss": 1.825844645500183,
+        "perplexity": 6.208036395247086,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 5000,
+        "trained_input_tokens": 163840000,
+        "trained_tokens_b": 0.16384,
+        "loss": 1.8254090547561646,
+        "perplexity": 6.205332820923509,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 6000,
+        "trained_input_tokens": 196608000,
+        "trained_tokens_b": 0.196608,
+        "loss": 1.8262052536010742,
+        "perplexity": 6.210275467151309,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 7000,
+        "trained_input_tokens": 229376000,
+        "trained_tokens_b": 0.229376,
+        "loss": 1.827295184135437,
+        "perplexity": 6.217047926094214,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 8000,
+        "trained_input_tokens": 262144000,
+        "trained_tokens_b": 0.262144,
+        "loss": 1.8288062810897827,
+        "perplexity": 6.226449589904139,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 9000,
+        "trained_input_tokens": 294912000,
+        "trained_tokens_b": 0.294912,
+        "loss": 1.8308762311935425,
+        "perplexity": 6.239351378301249,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 10000,
+        "trained_input_tokens": 327680000,
+        "trained_tokens_b": 0.32768,
+        "loss": 1.8339403867721558,
+        "perplexity": 6.258499042363297,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 11000,
+        "trained_input_tokens": 360448000,
+        "trained_tokens_b": 0.360448,
+        "loss": 1.8359018564224243,
+        "perplexity": 6.270786945526019,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 12000,
+        "trained_input_tokens": 393216000,
+        "trained_tokens_b": 0.393216,
+        "loss": 1.839354395866394,
+        "perplexity": 6.292474501828948,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 13000,
+        "trained_input_tokens": 425984000,
+        "trained_tokens_b": 0.425984,
+        "loss": 1.8428267240524292,
+        "perplexity": 6.314362016727417,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 14000,
+        "trained_input_tokens": 458752000,
+        "trained_tokens_b": 0.458752,
+        "loss": 1.846396803855896,
+        "perplexity": 6.336945080719468,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 15000,
+        "trained_input_tokens": 491520000,
+        "trained_tokens_b": 0.49152,
+        "loss": 1.8508023023605347,
+        "perplexity": 6.364924068238085,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 16000,
+        "trained_input_tokens": 524288000,
+        "trained_tokens_b": 0.524288,
+        "loss": 1.8532315492630005,
+        "perplexity": 6.380404836005879,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 17000,
+        "trained_input_tokens": 557056000,
+        "trained_tokens_b": 0.557056,
+        "loss": 1.854448676109314,
+        "perplexity": 6.388175325898794,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 18000,
+        "trained_input_tokens": 589824000,
+        "trained_tokens_b": 0.589824,
+        "loss": 1.8569540977478027,
+        "perplexity": 6.404200465073318,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 19000,
+        "trained_input_tokens": 622592000,
+        "trained_tokens_b": 0.622592,
+        "loss": 1.8590762615203857,
+        "perplexity": 6.4178056584108605,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 20000,
+        "trained_input_tokens": 655360000,
+        "trained_tokens_b": 0.65536,
+        "loss": 1.8604923486709595,
+        "perplexity": 6.426900268399001,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 21000,
+        "trained_input_tokens": 688128000,
+        "trained_tokens_b": 0.688128,
+        "loss": 1.8623181581497192,
+        "perplexity": 6.438645282644511,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 22000,
+        "trained_input_tokens": 720896000,
+        "trained_tokens_b": 0.720896,
+        "loss": 1.8640239238739014,
+        "perplexity": 6.449637475465412,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 23000,
+        "trained_input_tokens": 753664000,
+        "trained_tokens_b": 0.753664,
+        "loss": 1.8656773567199707,
+        "perplexity": 6.4603103389125875,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 24000,
+        "trained_input_tokens": 786432000,
+        "trained_tokens_b": 0.786432,
+        "loss": 1.8668760061264038,
+        "perplexity": 6.4680586288795805,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 25000,
+        "trained_input_tokens": 819200000,
+        "trained_tokens_b": 0.8192,
+        "loss": 1.8679640293121338,
+        "perplexity": 6.475099856449274,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 26000,
+        "trained_input_tokens": 851968000,
+        "trained_tokens_b": 0.851968,
+        "loss": 1.8696168661117554,
+        "perplexity": 6.485810989211985,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 27000,
+        "trained_input_tokens": 884736000,
+        "trained_tokens_b": 0.884736,
+        "loss": 1.8712093830108643,
+        "perplexity": 6.496147981549577,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 28000,
+        "trained_input_tokens": 917504000,
+        "trained_tokens_b": 0.917504,
+        "loss": 1.8724921941757202,
+        "perplexity": 6.5044866600402855,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 29000,
+        "trained_input_tokens": 950272000,
+        "trained_tokens_b": 0.950272,
+        "loss": 1.8727351427078247,
+        "perplexity": 6.506067107502357,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 30000,
+        "trained_input_tokens": 983040000,
+        "trained_tokens_b": 0.98304,
+        "loss": 1.8744851350784302,
+        "perplexity": 6.517462643445403,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      },
+      {
+        "series": "native_validation",
+        "step": 30860,
+        "trained_input_tokens": 1011220480,
+        "trained_tokens_b": 1.01122048,
+        "loss": 1.8750613927841187,
+        "perplexity": 6.52121946385962,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/validation_history.json"
+        ]
+      }
+    ],
+    "original_fast_validation": [
+      {
+        "series": "original_fast_validation",
+        "step": 0,
+        "trained_input_tokens": 0,
+        "trained_tokens_b": 0.0,
+        "loss": 1.86186945438385,
+        "perplexity": 6.4357568863247065,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_before.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 5000,
+        "trained_input_tokens": 163840000,
+        "trained_tokens_b": 0.16384,
+        "loss": 1.8253639936447144,
+        "perplexity": 6.205053208029561,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 10000,
+        "trained_input_tokens": 327680000,
+        "trained_tokens_b": 0.32768,
+        "loss": 1.8339521884918213,
+        "perplexity": 6.258572903850368,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 15000,
+        "trained_input_tokens": 491520000,
+        "trained_tokens_b": 0.49152,
+        "loss": 1.850775122642517,
+        "perplexity": 6.364751073747688,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 20000,
+        "trained_input_tokens": 655360000,
+        "trained_tokens_b": 0.65536,
+        "loss": 1.86033296585083,
+        "perplexity": 6.4258760125360945,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 25000,
+        "trained_input_tokens": 819200000,
+        "trained_tokens_b": 0.8192,
+        "loss": 1.8678395748138428,
+        "perplexity": 6.474294051289334,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 30000,
+        "trained_input_tokens": 983040000,
+        "trained_tokens_b": 0.98304,
+        "loss": 1.8742263317108154,
+        "perplexity": 6.515776120413309,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 35000,
+        "trained_input_tokens": 1146880000,
+        "trained_tokens_b": 1.14688,
+        "loss": 1.8780107498168945,
+        "perplexity": 6.540481259340888,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 40000,
+        "trained_input_tokens": 1310720000,
+        "trained_tokens_b": 1.31072,
+        "loss": 1.882053256034851,
+        "perplexity": 6.566974709389143,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 45000,
+        "trained_input_tokens": 1474560000,
+        "trained_tokens_b": 1.47456,
+        "loss": 1.8869352340698242,
+        "perplexity": 6.599112920866823,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 50000,
+        "trained_input_tokens": 1638400000,
+        "trained_tokens_b": 1.6384,
+        "loss": 1.8896417617797852,
+        "perplexity": 6.616997794884209,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 55000,
+        "trained_input_tokens": 1802240000,
+        "trained_tokens_b": 1.80224,
+        "loss": 1.8945696353912354,
+        "perplexity": 6.649685999224595,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 60000,
+        "trained_input_tokens": 1966080000,
+        "trained_tokens_b": 1.96608,
+        "loss": 1.8956109285354614,
+        "perplexity": 6.656613878017203,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 65000,
+        "trained_input_tokens": 2129920000,
+        "trained_tokens_b": 2.12992,
+        "loss": 1.899017095565796,
+        "perplexity": 6.679326075552532,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 70000,
+        "trained_input_tokens": 2293760000,
+        "trained_tokens_b": 2.29376,
+        "loss": 1.9013830423355103,
+        "perplexity": 6.69514771470247,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 75000,
+        "trained_input_tokens": 2457600000,
+        "trained_tokens_b": 2.4576,
+        "loss": 1.901973009109497,
+        "perplexity": 6.699098794789463,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 80000,
+        "trained_input_tokens": 2621440000,
+        "trained_tokens_b": 2.62144,
+        "loss": 1.9027293920516968,
+        "perplexity": 6.704167795657177,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 85000,
+        "trained_input_tokens": 2785280000,
+        "trained_tokens_b": 2.78528,
+        "loss": 1.904468059539795,
+        "perplexity": 6.7158342533446405,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 90000,
+        "trained_input_tokens": 2949120000,
+        "trained_tokens_b": 2.94912,
+        "loss": 1.904318928718567,
+        "perplexity": 6.714832790143579,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 95000,
+        "trained_input_tokens": 3112960000,
+        "trained_tokens_b": 3.11296,
+        "loss": 1.9042307138442993,
+        "perplexity": 6.714240468139458,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 100000,
+        "trained_input_tokens": 3276800000,
+        "trained_tokens_b": 3.2768,
+        "loss": 1.9039148092269897,
+        "perplexity": 6.712119743564825,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 105000,
+        "trained_input_tokens": 3440640000,
+        "trained_tokens_b": 3.44064,
+        "loss": 1.9032384157180786,
+        "perplexity": 6.707581244417959,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 110000,
+        "trained_input_tokens": 3604480000,
+        "trained_tokens_b": 3.60448,
+        "loss": 1.9039589166641235,
+        "perplexity": 6.712415804493646,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 115000,
+        "trained_input_tokens": 3768320000,
+        "trained_tokens_b": 3.76832,
+        "loss": 1.9039802551269531,
+        "perplexity": 6.71255903865698,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 120000,
+        "trained_input_tokens": 3932160000,
+        "trained_tokens_b": 3.93216,
+        "loss": 1.9036126136779785,
+        "perplexity": 6.7100916773056225,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 125000,
+        "trained_input_tokens": 4096000000,
+        "trained_tokens_b": 4.096,
+        "loss": 1.902840495109558,
+        "perplexity": 6.704912690578975,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 130000,
+        "trained_input_tokens": 4259840000,
+        "trained_tokens_b": 4.25984,
+        "loss": 1.9027153253555298,
+        "perplexity": 6.704073490829023,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 135000,
+        "trained_input_tokens": 4423680000,
+        "trained_tokens_b": 4.42368,
+        "loss": 1.9020172357559204,
+        "perplexity": 6.699395080015018,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 140000,
+        "trained_input_tokens": 4587520000,
+        "trained_tokens_b": 4.58752,
+        "loss": 1.902225136756897,
+        "perplexity": 6.700788035751519,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 145000,
+        "trained_input_tokens": 4751360000,
+        "trained_tokens_b": 4.75136,
+        "loss": 1.901288628578186,
+        "perplexity": 6.694515630490076,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 150000,
+        "trained_input_tokens": 4915198464,
+        "trained_tokens_b": 4.915198464,
+        "loss": 1.8996325731277466,
+        "perplexity": 6.683438316247111,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 155000,
+        "trained_input_tokens": 5079036416,
+        "trained_tokens_b": 5.079036416,
+        "loss": 1.9006640911102295,
+        "perplexity": 6.690335959965293,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 160000,
+        "trained_input_tokens": 5242876416,
+        "trained_tokens_b": 5.242876416,
+        "loss": 1.9009301662445068,
+        "perplexity": 6.692116328849643,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 165000,
+        "trained_input_tokens": 5406716416,
+        "trained_tokens_b": 5.406716416,
+        "loss": 1.9016567468643188,
+        "perplexity": 6.696980457756622,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 170000,
+        "trained_input_tokens": 5570556416,
+        "trained_tokens_b": 5.570556416,
+        "loss": 1.900639533996582,
+        "perplexity": 6.690171666642078,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      },
+      {
+        "series": "original_fast_validation",
+        "step": 175000,
+        "trained_input_tokens": 5734396416,
+        "trained_tokens_b": 5.734396416,
+        "loss": 1.9017146825790405,
+        "perplexity": 6.6973684633455015,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "sources": [
+          "./runs/cpt_10b_20261008/validation_history.json"
+        ]
+      }
+    ],
+    "native_train_probe": [
+      {
+        "series": "native_train_probe",
+        "step": 0,
+        "trained_input_tokens": 0,
+        "trained_tokens_b": 0.0,
+        "loss": 1.931435465812683,
+        "perplexity": 6.899406999528651,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 1000,
+        "trained_input_tokens": 32768000,
+        "trained_tokens_b": 0.032768,
+        "loss": 1.9087955951690674,
+        "perplexity": 6.744960241777731,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 2000,
+        "trained_input_tokens": 65536000,
+        "trained_tokens_b": 0.065536,
+        "loss": 1.9025969505310059,
+        "perplexity": 6.703279944274844,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 3000,
+        "trained_input_tokens": 98304000,
+        "trained_tokens_b": 0.098304,
+        "loss": 1.8992236852645874,
+        "perplexity": 6.680706098058919,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 4000,
+        "trained_input_tokens": 131072000,
+        "trained_tokens_b": 0.131072,
+        "loss": 1.898104190826416,
+        "perplexity": 6.673231269534228,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 5000,
+        "trained_input_tokens": 163840000,
+        "trained_tokens_b": 0.16384,
+        "loss": 1.897996425628662,
+        "perplexity": 6.672512166194662,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 6000,
+        "trained_input_tokens": 196608000,
+        "trained_tokens_b": 0.196608,
+        "loss": 1.898313045501709,
+        "perplexity": 6.674625150638407,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 7000,
+        "trained_input_tokens": 229376000,
+        "trained_tokens_b": 0.229376,
+        "loss": 1.8987995386123657,
+        "perplexity": 6.6778730997787905,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 8000,
+        "trained_input_tokens": 262144000,
+        "trained_tokens_b": 0.262144,
+        "loss": 1.9009361267089844,
+        "perplexity": 6.692156217090177,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 9000,
+        "trained_input_tokens": 294912000,
+        "trained_tokens_b": 0.294912,
+        "loss": 1.9026763439178467,
+        "perplexity": 6.703812161499546,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 10000,
+        "trained_input_tokens": 327680000,
+        "trained_tokens_b": 0.32768,
+        "loss": 1.9058852195739746,
+        "perplexity": 6.725358412279376,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 11000,
+        "trained_input_tokens": 360448000,
+        "trained_tokens_b": 0.360448,
+        "loss": 1.9083144664764404,
+        "perplexity": 6.741715828427546,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 12000,
+        "trained_input_tokens": 393216000,
+        "trained_tokens_b": 0.393216,
+        "loss": 1.9113929271697998,
+        "perplexity": 6.762501913768835,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 13000,
+        "trained_input_tokens": 425984000,
+        "trained_tokens_b": 0.425984,
+        "loss": 1.9154725074768066,
+        "perplexity": 6.7901464340820965,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 14000,
+        "trained_input_tokens": 458752000,
+        "trained_tokens_b": 0.458752,
+        "loss": 1.9171687364578247,
+        "perplexity": 6.801673851054432,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 15000,
+        "trained_input_tokens": 491520000,
+        "trained_tokens_b": 0.49152,
+        "loss": 1.9231706857681274,
+        "perplexity": 6.842619907894552,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 16000,
+        "trained_input_tokens": 524288000,
+        "trained_tokens_b": 0.524288,
+        "loss": 1.926281213760376,
+        "perplexity": 6.863937205496079,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 17000,
+        "trained_input_tokens": 557056000,
+        "trained_tokens_b": 0.557056,
+        "loss": 1.9279154539108276,
+        "perplexity": 6.875163698161423,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 18000,
+        "trained_input_tokens": 589824000,
+        "trained_tokens_b": 0.589824,
+        "loss": 1.929829478263855,
+        "perplexity": 6.8883355304934435,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 19000,
+        "trained_input_tokens": 622592000,
+        "trained_tokens_b": 0.622592,
+        "loss": 1.929274559020996,
+        "perplexity": 6.884514120941214,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 20000,
+        "trained_input_tokens": 655360000,
+        "trained_tokens_b": 0.65536,
+        "loss": 1.931922435760498,
+        "perplexity": 6.902767621589729,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 21000,
+        "trained_input_tokens": 688128000,
+        "trained_tokens_b": 0.688128,
+        "loss": 1.9319995641708374,
+        "perplexity": 6.903300041615416,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 22000,
+        "trained_input_tokens": 720896000,
+        "trained_tokens_b": 0.720896,
+        "loss": 1.9329453706741333,
+        "perplexity": 6.90983231633598,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 23000,
+        "trained_input_tokens": 753664000,
+        "trained_tokens_b": 0.753664,
+        "loss": 1.9338072538375854,
+        "perplexity": 6.915790351668054,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 24000,
+        "trained_input_tokens": 786432000,
+        "trained_tokens_b": 0.786432,
+        "loss": 1.935035228729248,
+        "perplexity": 6.924287984948244,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 25000,
+        "trained_input_tokens": 819200000,
+        "trained_tokens_b": 0.8192,
+        "loss": 1.9348481893539429,
+        "perplexity": 6.922992991560259,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 26000,
+        "trained_input_tokens": 851968000,
+        "trained_tokens_b": 0.851968,
+        "loss": 1.9329884052276611,
+        "perplexity": 6.910129684283168,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 27000,
+        "trained_input_tokens": 884736000,
+        "trained_tokens_b": 0.884736,
+        "loss": 1.9345418214797974,
+        "perplexity": 6.920872333782005,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 28000,
+        "trained_input_tokens": 917504000,
+        "trained_tokens_b": 0.917504,
+        "loss": 1.9352887868881226,
+        "perplexity": 6.9260439172673,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 29000,
+        "trained_input_tokens": 950272000,
+        "trained_tokens_b": 0.950272,
+        "loss": 1.935430645942688,
+        "perplexity": 6.927026509002402,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 30000,
+        "trained_input_tokens": 983040000,
+        "trained_tokens_b": 0.98304,
+        "loss": 1.9325332641601562,
+        "perplexity": 6.906985316101893,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      },
+      {
+        "series": "native_train_probe",
+        "step": 30860,
+        "trained_input_tokens": 1011220480,
+        "trained_tokens_b": 1.01122048,
+        "loss": 1.933874487876892,
+        "perplexity": 6.91625534381987,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "sources": [
+          "./runs/cpt_native_from0_5h_20261009/train_probe_history.json"
+        ]
+      }
+    ]
+  },
+  "duplicate_measurements_removed": {
+    "native_validation": 0,
+    "original_fast_validation": 0,
+    "native_train_probe": 0
+  },
+  "sources": [
+    {
+      "path": "./runs/cpt_native_from0_5h_20261009/manifest.json",
+      "sha256": "8514717a20a605feb900d8d7c878ac82d9561789e9f3581a54e5658bda0649f0"
+    },
+    {
+      "path": "./runs/cpt_10b_20261008/manifest.json",
+      "sha256": "674da36b49212acd8de00e44f06a97b15a20873c2630c4c52665ae4964bd5ec0"
+    },
+    {
+      "path": "./runs/cpt_native_from0_5h_20261009/validation_before.json",
+      "sha256": "c38dbc39cbb142ef2d0496691943cb47e4196bf249c698641c2cad3776d6b31e"
+    },
+    {
+      "path": "./runs/cpt_native_from0_5h_20261009/validation_history.json",
+      "sha256": "bb90f906d2c77ae519cddc0e1efea841f0c8a755074ca55a2e11f096ce6a9c90"
+    },
+    {
+      "path": "./runs/cpt_10b_20261008/validation_before.json",
+      "sha256": "212fce849707cb6f1412cc4e01b897f51f3f56e4647e810b4801b3d15e4e481c"
+    },
+    {
+      "path": "./runs/cpt_10b_20261008/validation_history.json",
+      "sha256": "e4d50544f3cc51b871ee603bc8490fb1e1b6ccf5f87155227ae21c415c85f5a2"
+    },
+    {
+      "path": "./runs/cpt_native_from0_5h_20261009/train_probe_history.json",
+      "sha256": "181a80431cf1401822332f945bb90ceb5d763577dc56a3445c70bedc1db07779"
+    }
+  ],
+  "interpolation": "Straight lines between actual evaluation markers only; no fabricated evaluation rows",
+  "schedule_regions": {
+    "warmup_end_step": 15259,
+    "warmup_end_tokens_b": 0.500006912,
+    "peak_end_step": 244141,
+    "peak_end_tokens_b": 8.000007168,
+    "peak_lr": 1e-05
+  },
+  "matplotlib_version": "3.11.2"
+}

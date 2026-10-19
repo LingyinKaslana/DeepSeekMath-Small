@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "utc": "2026-10-15T15:02:53.176333+00:00",
+  "resume_round": 75,
+  "checkpoint": "./runs/deepseek_dapo_decode_20261015/resume_checkpoint",
+  "compact_decode": true,
+  "preserved": [
+    "weights",
+    "Adam moments",
+    "CPU RNG",
+    "CUDA RNG",
+    "data cursor",
+    "validation history"
+  ],
+  "completed_round_rollback": 0,
+  "uncommitted_rollout_records_archived": 0,
+  "micro_batch": 16,
+  "rollout_prompts": 32,
+  "samples_per_prompt": 8,
+  "effective_groups_per_round": 32,
+  "total_rounds": 100,
+  "policy_precision": "Unchanged FP32 parameters with BF16 autocast; cache dtypes unchanged",
+  "limits": [
+    "Compaction changes random-number consumption and floating-point batch shapes."
+  ]
+}

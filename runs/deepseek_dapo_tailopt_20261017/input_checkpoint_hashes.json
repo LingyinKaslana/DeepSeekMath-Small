@@ -1,0 +1,5 @@
+{
+  "checkpoint_manifest.json": "96a9daf7e699b99e87091dcfb3f766ba6f706a9e3db876985e878ce7d9e668bb",
+  "model-00001-of-00002.safetensors": "8bf14ae180626ebaf3b87b46d11f56fbeace683d64e2ba89bde9a5261bf203b0",
+  "model-00002-of-00002.safetensors": "fd13a051ac772d85e3395c631bcb6e6416cd21bb38cb747c36bc894cd9ac17d6"
+}

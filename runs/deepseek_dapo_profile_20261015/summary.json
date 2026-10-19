@@ -1,0 +1,75 @@
+{
+  "phase": "Round71 first generation batch; inferred from round70 completion before capture and next round71 batch log after capture",
+  "samples": 4501,
+  "duration_seconds": 90.0,
+  "process_cpu_percent_mean": 99.610101010101,
+  "disk_read_bytes": 0,
+  "disk_write_bytes": 0,
+  "metrics": {
+    "SM active (%) (%)": {
+      "weighted_mean": 89.66155829348811,
+      "minimum": 26.136223,
+      "maximum": 96.999711
+    },
+    "Warp occupancy while SM active (%) (%)": {
+      "weighted_mean": 68.3513467538753,
+      "minimum": 24.893595,
+      "maximum": 73.207134
+    },
+    "Tensor pipe active (%) (%)": {
+      "weighted_mean": 12.07405299024932,
+      "minimum": 3.296735,
+      "maximum": 47.736689
+    },
+    "HBM read (GB/s) (bytes / second)": {
+      "weighted_mean": 2006.5205435139737,
+      "minimum": 573.87232,
+      "maximum": 2271.562214
+    },
+    "HBM write (GB/s) (bytes / second)": {
+      "weighted_mean": 1139.7892241127452,
+      "minimum": 334.901645,
+      "maximum": 1326.038502
+    },
+    "L2 hit rate (%) (%)": {
+      "weighted_mean": 11.38372499340736,
+      "minimum": 9.896698,
+      "maximum": 13.42471
+    },
+    "SM clock (GHz) (gpc_cycles / second)": {
+      "weighted_mean": 2.0388719951784244,
+      "minimum": 0.000831,
+      "maximum": 2.0609
+    },
+    "L2 clock (GHz) (fbp_cycles / second)": {
+      "weighted_mean": 2.0015760382826753,
+      "minimum": 1.753577,
+      "maximum": 2.002184
+    },
+    "PCIe read (GB/s) (bytes / second)": {
+      "weighted_mean": 0.00229458049940159,
+      "minimum": 0.0,
+      "maximum": 0.010547
+    },
+    "PCIe write (GB/s) (bytes / second)": {
+      "weighted_mean": 0.0019755771840111874,
+      "minimum": 0.0,
+      "maximum": 0.010061
+    },
+    "HBM throughput (%) (%)": {
+      "weighted_mean": 43.9422053090896,
+      "minimum": 12.690911,
+      "maximum": 49.277403
+    },
+    "L2 sector traffic (GB/s) (l2_sectors / second)": {
+      "weighted_mean": 5535.742746362831,
+      "minimum": 1632.658514,
+      "maximum": 6126.306478
+    }
+  },
+  "limits": [
+    "Device-wide hardware counters; not operator-level attribution.",
+    "PCIe metrics do not measure NVLink/C2C transfers.",
+    "Prior latest_event labels lag actual generation until whole batch completes."
+  ]
+}

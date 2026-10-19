@@ -1,0 +1,159 @@
+{
+  "status": "reviewed_primary_sources",
+  "date_utc": "2026-10-10",
+  "question_sha256": "32a5c24793c4506e732f012f0a57259a0f1b8c7d9e04be45607b1f8d1b3f4a59",
+  "question_characters": 160,
+  "production_training_changes": 0,
+  "local_reference": {
+    "findings": "runs/cpt_seen_unseen_lr3e6_20261010/findings.json",
+    "model": "Qwen2.5-Coder-1.5B",
+    "dataset": "5B OpenWebMath tokens, globally shuffled blocks without replacement per epoch",
+    "batch_tokens": 32768,
+    "peak_lr": 3e-06,
+    "beta2": 0.95,
+    "second_moment_half_life_tokens": 442807.331519361,
+    "weight_decay": 0.1,
+    "optimizer_initialization": "fresh AdamW states, pretrained model weights",
+    "observations": {
+      "step15000_to_step110000_seen_loss_delta": 0.03239107131958008,
+      "step15000_to_step110000_unseen_loss_delta": 0.01192939281463623,
+      "step15000_to_step110000_validation_loss_delta": 0.026885628700256348
+    }
+  },
+  "sources": [
+    {
+      "id": "ibrahim_same_distribution_rewarm",
+      "title": "Simple and Scalable Strategies to Continually Pre-train Large Language Models",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2403.08763v4#S7.SS1",
+      "location": "Section 7.1, Figure 8",
+      "type": "controlled_paper",
+      "finding": "A 405M model pretrained on 300B Pile tokens experiences increased Pile validation loss after LR rewarming while continuing on Pile itself. Peak increases are approximately 0.1 and 0.2 at peak LR 3e-4 and 6e-4. Same-distribution training does not remove the effect, and recovery is not quick.",
+      "boundary": "Held-out validation loss; no fixed already-seen training probe. Absolute learning rates and batch scales do not transfer directly to this local CPT experiment."
+    },
+    {
+      "id": "gupta_rewarm_precursor",
+      "title": "How to (re)warm your model?",
+      "year": 2023,
+      "url": "https://arxiv.org/html/2308.04014v2",
+      "location": "Section 4.4, Figures 5 and 6",
+      "type": "controlled_paper_same_research_series",
+      "finding": "Same-distribution continued pretraining shows evaluation perplexity increasing initially and later decreasing under LR rewarming and decay.",
+      "boundary": "Precursor to the Ibrahim paper, not an independent replication; evaluation sets, not fixed seen-training loss."
+    },
+    {
+      "id": "hf_gpt2_slow_rebound",
+      "title": "GPT loss increasing",
+      "year": 2021,
+      "url": "https://discuss.huggingface.co/t/gpt-loss-increasing/7034",
+      "type": "firsthand_forum_report",
+      "finding": "GPT-2 Medium full-model adaptation on dozens of GB, LR 1.5e-5, loss initially dips then gradually increases for a long time. Reply suggests LR scheduling.",
+      "boundary": "Unspecified loss split, missing batch details, no published controlled fix or recovered curve."
+    },
+    {
+      "id": "torchtitan_mix_cpt",
+      "title": "How should I balance learning rate and data sampling during CPT on multiple datasets?",
+      "year": 2026,
+      "url": "https://github.com/pytorch/torchtitan/discussions/3868",
+      "type": "firsthand_forum_report_and_maintainer_advice",
+      "finding": "Eight-dataset CPT with effective batch 256 sequences and warmup then constant LR. Author reports smaller datasets need very small LR and their validation losses gradually increase when sampled at 2-5%. Discussion recommends sampling audits and short decay branches preserving checkpoint and optimizer state.",
+      "boundary": "Per-source validation deterioration rather than demonstrated whole-mixture train/validation rebound. Suggested causes and fixes lack posted outcome confirmation."
+    },
+    {
+      "id": "hf_tokenizer_self_report",
+      "title": "Loss exploding/increasing in pretraining",
+      "year": 2023,
+      "url": "https://discuss.huggingface.co/t/loss-exploding-increasing-in-pretraining/42476",
+      "type": "firsthand_forum_report",
+      "finding": "Randomly initialized GPT-NeoX on MiniPile: train/validation loss approximately 7.374/7.342 at step 600 and 9.143/9.377 at step 1200. The author later attributes the issue to use of the T5 tokenizer.",
+      "boundary": "Large rapid divergence, random initialization. Tokenizer attribution is self-reported without concrete patch and controlled recovery curve; cannot generalize a T5-tokenizer incompatibility claim."
+    },
+    {
+      "id": "epochal_sawtooth",
+      "title": "The Epochal Sawtooth Phenomenon: Unveiling Training Loss Oscillations in Adam and Other Optimizers",
+      "year": 2025,
+      "url": "https://link.springer.com/article/10.1007/s11063-025-11776-4",
+      "location": "Sections 3.1 and 3.2, Figures 2-4 and 6-13",
+      "type": "controlled_paper",
+      "finding": "BERT pretraining with reshuffling without replacement shows training loss dropping at epoch starts and rising within epochs; lower beta2 amplifies it, and sampling with replacement removes the epochal pattern.",
+      "boundary": "No held-out validation trajectory. The epoch-boundary explanation uses immediate re-exposure from the previous epoch and cannot directly explain this first local CPT epoch with fresh optimizer states. Overall training trend is downward; not an established cause of local fixed seen/unseen/validation deterioration."
+    },
+    {
+      "id": "small_batch_beta2",
+      "title": "Small Batch Size Training for Language Models: When Vanilla SGD Works, and Why Gradient Accumulation Is Wasteful",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2507.07101v1#S4.SS3",
+      "location": "Section 4.3, Figures 4-5",
+      "type": "controlled_paper_mechanistic_candidate",
+      "finding": "Keeping beta2 at 0.95-0.98 when reducing batch can yield poor small-batch performance even with LR tuning. Preserving second-moment token half-life, hence increasing beta2 at smaller batch, improves results.",
+      "boundary": "Primarily random-initialization pretraining, not a resolved example of this CPT loss curve. Supports a controlled beta2 ablation, not immediate mechanical copying of a scaled value. The paper also uses batch 16 / beta2 0.95 as a MATH fine-tuning reference in Section 4.5; this configuration is not universally invalid."
+    },
+    {
+      "id": "cooldown_train_val",
+      "title": "Scaling Laws and Compute-Optimal Training Beyond Fixed Training Durations",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2405.18392v2#S3",
+      "location": "Section 3, Figures 3 and 13",
+      "type": "controlled_paper_mechanistic_candidate",
+      "finding": "Constant-LR pretraining followed by cooldown exhibits sharp decreases in both training and validation perplexity, aligned with the LR decay.",
+      "boundary": "Random-initialization pretraining; relatively elevated stable-phase loss is not a direct demonstration of long-running upward loss or fixed seen-example deterioration. Decay need not recover the local run."
+    },
+    {
+      "id": "wsd_landscape",
+      "title": "Understanding Warmup-Stable-Decay Learning Rates: A River Valley Loss Landscape Perspective",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2410.05192v2",
+      "location": "Figures 1-2 and 7; Sections 3 and 4",
+      "type": "controlled_paper_and_conditional_theory",
+      "finding": "Provides a candidate loss-landscape explanation for higher stable-phase loss and rapid improvement during decay: progress along flatter directions can coexist with higher loss from stochastic movement in sharper directions.",
+      "boundary": "Theory has landscape assumptions; cannot diagnose the local experiment from a curve alone. Training batch and model settings differ substantially."
+    },
+    {
+      "id": "olmo_embedding_decay",
+      "title": "2 OLMo 2 Furious",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2501.00656v1#S3.SS4.SSS2",
+      "location": "Section 3.4.2, Figure 10; Section 3.5, Figure 11",
+      "type": "official_model_report_mechanistic_candidate",
+      "finding": "Embedding weight decay 0.1 decreases embedding norm, increases early-layer gradient norms, and modestly increases spikes; excluding embeddings improves stability. Higher LR wins early but lower LR can win later.",
+      "boundary": "Not the same smooth loss rebound. Local historical WD=0 short ablation nearly matches its control, so decay is a secondary candidate. Check checkpoint parameter norms before launching another training test."
+    },
+    {
+      "id": "rho1_openwebmath_tokens",
+      "title": "Rho-1: Not All Tokens Are What You Need",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2404.07965v2#S2.SS1",
+      "location": "Section 2.1, Figure 3",
+      "type": "controlled_paper_same_dataset_adjacent_evidence",
+      "finding": "TinyLlama 1B continued pretraining on 15B OpenWebMath tokens evaluates approximately 320K validation tokens across checkpoints. Token-level trajectories include low-to-high loss and substantial fluctuations.",
+      "boundary": "Same mathematical web corpus and small-model scale, but individual token deterioration does not establish aggregate train/validation rebound, nor fixed seen-training loss. Useful for token-stratified diagnosis."
+    },
+    {
+      "id": "nanogpt_mps_divergence",
+      "title": "loss increase when finetuning on shakespeare datasets with gpt-xl and mps device",
+      "year": 2023,
+      "url": "https://github.com/karpathy/nanoGPT/issues/367",
+      "type": "firsthand_issue_report",
+      "finding": "GPT-2 XL adaptation at constant LR 3e-5 with 32768 tokens/update on MPS: train/validation loss rises from 3.902/3.729 to 8.649/8.653 by step 20. Author later reports more reliable results after switching both to CUDA and GPT-2 Large.",
+      "boundary": "Tiny corpus, rapid divergence, different backend. Changing backend and model simultaneously prevents assigning a unique root cause. The issue has replies; it must not be described as having no replies."
+    }
+  ],
+  "assessment": {
+    "direct_public_match_found": false,
+    "strongest_related_evidence": "Same-distribution continued pretraining with LR rewarming can worsen held-out loss; this does not require an evolving data distribution.",
+    "new_testable_candidate": "Batch-dependent Adam beta2/token half-life, beyond nominal LR alone.",
+    "not_established": [
+      "The local training run is normal or guaranteed to recover with more tokens",
+      "Data-distribution drift uniquely causes the rebound",
+      "Compiled training is the cause",
+      "Epochal sawtooth explains this first local epoch",
+      "Weight decay or beta2 is the confirmed cause"
+    ]
+  },
+  "recommended_diagnostics_not_launched": [
+    "Preserve current production training. From the same later checkpoint and Adam states, compare unchanged LR against a short gradual LR decay using identical data order and fixed seen/unseen/validation probes.",
+    "If another controlled experiment is authorized, compare beta2 choices under the same initialization and token budget, since copying beta2 from a much larger batch preserves steps rather than token history.",
+    "Read checkpoint embedding and per-layer parameter norms on CPU; if meaningful drift is found, design a targeted parameter-group weight-decay ablation.",
+    "Stratify existing fixed-token loss differences by baseline difficulty and token class, keeping all evaluation tokens fixed."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "policy": {
+    "schema_version": 1,
+    "type": "linear_input_tokens",
+    "start_input_tokens": 5000000000,
+    "end_input_tokens": 6000000000,
+    "start_lr": 3e-06,
+    "end_lr": 3e-07,
+    "after": "hold"
+  },
+  "applied_at_completed_steps": 140508,
+  "applied_at_input_tokens": 4604166144,
+  "resumed_checkpoint": "./runs/cpt_10b_lr3e6_20261009/stopped_checkpoint",
+  "saved_utc": "2026-10-10T06:51:27.828116+00:00",
+  "original_schedule": {
+    "total_steps": 305176,
+    "peak_lr": 3e-06,
+    "warmup_steps": 15259,
+    "decay_80_step": 244141,
+    "decay_90_step": 274659,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1
+  },
+  "reason": "Explicit user-requested linear LR intervention: 3e-06 to 3e-07 between 5000000000 and 6000000000 cumulative input tokens; hold after the end boundary.",
+  "policy_file_sha256": "17d587e6b6805288685641fcf0836e8db29dfe4e3f9a7a043ffbe925bb046fe5",
+  "lr_counting": "Cumulative input tokens before the optimizer update",
+  "authorization": "Explicit --lr-intervention-file; source migration is audited separately"
+}

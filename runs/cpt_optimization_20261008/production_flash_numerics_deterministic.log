@@ -1,0 +1,4 @@
+{"event": "model_loaded", "seconds": 5.998720557006891, "parameters": 1543714304}
+./.venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:312: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+{"event": "production_flash_numerical_check", "status": "rejected_numerical_check", "absolute_loss_difference": 5.698204040527344e-05, "global_gradient_relative_l2": 0.04640090838074684, "native_restore_control_passed": true}

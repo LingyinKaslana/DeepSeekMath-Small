@@ -1,0 +1,33 @@
+{
+  "2": {
+    "min_correct_references": 2,
+    "counts": {
+      "flagged": 18,
+      "flagged_correct": 0,
+      "saved_tokens": 4473,
+      "flagged_capped": 0
+    },
+    "batch_decode_steps_before": 120228,
+    "batch_decode_steps_after": 116364,
+    "batch_decode_step_reduction_percent": 3.213893602155904,
+    "batches_with_reduced_maximum_length": 10
+  },
+  "1": {
+    "min_correct_references": 1,
+    "counts": {
+      "flagged": 52,
+      "flagged_correct": 2,
+      "saved_tokens": 13257,
+      "flagged_capped": 2
+    },
+    "batch_decode_steps_before": 120228,
+    "batch_decode_steps_after": 108298,
+    "batch_decode_step_reduction_percent": 9.92281332135609,
+    "batches_with_reduced_maximum_length": 34
+  },
+  "limits": [
+    "Min1 is exploratory only, not the agreed primary rule.",
+    "Batch maximum-length reduction is a decode-step proxy, not measured wall time.",
+    "Frozen trajectories cannot predict changed sampling RNG after real cancellation."
+  ]
+}

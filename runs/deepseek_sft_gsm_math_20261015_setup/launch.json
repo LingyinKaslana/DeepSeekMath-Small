@@ -1,0 +1,40 @@
+{
+  "status": "running",
+  "started_utc": "2026-10-15T06:26:10.502805+00:00",
+  "started_beijing": "2026-10-15T14:26:10.502805+08:00",
+  "tmux_session": "deepseek-sft-20261015",
+  "setup": "./runs/deepseek_sft_gsm_math_20261015_setup",
+  "run": "./runs/deepseek_sft_gsm_math_20261015",
+  "stage": "sft",
+  "training_examples": 14459,
+  "validation_examples": 512,
+  "epochs": 3,
+  "total_steps": 1356,
+  "source_checkpoint": "runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+  "fresh_optimizer": true,
+  "smoke_reused": false,
+  "full_parameter_training": true,
+  "peak_lr": 1e-05,
+  "min_lr": 1e-06,
+  "warmup_steps": 41,
+  "max_sequence_length": 4096,
+  "effective_batch": 32,
+  "micro_batch": 8,
+  "automatic_full_evaluation": {
+    "gsm8k": 1319,
+    "math": 5000,
+    "max_new_tokens": 1024,
+    "reference": "runs/deepseek_coder_10b_inference_20261015"
+  },
+  "selection": "Best held-out SFT validation; preserve final weights too",
+  "estimated_train_minutes": [
+    20,
+    35
+  ],
+  "estimated_evaluation_minutes": [
+    45,
+    65
+  ],
+  "production_startup_verification": "./runs/deepseek_sft_gsm_math_20261015_setup/production_startup_verification.json",
+  "startup_confirmed_utc": "2026-10-15T06:29:04.603246+00:00"
+}

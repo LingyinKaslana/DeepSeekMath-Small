@@ -1,0 +1,64 @@
+{
+  "status": "ready",
+  "purpose": "GPU stop/resume test over two complete epochs including padded and partial batches",
+  "source_repo": "open-web-math/open-web-math",
+  "source_revision": "fde8ef8de2300f5e778f56261843dab89f230815",
+  "source_manifest": "./data/raw/openwebmath_20261008/manifest.json",
+  "source_manifest_sha256": "44682c262b71ad38a3a157434f74d96e6764f2ad9ee41df83c8b5723a5780805",
+  "tokenizer": "Qwen/Qwen2.5-Coder-1.5B",
+  "tokenizer_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "seed": 42,
+  "sampling": "Exact training token prefix of the verified pilot",
+  "split": "normalized-text SHA256 threshold, before tokenization; selected text/URL deduplication",
+  "packing": "document text + EOS, concatenated within each split; no cross-document attention mask",
+  "block_length": 2048,
+  "dtype": "uint32",
+  "splits": {
+    "train": {
+      "tokens": 1049088,
+      "documents": 551,
+      "full_blocks": 512,
+      "tokens_in_full_blocks": 1048576,
+      "remainder_tokens": 512,
+      "prefix_truncated_documents": 12
+    },
+    "validation": {
+      "tokens": 262144,
+      "documents": 334,
+      "full_blocks": 128,
+      "tokens_in_full_blocks": 262144,
+      "remainder_tokens": 0,
+      "prefix_truncated_documents": 114
+    }
+  },
+  "train_validation_text_hash_overlap": 0,
+  "train_validation_url_overlap": 0,
+  "rejected": {
+    "under_64_tokens": 92,
+    "over_200000_characters": 34
+  },
+  "artifacts": {
+    "train_tokens.npy": {
+      "bytes": 4196480,
+      "sha256": "599b849a4f8600a6e5534c3759814a5592151d63d215022ee77dbf47db7b2881"
+    },
+    "validation.jsonl": {
+      "bytes": 2158963,
+      "sha256": "dd280d31c277cbb50fef391e9c5fdb65b51822718023a794c99ad884aabc13b0"
+    },
+    "validation_tokens.npy": {
+      "bytes": 1048704,
+      "sha256": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93"
+    },
+    "train.jsonl": {
+      "bytes": 4242229,
+      "sha256": "1c1dba98ac27141b709cc0e368c715f33fe088835bf09573182909169fa70a06"
+    }
+  },
+  "benchmark_decontamination": "not performed; held-out text loss only, no benchmark generalization claims",
+  "license": "ODC-By-1.0; underlying content licenses retained; see source README",
+  "source_url": "https://huggingface.co/datasets/open-web-math/open-web-math",
+  "completed_utc": "2026-10-08T03:38:22.056185+00:00",
+  "script_sha256": "1d017642b607d31c2b185e74d6988ccb16c39a9cbfbfd559c1aa0bb95cf24fa7",
+  "parent_manifest": "./data/processed/openwebmath_10m_s42/manifest.json"
+}

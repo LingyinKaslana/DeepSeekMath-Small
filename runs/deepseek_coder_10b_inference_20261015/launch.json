@@ -1,0 +1,19 @@
+{
+  "status": "running",
+  "stage": "generation",
+  "started_utc": "2026-10-15T00:48:49.957512+00:00",
+  "started_beijing": "2026-10-15T08:48:49.957512+08:00",
+  "run": "./runs/deepseek_coder_10b_inference_20261015",
+  "tmux_session": "deepseek-10b-eval-20261015",
+  "model": "DeepSeek-Coder-1.3B-Base after 10B CPT",
+  "benchmarks": {
+    "gsm8k": 1319,
+    "math": 5000
+  },
+  "batch_size": 256,
+  "max_new_tokens": 1024,
+  "progress": "./runs/deepseek_coder_10b_inference_20261015/progress.json",
+  "log": "./runs/deepseek_coder_10b_inference_20261015/full_inference.log",
+  "automatic_scoring_and_verification": true,
+  "training_modified": false
+}

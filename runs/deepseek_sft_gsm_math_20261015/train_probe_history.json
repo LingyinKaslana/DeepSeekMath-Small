@@ -1,0 +1,138 @@
+[
+  {
+    "step": 0,
+    "loss": 0.9351039528846741,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 100,
+    "loss": 0.7364404797554016,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 200,
+    "loss": 0.6808888912200928,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 300,
+    "loss": 0.6440457105636597,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 400,
+    "loss": 0.6124976277351379,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 452,
+    "loss": 0.6058778762817383,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 500,
+    "loss": 0.5914182662963867,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 600,
+    "loss": 0.5872828364372253,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 700,
+    "loss": 0.5877848863601685,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 800,
+    "loss": 0.5821343064308167,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 900,
+    "loss": 0.5814117193222046,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 904,
+    "loss": 0.5584166646003723,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 1000,
+    "loss": 0.4830942153930664,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 1100,
+    "loss": 0.47311604022979736,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 1200,
+    "loss": 0.4585556387901306,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 1300,
+    "loss": 0.4523408114910126,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  {
+    "step": 1356,
+    "loss": 0.4481588900089264,
+    "supervised_tokens": 24948,
+    "input_tokens": 38137,
+    "examples": 128,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  }
+]

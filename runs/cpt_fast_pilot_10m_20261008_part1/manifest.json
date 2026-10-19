@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-08T06:00:35.039954+00:00",
+  "arguments": {
+    "backend_config": "DeepSeekMath-Small/configs/cpt_backend_fast.json",
+    "data": "DeepSeekMath-Small/data/processed/openwebmath_10m_s42",
+    "output": "DeepSeekMath-Small/runs/cpt_fast_pilot_10m_20261008_part1",
+    "steps": null,
+    "lr": 1e-05,
+    "seed": 42,
+    "log_every": 20,
+    "checkpoint_every": 40,
+    "resume": null,
+    "stop_after": 64,
+    "max_seconds": null
+  },
+  "backend_config": {
+    "schema_version": 1,
+    "validated": true,
+    "model": "Qwen/Qwen2.5-Coder-1.5B",
+    "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "micro_batch": 16,
+    "mask_policy": "causal",
+    "fused_optimizer": false,
+    "options": {
+      "kernels": "native",
+      "loss": "native",
+      "chunk_mem_const": 1,
+      "compile_scope": "model",
+      "compile_mode": "default",
+      "compile_shape": [
+        16,
+        2048
+      ],
+      "compile_fullgraph": true,
+      "rms_in_place": false,
+      "emulate_precision_casts": true,
+      "compile_label_alias": "same_as_input",
+      "preserve_silu": false,
+      "ce_chunk_rows": 4096
+    },
+    "validation_evidence": {
+      "benchmark_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam_tailguard/result.json",
+      "production_numerical_result": "./runs/cpt_optimization_20261008/production_flash_numerics_deterministic/result.json",
+      "optimizer_check_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam/optimizer_check.json",
+      "strict_production_numerical_check_passed": false,
+      "initial_10m_training_result": "./runs/cpt_optimized_pilot_10m_20261008/result.json",
+      "checkpoint_verification": "./runs/cpt_optimization_20261008/initial_final_checkpoint_verification.json",
+      "native_ulp_sensitivity": "./runs/cpt_optimization_20261008/native_ulp_sensitivity.json",
+      "policy": "Useful for learning workflow/throughput experiments; not for a strictly identical native-gradient comparison. All numerical differences remain recorded; strict per-probe threshold is not relaxed or claimed passed.",
+      "selection_context": "User prioritizes learning the workflow, not paper metrics. Keep strict alternative and all drift diagnostics; no claim of per-probe equivalence."
+    },
+    "purpose": "High-throughput learning-workflow CPT backend with recorded compiler rounding differences",
+    "compiled_optimizer": true
+  },
+  "signature": {
+    "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+    "data_manifest_sha256": "c76fa6d41ae3b4c007c9323bcee58ef5d13e3564a038d767d62278fec89e26a8",
+    "token_file_sha256": {
+      "train_tokens.npy": "08cfabb9519e29052d937a9184a15aaf5270049178270508bb2564e4e0a0d8e2",
+      "validation_tokens.npy": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93"
+    },
+    "peak_lr": 1e-05,
+    "seed": 42,
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "source_sha256": {
+      "train_cpt.py": "1326a7cfe3ae5434bdd6c5e6c56f989d3054ec0270a0409854558d7efd48d881",
+      "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+      "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+      "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+      "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+      "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+      "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+      "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b"
+    }
+  },
+  "source_sha256": {
+    "train_cpt.py": "1326a7cfe3ae5434bdd6c5e6c56f989d3054ec0270a0409854558d7efd48d881",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b"
+  },
+  "precision": "BF16 autocast; FP32 parameters, gradients and AdamW moments",
+  "versions": {
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4",
+    "liger-kernel": "0.8.4",
+    "numpy": "2.5.3"
+  },
+  "timing": "Training-loop totals include data/H2D, synchronization and logging; exclude validation/checkpoint sections. Per-record seconds time the update itself.",
+  "stop_boundary": "Wall-clock limits are checked between updates; final validation/save may extend beyond the limit",
+  "schedule": {
+    "total_steps": 306,
+    "peak_lr": 1e-05,
+    "warmup_steps": 16,
+    "decay_80_step": 245,
+    "decay_90_step": 276,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1
+  },
+  "configured_input_tokens": 10000000,
+  "configured_supervised_tokens": 9995117,
+  "dataset_input_tokens": 10000000,
+  "resumed_completed_steps": 0
+}

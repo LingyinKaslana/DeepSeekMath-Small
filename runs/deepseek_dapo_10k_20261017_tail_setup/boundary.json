@@ -1,0 +1,22 @@
+{
+  "status": "checkpoint_acquired",
+  "utc": "2026-10-17T14:09:49.643196+00:00",
+  "completed_rounds": 1900,
+  "last_observed_completed_round": 1955,
+  "completed_round_rollback": 55,
+  "abandoned_completed_groups_used": 1760,
+  "abandoned_gradient_updates": 220,
+  "recovery_reason": "Original process ended before next checkpoint; abandoned branch archived",
+  "checkpoint": "./runs/deepseek_dapo_10k_20261017_tail_setup/resume_checkpoint",
+  "gradient_updates": 7600,
+  "effective_groups_used": 60800,
+  "effective_groups_found": 68340,
+  "training.jsonl": {
+    "kept": 1900,
+    "archived_removed": 55
+  },
+  "rollouts.jsonl": {
+    "kept": 318432,
+    "archived_removed": 21280
+  }
+}

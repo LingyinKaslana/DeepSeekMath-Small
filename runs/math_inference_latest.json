@@ -1,0 +1,11 @@
+{
+  "status": "complete_verified",
+  "run": "./runs/base_math_inference_20261012",
+  "result": "./runs/base_math_inference_20261012/result.json",
+  "model_kind": "base",
+  "trained_input_tokens": 0,
+  "questions": 6319,
+  "reference_run": "./runs/cpt_10b_inference_20261012",
+  "comparison": "./runs/base_vs_cpt_10b_20261012/comparison.json",
+  "updated_utc": "2026-10-12T04:26:46.225259+00:00"
+}

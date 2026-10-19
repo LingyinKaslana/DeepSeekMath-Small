@@ -1,0 +1,19 @@
+{
+  "updated_utc": "2026-10-10T06:49:45.275025+00:00",
+  "status": "stopped_verified",
+  "stage": "finished",
+  "exit_code": 0,
+  "run": "./runs/cpt_10b_lr3e6_20261009",
+  "training_status": "stopped",
+  "stop_reason": "SIGTERM",
+  "completed_steps": 140508,
+  "optimizer_updates": 140508,
+  "trained_tokens": 4604166144,
+  "configured_input_tokens": 10000000000,
+  "production_budget_complete": false,
+  "final_checkpoint_verified": true,
+  "checkpoint": "./runs/cpt_10b_lr3e6_20261009/stopped_checkpoint",
+  "checkpoint_verification": "./runs/cpt_10b_lr3e6_20261009_launch/final_checkpoint_verification.json",
+  "report": "./runs/cpt_10b_lr3e6_20261009_launch/report",
+  "prior_production_resumed": false
+}

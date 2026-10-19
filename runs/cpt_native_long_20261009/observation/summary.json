@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-09T04:18:13.970205+00:00",
+  "generated_beijing": "2026-10-09T12:18:13.970205+08:00",
+  "status": "in_progress",
+  "run_status": [
+    {
+      "run": "./runs/cpt_native_long_20261009/migration_smoke",
+      "status": "stopped",
+      "completed_steps": 181654
+    },
+    {
+      "run": "./runs/cpt_10b_20261009_native",
+      "status": "in_progress"
+    }
+  ],
+  "missing_runs": [],
+  "warnings": [],
+  "window": {
+    "start_step": 181650,
+    "start_input_tokens": 5952302080,
+    "target_updates": 10000,
+    "target_step": 191650,
+    "target_new_input_tokens": 327680000,
+    "target_new_input_tokens_m": 327.68,
+    "training_target_reached": false,
+    "evaluation_target_observed": false
+  },
+  "latest_progress": {
+    "step": 185600,
+    "input_tokens": 6081735680,
+    "source": "./runs/cpt_10b_20261009_native/progress.json",
+    "native_updates": 3950,
+    "new_input_tokens": 129433600,
+    "new_input_tokens_m": 129.4336
+  },
+  "validation_baseline": {
+    "kind": "validation",
+    "step": 181650,
+    "input_tokens": 5952302080,
+    "loss": 1.9010149240493774,
+    "perplexity": 6.692683561977993,
+    "evaluated_input_tokens": 2097152,
+    "evaluated_targets": 2096128,
+    "evaluated_blocks": 1024,
+    "sources": [
+      "./runs/cpt_native_long_20261009/migration_smoke/validation_before.json",
+      "./runs/cpt_native_long_20261009/migration_smoke/validation_history.json",
+      "./runs/cpt_10b_20261009_native/validation_history.json"
+    ]
+  },
+  "series": {
+    "validation": [
+      {
+        "kind": "validation",
+        "step": 181650,
+        "input_tokens": 5952302080,
+        "loss": 1.9010149240493774,
+        "perplexity": 6.692683561977993,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "evaluated_blocks": 1024,
+        "sources": [
+          "./runs/cpt_native_long_20261009/migration_smoke/validation_before.json",
+          "./runs/cpt_native_long_20261009/migration_smoke/validation_history.json",
+          "./runs/cpt_10b_20261009_native/validation_history.json"
+        ],
+        "native_updates": 0,
+        "new_input_tokens": 0,
+        "new_input_tokens_m": 0.0
+      },
+      {
+        "kind": "validation",
+        "step": 181654,
+        "input_tokens": 5952433152,
+        "loss": 1.90091872215271,
+        "perplexity": 6.6920397440942825,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "evaluated_blocks": 1024,
+        "sources": [
+          "./runs/cpt_native_long_20261009/migration_smoke/validation_history.json",
+          "./runs/cpt_10b_20261009_native/validation_before.json",
+          "./runs/cpt_10b_20261009_native/validation_history.json"
+        ],
+        "native_updates": 4,
+        "new_input_tokens": 131072,
+        "new_input_tokens_m": 0.131072
+      },
+      {
+        "kind": "validation",
+        "step": 182000,
+        "input_tokens": 5963770880,
+        "loss": 1.9011472463607788,
+        "perplexity": 6.693569211930724,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "evaluated_blocks": 1024,
+        "sources": [
+          "./runs/cpt_10b_20261009_native/validation_history.json"
+        ],
+        "native_updates": 350,
+        "new_input_tokens": 11468800,
+        "new_input_tokens_m": 11.4688
+      },
+      {
+        "kind": "validation",
+        "step": 183000,
+        "input_tokens": 5996538880,
+        "loss": 1.9007314443588257,
+        "perplexity": 6.690786591001959,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "evaluated_blocks": 1024,
+        "sources": [
+          "./runs/cpt_10b_20261009_native/validation_history.json"
+        ],
+        "native_updates": 1350,
+        "new_input_tokens": 44236800,
+        "new_input_tokens_m": 44.2368
+      },
+      {
+        "kind": "validation",
+        "step": 184000,
+        "input_tokens": 6029306880,
+        "loss": 1.9013671875,
+        "perplexity": 6.695041565078231,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "evaluated_blocks": 1024,
+        "sources": [
+          "./runs/cpt_10b_20261009_native/validation_history.json"
+        ],
+        "native_updates": 2350,
+        "new_input_tokens": 77004800,
+        "new_input_tokens_m": 77.0048
+      },
+      {
+        "kind": "validation",
+        "step": 185000,
+        "input_tokens": 6062074880,
+        "loss": 1.9000955820083618,
+        "perplexity": 6.68653352403963,
+        "evaluated_input_tokens": 2097152,
+        "evaluated_targets": 2096128,
+        "evaluated_blocks": 1024,
+        "sources": [
+          "./runs/cpt_10b_20261009_native/validation_history.json"
+        ],
+        "native_updates": 3350,
+        "new_input_tokens": 109772800,
+        "new_input_tokens_m": 109.7728
+      }
+    ],
+    "train_probe": [
+      {
+        "kind": "train_probe",
+        "step": 181650,
+        "input_tokens": 5952302080,
+        "loss": 1.9102617502212524,
+        "perplexity": 6.7548566523764135,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "evaluated_blocks": 256,
+        "sources": [
+          "./runs/cpt_native_long_20261009/migration_smoke/train_probe_history.json",
+          "./runs/cpt_10b_20261009_native/train_probe_history.json"
+        ],
+        "native_updates": 0,
+        "new_input_tokens": 0,
+        "new_input_tokens_m": 0.0
+      },
+      {
+        "kind": "train_probe",
+        "step": 181654,
+        "input_tokens": 5952433152,
+        "loss": 1.9101834297180176,
+        "perplexity": 6.754327629321066,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "evaluated_blocks": 256,
+        "sources": [
+          "./runs/cpt_native_long_20261009/migration_smoke/train_probe_history.json",
+          "./runs/cpt_10b_20261009_native/train_probe_history.json",
+          "./runs/cpt_10b_20261009_native/train_probe_history.json"
+        ],
+        "native_updates": 4,
+        "new_input_tokens": 131072,
+        "new_input_tokens_m": 0.131072
+      },
+      {
+        "kind": "train_probe",
+        "step": 182000,
+        "input_tokens": 5963770880,
+        "loss": 1.9103487730026245,
+        "perplexity": 6.75544450436796,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "evaluated_blocks": 256,
+        "sources": [
+          "./runs/cpt_10b_20261009_native/train_probe_history.json"
+        ],
+        "native_updates": 350,
+        "new_input_tokens": 11468800,
+        "new_input_tokens_m": 11.4688
+      },
+      {
+        "kind": "train_probe",
+        "step": 183000,
+        "input_tokens": 5996538880,
+        "loss": 1.9100505113601685,
+        "perplexity": 6.753429914846891,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "evaluated_blocks": 256,
+        "sources": [
+          "./runs/cpt_10b_20261009_native/train_probe_history.json"
+        ],
+        "native_updates": 1350,
+        "new_input_tokens": 44236800,
+        "new_input_tokens_m": 44.2368
+      },
+      {
+        "kind": "train_probe",
+        "step": 184000,
+        "input_tokens": 6029306880,
+        "loss": 1.9112775325775146,
+        "perplexity": 6.761721602640376,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "evaluated_blocks": 256,
+        "sources": [
+          "./runs/cpt_10b_20261009_native/train_probe_history.json"
+        ],
+        "native_updates": 2350,
+        "new_input_tokens": 77004800,
+        "new_input_tokens_m": 77.0048
+      },
+      {
+        "kind": "train_probe",
+        "step": 185000,
+        "input_tokens": 6062074880,
+        "loss": 1.9120635986328125,
+        "perplexity": 6.767038852048426,
+        "evaluated_input_tokens": 524288,
+        "evaluated_targets": 524032,
+        "evaluated_blocks": 256,
+        "sources": [
+          "./runs/cpt_10b_20261009_native/train_probe_history.json"
+        ],
+        "native_updates": 3350,
+        "new_input_tokens": 109772800,
+        "new_input_tokens_m": 109.7728
+      }
+    ]
+  },
+  "duplicate_measurements_removed": {
+    "validation": 4,
+    "train_probe": 3
+  },
+  "inherited_pre_native_points_excluded": {
+    "validation": 76,
+    "train_probe": 0
+  },
+  "native_invocations": [
+    {
+      "run": "./runs/cpt_native_long_20261009/migration_smoke",
+      "resumed_completed_steps": 181650
+    },
+    {
+      "run": "./runs/cpt_10b_20261009_native",
+      "resumed_completed_steps": 181654
+    }
+  ],
+  "fixed_train_probe": {
+    "blocks": 256,
+    "seed": 20261009,
+    "indices_sha256": "0275fe980c1fd3bf853fa63d40c27291d4368b0eb41b4c183127d9f964169a81",
+    "tokens_sha256": "f2d447c272813ee27c047b0a895234932d1d05cb1e4275b11b982dfedee42619",
+    "input_tokens": 524288,
+    "supervised_tokens": 524032
+  },
+  "comparison_probe_matches_ab": true,
+  "data_order_and_signature_match_across_native_invocations": true,
+  "sources": [
+    {
+      "path": "./runs/cpt_native_long_20261009/migration_smoke/manifest.json",
+      "sha256": "9815e1d9c3e29ed7b0d9eae7d8fd92db9533b2a18991ef7d936b4deb207e2bf3",
+      "bytes": 29065
+    },
+    {
+      "path": "./runs/cpt_native_long_20261009/migration_smoke/validation_before.json",
+      "sha256": "f74cdd324322ca45759fe823b80b18f5683d3239c75896123751bfd621275f13",
+      "bytes": 248
+    },
+    {
+      "path": "./runs/cpt_native_long_20261009/migration_smoke/validation_history.json",
+      "sha256": "0dc4b248a148c2d3ebaa9b32add1be79b087cb6d75403959640bb475f48e16e1",
+      "bytes": 10537
+    },
+    {
+      "path": "./runs/cpt_native_long_20261009/migration_smoke/train_probe_history.json",
+      "sha256": "7379ce5025b714e28d1703f5312975afd22ed17511cdbea87137198691a3e8ff",
+      "bytes": 610
+    },
+    {
+      "path": "./runs/cpt_native_long_20261009/migration_smoke/progress.json",
+      "sha256": "c9e8b422afdc758d1e179cc0e15d0a71e29f8fe41d2da8e3876945010322e305",
+      "bytes": 407
+    },
+    {
+      "path": "./runs/cpt_native_long_20261009/migration_smoke/result.json",
+      "sha256": "7c9229aa7e000e4f3581434f9291ff3d62709cdab93d0c1e836176d3f4a12189",
+      "bytes": 44774
+    },
+    {
+      "path": "./runs/cpt_10b_20261009_native/manifest.json",
+      "sha256": "c4d4c84a163f486faaaf580f8c0bba8c96cb0bd7982e1c1498ae144604099149",
+      "bytes": 29052
+    },
+    {
+      "path": "./runs/cpt_10b_20261009_native/validation_before.json",
+      "sha256": "dfe4da4def0f04a54184338c6af0374175974e68c7817d911b8e5769374f9a5f",
+      "bytes": 247
+    },
+    {
+      "path": "./runs/cpt_10b_20261009_native/validation_history.json",
+      "sha256": "0e47f99c25bb54085e9007f76fc6d07f2abb64e6bcc6a2ee0b1853a6b2760771",
+      "bytes": 11606
+    },
+    {
+      "path": "./runs/cpt_10b_20261009_native/train_probe_history.json",
+      "sha256": "dc95cdbe11d3663320db0739362f2d8c55c22dede232d2766f2a81e9d6bd4d9c",
+      "bytes": 2124
+    },
+    {
+      "path": "./runs/cpt_10b_20261009_native/progress.json",
+      "sha256": "92ed6e009799cf1e92dacc89b30874c26ca695a4a995f0c51c62dbf5fc0cc5be",
+      "bytes": 406
+    }
+  ],
+  "script_sha256": "6c5915ab927630305b6c124cc5d1a2723d135d1c68ce9edc6fafc957799f50a2",
+  "gpu_execution": false,
+  "interpretation": "Descriptive fixed-sample native loss observations only; no claim that native is better or that a root cause has been established.",
+  "matplotlib_version": "3.11.2"
+}

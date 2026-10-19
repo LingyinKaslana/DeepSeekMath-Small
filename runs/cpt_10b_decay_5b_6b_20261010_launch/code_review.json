@@ -1,0 +1,429 @@
+{
+  "status": "passed",
+  "reviewer": "decay_protocol_review",
+  "reviewed_utc": "2026-10-10T06:48:49.977929+00:00",
+  "gpu_used": false,
+  "training_processes_modified": false,
+  "source_files_modified": false,
+  "scope": "Read-only code inspection, prior 31 pure-CPU AST checks, and final frozen-source numeric/resume-guard checks. No optimizer update or checkpoint tensor reload.",
+  "source_sha256": {
+    "train_cpt.py": "5b4ed4f23399fbd75fda18a0538954f2ae7bd5d9b45c3688d99bbc835a600de1",
+    "verify_cpt_checkpoint.py": "b59ac64323fa8931832fd9d43670487ec3af3d822b7751032d3a4ccce9226b5e",
+    "lr_intervention.py": "881e005c690cef06f3b2ab30e38ab3c90c24917652ced12294f8e7cf08aa03a8",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+  },
+  "checks": [
+    {
+      "name": "final_valid_saved_intervention_resume",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_inherit_saved_policy_without_cli_or_reapplication",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_reject_invalid_saved_budget",
+      "passed": true,
+      "details": "Saved LR intervention differs from the original peak LR or token budget"
+    },
+    {
+      "name": "final_reject_invalid_saved_peak",
+      "passed": true,
+      "details": "Saved LR intervention differs from the original peak LR or token budget"
+    },
+    {
+      "name": "final_reject_invalid_saved_increase",
+      "passed": true,
+      "details": "Saved LR intervention differs from the original peak LR or token budget"
+    },
+    {
+      "name": "final_reject_audit_prefix_counter_mismatch",
+      "passed": true,
+      "details": "LR intervention application point exceeds the saved completed prefix"
+    },
+    {
+      "name": "final_boundary_152588",
+      "passed": true,
+      "details": {
+        "pre_update_tokens": 4999969280,
+        "post_update_tokens": 5000000000,
+        "last_lr": 3e-06
+      }
+    },
+    {
+      "name": "final_boundary_152589",
+      "passed": true,
+      "details": {
+        "pre_update_tokens": 5000000000,
+        "post_update_tokens": 5000032768,
+        "last_lr": 3e-06
+      }
+    },
+    {
+      "name": "final_boundary_183106",
+      "passed": true,
+      "details": {
+        "pre_update_tokens": 5999979520,
+        "post_update_tokens": 6000012288,
+        "last_lr": 3.0005529599999993e-07
+      }
+    },
+    {
+      "name": "final_boundary_183107",
+      "passed": true,
+      "details": {
+        "pre_update_tokens": 6000012288,
+        "post_update_tokens": 6000045056,
+        "last_lr": 3e-07
+      }
+    },
+    {
+      "name": "final_boundary_244141",
+      "passed": true,
+      "details": {
+        "pre_update_tokens": 7999974400,
+        "post_update_tokens": 8000007168,
+        "last_lr": 3e-07
+      }
+    },
+    {
+      "name": "final_boundary_274659",
+      "passed": true,
+      "details": {
+        "pre_update_tokens": 8999988224,
+        "post_update_tokens": 9000020992,
+        "last_lr": 3e-07
+      }
+    },
+    {
+      "name": "final_boundary_305176",
+      "passed": true,
+      "details": {
+        "pre_update_tokens": 9999969280,
+        "post_update_tokens": 10000000000,
+        "last_lr": 3e-07
+      }
+    },
+    {
+      "name": "final_frozen_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_frozen_source_verify_cpt_checkpoint.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_frozen_source_lr_intervention.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_frozen_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_frozen_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_frozen_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_verifier_enforces_original_peak_and_nonincreasing_lr",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_backend_exactly_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "final_sources_stable_during_review",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "check_count": 22,
+  "prior_review": {
+    "reviewed_utc": "2026-10-10T06:46:49.212761+00:00",
+    "source_sha256": {
+      "train_cpt.py": "5b4ed4f23399fbd75fda18a0538954f2ae7bd5d9b45c3688d99bbc835a600de1",
+      "verify_cpt_checkpoint.py": "b59ac64323fa8931832fd9d43670487ec3af3d822b7751032d3a4ccce9226b5e",
+      "lr_intervention.py": "881e005c690cef06f3b2ab30e38ab3c90c24917652ced12294f8e7cf08aa03a8",
+      "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+      "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+      "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+    },
+    "checks": [
+      {
+        "name": "valid_future_policy_applies_once",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "policy_application_preserves_existing_fields",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "resume_without_cli_inherits_policy_and_audit",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "repeat_same_cli_does_not_reapply",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "repeat_different_policy_rejected",
+        "passed": true,
+        "details": "Cannot replace a saved LR intervention when resuming"
+      },
+      {
+        "name": "fresh_application_without_checkpoint_rejected",
+        "passed": true,
+        "details": "An LR intervention requires an incomplete resume checkpoint"
+      },
+      {
+        "name": "retroactive_policy_application_rejected",
+        "passed": true,
+        "details": "An LR intervention cannot change the completed training prefix"
+      },
+      {
+        "name": "end_past_configured_budget_rejected",
+        "passed": true,
+        "details": "An LR intervention exceeds the configured token budget"
+      },
+      {
+        "name": "changed_start_lr_rejected",
+        "passed": true,
+        "details": "Intervention start LR must match the original peak LR"
+      },
+      {
+        "name": "legacy_no_policy_schedule_unchanged",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "token_boundary_5000000000",
+        "passed": true,
+        "details": {
+          "input_tokens": 5000000000,
+          "lr": 3e-06
+        }
+      },
+      {
+        "name": "token_boundary_5500000000",
+        "passed": true,
+        "details": {
+          "input_tokens": 5500000000,
+          "lr": 1.65e-06
+        }
+      },
+      {
+        "name": "token_boundary_6000000000",
+        "passed": true,
+        "details": {
+          "input_tokens": 6000000000,
+          "lr": 3e-07
+        }
+      },
+      {
+        "name": "token_boundary_8000000000",
+        "passed": true,
+        "details": {
+          "input_tokens": 8000000000,
+          "lr": 3e-07
+        }
+      },
+      {
+        "name": "token_boundary_9000000000",
+        "passed": true,
+        "details": {
+          "input_tokens": 9000000000,
+          "lr": 3e-07
+        }
+      },
+      {
+        "name": "token_boundary_9999969280",
+        "passed": true,
+        "details": {
+          "input_tokens": 9999969280,
+          "lr": 3e-07
+        }
+      },
+      {
+        "name": "pre_update_counter_last_lr_152588",
+        "passed": true,
+        "details": {
+          "completed_steps": 152588,
+          "pre_update_tokens": 4999969280,
+          "post_update_tokens": 5000000000,
+          "last_lr": 3e-06
+        }
+      },
+      {
+        "name": "pre_update_counter_last_lr_152589",
+        "passed": true,
+        "details": {
+          "completed_steps": 152589,
+          "pre_update_tokens": 5000000000,
+          "post_update_tokens": 5000032768,
+          "last_lr": 3e-06
+        }
+      },
+      {
+        "name": "pre_update_counter_last_lr_183106",
+        "passed": true,
+        "details": {
+          "completed_steps": 183106,
+          "pre_update_tokens": 5999979520,
+          "post_update_tokens": 6000012288,
+          "last_lr": 3.0005529599999993e-07
+        }
+      },
+      {
+        "name": "pre_update_counter_last_lr_183107",
+        "passed": true,
+        "details": {
+          "completed_steps": 183107,
+          "pre_update_tokens": 6000012288,
+          "post_update_tokens": 6000045056,
+          "last_lr": 3e-07
+        }
+      },
+      {
+        "name": "pre_update_counter_last_lr_244141",
+        "passed": true,
+        "details": {
+          "completed_steps": 244141,
+          "pre_update_tokens": 7999974400,
+          "post_update_tokens": 8000007168,
+          "last_lr": 3e-07
+        }
+      },
+      {
+        "name": "pre_update_counter_last_lr_274659",
+        "passed": true,
+        "details": {
+          "completed_steps": 274659,
+          "pre_update_tokens": 8999988224,
+          "post_update_tokens": 9000020992,
+          "last_lr": 3e-07
+        }
+      },
+      {
+        "name": "pre_update_counter_last_lr_305176",
+        "passed": true,
+        "details": {
+          "completed_steps": 305176,
+          "pre_update_tokens": 9999969280,
+          "post_update_tokens": 10000000000,
+          "last_lr": 3e-07
+        }
+      },
+      {
+        "name": "new_helper_authorized_by_source_only_migration",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "source_change_without_explicit_migration_rejected",
+        "passed": true,
+        "details": "Resume configuration/data/LR/seed/source differs from the saved training state; --allow-source-migration permits source_sha256 changes only"
+      },
+      {
+        "name": "peak_lr_change_still_rejected",
+        "passed": true,
+        "details": "Resume configuration/data/LR/seed/source differs from the saved training state; --allow-source-migration permits source_sha256 changes only"
+      },
+      {
+        "name": "new_helper_is_frozen_and_hashed",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "compiled_lr_scalar_update_path_unchanged",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "verifier_reconstructs_previous_prefix",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "policy_audit_in_checkpoint_run_and_result",
+        "passed": true,
+        "details": null
+      },
+      {
+        "name": "reviewed_source_stable_during_checks",
+        "passed": true,
+        "details": null
+      }
+    ],
+    "check_count": 31
+  },
+  "boundary_expectations": [
+    {
+      "completed_steps": 152588,
+      "pre_update_input_tokens": 4999969280,
+      "trained_input_tokens": 5000000000,
+      "last_lr": 3e-06
+    },
+    {
+      "completed_steps": 152589,
+      "pre_update_input_tokens": 5000000000,
+      "trained_input_tokens": 5000032768,
+      "last_lr": 3e-06
+    },
+    {
+      "completed_steps": 183106,
+      "pre_update_input_tokens": 5999979520,
+      "trained_input_tokens": 6000012288,
+      "last_lr": 3.0005529599999993e-07
+    },
+    {
+      "completed_steps": 183107,
+      "pre_update_input_tokens": 6000012288,
+      "trained_input_tokens": 6000045056,
+      "last_lr": 3e-07
+    },
+    {
+      "completed_steps": 244141,
+      "pre_update_input_tokens": 7999974400,
+      "trained_input_tokens": 8000007168,
+      "last_lr": 3e-07
+    },
+    {
+      "completed_steps": 274659,
+      "pre_update_input_tokens": 8999988224,
+      "trained_input_tokens": 9000020992,
+      "last_lr": 3e-07
+    },
+    {
+      "completed_steps": 305176,
+      "pre_update_input_tokens": 9999969280,
+      "trained_input_tokens": 10000000000,
+      "last_lr": 3e-07
+    }
+  ],
+  "blocking_findings": [],
+  "optional_hardening": [],
+  "remaining_validation": [
+    "Verify actual stopped checkpoint and resumed startup against preserved Adam/order/RNG and counters."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "generation_complete",
+  "finished_utc": "2026-10-12T01:47:45.815156+00:00",
+  "questions": 8,
+  "benchmarks": {
+    "gsm8k": {
+      "questions": 4,
+      "finish_reasons": {
+        "stop_string": 2,
+        "eos": 2
+      },
+      "generated_tokens": 2053,
+      "prediction_sha256": "9641c2bcc4c563d0f20f01f3a7c8f93c312bf3ee977c62b07a25b08fde0e64a7"
+    },
+    "math": {
+      "questions": 4,
+      "finish_reasons": {
+        "stop_string": 4
+      },
+      "generated_tokens": 300,
+      "prediction_sha256": "4eff0a0e9ce114935c46a6ca9df13b03ca62aab454c7571bc77e82cc55f27f82"
+    }
+  },
+  "manifest": "./runs/cpt_10b_inference_20261012/smoke/manifest.json",
+  "generation_seconds_this_invocation": 80.9101378149935,
+  "generation_tokens_per_second": 29.08164617616019,
+  "wall_seconds_this_invocation": 137.30532085499726,
+  "peak_allocated_gib": 9.018286228179932,
+  "scoring": "pending",
+  "training_modified": false
+}

@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-15T11:29:10.285760+00:00",
+  "started_beijing": "2026-10-15T19:29:10.285760+08:00",
+  "tmux_session": "deepseek-dapo-100r-20261015",
+  "pipeline": "CPU checks -> isolated GPU smoke and checkpoint verification -> formal diagnostic256 -> fresh formal100 rounds -> full benchmark evaluation",
+  "status": "launching"
+}

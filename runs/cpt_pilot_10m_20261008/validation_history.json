@@ -1,0 +1,16 @@
+[
+  {
+    "step": 153,
+    "loss": 1.8467828035354614,
+    "perplexity": 6.339391611639748,
+    "supervised_tokens": 262016,
+    "blocks": 128
+  },
+  {
+    "step": 306,
+    "loss": 1.8423101902008057,
+    "perplexity": 6.311101277208041,
+    "supervised_tokens": 262016,
+    "blocks": 128
+  }
+]

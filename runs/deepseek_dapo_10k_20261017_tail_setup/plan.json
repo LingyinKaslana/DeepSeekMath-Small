@@ -1,0 +1,36 @@
+{
+  "target_rounds": 10000,
+  "save_every": 100,
+  "validation_every": 100,
+  "boundary": "Next fully saved checkpoint >=2000; original full-state checkpoint and raw logs preserved",
+  "selection": "Isolated 64-response benchmark2 trials -> production256-response benchmark -> >15% effective-group/sec gain with4 real updates and64-question execution probe; fallback uniform on failure",
+  "training_settings_unchanged": [
+    "32 used groups x8 responses",
+    "4 optimizer updates",
+    "1e-6 LR",
+    "2048 token cap",
+    "FP32 weights/Adam,BF16 autocast",
+    "fixed256-question heldout validation"
+  ],
+  "bias_allowed": [
+    "25% uniform exploration +75% history-directed questions",
+    "Optional EOS-reference relative guard andbatchp90 tail cancellation, forced incorrect recorded"
+  ],
+  "counter_preservation": "Checkpoint group totals continue; skipped proposals and artificial mixed groups recorded separately",
+  "small_probe": "runs/deepseek_dapo_tailopt_20261017/benchmark.json",
+  "tail_parameters": {
+    "relative_correct_eos_references": 2,
+    "relative_threshold": "max(256,2*median(completed_correct_lengths))",
+    "batch_observed_completion_fraction": 0.75,
+    "batch_tail_threshold": "max(512,2*p90(completed_lengths))",
+    "cancelled_rewards": "force incorrect, do not invent EOS; raw prefix correctness recorded separately"
+  },
+  "selection_metrics": [
+    "actual used groups/second",
+    "raw mixed group fraction",
+    "forced incorrect fraction",
+    "mean selected response length",
+    "4 minibatch64 optimizer updates,finite positive gradient norms",
+    "64-question heldout execution probe (not a quality-preservation proof)"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "offset": 1000,
+  "step": 21000,
+  "loss": 2.0095245838165283,
+  "grad_norm": 1.6076022386550903,
+  "scheduled_lr": 1e-05,
+  "lr_multiplier": 1.0,
+  "intervention_lr": 1e-05,
+  "effective_fp32_lr": 9.999999747378752e-06,
+  "weight_decay": 0.0,
+  "input_tokens": 32768,
+  "supervised_tokens": 32752,
+  "optimizer_applied": true,
+  "seconds": 0.5494588619912975
+}

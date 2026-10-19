@@ -1,0 +1,2 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 77.52it/s]
+{"status": "passed", "verified_utc": "2026-10-15T06:53:08.653225+00:00", "cpu_only": true, "checkpoint": "./runs/deepseek_sft_gsm_math_20261015/final_checkpoint", "weight_tensors_exactly_reloaded": 219, "parameters": 1346471936, "optimizer_states": 219, "completed_steps": 1356, "sft_input_tokens": 10866690, "sft_supervised_tokens": 7408092, "source_cpt_unchanged": true, "seconds": 26.364639329025522}

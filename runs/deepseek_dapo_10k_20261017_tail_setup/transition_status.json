@@ -1,0 +1,6 @@
+{
+  "status": "checkpoint_ready",
+  "utc": "2026-10-17T14:11:01.422401+00:00",
+  "completed_rounds": 1900,
+  "selected_small_probe": "history_rank"
+}

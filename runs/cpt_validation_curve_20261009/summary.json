@@ -1,0 +1,488 @@
+{
+  "generated_utc": "2026-10-09T02:20:10.040704+00:00",
+  "generated_beijing": "2026-10-09T10:20:10.040704+08:00",
+  "unique_points": 37,
+  "duplicate_measurements_removed": 37,
+  "baseline": {
+    "step": 0,
+    "trained_input_tokens": 0,
+    "trained_tokens_b": 0.0,
+    "validation_loss": 1.86186945438385,
+    "perplexity": 6.4357568863247065,
+    "sources": [
+      "./runs/cpt_10b_20261008/validation_before.json"
+    ]
+  },
+  "best": {
+    "step": 5000,
+    "trained_input_tokens": 163840000,
+    "trained_tokens_b": 0.16384,
+    "validation_loss": 1.8253639936447144,
+    "perplexity": 6.205053208029561,
+    "sources": [
+      "./runs/cpt_10b_20261008/validation_history.json",
+      "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+    ]
+  },
+  "latest": {
+    "step": 175004,
+    "trained_input_tokens": 5734527488,
+    "trained_tokens_b": 5.734527488,
+    "validation_loss": 1.9015161991119385,
+    "perplexity": 6.696039278347423,
+    "sources": [
+      "./runs/cpt_resume_guard_smoke_20261009/validation_history.json",
+      "./runs/cpt_10b_20261009_resumed/validation_before.json"
+    ]
+  },
+  "latest_minus_baseline_loss": 0.03964674472808838,
+  "loss_is_native_eager_and_unsmoothed": true,
+  "sources": [
+    {
+      "path": "./runs/cpt_10b_20261008/manifest.json",
+      "sha256": "674da36b49212acd8de00e44f06a97b15a20873c2630c4c52665ae4964bd5ec0"
+    },
+    {
+      "path": "./runs/cpt_10b_20261008/validation_before.json",
+      "sha256": "212fce849707cb6f1412cc4e01b897f51f3f56e4647e810b4801b3d15e4e481c"
+    },
+    {
+      "path": "./runs/cpt_10b_20261008/validation_history.json",
+      "sha256": "e4d50544f3cc51b871ee603bc8490fb1e1b6ccf5f87155227ae21c415c85f5a2"
+    },
+    {
+      "path": "./runs/cpt_resume_guard_smoke_20261009/manifest.json",
+      "sha256": "ce60e9bd39b73340fd5a84f780bf3e052f2aeb5c29f51270c3d64c26137c92e2"
+    },
+    {
+      "path": "./runs/cpt_resume_guard_smoke_20261009/validation_before.json",
+      "sha256": "174e01dc9add24ad86232948c320b8e43abb00e45a1280a0d73e217fb8d7145c"
+    },
+    {
+      "path": "./runs/cpt_resume_guard_smoke_20261009/validation_history.json",
+      "sha256": "3f83c4c6aa1268a5d39ea4c79167aa37173b5d0e61a788299932851a53868220"
+    },
+    {
+      "path": "./runs/cpt_10b_20261009_resumed/manifest.json",
+      "sha256": "5be8c0b5524911c45b6749065ec3c08870922b79fbdd9a2da69f1f86abd3a38f"
+    },
+    {
+      "path": "./runs/cpt_10b_20261009_resumed/validation_before.json",
+      "sha256": "a211c405330b88f1e068a9a22e779983c47e6b0d76e160551564379d495cbaa9"
+    }
+  ],
+  "script_sha256": "3c03b13d7232bc9b311afc9773ea9cf01fbda7bba02b371be08b1a5ed414559d",
+  "matplotlib_version": "3.11.2",
+  "points": [
+    {
+      "step": 0,
+      "trained_input_tokens": 0,
+      "trained_tokens_b": 0.0,
+      "validation_loss": 1.86186945438385,
+      "perplexity": 6.4357568863247065,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_before.json"
+      ]
+    },
+    {
+      "step": 5000,
+      "trained_input_tokens": 163840000,
+      "trained_tokens_b": 0.16384,
+      "validation_loss": 1.8253639936447144,
+      "perplexity": 6.205053208029561,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 10000,
+      "trained_input_tokens": 327680000,
+      "trained_tokens_b": 0.32768,
+      "validation_loss": 1.8339521884918213,
+      "perplexity": 6.258572903850368,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 15000,
+      "trained_input_tokens": 491520000,
+      "trained_tokens_b": 0.49152,
+      "validation_loss": 1.850775122642517,
+      "perplexity": 6.364751073747688,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 20000,
+      "trained_input_tokens": 655360000,
+      "trained_tokens_b": 0.65536,
+      "validation_loss": 1.86033296585083,
+      "perplexity": 6.4258760125360945,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 25000,
+      "trained_input_tokens": 819200000,
+      "trained_tokens_b": 0.8192,
+      "validation_loss": 1.8678395748138428,
+      "perplexity": 6.474294051289334,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 30000,
+      "trained_input_tokens": 983040000,
+      "trained_tokens_b": 0.98304,
+      "validation_loss": 1.8742263317108154,
+      "perplexity": 6.515776120413309,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 35000,
+      "trained_input_tokens": 1146880000,
+      "trained_tokens_b": 1.14688,
+      "validation_loss": 1.8780107498168945,
+      "perplexity": 6.540481259340888,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 40000,
+      "trained_input_tokens": 1310720000,
+      "trained_tokens_b": 1.31072,
+      "validation_loss": 1.882053256034851,
+      "perplexity": 6.566974709389143,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 45000,
+      "trained_input_tokens": 1474560000,
+      "trained_tokens_b": 1.47456,
+      "validation_loss": 1.8869352340698242,
+      "perplexity": 6.599112920866823,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 50000,
+      "trained_input_tokens": 1638400000,
+      "trained_tokens_b": 1.6384,
+      "validation_loss": 1.8896417617797852,
+      "perplexity": 6.616997794884209,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 55000,
+      "trained_input_tokens": 1802240000,
+      "trained_tokens_b": 1.80224,
+      "validation_loss": 1.8945696353912354,
+      "perplexity": 6.649685999224595,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 60000,
+      "trained_input_tokens": 1966080000,
+      "trained_tokens_b": 1.96608,
+      "validation_loss": 1.8956109285354614,
+      "perplexity": 6.656613878017203,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 65000,
+      "trained_input_tokens": 2129920000,
+      "trained_tokens_b": 2.12992,
+      "validation_loss": 1.899017095565796,
+      "perplexity": 6.679326075552532,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 70000,
+      "trained_input_tokens": 2293760000,
+      "trained_tokens_b": 2.29376,
+      "validation_loss": 1.9013830423355103,
+      "perplexity": 6.69514771470247,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 75000,
+      "trained_input_tokens": 2457600000,
+      "trained_tokens_b": 2.4576,
+      "validation_loss": 1.901973009109497,
+      "perplexity": 6.699098794789463,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 80000,
+      "trained_input_tokens": 2621440000,
+      "trained_tokens_b": 2.62144,
+      "validation_loss": 1.9027293920516968,
+      "perplexity": 6.704167795657177,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 85000,
+      "trained_input_tokens": 2785280000,
+      "trained_tokens_b": 2.78528,
+      "validation_loss": 1.904468059539795,
+      "perplexity": 6.7158342533446405,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 90000,
+      "trained_input_tokens": 2949120000,
+      "trained_tokens_b": 2.94912,
+      "validation_loss": 1.904318928718567,
+      "perplexity": 6.714832790143579,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 95000,
+      "trained_input_tokens": 3112960000,
+      "trained_tokens_b": 3.11296,
+      "validation_loss": 1.9042307138442993,
+      "perplexity": 6.714240468139458,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 100000,
+      "trained_input_tokens": 3276800000,
+      "trained_tokens_b": 3.2768,
+      "validation_loss": 1.9039148092269897,
+      "perplexity": 6.712119743564825,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 105000,
+      "trained_input_tokens": 3440640000,
+      "trained_tokens_b": 3.44064,
+      "validation_loss": 1.9032384157180786,
+      "perplexity": 6.707581244417959,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 110000,
+      "trained_input_tokens": 3604480000,
+      "trained_tokens_b": 3.60448,
+      "validation_loss": 1.9039589166641235,
+      "perplexity": 6.712415804493646,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 115000,
+      "trained_input_tokens": 3768320000,
+      "trained_tokens_b": 3.76832,
+      "validation_loss": 1.9039802551269531,
+      "perplexity": 6.71255903865698,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 120000,
+      "trained_input_tokens": 3932160000,
+      "trained_tokens_b": 3.93216,
+      "validation_loss": 1.9036126136779785,
+      "perplexity": 6.7100916773056225,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 125000,
+      "trained_input_tokens": 4096000000,
+      "trained_tokens_b": 4.096,
+      "validation_loss": 1.902840495109558,
+      "perplexity": 6.704912690578975,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 130000,
+      "trained_input_tokens": 4259840000,
+      "trained_tokens_b": 4.25984,
+      "validation_loss": 1.9027153253555298,
+      "perplexity": 6.704073490829023,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 135000,
+      "trained_input_tokens": 4423680000,
+      "trained_tokens_b": 4.42368,
+      "validation_loss": 1.9020172357559204,
+      "perplexity": 6.699395080015018,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 140000,
+      "trained_input_tokens": 4587520000,
+      "trained_tokens_b": 4.58752,
+      "validation_loss": 1.902225136756897,
+      "perplexity": 6.700788035751519,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 145000,
+      "trained_input_tokens": 4751360000,
+      "trained_tokens_b": 4.75136,
+      "validation_loss": 1.901288628578186,
+      "perplexity": 6.694515630490076,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 150000,
+      "trained_input_tokens": 4915198464,
+      "trained_tokens_b": 4.915198464,
+      "validation_loss": 1.8996325731277466,
+      "perplexity": 6.683438316247111,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 155000,
+      "trained_input_tokens": 5079036416,
+      "trained_tokens_b": 5.079036416,
+      "validation_loss": 1.9006640911102295,
+      "perplexity": 6.690335959965293,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 160000,
+      "trained_input_tokens": 5242876416,
+      "trained_tokens_b": 5.242876416,
+      "validation_loss": 1.9009301662445068,
+      "perplexity": 6.692116328849643,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 165000,
+      "trained_input_tokens": 5406716416,
+      "trained_tokens_b": 5.406716416,
+      "validation_loss": 1.9016567468643188,
+      "perplexity": 6.696980457756622,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 170000,
+      "trained_input_tokens": 5570556416,
+      "trained_tokens_b": 5.570556416,
+      "validation_loss": 1.900639533996582,
+      "perplexity": 6.690171666642078,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 175000,
+      "trained_input_tokens": 5734396416,
+      "trained_tokens_b": 5.734396416,
+      "validation_loss": 1.9017146825790405,
+      "perplexity": 6.6973684633455015,
+      "sources": [
+        "./runs/cpt_10b_20261008/validation_history.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_before.json",
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json"
+      ]
+    },
+    {
+      "step": 175004,
+      "trained_input_tokens": 5734527488,
+      "trained_tokens_b": 5.734527488,
+      "validation_loss": 1.9015161991119385,
+      "perplexity": 6.696039278347423,
+      "sources": [
+        "./runs/cpt_resume_guard_smoke_20261009/validation_history.json",
+        "./runs/cpt_10b_20261009_resumed/validation_before.json"
+      ]
+    }
+  ],
+  "failure_step": 175997,
+  "failure_position_b": 5.767033344,
+  "rollback_step": 175000
+}

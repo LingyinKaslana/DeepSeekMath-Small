@@ -1,0 +1,27 @@
+[
+  {
+    "loss_type": "native",
+    "status": "passed",
+    "loss": 1.818407416343689
+  },
+  {
+    "loss_type": "liger_ce",
+    "status": "rejected_numerical_check",
+    "loss": 1.8184075355529785,
+    "absolute_loss_difference": 1.1920928955078125e-07,
+    "probe_gradient_relative_l2": [
+      0.12321539223194122,
+      0.011985056102275848
+    ]
+  },
+  {
+    "loss_type": "liger",
+    "status": "rejected_numerical_check",
+    "loss": 1.8184075355529785,
+    "absolute_loss_difference": 1.1920928955078125e-07,
+    "probe_gradient_relative_l2": [
+      0.11170336604118347,
+      0.012606711126863956
+    ]
+  }
+]

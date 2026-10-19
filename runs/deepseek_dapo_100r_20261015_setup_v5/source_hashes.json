@@ -1,0 +1,11 @@
+{
+  "benchmark_dapo_execution.py": "f304b69d7c619406836214f708d71c16e7a25600b3fb187e059a64fef498c57a",
+  "score_math_benchmarks.py": "09b7a92de597dff5801def64924f2f13740f2274bf1f893fa5706a195442d5b7",
+  "dapo_math.py": "bdaed9b764df4239c205c4ea95247bf7cfca0e2fd0666bbfa4038416ff9e6b10",
+  "test_compact_decode.py": "53e15b7b97557164ba3ca7446bf874467e197e895af5540484633e0d348db85f",
+  "test_dapo_math.py": "a9a671ce707f1caee023cc966924992f53e606373621a83b348a844e9f59e606",
+  "benchmark_compact_decode.py": "ffccd9c2fd2980d6874068ce218bf1d976352aa259e025fc26f39590afe98fd4",
+  "math_benchmark_protocol.py": "bd3fc2f2eb8649c33c08f34f7d8e1831828334b8eb1032c6000511d519b15608",
+  "run_math_inference.py": "39a7665871b94bfcf67afadab6204632a741963c4d93445cf20aaf268c9d9014",
+  "compact_decode.py": "e27200a3cab1bd47c66a8b1493b9b1bcd5c02610fb597624fe687b23e7d69fed"
+}

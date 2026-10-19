@@ -1,0 +1,851 @@
+{
+  "status": "complete_protocol_matched_comparison",
+  "created_utc": "2026-10-15T03:53:25.758312+00:00",
+  "base_run": "./runs/deepseek_coder_base_inference_20261015",
+  "cpt_run": "./runs/deepseek_coder_10b_inference_20261015",
+  "questions_per_model": 6319,
+  "comparison_direction": "CPT minus original; changes in accuracy are percentage points",
+  "self_check": false,
+  "matched_protocol": {
+    "official_repository_commit": "b8b0f8ce093d80bf8e9a641e44142f06d092c305",
+    "benchmarks": {
+      "gsm8k": 1319,
+      "math": 5000
+    },
+    "prompt_format": {
+      "gsm8k": "Official DeepSeekMath Base 8-shot CoT",
+      "math": "Official DeepSeekMath Base Minerva 4-shot CoT"
+    },
+    "chat_template": false,
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 1024,
+    "n": 1,
+    "batch_size": 256,
+    "stops": {
+      "gsm8k": [
+        "\nQ:"
+      ],
+      "math": [
+        "\nProblem:"
+      ]
+    },
+    "seed": 42,
+    "backend": "Unmodified native Hugging Face generate with SDPA and KV cache",
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4",
+    "smoke_limit_per_dataset": null,
+    "prompt_statistics": {
+      "gsm8k": {
+        "questions": 1319,
+        "minimum_tokens": 760,
+        "maximum_tokens": 926,
+        "mean_tokens": 802.1576952236543
+      },
+      "math": {
+        "questions": 5000,
+        "minimum_tokens": 738,
+        "maximum_tokens": 2163,
+        "mean_tokens": 802.352
+      }
+    },
+    "compute_precision": {
+      "parameters": "float32",
+      "autocast": "bfloat16",
+      "kv_cache": "native HF cache"
+    },
+    "official_sources_sha256": {
+      "evaluation/datasets/gsm8k/test.jsonl": "fd32e8e549626b0dcce350eec7bbace9c463ddbcfa1c0303ba5abe9122450839",
+      "evaluation/datasets/math/test.jsonl": "5fc86b7d164f455c6fc51b8777cac60468fac90c5d0a3e1c9b3312a79fe2ee8e",
+      "evaluation/few_shot_prompts/cot_gsm_8_shot.py": "29533d2bdbd38d554348ee2386c8faa00b12d4bb56ae7de826131dc26cd592a0",
+      "evaluation/few_shot_prompts/cot_minerva_math_4_shot.py": "6f3b5abd73d5183add0f7e753cf6ef4fd669faa338bfa3571ece50d4363daac1",
+      "evaluation/few_shot_prompts/few_shot_prompting.py": "039a7b588a2db755a148eadb8d5f78f5815fa8b094ef500209bf05487c86d9d2"
+    }
+  },
+  "input_model_metadata": {
+    "base": {
+      "checkpoint": "./.cache/huggingface/hub/models--deepseek-ai--deepseek-coder-1.3b-base/snapshots/c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+      "trained_input_tokens": 0,
+      "checkpoint_manifest_sha256": null,
+      "model_shards_sha256": {
+        "pytorch_model.bin": "a400155e495b4d6b1cd5b05f04c56032b7dbc6bdff940e046a89ffc1cc2fbdcd"
+      },
+      "checkpoint_stored_dtype": "bfloat16",
+      "precision": "FP32 parameters; BF16 autocast compute, matching CPT evaluation precision",
+      "compute_precision": {
+        "parameters": "float32",
+        "autocast": "bfloat16",
+        "kv_cache": "native HF cache"
+      },
+      "normalized_compute_precision": {
+        "parameters": "float32",
+        "autocast": "bfloat16",
+        "kv_cache": "native HF cache"
+      }
+    },
+    "cpt": {
+      "checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+      "trained_input_tokens": 10000000000,
+      "checkpoint_manifest_sha256": "c489d2009fbbb6199eb7e704e4752b31b63ad62a57dc65bb1100ffc5a4429ccf",
+      "model_shards_sha256": {
+        "model-00001-of-00002.safetensors": "e65d41c504dab35ba741b41dba9fd81dca8747c297c18ea215be8d9d80c6604c",
+        "model-00002-of-00002.safetensors": "daad854a4c6ee47ff1009a3c6c6068a56f292956b99ff9dc8c054871e9d17636"
+      },
+      "checkpoint_stored_dtype": "float32",
+      "precision": "FP32 saved parameters retained; BF16 autocast compute, matching CPT precision",
+      "compute_precision": {
+        "parameters": "float32",
+        "autocast": "bfloat16",
+        "kv_cache": "native HF cache"
+      },
+      "normalized_compute_precision": {
+        "parameters": "float32",
+        "autocast": "bfloat16",
+        "kv_cache": "native HF cache"
+      }
+    }
+  },
+  "validation": {
+    "complete_unique_index_sets": {
+      "gsm8k": 1319,
+      "math": 5000
+    },
+    "prompt_identity_and_text_and_token_lengths_equal": true,
+    "gold_and_math_groups_equal": true,
+    "generation_records_preserved_by_scoring": true,
+    "recorded_scores_recomputed_from_saved_booleans": true,
+    "prediction_hashes_match_scores": true,
+    "input_files_unchanged": true,
+    "scoring_protocol_equal": true,
+    "actual_generation_batch_sizes_equal": true,
+    "model_token_budgets_and_distinct_saved_weights_checked": true,
+    "model_loaded": false,
+    "scoring_rerun": false
+  },
+  "benchmarks": {
+    "gsm8k": {
+      "total": 1319,
+      "base": {
+        "total": 1319,
+        "correct": 63,
+        "accuracy": 0.047763457164518575,
+        "accuracy_percent": 4.776345716451857
+      },
+      "cpt": {
+        "total": 1319,
+        "correct": 114,
+        "accuracy": 0.08642911296436695,
+        "accuracy_percent": 8.642911296436695
+      },
+      "paired": {
+        "both_correct": 23,
+        "base_only_correct": 40,
+        "cpt_only_correct": 91,
+        "both_wrong": 1165
+      },
+      "delta_correct": 51,
+      "delta_percentage_points": 3.8665655799848384,
+      "improved": 91,
+      "regressed": 40,
+      "unchanged": 1188,
+      "both_nonlength_same_questions": {
+        "total": 1073,
+        "base": {
+          "total": 1073,
+          "correct": 58,
+          "accuracy": 0.05405405405405406,
+          "accuracy_percent": 5.405405405405405
+        },
+        "cpt": {
+          "total": 1073,
+          "correct": 105,
+          "accuracy": 0.097856477166822,
+          "accuracy_percent": 9.785647716682199
+        },
+        "paired": {
+          "both_correct": 22,
+          "base_only_correct": 36,
+          "cpt_only_correct": 83,
+          "both_wrong": 932
+        },
+        "delta_correct": 47,
+        "delta_percentage_points": 4.380242311276794,
+        "improved": 83,
+        "regressed": 36,
+        "unchanged": 954,
+        "percent_of_full_dataset": 81.34950720242608,
+        "interpretation": "Descriptive subset selected by both model outputs; not a causal estimate of removing the length limit."
+      },
+      "generation": {
+        "base": {
+          "total": 1319,
+          "generated_tokens": 222927,
+          "mean_generated_tokens": 169.01213040181955,
+          "mean_generated_tokens_correct": 112.33333333333333,
+          "mean_generated_tokens_incorrect": 171.85509554140128,
+          "length": {
+            "total": 113,
+            "correct": 2,
+            "accuracy": 0.017699115044247787,
+            "accuracy_percent": 1.7699115044247788,
+            "percent_of_dataset": 8.567096285064443
+          },
+          "nonlength": {
+            "total": 1206,
+            "correct": 61,
+            "accuracy": 0.0505804311774461,
+            "accuracy_percent": 5.05804311774461,
+            "percent_of_dataset": 91.43290371493556
+          },
+          "empty_predictions": 0,
+          "empty_prediction_percent": 0.0,
+          "empty_completions": 0,
+          "empty_completion_percent": 0.0,
+          "timeouts": 0,
+          "errors": 0,
+          "missing_generations": 0,
+          "finish_reasons": {
+            "length": {
+              "total": 113,
+              "correct": 2,
+              "accuracy": 0.017699115044247787,
+              "accuracy_percent": 1.7699115044247788,
+              "percent_of_dataset": 8.567096285064443,
+              "mean_generated_tokens": 1024
+            },
+            "stop_string": {
+              "total": 1206,
+              "correct": 61,
+              "accuracy": 0.0505804311774461,
+              "accuracy_percent": 5.05804311774461,
+              "percent_of_dataset": 91.43290371493556,
+              "mean_generated_tokens": 88.90132669983416
+            }
+          }
+        },
+        "cpt": {
+          "total": 1319,
+          "generated_tokens": 265237,
+          "mean_generated_tokens": 201.08946171341927,
+          "mean_generated_tokens_correct": 103.65789473684211,
+          "mean_generated_tokens_incorrect": 210.30705394190872,
+          "length": {
+            "total": 160,
+            "correct": 3,
+            "accuracy": 0.01875,
+            "accuracy_percent": 1.875,
+            "percent_of_dataset": 12.130401819560273
+          },
+          "nonlength": {
+            "total": 1159,
+            "correct": 111,
+            "accuracy": 0.09577221742881795,
+            "accuracy_percent": 9.577221742881795,
+            "percent_of_dataset": 87.86959818043972
+          },
+          "empty_predictions": 0,
+          "empty_prediction_percent": 0.0,
+          "empty_completions": 0,
+          "empty_completion_percent": 0.0,
+          "timeouts": 0,
+          "errors": 0,
+          "missing_generations": 0,
+          "finish_reasons": {
+            "length": {
+              "total": 160,
+              "correct": 3,
+              "accuracy": 0.01875,
+              "accuracy_percent": 1.875,
+              "percent_of_dataset": 12.130401819560273,
+              "mean_generated_tokens": 1024
+            },
+            "stop_string": {
+              "total": 1159,
+              "correct": 111,
+              "accuracy": 0.09577221742881795,
+              "accuracy_percent": 9.577221742881795,
+              "percent_of_dataset": 87.86959818043972,
+              "mean_generated_tokens": 87.48662640207075
+            }
+          }
+        }
+      },
+      "length_status_paired": {
+        "base_nonlength__cpt_nonlength": 1073,
+        "base_length__cpt_nonlength": 86,
+        "base_nonlength__cpt_length": 133,
+        "base_length__cpt_length": 27
+      },
+      "secondary_comma_normalized": {
+        "total": 1319,
+        "base": {
+          "total": 1319,
+          "correct": 65,
+          "accuracy": 0.04927975739196361,
+          "accuracy_percent": 4.927975739196361
+        },
+        "cpt": {
+          "total": 1319,
+          "correct": 117,
+          "accuracy": 0.0887035633055345,
+          "accuracy_percent": 8.87035633055345
+        },
+        "paired": {
+          "both_correct": 25,
+          "base_only_correct": 40,
+          "cpt_only_correct": 92,
+          "both_wrong": 1162
+        },
+        "delta_correct": 52,
+        "delta_percentage_points": 3.9423805913570895,
+        "improved": 92,
+        "regressed": 40,
+        "unchanged": 1187,
+        "label": "Diagnostic only; not official main score",
+        "both_nonlength_same_questions": {
+          "total": 1073,
+          "base": {
+            "total": 1073,
+            "correct": 60,
+            "accuracy": 0.05591798695246971,
+            "accuracy_percent": 5.591798695246971
+          },
+          "cpt": {
+            "total": 1073,
+            "correct": 108,
+            "accuracy": 0.10065237651444547,
+            "accuracy_percent": 10.065237651444548
+          },
+          "paired": {
+            "both_correct": 24,
+            "base_only_correct": 36,
+            "cpt_only_correct": 84,
+            "both_wrong": 929
+          },
+          "delta_correct": 48,
+          "delta_percentage_points": 4.473438956197577,
+          "improved": 84,
+          "regressed": 36,
+          "unchanged": 953
+        }
+      }
+    },
+    "math": {
+      "total": 5000,
+      "base": {
+        "total": 5000,
+        "correct": 208,
+        "accuracy": 0.0416,
+        "accuracy_percent": 4.16
+      },
+      "cpt": {
+        "total": 5000,
+        "correct": 282,
+        "accuracy": 0.0564,
+        "accuracy_percent": 5.64
+      },
+      "paired": {
+        "both_correct": 65,
+        "base_only_correct": 143,
+        "cpt_only_correct": 217,
+        "both_wrong": 4575
+      },
+      "delta_correct": 74,
+      "delta_percentage_points": 1.4799999999999995,
+      "improved": 217,
+      "regressed": 143,
+      "unchanged": 4640,
+      "both_nonlength_same_questions": {
+        "total": 2217,
+        "base": {
+          "total": 2217,
+          "correct": 134,
+          "accuracy": 0.060442038791159225,
+          "accuracy_percent": 6.044203879115923
+        },
+        "cpt": {
+          "total": 2217,
+          "correct": 169,
+          "accuracy": 0.07622913847541724,
+          "accuracy_percent": 7.6229138475417235
+        },
+        "paired": {
+          "both_correct": 49,
+          "base_only_correct": 85,
+          "cpt_only_correct": 120,
+          "both_wrong": 1963
+        },
+        "delta_correct": 35,
+        "delta_percentage_points": 1.5787099684258008,
+        "improved": 120,
+        "regressed": 85,
+        "unchanged": 2012,
+        "percent_of_full_dataset": 44.34,
+        "interpretation": "Descriptive subset selected by both model outputs; not a causal estimate of removing the length limit."
+      },
+      "generation": {
+        "base": {
+          "total": 5000,
+          "generated_tokens": 2378249,
+          "mean_generated_tokens": 475.6498,
+          "mean_generated_tokens_correct": 286.46634615384613,
+          "mean_generated_tokens_incorrect": 483.86143572621035,
+          "length": {
+            "total": 1964,
+            "correct": 41,
+            "accuracy": 0.020875763747454174,
+            "accuracy_percent": 2.0875763747454172,
+            "percent_of_dataset": 39.28
+          },
+          "nonlength": {
+            "total": 3036,
+            "correct": 167,
+            "accuracy": 0.055006587615283264,
+            "accuracy_percent": 5.500658761528326,
+            "percent_of_dataset": 60.72
+          },
+          "empty_predictions": 203,
+          "empty_prediction_percent": 4.06,
+          "empty_completions": 0,
+          "empty_completion_percent": 0.0,
+          "timeouts": 0,
+          "errors": 0,
+          "missing_generations": 0,
+          "finish_reasons": {
+            "eos": {
+              "total": 9,
+              "correct": 1,
+              "accuracy": 0.1111111111111111,
+              "accuracy_percent": 11.11111111111111,
+              "percent_of_dataset": 0.18,
+              "mean_generated_tokens": 46.22222222222222
+            },
+            "length": {
+              "total": 1964,
+              "correct": 41,
+              "accuracy": 0.020875763747454174,
+              "accuracy_percent": 2.0875763747454172,
+              "percent_of_dataset": 39.28,
+              "mean_generated_tokens": 1024
+            },
+            "stop_string": {
+              "total": 3027,
+              "correct": 166,
+              "accuracy": 0.0548397753551371,
+              "accuracy_percent": 5.48397753551371,
+              "percent_of_dataset": 60.54,
+              "mean_generated_tokens": 121.14205483977535
+            }
+          }
+        },
+        "cpt": {
+          "total": 5000,
+          "generated_tokens": 2413859,
+          "mean_generated_tokens": 482.7718,
+          "mean_generated_tokens_correct": 300.83687943262413,
+          "mean_generated_tokens_incorrect": 493.6462484103434,
+          "length": {
+            "total": 1860,
+            "correct": 58,
+            "accuracy": 0.03118279569892473,
+            "accuracy_percent": 3.118279569892473,
+            "percent_of_dataset": 37.2
+          },
+          "nonlength": {
+            "total": 3140,
+            "correct": 224,
+            "accuracy": 0.07133757961783439,
+            "accuracy_percent": 7.13375796178344,
+            "percent_of_dataset": 62.8
+          },
+          "empty_predictions": 147,
+          "empty_prediction_percent": 2.94,
+          "empty_completions": 0,
+          "empty_completion_percent": 0.0,
+          "timeouts": 0,
+          "errors": 0,
+          "missing_generations": 0,
+          "finish_reasons": {
+            "length": {
+              "total": 1860,
+              "correct": 58,
+              "accuracy": 0.03118279569892473,
+              "accuracy_percent": 3.118279569892473,
+              "percent_of_dataset": 37.2,
+              "mean_generated_tokens": 1024
+            },
+            "stop_string": {
+              "total": 3140,
+              "correct": 224,
+              "accuracy": 0.07133757961783439,
+              "accuracy_percent": 7.13375796178344,
+              "percent_of_dataset": 62.8,
+              "mean_generated_tokens": 162.17165605095542
+            }
+          }
+        }
+      },
+      "length_status_paired": {
+        "base_nonlength__cpt_length": 819,
+        "base_length__cpt_nonlength": 923,
+        "base_length__cpt_length": 1041,
+        "base_nonlength__cpt_nonlength": 2217
+      },
+      "breakdown": {
+        "type": {
+          "Algebra": {
+            "total": 1187,
+            "base": {
+              "total": 1187,
+              "correct": 51,
+              "accuracy": 0.04296545914069082,
+              "accuracy_percent": 4.296545914069082
+            },
+            "cpt": {
+              "total": 1187,
+              "correct": 93,
+              "accuracy": 0.07834877843302443,
+              "accuracy_percent": 7.834877843302443
+            },
+            "paired": {
+              "both_correct": 17,
+              "base_only_correct": 34,
+              "cpt_only_correct": 76,
+              "both_wrong": 1060
+            },
+            "delta_correct": 42,
+            "delta_percentage_points": 3.538331929233361,
+            "improved": 76,
+            "regressed": 34,
+            "unchanged": 1077
+          },
+          "Counting & Probability": {
+            "total": 474,
+            "base": {
+              "total": 474,
+              "correct": 22,
+              "accuracy": 0.046413502109704644,
+              "accuracy_percent": 4.641350210970464
+            },
+            "cpt": {
+              "total": 474,
+              "correct": 23,
+              "accuracy": 0.04852320675105485,
+              "accuracy_percent": 4.852320675105485
+            },
+            "paired": {
+              "both_correct": 9,
+              "base_only_correct": 13,
+              "cpt_only_correct": 14,
+              "both_wrong": 438
+            },
+            "delta_correct": 1,
+            "delta_percentage_points": 0.21097046413502074,
+            "improved": 14,
+            "regressed": 13,
+            "unchanged": 447
+          },
+          "Geometry": {
+            "total": 479,
+            "base": {
+              "total": 479,
+              "correct": 9,
+              "accuracy": 0.018789144050104383,
+              "accuracy_percent": 1.8789144050104383
+            },
+            "cpt": {
+              "total": 479,
+              "correct": 12,
+              "accuracy": 0.025052192066805846,
+              "accuracy_percent": 2.5052192066805845
+            },
+            "paired": {
+              "both_correct": 1,
+              "base_only_correct": 8,
+              "cpt_only_correct": 11,
+              "both_wrong": 459
+            },
+            "delta_correct": 3,
+            "delta_percentage_points": 0.6263048016701462,
+            "improved": 11,
+            "regressed": 8,
+            "unchanged": 460
+          },
+          "Intermediate Algebra": {
+            "total": 903,
+            "base": {
+              "total": 903,
+              "correct": 39,
+              "accuracy": 0.04318936877076412,
+              "accuracy_percent": 4.318936877076411
+            },
+            "cpt": {
+              "total": 903,
+              "correct": 37,
+              "accuracy": 0.04097452934662237,
+              "accuracy_percent": 4.097452934662237
+            },
+            "paired": {
+              "both_correct": 13,
+              "base_only_correct": 26,
+              "cpt_only_correct": 24,
+              "both_wrong": 840
+            },
+            "delta_correct": -2,
+            "delta_percentage_points": -0.22148394241417435,
+            "improved": 24,
+            "regressed": 26,
+            "unchanged": 853
+          },
+          "Number Theory": {
+            "total": 540,
+            "base": {
+              "total": 540,
+              "correct": 22,
+              "accuracy": 0.040740740740740744,
+              "accuracy_percent": 4.074074074074074
+            },
+            "cpt": {
+              "total": 540,
+              "correct": 19,
+              "accuracy": 0.03518518518518519,
+              "accuracy_percent": 3.5185185185185186
+            },
+            "paired": {
+              "both_correct": 4,
+              "base_only_correct": 18,
+              "cpt_only_correct": 15,
+              "both_wrong": 503
+            },
+            "delta_correct": -3,
+            "delta_percentage_points": -0.5555555555555558,
+            "improved": 15,
+            "regressed": 18,
+            "unchanged": 507
+          },
+          "Prealgebra": {
+            "total": 871,
+            "base": {
+              "total": 871,
+              "correct": 49,
+              "accuracy": 0.05625717566016074,
+              "accuracy_percent": 5.625717566016074
+            },
+            "cpt": {
+              "total": 871,
+              "correct": 73,
+              "accuracy": 0.08381171067738231,
+              "accuracy_percent": 8.381171067738231
+            },
+            "paired": {
+              "both_correct": 14,
+              "base_only_correct": 35,
+              "cpt_only_correct": 59,
+              "both_wrong": 763
+            },
+            "delta_correct": 24,
+            "delta_percentage_points": 2.7554535017221573,
+            "improved": 59,
+            "regressed": 35,
+            "unchanged": 777
+          },
+          "Precalculus": {
+            "total": 546,
+            "base": {
+              "total": 546,
+              "correct": 16,
+              "accuracy": 0.029304029304029304,
+              "accuracy_percent": 2.93040293040293
+            },
+            "cpt": {
+              "total": 546,
+              "correct": 25,
+              "accuracy": 0.045787545787545784,
+              "accuracy_percent": 4.5787545787545785
+            },
+            "paired": {
+              "both_correct": 7,
+              "base_only_correct": 9,
+              "cpt_only_correct": 18,
+              "both_wrong": 512
+            },
+            "delta_correct": 9,
+            "delta_percentage_points": 1.6483516483516483,
+            "improved": 18,
+            "regressed": 9,
+            "unchanged": 519
+          }
+        },
+        "level": {
+          "Level 1": {
+            "total": 437,
+            "base": {
+              "total": 437,
+              "correct": 41,
+              "accuracy": 0.09382151029748284,
+              "accuracy_percent": 9.382151029748284
+            },
+            "cpt": {
+              "total": 437,
+              "correct": 74,
+              "accuracy": 0.16933638443935928,
+              "accuracy_percent": 16.933638443935926
+            },
+            "paired": {
+              "both_correct": 19,
+              "base_only_correct": 22,
+              "cpt_only_correct": 55,
+              "both_wrong": 341
+            },
+            "delta_correct": 33,
+            "delta_percentage_points": 7.551487414187642,
+            "improved": 55,
+            "regressed": 22,
+            "unchanged": 360
+          },
+          "Level 2": {
+            "total": 894,
+            "base": {
+              "total": 894,
+              "correct": 54,
+              "accuracy": 0.06040268456375839,
+              "accuracy_percent": 6.0402684563758395
+            },
+            "cpt": {
+              "total": 894,
+              "correct": 83,
+              "accuracy": 0.09284116331096197,
+              "accuracy_percent": 9.284116331096197
+            },
+            "paired": {
+              "both_correct": 21,
+              "base_only_correct": 33,
+              "cpt_only_correct": 62,
+              "both_wrong": 778
+            },
+            "delta_correct": 29,
+            "delta_percentage_points": 3.243847874720357,
+            "improved": 62,
+            "regressed": 33,
+            "unchanged": 799
+          },
+          "Level 3": {
+            "total": 1131,
+            "base": {
+              "total": 1131,
+              "correct": 54,
+              "accuracy": 0.04774535809018567,
+              "accuracy_percent": 4.774535809018567
+            },
+            "cpt": {
+              "total": 1131,
+              "correct": 63,
+              "accuracy": 0.05570291777188329,
+              "accuracy_percent": 5.570291777188329
+            },
+            "paired": {
+              "both_correct": 15,
+              "base_only_correct": 39,
+              "cpt_only_correct": 48,
+              "both_wrong": 1029
+            },
+            "delta_correct": 9,
+            "delta_percentage_points": 0.7957559681697619,
+            "improved": 48,
+            "regressed": 39,
+            "unchanged": 1044
+          },
+          "Level 4": {
+            "total": 1214,
+            "base": {
+              "total": 1214,
+              "correct": 32,
+              "accuracy": 0.026359143327841845,
+              "accuracy_percent": 2.6359143327841847
+            },
+            "cpt": {
+              "total": 1214,
+              "correct": 38,
+              "accuracy": 0.03130148270181219,
+              "accuracy_percent": 3.130148270181219
+            },
+            "paired": {
+              "both_correct": 5,
+              "base_only_correct": 27,
+              "cpt_only_correct": 33,
+              "both_wrong": 1149
+            },
+            "delta_correct": 6,
+            "delta_percentage_points": 0.49423393739703414,
+            "improved": 33,
+            "regressed": 27,
+            "unchanged": 1154
+          },
+          "Level 5": {
+            "total": 1324,
+            "base": {
+              "total": 1324,
+              "correct": 27,
+              "accuracy": 0.02039274924471299,
+              "accuracy_percent": 2.0392749244712993
+            },
+            "cpt": {
+              "total": 1324,
+              "correct": 24,
+              "accuracy": 0.01812688821752266,
+              "accuracy_percent": 1.812688821752266
+            },
+            "paired": {
+              "both_correct": 5,
+              "base_only_correct": 22,
+              "cpt_only_correct": 19,
+              "both_wrong": 1278
+            },
+            "delta_correct": -3,
+            "delta_percentage_points": -0.22658610271903323,
+            "improved": 19,
+            "regressed": 22,
+            "unchanged": 1283
+          }
+        }
+      }
+    }
+  },
+  "input_files_sha256": {
+    "./runs/deepseek_coder_base_inference_20261015/manifest.json": "433c19fb13cb7529dc739b1a1f0f6e57ab85e909ff1efc295ef8677e58a0e1bf",
+    "./runs/deepseek_coder_base_inference_20261015/scores.json": "004c914b08ce865f884a42316977fcddc3b0e3ce64103067f0d12d7169712c24",
+    "./runs/deepseek_coder_base_inference_20261015/gsm8k_prompts.jsonl": "6287eb092a4cdfb7fe3aa4c81f6fb7197a7dbc1ebac614b3ffbcb20e7450842a",
+    "./runs/deepseek_coder_base_inference_20261015/gsm8k_predictions.jsonl": "faee7a7662c8060517ade5365b77fe0a03337001aea1ce3a3339fc48ce073d6d",
+    "./runs/deepseek_coder_base_inference_20261015/gsm8k_scored.jsonl": "5a0ce1fc2ed46e6fdd38a8af0327839f7b00eff812312ddc754dcf88b08b8ee8",
+    "./runs/deepseek_coder_base_inference_20261015/math_prompts.jsonl": "204ca1f6540ef6593cef9344c92a2060f80be98677753c735b5b55a6a32f6b52",
+    "./runs/deepseek_coder_base_inference_20261015/math_predictions.jsonl": "7782193d0b9f722b330bfe92446d6ada0a9982b027ed00e81469a30b4e49295a",
+    "./runs/deepseek_coder_base_inference_20261015/math_scored.jsonl": "cb6b22ed179460f31fef3a32921f9b484f88bba2ed70e22c088b7c852db00939",
+    "./runs/deepseek_coder_10b_inference_20261015/manifest.json": "e2c1fa7696d774cf44f396c4fb03e7836013acc1d4e8cdf9e545459830024856",
+    "./runs/deepseek_coder_10b_inference_20261015/scores.json": "525a04091d8bc8ef3dc7d8b21285fd3cecd1ae151d6e2c46ffc6756ed584c076",
+    "./runs/deepseek_coder_10b_inference_20261015/gsm8k_prompts.jsonl": "6287eb092a4cdfb7fe3aa4c81f6fb7197a7dbc1ebac614b3ffbcb20e7450842a",
+    "./runs/deepseek_coder_10b_inference_20261015/gsm8k_predictions.jsonl": "d358f6cdf6ba6c51f6c062f32389680c4e2639834bd546cea4c4962e89a79c42",
+    "./runs/deepseek_coder_10b_inference_20261015/gsm8k_scored.jsonl": "f32f7145c5b4299361fa806e2d8a28bfead6232e62a4f6c6ee00596642de0970",
+    "./runs/deepseek_coder_10b_inference_20261015/math_prompts.jsonl": "204ca1f6540ef6593cef9344c92a2060f80be98677753c735b5b55a6a32f6b52",
+    "./runs/deepseek_coder_10b_inference_20261015/math_predictions.jsonl": "068252a21efb4bc099eaeefa645d4d4333dccc1b9e11d539e79e69d8dbda29d4",
+    "./runs/deepseek_coder_10b_inference_20261015/math_scored.jsonl": "31055f54fd9abd5e8d2a52cc4af8dbebd7113064e31ddba3547800c21689c9cb"
+  },
+  "script_sha256": "f1f6ea7e3ce57ec038055f523a62feaf95b6761e7fe433a6675e16008d1c3a54",
+  "limits": [
+    "This comparison describes these two checkpoints under one shared prompt/decoding/scoring protocol.",
+    "All questions, including length-limited and empty answers, remain in the primary score denominator.",
+    "The both-nonlength subset is selected using model outputs and is descriptive, not a causal length-limit ablation.",
+    "GSM8K comma normalization changes the answer extraction; it is a separate diagnostic score.",
+    "One CPT run cannot identify which training choice caused a change or establish generalization across runs.",
+    "No evaluation-set decontamination of the training corpus was performed."
+  ],
+  "artifacts": {
+    "benchmark_comparison.csv": "./runs/deepseek_base_vs_10b_20261015/benchmark_comparison.csv",
+    "math_breakdown_comparison.csv": "./runs/deepseek_base_vs_10b_20261015/math_breakdown_comparison.csv",
+    "gsm8k_paired.jsonl": "./runs/deepseek_base_vs_10b_20261015/gsm8k_paired.jsonl",
+    "gsm8k_paired.csv": "./runs/deepseek_base_vs_10b_20261015/gsm8k_paired.csv",
+    "math_paired.jsonl": "./runs/deepseek_base_vs_10b_20261015/math_paired.jsonl",
+    "math_paired.csv": "./runs/deepseek_base_vs_10b_20261015/math_paired.csv",
+    "benchmark_comparison.png": "./runs/deepseek_base_vs_10b_20261015/benchmark_comparison.png",
+    "benchmark_comparison.pdf": "./runs/deepseek_base_vs_10b_20261015/benchmark_comparison.pdf"
+  }
+}

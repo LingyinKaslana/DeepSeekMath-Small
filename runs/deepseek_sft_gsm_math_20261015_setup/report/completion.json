@@ -1,0 +1,78 @@
+{
+  "status": "complete_verified",
+  "verified_utc": "2026-10-15T07:48:57.472977+00:00",
+  "training": {
+    "status": "complete",
+    "stage": "sft",
+    "completed_steps": 1356,
+    "configured_steps": 1356,
+    "sft_input_tokens": 10866690,
+    "sft_supervised_tokens": 7408092,
+    "validation_before": {
+      "loss": 0.9544458389282227,
+      "supervised_tokens": 86171,
+      "input_tokens": 126981,
+      "examples": 512,
+      "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+    },
+    "validation_after": {
+      "step": 1356,
+      "loss": 0.7478501200675964,
+      "supervised_tokens": 86171,
+      "input_tokens": 126981,
+      "examples": 512,
+      "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+    },
+    "best_step": 904,
+    "best_validation_loss": 0.7081043124198914,
+    "final_checkpoint": "./runs/deepseek_sft_gsm_math_20261015/final_checkpoint",
+    "evaluation_checkpoint": "./runs/deepseek_sft_gsm_math_20261015/best_checkpoint",
+    "wall_seconds": 1578.862201838987,
+    "peak_allocated_gib": 96.73280096054077,
+    "finished_utc": "2026-10-15T06:52:37.048119+00:00",
+    "cpt_checkpoint_modified": false
+  },
+  "verification_final": {
+    "status": "passed",
+    "verified_utc": "2026-10-15T06:53:08.653225+00:00",
+    "cpu_only": true,
+    "checkpoint": "./runs/deepseek_sft_gsm_math_20261015/final_checkpoint",
+    "weight_tensors_exactly_reloaded": 219,
+    "parameters": 1346471936,
+    "optimizer_states": 219,
+    "completed_steps": 1356,
+    "sft_input_tokens": 10866690,
+    "sft_supervised_tokens": 7408092,
+    "source_cpt_unchanged": true,
+    "seconds": 26.364639329025522
+  },
+  "evaluation_checkpoint": "./runs/deepseek_sft_gsm_math_20261015/best_checkpoint",
+  "questions": 6319,
+  "max_new_tokens": 1024,
+  "comparison": {
+    "gsm8k": {
+      "cpt_correct": 114,
+      "sft_correct": 281,
+      "total": 1319,
+      "cpt_accuracy_percent": 8.642911296436695,
+      "sft_accuracy_percent": 21.30401819560273,
+      "delta_percentage_points": 12.661106899166034,
+      "truncated_generations": 14,
+      "errors": 0,
+      "timeouts": 0
+    },
+    "math": {
+      "cpt_correct": 282,
+      "sft_correct": 307,
+      "total": 5000,
+      "cpt_accuracy_percent": 5.64,
+      "sft_accuracy_percent": 6.140000000000001,
+      "delta_percentage_points": 0.5000000000000009,
+      "truncated_generations": 547,
+      "errors": 0,
+      "timeouts": 0
+    }
+  },
+  "evaluation_mode": "Same base few-shot prompts as CPT; answer-only SFT uses matching Q/A and Problem/Solution formats",
+  "cpt_checkpoint_modified": false
+}

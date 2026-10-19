@@ -1,0 +1,353 @@
+{
+  "status": "passed_paired_startup_runtime",
+  "completed_utc": "2026-10-10T05:02:29.811594+00:00",
+  "reviewer": "decay_audit independent agent",
+  "checks_passed": 62,
+  "checks_total": 62,
+  "checks": [
+    {
+      "name": "same_initial_Adam_tensor_SHA",
+      "passed": true,
+      "details": "8ff74b7d8c37ec9e2f17e140114db1f42df467816f4f2e93c991a267086ac46a"
+    },
+    {
+      "name": "same_complete_Adam_audit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_initial_RNG",
+      "passed": true,
+      "details": {
+        "cpu_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+        "cuda_sha256": "aefdce03def94ffed42159e55677ec20e91200e1981f25b1f271b6fd99c3c263"
+      }
+    },
+    {
+      "name": "constant_initial_finite_state",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_initial_finite_state",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_checkpoint",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_checkpoint_manifest_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_checkpoint_files",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_checkpoint_training_state_file",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_source_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_data_manifest_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_data_artifact_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_order_metadata",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_selected_block_indices_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_selected_training_token_and_label_values_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_probes_json_sha256",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_checked_probe_hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_batch",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_actual_training_micro_batch",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_actual_backend_options",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_start_step",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_end_step",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_new_input_tokens",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_plan_new_supervised_tokens",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_probe_file_SHA",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "offset0_same_checkpoint",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_initial_eval_validation",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "same_initial_eval_uniform_train",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "same_initial_eval_seen_train",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "same_initial_eval_unseen_train",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "initial_validation_reference",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_log_contiguous",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_all_actual_FP32_LR_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_nominal_LR_match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_actual_LR_monotonically_down",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_finite_applied_updates",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_input_target_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_active_not_failed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_complete_exact6104",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_final_finite",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "constant_no_exception_OOM_report",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "linear_decay_no_exception_OOM_report",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_source_standard_native.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_backend_config_SHA",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_PID_identity",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "decay_PID_alive",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_SHA_train_branch.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_SHA_compare_cpt_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_SHA_compare_cpt_hyperparameters.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_SHA_summarize_comparison.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "runtime_tool_SHA_run_comparison.py",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "initial_loss_differences": {
+    "validation": 0.0,
+    "uniform_train": 0.0,
+    "seen_train": 0.0,
+    "unseen_train": 0.0
+  },
+  "initial_Adam_combined_tensor_sha256": "8ff74b7d8c37ec9e2f17e140114db1f42df467816f4f2e93c991a267086ac46a",
+  "initial_RNG": {
+    "cpu_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+    "cuda_sha256": "aefdce03def94ffed42159e55677ec20e91200e1981f25b1f271b6fd99c3c263"
+  },
+  "last_checked_decay_update": {
+    "offset": 754,
+    "step": 115754,
+    "loss": 1.8704679012298584,
+    "grad_norm": 1.6576284170150757,
+    "lr": 2.66686875307226e-06,
+    "effective_fp32_lr": 2.6668687951314496e-06,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 3793027072,
+    "seconds": 0.7709269449696876,
+    "optimizer_applied": true
+  },
+  "constant_complete": true,
+  "linear_decay_complete": false,
+  "main_pid": 621138,
+  "main_proc_starttime": "21240311",
+  "production_files_modified": false,
+  "blocking_findings": [],
+  "limit": "Partial runtime review through logged decay updates; remaining updates/final checkpoint still pending."
+}

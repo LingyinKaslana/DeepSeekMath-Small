@@ -1,0 +1,6 @@
+{
+  "source": "./runs/deepseek_dapo_100r_20261015",
+  "through_round": 100,
+  "effective_groups_found": 3806,
+  "effective_groups_used": 3200
+}

@@ -1,0 +1,15 @@
+{
+  "hbm_read_write_tb_s": {
+    "mean": 3.27581041762994,
+    "p90": 4.011818480800001,
+    "max": 6.428929268
+  },
+  "tensor_hbm_correlation": -0.5920457517439414,
+  "tensor_under_10pct_time_fraction": 0.12095808383233533,
+  "hbm_over_70pct_time_fraction": 0.05389221556886228,
+  "tensor_mean_when_hbm_over_70pct": 2.1316962444444445,
+  "sm_under_50pct_time_fraction": 0.0011976047904191617,
+  "sm_under_10pct_time_fraction": 0.0,
+  "observation": "Alternating tensor-active and bandwidth-heavy intervals; not proof the entire workload is memory-bound",
+  "plot_matplotlib_version": "3.10.7"
+}

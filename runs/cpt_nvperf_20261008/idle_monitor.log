@@ -1,0 +1,9 @@
+NVPERF|INF|04:26:21:132|Initialize || Setting library load paths: /external/nvidia-perfsdk/Samples/NvPerfUtility/tools/build/bin
+NVPERF|INF|04:26:21:424|Initialize || Loaded NvPerf Vulkan backend
+NVPERF|INF|04:26:21:424|SelectDevice || Detected 1 NvPerf device(s)
+NVPERF|INF|04:26:21:424|SelectDevice || [0] NVIDIA GB300 (LOCAL_GPU_HOST), periodic-sampler-supported=yes
+NVPERF|ERR|04:26:21:424|GetHudConfigurationsSize || Unknown chip "LOCAL_GPU_HOST"
+NVPERF|ERR|04:26:21:424|GetHudConfigurationsFileNames || Unknown chip "LOCAL_GPU_HOST"
+NVPERF|ERR|04:26:21:424|GetHudConfigurations || Unknown chip "LOCAL_GPU_HOST"
+NVPERF|ERR|04:26:21:424|LoadPresets || Error: no built-in HUD configurations for chip LOCAL_GPU_HOST
+NVPERF|ERR|04:26:21:424|main || Error: no built-in YAML config for chip LOCAL_GPU_HOST

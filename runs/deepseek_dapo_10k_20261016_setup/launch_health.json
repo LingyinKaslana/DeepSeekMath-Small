@@ -1,0 +1,23 @@
+{
+  "status": "healthy_resumed_training",
+  "verified_completed_round": 101,
+  "resume_verification": {
+    "status": "passed",
+    "weight_tensors": 219,
+    "optimizer_states": 219,
+    "completed_rounds": 100,
+    "gradient_updates": 400
+  },
+  "group_totals": {
+    "completed_rounds": 101,
+    "effective_groups_found": 3838,
+    "effective_groups_used": 3232,
+    "all_wrong_groups": 3197,
+    "all_correct_groups": 613,
+    "candidate_groups": 7648,
+    "gradient_updates": 404
+  },
+  "source_manifest_unchanged": true,
+  "retention_verified": true,
+  "cpu_checks_passed": 13
+}

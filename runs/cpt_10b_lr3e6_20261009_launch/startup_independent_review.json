@@ -1,0 +1,335 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-09T14:56:35.779674+00:00",
+  "gpu_used": false,
+  "checks": [
+    {
+      "name": "fresh_base_launch",
+      "passed": true
+    },
+    {
+      "name": "no_budget_shortening",
+      "passed": true
+    },
+    {
+      "name": "new_lr3e6",
+      "passed": true
+    },
+    {
+      "name": "original_fast_backend_bytes",
+      "passed": true
+    },
+    {
+      "name": "frozen_train_cpt.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_model_backends.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_token_batches.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_compiled_adamw.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_native_ops.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_native_chunked_ce.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_cpt.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_packed_data.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_cpt_orders.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_nonfinite_retry.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_source_migration.py",
+      "passed": true
+    },
+    {
+      "name": "frozen_standard_native.py",
+      "passed": true
+    },
+    {
+      "name": "pinned_model_revision",
+      "passed": true
+    },
+    {
+      "name": "same_batch",
+      "passed": true
+    },
+    {
+      "name": "same_math",
+      "passed": true
+    },
+    {
+      "name": "retry_no_skip_before_optimizer",
+      "passed": true
+    },
+    {
+      "name": "preserve_old_progress_excluded",
+      "passed": true
+    },
+    {
+      "name": "fresh_optimizer_code_not_load_oldstate",
+      "passed": true
+    },
+    {
+      "name": "runtime_fresh_no_resume",
+      "passed": true
+    },
+    {
+      "name": "runtime_fresh_lineage",
+      "passed": true
+    },
+    {
+      "name": "runtime_lr3e6_full_schedule",
+      "passed": true
+    },
+    {
+      "name": "runtime_full10b_no_limits",
+      "passed": true
+    },
+    {
+      "name": "runtime_fast_backend",
+      "passed": true
+    },
+    {
+      "name": "runtime_native_retry",
+      "passed": true
+    },
+    {
+      "name": "runtime_data_identical_original",
+      "passed": true
+    },
+    {
+      "name": "runtime_source_frozen_native5h",
+      "passed": true
+    },
+    {
+      "name": "runtime_order_metadata_identical_original",
+      "passed": true
+    },
+    {
+      "name": "runtime_order_actual_sha_order_epoch_00000.npy",
+      "passed": true
+    },
+    {
+      "name": "runtime_order_actual_sha_order_epoch_00001.npy",
+      "passed": true
+    },
+    {
+      "name": "runtime_fixed_probe_identical_native5h",
+      "passed": true
+    },
+    {
+      "name": "runtime_math_config_same_original",
+      "passed": true
+    },
+    {
+      "name": "old_progress_retained",
+      "passed": true
+    },
+    {
+      "name": "actual_initial_native_validation_exact",
+      "passed": true
+    },
+    {
+      "name": "actual_initial_uniform_probe_exact",
+      "passed": true
+    },
+    {
+      "name": "first_real_update_completed",
+      "passed": true
+    },
+    {
+      "name": "startup_updates_finite_sequential",
+      "passed": true
+    },
+    {
+      "name": "startup_global_warmup_lr_exact",
+      "passed": true
+    },
+    {
+      "name": "first_update_no_retry",
+      "passed": true
+    },
+    {
+      "name": "first_normal_block_order_equals_original",
+      "passed": true
+    },
+    {
+      "name": "first_step_counts_equal_original",
+      "passed": true
+    },
+    {
+      "name": "actual_fast_optimizer_config",
+      "passed": true
+    }
+  ],
+  "all_available_checks_passed": true,
+  "runtime_manifest_checked": true,
+  "initial_validation_checked": true,
+  "initial_probe_checked": true,
+  "production_files_modified": false,
+  "limitations": [
+    "Fresh AdamW basis is immutable no-resume branch, zero start counters, fresh compiled AdamW constructor and first update at step1; direct GPU optimizer tensor inspection was not performed.",
+    "This is a successful startup review, not completion of the10B objective or a guarantee of future stability.",
+    "Changed learning rate means startup training-loss trajectory is not expected to equal the original optimized run."
+  ],
+  "updated_utc": "2026-10-09T15:02:52.109270+00:00",
+  "runtime_summary": {
+    "execution_mode": "configured",
+    "initial_resumed_steps": 0,
+    "configured_input_tokens": 10000000000,
+    "schedule": {
+      "total_steps": 305176,
+      "peak_lr": 3e-06,
+      "warmup_steps": 15259,
+      "decay_80_step": 244141,
+      "decay_90_step": 274659,
+      "decay_80_factor": 0.316,
+      "decay_90_factor": 0.1
+    },
+    "signature": {
+      "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+      "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+      "token_file_sha256": {
+        "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+        "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+      },
+      "peak_lr": 3e-06,
+      "seed": 42,
+      "sequence_length": 2048,
+      "effective_batch": 16,
+      "epochs": 2,
+      "source_sha256": {
+        "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+        "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+        "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+        "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+        "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+        "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+        "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+        "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+        "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+        "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+        "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+        "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+      }
+    },
+    "order_metadata": {
+      "schema_version": 1,
+      "dataset_blocks": 2441407,
+      "effective_batch": 16,
+      "epochs": 2,
+      "seed": 42,
+      "generator": "torch.randperm(cpu), sequential seeded generator",
+      "files": [
+        {
+          "name": "order_epoch_00000.npy",
+          "sha256": "cb620a8596cd8ff50b838e6be94fa676ffbe0d41118c094fcbed66c2817b466b",
+          "dtype": "int32",
+          "blocks": 2441407,
+          "tail_position": 2376606
+        },
+        {
+          "name": "order_epoch_00001.npy",
+          "sha256": "d522f0f1d149346e93da04800c666611fb3789df357343ac221de61a745f6f80",
+          "dtype": "int32",
+          "blocks": 2441407,
+          "tail_position": 425930
+        }
+      ]
+    }
+  },
+  "first_training_update_checked": true,
+  "actual_initial_validation": {
+    "step": 0,
+    "loss": 1.86186945438385,
+    "perplexity": 6.4357568863247065,
+    "supervised_tokens": 2096128,
+    "input_tokens": 2097152,
+    "blocks": 1024,
+    "loss_backend": "native eager",
+    "attention_mask": "cached all-ones tensor"
+  },
+  "actual_initial_uniform_probe": {
+    "step": 0,
+    "cumulative_tokens": 0,
+    "loss": 1.931435465812683,
+    "perplexity": 6.899406999528651,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  "actual_first_training_record": {
+    "step": 1,
+    "loss": 1.9482442140579224,
+    "grad_norm": 1.7033991813659668,
+    "epoch": 1,
+    "step_in_epoch": 1,
+    "lr": 1.9660528212857986e-10,
+    "effective_fp32_lr": 1.9660528760567786e-10,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 32768,
+    "seconds": 15.83748298601131,
+    "native_retry_applied": false,
+    "optimizer_applied": true,
+    "first_full_shape_update": true
+  },
+  "checked_training_records": 200,
+  "last_checked_training_step": 200,
+  "original_first_record": {
+    "step": 1,
+    "loss": 1.9482442140579224,
+    "grad_norm": 1.7034310102462769,
+    "epoch": 1,
+    "step_in_epoch": 1,
+    "lr": 6.553509404285996e-10,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 32768,
+    "seconds": 16.093843937007478,
+    "optimizer_applied": true,
+    "first_full_shape_update": true
+  },
+  "initial_block_indices": [
+    2191736,
+    716262,
+    1257718,
+    1714329,
+    1804369,
+    1585198,
+    423373,
+    2423331,
+    1151632,
+    781090,
+    1048610,
+    2144725,
+    444932,
+    2254009,
+    1956706,
+    170483
+  ]
+}

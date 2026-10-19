@@ -1,0 +1,20 @@
+{
+  "status": "running",
+  "created_utc": "2026-10-15T00:47:56.709080+00:00",
+  "checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+  "trained_input_tokens": 10000000000,
+  "benchmarks": {
+    "gsm8k": 1319,
+    "math": 5000
+  },
+  "batch_size": 256,
+  "max_new_tokens": 1024,
+  "do_sample": false,
+  "n": 1,
+  "backend": "Unmodified native HF generate SDPA",
+  "precision": "FP32 weights / BF16 autocast",
+  "automatic_scoring": true,
+  "automatic_completeness_verification": true,
+  "training_modified": false,
+  "startup_verification": "./runs/deepseek_coder_10b_inference_20261015/startup_verification.json"
+}

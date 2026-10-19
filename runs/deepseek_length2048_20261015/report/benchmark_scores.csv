@@ -1,0 +1,5 @@
+model,benchmark,original_1024_correct,selective_2048_correct,total,original_1024_accuracy_percent,selective_2048_accuracy_percent,delta_percentage_points,rerun_questions,gained,lost,still_truncated_2048,prefix_identical_questions
+base,gsm8k,63,65,1319,4.776345716451858,4.927975739196361,0.1516300227445031,113,2,0,97,67
+base,math,208,219,5000,4.16,4.38,0.21999999999999975,1964,32,21,1701,1135
+cpt,gsm8k,114,118,1319,8.642911296436694,8.946171341925702,0.303260045489008,160,4,0,118,78
+cpt,math,282,286,5000,5.64,5.72,0.08000000000000007,1860,32,28,1650,1155

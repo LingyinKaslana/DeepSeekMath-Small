@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "updated_utc": "2026-10-08T06:54:11.162345+00:00",
+  "checks": {
+    "stop_resume": {
+      "status": "passed",
+      "evidence": "./runs/cpt_multiepoch_smoke_pipeline_verification.json",
+      "check_count": 24
+    },
+    "stopped_checkpoint": {
+      "status": "passed",
+      "evidence": "./runs/cpt_multiepoch_smoke_stopped_checkpoint_verification.json",
+      "check_count": null
+    },
+    "final_checkpoint": {
+      "status": "passed",
+      "evidence": "./runs/cpt_multiepoch_smoke_final_checkpoint_verification.json",
+      "check_count": null
+    },
+    "data_preparation_smoke": {
+      "evidence": "./runs/data_prepare_5b_20261008/smoke_verification.json",
+      "status": "passed"
+    }
+  },
+  "intended_input_tokens": 10000000000,
+  "epochs": 2,
+  "full_parameter_training": true,
+  "fast_backend_strict_native_gradient_equivalence": false,
+  "prepared_manifest": "./data/processed/openwebmath_5b_s42/manifest.json",
+  "prepared_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+  "train_tokens": 5000000000,
+  "validation_tokens": 2097152,
+  "training_documents": 2540257,
+  "validation_documents": 1501,
+  "all_114_source_shards_verified": true,
+  "total_steps": 305176,
+  "old_validation_token_prefix_exact": true
+}

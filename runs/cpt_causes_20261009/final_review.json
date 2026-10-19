@@ -1,0 +1,196 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-09T14:38:03.749069+00:00",
+  "gpu_used": false,
+  "production_files_modified": false,
+  "checks": [
+    {
+      "name": "baseline_complete",
+      "passed": true
+    },
+    {
+      "name": "baseline_executed_1000_legal_updates",
+      "passed": true
+    },
+    {
+      "name": "baseline_final338_finite_adam_step21000",
+      "passed": true
+    },
+    {
+      "name": "baseline_eval_original_fixedgroups",
+      "passed": true
+    },
+    {
+      "name": "baseline_diagnostic_no_production_resume",
+      "passed": true
+    },
+    {
+      "name": "lr_0p3_complete",
+      "passed": true
+    },
+    {
+      "name": "lr_0p3_executed_1000_legal_updates",
+      "passed": true
+    },
+    {
+      "name": "lr_0p3_final338_finite_adam_step21000",
+      "passed": true
+    },
+    {
+      "name": "lr_0p3_eval_original_fixedgroups",
+      "passed": true
+    },
+    {
+      "name": "lr_0p3_diagnostic_no_production_resume",
+      "passed": true
+    },
+    {
+      "name": "wd_zero_complete",
+      "passed": true
+    },
+    {
+      "name": "wd_zero_executed_1000_legal_updates",
+      "passed": true
+    },
+    {
+      "name": "wd_zero_final338_finite_adam_step21000",
+      "passed": true
+    },
+    {
+      "name": "wd_zero_eval_original_fixedgroups",
+      "passed": true
+    },
+    {
+      "name": "wd_zero_diagnostic_no_production_resume",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_checkpoint_manifest_sha256",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_checkpoint_files",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_checkpoint_training_state_file",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_source_sha256",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_schedule",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_order_metadata",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_selected_block_indices_sha256",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_selected_training_token_and_label_values_sha256",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_probes",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_probes_json_sha256",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_precision",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_batch",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_initial_adam_identical",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_initial_rng_identical",
+      "passed": true
+    },
+    {
+      "name": "cross_arm_initial_4losses_exact",
+      "passed": true
+    },
+    {
+      "name": "probe_json_actual_sha",
+      "passed": true
+    },
+    {
+      "name": "unseen_excludes_branch_and_original30860",
+      "passed": true
+    },
+    {
+      "name": "initial_validation_exact_original20k",
+      "passed": true
+    },
+    {
+      "name": "baseline_replay_close",
+      "passed": true
+    },
+    {
+      "name": "lr_effect_exceeds_replay_difference_100fold",
+      "passed": true
+    },
+    {
+      "name": "lr_improves_all_four_groups",
+      "passed": true
+    },
+    {
+      "name": "wd0_val_still_rises_from_fork",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "effects": {
+    "starting_validation": 1.8604923486709595,
+    "original_native21000_validation": 1.8623181581497192,
+    "baseline_replay_validation": 1.8623371124267578,
+    "baseline_replay_minus_original": 1.895427703857422e-05,
+    "lr0p3_improvement_over_baseline": 0.014340400695800781,
+    "wd0_improvement_over_baseline": 0.00013554096221923828,
+    "lr_effect_over_replay_difference": 756.5786163522013,
+    "lr_effect_over_wd0_effect": 105.80123131046614,
+    "endpoints": {
+      "baseline": {
+        "validation": 1.8623371124267578,
+        "uniform_train": 1.9320671558380127,
+        "seen_train": 1.8415130376815796,
+        "unseen_train": 1.883710503578186
+      },
+      "lr_0p3": {
+        "validation": 1.847996711730957,
+        "uniform_train": 1.9182960987091064,
+        "seen_train": 1.8242173194885254,
+        "unseen_train": 1.8693515062332153
+      },
+      "wd_zero": {
+        "validation": 1.8622015714645386,
+        "uniform_train": 1.9319449663162231,
+        "seen_train": 1.8412917852401733,
+        "unseen_train": 1.883523941040039
+      }
+    }
+  },
+  "initial_state_integrity": "Recorded full source safetensors/state-file SHA, Adam combined tensor SHA, CPU/CUDA RNG, selected order/token/label SHA, and four initial native losses are identical across arms. Original immutable checkpoint not modified.",
+  "evaluation_leakage_review": "Frozen native trainer.evaluate is no_grad, uses model.eval plus preserve_rng, restores mode; fixed validation and probes evaluated without optimizer. Unseen blocks are absent through both intervention end21000 and original trajectory30860. Uniform/seen probes are training-corpus diagnostics, not held-out validation.",
+  "interpretation": "At the already-trained 20k checkpoint, LR×0.3 gives a clear numerical improvement across independent validation and all fixed probes during 1000 matched updates. Its validation effect is much larger than replay variation or the WD-zero effect; lower total update size is now the leading local hypothesis. No repeated-seed uncertainty or statistical significance has been measured.",
+  "limits": [
+    "A 1000-step local intervention does not establish optimal LR, sustained long-run gains, or the cause of the original step5000 turning point.",
+    "LR reduction scales both Adam update and effective lr*weight_decay; WD-zero comparison suggests ongoing decay alone is insufficient to explain this local LR effect but does not fully isolate mechanisms.",
+    "WD-zero starts from the same20k checkpoint: it does not reverse previous accumulated weight decay or reset Adam history.",
+    "Block-level unseen does not establish document/base-pretraining nonoverlap; initial-state hashes are taken from audited branch records, not a second full19GB disk rehash."
+  ]
+}

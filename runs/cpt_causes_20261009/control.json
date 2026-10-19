@@ -1,0 +1,76 @@
+{
+  "status": "complete",
+  "created_utc": "2026-10-09T13:34:55.618453+00:00",
+  "created_beijing": "2026-10-09T21:34:55.618453+08:00",
+  "source_run": "./runs/cpt_native_from0_5h_20261009",
+  "checkpoint": "./runs/cpt_native_from0_5h_20261009/checkpoint_step_00020000",
+  "start_step": 20000,
+  "end_step": 21000,
+  "updates_per_branch": 1000,
+  "input_tokens_per_branch": 32768000,
+  "cases": {
+    "baseline": {
+      "lr_multiplier": 1,
+      "weight_decay": 0.1
+    },
+    "lr_0p3": {
+      "lr_multiplier": 0.3,
+      "weight_decay": 0.1
+    },
+    "wd_zero": {
+      "lr_multiplier": 1,
+      "weight_decay": 0
+    }
+  },
+  "evaluation_offsets": [
+    0,
+    500,
+    1000
+  ],
+  "probes_sha256": "e6cea904ec9bad158832bbb9ad1ad97379213e44645704982c08924a0dc43ecb",
+  "source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+  },
+  "frozen_tools_sha256": {
+    "report_cpt_hyperparameters.py": "b93ec3f16ebc1f23b224cbb3fcf352ad031d16ae02e67cb20b51f719db621bf6",
+    "evaluate_cpt_seen_unseen.py": "1e457535ef9a45a3b9f89ba39cc0cbe4d510356179e45dab0a5f069ac657678c",
+    "compare_cpt_backends.py": "455eeb4f5bfcbcbc9f8405dcb8193fb62d7d5be23a3838eeb3bc76d14aa8bb5e",
+    "compare_cpt_hyperparameters.py": "ebc9778eaab48f2b88a71ba4e585ae6f454085cc1f391fd4ab3b6be6053f5509"
+  },
+  "no_gpu_overlap": true,
+  "training_is_diagnostic_only": true,
+  "counts_toward_original_10b_budget": false,
+  "automatic_production_resume": false,
+  "independent_preflight": "independent_pipeline_review.json",
+  "cpu_tests": "hyperparameter_cpu_tests.json",
+  "cpu_plan": "plan_only_baseline/plan.json",
+  "interpretation_limits": [
+    "Short local sensitivity experiment, not a fresh full-run hyperparameter reproduction",
+    "Reduced LR reduces both Adam update and lr*weight_decay",
+    "Block unseen in this CPT does not prove absence of overlap in base pretraining/neighbouring blocks"
+  ],
+  "tmux_session": "deepseekmath-cpt-causes",
+  "suite_status": "runs/cpt_causes_20261009/hyperparameter_suite_status.json",
+  "suite_pid": 618519,
+  "probe_evaluation_summary": "runs/cpt_causes_20261009/probe_evaluation_summary.json",
+  "started_utc": "2026-10-09T13:34:55.858712+00:00",
+  "completed_utc": "2026-10-09T14:18:43.416374+00:00",
+  "report": "./runs/cpt_causes_20261009/report/summary.json",
+  "result": "./runs/cpt_causes_20261009/result.json",
+  "observation": {
+    "status": "complete",
+    "kind": "native matched 1000-update local interventions",
+    "production_resumed": false
+  }
+}

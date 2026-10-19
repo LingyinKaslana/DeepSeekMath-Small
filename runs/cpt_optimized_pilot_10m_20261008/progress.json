@@ -1,0 +1,12 @@
+{
+  "step": 306,
+  "loss": 1.7900290489196777,
+  "grad_norm": 3.6899566650390625,
+  "lr": 1.0000000000000002e-06,
+  "input_tokens": 6144,
+  "supervised_tokens": 6141,
+  "cumulative_tokens": 10000000,
+  "seconds": 0.24857839100877754,
+  "optimizer_applied": true,
+  "first_full_shape_update": false
+}

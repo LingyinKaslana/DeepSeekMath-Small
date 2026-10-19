@@ -1,0 +1,200 @@
+{
+  "audit": "Independent completed GSM8K official CPU score; no generation and no GPU",
+  "completed_utc": "2026-10-12T02:02:39.886201+00:00",
+  "dataset": "gsm8k",
+  "coverage": {
+    "expected": 1319,
+    "predictions": 1319,
+    "independently_scored": 1319,
+    "unique_contiguous_indices": true,
+    "dataset_id_question_join_verified": true
+  },
+  "official_main": {
+    "correct": 671,
+    "total": 1319,
+    "accuracy": 0.5087187263078089,
+    "accuracy_percent": 50.87187263078089
+  },
+  "secondary_comma_normalized": {
+    "label": "Diagnostic only; not official main score",
+    "correct": 690,
+    "total": 1319,
+    "accuracy": 0.5231235784685367,
+    "accuracy_percent": 52.31235784685367,
+    "wrong_to_correct_count": 19,
+    "wrong_to_correct": [
+      {
+        "dataset_index": 129,
+        "dataset_id": "gsm8k-test-129",
+        "gold": "10000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "10000.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 246,
+        "dataset_id": "gsm8k-test-246",
+        "gold": "27000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "27000.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 299,
+        "dataset_id": "gsm8k-test-299",
+        "gold": "31800",
+        "official_prediction": "800.",
+        "comma_normalized_prediction": "31800.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 325,
+        "dataset_id": "gsm8k-test-325",
+        "gold": "224000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "224000.",
+        "finish_reason": "eos"
+      },
+      {
+        "dataset_index": 331,
+        "dataset_id": "gsm8k-test-331",
+        "gold": "8400",
+        "official_prediction": "400.",
+        "comma_normalized_prediction": "8400.",
+        "finish_reason": "eos"
+      },
+      {
+        "dataset_index": 343,
+        "dataset_id": "gsm8k-test-343",
+        "gold": "180000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "180000.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 401,
+        "dataset_id": "gsm8k-test-401",
+        "gold": "14400",
+        "official_prediction": "400.",
+        "comma_normalized_prediction": "14400.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 451,
+        "dataset_id": "gsm8k-test-451",
+        "gold": "11050",
+        "official_prediction": "050.",
+        "comma_normalized_prediction": "11050.",
+        "finish_reason": "length"
+      },
+      {
+        "dataset_index": 467,
+        "dataset_id": "gsm8k-test-467",
+        "gold": "1200",
+        "official_prediction": "200.",
+        "comma_normalized_prediction": "1200.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 582,
+        "dataset_id": "gsm8k-test-582",
+        "gold": "129200",
+        "official_prediction": "200.",
+        "comma_normalized_prediction": "129200.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 613,
+        "dataset_id": "gsm8k-test-613",
+        "gold": "93000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "93000.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 629,
+        "dataset_id": "gsm8k-test-629",
+        "gold": "17500",
+        "official_prediction": "500.",
+        "comma_normalized_prediction": "17500.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 657,
+        "dataset_id": "gsm8k-test-657",
+        "gold": "330000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "330000.",
+        "finish_reason": "eos"
+      },
+      {
+        "dataset_index": 715,
+        "dataset_id": "gsm8k-test-715",
+        "gold": "385000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "385000.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 759,
+        "dataset_id": "gsm8k-test-759",
+        "gold": "60000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "60000.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 819,
+        "dataset_id": "gsm8k-test-819",
+        "gold": "6250",
+        "official_prediction": "250.",
+        "comma_normalized_prediction": "6250.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 1026,
+        "dataset_id": "gsm8k-test-1026",
+        "gold": "43200",
+        "official_prediction": "200.",
+        "comma_normalized_prediction": "43200.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 1043,
+        "dataset_id": "gsm8k-test-1043",
+        "gold": "130000",
+        "official_prediction": "000.",
+        "comma_normalized_prediction": "130000.",
+        "finish_reason": "stop_string"
+      },
+      {
+        "dataset_index": 1285,
+        "dataset_id": "gsm8k-test-1285",
+        "gold": "1218",
+        "official_prediction": "218.",
+        "comma_normalized_prediction": "1218.",
+        "finish_reason": "stop_string"
+      }
+    ],
+    "correct_to_wrong_indices": []
+  },
+  "timeouts": 0,
+  "errors": [],
+  "error_count": 0,
+  "empty_prediction_count": 1,
+  "empty_prediction_indices": [
+    301
+  ],
+  "finish_reasons": {
+    "stop_string": 1187,
+    "length": 70,
+    "eos": 62
+  },
+  "length_count": 70,
+  "empty_completion_count": 0,
+  "prediction_sha256": "483cd11a8dddd317fb0e0d5ef67ebb669e6a2578118960fb514797691ad78800",
+  "frozen_score_source_sha256": "5a25edc9a95d222fff3ee5022e7865a1d3a8f9c1170599c919136c35af457c44",
+  "cpu_workers": 4,
+  "per_item_timeout_seconds": 15,
+  "wall_seconds": 1.8718872510362417
+}

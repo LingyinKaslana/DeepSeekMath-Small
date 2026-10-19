@@ -1,0 +1,19 @@
+{
+  "sample_count": 487,
+  "positive_interval_sample_count": 487,
+  "hbm_over_70pct_sample_count": 0,
+  "hbm_over_70pct_positive_interval_sample_count": 0,
+  "hbm_read_write_tb_s": {
+    "mean": 2.507988012963039,
+    "p90": 2.7570930354,
+    "max": 3.5994718210000003
+  },
+  "tensor_hbm_correlation": -0.5509739690823283,
+  "tensor_under_10pct_time_fraction": 0.026694045174537988,
+  "hbm_over_70pct_time_fraction": 0.0,
+  "tensor_mean_when_hbm_over_70pct": null,
+  "sm_under_50pct_time_fraction": 0.0,
+  "sm_under_10pct_time_fraction": 0.0,
+  "observation": "No sampled interval reaches HBM throughput >=70%; conditional Tensor-pipe activity is unavailable",
+  "plot_matplotlib_version": "3.10.7"
+}

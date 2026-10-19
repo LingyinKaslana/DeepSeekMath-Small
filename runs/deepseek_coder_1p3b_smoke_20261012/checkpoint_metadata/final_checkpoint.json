@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "completed_steps": 32,
+  "optimizer_updates": 32,
+  "trained_tokens": 1047840,
+  "supervised_tokens": 1047328,
+  "signature": {
+    "backend_config_sha256": "14af4690f5960ef1373813302e342a5c0b7771429a375fef8e8b2259ce59b462",
+    "data_manifest_sha256": "8ecf346482e8775cf1a1a4c80dec4569e7d054178b134235a5c2a44c182612f0",
+    "token_file_sha256": {
+      "train_tokens.npy": "f1507d4df38ba0886de7fb0b526f151afa9013f9c75abf2066d6da0aba3c82fe",
+      "validation_tokens.npy": "97a52c2cbec0041e2a480f7e5069d16efc30caf324aa60b14410d274daf415bd"
+    },
+    "peak_lr": 3e-06,
+    "seed": 42,
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "epochs": 1,
+    "warmup_steps": 2,
+    "lr_schedule": "constant",
+    "source_sha256": {
+      "train_cpt.py": "f31ec562a4f22cd4e34d1793851045160848713d9ee7cdc15497f56460e07ef6",
+      "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+      "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+      "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+      "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+      "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+      "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+      "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+      "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+      "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+      "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+      "standard_native.py": "8c6575731e7f0f129129da7a1a62cb3e702d93e8d37af7740e0bd7a765969f33",
+      "lr_intervention.py": "881e005c690cef06f3b2ab30e38ab3c90c24917652ced12294f8e7cf08aa03a8"
+    }
+  },
+  "original_signature": {
+    "backend_config_sha256": "14af4690f5960ef1373813302e342a5c0b7771429a375fef8e8b2259ce59b462",
+    "data_manifest_sha256": "8ecf346482e8775cf1a1a4c80dec4569e7d054178b134235a5c2a44c182612f0",
+    "token_file_sha256": {
+      "train_tokens.npy": "f1507d4df38ba0886de7fb0b526f151afa9013f9c75abf2066d6da0aba3c82fe",
+      "validation_tokens.npy": "97a52c2cbec0041e2a480f7e5069d16efc30caf324aa60b14410d274daf415bd"
+    },
+    "peak_lr": 3e-06,
+    "seed": 42,
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "epochs": 1,
+    "warmup_steps": 2,
+    "lr_schedule": "constant",
+    "source_sha256": {
+      "train_cpt.py": "f31ec562a4f22cd4e34d1793851045160848713d9ee7cdc15497f56460e07ef6",
+      "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+      "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+      "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+      "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+      "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+      "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+      "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+      "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+      "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+      "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+      "standard_native.py": "8c6575731e7f0f129129da7a1a62cb3e702d93e8d37af7740e0bd7a765969f33",
+      "lr_intervention.py": "881e005c690cef06f3b2ab30e38ab3c90c24917652ced12294f8e7cf08aa03a8"
+    }
+  },
+  "source_migrations": [],
+  "native_retry_count": 0,
+  "train_probe": {
+    "schema_version": 1,
+    "seed": 20261009,
+    "blocks": 32,
+    "indices": [
+      61,
+      86,
+      101,
+      106,
+      111,
+      156,
+      158,
+      184,
+      191,
+      217,
+      218,
+      248,
+      280,
+      306,
+      307,
+      317,
+      327,
+      331,
+      339,
+      377,
+      380,
+      418,
+      456,
+      467,
+      482,
+      485,
+      502,
+      508,
+      510,
+      521,
+      551,
+      552
+    ],
+    "indices_sha256": "b9e7f3341948a349abc9cc98ca94cc9b2d54c6d99217ad9a111cfa3e63acfba8",
+    "tokens_sha256": "348870f48a0753a58f8a138713285f7d219b55387b3630ad6344753b9dcc576e",
+    "input_tokens": 65536,
+    "supervised_tokens": 65504,
+    "sampling": "Fixed uniform complete training-corpus blocks; private NumPy RNG; not current minibatch"
+  },
+  "train_probe_history": [
+    {
+      "step": 0,
+      "cumulative_tokens": 0,
+      "loss": 2.272456407546997,
+      "perplexity": 9.703206593661045,
+      "supervised_tokens": 65504,
+      "input_tokens": 65536,
+      "blocks": 32,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    {
+      "step": 16,
+      "cumulative_tokens": 524288,
+      "loss": 2.256883382797241,
+      "perplexity": 9.553268839621769,
+      "supervised_tokens": 65504,
+      "input_tokens": 65536,
+      "blocks": 32,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    {
+      "step": 32,
+      "cumulative_tokens": 1047840,
+      "loss": 2.2387397289276123,
+      "perplexity": 9.381500600250154,
+      "supervised_tokens": 65504,
+      "input_tokens": 65536,
+      "blocks": 32,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    }
+  ],
+  "native_optimizer_adaptations": [],
+  "schedule": {
+    "total_steps": 32,
+    "peak_lr": 3e-06,
+    "warmup_steps": 2,
+    "decay_80_step": 26,
+    "decay_90_step": 29,
+    "decay_80_factor": 1.0,
+    "decay_90_factor": 1.0,
+    "lr_schedule": "constant"
+  },
+  "backend": {
+    "execution_mode": "standard_native",
+    "kernels": "native HF",
+    "loss": "native HF causal LM",
+    "compile_scope": "none",
+    "optimizer_compile": null,
+    "attention_mask": "standard 2D all-ones",
+    "labels": "independent stacked clones",
+    "data_provider": "original cpt.batch",
+    "optimizer": "standard uncompiled torch.optim.AdamW foreach",
+    "native_configure_model_called": false
+  },
+  "lr_intervention": null,
+  "lr_intervention_audit": null,
+  "order_metadata": {
+    "schema_version": 1,
+    "dataset_blocks": 557,
+    "effective_batch": 16,
+    "epochs": 1,
+    "seed": 42,
+    "generator": "torch.randperm(cpu), sequential seeded generator",
+    "files": [
+      {
+        "name": "order_epoch_00000.npy",
+        "sha256": "3c61aaf8baf5b240a2b1699bb342735825456111ccb5a0fbab3d7ce20c52fdbd",
+        "dtype": "int32",
+        "blocks": 557,
+        "tail_position": 477
+      }
+    ]
+  },
+  "epoch_cursor": {
+    "completed_epochs": 0,
+    "step_in_epoch": 32
+  },
+  "saved_utc": "2026-10-12T06:29:09.199463+00:00",
+  "files": {
+    "generation_config.json": 119,
+    "training_state.pt": 10771978676,
+    "model-00002-of-00002.safetensors": 399532808,
+    "tokenizer_config.json": 4318,
+    "model-00001-of-00002.safetensors": 4986380064,
+    "tokenizer.json": 2289811,
+    "special_tokens_map.json": 482,
+    "model.safetensors.index.json": 18041,
+    "config.json": 753
+  },
+  "verification": "Atomic complete-directory publication; full tensor comparison is a separate diagnostic"
+}

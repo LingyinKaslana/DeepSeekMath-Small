@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-08T05:30:10.260046+00:00",
+  "backend_config_path": "./runs/cpt_optimization_20261008/fullmodel_precise_deterministic.backend.json",
+  "backend_config_sha256": "8dbf2d9f30f2f9564917a6d6b60d048803f1a9b789b0ef1ef084a14547465be8",
+  "backend_config": {
+    "schema_version": 1,
+    "validated": true,
+    "model": "Qwen/Qwen2.5-Coder-1.5B",
+    "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "micro_batch": 16,
+    "mask_policy": "causal",
+    "fused_optimizer": false,
+    "options": {
+      "kernels": "native",
+      "loss": "native",
+      "chunk_mem_const": 1,
+      "compile_scope": "model",
+      "compile_mode": "default",
+      "compile_shape": [
+        16,
+        2048
+      ],
+      "compile_fullgraph": true,
+      "rms_in_place": false,
+      "emulate_precision_casts": true,
+      "compile_label_alias": "same_as_input"
+    },
+    "validation_evidence": {
+      "benchmark_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam_tailguard/result.json",
+      "numerical": {
+        "passed": true,
+        "native_loss": 1.820206642150879,
+        "backend_loss": 1.819075345993042,
+        "absolute_loss_difference": 0.001131296157836914,
+        "global_gradient_relative_l2": 0.031219622120261192,
+        "probe_gradient_relative_l2": {
+          "model.embed_tokens.weight": 0.018463272601366043,
+          "model.layers.0.self_attn.q_proj.weight": 0.04818228259682655,
+          "model.layers.0.mlp.down_proj.weight": 0.041955336928367615,
+          "model.layers.0.input_layernorm.weight": 0.04062896594405174,
+          "model.layers.27.self_attn.q_proj.weight": 0.02789139933884144,
+          "model.layers.27.mlp.down_proj.weight": 0.01860824041068554,
+          "model.layers.27.input_layernorm.weight": 0.022028781473636627,
+          "model.norm.weight": 0.014287123456597328
+        },
+        "attention": "math",
+        "sequence_length": 512,
+        "compiled_check": "compiled small-shape math forward/backward",
+        "seconds_including_small_shape_compile": 10.073124540009303
+      },
+      "optimizer_check_result": "./runs/cpt_optimization_20261008/compile_precise_compiled_adam/optimizer_check.json",
+      "production_numerical_result": "./runs/cpt_optimization_20261008/production_flash_numerics/result.json"
+    },
+    "purpose": "Candidate for deterministic production-shape numeric screening",
+    "compiled_optimizer": true
+  },
+  "data_path": "./data/processed/openwebmath_10m_s42",
+  "data_manifest_sha256": "c76fa6d41ae3b4c007c9323bcee58ef5d13e3564a038d767d62278fec89e26a8",
+  "token_file_sha256": {
+    "train_tokens.npy": "08cfabb9519e29052d937a9184a15aaf5270049178270508bb2564e4e0a0d8e2",
+    "validation_tokens.npy": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93"
+  },
+  "source_sha256": {
+    "verify_backend_numerics.py": "84b88f9b851377f6dbe5067a459309eefb188e1ee3c4b6dc4c710734a1e58b0d",
+    "benchmark_backends.py": "61fa27e5d4d5999cb62598906f121c68bc58ecc47f10d188c9899d6517cd11cd",
+    "model_backends.py": "6f776d18898b078d3f8b8db566f0c2da8e1889c18701bed1226af9dc8d6a56b4",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "train_cpt.py": "c6a55cbdfb6d6fd23c79bbe1d270c4c0ae58143af6d9d56b2e34be313fde3661",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77"
+  },
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "model_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "shape": [
+    16,
+    2048
+  ],
+  "sampling": "First microbatch from the same seed-42 one-epoch shuffled block order; includes tail in the shuffle",
+  "thresholds": {
+    "absolute_loss_difference": 0.003,
+    "global_gradient_relative_l2": 0.05,
+    "each_existing_probe_relative_l2": 0.05,
+    "native_restore_control_absolute_loss_difference": 1e-06
+  },
+  "precision": "BF16 forward autocast; FP32 master weights/gradients; backward outside autocast",
+  "attention": "FLASH_ATTENTION exclusively for both forward/backward paths; no fallback",
+  "deterministic_algorithms": true,
+  "allow_nondeterministic_flash": false,
+  "cublas_workspace_config": ":4096:8",
+  "determinism_note": "Deterministic checks isolate compiler rounding from production nondeterministic Flash backward; this script does not change training settings",
+  "optimizer_updates": 0,
+  "versions": {
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4",
+    "liger-kernel": "0.8.4",
+    "numpy": "2.5.3"
+  },
+  "device": {
+    "name": "NVIDIA GB300",
+    "capability": [
+      10,
+      3
+    ],
+    "index": 0,
+    "total_memory_bytes": 268230393856,
+    "torch_cuda_runtime": "13.0"
+  },
+  "block_indices": [
+    1554,
+    1102,
+    3351,
+    4577,
+    3921,
+    340,
+    825,
+    2203,
+    1833,
+    3364,
+    2618,
+    177,
+    3828,
+    1827,
+    4712,
+    1819
+  ],
+  "control_block_index": 1043,
+  "input_tokens": 32768,
+  "supervised_tokens": 32752,
+  "parameter_tensors": 338
+}

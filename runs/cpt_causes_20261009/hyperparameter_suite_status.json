@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-09T13:34:55.858712+00:00",
+  "production_resumed": false,
+  "steps_per_branch": 1000,
+  "cases": {
+    "baseline": {
+      "result": "./runs/cpt_causes_20261009/branch_baseline/result.json",
+      "start_step": 20000,
+      "end_step": 21000,
+      "new_input_tokens": 32768000
+    },
+    "lr_0p3": {
+      "result": "./runs/cpt_causes_20261009/branch_lr_0p3/result.json",
+      "start_step": 20000,
+      "end_step": 21000,
+      "new_input_tokens": 32768000
+    },
+    "wd_zero": {
+      "result": "./runs/cpt_causes_20261009/branch_wd_zero/result.json",
+      "start_step": 20000,
+      "end_step": 21000,
+      "new_input_tokens": 32768000
+    }
+  },
+  "active_case": null,
+  "finished_training_utc": "2026-10-09T14:18:42.842088+00:00",
+  "completed_utc": "2026-10-09T14:18:44.324425+00:00"
+}

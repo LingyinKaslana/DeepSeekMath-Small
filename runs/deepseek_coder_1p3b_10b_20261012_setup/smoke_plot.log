@@ -1,0 +1,33 @@
+{
+  "common_evaluation_step": 15291,
+  "latest": {
+    "step": 15291,
+    "input_tokens": 501055488,
+    "input_tokens_b": 0.501055488,
+    "validation_loss": 1.9150986671447754,
+    "fixed_train_probe_loss": 1.8901067972183228
+  },
+  "best_validation": {
+    "step": 15259,
+    "input_tokens": 500006912,
+    "input_tokens_b": 0.500006912,
+    "validation_loss": 1.9149794578552246,
+    "fixed_train_probe_loss": 1.8899461030960083
+  },
+  "best_fixed_train_probe": {
+    "step": 15259,
+    "input_tokens": 500006912,
+    "input_tokens_b": 0.500006912,
+    "validation_loss": 1.9149794578552246,
+    "fixed_train_probe_loss": 1.8899461030960083
+  },
+  "batch_mean_latest": {
+    "start_step": 14001,
+    "end_step": 15000,
+    "input_tokens_b": 0.49152,
+    "supervised_tokens": 32752000,
+    "updates": 1000,
+    "token_weighted_batch_loss": 1.9561706869602202
+  }
+}
+./runs/deepseek_coder_1p3b_10b_20261012_setup/smoke_report/train_validation_curve.png

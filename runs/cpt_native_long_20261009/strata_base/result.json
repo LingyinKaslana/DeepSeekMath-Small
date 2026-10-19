@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "model_load_seconds": 2.725723465991905,
+  "evaluation_seconds": 20.89134776397259,
+  "total_seconds": 23.933981843001675,
+  "ordinary_native_full_loss": 1.86186945438385,
+  "strata_reaggregated_full_loss": 1.861869605232542,
+  "token_groups_reaggregated_full_loss": 1.8618696052325432,
+  "expected_native_full_loss": 1.86186945438385,
+  "loss_tolerance": 1e-06,
+  "native_expected_difference": 0.0,
+  "strata_native_difference": 1.5084869198211948e-07,
+  "loss_parity_passed": true,
+  "input_tokens": 2097152,
+  "supervised_tokens": 2096128,
+  "cross_groups": [
+    {
+      "name": "pilot_missing_eos",
+      "blocks": 113,
+      "input_tokens": 231424,
+      "supervised_tokens": 231311,
+      "target_fraction": 0.1103515625,
+      "loss_sum": 442364.6671162766,
+      "loss": 1.9124238238400968,
+      "perplexity": 6.769476949127254
+    },
+    {
+      "name": "pilot_regular",
+      "blocks": 15,
+      "input_tokens": 30720,
+      "supervised_tokens": 30705,
+      "target_fraction": 0.0146484375,
+      "loss_sum": 50240.31850507775,
+      "loss": 1.636225973133944,
+      "perplexity": 5.135750431112645
+    },
+    {
+      "name": "extension_missing_eos",
+      "blocks": 113,
+      "input_tokens": 231424,
+      "supervised_tokens": 231311,
+      "target_fraction": 0.1103515625,
+      "loss_sum": 438485.4702586797,
+      "loss": 1.8956533422910269,
+      "perplexity": 6.656896215998584
+    },
+    {
+      "name": "extension_regular",
+      "blocks": 783,
+      "input_tokens": 1603584,
+      "supervised_tokens": 1602801,
+      "target_fraction": 0.7646484375,
+      "loss_sum": 2971626.5559968436,
+      "loss": 1.85402090215619,
+      "perplexity": 6.385443215290924
+    }
+  ],
+  "marginal_groups": [
+    {
+      "name": "pilot",
+      "blocks": 128,
+      "input_tokens": 262144,
+      "supervised_tokens": 262016,
+      "target_fraction": 0.125,
+      "loss_sum": 492604.9856213544,
+      "loss": 1.8800568882104698,
+      "perplexity": 6.553877689959715
+    },
+    {
+      "name": "extension",
+      "blocks": 896,
+      "input_tokens": 1835008,
+      "supervised_tokens": 1834112,
+      "target_fraction": 0.875,
+      "loss_sum": 3410112.026255523,
+      "loss": 1.8592714219499806,
+      "perplexity": 6.4190582823475495
+    },
+    {
+      "name": "missing_eos",
+      "blocks": 226,
+      "input_tokens": 462848,
+      "supervised_tokens": 462622,
+      "target_fraction": 0.220703125,
+      "loss_sum": 880850.1373749564,
+      "loss": 1.904038583065562,
+      "perplexity": 6.712950579807278
+    },
+    {
+      "name": "regular",
+      "blocks": 798,
+      "input_tokens": 1634304,
+      "supervised_tokens": 1633506,
+      "target_fraction": 0.779296875,
+      "loss_sum": 3021866.8745019212,
+      "loss": 1.8499270125129148,
+      "perplexity": 6.35935535229608
+    }
+  ],
+  "token_groups": [
+    {
+      "name": "pre_join_or_regular",
+      "supervised_tokens": 1865880,
+      "target_fraction": 0.8901555630190523,
+      "loss_sum": 3465488.7128020027,
+      "loss": 1.8572945274090524,
+      "perplexity": 6.406381016009267
+    },
+    {
+      "name": "boundary_target",
+      "supervised_tokens": 226,
+      "target_fraction": 0.000107817843185149,
+      "loss_sum": 4175.208828926086,
+      "loss": 18.47437534923047,
+      "perplexity": 105516231.19439101
+    },
+    {
+      "name": "post_join_context",
+      "supervised_tokens": 230022,
+      "target_fraction": 0.10973661913776257,
+      "loss_sum": 433053.0902459513,
+      "loss": 1.8826594423400862,
+      "perplexity": 6.570956726324931
+    }
+  ],
+  "groups_file": "./runs/cpt_native_long_20261009/validation_strata_groups.json",
+  "groups_sha256": "15fce8e6807a1158408ac91ccf6a3b63f7ebe2262a31d6779c85249b9521fdd7",
+  "source": "./runs/cpt_10b_20261009_resumed/source",
+  "source_sha256": {
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b"
+  },
+  "script_sha256": "53709dfea00d0cd5b225e041f9b3d2e57aaf827287a553f81f306a5e417c5717",
+  "versions": {
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4",
+    "numpy": "2.5.3"
+  },
+  "evaluation": "Unpatched native HF SDPA, FP32 weights, BF16 autocast, inference_mode, sequential ordinary 4x2048 batches, independent cloned labels, all-ones mask. Native HF.loss accumulated as in prior full validation; per-token native CE recomputed from the same logits for strata.",
+  "limits": [
+    "Strata partition a fixed selected validation set; they do not establish that missing EOS caused the long-run loss trend.",
+    "Blocks containing joins are distinct from boundary target tokens. The 226 immediate boundary targets are only about 0.0108% of supervised tokens; post-join context targets are reported separately.",
+    "Per-token recomputation is diagnostic overhead; these timings are not a training throughput benchmark."
+  ],
+  "completed_utc": "2026-10-09T03:33:54.515539+00:00"
+}

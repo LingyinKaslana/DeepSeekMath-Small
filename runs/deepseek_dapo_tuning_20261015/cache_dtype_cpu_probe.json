@@ -1,0 +1,8 @@
+{
+  "kind": "CPU tiny-model check of installed HF4.55.4 Llama dtype path; no training mutation",
+  "parameters": "torch.float32",
+  "key_cache": "torch.float32",
+  "value_cache": "torch.bfloat16",
+  "key_bytes": 4,
+  "value_bytes": 2
+}

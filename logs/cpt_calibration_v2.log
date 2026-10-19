@@ -1,0 +1,13 @@
+{"event": "model_loaded", "seconds": 3.1351894739927957, "parameters": 1543714304}
+Traceback (most recent call last):
+  File "./scripts/cpt.py", line 383, in <module>
+    main()
+  File "./scripts/cpt.py", line 374, in main
+    calibrate(args, model, tokenizer, telemetry)
+  File "./scripts/cpt.py", line 173, in calibrate
+    write(args.output / "numerical_check.json", numerical_check(model, original, dataset))
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./scripts/cpt.py", line 162, in numerical_check
+    assert error < 0.003 and max(relative) < 0.05, (error, relative)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (1.1920928955078125e-07, [0.11170336604118347, 0.012606711126863956])

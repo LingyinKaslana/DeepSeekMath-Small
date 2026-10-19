@@ -1,0 +1,12 @@
+{
+  "status": "complete_verified",
+  "phase": "finished",
+  "run": "./runs/deepseek_coder_1p3b_500m_20261012",
+  "setup": "./runs/deepseek_coder_1p3b_500m_20261012_setup",
+  "model": "deepseek-ai/deepseek-coder-1.3b-base",
+  "configured_input_tokens": 500006912,
+  "result": "./runs/deepseek_coder_1p3b_500m_20261012/result.json",
+  "progress": "./runs/deepseek_coder_1p3b_500m_20261012/progress.json",
+  "latest_checkpoint": "./runs/deepseek_coder_1p3b_500m_20261012/latest_checkpoint.json",
+  "updated_utc": "2026-10-12T09:12:06.464928+00:00"
+}

@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "synthetic_fixture_only": true,
+  "valid_audit_checks": 93,
+  "tampering_cases_rejected": [
+    {
+      "case": "common checkpoint hash",
+      "rejected": true,
+      "reason": "Comparison audit failed: common plan: checkpoint_manifest_sha256"
+    },
+    {
+      "case": "scheduled LR",
+      "rejected": true,
+      "reason": "Comparison audit failed: native: valid finite update 18"
+    },
+    {
+      "case": "token count",
+      "rejected": true,
+      "reason": "Comparison audit failed: native: exact input prefix at update 24"
+    },
+    {
+      "case": "nonfinite logged norm",
+      "rejected": true,
+      "reason": "Comparison audit failed: native: valid finite update 30"
+    },
+    {
+      "case": "misleading finite flag",
+      "rejected": true,
+      "reason": "Comparison audit failed: native: final_finite_audit all weight/Adam tensors"
+    },
+    {
+      "case": "RNG",
+      "rejected": true,
+      "reason": "Comparison audit failed: common restored CPU/CUDA RNG"
+    },
+    {
+      "case": "failure reported",
+      "rejected": true,
+      "reason": "Comparison audit failed: native: no failure or production mutation"
+    },
+    {
+      "case": "initial probe loss",
+      "rejected": true,
+      "reason": "Comparison audit failed: exactly equal initial native train_probe losses"
+    }
+  ],
+  "figure_smoke_output": "/tmp/cpt_report_fixture_hndjmbhf",
+  "script_sha256": "1d52835f2274c9a376c558edaad135faae3c1f4face0d6a44fa106740af5d012",
+  "note": "This tests report guards and rendering only; no real training outcome is asserted.",
+  "rendering_rechecked_after_layout_correction": true
+}

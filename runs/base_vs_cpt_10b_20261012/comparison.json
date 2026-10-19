@@ -1,0 +1,871 @@
+{
+  "status": "complete_protocol_matched_comparison",
+  "created_utc": "2026-10-12T04:22:49.880968+00:00",
+  "base_run": "./runs/base_math_inference_20261012",
+  "cpt_run": "./runs/cpt_10b_inference_20261012",
+  "questions_per_model": 6319,
+  "comparison_direction": "CPT minus original; changes in accuracy are percentage points",
+  "self_check": false,
+  "matched_protocol": {
+    "official_repository_commit": "b8b0f8ce093d80bf8e9a641e44142f06d092c305",
+    "benchmarks": {
+      "gsm8k": 1319,
+      "math": 5000
+    },
+    "prompt_format": {
+      "gsm8k": "Official DeepSeekMath Base 8-shot CoT",
+      "math": "Official DeepSeekMath Base Minerva 4-shot CoT"
+    },
+    "chat_template": false,
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 1024,
+    "n": 1,
+    "batch_size": 512,
+    "stops": {
+      "gsm8k": [
+        "\nQ:"
+      ],
+      "math": [
+        "\nProblem:"
+      ]
+    },
+    "seed": 42,
+    "backend": "Unmodified native Hugging Face generate with SDPA and KV cache",
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4",
+    "smoke_limit_per_dataset": null,
+    "prompt_statistics": {
+      "gsm8k": {
+        "questions": 1319,
+        "minimum_tokens": 726,
+        "maximum_tokens": 891,
+        "mean_tokens": 764.0310841546626
+      },
+      "math": {
+        "questions": 5000,
+        "minimum_tokens": 650,
+        "maximum_tokens": 1978,
+        "mean_tokens": 710.9452
+      }
+    },
+    "compute_precision": {
+      "parameters": "float32",
+      "autocast": "bfloat16",
+      "kv_cache": "native HF cache"
+    },
+    "official_sources_sha256": {
+      "evaluation/datasets/gsm8k/test.jsonl": "fd32e8e549626b0dcce350eec7bbace9c463ddbcfa1c0303ba5abe9122450839",
+      "evaluation/datasets/math/test.jsonl": "5fc86b7d164f455c6fc51b8777cac60468fac90c5d0a3e1c9b3312a79fe2ee8e",
+      "evaluation/few_shot_prompts/cot_gsm_8_shot.py": "29533d2bdbd38d554348ee2386c8faa00b12d4bb56ae7de826131dc26cd592a0",
+      "evaluation/few_shot_prompts/cot_minerva_math_4_shot.py": "6f3b5abd73d5183add0f7e753cf6ef4fd669faa338bfa3571ece50d4363daac1",
+      "evaluation/few_shot_prompts/few_shot_prompting.py": "039a7b588a2db755a148eadb8d5f78f5815fa8b094ef500209bf05487c86d9d2"
+    }
+  },
+  "input_model_metadata": {
+    "base": {
+      "checkpoint": "./.cache/huggingface/hub/models--Qwen--Qwen2.5-Coder-1.5B/snapshots/df3ce67c0e24480f20468b6ef2894622d69eb73b",
+      "trained_input_tokens": 0,
+      "checkpoint_manifest_sha256": null,
+      "model_shards_sha256": {
+        "model.safetensors": "535485b26038ac24f4e8a86e1a73ed417d8992e3192f6305b7fcc4fb92efa210"
+      },
+      "checkpoint_stored_dtype": "bfloat16",
+      "precision": "FP32 parameters; BF16 autocast compute, matching CPT evaluation precision",
+      "compute_precision": {
+        "parameters": "float32",
+        "autocast": "bfloat16",
+        "kv_cache": "native HF cache"
+      },
+      "normalized_compute_precision": {
+        "parameters": "float32",
+        "autocast": "bfloat16",
+        "kv_cache": "native HF cache"
+      }
+    },
+    "cpt": {
+      "checkpoint": "./runs/cpt_10b_decay_5b_6b_20261010/final_checkpoint",
+      "trained_input_tokens": 10000000000,
+      "checkpoint_manifest_sha256": "55cd8041b653a673f450eedb54fb627b510b3a8e9d3f379a764f1441bcb65d62",
+      "model_shards_sha256": {
+        "model-00001-of-00002.safetensors": "092a771695629efcff43aba812b5017fc806a48c0357e3089e4621e535338551",
+        "model-00002-of-00002.safetensors": "2d6e7deb60eb88c76ed00155d4617b742956aba1d8818a3562b1ed179e986f54"
+      },
+      "checkpoint_stored_dtype": "float32",
+      "precision": "FP32 saved parameters retained; BF16 autocast compute, matching CPT precision",
+      "compute_precision": null,
+      "checkpoint_stored_dtype_source": "Legacy CPT manifest precision description",
+      "normalized_compute_precision": {
+        "parameters": "float32",
+        "autocast": "bfloat16",
+        "kv_cache": "native HF cache"
+      }
+    }
+  },
+  "validation": {
+    "complete_unique_index_sets": {
+      "gsm8k": 1319,
+      "math": 5000
+    },
+    "prompt_identity_and_text_and_token_lengths_equal": true,
+    "gold_and_math_groups_equal": true,
+    "generation_records_preserved_by_scoring": true,
+    "recorded_scores_recomputed_from_saved_booleans": true,
+    "prediction_hashes_match_scores": true,
+    "input_files_unchanged": true,
+    "scoring_protocol_equal": true,
+    "actual_generation_batch_sizes_equal": true,
+    "model_token_budgets_and_distinct_saved_weights_checked": true,
+    "model_loaded": false,
+    "scoring_rerun": false
+  },
+  "benchmarks": {
+    "gsm8k": {
+      "total": 1319,
+      "base": {
+        "total": 1319,
+        "correct": 818,
+        "accuracy": 0.620166793025019,
+        "accuracy_percent": 62.0166793025019
+      },
+      "cpt": {
+        "total": 1319,
+        "correct": 671,
+        "accuracy": 0.5087187263078089,
+        "accuracy_percent": 50.87187263078089
+      },
+      "paired": {
+        "both_correct": 556,
+        "base_only_correct": 262,
+        "cpt_only_correct": 115,
+        "both_wrong": 386
+      },
+      "delta_correct": -147,
+      "delta_percentage_points": -11.144806671721007,
+      "improved": 115,
+      "regressed": 262,
+      "unchanged": 942,
+      "both_nonlength_same_questions": {
+        "total": 1248,
+        "base": {
+          "total": 1248,
+          "correct": 777,
+          "accuracy": 0.6225961538461539,
+          "accuracy_percent": 62.25961538461539
+        },
+        "cpt": {
+          "total": 1248,
+          "correct": 647,
+          "accuracy": 0.5184294871794872,
+          "accuracy_percent": 51.84294871794872
+        },
+        "paired": {
+          "both_correct": 535,
+          "base_only_correct": 242,
+          "cpt_only_correct": 112,
+          "both_wrong": 359
+        },
+        "delta_correct": -130,
+        "delta_percentage_points": -10.416666666666664,
+        "improved": 112,
+        "regressed": 242,
+        "unchanged": 894,
+        "percent_of_full_dataset": 94.61713419257013,
+        "interpretation": "Descriptive subset selected by both model outputs; not a causal estimate of removing the length limit."
+      },
+      "generation": {
+        "base": {
+          "total": 1319,
+          "generated_tokens": 208353,
+          "mean_generated_tokens": 157.9628506444276,
+          "mean_generated_tokens_correct": 141.18581907090464,
+          "mean_generated_tokens_incorrect": 185.3552894211577,
+          "length": {
+            "total": 1,
+            "correct": 0,
+            "accuracy": 0.0,
+            "accuracy_percent": 0.0,
+            "percent_of_dataset": 0.0758150113722517
+          },
+          "nonlength": {
+            "total": 1318,
+            "correct": 818,
+            "accuracy": 0.6206373292867982,
+            "accuracy_percent": 62.06373292867981,
+            "percent_of_dataset": 99.92418498862774
+          },
+          "empty_predictions": 0,
+          "empty_prediction_percent": 0.0,
+          "empty_completions": 0,
+          "empty_completion_percent": 0.0,
+          "timeouts": 0,
+          "errors": 0,
+          "missing_generations": 0,
+          "finish_reasons": {
+            "eos": {
+              "total": 594,
+              "correct": 346,
+              "accuracy": 0.5824915824915825,
+              "accuracy_percent": 58.24915824915825,
+              "percent_of_dataset": 45.034116755117516,
+              "mean_generated_tokens": 203.8872053872054
+            },
+            "length": {
+              "total": 1,
+              "correct": 0,
+              "accuracy": 0.0,
+              "accuracy_percent": 0.0,
+              "percent_of_dataset": 0.0758150113722517,
+              "mean_generated_tokens": 1024
+            },
+            "stop_string": {
+              "total": 724,
+              "correct": 472,
+              "accuracy": 0.6519337016574586,
+              "accuracy_percent": 65.19337016574586,
+              "percent_of_dataset": 54.890068233510235,
+              "mean_generated_tokens": 119.08839779005525
+            }
+          }
+        },
+        "cpt": {
+          "total": 1319,
+          "generated_tokens": 219144,
+          "mean_generated_tokens": 166.1440485216073,
+          "mean_generated_tokens_correct": 149.39046199701937,
+          "mean_generated_tokens_incorrect": 183.4922839506173,
+          "length": {
+            "total": 70,
+            "correct": 23,
+            "accuracy": 0.32857142857142857,
+            "accuracy_percent": 32.857142857142854,
+            "percent_of_dataset": 5.307050796057619
+          },
+          "nonlength": {
+            "total": 1249,
+            "correct": 648,
+            "accuracy": 0.5188150520416333,
+            "accuracy_percent": 51.881505204163325,
+            "percent_of_dataset": 94.69294920394238
+          },
+          "empty_predictions": 1,
+          "empty_prediction_percent": 0.0758150113722517,
+          "empty_completions": 0,
+          "empty_completion_percent": 0.0,
+          "timeouts": 0,
+          "errors": 0,
+          "missing_generations": 0,
+          "finish_reasons": {
+            "eos": {
+              "total": 62,
+              "correct": 32,
+              "accuracy": 0.5161290322580645,
+              "accuracy_percent": 51.61290322580645,
+              "percent_of_dataset": 4.700530705079606,
+              "mean_generated_tokens": 322.14516129032256
+            },
+            "length": {
+              "total": 70,
+              "correct": 23,
+              "accuracy": 0.32857142857142857,
+              "accuracy_percent": 32.857142857142854,
+              "percent_of_dataset": 5.307050796057619,
+              "mean_generated_tokens": 1024
+            },
+            "stop_string": {
+              "total": 1187,
+              "correct": 616,
+              "accuracy": 0.518955349620893,
+              "accuracy_percent": 51.89553496208929,
+              "percent_of_dataset": 89.99241849886278,
+              "mean_generated_tokens": 107.40606571187868
+            }
+          }
+        }
+      },
+      "length_status_paired": {
+        "base_nonlength__cpt_nonlength": 1248,
+        "base_nonlength__cpt_length": 70,
+        "base_length__cpt_nonlength": 1
+      },
+      "secondary_comma_normalized": {
+        "total": 1319,
+        "base": {
+          "total": 1319,
+          "correct": 842,
+          "accuracy": 0.6383623957543594,
+          "accuracy_percent": 63.83623957543594
+        },
+        "cpt": {
+          "total": 1319,
+          "correct": 690,
+          "accuracy": 0.5231235784685367,
+          "accuracy_percent": 52.31235784685367
+        },
+        "paired": {
+          "both_correct": 578,
+          "base_only_correct": 264,
+          "cpt_only_correct": 112,
+          "both_wrong": 365
+        },
+        "delta_correct": -152,
+        "delta_percentage_points": -11.523881728582268,
+        "improved": 112,
+        "regressed": 264,
+        "unchanged": 943,
+        "label": "Diagnostic only; not official main score",
+        "both_nonlength_same_questions": {
+          "total": 1248,
+          "base": {
+            "total": 1248,
+            "correct": 800,
+            "accuracy": 0.6410256410256411,
+            "accuracy_percent": 64.1025641025641
+          },
+          "cpt": {
+            "total": 1248,
+            "correct": 665,
+            "accuracy": 0.5328525641025641,
+            "accuracy_percent": 53.28525641025641
+          },
+          "paired": {
+            "both_correct": 556,
+            "base_only_correct": 244,
+            "cpt_only_correct": 109,
+            "both_wrong": 339
+          },
+          "delta_correct": -135,
+          "delta_percentage_points": -10.817307692307693,
+          "improved": 109,
+          "regressed": 244,
+          "unchanged": 895
+        }
+      }
+    },
+    "math": {
+      "total": 5000,
+      "base": {
+        "total": 5000,
+        "correct": 1498,
+        "accuracy": 0.2996,
+        "accuracy_percent": 29.959999999999997
+      },
+      "cpt": {
+        "total": 5000,
+        "correct": 1243,
+        "accuracy": 0.2486,
+        "accuracy_percent": 24.86
+      },
+      "paired": {
+        "both_correct": 865,
+        "base_only_correct": 633,
+        "cpt_only_correct": 378,
+        "both_wrong": 3124
+      },
+      "delta_correct": -255,
+      "delta_percentage_points": -5.099999999999998,
+      "improved": 378,
+      "regressed": 633,
+      "unchanged": 3989,
+      "both_nonlength_same_questions": {
+        "total": 3845,
+        "base": {
+          "total": 3845,
+          "correct": 1404,
+          "accuracy": 0.365149544863459,
+          "accuracy_percent": 36.5149544863459
+        },
+        "cpt": {
+          "total": 3845,
+          "correct": 1177,
+          "accuracy": 0.306111833550065,
+          "accuracy_percent": 30.6111833550065
+        },
+        "paired": {
+          "both_correct": 850,
+          "base_only_correct": 554,
+          "cpt_only_correct": 327,
+          "both_wrong": 2114
+        },
+        "delta_correct": -227,
+        "delta_percentage_points": -5.903771131339401,
+        "improved": 327,
+        "regressed": 554,
+        "unchanged": 2964,
+        "percent_of_full_dataset": 76.9,
+        "interpretation": "Descriptive subset selected by both model outputs; not a causal estimate of removing the length limit."
+      },
+      "generation": {
+        "base": {
+          "total": 5000,
+          "generated_tokens": 1438762,
+          "mean_generated_tokens": 287.7524,
+          "mean_generated_tokens_correct": 151.5554072096128,
+          "mean_generated_tokens_incorrect": 346.01142204454595,
+          "length": {
+            "total": 586,
+            "correct": 21,
+            "accuracy": 0.03583617747440273,
+            "accuracy_percent": 3.583617747440273,
+            "percent_of_dataset": 11.72
+          },
+          "nonlength": {
+            "total": 4414,
+            "correct": 1477,
+            "accuracy": 0.33461712732215676,
+            "accuracy_percent": 33.46171273221567,
+            "percent_of_dataset": 88.28
+          },
+          "empty_predictions": 30,
+          "empty_prediction_percent": 0.6,
+          "empty_completions": 0,
+          "empty_completion_percent": 0.0,
+          "timeouts": 0,
+          "errors": 0,
+          "missing_generations": 0,
+          "finish_reasons": {
+            "eos": {
+              "total": 216,
+              "correct": 28,
+              "accuracy": 0.12962962962962962,
+              "accuracy_percent": 12.962962962962962,
+              "percent_of_dataset": 4.32,
+              "mean_generated_tokens": 211.3287037037037
+            },
+            "length": {
+              "total": 586,
+              "correct": 21,
+              "accuracy": 0.03583617747440273,
+              "accuracy_percent": 3.583617747440273,
+              "percent_of_dataset": 11.72,
+              "mean_generated_tokens": 1024
+            },
+            "stop_string": {
+              "total": 4198,
+              "correct": 1449,
+              "accuracy": 0.345164363982849,
+              "accuracy_percent": 34.5164363982849,
+              "percent_of_dataset": 83.96,
+              "mean_generated_tokens": 188.91162458313482
+            }
+          }
+        },
+        "cpt": {
+          "total": 5000,
+          "generated_tokens": 1540879,
+          "mean_generated_tokens": 308.1758,
+          "mean_generated_tokens_correct": 139.01850362027352,
+          "mean_generated_tokens_incorrect": 364.141336172478,
+          "length": {
+            "total": 840,
+            "correct": 28,
+            "accuracy": 0.03333333333333333,
+            "accuracy_percent": 3.3333333333333335,
+            "percent_of_dataset": 16.8
+          },
+          "nonlength": {
+            "total": 4160,
+            "correct": 1215,
+            "accuracy": 0.2920673076923077,
+            "accuracy_percent": 29.20673076923077,
+            "percent_of_dataset": 83.2
+          },
+          "empty_predictions": 32,
+          "empty_prediction_percent": 0.64,
+          "empty_completions": 0,
+          "empty_completion_percent": 0.0,
+          "timeouts": 0,
+          "errors": 0,
+          "missing_generations": 0,
+          "finish_reasons": {
+            "eos": {
+              "total": 216,
+              "correct": 51,
+              "accuracy": 0.2361111111111111,
+              "accuracy_percent": 23.61111111111111,
+              "percent_of_dataset": 4.32,
+              "mean_generated_tokens": 157.29166666666666
+            },
+            "length": {
+              "total": 840,
+              "correct": 28,
+              "accuracy": 0.03333333333333333,
+              "accuracy_percent": 3.3333333333333335,
+              "percent_of_dataset": 16.8,
+              "mean_generated_tokens": 1024
+            },
+            "stop_string": {
+              "total": 3944,
+              "correct": 1164,
+              "accuracy": 0.295131845841785,
+              "accuracy_percent": 29.513184584178497,
+              "percent_of_dataset": 78.88,
+              "mean_generated_tokens": 163.98174442190668
+            }
+          }
+        }
+      },
+      "length_status_paired": {
+        "base_nonlength__cpt_nonlength": 3845,
+        "base_nonlength__cpt_length": 569,
+        "base_length__cpt_length": 271,
+        "base_length__cpt_nonlength": 315
+      },
+      "breakdown": {
+        "type": {
+          "Algebra": {
+            "total": 1187,
+            "base": {
+              "total": 1187,
+              "correct": 511,
+              "accuracy": 0.43049705139005895,
+              "accuracy_percent": 43.049705139005894
+            },
+            "cpt": {
+              "total": 1187,
+              "correct": 440,
+              "accuracy": 0.37068239258635216,
+              "accuracy_percent": 37.06823925863522
+            },
+            "paired": {
+              "both_correct": 332,
+              "base_only_correct": 179,
+              "cpt_only_correct": 108,
+              "both_wrong": 568
+            },
+            "delta_correct": -71,
+            "delta_percentage_points": -5.981465880370678,
+            "improved": 108,
+            "regressed": 179,
+            "unchanged": 900
+          },
+          "Counting & Probability": {
+            "total": 474,
+            "base": {
+              "total": 474,
+              "correct": 112,
+              "accuracy": 0.23628691983122363,
+              "accuracy_percent": 23.628691983122362
+            },
+            "cpt": {
+              "total": 474,
+              "correct": 96,
+              "accuracy": 0.20253164556962025,
+              "accuracy_percent": 20.253164556962027
+            },
+            "paired": {
+              "both_correct": 65,
+              "base_only_correct": 47,
+              "cpt_only_correct": 31,
+              "both_wrong": 331
+            },
+            "delta_correct": -16,
+            "delta_percentage_points": -3.3755274261603354,
+            "improved": 31,
+            "regressed": 47,
+            "unchanged": 396
+          },
+          "Geometry": {
+            "total": 479,
+            "base": {
+              "total": 479,
+              "correct": 125,
+              "accuracy": 0.2609603340292276,
+              "accuracy_percent": 26.096033402922757
+            },
+            "cpt": {
+              "total": 479,
+              "correct": 99,
+              "accuracy": 0.20668058455114824,
+              "accuracy_percent": 20.668058455114824
+            },
+            "paired": {
+              "both_correct": 72,
+              "base_only_correct": 53,
+              "cpt_only_correct": 27,
+              "both_wrong": 327
+            },
+            "delta_correct": -26,
+            "delta_percentage_points": -5.427974947807932,
+            "improved": 27,
+            "regressed": 53,
+            "unchanged": 399
+          },
+          "Intermediate Algebra": {
+            "total": 903,
+            "base": {
+              "total": 903,
+              "correct": 129,
+              "accuracy": 0.14285714285714285,
+              "accuracy_percent": 14.285714285714285
+            },
+            "cpt": {
+              "total": 903,
+              "correct": 109,
+              "accuracy": 0.12070874861572536,
+              "accuracy_percent": 12.070874861572536
+            },
+            "paired": {
+              "both_correct": 52,
+              "base_only_correct": 77,
+              "cpt_only_correct": 57,
+              "both_wrong": 717
+            },
+            "delta_correct": -20,
+            "delta_percentage_points": -2.214839424141749,
+            "improved": 57,
+            "regressed": 77,
+            "unchanged": 769
+          },
+          "Number Theory": {
+            "total": 540,
+            "base": {
+              "total": 540,
+              "correct": 121,
+              "accuracy": 0.22407407407407406,
+              "accuracy_percent": 22.407407407407405
+            },
+            "cpt": {
+              "total": 540,
+              "correct": 81,
+              "accuracy": 0.15,
+              "accuracy_percent": 15.0
+            },
+            "paired": {
+              "both_correct": 46,
+              "base_only_correct": 75,
+              "cpt_only_correct": 35,
+              "both_wrong": 384
+            },
+            "delta_correct": -40,
+            "delta_percentage_points": -7.407407407407405,
+            "improved": 35,
+            "regressed": 75,
+            "unchanged": 430
+          },
+          "Prealgebra": {
+            "total": 871,
+            "base": {
+              "total": 871,
+              "correct": 409,
+              "accuracy": 0.4695752009184845,
+              "accuracy_percent": 46.95752009184845
+            },
+            "cpt": {
+              "total": 871,
+              "correct": 348,
+              "accuracy": 0.399540757749713,
+              "accuracy_percent": 39.9540757749713
+            },
+            "paired": {
+              "both_correct": 262,
+              "base_only_correct": 147,
+              "cpt_only_correct": 86,
+              "both_wrong": 376
+            },
+            "delta_correct": -61,
+            "delta_percentage_points": -7.00344431687715,
+            "improved": 86,
+            "regressed": 147,
+            "unchanged": 638
+          },
+          "Precalculus": {
+            "total": 546,
+            "base": {
+              "total": 546,
+              "correct": 91,
+              "accuracy": 0.16666666666666666,
+              "accuracy_percent": 16.666666666666664
+            },
+            "cpt": {
+              "total": 546,
+              "correct": 70,
+              "accuracy": 0.1282051282051282,
+              "accuracy_percent": 12.82051282051282
+            },
+            "paired": {
+              "both_correct": 36,
+              "base_only_correct": 55,
+              "cpt_only_correct": 34,
+              "both_wrong": 421
+            },
+            "delta_correct": -21,
+            "delta_percentage_points": -3.846153846153845,
+            "improved": 34,
+            "regressed": 55,
+            "unchanged": 457
+          }
+        },
+        "level": {
+          "Level 1": {
+            "total": 437,
+            "base": {
+              "total": 437,
+              "correct": 310,
+              "accuracy": 0.7093821510297483,
+              "accuracy_percent": 70.93821510297484
+            },
+            "cpt": {
+              "total": 437,
+              "correct": 257,
+              "accuracy": 0.5881006864988558,
+              "accuracy_percent": 58.81006864988558
+            },
+            "paired": {
+              "both_correct": 218,
+              "base_only_correct": 92,
+              "cpt_only_correct": 39,
+              "both_wrong": 88
+            },
+            "delta_correct": -53,
+            "delta_percentage_points": -12.128146453089258,
+            "improved": 39,
+            "regressed": 92,
+            "unchanged": 306
+          },
+          "Level 2": {
+            "total": 894,
+            "base": {
+              "total": 894,
+              "correct": 412,
+              "accuracy": 0.4608501118568233,
+              "accuracy_percent": 46.085011185682326
+            },
+            "cpt": {
+              "total": 894,
+              "correct": 351,
+              "accuracy": 0.3926174496644295,
+              "accuracy_percent": 39.261744966442954
+            },
+            "paired": {
+              "both_correct": 265,
+              "base_only_correct": 147,
+              "cpt_only_correct": 86,
+              "both_wrong": 396
+            },
+            "delta_correct": -61,
+            "delta_percentage_points": -6.823266219239372,
+            "improved": 86,
+            "regressed": 147,
+            "unchanged": 661
+          },
+          "Level 3": {
+            "total": 1131,
+            "base": {
+              "total": 1131,
+              "correct": 400,
+              "accuracy": 0.3536693191865606,
+              "accuracy_percent": 35.36693191865606
+            },
+            "cpt": {
+              "total": 1131,
+              "correct": 325,
+              "accuracy": 0.28735632183908044,
+              "accuracy_percent": 28.735632183908045
+            },
+            "paired": {
+              "both_correct": 223,
+              "base_only_correct": 177,
+              "cpt_only_correct": 102,
+              "both_wrong": 629
+            },
+            "delta_correct": -75,
+            "delta_percentage_points": -6.631299734748012,
+            "improved": 102,
+            "regressed": 177,
+            "unchanged": 852
+          },
+          "Level 4": {
+            "total": 1214,
+            "base": {
+              "total": 1214,
+              "correct": 261,
+              "accuracy": 0.21499176276771004,
+              "accuracy_percent": 21.499176276771003
+            },
+            "cpt": {
+              "total": 1214,
+              "correct": 203,
+              "accuracy": 0.1672158154859967,
+              "accuracy_percent": 16.72158154859967
+            },
+            "paired": {
+              "both_correct": 117,
+              "base_only_correct": 144,
+              "cpt_only_correct": 86,
+              "both_wrong": 867
+            },
+            "delta_correct": -58,
+            "delta_percentage_points": -4.777594728171334,
+            "improved": 86,
+            "regressed": 144,
+            "unchanged": 984
+          },
+          "Level 5": {
+            "total": 1324,
+            "base": {
+              "total": 1324,
+              "correct": 115,
+              "accuracy": 0.08685800604229607,
+              "accuracy_percent": 8.685800604229607
+            },
+            "cpt": {
+              "total": 1324,
+              "correct": 107,
+              "accuracy": 0.08081570996978851,
+              "accuracy_percent": 8.08157099697885
+            },
+            "paired": {
+              "both_correct": 42,
+              "base_only_correct": 73,
+              "cpt_only_correct": 65,
+              "both_wrong": 1144
+            },
+            "delta_correct": -8,
+            "delta_percentage_points": -0.6042296072507565,
+            "improved": 65,
+            "regressed": 73,
+            "unchanged": 1186
+          }
+        }
+      }
+    }
+  },
+  "input_files_sha256": {
+    "./runs/base_math_inference_20261012/manifest.json": "fc2e4bba2ebbc882d4da2c614abe73f82e0945758c58267238ecb259252f7508",
+    "./runs/base_math_inference_20261012/scores.json": "7e4b8e1cc9633fe8f47b31426c834fd6573832f637514d9f5e4b358b94f1074a",
+    "./runs/base_math_inference_20261012/gsm8k_prompts.jsonl": "c7ed8fec5c043a028825703de587b703f9512089d0a7ddc58b0ffb9ea361cec1",
+    "./runs/base_math_inference_20261012/gsm8k_predictions.jsonl": "cfbb7ee5dd118b9313f496e7f15c0f74e085b945a12e86ac8336f39352b88f02",
+    "./runs/base_math_inference_20261012/gsm8k_scored.jsonl": "e300bf32b4e6c6a9fa99cb88d2a6c600a060c0d0b9f66ba6927607a60628db01",
+    "./runs/base_math_inference_20261012/math_prompts.jsonl": "42e2a6bf447467d18eb0f4466befb0839d0557254a4ffc16a22be986ac5aa5a7",
+    "./runs/base_math_inference_20261012/math_predictions.jsonl": "9a060869bd9bf5c1c2bea7fe4270e8344f26c506822a5c63b5b94ef7bfc5dc35",
+    "./runs/base_math_inference_20261012/math_scored.jsonl": "1e0d5a39bc8c38948b4b2fbb9f2c7b9f77fc9078c7d1fb24b9a52a41050a1ddf",
+    "./runs/cpt_10b_inference_20261012/manifest.json": "d09fa6d9b7ae6da480fecf3c521181e36f646831cdb6fe419a368dc97bf66e5e",
+    "./runs/cpt_10b_inference_20261012/scores.json": "c40ec741a23d1450ff9488d7d8f9a02c682bef4cca30e0c0862618e10c4acbe9",
+    "./runs/cpt_10b_inference_20261012/gsm8k_prompts.jsonl": "c7ed8fec5c043a028825703de587b703f9512089d0a7ddc58b0ffb9ea361cec1",
+    "./runs/cpt_10b_inference_20261012/gsm8k_predictions.jsonl": "483cd11a8dddd317fb0e0d5ef67ebb669e6a2578118960fb514797691ad78800",
+    "./runs/cpt_10b_inference_20261012/gsm8k_scored.jsonl": "f6fd629e65a47b24ae1b853e80366b7521064734bbeb4e3f8466b4581102d126",
+    "./runs/cpt_10b_inference_20261012/math_prompts.jsonl": "42e2a6bf447467d18eb0f4466befb0839d0557254a4ffc16a22be986ac5aa5a7",
+    "./runs/cpt_10b_inference_20261012/math_predictions.jsonl": "a064bb0b9565c8765d81fe8800bc1deaf783b919ef905db7cdc4c113e8023f22",
+    "./runs/cpt_10b_inference_20261012/math_scored.jsonl": "6e18999207da695b16df1b5344ccfc2511d9497b521860fecd0560164af958db"
+  },
+  "script_sha256": "62c932015430205a201c354deef15f1890cdca93fed198384de78c4b074aa7f1",
+  "limits": [
+    "This comparison describes these two checkpoints under one shared prompt/decoding/scoring protocol.",
+    "All questions, including length-limited and empty answers, remain in the primary score denominator.",
+    "The both-nonlength subset is selected using model outputs and is descriptive, not a causal length-limit ablation.",
+    "GSM8K comma normalization changes the answer extraction; it is a separate diagnostic score.",
+    "One CPT run cannot identify which training choice caused a change or establish generalization across runs.",
+    "No evaluation-set decontamination of the training corpus was performed."
+  ],
+  "artifacts": {
+    "benchmark_comparison.csv": "./runs/base_vs_cpt_10b_20261012/benchmark_comparison.csv",
+    "math_breakdown_comparison.csv": "./runs/base_vs_cpt_10b_20261012/math_breakdown_comparison.csv",
+    "gsm8k_paired.jsonl": "./runs/base_vs_cpt_10b_20261012/gsm8k_paired.jsonl",
+    "gsm8k_paired.csv": "./runs/base_vs_cpt_10b_20261012/gsm8k_paired.csv",
+    "math_paired.jsonl": "./runs/base_vs_cpt_10b_20261012/math_paired.jsonl",
+    "math_paired.csv": "./runs/base_vs_cpt_10b_20261012/math_paired.csv",
+    "benchmark_comparison.png": "./runs/base_vs_cpt_10b_20261012/benchmark_comparison.png",
+    "benchmark_comparison.pdf": "./runs/base_vs_cpt_10b_20261012/benchmark_comparison.pdf"
+  }
+}

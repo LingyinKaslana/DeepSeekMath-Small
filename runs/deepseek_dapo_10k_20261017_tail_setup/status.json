@@ -1,0 +1,50 @@
+{
+  "status": "failed",
+  "phase": "resumed_optimized_training",
+  "utc": "2026-10-18T00:11:32.704958+00:00",
+  "setup": "./runs/deepseek_dapo_10k_20261017_tail_setup",
+  "run": "./runs/deepseek_dapo_10k_20261016",
+  "target_rounds": 10000,
+  "save_every": 100,
+  "validation_every": 100,
+  "optimization": "history priority with25% uniform exploration; tail guard conditional on benchmark",
+  "exit_code": 1,
+  "group_totals": {
+    "completed_rounds": 2230,
+    "effective_groups_found": 79739,
+    "effective_groups_used": 71360,
+    "all_wrong_groups": 88953,
+    "all_correct_groups": 227116,
+    "candidate_groups": 395808,
+    "gradient_updates": 8920,
+    "forced_incorrect_responses": 0,
+    "artificial_mixed_groups": 0,
+    "raw_mixed_groups_found": 79739
+  },
+  "progress": {
+    "status": "sampling",
+    "utc": "2026-10-18T00:11:31.368347+00:00",
+    "completed_rounds": 2230,
+    "target_rounds": 10000,
+    "round": 2231,
+    "effective_groups": 29,
+    "target_groups": 32,
+    "candidate_groups": 512,
+    "counts": {
+      "forced_incorrect_responses": 0,
+      "raw_mixed_groups": 29,
+      "artificial_mixed_groups": 0,
+      "all_wrong": 38,
+      "correct_responses": 3726,
+      "truncated_responses": 0,
+      "mixed": 29,
+      "all_correct": 445
+    },
+    "rollout_seconds": 189.02824311412405,
+    "cumulative_effective_groups_found": 79739,
+    "cumulative_effective_groups_used": 71360,
+    "generation_tokens_per_second": 2139.944768760194,
+    "allocated_gib": 15.274803638458252,
+    "reserved_gib": 215.19921875
+  }
+}

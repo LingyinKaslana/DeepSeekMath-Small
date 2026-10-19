@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "./scripts/cpt.py", line 383, in <module>
+    main()
+  File "./scripts/cpt.py", line 372, in main
+    model = load_model(args)
+            ^^^^^^^^^^^^^^^^
+  File "./scripts/cpt.py", line 73, in load_model
+    model._apply(lambda t: t.pin_memory().to("cuda", non_blocking=True))
+  File "./.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "./.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "./scripts/cpt.py", line 73, in <lambda>
+    model._apply(lambda t: t.pin_memory().to("cuda", non_blocking=True))
+                           ^^^^^^^^^^^^^^
+RuntimeError: cannot pin 'torch.cuda.FloatTensor' only dense CPU tensors can be pinned

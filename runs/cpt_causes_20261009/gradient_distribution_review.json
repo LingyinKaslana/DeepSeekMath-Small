@@ -1,0 +1,789 @@
+{
+  "schema_version": 1,
+  "status": "completed_cpu_readonly_review",
+  "generated_utc": "2026-10-09T13:44:09.159228+00:00",
+  "gpu_execution": false,
+  "production_files_modified": false,
+  "additional_experiments_launched": false,
+  "sources": {
+    "training_log": "runs/cpt_native_from0_5h_20261009/training.jsonl",
+    "training_log_sha256": "b2ba881b0cfd4e2d46d9ea68431210382f31c1f0b460d52dfdcbdd56227fb180",
+    "native_update_source": "runs/cpt_native_from0_5h_20261009/source/standard_native.py",
+    "native_update_source_sha256": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820",
+    "installed_clip_source": "./.venv/lib/python3.12/site-packages/torch/nn/utils/clip_grad.py",
+    "torch_version": "2.9.1+cu130"
+  },
+  "global": {
+    "updates": 30860,
+    "minimum": 1.2587780952453613,
+    "median": 1.5426490306854248,
+    "p95": 1.7896433174610136,
+    "p99": 2.443799211978912,
+    "maximum": 933.8220825195312,
+    "threshold_exceedances": [
+      {
+        "threshold": 1,
+        "count": 30860,
+        "fraction": 1.0,
+        "percent": 100.0
+      },
+      {
+        "threshold": 5,
+        "count": 125,
+        "fraction": 0.004050550874918989,
+        "percent": 0.4050550874918989
+      },
+      {
+        "threshold": 10,
+        "count": 89,
+        "fraction": 0.00288399222294232,
+        "percent": 0.28839922229423204
+      },
+      {
+        "threshold": 50,
+        "count": 40,
+        "fraction": 0.0012961762799740765,
+        "percent": 0.12961762799740764
+      },
+      {
+        "threshold": 100,
+        "count": 18,
+        "fraction": 0.0005832793259883344,
+        "percent": 0.05832793259883345
+      }
+    ]
+  },
+  "five_thousand_step_windows": [
+    {
+      "start_step": 1,
+      "end_step": 5000,
+      "mean_training_loss": 1.890070943069458,
+      "updates": 5000,
+      "minimum": 1.3282668590545654,
+      "median": 1.5639338493347168,
+      "p95": 1.777149885892868,
+      "p99": 2.3692622876167397,
+      "maximum": 162.10903930664062,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 5000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 18,
+          "fraction": 0.0036,
+          "percent": 0.36
+        },
+        {
+          "threshold": 10,
+          "count": 12,
+          "fraction": 0.0024,
+          "percent": 0.24
+        },
+        {
+          "threshold": 50,
+          "count": 6,
+          "fraction": 0.0012,
+          "percent": 0.12
+        },
+        {
+          "threshold": 100,
+          "count": 3,
+          "fraction": 0.0006,
+          "percent": 0.06
+        }
+      ]
+    },
+    {
+      "start_step": 5001,
+      "end_step": 10000,
+      "mean_training_loss": 1.8862044390439987,
+      "updates": 5000,
+      "minimum": 1.2587780952453613,
+      "median": 1.4977372288703918,
+      "p95": 1.6538331747055055,
+      "p99": 1.9350493776798277,
+      "maximum": 165.52886962890625,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 5000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 15,
+          "fraction": 0.003,
+          "percent": 0.3
+        },
+        {
+          "threshold": 10,
+          "count": 13,
+          "fraction": 0.0026,
+          "percent": 0.26
+        },
+        {
+          "threshold": 50,
+          "count": 6,
+          "fraction": 0.0012,
+          "percent": 0.12
+        },
+        {
+          "threshold": 100,
+          "count": 5,
+          "fraction": 0.001,
+          "percent": 0.1
+        }
+      ]
+    },
+    {
+      "start_step": 10001,
+      "end_step": 15000,
+      "mean_training_loss": 1.8950099402427674,
+      "updates": 5000,
+      "minimum": 1.2861454486846924,
+      "median": 1.4969521760940552,
+      "p95": 1.711581140756607,
+      "p99": 2.379634020328529,
+      "maximum": 137.9180145263672,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 5000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 24,
+          "fraction": 0.0048,
+          "percent": 0.48
+        },
+        {
+          "threshold": 10,
+          "count": 19,
+          "fraction": 0.0038,
+          "percent": 0.38
+        },
+        {
+          "threshold": 50,
+          "count": 9,
+          "fraction": 0.0018,
+          "percent": 0.18
+        },
+        {
+          "threshold": 100,
+          "count": 4,
+          "fraction": 0.0008,
+          "percent": 0.08
+        }
+      ]
+    },
+    {
+      "start_step": 15001,
+      "end_step": 20000,
+      "mean_training_loss": 1.907276582622528,
+      "updates": 5000,
+      "minimum": 1.2989758253097534,
+      "median": 1.531461238861084,
+      "p95": 1.7501327097415929,
+      "p99": 2.320580852031708,
+      "maximum": 120.99591827392578,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 5000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 24,
+          "fraction": 0.0048,
+          "percent": 0.48
+        },
+        {
+          "threshold": 10,
+          "count": 16,
+          "fraction": 0.0032,
+          "percent": 0.32
+        },
+        {
+          "threshold": 50,
+          "count": 7,
+          "fraction": 0.0014,
+          "percent": 0.13999999999999999
+        },
+        {
+          "threshold": 100,
+          "count": 2,
+          "fraction": 0.0004,
+          "percent": 0.04
+        }
+      ]
+    },
+    {
+      "start_step": 20001,
+      "end_step": 25000,
+      "mean_training_loss": 1.9156213001966476,
+      "updates": 5000,
+      "minimum": 1.274882435798645,
+      "median": 1.5644811391830444,
+      "p95": 1.8139685273170472,
+      "p99": 2.5882286500930825,
+      "maximum": 933.8220825195312,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 5000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 21,
+          "fraction": 0.0042,
+          "percent": 0.42
+        },
+        {
+          "threshold": 10,
+          "count": 14,
+          "fraction": 0.0028,
+          "percent": 0.27999999999999997
+        },
+        {
+          "threshold": 50,
+          "count": 6,
+          "fraction": 0.0012,
+          "percent": 0.12
+        },
+        {
+          "threshold": 100,
+          "count": 3,
+          "fraction": 0.0006,
+          "percent": 0.06
+        }
+      ]
+    },
+    {
+      "start_step": 25001,
+      "end_step": 30000,
+      "mean_training_loss": 1.920595855665207,
+      "updates": 5000,
+      "minimum": 1.29938805103302,
+      "median": 1.599732220172882,
+      "p95": 1.9124477565288545,
+      "p99": 2.901158671379107,
+      "maximum": 100.55315399169922,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 5000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 22,
+          "fraction": 0.0044,
+          "percent": 0.44
+        },
+        {
+          "threshold": 10,
+          "count": 15,
+          "fraction": 0.003,
+          "percent": 0.3
+        },
+        {
+          "threshold": 50,
+          "count": 6,
+          "fraction": 0.0012,
+          "percent": 0.12
+        },
+        {
+          "threshold": 100,
+          "count": 1,
+          "fraction": 0.0002,
+          "percent": 0.02
+        }
+      ]
+    },
+    {
+      "start_step": 30001,
+      "end_step": 30860,
+      "mean_training_loss": 1.9179596396379692,
+      "updates": 860,
+      "minimum": 1.3650003671646118,
+      "median": 1.620015799999237,
+      "p95": 1.9065737485885617,
+      "p99": 2.3929963541030865,
+      "maximum": 7.641383647918701,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 860,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 1,
+          "fraction": 0.0011627906976744186,
+          "percent": 0.11627906976744186
+        },
+        {
+          "threshold": 10,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        {
+          "threshold": 50,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        {
+          "threshold": 100,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      ]
+    }
+  ],
+  "one_thousand_step_windows_near_turning_point": [
+    {
+      "start_step": 2001,
+      "end_step": 3000,
+      "updates": 1000,
+      "minimum": 1.3853158950805664,
+      "median": 1.557003140449524,
+      "p95": 1.6925977051258088,
+      "p99": 2.154309139251708,
+      "maximum": 92.22062683105469,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 1000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 4,
+          "fraction": 0.004,
+          "percent": 0.4
+        },
+        {
+          "threshold": 10,
+          "count": 3,
+          "fraction": 0.003,
+          "percent": 0.3
+        },
+        {
+          "threshold": 50,
+          "count": 1,
+          "fraction": 0.001,
+          "percent": 0.1
+        },
+        {
+          "threshold": 100,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      ]
+    },
+    {
+      "start_step": 3001,
+      "end_step": 4000,
+      "updates": 1000,
+      "minimum": 1.3282668590545654,
+      "median": 1.5449001789093018,
+      "p95": 1.6883094489574433,
+      "p99": 2.482640318870544,
+      "maximum": 125.73640441894531,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 1000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 6,
+          "fraction": 0.006,
+          "percent": 0.6
+        },
+        {
+          "threshold": 10,
+          "count": 4,
+          "fraction": 0.004,
+          "percent": 0.4
+        },
+        {
+          "threshold": 50,
+          "count": 2,
+          "fraction": 0.002,
+          "percent": 0.2
+        },
+        {
+          "threshold": 100,
+          "count": 1,
+          "fraction": 0.001,
+          "percent": 0.1
+        }
+      ]
+    },
+    {
+      "start_step": 4001,
+      "end_step": 5000,
+      "updates": 1000,
+      "minimum": 1.3619121313095093,
+      "median": 1.5327885150909424,
+      "p95": 1.6770314812660216,
+      "p99": 2.0127518582344055,
+      "maximum": 7.133322715759277,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 1000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 1,
+          "fraction": 0.001,
+          "percent": 0.1
+        },
+        {
+          "threshold": 10,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        {
+          "threshold": 50,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        {
+          "threshold": 100,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      ]
+    },
+    {
+      "start_step": 5001,
+      "end_step": 6000,
+      "updates": 1000,
+      "minimum": 1.3430275917053223,
+      "median": 1.5199576616287231,
+      "p95": 1.666154009103775,
+      "p99": 1.915801520347595,
+      "maximum": 28.377689361572266,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 1000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 2,
+          "fraction": 0.002,
+          "percent": 0.2
+        },
+        {
+          "threshold": 10,
+          "count": 2,
+          "fraction": 0.002,
+          "percent": 0.2
+        },
+        {
+          "threshold": 50,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        {
+          "threshold": 100,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      ]
+    },
+    {
+      "start_step": 6001,
+      "end_step": 7000,
+      "updates": 1000,
+      "minimum": 1.334289312362671,
+      "median": 1.5055879354476929,
+      "p95": 1.6695049703121185,
+      "p99": 1.9124298894405365,
+      "maximum": 10.948162078857422,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 1000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 2,
+          "fraction": 0.002,
+          "percent": 0.2
+        },
+        {
+          "threshold": 10,
+          "count": 1,
+          "fraction": 0.001,
+          "percent": 0.1
+        },
+        {
+          "threshold": 50,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        {
+          "threshold": 100,
+          "count": 0,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      ]
+    },
+    {
+      "start_step": 7001,
+      "end_step": 8000,
+      "updates": 1000,
+      "minimum": 1.2952767610549927,
+      "median": 1.4872860312461853,
+      "p95": 1.630896246433258,
+      "p99": 1.9046125614643095,
+      "maximum": 149.30763244628906,
+      "threshold_exceedances": [
+        {
+          "threshold": 1,
+          "count": 1000,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        {
+          "threshold": 5,
+          "count": 4,
+          "fraction": 0.004,
+          "percent": 0.4
+        },
+        {
+          "threshold": 10,
+          "count": 4,
+          "fraction": 0.004,
+          "percent": 0.4
+        },
+        {
+          "threshold": 50,
+          "count": 3,
+          "fraction": 0.003,
+          "percent": 0.3
+        },
+        {
+          "threshold": 100,
+          "count": 3,
+          "fraction": 0.003,
+          "percent": 0.3
+        }
+      ]
+    }
+  ],
+  "largest_20_norm_steps": [
+    {
+      "step": 23907,
+      "pre_clip_grad_norm": 933.8220825195312,
+      "native_training_loss": 1.8718568086624146,
+      "scheduled_lr": 1e-05,
+      "expected_global_clip_multiplier": 0.0010708677998179773
+    },
+    {
+      "step": 9641,
+      "pre_clip_grad_norm": 165.52886962890625,
+      "native_training_loss": 2.0468807220458984,
+      "scheduled_lr": 6.318238416672129e-06,
+      "expected_global_clip_multiplier": 0.006041242208689185
+    },
+    {
+      "step": 1611,
+      "pre_clip_grad_norm": 162.10903930664062,
+      "native_training_loss": 2.1188530921936035,
+      "scheduled_lr": 1.0557703650304738e-06,
+      "expected_global_clip_multiplier": 0.006168687434756444
+    },
+    {
+      "step": 1793,
+      "pre_clip_grad_norm": 153.69557189941406,
+      "native_training_loss": 1.9792286157608032,
+      "scheduled_lr": 1.175044236188479e-06,
+      "expected_global_clip_multiplier": 0.006506368278118519
+    },
+    {
+      "step": 8123,
+      "pre_clip_grad_norm": 150.1126708984375,
+      "native_training_loss": 2.0255091190338135,
+      "scheduled_lr": 5.3234156891015146e-06,
+      "expected_global_clip_multiplier": 0.006661662785381471
+    },
+    {
+      "step": 7360,
+      "pre_clip_grad_norm": 149.30763244628906,
+      "native_training_loss": 2.162933349609375,
+      "scheduled_lr": 4.823382921554493e-06,
+      "expected_global_clip_multiplier": 0.006697581208128474
+    },
+    {
+      "step": 10784,
+      "pre_clip_grad_norm": 137.9180145263672,
+      "native_training_loss": 1.8410228490829468,
+      "scheduled_lr": 7.067304541582017e-06,
+      "expected_global_clip_multiplier": 0.007250684373491583
+    },
+    {
+      "step": 12863,
+      "pre_clip_grad_norm": 129.18673706054688,
+      "native_training_loss": 2.0427870750427246,
+      "scheduled_lr": 8.429779146733075e-06,
+      "expected_global_clip_multiplier": 0.00774073264030649
+    },
+    {
+      "step": 7913,
+      "pre_clip_grad_norm": 128.14044189453125,
+      "native_training_loss": 2.0959081649780273,
+      "scheduled_lr": 5.1857919916115085e-06,
+      "expected_global_clip_multiplier": 0.007803937440914509
+    },
+    {
+      "step": 3694,
+      "pre_clip_grad_norm": 125.73640441894531,
+      "native_training_loss": 2.070708990097046,
+      "scheduled_lr": 2.420866373943247e-06,
+      "expected_global_clip_multiplier": 0.007953146081026149
+    },
+    {
+      "step": 7847,
+      "pre_clip_grad_norm": 122.91836547851562,
+      "native_training_loss": 2.0198585987091064,
+      "scheduled_lr": 5.142538829543221e-06,
+      "expected_global_clip_multiplier": 0.008135480714957156
+    },
+    {
+      "step": 19702,
+      "pre_clip_grad_norm": 120.99591827392578,
+      "native_training_loss": 2.1580395698547363,
+      "scheduled_lr": 1e-05,
+      "expected_global_clip_multiplier": 0.00826474153839911
+    },
+    {
+      "step": 14209,
+      "pre_clip_grad_norm": 120.65338134765625,
+      "native_training_loss": 2.0071938037872314,
+      "scheduled_lr": 9.311881512549971e-06,
+      "expected_global_clip_multiplier": 0.008288205274830618
+    },
+    {
+      "step": 20380,
+      "pre_clip_grad_norm": 114.9179458618164,
+      "native_training_loss": 2.1893997192382812,
+      "scheduled_lr": 1e-05,
+      "expected_global_clip_multiplier": 0.008701861000026867
+    },
+    {
+      "step": 12961,
+      "pre_clip_grad_norm": 111.29222106933594,
+      "native_training_loss": 2.0871543884277344,
+      "scheduled_lr": 8.494003538895079e-06,
+      "expected_global_clip_multiplier": 0.008985353885530222
+    },
+    {
+      "step": 24033,
+      "pre_clip_grad_norm": 107.6360092163086,
+      "native_training_loss": 2.139589309692383,
+      "scheduled_lr": 1e-05,
+      "expected_global_clip_multiplier": 0.009290571045790064
+    },
+    {
+      "step": 17768,
+      "pre_clip_grad_norm": 103.76168060302734,
+      "native_training_loss": 1.673117995262146,
+      "scheduled_lr": 1e-05,
+      "expected_global_clip_multiplier": 0.009637469097945153
+    },
+    {
+      "step": 26272,
+      "pre_clip_grad_norm": 100.55315399169922,
+      "native_training_loss": 2.0288665294647217,
+      "scheduled_lr": 1e-05,
+      "expected_global_clip_multiplier": 0.009944988798039716
+    },
+    {
+      "step": 10267,
+      "pre_clip_grad_norm": 97.96202850341797,
+      "native_training_loss": 1.8705297708511353,
+      "scheduled_lr": 6.728488105380432e-06,
+      "expected_global_clip_multiplier": 0.010208036777812053
+    },
+    {
+      "step": 14726,
+      "pre_clip_grad_norm": 95.37311553955078,
+      "native_training_loss": 2.0816853046417236,
+      "scheduled_lr": 9.650697948751557e-06,
+      "expected_global_clip_multiplier": 0.010485134976010821
+    }
+  ],
+  "clip_semantics": {
+    "max_grad_norm": 1.0,
+    "norm_type": 2.0,
+    "error_if_nonfinite": true,
+    "clip_before_optimizer_step": true,
+    "logged_norm": "Global pre-clip L2 gradient norm returned by torch.nn.utils.clip_grad_norm_; not the clipped norm",
+    "native_return_flow": "update_native assigns norm=clip_grad_norm_(...,1.0), calls optimizer.step(), then returns norm.detach() for training log",
+    "installed_torch_return_flow": "get total_norm -> scale grads using total_norm -> return original total_norm",
+    "clip_coefficient": "min(1, 1.0/(pre_clip_total_norm + 1e-6))",
+    "all_observed_updates_trigger_clipping": true,
+    "post_clip_norm_measured": false,
+    "expected_post_clip_behavior": "Global gradient norm approximately <=1 up to floating-point rounding; norm=933 in logs is not an unclipped optimizer input",
+    "parameter_update_norm_bounded_by_clip_1": false,
+    "direction_caveat": "Global norm clipping rescales the current vector and preserves its direction. It does not remove an outlier direction or bound the subsequent AdamW parameter-update norm. Adam moments can retain effects of the clipped gradient pattern."
+  },
+  "turning_point_interpretation": {
+    "validation_and_uniform_probe_minimum_step": 5000,
+    "supported": "No abrupt broadening or magnitude increase coincides with the observed loss minimum: the next 5000-step window has lower median, p95 and p99 norm, and fewer >5 events than the first window. Large outliers existed before the minimum and continue sporadically afterwards. Later routine gradient norms drift upward; this is correlation, not a cause determination.",
+    "not_established": [
+      "Rare large pre-clip gradients are not proven to cause the loss rise",
+      "Similarity or differences in isolated restarted-batch norms do not alone diagnose an implementation defect",
+      "Exact checkpoint/order/RNG restoration does not ensure bitwise identical GPU training trajectories",
+      "No post-clip gradient or per-parameter gradient replay was performed in this CPU review"
+    ],
+    "possible_future_diagnostic": "Preserve exact blocks of the largest finite-norm events, inspect token/content and per-layer gradient concentration under controlled reruns. Do not add another arm to the currently authorized three-case experiment."
+  },
+  "restarted_baseline_context": {
+    "reported_steps": [
+      20068,
+      20102
+    ],
+    "scope": "Parent observed changed restarted pre-clip norms/losses despite matching initial evaluations and first-step loss. Those observations motivate tracking finite norms; they are not independently reexecuted here.",
+    "no_claim_of_fault": true
+  }
+}

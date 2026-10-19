@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-15T03:02:14.047615+00:00",
+  "model_loaded": {
+    "event": "model_loaded",
+    "seconds": 2.8453495299909264,
+    "gpu": "NVIDIA GB300",
+    "parameter_dtype": "float32"
+  },
+  "original_weight_sha256": {
+    "pytorch_model.bin": "a400155e495b4d6b1cd5b05f04c56032b7dbc6bdff940e046a89ffc1cc2fbdcd"
+  },
+  "original_revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "protocol_reference": {
+    "run": "./runs/deepseek_coder_10b_inference_20261015",
+    "manifest_sha256": "e2c1fa7696d774cf44f396c4fb03e7836013acc1d4e8cdf9e545459830024856",
+    "same_generation_settings": true,
+    "same_runtime_precision": true,
+    "same_tokenizer": true,
+    "prompts": {
+      "gsm8k": {
+        "questions": 1319,
+        "exact_text_and_indices": true,
+        "exact_input_token_ids": true,
+        "prompt_file_sha256": "6287eb092a4cdfb7fe3aa4c81f6fb7197a7dbc1ebac614b3ffbcb20e7450842a"
+      },
+      "math": {
+        "questions": 5000,
+        "exact_text_and_indices": true,
+        "exact_input_token_ids": true,
+        "prompt_file_sha256": "204ca1f6540ef6593cef9344c92a2060f80be98677753c735b5b55a6a32f6b52"
+      }
+    }
+  },
+  "generation_code_identical_to_cpt": true,
+  "full_test_counts": {
+    "gsm8k": 1319,
+    "math": 5000
+  },
+  "background_session": "deepseek-base-eval-20261015",
+  "comparison_selfcheck": "passed",
+  "training_modified": false,
+  "first_completed_batch_progress": {
+    "status": "generating",
+    "updated_utc": "2026-10-15T03:04:25.877584+00:00",
+    "benchmark": "gsm8k",
+    "dataset_finished": 256,
+    "dataset_total": 1319,
+    "finished": 256,
+    "total": 6319,
+    "batch_seconds": 166.60226539894938,
+    "generated_tokens_this_invocation": 25923,
+    "generation_seconds_this_invocation": 166.60226539894938,
+    "generation_tokens_per_second": 155.59812429875564,
+    "peak_allocated_gib": 137.96890306472778
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-10T03:22:09.382342+00:00",
+  "coordinator_pid": 793630,
+  "production_pid": 621138,
+  "production_files_modified": false,
+  "active_case": null,
+  "branch_pid": null,
+  "cases": {
+    "constant": {
+      "result": "./runs/cpt_decay_comparison_20261010/branch_constant/result.json",
+      "end_step": 121104,
+      "metrics": {
+        "validation": 1.8489423990249634,
+        "uniform_train": 1.8960111141204834,
+        "seen_train": 1.855643630027771,
+        "unseen_train": 1.871416449546814
+      }
+    },
+    "linear_decay": {
+      "result": "./runs/cpt_decay_comparison_20261010/branch_linear_decay/result.json",
+      "end_step": 121104,
+      "metrics": {
+        "validation": 1.843106746673584,
+        "uniform_train": 1.889805555343628,
+        "seen_train": 1.8489348888397217,
+        "unseen_train": 1.865283489227295
+      }
+    }
+  },
+  "report": "./runs/cpt_decay_comparison_20261010/report",
+  "runtime_tools_sha256": {
+    "train_branch.py": "1fa72113f917aee05280d6aa440affce3bcfcb26b39e8364e8d1266b4bd848dd",
+    "compare_cpt_backends.py": "455eeb4f5bfcbcbc9f8405dcb8193fb62d7d5be23a3838eeb3bc76d14aa8bb5e",
+    "compare_cpt_hyperparameters.py": "ebc9778eaab48f2b88a71ba4e585ae6f454085cc1f391fd4ab3b6be6053f5509",
+    "summarize_comparison.py": "705d0bf9e87c35d5b0ffe13c292bd7cd040b097bec5c11b512112df21e8f3e0a",
+    "run_comparison.py": "cdf7e3acf3a13b1d0501a9cc4cc99212c2c39217e8396f51114bdb1b1c50e29c"
+  },
+  "production_proc_starttime": "21240311",
+  "production_same_process_still_running": true,
+  "completed_utc": "2026-10-10T06:16:10.574739+00:00"
+}

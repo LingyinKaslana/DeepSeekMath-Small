@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "files": 2426,
+  "bytes": 286145825,
+  "largest_file_bytes": 6930359,
+  "validated_jsonl_records": 2294645,
+  "rollout_metric_records": 526260,
+  "errors": [],
+  "checked_utc": "2026-10-19T06:41:59.056742+00:00"
+}

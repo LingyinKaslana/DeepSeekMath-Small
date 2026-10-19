@@ -1,0 +1,3 @@
+model,benchmark,original_1024_correct,selective_2048_correct,total,original_1024_accuracy_percent,selective_2048_accuracy_percent,delta_percentage_points,rerun_questions,gained,lost,still_truncated_2048,prefix_identical_questions
+sft,gsm8k,281,281,1319,21.30401819560273,21.30401819560273,0.0,14,0,0,13,10
+sft,math,307,305,5000,6.14,6.1,-0.040000000000000036,547,5,7,338,185

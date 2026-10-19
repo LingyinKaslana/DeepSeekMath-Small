@@ -1,0 +1,10 @@
+{
+  "score_math_benchmarks.py": "09b7a92de597dff5801def64924f2f13740f2274bf1f893fa5706a195442d5b7",
+  "standard_native.py": "fbe631466d31653ed9f72561767fefade673d1d7129bfb418b24a0052060ae2d",
+  "prepare_math_sft.py": "31d5f25c359f0079a25a6848ac0646a49d7d67e6c36ecd3e69be6349deba8c0c",
+  "verify_math_sft.py": "bfed470ae308587d09d10ec9c09513f56606751d5ba443312e66c79607dc1f9d",
+  "math_benchmark_protocol.py": "bd3fc2f2eb8649c33c08f34f7d8e1831828334b8eb1032c6000511d519b15608",
+  "run_math_inference.py": "ae6d019e3bdce386d2a0815c782ad78825103f912c2399bb3bde83066443a279",
+  "train_math_sft.py": "0f26e6eb4e2eb92946a4e5f1427b2b741bc9377f4dc08302bfe21c3a0d395a5a",
+  "report_math_sft.py": "5fd9af313922a580006f7c00ae96d607ce2ef73e99f9746f8538f59858de53fc"
+}

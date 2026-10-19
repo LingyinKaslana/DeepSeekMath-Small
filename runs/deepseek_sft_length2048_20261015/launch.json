@@ -1,0 +1,16 @@
+{
+  "status": "launching",
+  "started_utc": "2026-10-15T09:19:50.122660+00:00",
+  "started_beijing": "2026-10-15T17:19:50.122660+08:00",
+  "setup": "./runs/deepseek_sft_length2048_20261015",
+  "tmux_session": "deepseek-sft-length2048-20261015",
+  "selection_counts": {
+    "gsm8k": 14,
+    "math": 547
+  },
+  "total_rerun_questions": 561,
+  "retain_all_other_original_answers": true,
+  "automatic_scoring_and_comparison": true,
+  "report": "./runs/deepseek_sft_length2048_20261015/report/comparison.json",
+  "training_modified": false
+}

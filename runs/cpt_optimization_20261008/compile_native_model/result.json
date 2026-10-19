@@ -1,0 +1,36 @@
+{
+  "status": "rejected_numerical_check",
+  "options": {
+    "kernels": "native",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "model",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_fullgraph": true
+  },
+  "numerical": {
+    "passed": false,
+    "native_loss": 1.820206642150879,
+    "backend_loss": 1.8176376819610596,
+    "absolute_loss_difference": 0.002568960189819336,
+    "global_gradient_relative_l2": 0.07197108119726181,
+    "probe_gradient_relative_l2": {
+      "model.embed_tokens.weight": 0.019938819110393524,
+      "model.layers.0.self_attn.q_proj.weight": 0.04207383468747139,
+      "model.layers.0.mlp.down_proj.weight": 0.04494547098875046,
+      "model.layers.0.input_layernorm.weight": 0.042207732796669006,
+      "model.layers.27.self_attn.q_proj.weight": 0.03564974293112755,
+      "model.layers.27.mlp.down_proj.weight": 0.022812820971012115,
+      "model.layers.27.input_layernorm.weight": 0.026095915585756302,
+      "model.norm.weight": 0.018683291971683502
+    },
+    "attention": "math",
+    "sequence_length": 512,
+    "compiled_check": "compiled small-shape math forward/backward",
+    "seconds_including_small_shape_compile": 97.14934310599347
+  }
+}

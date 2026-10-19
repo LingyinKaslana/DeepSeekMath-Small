@@ -1,0 +1,1 @@
+{"event": "prepared", "source": "./runs/deepseek_coder_10b_inference_20261015", "selected": {"gsm8k": 160, "math": 1860}, "max_new_tokens": 2048, "batch_size": 128, "prepare_only": true}

@@ -1,0 +1,17 @@
+{"time":1791437386.0957901,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":149.16}
+{"time":1791437386.652363,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":149.21}
+{"time":1791437387.201282,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":148.9}
+{"time":1791437387.7558174,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":148.9}
+{"time":1791437388.2965317,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":148.86}
+{"time":1791437388.857664,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":148.74}
+{"time":1791437389.4420512,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":148.74}
+{"time":1791437389.9875035,"phase":"loading","utilization":0.0,"memory_mib":7.0,"power_w":148.78}
+{"time":1791437390.5532606,"phase":"loading","utilization":0.0,"memory_mib":46.0,"power_w":153.39}
+{"time":1791437391.1466498,"phase":"loading","utilization":5.0,"memory_mib":1709.0,"power_w":192.18}
+{"time":1791437391.6966207,"phase":"loading","utilization":6.0,"memory_mib":4129.0,"power_w":213.33}
+{"time":1791437392.4208472,"phase":"loading","utilization":5.0,"memory_mib":6785.0,"power_w":213.57}
+{"time":1791437392.9552333,"phase":"native_flash_reference","utilization":1.0,"memory_mib":7645.0,"power_w":213.74}
+{"time":1791437393.512178,"phase":"native_flash_reference","utilization":63.0,"memory_mib":164763.0,"power_w":392.87}
+{"time":1791437394.056597,"phase":"native_flash_reference","utilization":66.0,"memory_mib":183787.0,"power_w":744.59}
+{"time":1791437394.5966182,"phase":"selected_backend_flash","utilization":100.0,"memory_mib":183791.0,"power_w":955.05}
+{"time":1791437395.1339796,"phase":"native_restoration_control","utilization":8.0,"memory_mib":183791.0,"power_w":744.59}

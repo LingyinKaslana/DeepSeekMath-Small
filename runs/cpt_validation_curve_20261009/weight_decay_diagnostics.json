@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "status": "observed",
+  "gpu_execution": false,
+  "configuration_modified": false,
+  "checkpoint": "./runs/cpt_10b_20261008/checkpoint_step_00175000",
+  "base_model": "Qwen/Qwen2.5-Coder-1.5B",
+  "base_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "base_snapshot": "./.cache/huggingface/hub/models--Qwen--Qwen2.5-Coder-1.5B/snapshots/df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "optimizer_observation": {
+    "state_loading": "torch.load(map_location='cpu', mmap=True, weights_only=True); only parameter-group metadata and scalar LR were inspected",
+    "parameter_groups": 1,
+    "parameter_tensors": 338,
+    "initialized_optimizer_states": 338,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "saved_learning_rate_float32": 9.999999747378752e-06,
+    "capturable": true,
+    "foreach": true,
+    "fused": false,
+    "all_parameters_in_one_decay_group": true,
+    "parameter_tensor_categories": {
+      "rmsnorm_weights": 57,
+      "attention_projection_biases": 84,
+      "shared_embedding_lm_head_weight": 1,
+      "other_weight_matrices": 196
+    },
+    "parameter_names_source": "AutoModelForCausalLM.from_config on meta device; matched 338 distinct parameter tensors to the 338 saved optimizer parameter IDs",
+    "lm_head_and_embedding_tied": true,
+    "implementation_sources": [
+      "./scripts/compiled_adamw.py:30",
+      "./scripts/cpt.py:82"
+    ]
+  },
+  "schedule": {
+    "total_steps": 305176,
+    "peak_lr": 1e-05,
+    "warmup_steps": 15259,
+    "decay_80_step": 244141,
+    "decay_90_step": 274659,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1,
+    "effective_batch_sequences": 16,
+    "sequence_length": 2048,
+    "full_batch_input_tokens": 32768,
+    "dataset_input_tokens": 5000000000,
+    "training_input_tokens": 10000000000,
+    "epochs": 2,
+    "source": "./runs/cpt_10b_20261008/manifest.json"
+  },
+  "decay_only_calculation": {
+    "formula": "product over applied updates i: (1 - weight_decay * lr_i); computed using exp(fsum(log1p(-0.1 * lr_i)))",
+    "interpretation": "Real-arithmetic counterfactual with all gradient-derived Adam updates omitted. This is not the actual total parameter change.",
+    "float32_rounding_included": false,
+    "results": [
+      {
+        "steps": 5000,
+        "sum_lr": 0.008193525132708566,
+        "multiplier": 0.9991809829749116,
+        "shrink_percent": 0.08190170250883533
+      },
+      {
+        "steps": 15259,
+        "sum_lr": 0.0763,
+        "multiplier": 0.992399032034425,
+        "shrink_percent": 0.7600967965574967
+      },
+      {
+        "steps": 25000,
+        "sum_lr": 0.17371,
+        "multiplier": 0.9827789986937374,
+        "shrink_percent": 1.7221001306262584
+      },
+      {
+        "steps": 152588,
+        "sum_lr": 1.4495900000000002,
+        "multiplier": 0.8650576981528206,
+        "shrink_percent": 13.494230184717937
+      },
+      {
+        "steps": 175000,
+        "sum_lr": 1.67371,
+        "multiplier": 0.845885659797262,
+        "shrink_percent": 15.411434020273795
+      },
+      {
+        "steps": 305176,
+        "sum_lr": 2.4920738800000004,
+        "multiplier": 0.7794182221304223,
+        "shrink_percent": 22.058177786957767
+      }
+    ]
+  },
+  "sampled_weights": {
+    "loading": "Read only eight small tensors using safetensors.safe_open(device='cpu'); cast base and checkpoint values to float32 for comparison",
+    "comparison": "checkpoint L2 / base L2; relative L2 change is norm(checkpoint-base)/norm(base)",
+    "results": [
+      {
+        "name": "model.layers.0.input_layernorm.weight",
+        "elements": 1536,
+        "base_mean": 0.4537677764892578,
+        "checkpoint_mean": 0.40140917897224426,
+        "base_l2": 19.81822967529297,
+        "checkpoint_l2": 17.31332778930664,
+        "l2_ratio": 0.8736061453819275,
+        "relative_l2_change": 0.1299086958169937
+      },
+      {
+        "name": "model.layers.0.post_attention_layernorm.weight",
+        "elements": 1536,
+        "base_mean": 0.5452792048454285,
+        "checkpoint_mean": 0.46953263878822327,
+        "base_l2": 21.91900634765625,
+        "checkpoint_l2": 18.837099075317383,
+        "l2_ratio": 0.8593956828117371,
+        "relative_l2_change": 0.1416996568441391
+      },
+      {
+        "name": "model.layers.14.input_layernorm.weight",
+        "elements": 1536,
+        "base_mean": 1.3390644788742065,
+        "checkpoint_mean": 1.1420470476150513,
+        "base_l2": 59.56028366088867,
+        "checkpoint_l2": 50.687599182128906,
+        "l2_ratio": 0.851030170917511,
+        "relative_l2_change": 0.1490713357925415
+      },
+      {
+        "name": "model.layers.27.input_layernorm.weight",
+        "elements": 1536,
+        "base_mean": 1.2396315336227417,
+        "checkpoint_mean": 1.0567727088928223,
+        "base_l2": 71.48466491699219,
+        "checkpoint_l2": 60.765052795410156,
+        "l2_ratio": 0.8500431776046753,
+        "relative_l2_change": 0.15008129179477692
+      },
+      {
+        "name": "model.layers.27.post_attention_layernorm.weight",
+        "elements": 1536,
+        "base_mean": 1.8218892812728882,
+        "checkpoint_mean": 1.5410127639770508,
+        "base_l2": 72.43052673339844,
+        "checkpoint_l2": 61.24106216430664,
+        "l2_ratio": 0.8455145359039307,
+        "relative_l2_change": 0.15460747480392456
+      },
+      {
+        "name": "model.norm.weight",
+        "elements": 1536,
+        "base_mean": 4.622725486755371,
+        "checkpoint_mean": 4.439990520477295,
+        "base_l2": 182.58541870117188,
+        "checkpoint_l2": 175.17141723632812,
+        "l2_ratio": 0.9593943357467651,
+        "relative_l2_change": 0.045718591660261154
+      },
+      {
+        "name": "model.layers.0.self_attn.q_proj.bias",
+        "elements": 1536,
+        "base_mean": 0.05588574707508087,
+        "checkpoint_mean": 0.04828178510069847,
+        "base_l2": 107.65518951416016,
+        "checkpoint_l2": 91.04783630371094,
+        "l2_ratio": 0.8457356691360474,
+        "relative_l2_change": 0.15449370443820953
+      },
+      {
+        "name": "model.layers.27.self_attn.q_proj.bias",
+        "elements": 1536,
+        "base_mean": 0.04487468674778938,
+        "checkpoint_mean": 0.03780466690659523,
+        "base_l2": 35.05548095703125,
+        "checkpoint_l2": 29.638158798217773,
+        "l2_ratio": 0.8454643487930298,
+        "relative_l2_change": 0.15458640456199646
+      }
+    ]
+  },
+  "small_batch_interpretation": {
+    "explanation": "AdamW decay is applied per optimizer update. For the same token budget and LR curve versus token progress, smaller effective batches produce more decay applications. LR, decay, batch, and number of updates must be considered together.",
+    "hypothetical_comparison_not_paper_configuration": [
+      {
+        "batch_input_tokens": 32768,
+        "update_frequency_relative_to_ours": 1.0,
+        "approximate_decay_only_multiplier": 0.7794183146168038
+      },
+      {
+        "batch_input_tokens": 1048576,
+        "update_frequency_relative_to_ours": 0.03125,
+        "approximate_decay_only_multiplier": 0.9922425149347536
+      },
+      {
+        "batch_input_tokens": 4194304,
+        "update_frequency_relative_to_ours": 0.0078125,
+        "approximate_decay_only_multiplier": 0.9980549613253641
+      }
+    ]
+  },
+  "inference": "Broad wd=0.1 with a small token batch produces material cumulative scale drift. Several sampled intermediate RMSNorm and q_proj bias norm ratios are close to the decay-only prediction. This makes decay grouping/strength a concrete candidate to investigate for validation-loss degradation, rather than establishing a causal diagnosis.",
+  "proposed_control_experiment_not_run": {
+    "same_starting_checkpoint_optimizer_data_order_lr_and_backend": true,
+    "example_steps_per_branch": 5000,
+    "approximate_input_tokens_per_branch": 163840000,
+    "branches": [
+      "Existing wd=0.1 for all parameters",
+      "wd=0.1 for matrices and shared embedding; wd=0 for RMSNorm weights and biases",
+      "wd=0 for all parameters"
+    ],
+    "measurements": [
+      "Loss on the same native held-out validation blocks",
+      "RMSNorm and bias scale trajectories",
+      "Training loss and gradient norm"
+    ],
+    "caution": "Stopping decay does not immediately restore previously shrunken weights; changing LR, batch, or backend simultaneously would confound attribution."
+  },
+  "limitations": [
+    "No model forward, backward, GPU operation, or new training experiment was performed.",
+    "The decay-only multiplication excludes gradient-derived AdamW updates and floating-point rounding.",
+    "The measured tensor differences combine decay and gradient updates, so they do not isolate decay causality.",
+    "Only eight small tensors were sampled; this is not an all-parameter weight-drift survey.",
+    "The final RMSNorm changed less than the intermediate sampled RMSNorms; there is no claim of uniform drift.",
+    "Hypothetical large-batch comparisons do not state the paper's actual configuration or imply identical optimization dynamics.",
+    "These observations do not prove why validation loss rose and do not change the current running configuration."
+  ]
+}

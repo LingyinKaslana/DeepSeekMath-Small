@@ -1,0 +1,27 @@
+{
+  "checkpoint": "./runs/cpt_native_long_20261009/migration_smoke/stopped_checkpoint",
+  "completed_steps": 181654,
+  "tensor_values_unchanged": true,
+  "before_tensor_sha256": "555b1feffe8e5b01b17fe43d35642188dc3edff689ef2ce1a6579377f9bce433",
+  "after_tensor_sha256": "555b1feffe8e5b01b17fe43d35642188dc3edff689ef2ce1a6579377f9bce433",
+  "groups": [
+    {
+      "before": {
+        "lr": 9.999999747378752e-06,
+        "lr_type": "float",
+        "capturable": false,
+        "foreach": true,
+        "fused": false
+      },
+      "after": {
+        "lr": 9.999999747378752e-06,
+        "lr_type": "float",
+        "capturable": false,
+        "foreach": true,
+        "fused": false
+      }
+    }
+  ],
+  "step_device": "CPU scalar; checkpoint CPU mapping preserved",
+  "scope": "Execution flags and numerically identical LR representation only; moment values/step counts/parameter ordering unchanged"
+}

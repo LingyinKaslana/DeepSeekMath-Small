@@ -1,0 +1,7 @@
+{
+  "loss": 0.9544458389282227,
+  "supervised_tokens": 86171,
+  "input_tokens": 126981,
+  "examples": 512,
+  "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+}

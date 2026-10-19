@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "status": "passed_actual_fresh_startup",
+  "reviewed_utc": "2026-10-09T14:57:00.390394+00:00",
+  "gpu_execution": false,
+  "large_checkpoint_or_optimizer_rechecks": false,
+  "production_source_or_config_modified": false,
+  "checks": {
+    "all_12_executing_sources_identical_to_audited_native5h": true,
+    "trainer_compiles_as_python_ast": true,
+    "fast_config_byte_identical_to_preserved_original": true,
+    "fast_config_sha_matches_original": true,
+    "configured_branch_is_fast_compile": true,
+    "same_pinned_base": true,
+    "fresh_start_intent": true,
+    "full_epoch_budget_no_step_cap": true,
+    "no_wall_or_global_step_stop_budget": true,
+    "same_data_manifest": true,
+    "exact_token_math": true,
+    "lr_and_schedule_math": true,
+    "batch_seed_math_unchanged": true,
+    "native_retry_enabled_in_plan": true,
+    "validation_probe_cadence_as_requested": true
+  },
+  "source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+  },
+  "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+  "planned_fresh_run": "./runs/cpt_10b_lr3e6_20261009",
+  "schedule": {
+    "total_steps": 305176,
+    "peak_lr": 3e-06,
+    "warmup_steps": 15259,
+    "decay_80_step": 244141,
+    "decay_90_step": 274659,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1
+  },
+  "precision": "BF16 autocast with FP32 parameters/gradients/Adam moments",
+  "lr_scalar_application": "Compiled optimizer creates a fresh mutable CUDA FP32 scalar from new args.lr=3e-6. Trainer sets that same scalar in place with set_lr for every global update; compiled graphs cannot rely on the historical optimizer scalar object.",
+  "fresh_optimizer_evidence": "Source creates make_compiled_adamw(model.parameters(),args.lr), restores optimizer only under args.resume is not None; checkpoint loading is absent for fresh branch. Initial Adam tensor state is lazy and empty before first optimizer step.",
+  "same_batch_native_retry_review": {
+    "same_prepared_batch_tensors_reused": true,
+    "same_BF16_FP32_policy": true,
+    "RNG_captured_before_first_attempt_and_restored_before_retry": true,
+    "first_failed_attempt_never_calls_optimizer_step": true,
+    "native_retry_bypasses_local_patches_and_compile": true,
+    "second_failure_raises_before_optimizer_mutation_and_data_cursor_increment": true,
+    "strict_clip_error_if_nonfinite": true,
+    "optimizer_applied_once_after_successful_attempt": true,
+    "no_skip": true,
+    "only_nonfinite_loss_or_norm_is_retryable": true,
+    "other_runtime_exceptions_propagate": true,
+    "prior_validated_helpers_reused_without_new_tests": true
+  },
+  "tail_guard_review": {
+    "full_shape_and_labels_alias_required_for_compiled_model": true,
+    "masked_tail_or_partial_batch_uses_eager_path": true,
+    "two_epoch_complete_tail_expected_length": 512,
+    "full_budget_supervised_tokens": 9995117186
+  },
+  "checkpoint_retention": {
+    "actual_planned_keep": 64,
+    "initial_task_keep": 3,
+    "effect_on_math": false,
+    "note": "Root explicitly chose keep64 to retain all approximately61 periodic checkpoints for future diagnosis; 3.05TB free disk. This does not change training math.",
+    "root_operational_choice_pending_acknowledgment": false,
+    "root_confirmed_operational_choice": true
+  },
+  "remaining_checks": [],
+  "launch_cli": {
+    "passed": true,
+    "run_sh_sha256": "398c5025fb7f98b2b393b9bc6c13404937666643189dce028cfcb2ad49818325",
+    "options": {
+      "--backend-config": "$CPT_SETUP/backend_config.json",
+      "--data": "$CPT_PROJECT/data/processed/openwebmath_5b_s42",
+      "--output": "$CPT_RUN",
+      "--epochs": "2",
+      "--lr": "3e-6",
+      "--seed": "42",
+      "--log-every": "100",
+      "--eval-every": "1000",
+      "--checkpoint-every": "5000",
+      "--keep-checkpoints": "64",
+      "--train-probe-blocks": "256",
+      "--train-probe-seed": "20261009",
+      "--retry-native-on-nonfinite": true
+    },
+    "no_resume_or_budget_cap_or_migration_flags": true,
+    "no_shell_timeout": true,
+    "trainer_is_separate_child_with_pid_recorded": true,
+    "signal_forwarding_for_graceful_checkpoint": true
+  },
+  "runtime_reviewed_utc": "2026-10-09T15:03:37.752731+00:00",
+  "runtime_checks": {
+    "no_resume_or_migration": true,
+    "initial_step_and_input_zero": true,
+    "no_runtime_budget_caps": true,
+    "full10b_and_two_epochs": true,
+    "actual_new_full_schedule": true,
+    "own_original_signature_and_no_migrations": true,
+    "actual_source_sha_unchanged": true,
+    "actual_fast_config_sha": true,
+    "actual_both_order_file_hashes_match_original_seed42": true,
+    "retry_runtime_enabled": true,
+    "actual_initial_validation_exactly_matches_base": true,
+    "actual_initial_probe_exactly_matches_base": true,
+    "actual_probe_indices_and_tokens_identical": true,
+    "early_real_updates_present": true,
+    "all_available_early_updates_finite_applied_consecutive": true,
+    "all_available_early_lrs_new_schedule_fp32": true
+  },
+  "actual_manifest_sha256": "1f32c239018554ff0b38b6807b1eae467bf32c4e0a1598773ec00acabcf5af7f",
+  "actual_order_file_sha256": {
+    "order_epoch_00000.npy": "cb620a8596cd8ff50b838e6be94fa676ffbe0d41118c094fcbed66c2817b466b",
+    "order_epoch_00001.npy": "d522f0f1d149346e93da04800c666611fb3789df357343ac221de61a745f6f80"
+  },
+  "actual_initial_validation": {
+    "step": 0,
+    "loss": 1.86186945438385,
+    "perplexity": 6.4357568863247065,
+    "supervised_tokens": 2096128,
+    "input_tokens": 2097152,
+    "blocks": 1024,
+    "loss_backend": "native eager",
+    "attention_mask": "cached all-ones tensor"
+  },
+  "actual_initial_uniform_probe": {
+    "step": 0,
+    "cumulative_tokens": 0,
+    "loss": 1.931435465812683,
+    "perplexity": 6.899406999528651,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  "early_real_training": {
+    "observed_steps": 322,
+    "last_step": 322,
+    "last_input_tokens": 10551296,
+    "last_logged_lr": 6.330690084540271e-08,
+    "first_update_loss": 1.9482442140579224,
+    "native_retry_count_observed": 0,
+    "new_adam_evidence": "Actual fresh/noresume lineage plus unchanged verified constructor branch; no direct CUDA tensor snapshot audit."
+  },
+  "limits": [
+    "Startup review establishes fresh lineage, intended recipe and finite early updates; it does not establish completion of10B or future curve improvement.",
+    "No new large Adam/checkpoint audit or GPU diagnostic was run."
+  ]
+}

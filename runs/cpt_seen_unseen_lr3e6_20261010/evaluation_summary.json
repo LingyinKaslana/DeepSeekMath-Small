@@ -1,0 +1,174 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-10T02:21:33.055595+00:00",
+  "coordinator_pid": 776787,
+  "production_run": "./runs/cpt_10b_lr3e6_20261009",
+  "training_updates": 0,
+  "production_files_modified": false,
+  "cases": {
+    "base": {
+      "step": 0,
+      "trained_tokens": 0,
+      "metrics": {
+        "validation": {
+          "loss": 1.86186945438385,
+          "perplexity": 6.4357568863247065,
+          "supervised_tokens": 2096128,
+          "input_tokens": 2097152,
+          "blocks": 1024,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "uniform_train": {
+          "loss": 1.931435465812683,
+          "perplexity": 6.899406999528651,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "seen_train": {
+          "loss": 1.8855924606323242,
+          "perplexity": 6.5902577538976335,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "unseen_train": {
+          "loss": 1.881611943244934,
+          "perplexity": 6.564077258846845,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        }
+      },
+      "probes_sha256": "e263f671c6efc422d5297460ef4c55a13ec9f26365a9d7afd1bc8152af4f0a20",
+      "result": "./runs/cpt_seen_unseen_lr3e6_20261010/eval_base/result.json"
+    },
+    "step15000": {
+      "step": 15000,
+      "trained_tokens": 491520000,
+      "metrics": {
+        "validation": {
+          "loss": 1.821273684501648,
+          "perplexity": 6.179724458680882,
+          "supervised_tokens": 2096128,
+          "input_tokens": 2097152,
+          "blocks": 1024,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "uniform_train": {
+          "loss": 1.8938571214675903,
+          "perplexity": 6.644949692904756,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "seen_train": {
+          "loss": 1.8218846321105957,
+          "perplexity": 6.183501100110423,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "unseen_train": {
+          "loss": 1.8416863679885864,
+          "perplexity": 6.307165499788078,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        }
+      },
+      "probes_sha256": "e263f671c6efc422d5297460ef4c55a13ec9f26365a9d7afd1bc8152af4f0a20",
+      "result": "./runs/cpt_seen_unseen_lr3e6_20261010/eval_step15000/result.json"
+    },
+    "step110000": {
+      "step": 110000,
+      "trained_tokens": 3604480000,
+      "metrics": {
+        "validation": {
+          "loss": 1.8481593132019043,
+          "perplexity": 6.34812385410181,
+          "supervised_tokens": 2096128,
+          "input_tokens": 2097152,
+          "blocks": 1024,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "uniform_train": {
+          "loss": 1.8970496654510498,
+          "perplexity": 6.666197886916813,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "seen_train": {
+          "loss": 1.8542757034301758,
+          "perplexity": 6.387070441658016,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        },
+        "unseen_train": {
+          "loss": 1.8536157608032227,
+          "perplexity": 6.3828567321684,
+          "supervised_tokens": 524032,
+          "input_tokens": 524288,
+          "blocks": 256,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        }
+      },
+      "probes_sha256": "e263f671c6efc422d5297460ef4c55a13ec9f26365a9d7afd1bc8152af4f0a20",
+      "result": "./runs/cpt_seen_unseen_lr3e6_20261010/eval_step110000/result.json"
+    }
+  },
+  "early_step": 15000,
+  "late_step": 110000,
+  "limits": [
+    "Seen/unseen refers to occurrence of an exact2048-token block in this local CPT only; neighboring document fragments and prior base pretraining overlap are not excluded",
+    "Three observational snapshots and sample averages do not establish a unique cause or whole-corpus seen-loss behavior",
+    "Different groups may have different intrinsic difficulty; compare each same group across snapshots"
+  ],
+  "active_case": null,
+  "evaluator_pid": null,
+  "completed_utc": "2026-10-10T02:27:44.325757+00:00",
+  "loss_changes": {
+    "validation": {
+      "base_to_early": -0.04059576988220215,
+      "early_to_late": 0.026885628700256348,
+      "base_to_late": -0.0137101411819458
+    },
+    "uniform_train": {
+      "base_to_early": -0.03757834434509277,
+      "early_to_late": 0.0031925439834594727,
+      "base_to_late": -0.0343858003616333
+    },
+    "seen_train": {
+      "base_to_early": -0.06370782852172852,
+      "early_to_late": 0.03239107131958008,
+      "base_to_late": -0.03131675720214844
+    },
+    "unseen_train": {
+      "base_to_early": -0.039925575256347656,
+      "early_to_late": 0.01192939281463623,
+      "base_to_late": -0.027996182441711426
+    }
+  }
+}

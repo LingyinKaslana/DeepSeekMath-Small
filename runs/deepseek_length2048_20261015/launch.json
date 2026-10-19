@@ -1,0 +1,28 @@
+{
+  "status": "running",
+  "started_utc": "2026-10-15T04:12:30.168794+00:00",
+  "started_beijing": "2026-10-15T12:12:30.168794+08:00",
+  "setup": "./runs/deepseek_length2048_20261015",
+  "tmux_session": "deepseek-length2048-20261015",
+  "max_new_tokens": 2048,
+  "batch_size": 128,
+  "selection_counts": {
+    "base": {
+      "gsm8k": 113,
+      "math": 1964
+    },
+    "cpt": {
+      "gsm8k": 160,
+      "math": 1860
+    }
+  },
+  "total_rerun_questions": 4097,
+  "model_order": [
+    "base",
+    "cpt"
+  ],
+  "retain_all_other_original_answers": true,
+  "automatic_scoring_and_comparison": true,
+  "report": "./runs/deepseek_length2048_20261015/report/comparison.json",
+  "training_modified": false
+}

@@ -1,0 +1,87 @@
+{
+  "status": "complete",
+  "created_utc": "2026-10-10T02:28:46.318999+00:00",
+  "created_beijing": "2026-10-10T10:28:46.319218+08:00",
+  "sources": [
+    {
+      "path": "./runs/cpt_seen_unseen_lr3e6_20261010/evaluation_summary.json",
+      "sha256": "a9fff623d1b23736544fce202a81f8314a80cf1c3f21c3a42c3910af840672ab"
+    },
+    {
+      "path": "./runs/cpt_seen_unseen_lr3e6_20261010/plan.json",
+      "sha256": "9e0c87ecd0894830e8a89955023624e86f7dedc2ec530e6fa10868e4956cf3c4"
+    }
+  ],
+  "plotted_groups": [
+    "seen_train",
+    "unseen_train",
+    "validation"
+  ],
+  "auxiliary_csv_group": "uniform_train",
+  "cases": [
+    "base",
+    "step15000",
+    "step110000"
+  ],
+  "x_input_tokens_b": [
+    0.0,
+    0.49152,
+    3.60448
+  ],
+  "losses": {
+    "seen_train": [
+      1.8855924606323242,
+      1.8218846321105957,
+      1.8542757034301758
+    ],
+    "unseen_train": [
+      1.881611943244934,
+      1.8416863679885864,
+      1.8536157608032227
+    ],
+    "validation": [
+      1.86186945438385,
+      1.821273684501648,
+      1.8481593132019043
+    ],
+    "uniform_train": [
+      1.931435465812683,
+      1.8938571214675903,
+      1.8970496654510498
+    ]
+  },
+  "loss_changes": {
+    "seen_train": {
+      "base_to_early": -0.06370782852172852,
+      "early_to_late": 0.03239107131958008,
+      "base_to_late": -0.03131675720214844
+    },
+    "unseen_train": {
+      "base_to_early": -0.039925575256347656,
+      "early_to_late": 0.01192939281463623,
+      "base_to_late": -0.027996182441711426
+    },
+    "validation": {
+      "base_to_early": -0.04059576988220215,
+      "early_to_late": 0.026885628700256348,
+      "base_to_late": -0.0137101411819458
+    },
+    "uniform_train": {
+      "base_to_early": -0.03757834434509277,
+      "early_to_late": 0.0031925439834594727,
+      "base_to_late": -0.0343858003616333
+    }
+  },
+  "outputs": [
+    "./runs/cpt_seen_unseen_lr3e6_20261010/report/seen_unseen_comparison.png",
+    "./runs/cpt_seen_unseen_lr3e6_20261010/report/seen_unseen_comparison.svg",
+    "./runs/cpt_seen_unseen_lr3e6_20261010/report/seen_unseen_comparison.pdf",
+    "./runs/cpt_seen_unseen_lr3e6_20261010/report/fixed_evaluation.csv",
+    "./runs/cpt_seen_unseen_lr3e6_20261010/report/loss_changes.csv"
+  ],
+  "limits": [
+    "Seen/unseen refers to occurrence of an exact2048-token block in this local CPT only; neighboring document fragments and prior base pretraining overlap are not excluded",
+    "Three observational snapshots and sample averages do not establish a unique cause or whole-corpus seen-loss behavior",
+    "Different groups may have different intrinsic difficulty; compare each same group across snapshots"
+  ]
+}

@@ -1,0 +1,4 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 36.43it/s]
+{"event": "model_loaded", "seconds": 1.8306163859961089, "parameters": 1543714304}
+W1009 02:04:45.390000 512383 torch/_logging/_internal.py:1199] [1/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+{"status": "passed", "global_step": 175001, "counters": {"hook_calls": 2, "injections": 1, "optimizer_calls": 1}, "loss": 1.8390322923660278, "grad_norm": 2.276439666748047, "seconds": 25.95031463599298}

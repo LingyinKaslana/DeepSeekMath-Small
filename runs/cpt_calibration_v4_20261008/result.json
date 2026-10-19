@@ -1,0 +1,359 @@
+{
+  "status": "complete",
+  "selected": {
+    "name": "native_m16_foreach",
+    "status": "passed",
+    "micro_batch": 16,
+    "effective_batch": 16,
+    "attention_mask": "ones",
+    "fused_optimizer": false,
+    "loss_type": "native",
+    "seconds": 4.404912823010818,
+    "seconds_per_update": 0.5506141028763523,
+    "tokens_per_second": 59511.73395091642,
+    "peak_allocated_bytes": 200875311616,
+    "peak_reserved_bytes": 219051720704,
+    "losses": [
+      1.6990329027175903,
+      1.8931288719177246,
+      2.19480562210083,
+      2.0521745681762695,
+      1.7521839141845703,
+      1.8645485639572144,
+      1.9259107112884521,
+      1.9586666822433472
+    ],
+    "grad_norms": [
+      1.5799533128738403,
+      1.694659948348999,
+      1.9162973165512085,
+      1.9340391159057617,
+      1.9010928869247437,
+      1.8758896589279175,
+      1.8180381059646606,
+      1.7874566316604614
+    ],
+    "telemetry": {
+      "samples": 8,
+      "utilization": 100.0,
+      "memory_mib": 209835.0,
+      "power_w": 1171.97625
+    }
+  },
+  "cases": [
+    {
+      "name": "native_m2_foreach",
+      "status": "passed",
+      "micro_batch": 2,
+      "effective_batch": 16,
+      "attention_mask": "ones",
+      "fused_optimizer": false,
+      "loss_type": "native",
+      "seconds": 16.15609016000235,
+      "seconds_per_update": 2.0195112700002937,
+      "tokens_per_second": 16225.70791595297,
+      "peak_allocated_bytes": 56532212224,
+      "peak_reserved_bytes": 59347304448,
+      "losses": [
+        1.6989144086837769,
+        1.8932063579559326,
+        2.194890260696411,
+        2.052422285079956,
+        1.7522121667861938,
+        1.8645026683807373,
+        1.9257535934448242,
+        1.9582611322402954
+      ],
+      "grad_norms": [
+        1.5789892673492432,
+        1.6961487531661987,
+        1.9114508628845215,
+        1.9472347497940063,
+        1.8880929946899414,
+        1.8722989559173584,
+        1.8326172828674316,
+        1.788512110710144
+      ],
+      "telemetry": {
+        "samples": 30,
+        "utilization": 38.43333333333333,
+        "memory_mib": 57527.0,
+        "power_w": 491.19066666666663
+      }
+    },
+    {
+      "name": "native_m4_foreach",
+      "status": "passed",
+      "micro_batch": 4,
+      "effective_batch": 16,
+      "attention_mask": "ones",
+      "fused_optimizer": false,
+      "loss_type": "native",
+      "seconds": 7.7867852589988615,
+      "seconds_per_update": 0.9733481573748577,
+      "tokens_per_second": 33665.24069699382,
+      "peak_allocated_bytes": 77991860736,
+      "peak_reserved_bytes": 82558582784,
+      "losses": [
+        1.6988593339920044,
+        1.893231987953186,
+        2.19468355178833,
+        2.052626848220825,
+        1.752256989479065,
+        1.8641096353530884,
+        1.9258662462234497,
+        1.9584870338439941
+      ],
+      "grad_norms": [
+        1.57980215549469,
+        1.7001357078552246,
+        1.9129700660705566,
+        1.943922996520996,
+        1.890041470527649,
+        1.8688364028930664,
+        1.8305022716522217,
+        1.789967656135559
+      ],
+      "telemetry": {
+        "samples": 15,
+        "utilization": 65.73333333333333,
+        "memory_mib": 79663.0,
+        "power_w": 792.3693333333334
+      }
+    },
+    {
+      "name": "native_m8_foreach",
+      "status": "passed",
+      "micro_batch": 8,
+      "effective_batch": 16,
+      "attention_mask": "ones",
+      "fused_optimizer": false,
+      "loss_type": "native",
+      "seconds": 4.862155014008749,
+      "seconds_per_update": 0.6077693767510937,
+      "tokens_per_second": 53915.18765747198,
+      "peak_allocated_bytes": 121051273728,
+      "peak_reserved_bytes": 128031129600,
+      "losses": [
+        1.6990933418273926,
+        1.8929829597473145,
+        2.1945104598999023,
+        2.052079200744629,
+        1.7521569728851318,
+        1.8640305995941162,
+        1.9257457256317139,
+        1.9587173461914062
+      ],
+      "grad_norms": [
+        1.5795491933822632,
+        1.6982057094573975,
+        1.9115313291549683,
+        1.940138578414917,
+        1.8927346467971802,
+        1.8744609355926514,
+        1.8260440826416016,
+        1.7865029573440552
+      ],
+      "telemetry": {
+        "samples": 9,
+        "utilization": 94.55555555555556,
+        "memory_mib": 123029.0,
+        "power_w": 1117.51
+      }
+    },
+    {
+      "name": "native_m16_foreach",
+      "status": "passed",
+      "micro_batch": 16,
+      "effective_batch": 16,
+      "attention_mask": "ones",
+      "fused_optimizer": false,
+      "loss_type": "native",
+      "seconds": 4.404912823010818,
+      "seconds_per_update": 0.5506141028763523,
+      "tokens_per_second": 59511.73395091642,
+      "peak_allocated_bytes": 200875311616,
+      "peak_reserved_bytes": 219051720704,
+      "losses": [
+        1.6990329027175903,
+        1.8931288719177246,
+        2.19480562210083,
+        2.0521745681762695,
+        1.7521839141845703,
+        1.8645485639572144,
+        1.9259107112884521,
+        1.9586666822433472
+      ],
+      "grad_norms": [
+        1.5799533128738403,
+        1.694659948348999,
+        1.9162973165512085,
+        1.9340391159057617,
+        1.9010928869247437,
+        1.8758896589279175,
+        1.8180381059646606,
+        1.7874566316604614
+      ],
+      "telemetry": {
+        "samples": 8,
+        "utilization": 100.0,
+        "memory_mib": 209835.0,
+        "power_w": 1171.97625
+      }
+    },
+    {
+      "name": "native_m16_fused",
+      "status": "passed",
+      "micro_batch": 16,
+      "effective_batch": 16,
+      "attention_mask": "ones",
+      "fused_optimizer": true,
+      "loss_type": "native",
+      "seconds": 4.807479184004478,
+      "seconds_per_update": 0.6009348980005598,
+      "tokens_per_second": 54528.36922772536,
+      "peak_allocated_bytes": 200875484672,
+      "peak_reserved_bytes": 219051720704,
+      "losses": [
+        1.6988294124603271,
+        1.8930730819702148,
+        2.1947176456451416,
+        2.0525107383728027,
+        1.7520874738693237,
+        1.8645042181015015,
+        1.9259262084960938,
+        1.9584158658981323
+      ],
+      "grad_norms": [
+        1.5793030261993408,
+        1.6971389055252075,
+        1.9104750156402588,
+        1.9475386142730713,
+        1.8906034231185913,
+        1.8779559135437012,
+        1.837264895439148,
+        1.789899468421936
+      ],
+      "telemetry": {
+        "samples": 9,
+        "utilization": 98.33333333333333,
+        "memory_mib": 209835.0,
+        "power_w": 1094.3366666666668
+      }
+    },
+    {
+      "name": "liger_ce_m16_fused",
+      "status": "passed",
+      "micro_batch": 16,
+      "effective_batch": 16,
+      "attention_mask": "ones",
+      "fused_optimizer": true,
+      "loss_type": "liger_ce",
+      "seconds": 4.689593214992783,
+      "seconds_per_update": 0.5861991518740979,
+      "tokens_per_second": 55899.09145252024,
+      "peak_allocated_bytes": 171205779968,
+      "peak_reserved_bytes": 179222609920,
+      "losses": [
+        1.6990082263946533,
+        1.892807126045227,
+        2.195013999938965,
+        2.0524373054504395,
+        1.7519738674163818,
+        1.864395022392273,
+        1.9259603023529053,
+        1.958583116531372
+      ],
+      "grad_norms": [
+        1.578776478767395,
+        1.6981016397476196,
+        1.9139583110809326,
+        1.9447190761566162,
+        1.8937150239944458,
+        1.877418875694275,
+        1.8245809078216553,
+        1.7915410995483398
+      ],
+      "telemetry": {
+        "samples": 9,
+        "utilization": 99.11111111111111,
+        "memory_mib": 171859.22222222222,
+        "power_w": 1099.7144444444446
+      }
+    },
+    {
+      "name": "liger_m16_fused",
+      "status": "passed",
+      "micro_batch": 16,
+      "effective_batch": 16,
+      "attention_mask": "ones",
+      "fused_optimizer": true,
+      "loss_type": "liger",
+      "seconds": 4.795628241990926,
+      "seconds_per_update": 0.5994535302488657,
+      "tokens_per_second": 54663.119568911745,
+      "peak_allocated_bytes": 142994366976,
+      "peak_reserved_bytes": 149323513856,
+      "losses": [
+        1.6990814208984375,
+        1.8930022716522217,
+        2.194812297821045,
+        2.052030086517334,
+        1.7519909143447876,
+        1.8644590377807617,
+        1.9257302284240723,
+        1.9586505889892578
+      ],
+      "grad_norms": [
+        1.5873043537139893,
+        1.6978703737258911,
+        1.911990761756897,
+        1.9471015930175781,
+        1.8851016759872437,
+        1.8673070669174194,
+        1.82694411277771,
+        1.7866291999816895
+      ],
+      "telemetry": {
+        "samples": 9,
+        "utilization": 100.0,
+        "memory_mib": 143358.0,
+        "power_w": 1155.7588888888888
+      }
+    }
+  ],
+  "numerical_checks": [
+    {
+      "loss_type": "native",
+      "status": "passed",
+      "loss": 1.820206642150879,
+      "attention_reference": "math"
+    },
+    {
+      "loss_type": "liger_ce",
+      "status": "passed",
+      "loss": 1.820206880569458,
+      "absolute_loss_difference": 2.384185791015625e-07,
+      "probe_gradient_relative_l2": [
+        0.012436161749064922,
+        0.010075420141220093
+      ],
+      "attention_reference": "math"
+    },
+    {
+      "loss_type": "liger",
+      "status": "passed",
+      "loss": 1.820206880569458,
+      "absolute_loss_difference": 2.384185791015625e-07,
+      "probe_gradient_relative_l2": [
+        0.012949703261256218,
+        0.010643265210092068
+      ],
+      "attention_reference": "math"
+    }
+  ],
+  "comparison": "same initial weights, ordered real data, effective batch, BF16 AMP/FP32 state and learning rate",
+  "warmup_updates": 3,
+  "measured_updates": 8,
+  "pilot_initialized_from": "original Coder Base; calibration weights are discarded"
+}

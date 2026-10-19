@@ -1,0 +1,16 @@
+{
+  "status": "sampling",
+  "utc": "2026-10-18T15:07:21.446733+00:00",
+  "completed_rounds": 2411,
+  "round": 2412,
+  "target_rounds": 10000,
+  "effective_groups": 11,
+  "target_groups": 32,
+  "candidate_groups": 160,
+  "batch_in_flight": true,
+  "sampling_policy": "history_rank",
+  "cumulative_effective_groups_found": 85737,
+  "cumulative_effective_groups_used": 77152,
+  "allocated_gib": 15.274803638458252,
+  "reserved_gib": 163.056640625
+}

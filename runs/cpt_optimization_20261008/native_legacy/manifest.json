@@ -1,0 +1,25 @@
+{
+  "config": {
+    "output": "DeepSeekMath-Small/runs/cpt_optimization_20261008/native_legacy",
+    "kernels": "native",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "none",
+    "compile_mode": "default",
+    "legacy_data": true,
+    "mask_policy": "ones",
+    "micro_batch": 16,
+    "effective_batch": 16,
+    "steps": 24,
+    "warmup": 3,
+    "fused_optimizer": false
+  },
+  "started_utc": "2026-10-08T04:41:44.249913+00:00",
+  "data_manifest_sha256": "c76fa6d41ae3b4c007c9323bcee58ef5d13e3564a038d767d62278fec89e26a8",
+  "source_sha256": {
+    "benchmark_backends.py": "8fa16b8bc48211d57706c92b90bbba19164ce8da1364e3620d312b458a9e17e3",
+    "model_backends.py": "93716244670619cd30205f7f3b5c99036e3d18ab3c9bc1f61570b451ab992320",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2"
+  }
+}

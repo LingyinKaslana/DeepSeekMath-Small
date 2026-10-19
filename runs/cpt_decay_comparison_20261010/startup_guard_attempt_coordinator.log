@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./runs/cpt_decay_comparison_20261010/tools/run_comparison.py", line 79, in <module>
+    main()
+  File "./runs/cpt_decay_comparison_20261010/tools/run_comparison.py", line 31, in main
+    raise RuntimeError('Independent preflight did not pass')
+RuntimeError: Independent preflight did not pass

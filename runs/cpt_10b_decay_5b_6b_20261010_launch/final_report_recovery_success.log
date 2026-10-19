@@ -1,0 +1,37 @@
+{
+  "common_evaluation_step": 305176,
+  "latest": {
+    "step": 305176,
+    "input_tokens": 10000000000,
+    "input_tokens_b": 10.0,
+    "validation_loss": 1.850541591644287,
+    "fixed_train_probe_loss": 1.8812915086746216
+  },
+  "latest_applied_lr": {
+    "step": 305176,
+    "input_tokens": 10000000000,
+    "input_tokens_b": 10.0,
+    "nominal_lr": 3e-07,
+    "effective_fp32_lr": 3.000000106112566e-07
+  },
+  "batch_mean_latest": {
+    "start_step": 304001,
+    "end_step": 305000,
+    "input_tokens_b": 9.99423488,
+    "updates": 1000,
+    "supervised_tokens": 32752000,
+    "token_weighted_batch_loss": 1.8688466327190398
+  },
+  "changes_since_last_pre_decay_evaluation": {
+    "validation_loss": -0.002919316291809082,
+    "fixed_train_probe_loss": -0.012256622314453125
+  },
+  "artifacts": [
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_overview.png",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_overview.svg",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_overview.pdf",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_recent.png",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_recent.svg",
+    "./runs/cpt_10b_decay_5b_6b_20261010_launch/report/lr_transition_recent.pdf"
+  ]
+}

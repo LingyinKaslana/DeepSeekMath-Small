@@ -1,0 +1,274 @@
+{
+  "status": "complete",
+  "checkpoint": "./runs/deepseek_dapo_10k_20261016/latest_checkpoint",
+  "checkpoint_round": 1900,
+  "concurrent_main_process": "SIGSTOP, state retained, no GPU compute",
+  "active_responses": 64,
+  "production_active_responses": 256,
+  "max_new_tokens": 2048,
+  "limits": [
+    "Routing deliberately changes question distribution.",
+    "Timing includes candidate generation and selection, excludes model loading and optimizer update.",
+    "Small-concurrency bench is not a production256-concurrency speedup claim.",
+    "Tail cancellation deliberately changes rewards of cancelled incomplete responses."
+  ],
+  "trials": [
+    {
+      "policy": "uniform",
+      "trial": 0,
+      "seconds": 106.52869285095949,
+      "used_groups": 8,
+      "found_groups": 9,
+      "candidates": 136,
+      "effective_groups_per_second": 0.07509713848824294,
+      "generated_tokens": 87802,
+      "mixed_fraction": 0.0661764705882353,
+      "raw_mixed_groups": 9,
+      "forced_incorrect_responses": 0,
+      "forced_fraction": 0.0,
+      "mean_used_response_tokens": 86.828125,
+      "counts": {
+        "all_wrong": 24,
+        "all_correct": 103,
+        "mixed": 9
+      },
+      "peak_allocated_gib": 10.807056903839111
+    },
+    {
+      "policy": "history_weighted",
+      "trial": 0,
+      "seconds": 33.90975214308128,
+      "used_groups": 8,
+      "found_groups": 8,
+      "candidates": 32,
+      "effective_groups_per_second": 0.23592033248265035,
+      "generated_tokens": 25519,
+      "mixed_fraction": 0.25,
+      "raw_mixed_groups": 8,
+      "forced_incorrect_responses": 0,
+      "forced_fraction": 0.0,
+      "mean_used_response_tokens": 112.84375,
+      "counts": {
+        "all_wrong": 2,
+        "all_correct": 22,
+        "mixed": 8
+      },
+      "peak_allocated_gib": 10.685746669769287
+    },
+    {
+      "policy": "history_rank",
+      "trial": 0,
+      "seconds": 43.67824944399763,
+      "used_groups": 8,
+      "found_groups": 10,
+      "candidates": 40,
+      "effective_groups_per_second": 0.18315752352340164,
+      "generated_tokens": 35343,
+      "mixed_fraction": 0.25,
+      "raw_mixed_groups": 10,
+      "forced_incorrect_responses": 0,
+      "forced_fraction": 0.0,
+      "mean_used_response_tokens": 121.484375,
+      "counts": {
+        "all_wrong": 5,
+        "all_correct": 25,
+        "mixed": 10
+      },
+      "peak_allocated_gib": 10.954406261444092
+    },
+    {
+      "policy": "history_tail",
+      "trial": 0,
+      "seconds": 42.92499329498969,
+      "used_groups": 8,
+      "found_groups": 10,
+      "candidates": 40,
+      "effective_groups_per_second": 0.18637160744609318,
+      "generated_tokens": 35343,
+      "mixed_fraction": 0.25,
+      "raw_mixed_groups": 10,
+      "forced_incorrect_responses": 0,
+      "forced_fraction": 0.0,
+      "mean_used_response_tokens": 121.484375,
+      "counts": {
+        "all_wrong": 5,
+        "all_correct": 25,
+        "mixed": 10
+      },
+      "peak_allocated_gib": 10.95440673828125
+    },
+    {
+      "policy": "history_tail",
+      "trial": 1,
+      "seconds": 29.392246244009584,
+      "used_groups": 8,
+      "found_groups": 8,
+      "candidates": 24,
+      "effective_groups_per_second": 0.27218062660421793,
+      "generated_tokens": 19741,
+      "mixed_fraction": 0.3333333333333333,
+      "raw_mixed_groups": 8,
+      "forced_incorrect_responses": 0,
+      "forced_fraction": 0.0,
+      "mean_used_response_tokens": 103.640625,
+      "counts": {
+        "all_wrong": 4,
+        "all_correct": 12,
+        "mixed": 8
+      },
+      "peak_allocated_gib": 12.042977333068848
+    },
+    {
+      "policy": "history_rank",
+      "trial": 1,
+      "seconds": 19.15035190503113,
+      "used_groups": 8,
+      "found_groups": 8,
+      "candidates": 24,
+      "effective_groups_per_second": 0.417746892572677,
+      "generated_tokens": 19741,
+      "mixed_fraction": 0.3333333333333333,
+      "raw_mixed_groups": 8,
+      "forced_incorrect_responses": 0,
+      "forced_fraction": 0.0,
+      "mean_used_response_tokens": 103.640625,
+      "counts": {
+        "all_wrong": 4,
+        "all_correct": 12,
+        "mixed": 8
+      },
+      "peak_allocated_gib": 12.04517412185669
+    },
+    {
+      "policy": "history_weighted",
+      "trial": 1,
+      "seconds": 42.07913724600803,
+      "used_groups": 8,
+      "found_groups": 8,
+      "candidates": 48,
+      "effective_groups_per_second": 0.19011796637439246,
+      "generated_tokens": 35627,
+      "mixed_fraction": 0.16666666666666666,
+      "raw_mixed_groups": 8,
+      "forced_incorrect_responses": 0,
+      "forced_fraction": 0.0,
+      "mean_used_response_tokens": 122.421875,
+      "counts": {
+        "all_wrong": 5,
+        "all_correct": 35,
+        "mixed": 8
+      },
+      "peak_allocated_gib": 12.04517412185669
+    },
+    {
+      "policy": "uniform",
+      "trial": 1,
+      "seconds": 113.3501197360456,
+      "used_groups": 8,
+      "found_groups": 8,
+      "candidates": 120,
+      "effective_groups_per_second": 0.0705777816435423,
+      "generated_tokens": 75935,
+      "mixed_fraction": 0.06666666666666667,
+      "raw_mixed_groups": 8,
+      "forced_incorrect_responses": 0,
+      "forced_fraction": 0.0,
+      "mean_used_response_tokens": 90.015625,
+      "counts": {
+        "all_wrong": 20,
+        "all_correct": 92,
+        "mixed": 8
+      },
+      "peak_allocated_gib": 10.795486450195312
+    }
+  ],
+  "summary": {
+    "uniform": {
+      "effective_groups_per_second": 0.07276735676234776,
+      "mean_mixed_fraction": 0.06640625,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 1.0
+    },
+    "history_weighted": {
+      "effective_groups_per_second": 0.21055709760507862,
+      "mean_mixed_fraction": 0.2,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 2.893565287698176
+    },
+    "history_rank": {
+      "effective_groups_per_second": 0.2546610883650896,
+      "mean_mixed_fraction": 0.28125,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 3.499661107614392
+    },
+    "history_tail": {
+      "effective_groups_per_second": 0.22124738308590322,
+      "mean_mixed_fraction": 0.28125,
+      "forced_fraction": 0.0,
+      "speedup_vs_uniform": 3.0404757425569144
+    }
+  },
+  "selected_policy": "history_rank",
+  "finished_utc": "2026-10-17T13:13:50.311580+00:00",
+  "update_smoke": {
+    "updates": 4,
+    "response_tokens": 29300,
+    "input_tokens": 47692,
+    "metrics": [
+      {
+        "policy_loss": 0.1151168746849671,
+        "entropy": 0.04198251743957362,
+        "old_policy_kl_estimate": 1.5831109646524876e-06,
+        "clip_fraction": 0.0,
+        "mean_ratio": 0.9999981705224482,
+        "gradient_norm": 4.944758892059326,
+        "response_tokens": 7740
+      },
+      {
+        "policy_loss": -0.17134094896773674,
+        "entropy": 0.0414152508822907,
+        "old_policy_kl_estimate": 0.3191629260404464,
+        "clip_fraction": 0.003717965741601381,
+        "mean_ratio": 1.0001315363943617,
+        "gradient_norm": 3.9423623085021973,
+        "response_tokens": 7531
+      },
+      {
+        "policy_loss": -0.08980990529266726,
+        "entropy": 0.04527283210116043,
+        "old_policy_kl_estimate": 0.009710928430566881,
+        "clip_fraction": 0.009088286208886324,
+        "mean_ratio": 1.0042183639957805,
+        "gradient_norm": 3.4784207344055176,
+        "response_tokens": 6932
+      },
+      {
+        "policy_loss": 0.07257550397993597,
+        "entropy": 0.038293337543127956,
+        "old_policy_kl_estimate": 1383.9223316066348,
+        "clip_fraction": 0.010426940960969425,
+        "mean_ratio": 0.9990866742907435,
+        "gradient_norm": 3.291649341583252,
+        "response_tokens": 7097
+      }
+    ]
+  },
+  "probe_before": {
+    "examples": 64,
+    "correct": 19,
+    "accuracy": 0.296875,
+    "truncated": 0,
+    "seconds": 15.62777876702603,
+    "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
+  },
+  "probe_after": {
+    "examples": 64,
+    "correct": 17,
+    "accuracy": 0.265625,
+    "truncated": 0,
+    "seconds": 19.171058658044785,
+    "protocol": "GSM8K held-out 0-shot SFT prompt; greedy; EOS only; strict numeric marker grader"
+  },
+  "smoke_updates_discarded": true,
+  "source_checkpoint_unchanged": true
+}

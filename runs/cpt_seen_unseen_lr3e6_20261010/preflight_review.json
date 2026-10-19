@@ -1,0 +1,334 @@
+{
+  "status": "passed",
+  "reviewed_utc": "2026-10-10T02:21:37.214253+00:00",
+  "checks": [
+    {
+      "name": "early_late_same_epoch_zero",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "order_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "data_manifest_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "data_uint32_and_token_count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "exact_order_permutation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "private_rng_seen_reconstruction",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "private_rng_unseen_reconstruction",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "sampling_population_sizes",
+      "passed": true,
+      "details": {
+        "seen": 240000,
+        "unseen": 681406
+      }
+    },
+    {
+      "name": "uniform_train_shape_unique_sorted_full",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_train_index_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_train_token_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_train_order_positions",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_train_stored_seen_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_train_input_target_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_shape_unique_sorted_full",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_index_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_token_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_order_positions",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_stored_seen_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_train_input_target_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_shape_unique_sorted_full",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_index_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_token_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_order_positions",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_stored_seen_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_train_input_target_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_all_seen_both",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unseen_none_seen_both",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seen_unseen_disjoint",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "uniform_identical_original",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_validation_reference",
+      "passed": true,
+      "details": 1.86186945438385
+    },
+    {
+      "name": "step15000_validation_reference",
+      "passed": true,
+      "details": 1.821273684501648
+    },
+    {
+      "name": "step15000_manifest_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_signature_matches_run",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_counts_epoch0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_files_complete_sizes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_same_order_metadata",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_validation_reference",
+      "passed": true,
+      "details": 1.8481593132019043
+    },
+    {
+      "name": "step110000_manifest_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_signature_matches_run",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_counts_epoch0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_files_complete_sizes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_same_order_metadata",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_train_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_model_backends.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_token_batches.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_compiled_adamw.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_native_ops.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_native_chunked_ce.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_cpt.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_packed_data.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_cpt_orders.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_nonfinite_retry.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_source_migration.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_standard_native.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evaluator_sha_original",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evaluator_no_optimizer_state_load",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "native_evaluation_microbatch4",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "check_count": 58,
+  "groups": {
+    "uniform_train": {
+      "early_seen": 26,
+      "late_seen": 191,
+      "min_position": 85,
+      "max_position": 2431892,
+      "indices_sha256": "0275fe980c1fd3bf853fa63d40c27291d4368b0eb41b4c183127d9f964169a81",
+      "tokens_sha256": "f2d447c272813ee27c047b0a895234932d1d05cb1e4275b11b982dfedee42619"
+    },
+    "seen_train": {
+      "early_seen": 256,
+      "late_seen": 256,
+      "min_position": 1087,
+      "max_position": 238271,
+      "indices_sha256": "31da8dea15a4357c836e0d01ad6d62cd687e6105d17cf5b7c5b24b41c45c21e8",
+      "tokens_sha256": "dd57f2561a7207ff184d3adf4040e209d987bc85900f1927360d8b1ac0f229e6"
+    },
+    "unseen_train": {
+      "early_seen": 0,
+      "late_seen": 0,
+      "min_position": 1761781,
+      "max_position": 2440659,
+      "indices_sha256": "a8b160259d32282952c9f0149fd6366849f8a2e81a4fc1e5eec92493219aaf52",
+      "tokens_sha256": "cfedc7dc12b3335f2f76e3b09871963601415ce1a705eda64207646c2b281e00"
+    }
+  },
+  "review_scope": "Independent CPU-only reconstruction of private RNG samples, actual order positions and sampled raw token hashes; checkpoint metadata and native evaluator/source identity. No GPU, optimizer load, full 5B token rehash, or production edits.",
+  "probes_sha256": "e263f671c6efc422d5297460ef4c55a13ec9f26365a9d7afd1bc8152af4f0a20",
+  "plan_sha256": "9e0c87ecd0894830e8a89955023624e86f7dedc2ec530e6fa10868e4956cf3c4",
+  "limitations": [
+    "Seen/unseen refers to occurrence of an exact2048-token block in this local CPT only; neighboring document fragments and prior base pretraining overlap are not excluded",
+    "Three observational snapshots and sample averages do not establish a unique cause or whole-corpus seen-loss behavior",
+    "Different groups may have different intrinsic difficulty; compare each same group across snapshots"
+  ]
+}

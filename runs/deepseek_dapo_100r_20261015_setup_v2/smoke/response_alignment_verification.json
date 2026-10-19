@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "response_tokens": 39,
+  "selected_response_nll": 0.16645483672618866,
+  "native_hf_answer_only_ce": 0.16645485162734985,
+  "absolute_difference": 1.4901161193847656e-08,
+  "tolerance": 0.03
+}

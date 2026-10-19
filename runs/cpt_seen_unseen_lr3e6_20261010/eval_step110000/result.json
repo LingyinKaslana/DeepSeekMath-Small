@@ -1,0 +1,85 @@
+{
+  "status": "complete",
+  "label": "step110000",
+  "model": "./runs/cpt_10b_lr3e6_20261009/checkpoint_step_00110000",
+  "revision": null,
+  "completed_utc": "2026-10-10T02:27:43.439590+00:00",
+  "script_sha256": "1e457535ef9a45a3b9f89ba39cc0cbe4d510356179e45dab0a5f069ac657678c",
+  "probes_sha256": "e263f671c6efc422d5297460ef4c55a13ec9f26365a9d7afd1bc8152af4f0a20",
+  "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+  "source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+  },
+  "checked_probe_hashes": {
+    "uniform_train": {
+      "indices_sha256": "0275fe980c1fd3bf853fa63d40c27291d4368b0eb41b4c183127d9f964169a81",
+      "tokens_sha256": "f2d447c272813ee27c047b0a895234932d1d05cb1e4275b11b982dfedee42619"
+    },
+    "seen_train": {
+      "indices_sha256": "31da8dea15a4357c836e0d01ad6d62cd687e6105d17cf5b7c5b24b41c45c21e8",
+      "tokens_sha256": "dd57f2561a7207ff184d3adf4040e209d987bc85900f1927360d8b1ac0f229e6"
+    },
+    "unseen_train": {
+      "indices_sha256": "a8b160259d32282952c9f0149fd6366849f8a2e81a4fc1e5eec92493219aaf52",
+      "tokens_sha256": "cfedc7dc12b3335f2f76e3b09871963601415ce1a705eda64207646c2b281e00"
+    }
+  },
+  "metrics": {
+    "validation": {
+      "loss": 1.8481593132019043,
+      "perplexity": 6.34812385410181,
+      "supervised_tokens": 2096128,
+      "input_tokens": 2097152,
+      "blocks": 1024,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    "uniform_train": {
+      "loss": 1.8970496654510498,
+      "perplexity": 6.666197886916813,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    "seen_train": {
+      "loss": 1.8542757034301758,
+      "perplexity": 6.387070441658016,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    "unseen_train": {
+      "loss": 1.8536157608032227,
+      "perplexity": 6.3828567321684,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    }
+  },
+  "seconds": 149.48897055600537,
+  "versions": {
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4"
+  },
+  "precision": "uncompiled native HF SDPA, BF16 autocast, FP32 weights",
+  "training_updates": 0,
+  "production_files_modified": false,
+  "limit": "Seen means selected block occurred in this CPT prefix. It does not establish absence of overlap in prior base pretraining or neighboring blocks."
+}

@@ -1,0 +1,50 @@
+{
+  "status": "self_check_complete",
+  "output": "/tmp/deepseek_comparison_256_selfcheck_20261015",
+  "benchmarks": {
+    "gsm8k": {
+      "total": 1319,
+      "base": {
+        "total": 1319,
+        "correct": 114,
+        "accuracy": 0.08642911296436695,
+        "accuracy_percent": 8.642911296436695
+      },
+      "cpt": {
+        "total": 1319,
+        "correct": 114,
+        "accuracy": 0.08642911296436695,
+        "accuracy_percent": 8.642911296436695
+      },
+      "delta_percentage_points": 0.0,
+      "paired": {
+        "both_correct": 114,
+        "base_only_correct": 0,
+        "cpt_only_correct": 0,
+        "both_wrong": 1205
+      }
+    },
+    "math": {
+      "total": 5000,
+      "base": {
+        "total": 5000,
+        "correct": 282,
+        "accuracy": 0.0564,
+        "accuracy_percent": 5.64
+      },
+      "cpt": {
+        "total": 5000,
+        "correct": 282,
+        "accuracy": 0.0564,
+        "accuracy_percent": 5.64
+      },
+      "delta_percentage_points": 0.0,
+      "paired": {
+        "both_correct": 282,
+        "base_only_correct": 0,
+        "cpt_only_correct": 0,
+        "both_wrong": 4718
+      }
+    }
+  }
+}

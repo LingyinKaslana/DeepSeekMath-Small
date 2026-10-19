@@ -1,0 +1,335 @@
+[
+  {
+    "group_record_index": 2979,
+    "round": 44,
+    "source_id": "main/train-00000-of-00001.parquet:3484",
+    "accepted": false,
+    "correct_completed_references": 0,
+    "lengths": [
+      63,
+      2048,
+      126,
+      50,
+      63,
+      59,
+      86,
+      96
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "length",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos"
+    ]
+  },
+  {
+    "group_record_index": 3232,
+    "round": 48,
+    "source_id": "main/train-00000-of-00001.parquet:7035",
+    "accepted": false,
+    "correct_completed_references": 0,
+    "lengths": [
+      70,
+      89,
+      2048,
+      89,
+      101,
+      79,
+      60,
+      76
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "eos",
+      "length",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos"
+    ]
+  },
+  {
+    "group_record_index": 4150,
+    "round": 60,
+    "source_id": "main/train-00000-of-00001.parquet:5517",
+    "accepted": true,
+    "correct_completed_references": 1,
+    "lengths": [
+      121,
+      112,
+      96,
+      97,
+      104,
+      81,
+      2048,
+      122
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "length",
+      "eos"
+    ]
+  },
+  {
+    "group_record_index": 4703,
+    "round": 67,
+    "source_id": "main/train-00000-of-00001.parquet:2360",
+    "accepted": false,
+    "correct_completed_references": 0,
+    "lengths": [
+      109,
+      99,
+      2048,
+      102,
+      112,
+      108,
+      119,
+      108
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "eos",
+      "length",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos"
+    ]
+  },
+  {
+    "group_record_index": 5022,
+    "round": 71,
+    "source_id": "main/train-00000-of-00001.parquet:7139",
+    "accepted": true,
+    "correct_completed_references": 1,
+    "lengths": [
+      76,
+      68,
+      110,
+      155,
+      2048,
+      153,
+      284,
+      287
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "length",
+      "eos",
+      "eos",
+      "eos"
+    ]
+  },
+  {
+    "group_record_index": 5199,
+    "round": 73,
+    "source_id": "main/train-00000-of-00001.parquet:5251",
+    "accepted": false,
+    "correct_completed_references": 0,
+    "lengths": [
+      88,
+      2048,
+      110,
+      124,
+      115,
+      116,
+      104,
+      104
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "length",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos"
+    ]
+  },
+  {
+    "group_record_index": 6435,
+    "round": 88,
+    "source_id": "main/train-00000-of-00001.parquet:2825",
+    "accepted": false,
+    "correct_completed_references": 0,
+    "lengths": [
+      56,
+      2048,
+      59,
+      125,
+      59,
+      176,
+      70,
+      72
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "length",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos"
+    ]
+  },
+  {
+    "group_record_index": 6764,
+    "round": 92,
+    "source_id": "main/train-00000-of-00001.parquet:3490",
+    "accepted": false,
+    "correct_completed_references": 0,
+    "lengths": [
+      76,
+      46,
+      72,
+      49,
+      152,
+      68,
+      70,
+      2048
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "length"
+    ]
+  },
+  {
+    "group_record_index": 7328,
+    "round": 98,
+    "source_id": "main/train-00000-of-00001.parquet:4793",
+    "accepted": false,
+    "correct_completed_references": 0,
+    "lengths": [
+      544,
+      115,
+      2048,
+      141,
+      197,
+      132,
+      658,
+      140
+    ],
+    "correctness": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "finish_reasons": [
+      "eos",
+      "eos",
+      "length",
+      "eos",
+      "eos",
+      "eos",
+      "eos",
+      "eos"
+    ]
+  }
+]

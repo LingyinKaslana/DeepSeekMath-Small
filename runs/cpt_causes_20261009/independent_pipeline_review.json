@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T13:32:49.200743+00:00",
+  "status": "passed_cpu_and_static_preflight",
+  "blocking_findings": [],
+  "scope": "Independent read-only code review and NumPy CPU checks; no GPU or optimization state loaded; runtime trajectory not yet assessed",
+  "inputs_sha256": {
+    "scripts/compare_cpt_hyperparameters.py": "ebc9778eaab48f2b88a71ba4e585ae6f454085cc1f391fd4ab3b6be6053f5509",
+    "scripts/compare_cpt_backends.py": "455eeb4f5bfcbcbc9f8405dcb8193fb62d7d5be23a3838eeb3bc76d14aa8bb5e",
+    "scripts/evaluate_cpt_seen_unseen.py": "1e457535ef9a45a3b9f89ba39cc0cbe4d510356179e45dab0a5f069ac657678c",
+    "runs/cpt_causes_20261009/probes.json": "e6cea904ec9bad158832bbb9ad1ad97379213e44645704982c08924a0dc43ecb"
+  },
+  "checks": [
+    {
+      "name": "source_native_checkpoint_20000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "checkpoint_run_signature_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "schedule_preserved_10b",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "order_metadata_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "order_file_sha_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "order_full_permutation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_window_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "data_manifest_sha_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_train_unique_full_sorted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_train_index_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_train_token_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_train_order_positions_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seen_train_unique_full_sorted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seen_train_index_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seen_train_token_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seen_train_order_positions_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unseen_train_unique_full_sorted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unseen_train_index_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unseen_train_token_sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unseen_train_order_positions_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seen_in_20000_prefix",
+      "passed": true,
+      "detail": {
+        "max_position": 319838
+      }
+    },
+    {
+      "name": "unseen_excluded_through_30860",
+      "passed": true,
+      "detail": {
+        "min_position": 502496,
+        "exclusion_end": 493760
+      }
+    },
+    {
+      "name": "seen_unseen_disjoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "private_rng_samples_reproduced",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_probe_original_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "training_window_no_partial_tail",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native_validation_reference_20000",
+      "passed": true,
+      "detail": [
+        {
+          "step": 20000,
+          "loss": 1.8604923486709595,
+          "perplexity": 6.426900268399001,
+          "supervised_tokens": 2096128,
+          "input_tokens": 2097152,
+          "blocks": 1024,
+          "loss_backend": "native eager",
+          "attention_mask": "standard 2D all-ones tensor"
+        }
+      ]
+    },
+    {
+      "name": "compare_cpt_hyperparameters.py_syntax",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "compare_cpt_backends.py_syntax",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "evaluate_cpt_seen_unseen.py_syntax",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "all_checks_passed": true,
+  "static_review": {
+    "same_starting_state": "Each arm loads same checkpoint safetensors and original training_state.pt, audits FP32 finite Adam with step=20000, restores CPU/CUDA RNG after construction; runtime plans record source weight/state hashes",
+    "evaluation_rng": "Frozen trainer.evaluate uses preserve_rng and restores train/eval mode; all four eval groups before updates and offset evals preserve state",
+    "legal_single_knob_intervention": "baseline no change; lr_0p3 changes per-step FP32-rounded LR multiplier only; wd_zero changes only weight_decay .1 to 0 and checks Adam tensor identity/storage/version unaffected",
+    "global_schedule": "Uses last_step-1 with original schedule; original orders order_indices at same global step, no shuffle reset",
+    "native_backend": "Original unpatched HF SDPA model, ordinary torch AdamW foreach=True/capturable=False/fused=False and frozen update_native; no compile/native fallback/retry",
+    "checkpoint_isolation": "Writes diagnostic_state.pt and diagnostic_checkpoint_manifest.json; no production training_state.pt/checkpoint_manifest.json or production signature; explicit diagnostic_only=true and automatic_production_resume=false",
+    "baseline_validation_guard": "All three arms require source native 20k validation 1.8604923486709595 within 1e-6 before optimizer update",
+    "read_only_eval_guard": "evaluate_cpt_seen_unseen verifies selected index/token SHA and original full validation per snapshot, uses frozen evaluate with no optimizer/gradient updates"
+  },
+  "nonblocking_limits": [
+    "LR scaling also scales per-step AdamW effective decay as part of the LR knob; a positive result cannot isolate gradient LR versus decay without wd_zero comparison.",
+    "Seen/unseen is exact block-prefix membership through step30860; it cannot establish unique documents/no overlap in base pretraining or neighboring corpus blocks.",
+    "Evaluate changes within each fixed group across checkpoints. Absolute difficulty differences between seen/unseen groups are not overfitting evidence.",
+    "1000 updates / 0.032768B tokens can identify immediate directional response; absence of measurable response does not eliminate long-term LR/WD effects.",
+    "Runtime results, equal source hashes and RNG/optimizer tensor audits across three arms still need checking after launch."
+  ],
+  "production_files_modified": false,
+  "gpu_used": false
+}

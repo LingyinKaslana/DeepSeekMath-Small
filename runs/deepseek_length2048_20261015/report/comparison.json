@@ -1,0 +1,264 @@
+{
+  "status": "complete_verified",
+  "verified_utc": "2026-10-15T05:52:21.200951+00:00",
+  "evaluation_mode": "selective_length_extension",
+  "models": {
+    "base": {
+      "status": "complete_verified",
+      "verified_utc": "2026-10-15T05:52:17.263794+00:00",
+      "questions": 6319,
+      "rerun_questions": 2077,
+      "source_run": "./runs/deepseek_coder_base_inference_20261015",
+      "checkpoint": "./.cache/huggingface/hub/models--deepseek-ai--deepseek-coder-1.3b-base/snapshots/c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+      "evaluation_mode": "selective_length_extension",
+      "max_new_tokens": 2048,
+      "benchmarks": {
+        "gsm8k": {
+          "original_1024": {
+            "correct": 63,
+            "total": 1319,
+            "accuracy_percent": 4.776345716451858
+          },
+          "selectively_extended_2048": {
+            "correct": 65,
+            "total": 1319,
+            "accuracy_percent": 4.927975739196361
+          },
+          "delta_percentage_points": 0.1516300227445031,
+          "rerun_questions": 113,
+          "retained_questions": 1206,
+          "original_truncated_correct": 2,
+          "retry_correct": 4,
+          "gained": 2,
+          "lost": 0,
+          "still_truncated_2048": 97,
+          "prefix_identical_questions": 67,
+          "prefix_groups": {
+            "True": {
+              "old": {
+                "correct": 0,
+                "total": 67,
+                "accuracy_percent": 0.0
+              },
+              "new": {
+                "correct": 0,
+                "total": 67,
+                "accuracy_percent": 0.0
+              }
+            },
+            "False": {
+              "old": {
+                "correct": 2,
+                "total": 46,
+                "accuracy_percent": 4.3478260869565215
+              },
+              "new": {
+                "correct": 4,
+                "total": 46,
+                "accuracy_percent": 8.695652173913043
+              }
+            }
+          },
+          "errors": 0,
+          "timeouts": 0
+        },
+        "math": {
+          "original_1024": {
+            "correct": 208,
+            "total": 5000,
+            "accuracy_percent": 4.16
+          },
+          "selectively_extended_2048": {
+            "correct": 219,
+            "total": 5000,
+            "accuracy_percent": 4.38
+          },
+          "delta_percentage_points": 0.21999999999999975,
+          "rerun_questions": 1964,
+          "retained_questions": 3036,
+          "original_truncated_correct": 41,
+          "retry_correct": 52,
+          "gained": 32,
+          "lost": 21,
+          "still_truncated_2048": 1701,
+          "prefix_identical_questions": 1135,
+          "prefix_groups": {
+            "True": {
+              "old": {
+                "correct": 21,
+                "total": 1135,
+                "accuracy_percent": 1.8502202643171806
+              },
+              "new": {
+                "correct": 24,
+                "total": 1135,
+                "accuracy_percent": 2.1145374449339207
+              }
+            },
+            "False": {
+              "old": {
+                "correct": 20,
+                "total": 829,
+                "accuracy_percent": 2.4125452352231602
+              },
+              "new": {
+                "correct": 28,
+                "total": 829,
+                "accuracy_percent": 3.3775633293124248
+              }
+            }
+          },
+          "errors": 1,
+          "timeouts": 1
+        }
+      },
+      "training_modified": false
+    },
+    "cpt": {
+      "status": "complete_verified",
+      "verified_utc": "2026-10-15T05:52:21.175461+00:00",
+      "questions": 6319,
+      "rerun_questions": 2020,
+      "source_run": "./runs/deepseek_coder_10b_inference_20261015",
+      "checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+      "evaluation_mode": "selective_length_extension",
+      "max_new_tokens": 2048,
+      "benchmarks": {
+        "gsm8k": {
+          "original_1024": {
+            "correct": 114,
+            "total": 1319,
+            "accuracy_percent": 8.642911296436694
+          },
+          "selectively_extended_2048": {
+            "correct": 118,
+            "total": 1319,
+            "accuracy_percent": 8.946171341925702
+          },
+          "delta_percentage_points": 0.303260045489008,
+          "rerun_questions": 160,
+          "retained_questions": 1159,
+          "original_truncated_correct": 3,
+          "retry_correct": 7,
+          "gained": 4,
+          "lost": 0,
+          "still_truncated_2048": 118,
+          "prefix_identical_questions": 78,
+          "prefix_groups": {
+            "True": {
+              "old": {
+                "correct": 3,
+                "total": 78,
+                "accuracy_percent": 3.8461538461538463
+              },
+              "new": {
+                "correct": 3,
+                "total": 78,
+                "accuracy_percent": 3.8461538461538463
+              }
+            },
+            "False": {
+              "old": {
+                "correct": 0,
+                "total": 82,
+                "accuracy_percent": 0.0
+              },
+              "new": {
+                "correct": 4,
+                "total": 82,
+                "accuracy_percent": 4.878048780487805
+              }
+            }
+          },
+          "errors": 0,
+          "timeouts": 0
+        },
+        "math": {
+          "original_1024": {
+            "correct": 282,
+            "total": 5000,
+            "accuracy_percent": 5.64
+          },
+          "selectively_extended_2048": {
+            "correct": 286,
+            "total": 5000,
+            "accuracy_percent": 5.72
+          },
+          "delta_percentage_points": 0.08000000000000007,
+          "rerun_questions": 1860,
+          "retained_questions": 3140,
+          "original_truncated_correct": 58,
+          "retry_correct": 62,
+          "gained": 32,
+          "lost": 28,
+          "still_truncated_2048": 1650,
+          "prefix_identical_questions": 1155,
+          "prefix_groups": {
+            "True": {
+              "old": {
+                "correct": 25,
+                "total": 1155,
+                "accuracy_percent": 2.1645021645021645
+              },
+              "new": {
+                "correct": 29,
+                "total": 1155,
+                "accuracy_percent": 2.5108225108225106
+              }
+            },
+            "False": {
+              "old": {
+                "correct": 33,
+                "total": 705,
+                "accuracy_percent": 4.680851063829787
+              },
+              "new": {
+                "correct": 33,
+                "total": 705,
+                "accuracy_percent": 4.680851063829787
+              }
+            }
+          },
+          "errors": 0,
+          "timeouts": 0
+        }
+      },
+      "training_modified": false
+    }
+  },
+  "comparison": {
+    "gsm8k": {
+      "base": {
+        "correct": 65,
+        "total": 1319,
+        "accuracy_percent": 4.927975739196361
+      },
+      "cpt": {
+        "correct": 118,
+        "total": 1319,
+        "accuracy_percent": 8.946171341925702
+      },
+      "cpt_minus_base_percentage_points": 4.018195602729341
+    },
+    "math": {
+      "base": {
+        "correct": 219,
+        "total": 5000,
+        "accuracy_percent": 4.38
+      },
+      "cpt": {
+        "correct": 286,
+        "total": 5000,
+        "accuracy_percent": 5.72
+      },
+      "cpt_minus_base_percentage_points": 1.3399999999999999
+    }
+  },
+  "limits": [
+    "Only each model's own originally length-limited answers were regenerated.",
+    "All other original answers retained exactly. Full denominators are unchanged.",
+    "This is a selectively extended evaluation, not an independent full-set 2048 run.",
+    "Regeneration batch/shape changes can change the first1024 tokens; prefix equality and separate groups are reported."
+  ],
+  "training_modified": false
+}

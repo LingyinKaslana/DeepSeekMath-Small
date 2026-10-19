@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-10-09T02:39:39.104610+00:00",
+  "status": "stopped_for_user_requested_native_continuation",
+  "output": "./runs/cpt_10b_20261009_after_native_compare",
+  "resume": "./runs/cpt_10b_20261009_resumed/stopped_checkpoint",
+  "resume_step": 179939,
+  "resume_input_tokens": 5896236032,
+  "frozen_source_sha256": {
+    "train_cpt.py": "e402087acbaebdd177917f85bae8d87453a80b8f452b03f9214a958084b997d6",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "0b95360c9051bdb2d0fc0a646cd26477a297434d114b3183742565dd8823c5f0"
+  },
+  "signature": {
+    "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+    "data_manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+    "token_file_sha256": {
+      "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+      "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+    },
+    "peak_lr": 1e-05,
+    "seed": 42,
+    "sequence_length": 2048,
+    "effective_batch": 16,
+    "epochs": 2,
+    "source_sha256": {
+      "train_cpt.py": "e402087acbaebdd177917f85bae8d87453a80b8f452b03f9214a958084b997d6",
+      "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+      "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+      "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+      "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+      "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+      "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+      "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+      "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+      "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+      "source_migration.py": "0b95360c9051bdb2d0fc0a646cd26477a297434d114b3183742565dd8823c5f0"
+    }
+  },
+  "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+  "source_and_recipe_unchanged": true,
+  "comparison_updates_are_excluded": true,
+  "tmux_session": "deepseekmath-cpt10b-after-compare",
+  "started_utc": "2026-10-09T03:07:03.156608+00:00",
+  "comparison_report": "runs/cpt_native_compare_20261009/report/summary.json",
+  "pid": 522999,
+  "startup_verification": "./runs/cpt_10b_20261009_after_compare_launch/startup_verification.json",
+  "verified_utc": "2026-10-09T03:10:29.571009+00:00",
+  "continued_by": "runs/cpt_native_long_launch_20261009/launch.json"
+}

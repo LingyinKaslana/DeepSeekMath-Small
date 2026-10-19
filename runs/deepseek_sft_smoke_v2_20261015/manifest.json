@@ -1,0 +1,196 @@
+{
+  "stage": "sft",
+  "started_utc": "2026-10-15T06:20:43.057748+00:00",
+  "config": {
+    "epochs": 3,
+    "lr": 1e-05,
+    "min_lr": 1.0000000000000002e-06,
+    "warmup_steps": 41,
+    "total_steps": 1356,
+    "micro_batch": 8,
+    "effective_batch": 32,
+    "seed": 42,
+    "weight_decay": 0.0,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "max_sequence_length": 4096,
+    "source_checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+    "source_cpt_input_tokens": 10000000000,
+    "source_checkpoint_manifest_sha256": "c489d2009fbbb6199eb7e704e4752b31b63ad62a57dc65bb1100ffc5a4429ccf",
+    "source_weights_sha256": {
+      "model-00001-of-00002.safetensors": "e65d41c504dab35ba741b41dba9fd81dca8747c297c18ea215be8d9d80c6604c",
+      "model-00002-of-00002.safetensors": "daad854a4c6ee47ff1009a3c6c6068a56f292956b99ff9dc8c054871e9d17636"
+    },
+    "data_manifest_sha256": "ab79f4f38407238355f4062d89aa0258f184f17cef132f00030c9ebe38b88d4a",
+    "source_sha256": {
+      "train_math_sft.py": "0f26e6eb4e2eb92946a4e5f1427b2b741bc9377f4dc08302bfe21c3a0d395a5a",
+      "standard_native.py": "fbe631466d31653ed9f72561767fefade673d1d7129bfb418b24a0052060ae2d"
+    }
+  },
+  "arguments": {
+    "checkpoint": "runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+    "data": "data/processed/sft_gsm_math_4096_s42_20261015",
+    "output": "runs/deepseek_sft_smoke_v2_20261015",
+    "epochs": 3,
+    "lr": 1e-05,
+    "micro_batch": 8,
+    "effective_batch": 32,
+    "eval_every": 100,
+    "stop_after": 16,
+    "stress_longest": true,
+    "resume": null
+  },
+  "data": {
+    "status": "ready",
+    "created_utc": "2026-10-15T06:14:27.304750+00:00",
+    "sources": [
+      {
+        "repo_id": "openai/gsm8k",
+        "revision": "740312add88f781978c0658806c59bc2815b9866",
+        "filename": "main/train-00000-of-00001.parquet",
+        "path": "./.cache/huggingface/hub/datasets--openai--gsm8k/snapshots/740312add88f781978c0658806c59bc2815b9866/main/train-00000-of-00001.parquet",
+        "sha256": "ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d",
+        "bytes": 2306545
+      },
+      {
+        "repo_id": "EleutherAI/hendrycks_math",
+        "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+        "filename": "algebra/train-00000-of-00001.parquet",
+        "path": "./.cache/huggingface/hub/datasets--EleutherAI--hendrycks_math/snapshots/21a5633873b6a120296cce3e2df9d5550074f4a3/algebra/train-00000-of-00001.parquet",
+        "sha256": "73347f5b55869f21ff094361025dbd12d291e971aa4d72142eacee10438e449f",
+        "bytes": 505186
+      },
+      {
+        "repo_id": "EleutherAI/hendrycks_math",
+        "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+        "filename": "counting_and_probability/train-00000-of-00001.parquet",
+        "path": "./.cache/huggingface/hub/datasets--EleutherAI--hendrycks_math/snapshots/21a5633873b6a120296cce3e2df9d5550074f4a3/counting_and_probability/train-00000-of-00001.parquet",
+        "sha256": "d37ae017930df41678edee50dcde18c17fb06afaff9eb505c1b95f1002bfcb31",
+        "bytes": 329354
+      },
+      {
+        "repo_id": "EleutherAI/hendrycks_math",
+        "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+        "filename": "geometry/train-00000-of-00001.parquet",
+        "path": "./.cache/huggingface/hub/datasets--EleutherAI--hendrycks_math/snapshots/21a5633873b6a120296cce3e2df9d5550074f4a3/geometry/train-00000-of-00001.parquet",
+        "sha256": "9dbf5e5b55499e696e0ba72da9d85d4f0be3acbf7eaa6cb014b0fc78bb63784f",
+        "bytes": 549388
+      },
+      {
+        "repo_id": "EleutherAI/hendrycks_math",
+        "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+        "filename": "intermediate_algebra/train-00000-of-00001.parquet",
+        "path": "./.cache/huggingface/hub/datasets--EleutherAI--hendrycks_math/snapshots/21a5633873b6a120296cce3e2df9d5550074f4a3/intermediate_algebra/train-00000-of-00001.parquet",
+        "sha256": "0c87f3798ebdfb915b1f9b6fc13c1a8d064c3cb91631ccbe85b83ed5d71150f6",
+        "bytes": 575154
+      },
+      {
+        "repo_id": "EleutherAI/hendrycks_math",
+        "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+        "filename": "number_theory/train-00000-of-00001.parquet",
+        "path": "./.cache/huggingface/hub/datasets--EleutherAI--hendrycks_math/snapshots/21a5633873b6a120296cce3e2df9d5550074f4a3/number_theory/train-00000-of-00001.parquet",
+        "sha256": "81c08649149b39811f2d1d7ddf5dfccf6c4c8044a2e169cfb24db09160c941f4",
+        "bytes": 308653
+      },
+      {
+        "repo_id": "EleutherAI/hendrycks_math",
+        "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+        "filename": "prealgebra/train-00000-of-00001.parquet",
+        "path": "./.cache/huggingface/hub/datasets--EleutherAI--hendrycks_math/snapshots/21a5633873b6a120296cce3e2df9d5550074f4a3/prealgebra/train-00000-of-00001.parquet",
+        "sha256": "765b526fb5c0b8385cb7be2c16bf4f6f28cf71f2bc15c826abfbb5fa7f8616cc",
+        "bytes": 383626
+      },
+      {
+        "repo_id": "EleutherAI/hendrycks_math",
+        "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+        "filename": "precalculus/train-00000-of-00001.parquet",
+        "path": "./.cache/huggingface/hub/datasets--EleutherAI--hendrycks_math/snapshots/21a5633873b6a120296cce3e2df9d5550074f4a3/precalculus/train-00000-of-00001.parquet",
+        "sha256": "28bb1ff95525c8d32521509bef91de76339659f5467a381e6e8deea204538f0e",
+        "bytes": 353745
+      }
+    ],
+    "source_checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+    "source_cpt_input_tokens": 10000000000,
+    "max_sequence_length": 4096,
+    "eos_token_id": 32014,
+    "bos_policy": "No inserted BOS; matches existing base-model benchmark prompts",
+    "formats": {
+      "gsm8k": "Q: {question}\\nA: {solution}\\nThe answer is {answer}.",
+      "math": "Problem:\\n{problem}\\n\\nSolution:\\n{original_boxed_solution}"
+    },
+    "training_loss": "Assistant completion including EOS only; all prompt and padding labels are -100",
+    "packing": false,
+    "overlong_policy": "Drop complete example; never truncate answer/EOS",
+    "raw_examples": {
+      "gsm8k": 7473,
+      "math": 7500
+    },
+    "rejections": {
+      "duplicate_normalized_training_question": 1,
+      "normalized_question_matches_test": 1
+    },
+    "train": {
+      "examples": 14459,
+      "by_dataset": {
+        "gsm8k": 7217,
+        "math": 7242
+      },
+      "input_tokens": 3622230,
+      "supervised_tokens": 2469364,
+      "length_percentiles": {
+        "0": 48.0,
+        "50": 184.0,
+        "90": 472.0,
+        "95": 665.0999999999985,
+        "99": 1110.0,
+        "100": 3027.0
+      }
+    },
+    "validation": {
+      "examples": 512,
+      "by_dataset": {
+        "gsm8k": 256,
+        "math": 256
+      },
+      "input_tokens": 126981,
+      "supervised_tokens": 86171,
+      "length_percentiles": {
+        "0": 47.0,
+        "50": 184.0,
+        "90": 471.7000000000001,
+        "95": 693.25,
+        "99": 1100.9999999999986,
+        "100": 1356.0
+      }
+    },
+    "artifacts": {
+      "train.jsonl": {
+        "sha256": "74250cb5621703a323d79e21134384c2a95cf53a11d1e111448cfc73c2bf4c8c",
+        "bytes": 34162185
+      },
+      "validation.jsonl": {
+        "sha256": "07e9f6e7b9d2257f19f6b0c2c0a0817d3e0dbbc0aaae75778d3dff2e1df54bc9",
+        "bytes": 1201428
+      },
+      "rejected.jsonl": {
+        "sha256": "5623678f36a48dadfc6dfa727af6df959884153b44836ffdfa32b5a3b5b75205",
+        "bytes": 239
+      }
+    },
+    "split_seed": 42,
+    "test_isolation": {
+      "benchmarks": [
+        "GSM8K test 1319",
+        "MATH test 5000"
+      ],
+      "normalized_question_overlap_after_filter": 0,
+      "train_validation_question_overlap": 0,
+      "scope": "Exact NFKC/casefold/whitespace question matching for SFT only; not semantic decontamination of CPT"
+    },
+    "preparation_script_sha256": "31d5f25c359f0079a25a6848ac0646a49d7d67e6c36ecd3e69be6349deba8c0c"
+  },
+  "optimizer_initialization": "Fresh AdamW for SFT; CPT optimizer not loaded",
+  "precision": "FP32 parameters/gradients/Adam; BF16 autocast; native HF SDPA"
+}

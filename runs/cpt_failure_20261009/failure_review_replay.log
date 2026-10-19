@@ -1,0 +1,15 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 45.35it/s]
+{"event": "model_loaded", "seconds": 1.4439107789949048, "parameters": 1543714304}
+W1009 01:55:03.220000 511447 torch/_logging/_internal.py:1199] [1/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+{"event": "replay", "step": 175100, "loss": 2.031700849533081, "grad_norm": 2.045664072036743, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.3324296119972132}
+{"event": "replay", "step": 175200, "loss": 1.8994731903076172, "grad_norm": 3.0637524127960205, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.3319641989946831}
+{"event": "replay", "step": 175300, "loss": 1.9213807582855225, "grad_norm": 2.2099530696868896, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.33395007700892165}
+{"event": "replay", "step": 175400, "loss": 1.9113754034042358, "grad_norm": 2.106968402862549, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.33165949501562864}
+{"event": "replay", "step": 175500, "loss": 1.94600248336792, "grad_norm": 2.2030856609344482, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.3340127650008071}
+{"event": "replay", "step": 175600, "loss": 1.9326441287994385, "grad_norm": 2.2609386444091797, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.33228679600870237}
+{"event": "replay", "step": 175700, "loss": 1.8445831537246704, "grad_norm": 2.080678701400757, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.33398006099741906}
+{"event": "replay", "step": 175800, "loss": 1.8083689212799072, "grad_norm": 2.4178476333618164, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.3392350250214804}
+{"event": "replay", "step": 175900, "loss": 1.7805596590042114, "grad_norm": 2.9882164001464844, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.33132595499046147}
+{"event": "target_gradient_audit", "all_gradients_finite": true, "tensor_count": 338, "total_norm_fp32": 2.986797332763672, "total_norm_fp64": 2.986797458476739, "step": 175997, "loss": 2.0257256031036377, "loss_finite": true}
+{"event": "replay", "step": 175997, "loss": 2.0257256031036377, "grad_norm": 2.986797332763672, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.6814111989806406}
+{"event": "replay", "step": 176000, "loss": 1.7045884132385254, "grad_norm": 1.8049157857894897, "input_tokens": 32768, "targets": 32752, "optimizer_applied": true, "seconds": 0.3376408970216289}

@@ -1,0 +1,844 @@
+{
+  "status": "completed",
+  "cpu_only": true,
+  "observed_utc": "2026-10-09T03:23:43.621768+00:00",
+  "data_files": {
+    "manifest_sha256": "22204718d78d603512f9e78e35f29f62ccef4a64709acbcacc331ff05a3f11e8",
+    "validation_tokens_sha256": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0",
+    "validation_sha_matches_training_and_ab_plans": true,
+    "train_full_20GB_checksum_not_repeated": true,
+    "pilot_validation_prefix_exactly_preserved": true
+  },
+  "fixed_split_and_quality": {
+    "train_tokens": 5000000000,
+    "validation_tokens": 2097152,
+    "train_documents": 2540257,
+    "validation_documents": 1501,
+    "text_hash_overlap_recorded": 0,
+    "url_overlap_recorded": 0,
+    "global_exact_deduplication_recorded": true,
+    "validation_metadata_text_hash_errors": [],
+    "validation_metadata_offset_errors": [],
+    "new_validation_records_below_hash_threshold": 1167,
+    "new_validation_documents": 1167,
+    "pilot_preserved_from_old_threshold_fraction": 0.025544759457672782,
+    "new_threshold_fraction": 0.001,
+    "retokenization_samples": [
+      {
+        "text_sha256": "0548e80816e4fdaec3c677aa03f931f72922d28ba2373ac66ea1e9553bccc96b",
+        "source_shard": "data/train-00000-of-00114-5a023365406cb9c4.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "01b5023f4a0aae963f7b8cb163d4c1e959d26760485fe16bfae125497ee64633",
+        "source_shard": "data/train-00022-of-00114-4d18242ef5fd3198.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "06870e38527adf702b0aeefe55f51d2b46733cc42a1e2d95b218ea9865cd7ffe",
+        "source_shard": "data/train-00045-of-00114-dae3a4ce38fbb868.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "00f3b1b7cde6a4ccec8d877adcf3cc8fd25193a4c24488f7572a51c93225438d",
+        "source_shard": "data/train-00067-of-00114-00b0cfdec58c88e3.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0284facc89e25de64107bfc8e62cf050aa2d6438db45fe41f9ca95eee0b54ced",
+        "source_shard": "data/train-00090-of-00114-81a5f980ee29b128.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0454c96c91db9cca3d22442c0cd58c7d5174ddd78fad032d9d5b4bbf73f6979e",
+        "source_shard": "data/train-00113-of-00114-c2949ce8a6072e67.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "003fd4a54d9d75582514a22e3da78e8c7d618a8a9041f7b7f37640c5b559827a",
+        "source_shard": "data/train-00070-of-00114-00d409298080d3b4.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "003b9304414e789340c6bd80f443ddd188a0c960b91a773a1b1d05fd6b90b81c",
+        "source_shard": "data/train-00092-of-00114-0dbff189ab34173d.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0010764a37b6418c2a35b22458a8f66b68930a8e5208a7d09fbd363aac32e582",
+        "source_shard": "data/train-00087-of-00114-c00ab7c9d82d4699.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "003afb15116025eb047895aad216ab7899f2a99cdb107b216837c9f1352c8e9a",
+        "source_shard": "data/train-00044-of-00114-45624487e9a41275.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "00388c0fbf678236d5bef040dd5ab148b3143a0495a28f57aa5ebe979dc0ad58",
+        "source_shard": "data/train-00096-of-00114-1c45362bad7ef7b7.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0039e769a86bcf46c95a1bda74252d71ca15b4a85c217bd456e8ec62b94681e9",
+        "source_shard": "data/train-00081-of-00114-7687eb97c0e83e34.parquet",
+        "prefix_truncated": true,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "02974366f8abd48104d897f0600ee03b567df94af022858225061223144849cf",
+        "source_shard": "data/train-00000-of-00114-5a023365406cb9c4.parquet",
+        "prefix_truncated": false,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0005416ee4d3d2fa3494d87380d0fd5e6974d52ce8885f72b160835ed4c7c822",
+        "source_shard": "data/train-00088-of-00114-21dc7966e8cf32b9.parquet",
+        "prefix_truncated": false,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0003701e949c9d8629cd53e2a2ca9d9d23aadb78da3ceb83fc1bbc3f4758510b",
+        "source_shard": "data/train-00066-of-00114-111c17033ab8bd4a.parquet",
+        "prefix_truncated": false,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0000c9495e5252f8b6b63847f2c17cf91bf5b11526a85fd7b1e55014d5b1057f",
+        "source_shard": "data/train-00023-of-00114-9ec2a6a02bf1d9d0.parquet",
+        "prefix_truncated": false,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0031a08ae2d1fa21771a478756915ae3b83fcbeb81afe9e4cc39d2fa3f7449b2",
+        "source_shard": "data/train-00099-of-00114-c587048e642b131a.parquet",
+        "prefix_truncated": false,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      },
+      {
+        "text_sha256": "0039c763e892659c0555b2e0665ce2f99d8223f685d5419e687ffd7a3d425a83",
+        "source_shard": "data/train-00081-of-00114-7687eb97c0e83e34.parquet",
+        "prefix_truncated": false,
+        "original_token_count_matches": true,
+        "exact_used_token_roundtrip": true
+      }
+    ],
+    "source_roundtrip_basis": "Original preparation fully verified all validation source records/tokens; original manifest sampled 342 train sources; prior failed-batch CPU audit independently verified 23 source documents. This diagnostic does not rescan raw parquet shards."
+  },
+  "packing": {
+    "policy": "document text + EOS, concatenated within each split; no cross-document attention mask",
+    "sequence_length": 2048,
+    "eos_token_id": 151643,
+    "positions": "Reset at every 2048-token block, continuous within block; no document-boundary mask.",
+    "targets": "Labels equal token IDs, with causal one-token shift; first token of each block not supervised; padded train tail labels=-100.",
+    "validation_full_documents": {
+      "documents": 1273,
+      "documents_missing_terminal_eos": 0,
+      "missing_eos_before_a_following_document": 0,
+      "missing_eos_joins_inside_blocks": 0,
+      "blocks_containing_missing_eos_joins": 0,
+      "affected_block_indices": [],
+      "used_tokens_sum": 1626783,
+      "used_tokens_lt_64": 0
+    },
+    "validation_truncated_documents": {
+      "documents": 228,
+      "documents_missing_terminal_eos": 228,
+      "missing_eos_before_a_following_document": 227,
+      "missing_eos_joins_inside_blocks": 226,
+      "blocks_containing_missing_eos_joins": 226,
+      "affected_block_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        135,
+        143,
+        151,
+        159,
+        167,
+        175,
+        183,
+        190,
+        198,
+        206,
+        214,
+        222,
+        230,
+        238,
+        245,
+        253,
+        261,
+        269,
+        277,
+        285,
+        293,
+        300,
+        308,
+        316,
+        324,
+        332,
+        340,
+        348,
+        355,
+        363,
+        371,
+        379,
+        387,
+        395,
+        403,
+        410,
+        418,
+        426,
+        434,
+        442,
+        450,
+        458,
+        465,
+        473,
+        481,
+        489,
+        497,
+        505,
+        513,
+        520,
+        528,
+        536,
+        544,
+        552,
+        560,
+        568,
+        576,
+        583,
+        591,
+        599,
+        607,
+        615,
+        623,
+        631,
+        638,
+        646,
+        654,
+        662,
+        670,
+        678,
+        686,
+        693,
+        701,
+        709,
+        717,
+        725,
+        733,
+        741,
+        748,
+        756,
+        764,
+        772,
+        780,
+        788,
+        796,
+        803,
+        811,
+        819,
+        827,
+        835,
+        843,
+        851,
+        858,
+        866,
+        874,
+        882,
+        890,
+        898,
+        906,
+        913,
+        921,
+        929,
+        937,
+        945,
+        953,
+        961,
+        968,
+        976,
+        984,
+        992,
+        1000,
+        1008,
+        1016
+      ],
+      "used_tokens_sum": 470369,
+      "used_tokens_lt_64": 14
+    },
+    "train_shard_tail_documents": {
+      "documents": 114,
+      "documents_missing_terminal_eos": 114,
+      "missing_eos_before_a_following_document": 113,
+      "missing_eos_joins_inside_blocks": 113,
+      "blocks_containing_missing_eos_joins": 113,
+      "affected_block_indices": [
+        21415,
+        42831,
+        64247,
+        85663,
+        107079,
+        128495,
+        149910,
+        171326,
+        192742,
+        214158,
+        235574,
+        256990,
+        278405,
+        299821,
+        321237,
+        342653,
+        364069,
+        385485,
+        406901,
+        428316,
+        449732,
+        471148,
+        492564,
+        513980,
+        535396,
+        556811,
+        578227,
+        599643,
+        621059,
+        642475,
+        663891,
+        685307,
+        706722,
+        728138,
+        749554,
+        770970,
+        792386,
+        813802,
+        835217,
+        856633,
+        878049,
+        899465,
+        920881,
+        942297,
+        963712,
+        985128,
+        1006544,
+        1027960,
+        1049376,
+        1070792,
+        1092208,
+        1113623,
+        1135039,
+        1156455,
+        1177871,
+        1199287,
+        1220703,
+        1242118,
+        1263534,
+        1284950,
+        1306366,
+        1327782,
+        1349198,
+        1370614,
+        1392029,
+        1413445,
+        1434861,
+        1456277,
+        1477693,
+        1499109,
+        1520524,
+        1541940,
+        1563356,
+        1584772,
+        1606188,
+        1627604,
+        1649020,
+        1670435,
+        1691851,
+        1713267,
+        1734683,
+        1756099,
+        1777515,
+        1798930,
+        1820346,
+        1841762,
+        1863178,
+        1884594,
+        1906010,
+        1927425,
+        1948841,
+        1970257,
+        1991673,
+        2013089,
+        2034505,
+        2055921,
+        2077336,
+        2098752,
+        2120168,
+        2141584,
+        2163000,
+        2184416,
+        2205831,
+        2227247,
+        2248663,
+        2270079,
+        2291495,
+        2312911,
+        2334327,
+        2355742,
+        2377158,
+        2398574,
+        2419990
+      ],
+      "used_tokens_sum": 582133,
+      "used_tokens_lt_64": 1,
+      "boundary_documents_all_prefix_truncated": true
+    },
+    "validation_eos_count": 1273,
+    "fixed_train_probe_eos_count": 271,
+    "missing_separator_representativeness_note": "Quota-truncated document prefixes lose terminal EOS before the next document. They affect a much larger fraction of validation blocks than train blocks. This is a concrete packing/representativeness issue, not proof of the cause of the loss trend."
+  },
+  "shuffle": {
+    "dataset_same_in_both_epochs": true,
+    "independent_fresh_permutation_each_epoch": true,
+    "audits": [
+      {
+        "epoch_1_based": 1,
+        "sha256_matches_recorded": true,
+        "exact_permutation_of_all_blocks": true,
+        "exact_seed42_cpu_randperm_reconstruction": true,
+        "partial_block_appears_exactly_once": true,
+        "position_vs_block_index_pearson": -0.0003531875395921734,
+        "decile_source_coverage": [
+          {
+            "order_positions": [
+              0,
+              244140
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 3.2580072989071653
+          },
+          {
+            "order_positions": [
+              244140,
+              488281
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 3.0747747877039817
+          },
+          {
+            "order_positions": [
+              488281,
+              732422
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.5761496432498783
+          },
+          {
+            "order_positions": [
+              732422,
+              976562
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.850492983480259
+          },
+          {
+            "order_positions": [
+              976562,
+              1220703
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.47994063707726
+          },
+          {
+            "order_positions": [
+              1220703,
+              1464844
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.594331819890091
+          },
+          {
+            "order_positions": [
+              1464844,
+              1708984
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.344937305052341
+          },
+          {
+            "order_positions": [
+              1708984,
+              1953125
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 3.674304998253058
+          },
+          {
+            "order_positions": [
+              1953125,
+              2197266
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.736297299187842
+          },
+          {
+            "order_positions": [
+              2197266,
+              2441407
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 3.967026013644065
+          }
+        ]
+      },
+      {
+        "epoch_1_based": 2,
+        "sha256_matches_recorded": true,
+        "exact_permutation_of_all_blocks": true,
+        "exact_seed42_cpu_randperm_reconstruction": true,
+        "partial_block_appears_exactly_once": true,
+        "position_vs_block_index_pearson": -0.00021179832610833017,
+        "decile_source_coverage": [
+          {
+            "order_positions": [
+              0,
+              244140
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.6445884795795593
+          },
+          {
+            "order_positions": [
+              244140,
+              488281
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 3.006140078016283
+          },
+          {
+            "order_positions": [
+              488281,
+              732422
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.484636696999613
+          },
+          {
+            "order_positions": [
+              732422,
+              976562
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.205606501192478
+          },
+          {
+            "order_positions": [
+              976562,
+              1220703
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 3.3493136264547765
+          },
+          {
+            "order_positions": [
+              1220703,
+              1464844
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.736297299187842
+          },
+          {
+            "order_positions": [
+              1464844,
+              1708984
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 3.074981073217655
+          },
+          {
+            "order_positions": [
+              1708984,
+              1953125
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.47994063707726
+          },
+          {
+            "order_positions": [
+              1953125,
+              2197266
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 3.0747747877039817
+          },
+          {
+            "order_positions": [
+              2197266,
+              2441407
+            ],
+            "source_shards_present": 114,
+            "maximum_abs_nominal_shard_count_z": 2.6172100564526573
+          }
+        ]
+      }
+    ],
+    "interpretation": "Exact regeneration and permutation checks show no wrong seed, duplicated/missing block or file-order curriculum in the saved orders. Nominal decile z-scores are descriptive only."
+  },
+  "fixed_train_probe": {
+    "blocks": 256,
+    "input_tokens": 524288,
+    "exact_seed_reconstruction": true,
+    "indices_sha256_matches": true,
+    "token_values_sha256_matches": true,
+    "source_shards_covered": 107,
+    "overlapping_documents": 527,
+    "sample_train_validation_hash_overlap": 0,
+    "sample_train_validation_url_overlap": 0,
+    "top_domains_by_overlapping_document_count": [
+      [
+        "www.physicsforums.com",
+        29
+      ],
+      [
+        "math.stackexchange.com",
+        23
+      ],
+      [
+        "www.nature.com",
+        12
+      ],
+      [
+        "tex.stackexchange.com",
+        10
+      ],
+      [
+        "mathoverflow.net",
+        9
+      ],
+      [
+        "mathhelpforum.com",
+        9
+      ],
+      [
+        "zbmath.org",
+        7
+      ],
+      [
+        "socratic.org",
+        6
+      ],
+      [
+        "www.gradesaver.com",
+        5
+      ],
+      [
+        "physics.stackexchange.com",
+        4
+      ],
+      [
+        "ncatlab.org",
+        4
+      ],
+      [
+        "www.groundai.com",
+        4
+      ]
+    ],
+    "block_token_entropy_mean": 7.840127626855132,
+    "representativeness": "Uniform complete-block sample without replacement from the same 5B corpus, excluding the 512-token tail. Good stable corpus probe but only 256 blocks, not all domains and not a held-out set. All blocks were seen during completed epoch one."
+  },
+  "saved_loss_crosschecks": {
+    "base_full_validation_loss": 1.86186945438385,
+    "pilot_runs": {
+      "cpt_pilot_10m_20261008": {
+        "tokens": 10000000,
+        "before": 1.8800569772720337,
+        "after": 1.8423101902008057,
+        "validation_supervised_tokens": 262016
+      },
+      "cpt_fast_pilot_10m_20261008": {
+        "tokens": 10000000,
+        "before": 1.8800569772720337,
+        "after": 1.8423415422439575,
+        "validation_supervised_tokens": 262016
+      },
+      "cpt_stable_pilot_10m_20261008": {
+        "tokens": 10000000,
+        "before": 1.8800569772720337,
+        "after": 1.8422846794128418,
+        "validation_supervised_tokens": 262016
+      }
+    },
+    "derived_base_new_validation_extension_loss_approx": 1.8592712368283952,
+    "derivation_note": "Weighted subtraction using preserved pilot subset and same base-model native evaluations; float32 accumulation/rounding can affect the last digits. Pilot vs full validation averages cannot be compared as if identical datasets.",
+    "shared_checkpoint_short_ab": {
+      "fast": {
+        "validation_initial": 1.9019221067428589,
+        "validation_final": 1.9014776945114136,
+        "train_probe_initial": 1.9109556674957275,
+        "train_probe_final": 1.9106504917144775,
+        "extra_tokens": 32768000,
+        "extra_updates": 1000
+      },
+      "native": {
+        "validation_initial": 1.9019221067428589,
+        "validation_final": 1.9014548063278198,
+        "train_probe_initial": 1.9109556674957275,
+        "train_probe_final": 1.910409927368164,
+        "extra_tokens": 32768000,
+        "extra_updates": 1000
+      }
+    },
+    "short_ab_note": "Both arms at 1000 updates improve full-validation and fixed train-probe averages slightly. Their differences are tiny in this short window and do not establish the cause of the prior rise."
+  },
+  "not_established": [
+    "No evidence that the fixed validation bytes or block order changed during training.",
+    "Validation sampling/prefix truncation can alter representativeness, but fixed bias alone does not establish why loss changes over time.",
+    "No benchmark/general-domain evaluation is present. Math-only domain forgetting is possible on other domains, but cannot directly explain worsening on this same-domain held-out set without evidence.",
+    "The small uniform train probe is not a complete training-loss census; its behavior alone is not a generalization guarantee."
+  ],
+  "minimal_next_steps": [
+    "Keep native continuation and existing validation/probe fixed to measure a longer trajectory.",
+    "On the same checkpoint, report validation loss separately for preserved pilot blocks, new-extension blocks, and blocks containing missing-EOS quota joins; these are diagnosis slices, not replacements for the existing reference.",
+    "If loss degradation concentrates near missing separators, compare an additional properly EOS-terminated, complete-document validation sample from already cached sources. Preserve the current validation reference unchanged.",
+    "General-domain forgetting requires a separate fixed code/general-text probe; do not infer it solely from this math-validation curve."
+  ]
+}

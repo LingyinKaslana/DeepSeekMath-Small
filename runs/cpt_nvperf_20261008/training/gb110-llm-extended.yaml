@@ -1,0 +1,137 @@
+# CUDA/LLM overview for LOCAL_GPU_HOST; same counters as validated gb110-overview.yaml.
+# PCIe counters do not measure NVLink or CPU-GPU C2C traffic.
+panels:
+  - name: "Sample interval (ms)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "Sample interval (ms)"
+            metric: gpu__time_duration.sum
+            multiplier: 1e-06
+            color: 0xff00ffff
+  - name: "SM active (%)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "SM active (%)"
+            metric: sm__cycles_active.avg.pct_of_peak_sustained_elapsed
+            multiplier: 1
+            color: 0xff00ff00
+  - name: "Warp occupancy while SM active (%)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "Warp occupancy while SM active (%)"
+            metric: sm__warps_active.avg.pct_of_peak_sustained_active
+            multiplier: 1
+            color: 0xffff8800
+  - name: "Tensor pipe active (%)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "Tensor pipe active (%)"
+            metric: sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed
+            multiplier: 1
+            color: 0xff0088ff
+  - name: "HBM read (GB/s)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "HBM read (GB/s)"
+            metric: dram__bytes_read.sum.per_second
+            multiplier: 1e-09
+            color: 0xff00ffff
+  - name: "HBM write (GB/s)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "HBM write (GB/s)"
+            metric: dram__bytes_write.sum.per_second
+            multiplier: 1e-09
+            color: 0xff00ff00
+  - name: "L2 hit rate (%)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "L2 hit rate (%)"
+            metric: lts__average_t_sector_hit_rate_realtime.pct
+            multiplier: 1
+            color: 0xffff8800
+  - name: "SM clock (GHz)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "SM clock (GHz)"
+            metric: sm__cycles_elapsed.avg.per_second
+            multiplier: 1e-09
+            color: 0xff0088ff
+  - name: "L2 clock (GHz)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "L2 clock (GHz)"
+            metric: lts__cycles_elapsed.avg.per_second
+            multiplier: 1e-09
+            color: 0xff00ffff
+  - name: "PCIe read (GB/s)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "PCIe read (GB/s)"
+            metric: pcie__read_bytes.sum.per_second
+            multiplier: 1e-09
+            color: 0xff00ff00
+  - name: "PCIe write (GB/s)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "PCIe write (GB/s)"
+            metric: pcie__write_bytes.sum.per_second
+            multiplier: 1e-09
+            color: 0xffff8800
+  - name: "HBM throughput (%)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "HBM throughput (%)"
+            metric: dram__throughput.avg.pct_of_peak_sustained_elapsed
+            multiplier: 1
+            color: 0xff00ff00
+  - name: "L2 sector traffic (GB/s)"
+    widgets:
+      - type: TimePlot
+        chartType: Overlay
+        metrics:
+          - label: "L2 sector traffic (GB/s)"
+            metric: lts__t_sectors.sum.per_second
+            multiplier: 3.2e-08
+            color: 0xff00ff00
+configurations:
+  - name: CUDA LLM Fine-tuning
+    speed: Low
+    panels:
+      - "Sample interval (ms)"
+      - "SM active (%)"
+      - "Warp occupancy while SM active (%)"
+      - "Tensor pipe active (%)"
+      - "HBM read (GB/s)"
+      - "HBM write (GB/s)"
+      - "L2 hit rate (%)"
+      - "SM clock (GHz)"
+      - "L2 clock (GHz)"
+      - "PCIe read (GB/s)"
+      - "PCIe write (GB/s)"
+      - "HBM throughput (%)"
+      - "L2 sector traffic (GB/s)"

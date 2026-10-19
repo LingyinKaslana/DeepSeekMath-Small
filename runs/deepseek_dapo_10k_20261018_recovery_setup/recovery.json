@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-18T04:50:54.594960+00:00",
+  "failure_round": 2231,
+  "last_completed_round": 2230,
+  "resume_round": 2200,
+  "completed_rounds_replayed": 30,
+  "abandoned_groups_used": 960,
+  "abandoned_gradient_updates": 120,
+  "old_candidate_budget": 512,
+  "new_candidate_budget": 2048,
+  "rolling_full_recovery_every": 10,
+  "budget_failure_exact_round_start_checkpoint": true,
+  "lr": 1e-06,
+  "sampling_policy": "history_rank",
+  "training.jsonl": {
+    "kept": 2200,
+    "archived_removed": 30
+  },
+  "rollouts.jsonl": {
+    "kept": 384704,
+    "archived_removed": 11616
+  }
+}

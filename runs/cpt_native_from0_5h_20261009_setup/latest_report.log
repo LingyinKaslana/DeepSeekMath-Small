@@ -1,0 +1,1 @@
+{"status": "in_progress", "native_points": 10, "native_probe_points": 10, "fast_points": 36, "latest_progress": {"step": 9000, "trained_input_tokens": 294912000, "source": "./runs/cpt_native_from0_5h_20261009/progress.json", "trained_tokens_b": 0.294912}, "controls": "passed", "output": "./runs/cpt_native_from0_5h_20261009_setup/report"}

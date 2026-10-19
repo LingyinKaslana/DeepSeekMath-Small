@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "checkpoint_round": 75,
+  "uncompacted_sampling_exact_hf": true,
+  "greedy_exact_sequences": 7,
+  "greedy_sequences": 8,
+  "greedy_first_tokens_exact": 8,
+  "cases": [
+    {
+      "compact": false,
+      "case": "One of256 responses forced to512 tokens; others stop on EOS",
+      "seconds": 34.946045418968424,
+      "responses": 256,
+      "generated_tokens": 21321,
+      "max_tokens": 512,
+      "mean_tokens": 83.28515625,
+      "peak_allocated_gib": 53.445817947387695
+    },
+    {
+      "compact": true,
+      "case": "One of256 responses forced to512 tokens; others stop on EOS",
+      "seconds": 16.531385137932375,
+      "responses": 256,
+      "generated_tokens": 20996,
+      "max_tokens": 512,
+      "mean_tokens": 82.015625,
+      "peak_allocated_gib": 18.993860721588135
+    }
+  ],
+  "update_smoke": {
+    "updates": 4,
+    "response_tokens": 3808,
+    "input_tokens": 6232,
+    "metrics": [
+      {
+        "policy_loss": 0.11730261456060703,
+        "entropy": 0.2415237270096734,
+        "old_policy_kl_estimate": 0.0,
+        "clip_fraction": 0.0,
+        "mean_ratio": 1.0,
+        "gradient_norm": 4.533007621765137,
+        "response_tokens": 974
+      },
+      {
+        "policy_loss": -0.08540622989126848,
+        "entropy": 0.18238712943217067,
+        "old_policy_kl_estimate": 0.0005415511231991406,
+        "clip_fraction": 0.003167898627243928,
+        "mean_ratio": 1.0006088047369983,
+        "gradient_norm": 5.074524402618408,
+        "response_tokens": 947
+      },
+      {
+        "policy_loss": 0.036923966897085644,
+        "entropy": 0.2041312357789314,
+        "old_policy_kl_estimate": 0.0005303982277991067,
+        "clip_fraction": 0.001006036217303823,
+        "mean_ratio": 1.0000127719441652,
+        "gradient_norm": 5.539676189422607,
+        "response_tokens": 994
+      },
+      {
+        "policy_loss": -0.05658353696611667,
+        "entropy": 0.18720381203851133,
+        "old_policy_kl_estimate": 0.0019193038694802485,
+        "clip_fraction": 0.020156774916013438,
+        "mean_ratio": 1.0007533364974104,
+        "gradient_norm": 4.826242446899414,
+        "response_tokens": 893
+      }
+    ]
+  },
+  "finished_utc": "2026-10-15T15:02:50.673243+00:00",
+  "long_tail_speedup": 2.1139211945877645,
+  "selected_compact_decode": true,
+  "diagnostic_updates_discarded": true,
+  "formal_resume_from_original_checkpoint": true,
+  "precision_unchanged": "FP32 parameters, BF16 autocast, original mixed-dtype dynamic KV cache",
+  "limits": [
+    "Compaction changes stochastic RNG consumption and BF16 batch-shape rounding.",
+    "Controlled long-tail case is a performance test, not an end-to-end training speedup claim."
+  ]
+}

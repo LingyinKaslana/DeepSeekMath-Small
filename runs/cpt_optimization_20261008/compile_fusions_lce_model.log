@@ -1,0 +1,47 @@
+{"event": "model_loaded", "seconds": 3.3864341489970684, "parameters": 1543714304}
+./.venv/lib/python3.12/site-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+  torch._dynamo.utils.warn_once(msg)
+Traceback (most recent call last):
+  File "./scripts/benchmark_backends.py", line 178, in <module>
+    main()
+  File "./scripts/benchmark_backends.py", line 95, in main
+    loss = forward(**values, **force).loss
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./scripts/model_backends.py", line 240, in execute
+    return compiled_model(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 414, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 841, in compile_wrapper
+    raise e.with_traceback(None) from e.__cause__  # User compiler error
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch._dynamo.exc.Unsupported: Unsupported hasattr call
+  Explanation: Dynamo does not know how to trace the function `AutogradFunctionVariable()`
+  Hint: Avoid calling `hasattr(AutogradFunctionVariable, supports_inner_impl_dispatch)` in your code.
+  Hint: It may be possible to write Dynamo tracing rules for this code. Please report an issue to PyTorch if you encounter this graph break often and it is causing performance issues.
+
+  Developer debug context: call_obj_hasattr AutogradFunctionVariable() supports_inner_impl_dispatch
+
+ For more details about this graph break, please visit: https://meta-pytorch.github.io/compile-graph-break-site/gb/gb0150.html
+
+from user code:
+   File "./scripts/model_backends.py", line 198, in forward
+    return lce_forward(self, *args, **kwargs)
+  File "./.venv/lib/python3.12/site-packages/liger_kernel/transformers/model/qwen2.py", line 104, in lce_forward
+    result = LigerForCausalLMLoss(
+  File "./.venv/lib/python3.12/site-packages/liger_kernel/transformers/model/loss_utils.py", line 95, in LigerForCausalLMLoss
+    result = fixed_fused_linear_cross_entropy(
+  File "./.venv/lib/python3.12/site-packages/liger_kernel/transformers/model/loss_utils.py", line 43, in fixed_fused_linear_cross_entropy
+    result = F.liger_fused_linear_cross_entropy(
+  File "./.venv/lib/python3.12/site-packages/liger_kernel/transformers/functional.py", line 118, in liger_fused_linear_cross_entropy
+    if getattr(LigerFusedLinearCrossEntropyFunction, "supports_inner_impl_dispatch", False):
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+

@@ -1,0 +1,112 @@
+[
+  {
+    "offset": 0,
+    "global_step": 179939,
+    "cumulative_input_tokens": 5896236032,
+    "seconds": 22.704622040997492,
+    "validation": {
+      "loss": 1.9019221067428589,
+      "perplexity": 6.698757803485171,
+      "input_tokens": 2097152,
+      "supervised_tokens": 2096128,
+      "blocks": 1024,
+      "backend": "unpatched HF native eager"
+    },
+    "train_probe": {
+      "loss": 1.9109556674957275,
+      "perplexity": 6.759545590773625,
+      "input_tokens": 524288,
+      "supervised_tokens": 524032,
+      "blocks": 256,
+      "backend": "unpatched HF native eager"
+    }
+  },
+  {
+    "offset": 250,
+    "global_step": 180189,
+    "cumulative_input_tokens": 5904428032,
+    "seconds": 22.480147660011426,
+    "validation": {
+      "loss": 1.900506615638733,
+      "perplexity": 6.689282479106402,
+      "input_tokens": 2097152,
+      "supervised_tokens": 2096128,
+      "blocks": 1024,
+      "backend": "unpatched HF native eager"
+    },
+    "train_probe": {
+      "loss": 1.9106146097183228,
+      "perplexity": 6.757240588270029,
+      "input_tokens": 524288,
+      "supervised_tokens": 524032,
+      "blocks": 256,
+      "backend": "unpatched HF native eager"
+    }
+  },
+  {
+    "offset": 500,
+    "global_step": 180439,
+    "cumulative_input_tokens": 5912620032,
+    "seconds": 24.11593602699577,
+    "validation": {
+      "loss": 1.9013404846191406,
+      "perplexity": 6.6948627905678775,
+      "input_tokens": 2097152,
+      "supervised_tokens": 2096128,
+      "blocks": 1024,
+      "backend": "unpatched HF native eager"
+    },
+    "train_probe": {
+      "loss": 1.9110358953475952,
+      "perplexity": 6.760087916350492,
+      "input_tokens": 524288,
+      "supervised_tokens": 524032,
+      "blocks": 256,
+      "backend": "unpatched HF native eager"
+    }
+  },
+  {
+    "offset": 750,
+    "global_step": 180689,
+    "cumulative_input_tokens": 5920812032,
+    "seconds": 24.990405924007064,
+    "validation": {
+      "loss": 1.9015942811965942,
+      "perplexity": 6.696562139465991,
+      "input_tokens": 2097152,
+      "supervised_tokens": 2096128,
+      "blocks": 1024,
+      "backend": "unpatched HF native eager"
+    },
+    "train_probe": {
+      "loss": 1.911186933517456,
+      "perplexity": 6.761109024768708,
+      "input_tokens": 524288,
+      "supervised_tokens": 524032,
+      "blocks": 256,
+      "backend": "unpatched HF native eager"
+    }
+  },
+  {
+    "offset": 1000,
+    "global_step": 180939,
+    "cumulative_input_tokens": 5929004032,
+    "seconds": 23.17732281499775,
+    "validation": {
+      "loss": 1.9014776945114136,
+      "perplexity": 6.695781454993636,
+      "input_tokens": 2097152,
+      "supervised_tokens": 2096128,
+      "blocks": 1024,
+      "backend": "unpatched HF native eager"
+    },
+    "train_probe": {
+      "loss": 1.9106504917144775,
+      "perplexity": 6.757483055900919,
+      "input_tokens": 524288,
+      "supervised_tokens": 524032,
+      "blocks": 256,
+      "backend": "unpatched HF native eager"
+    }
+  }
+]

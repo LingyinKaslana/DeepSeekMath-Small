@@ -1,0 +1,17 @@
+# Preserve archival bytes so release SHA256 also matches a fresh checkout.
+* -text
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+# CSV/log newlines are retained exactly as recorded.
+*.csv -text
+*.log -text
+*.gz binary
+*.png binary
+*.pdf binary

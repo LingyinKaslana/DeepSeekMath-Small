@@ -1,0 +1,34 @@
+{
+  "status": "generation_complete",
+  "finished_utc": "2026-10-15T07:48:41.812425+00:00",
+  "questions": 6319,
+  "benchmarks": {
+    "gsm8k": {
+      "questions": 1319,
+      "finish_reasons": {
+        "eos": 1135,
+        "stop_string": 170,
+        "length": 14
+      },
+      "generated_tokens": 127457,
+      "prediction_sha256": "8a7dcc645b1a5bf8b3c8686a6908c499d925595cf138366e8401e8c58d676af8"
+    },
+    "math": {
+      "questions": 5000,
+      "finish_reasons": {
+        "eos": 4424,
+        "stop_string": 29,
+        "length": 547
+      },
+      "generated_tokens": 1329593,
+      "prediction_sha256": "b72fd2eee90f8664f65e1f97c46754ba7e640c97756a6325f6686ee24e356368"
+    }
+  },
+  "manifest": "./runs/deepseek_sft_gsm_math_20261015_setup/evaluation/manifest.json",
+  "generation_seconds_this_invocation": 3115.9790874019964,
+  "generation_tokens_per_second": 467.6058340349266,
+  "wall_seconds_this_invocation": 3259.0949602710316,
+  "peak_allocated_gib": 156.25416707992554,
+  "scoring": "pending",
+  "training_modified": false
+}

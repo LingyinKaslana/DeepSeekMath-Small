@@ -1,0 +1,26 @@
+{
+  "mode": "replay",
+  "run": "./runs/cpt_10b_20261008",
+  "checkpoint": "./runs/cpt_10b_20261008/checkpoint_step_00175000",
+  "checkpoint_step": 175000,
+  "target_step": 175997,
+  "source_directory": "./runs/cpt_10b_20261008/source",
+  "source_sha256": {
+    "train_cpt.py": "319197b0fb29b3425ba6f6cb7c10bb9c3c62ff25d21333ff55c37d614c274aa3",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+  },
+  "diagnostic_script_sha256": "08408fa8f36fd5694702b53ff03200e49f2b8da93dfa36084e0b9f25df528138",
+  "started_utc": "2026-10-09T01:54:44.437059+00:00",
+  "precision": "BF16 forward/autocast; backward outside autocast; FP32 parameters and gradients",
+  "flash_deterministic": false,
+  "limitation": "Production Flash attention is nondeterministic; restored replay need not be bitwise-identical.",
+  "full_token_file_checksum_revalidation": false,
+  "production_files_modified": false
+}

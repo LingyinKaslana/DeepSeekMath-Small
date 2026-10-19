@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "tests": {
+    "native_migration": 6,
+    "retry_and_source_migration": 10,
+    "epochs_and_pipeline": 9
+  },
+  "total_tests": 25,
+  "source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820",
+    "verify_cpt_checkpoint.py": "7047edb6dc77ad174018c59a5668f56c3bb0170345708a6303530918c65555e0",
+    "verify_cpt_pipeline.py": "03d63d44e99fe0f5ae5ba0d458f4b1c1e0409db0f666291f2d0d1771c835e052",
+    "test_cpt_native_migration.py": "97a5e762456afce378c69d755c2c53e79bafab5a83917579d4c714f354b45f1b"
+  },
+  "probe": {
+    "blocks": 256,
+    "seed": 20261009,
+    "indices_sha256": "0275fe980c1fd3bf853fa63d40c27291d4368b0eb41b4c183127d9f964169a81",
+    "tokens_sha256": "f2d447c272813ee27c047b0a895234932d1d05cb1e4275b11b982dfedee42619"
+  },
+  "gpu_execution": false,
+  "production_frozen_sources_modified": false
+}

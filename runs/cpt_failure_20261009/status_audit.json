@@ -1,0 +1,672 @@
+{
+  "status": "completed",
+  "read_only": true,
+  "audit_at": {
+    "utc": "2026-10-09T02:01:39.184862+00:00",
+    "Asia/Shanghai": "2026-10-09T10:01:39.184862+08:00"
+  },
+  "original_run": {
+    "status": "failed",
+    "error": "The total norm of order 2.0 for gradients from `parameters` is non-finite, so it cannot be clipped. To disable this error and scale the gradients by the non-finite norm anyway, set `error_if_nonfinite=False`",
+    "started": {
+      "utc": "2026-10-08T06:54:26.762265+00:00",
+      "Asia/Shanghai": "2026-10-08T14:54:26.762265+08:00"
+    },
+    "failure_time_from_result_mtime": {
+      "utc": "2026-10-08T23:47:14.920057+00:00",
+      "Asia/Shanghai": "2026-10-09T07:47:14.920057+08:00"
+    },
+    "failure_timestamp_basis": "result.json mtime; failure traceback has no explicit timestamp. training.jsonl and launch/training.log mtime agree within 0.004 seconds.",
+    "elapsed_wall_seconds_to_failure": 60768.157792,
+    "last_successful_record": {
+      "step": 175996,
+      "loss": 1.6440527439117432,
+      "grad_norm": 2.262354612350464,
+      "epoch": 2,
+      "step_in_epoch": 23408,
+      "lr": 1e-05,
+      "input_tokens": 32768,
+      "supervised_tokens": 32752,
+      "cumulative_tokens": 5767033344,
+      "seconds": 0.3358495300053619,
+      "optimizer_applied": true,
+      "first_full_shape_update": false
+    },
+    "inferred_failed_update": 175997,
+    "completed_input_tokens": 5767033344,
+    "completed_fraction": 0.5767033344,
+    "epoch": 2,
+    "step_in_epoch": 23408,
+    "recent_1000_update_tokens_per_second": 97490.00390891473,
+    "recent_1000_mean_update_seconds": 0.3361165112949966,
+    "remaining_tokens_without_rollback": 4232966656
+  },
+  "latest_checkpoint": {
+    "path": "./runs/cpt_10b_20261008/checkpoint_step_00175000",
+    "completed_steps": 175000,
+    "trained_tokens": 5734396416,
+    "saved_at": {
+      "utc": "2026-10-08T23:41:36.472669+00:00",
+      "Asia/Shanghai": "2026-10-09T07:41:36.472669+08:00"
+    },
+    "verification_artifact": "./runs/cpt_failure_20261009/checkpoint_175000_verification.json"
+  },
+  "rollback_if_resume_latest": {
+    "successful_updates_to_repeat": 996,
+    "input_tokens_to_repeat": 32636928,
+    "approximate_training_seconds": 334.7720452498166,
+    "remaining_input_tokens_from_checkpoint": 4265603584,
+    "remaining_pure_training_hours_at_recent_speed": 12.153962836553903
+  },
+  "validation": {
+    "initial": {
+      "step": 0,
+      "loss": 1.86186945438385,
+      "perplexity": 6.4357568863247065,
+      "supervised_tokens": 2096128,
+      "input_tokens": 2097152,
+      "blocks": 1024,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    "best": {
+      "step": 5000,
+      "loss": 1.8253639936447144,
+      "perplexity": 6.205053208029561,
+      "supervised_tokens": 2096128,
+      "input_tokens": 2097152,
+      "blocks": 1024,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    "latest": {
+      "step": 175000,
+      "loss": 1.9017146825790405,
+      "perplexity": 6.6973684633455015,
+      "supervised_tokens": 2096128,
+      "input_tokens": 2097152,
+      "blocks": 1024,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    "worst": {
+      "step": 85000,
+      "loss": 1.904468059539795,
+      "perplexity": 6.7158342533446405,
+      "supervised_tokens": 2096128,
+      "input_tokens": 2097152,
+      "blocks": 1024,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    "history": [
+      {
+        "step": 5000,
+        "loss": 1.8253639936447144,
+        "perplexity": 6.205053208029561,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 10000,
+        "loss": 1.8339521884918213,
+        "perplexity": 6.258572903850368,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 15000,
+        "loss": 1.850775122642517,
+        "perplexity": 6.364751073747688,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 20000,
+        "loss": 1.86033296585083,
+        "perplexity": 6.4258760125360945,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 25000,
+        "loss": 1.8678395748138428,
+        "perplexity": 6.474294051289334,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 30000,
+        "loss": 1.8742263317108154,
+        "perplexity": 6.515776120413309,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 35000,
+        "loss": 1.8780107498168945,
+        "perplexity": 6.540481259340888,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 40000,
+        "loss": 1.882053256034851,
+        "perplexity": 6.566974709389143,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 45000,
+        "loss": 1.8869352340698242,
+        "perplexity": 6.599112920866823,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 50000,
+        "loss": 1.8896417617797852,
+        "perplexity": 6.616997794884209,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 55000,
+        "loss": 1.8945696353912354,
+        "perplexity": 6.649685999224595,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 60000,
+        "loss": 1.8956109285354614,
+        "perplexity": 6.656613878017203,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 65000,
+        "loss": 1.899017095565796,
+        "perplexity": 6.679326075552532,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 70000,
+        "loss": 1.9013830423355103,
+        "perplexity": 6.69514771470247,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 75000,
+        "loss": 1.901973009109497,
+        "perplexity": 6.699098794789463,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 80000,
+        "loss": 1.9027293920516968,
+        "perplexity": 6.704167795657177,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 85000,
+        "loss": 1.904468059539795,
+        "perplexity": 6.7158342533446405,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 90000,
+        "loss": 1.904318928718567,
+        "perplexity": 6.714832790143579,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 95000,
+        "loss": 1.9042307138442993,
+        "perplexity": 6.714240468139458,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 100000,
+        "loss": 1.9039148092269897,
+        "perplexity": 6.712119743564825,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 105000,
+        "loss": 1.9032384157180786,
+        "perplexity": 6.707581244417959,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 110000,
+        "loss": 1.9039589166641235,
+        "perplexity": 6.712415804493646,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 115000,
+        "loss": 1.9039802551269531,
+        "perplexity": 6.71255903865698,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 120000,
+        "loss": 1.9036126136779785,
+        "perplexity": 6.7100916773056225,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 125000,
+        "loss": 1.902840495109558,
+        "perplexity": 6.704912690578975,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 130000,
+        "loss": 1.9027153253555298,
+        "perplexity": 6.704073490829023,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 135000,
+        "loss": 1.9020172357559204,
+        "perplexity": 6.699395080015018,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 140000,
+        "loss": 1.902225136756897,
+        "perplexity": 6.700788035751519,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 145000,
+        "loss": 1.901288628578186,
+        "perplexity": 6.694515630490076,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 150000,
+        "loss": 1.8996325731277466,
+        "perplexity": 6.683438316247111,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 155000,
+        "loss": 1.9006640911102295,
+        "perplexity": 6.690335959965293,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 160000,
+        "loss": 1.9009301662445068,
+        "perplexity": 6.692116328849643,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 165000,
+        "loss": 1.9016567468643188,
+        "perplexity": 6.696980457756622,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 170000,
+        "loss": 1.900639533996582,
+        "perplexity": 6.690171666642078,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      },
+      {
+        "step": 175000,
+        "loss": 1.9017146825790405,
+        "perplexity": 6.6973684633455015,
+        "supervised_tokens": 2096128,
+        "input_tokens": 2097152,
+        "blocks": 1024,
+        "loss_backend": "native eager",
+        "attention_mask": "cached all-ones tensor"
+      }
+    ],
+    "latest_minus_initial_loss": 0.03984522819519043,
+    "trend": "Best observed at step 5000; rose thereafter; roughly stable near 1.90 for later steps. No failed-step validation is available."
+  },
+  "hardware": {
+    "nvidia_smi_command": [
+      "nvidia-smi",
+      "-q",
+      "-x"
+    ],
+    "nvidia_smi_returncode": 0,
+    "nvidia_smi_stderr": "",
+    "snapshot": {
+      "product_name": "NVIDIA GB300",
+      "product_architecture": "Blackwell",
+      "ecc_mode": {
+        "current_ecc": "Enabled",
+        "pending_ecc": "Enabled"
+      },
+      "ecc_errors": {
+        "volatile": {
+          "sram_correctable": "0",
+          "sram_uncorrectable_parity": "0",
+          "sram_uncorrectable_secded": "0",
+          "dram_correctable": "0",
+          "dram_uncorrectable": "0"
+        },
+        "aggregate": {
+          "sram_correctable": "0",
+          "sram_uncorrectable_parity": "0",
+          "sram_uncorrectable_secded": "0",
+          "dram_correctable": "0",
+          "dram_uncorrectable": "0",
+          "sram_threshold_exceeded": "No"
+        },
+        "aggregate_uncorrectable_sram_sources": {
+          "sram_l2": "0",
+          "sram_sm": "0",
+          "sram_microcontroller": "0",
+          "sram_pcie": "0",
+          "sram_other": "0"
+        },
+        "channel_repair_pending": "No",
+        "tpc_repair_pending": "No",
+        "unrepairable_memory": "No"
+      },
+      "retired_pages": {
+        "multiple_single_bit_retirement": {
+          "retired_count": "N/A",
+          "retired_pagelist": "N/A"
+        },
+        "double_bit_retirement": {
+          "retired_count": "N/A",
+          "retired_pagelist": "N/A"
+        },
+        "pending_blacklist": "N/A",
+        "pending_retirement": "N/A"
+      },
+      "remapped_rows": {
+        "remapped_row_corr": "0",
+        "remapped_row_corr_inactive": "0",
+        "remapped_row_unc": "0",
+        "remapped_row_unc_inactive": "0",
+        "remapped_row_pending": "No",
+        "remapped_row_failure": "No",
+        "row_remapper_histogram": {
+          "row_remapper_histogram_max": "5376 bank(s)",
+          "row_remapper_histogram_high": "0 bank(s)",
+          "row_remapper_histogram_partial": "0 bank(s)",
+          "row_remapper_histogram_low": "0 bank(s)",
+          "row_remapper_histogram_none": "0 bank(s)"
+        }
+      },
+      "gpu_recovery_action": "None",
+      "pci": {
+        "pci_bus": "06",
+        "pci_device": "00",
+        "pci_domain": "0009",
+        "pci_base_class": "3",
+        "pci_sub_class": "2",
+        "pci_device_id": "31C210DE",
+        "pci_bus_id": "00000009:06:00.0",
+        "pci_sub_system_id": "20E510DE",
+        "pci_gpu_link_info": {
+          "pcie_gen": {
+            "max_link_gen": "6",
+            "current_link_gen": "6",
+            "device_current_link_gen": "6",
+            "max_device_link_gen": "6",
+            "max_host_link_gen": "4"
+          },
+          "link_widths": {
+            "max_link_width": "16x",
+            "current_link_width": "16x"
+          }
+        },
+        "pci_bridge_chip": {
+          "bridge_chip_type": "N/A",
+          "bridge_chip_fw": "N/A"
+        },
+        "replay_counter": "0",
+        "replay_rollover_counter": "0",
+        "tx_util": "0 KB/s",
+        "rx_util": "0 KB/s",
+        "atomic_caps_outbound": "N/A",
+        "atomic_caps_inbound": "FETCHADD_32 FETCHADD_64 SWAP_32 SWAP_64 CAS_32 CAS_64"
+      },
+      "temperature": {
+        "gpu_temp": "38 C",
+        "gpu_temp_tlimit": "52 C",
+        "gpu_temp_max_tlimit_threshold": "-5 C",
+        "gpu_temp_slow_tlimit_threshold": "-2 C",
+        "gpu_temp_max_gpu_tlimit_threshold": "0 C",
+        "gpu_target_temperature": "N/A",
+        "memory_temp": "38 C",
+        "gpu_temp_max_mem_tlimit_threshold": "0 C"
+      },
+      "clocks_event_reasons": {
+        "clocks_event_reason_gpu_idle": "Active",
+        "clocks_event_reason_applications_clocks_setting": "Not Active",
+        "clocks_event_reason_sw_power_cap": "Not Active",
+        "clocks_event_reason_hw_slowdown": "Not Active",
+        "clocks_event_reason_hw_thermal_slowdown": "Not Active",
+        "clocks_event_reason_hw_power_brake_slowdown": "Not Active",
+        "clocks_event_reason_sync_boost": "Not Active",
+        "clocks_event_reason_sw_thermal_slowdown": "Not Active",
+        "clocks_event_reason_display_clocks_setting": "Not Active"
+      },
+      "snapshot_at": {
+        "utc": "2026-10-09T02:01:39.184862+00:00",
+        "Asia/Shanghai": "2026-10-09T10:01:39.184862+08:00"
+      },
+      "driver_version": "610.57.04",
+      "scope": "post-failure device-wide counters; GPU may be occupied by independent diagnostics"
+    },
+    "kernel_logs": [
+      {
+        "command": [
+          "journalctl",
+          "-k",
+          "--since",
+          "2026-10-08 06:44:26 UTC",
+          "--until",
+          "2026-10-09 02:01:39 UTC",
+          "--no-pager",
+          "-o",
+          "short-iso"
+        ],
+        "returncode": 0,
+        "stderr": "Hint: You are currently not seeing messages from other users and the system.\n      Users in groups 'adm', 'systemd-journal' can see all messages.\n      Pass -q to turn off this notice.",
+        "total_available_lines": 1,
+        "hardware_related_lines_in_original_run": [],
+        "hardware_related_lines_near_failure_10m": [],
+        "historical_xid_before_original_run": [],
+        "unparsed_hardware_lines": []
+      },
+      {
+        "command": [
+          "dmesg",
+          "--time-format",
+          "iso"
+        ],
+        "returncode": 1,
+        "stderr": "dmesg: read kernel buffer failed: Operation not permitted",
+        "total_available_lines": 0,
+        "hardware_related_lines_in_original_run": [],
+        "hardware_related_lines_near_failure_10m": [],
+        "historical_xid_before_original_run": [],
+        "unparsed_hardware_lines": []
+      },
+      {
+        "command": [
+          "sudo",
+          "-n",
+          "journalctl",
+          "-k",
+          "--since",
+          "2026-10-08 06:44:26 UTC",
+          "--until",
+          "2026-10-09 02:01:39 UTC",
+          "--no-pager",
+          "-o",
+          "short-iso"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "total_available_lines": 5,
+        "hardware_related_lines_in_original_run": [],
+        "hardware_related_lines_near_failure_10m": [],
+        "historical_xid_before_original_run": [],
+        "unparsed_hardware_lines": []
+      },
+      {
+        "command": [
+          "sudo",
+          "-n",
+          "dmesg",
+          "--time-format",
+          "iso"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "total_available_lines": 2217,
+        "hardware_related_lines_in_original_run": [],
+        "hardware_related_lines_near_failure_10m": [],
+        "historical_xid_before_original_run": [
+          "2026-10-08T05:13:03,717022+00:00 NVRM: Xid (PCI:0009:06:00): 31, pid=168185, name=python, channel 0x00000002, intr 00000000. MMU Fault: ENGINE GRAPHICS GPC3 GPCCLIENT_T1_9 faulted @ 0xfb8d_20040000. Fault is of type FAULT_PTE ACCESS_TYPE_VIRT_WRITE"
+        ],
+        "unparsed_hardware_lines": []
+      }
+    ],
+    "conclusion": "No hardware error or Xid was observed in accessible logs during the original run or within 10 minutes of its failure; reported ECC counters are zero. A historical Xid 31 before this run is recorded separately and cannot be assigned as the cause of this failure."
+  },
+  "limitations": [
+    "nvidia-smi counters are a post-failure snapshot, not an event-by-event proof.",
+    "No Xid in accessible logs does not establish that hardware cannot contribute; missing or rotated logs remain possible.",
+    "A non-finite total gradient norm can arise from non-finite entries or float32 norm overflow; original traceback alone does not distinguish them.",
+    "The current GPU workload, if any, is independent of the already failed original run."
+  ]
+}

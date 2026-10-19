@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "stage": "sft",
+  "completed_steps": 1356,
+  "configured_steps": 1356,
+  "sft_input_tokens": 10866690,
+  "sft_supervised_tokens": 7408092,
+  "validation_before": {
+    "loss": 0.9544458389282227,
+    "supervised_tokens": 86171,
+    "input_tokens": 126981,
+    "examples": 512,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  "validation_after": {
+    "step": 1356,
+    "loss": 0.7478501200675964,
+    "supervised_tokens": 86171,
+    "input_tokens": 126981,
+    "examples": 512,
+    "loss_scope": "Answer tokens and EOS only; prompt and padding ignored"
+  },
+  "best_step": 904,
+  "best_validation_loss": 0.7081043124198914,
+  "final_checkpoint": "./runs/deepseek_sft_gsm_math_20261015/final_checkpoint",
+  "evaluation_checkpoint": "./runs/deepseek_sft_gsm_math_20261015/best_checkpoint",
+  "wall_seconds": 1578.862201838987,
+  "peak_allocated_gib": 96.73280096054077,
+  "finished_utc": "2026-10-15T06:52:37.048119+00:00",
+  "cpt_checkpoint_modified": false
+}

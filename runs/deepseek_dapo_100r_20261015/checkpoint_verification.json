@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "weight_tensors": 219,
+  "optimizer_states": 219,
+  "completed_rounds": 100,
+  "gradient_updates": 400
+}

@@ -1,0 +1,2914 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-12T06:32:13.711770+00:00",
+  "data": "./data/processed/deepseek_coder_1p3b_512m_s42",
+  "checks": {
+    "ready": {
+      "passed": true,
+      "details": null
+    },
+    "identity": {
+      "passed": true,
+      "details": null
+    },
+    "no_old_token_reuse": {
+      "passed": true,
+      "details": null
+    },
+    "manifest_reference_hash": {
+      "passed": true,
+      "details": null
+    },
+    "source_manifest_hash": {
+      "passed": true,
+      "details": null
+    },
+    "source_pinned_revision": {
+      "passed": true,
+      "details": null
+    },
+    "reference_metadata_sha_train.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "reference_metadata_sha_validation.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "artifact_train_tokens.npy": {
+      "passed": true,
+      "details": null
+    },
+    "artifact_validation_tokens.npy": {
+      "passed": true,
+      "details": null
+    },
+    "artifact_train.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "artifact_validation.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "artifact_settings.json": {
+      "passed": true,
+      "details": null
+    },
+    "validation_tiny_sha": {
+      "passed": true,
+      "details": "97a52c2cbec0041e2a480f7e5069d16efc30caf324aa60b14410d274daf415bd"
+    },
+    "tokenizer_eos_vocab": {
+      "passed": true,
+      "details": null
+    },
+    "train_array": {
+      "passed": true,
+      "details": null
+    },
+    "train_all_ids_in_range": {
+      "passed": true,
+      "details": {
+        "min": 0,
+        "max": 32018,
+        "tokenizer_size": 32022,
+        "embedding_size": 32256
+      }
+    },
+    "train_manifest_tokens": {
+      "passed": true,
+      "details": null
+    },
+    "validation_array": {
+      "passed": true,
+      "details": null
+    },
+    "validation_all_ids_in_range": {
+      "passed": true,
+      "details": {
+        "min": 0,
+        "max": 32014,
+        "tokenizer_size": 32022,
+        "embedding_size": 32256
+      }
+    },
+    "validation_manifest_tokens": {
+      "passed": true,
+      "details": null
+    },
+    "complete_training_blocks": {
+      "passed": true,
+      "details": null
+    },
+    "pilot_training_budget": {
+      "passed": true,
+      "details": null
+    },
+    "all_source_shards": {
+      "passed": true,
+      "details": null
+    },
+    "sampling_shard_order": {
+      "passed": true,
+      "details": null
+    },
+    "shard_000_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_000_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_000_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_000_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_000_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_001_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_001_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_001_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_001_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_001_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_002_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_002_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_002_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_002_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_002_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_003_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_003_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_003_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_003_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_003_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_004_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_004_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_004_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_004_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_004_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_005_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_005_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_005_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_005_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_005_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_006_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_006_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_006_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_006_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_006_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_007_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_007_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_007_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_007_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_007_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_008_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_008_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_008_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_008_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_008_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_009_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_009_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_009_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_009_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_009_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_010_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_010_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_010_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_010_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_010_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_011_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_011_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_011_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_011_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_011_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_012_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_012_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_012_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_012_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_012_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_013_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_013_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_013_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_013_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_013_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_014_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_014_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_014_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_014_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_014_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_015_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_015_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_015_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_015_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_015_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_016_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_016_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_016_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_016_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_016_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_017_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_017_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_017_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_017_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_017_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_018_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_018_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_018_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_018_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_018_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_019_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_019_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_019_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_019_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_019_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_020_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_020_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_020_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_020_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_020_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_021_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_021_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_021_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_021_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_021_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_022_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_022_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_022_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_022_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_022_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_023_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_023_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_023_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_023_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_023_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_024_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_024_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_024_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_024_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_024_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_025_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_025_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_025_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_025_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_025_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_026_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_026_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_026_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_026_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_026_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_027_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_027_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_027_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_027_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_027_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_028_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_028_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_028_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_028_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_028_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_029_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_029_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_029_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_029_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_029_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_030_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_030_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_030_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_030_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_030_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_031_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_031_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_031_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_031_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_031_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_032_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_032_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_032_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_032_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_032_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_033_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_033_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_033_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_033_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_033_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_034_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_034_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_034_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_034_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_034_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_035_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_035_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_035_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_035_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_035_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_036_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_036_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_036_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_036_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_036_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_037_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_037_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_037_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_037_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_037_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_038_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_038_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_038_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_038_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_038_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_039_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_039_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_039_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_039_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_039_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_040_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_040_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_040_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_040_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_040_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_041_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_041_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_041_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_041_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_041_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_042_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_042_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_042_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_042_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_042_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_043_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_043_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_043_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_043_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_043_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_044_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_044_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_044_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_044_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_044_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_045_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_045_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_045_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_045_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_045_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_046_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_046_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_046_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_046_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_046_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_047_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_047_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_047_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_047_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_047_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_048_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_048_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_048_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_048_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_048_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_049_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_049_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_049_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_049_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_049_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_050_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_050_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_050_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_050_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_050_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_051_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_051_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_051_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_051_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_051_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_052_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_052_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_052_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_052_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_052_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_053_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_053_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_053_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_053_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_053_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_054_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_054_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_054_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_054_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_054_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_055_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_055_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_055_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_055_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_055_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_056_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_056_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_056_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_056_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_056_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_057_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_057_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_057_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_057_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_057_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_058_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_058_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_058_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_058_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_058_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_059_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_059_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_059_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_059_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_059_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_060_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_060_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_060_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_060_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_060_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_061_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_061_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_061_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_061_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_061_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_062_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_062_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_062_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_062_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_062_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_063_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_063_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_063_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_063_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_063_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_064_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_064_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_064_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_064_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_064_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_065_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_065_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_065_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_065_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_065_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_066_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_066_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_066_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_066_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_066_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_067_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_067_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_067_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_067_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_067_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_068_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_068_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_068_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_068_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_068_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_069_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_069_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_069_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_069_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_069_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_070_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_070_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_070_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_070_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_070_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_071_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_071_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_071_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_071_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_071_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_072_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_072_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_072_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_072_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_072_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_073_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_073_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_073_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_073_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_073_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_074_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_074_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_074_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_074_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_074_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_075_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_075_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_075_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_075_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_075_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_076_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_076_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_076_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_076_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_076_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_077_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_077_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_077_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_077_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_077_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_078_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_078_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_078_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_078_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_078_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_079_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_079_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_079_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_079_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_079_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_080_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_080_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_080_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_080_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_080_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_081_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_081_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_081_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_081_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_081_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_082_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_082_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_082_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_082_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_082_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_083_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_083_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_083_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_083_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_083_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_084_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_084_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_084_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_084_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_084_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_085_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_085_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_085_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_085_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_085_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_086_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_086_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_086_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_086_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_086_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_087_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_087_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_087_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_087_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_087_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_088_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_088_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_088_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_088_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_088_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_089_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_089_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_089_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_089_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_089_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_090_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_090_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_090_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_090_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_090_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_091_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_091_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_091_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_091_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_091_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_092_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_092_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_092_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_092_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_092_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_093_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_093_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_093_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_093_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_093_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_094_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_094_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_094_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_094_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_094_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_095_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_095_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_095_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_095_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_095_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_096_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_096_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_096_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_096_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_096_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_097_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_097_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_097_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_097_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_097_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_098_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_098_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_098_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_098_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_098_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_099_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_099_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_099_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_099_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_099_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_100_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_100_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_100_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_100_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_100_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_101_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_101_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_101_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_101_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_101_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_102_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_102_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_102_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_102_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_102_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_103_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_103_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_103_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_103_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_103_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_104_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_104_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_104_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_104_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_104_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_105_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_105_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_105_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_105_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_105_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_106_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_106_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_106_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_106_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_106_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_107_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_107_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_107_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_107_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_107_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_108_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_108_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_108_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_108_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_108_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_109_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_109_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_109_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_109_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_109_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_110_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_110_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_110_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_110_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_110_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_111_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_111_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_111_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_111_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_111_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_112_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_112_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_112_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_112_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_112_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "shard_113_quota": {
+      "passed": true,
+      "details": null
+    },
+    "shard_113_cache_commit": {
+      "passed": true,
+      "details": null
+    },
+    "shard_113_source_sha": {
+      "passed": true,
+      "details": null
+    },
+    "shard_113_cache_artifact_tokens.raw": {
+      "passed": true,
+      "details": null
+    },
+    "shard_113_cache_artifact_metadata.jsonl": {
+      "passed": true,
+      "details": null
+    },
+    "reference_validation_count": {
+      "passed": true,
+      "details": null
+    },
+    "train_full_metadata_audit": {
+      "passed": true,
+      "details": {
+        "documents": 234001,
+        "tokens": 512000000,
+        "prefix_truncated": 114
+      }
+    },
+    "validation_full_metadata_audit": {
+      "passed": true,
+      "details": {
+        "documents": 1501,
+        "tokens": 3190317,
+        "prefix_truncated": 0
+      }
+    },
+    "all_validation_documents_retained": {
+      "passed": true,
+      "details": null
+    },
+    "train_validation_disjoint_hash": {
+      "passed": true,
+      "details": null
+    },
+    "train_validation_disjoint_url": {
+      "passed": true,
+      "details": null
+    },
+    "shard_000_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_001_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_002_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_003_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_004_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_005_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_006_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_007_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_008_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_009_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_010_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_011_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_012_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_013_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_014_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_015_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_016_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_017_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_018_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_019_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_020_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_021_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_022_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_023_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_024_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_025_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_026_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_027_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_028_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_029_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_030_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_031_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_032_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_033_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_034_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_035_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_036_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_037_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_038_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_039_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_040_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_041_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_042_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_043_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_044_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_045_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_046_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_047_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_048_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_049_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_050_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_051_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_052_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_053_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_054_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_055_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_056_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_057_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_058_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_059_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_060_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_061_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_062_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_063_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_064_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_065_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_066_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_067_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_068_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_069_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_070_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_071_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_072_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_073_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_074_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_075_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_076_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_077_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_078_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_079_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_080_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_081_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_082_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_083_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_084_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_085_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_086_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_087_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_088_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_089_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_090_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_091_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_092_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_093_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_094_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_095_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_096_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_097_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_098_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_099_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_100_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_101_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_102_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_103_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_104_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_105_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_106_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_107_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_108_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_109_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_110_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_111_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_112_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "shard_113_metadata_counts": {
+      "passed": true,
+      "details": null
+    },
+    "independent_train_source_samples": {
+      "passed": true,
+      "details": {
+        "samples": 342,
+        "selection": "first/last/minimum-normalized-text-sha per shard; independent selection from preparation middle sample"
+      }
+    },
+    "packing_policy": {
+      "passed": true,
+      "details": null
+    }
+  },
+  "artifact_sha256": {
+    "train_tokens.npy": "97fa44c3f40b7452ad0c2b9726f3b5a2d82b6e6a22915a4d77d7e4b9ccd1e8c7",
+    "validation_tokens.npy": "97a52c2cbec0041e2a480f7e5069d16efc30caf324aa60b14410d274daf415bd",
+    "train.jsonl": "c0188a950274a99cf8599c5114535f6323e422148295e39d876e136d842719bd",
+    "validation.jsonl": "73a037bf652bf1f05ce11470d87a16422c5a83882b94d88c467d62bdcdfaf7c2",
+    "settings.json": "52d7a2fefb897fb7c53087c9eab66e59ee114bfa9325acb34e7bb63f9db8fa63"
+  },
+  "completed_utc": "2026-10-12T06:32:59.307561+00:00",
+  "wall_seconds": 45.59578870498808,
+  "checks_passed": 717,
+  "checks_total": 717,
+  "train_documents": 234001,
+  "validation_documents": 1501,
+  "train_tokens": 512000000,
+  "validation_tokens": 3190317,
+  "source_shards": 114,
+  "source_sha256_scope": "All 114 pinned source Parquet files independently reread and SHA256 verified",
+  "metadata_scope": "All output metadata provenance / old split membership / offsets / full-document EOS audited; every held-out document fully token-roundtripped; 342 independent train source-token samples"
+}

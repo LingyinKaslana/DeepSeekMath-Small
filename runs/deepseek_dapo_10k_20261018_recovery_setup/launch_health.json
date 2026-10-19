@@ -1,0 +1,29 @@
+{
+  "status": "healthy_restored_sampling",
+  "progress": {
+    "status": "sampling",
+    "utc": "2026-10-18T04:54:12.097588+00:00",
+    "completed_rounds": 2200,
+    "round": 2201,
+    "target_rounds": 10000,
+    "effective_groups": 9,
+    "target_groups": 32,
+    "candidate_groups": 96,
+    "batch_in_flight": true,
+    "sampling_policy": "history_rank",
+    "cumulative_effective_groups_found": 78736,
+    "cumulative_effective_groups_used": 70400,
+    "allocated_gib": 15.266869068145752,
+    "reserved_gib": 54.4453125
+  },
+  "verification": {
+    "status": "passed",
+    "weight_tensors": 219,
+    "optimizer_states": 219,
+    "completed_rounds": 2200,
+    "gradient_updates": 8800
+  },
+  "candidate_budget": 2048,
+  "rolling_recovery_every": 10,
+  "tests_passed": 14
+}

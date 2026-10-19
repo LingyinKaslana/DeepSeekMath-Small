@@ -1,0 +1,22 @@
+{
+  "status": "complete_verified",
+  "launched_utc": "2026-10-12T06:34:32.104311+00:00",
+  "run": "./runs/deepseek_coder_1p3b_500m_20261012",
+  "setup": "./runs/deepseek_coder_1p3b_500m_20261012_setup",
+  "tmux_session": "deepseek-coder-1p3b-500m-20261012",
+  "model": "deepseek-ai/deepseek-coder-1.3b-base",
+  "revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "fresh_model": true,
+  "fresh_optimizer": true,
+  "configured_input_tokens": 500006912,
+  "lr": 3e-06,
+  "warmup_tokens": 25001984,
+  "source": "./runs/deepseek_coder_1p3b_500m_20261012_setup/source",
+  "training_log": "./runs/deepseek_coder_1p3b_500m_20261012_setup/training.log",
+  "automatic_post_training_checkpoint_verification": true,
+  "automatic_curve_report": true,
+  "phase": "finished",
+  "updated_utc": "2026-10-12T09:12:06.464928+00:00",
+  "completed_utc": "2026-10-12T09:12:06.464928+00:00",
+  "exit_code": 0
+}

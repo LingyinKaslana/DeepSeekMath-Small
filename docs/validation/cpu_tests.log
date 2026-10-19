@@ -1,0 +1,6 @@
+`generation_config` default values have been modified to match model-specific defaults: {'bos_token_id': 1}. If this is not desired, please set these values explicitly.
+........................s...s......................................................
+----------------------------------------------------------------------
+Ran 83 tests in 2.614s
+
+OK (skipped=2)

@@ -1,0 +1,273 @@
+{
+  "status": "complete",
+  "stop_reason": null,
+  "completed_steps": 306,
+  "optimizer_updates": 306,
+  "configured_steps": 306,
+  "trained_tokens": 10000000,
+  "supervised_tokens": 9995117,
+  "configured_input_tokens": 10000000,
+  "dataset_input_tokens": 10000000,
+  "all_dataset_tokens_consumed": true,
+  "train_seconds_excluding_validation_and_save": 133.42189037089702,
+  "tokens_per_second_including_first_update": 74950.21972932018,
+  "steady_tokens_per_second": 97302.31909951668,
+  "steady_tokens": 9934464,
+  "steady_seconds": 102.0989437038952,
+  "steady_definition": "Exclude the first full-shape update in each invocation; loop timings include data/H2D, synchronization and logging, and exclude validation/save sections",
+  "invocations": [
+    {
+      "output": "./runs/cpt_fast_pilot_10m_20261008_part1",
+      "start_step": 0,
+      "first_full_shape_update_seconds_including_compile": 15.691720749004162,
+      "train_seconds": 36.73149066402402,
+      "input_tokens": 2097152,
+      "steady_seconds": 21.037215877018753,
+      "steady_tokens": 2064384,
+      "optimizer_compile": {
+        "optimizer": "torch.optim.AdamW",
+        "implementation": "compiled_foreach",
+        "compile": {
+          "fullgraph": false,
+          "dynamic": false,
+          "mode": "default"
+        },
+        "compile_wrapper_setup_seconds": 1.0394398039934458,
+        "first_step_seconds_including_compilation": 7.3816639319993556,
+        "compile_seconds": null,
+        "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+        "precision": {
+          "parameters": "float32",
+          "gradients": "float32",
+          "exp_avg": "float32",
+          "exp_avg_sq": "float32",
+          "learning_rate": "CUDA float32 scalar"
+        },
+        "device": "cuda:0",
+        "parameter_tensors": 338,
+        "parameter_elements": 1543714304,
+        "capturable": true,
+        "foreach": true,
+        "fused": false,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "weight_decay": 0.1,
+        "eps": 1e-08
+      },
+      "end_step": 64,
+      "stop_reason": "stop_after"
+    },
+    {
+      "output": "./runs/cpt_fast_pilot_10m_20261008",
+      "start_step": 64,
+      "first_full_shape_update_seconds_including_compile": 15.626642358009121,
+      "train_seconds": 96.690399706873,
+      "input_tokens": 7902848,
+      "steady_seconds": 81.06172782687645,
+      "steady_tokens": 7870080,
+      "optimizer_compile": {
+        "optimizer": "torch.optim.AdamW",
+        "implementation": "compiled_foreach",
+        "compile": {
+          "fullgraph": false,
+          "dynamic": false,
+          "mode": "default"
+        },
+        "compile_wrapper_setup_seconds": 1.1821035419998225,
+        "first_step_seconds_including_compilation": 7.604670897999313,
+        "compile_seconds": null,
+        "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+        "precision": {
+          "parameters": "float32",
+          "gradients": "float32",
+          "exp_avg": "float32",
+          "exp_avg_sq": "float32",
+          "learning_rate": "CUDA float32 scalar"
+        },
+        "device": "cuda:0",
+        "parameter_tensors": 338,
+        "parameter_elements": 1543714304,
+        "capturable": true,
+        "foreach": true,
+        "fused": false,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "weight_decay": 0.1,
+        "eps": 1e-08
+      },
+      "end_step": 306,
+      "stop_reason": null
+    }
+  ],
+  "schedule": {
+    "total_steps": 306,
+    "peak_lr": 1e-05,
+    "warmup_steps": 16,
+    "decay_80_step": 245,
+    "decay_90_step": 276,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1
+  },
+  "backend": {
+    "kernels": "native",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "model",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_label_alias": "same_as_input",
+    "compile_fullgraph": true,
+    "compile_dynamic": false,
+    "rms_in_place": false,
+    "emulate_precision_casts": true,
+    "preserve_silu": false,
+    "ce_chunk_rows": 4096,
+    "master_parameter_dtype": "float32",
+    "forward_autocast_dtype": "bfloat16",
+    "backward_autocast": "off",
+    "instance_local": true,
+    "torch_version": "2.9.1+cu130",
+    "transformers_version": "4.55.4",
+    "liger_version": "0.8.4",
+    "native_validation": "with eager_native(model): model(**batch)",
+    "notes": [
+      "Training-loop code must still verify FP32 gradients and optimizer states.",
+      "RoPE and BF16 CE change intermediate rounding; verify before selecting them.",
+      "Pass an already-resolved attention mask dictionary to compiled forwards."
+    ],
+    "optimizer_compile": {
+      "optimizer": "torch.optim.AdamW",
+      "implementation": "compiled_foreach",
+      "compile": {
+        "fullgraph": false,
+        "dynamic": false,
+        "mode": "default"
+      },
+      "compile_wrapper_setup_seconds": 1.1821035419998225,
+      "first_step_seconds_including_compilation": 7.604670897999313,
+      "compile_seconds": null,
+      "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+      "precision": {
+        "parameters": "float32",
+        "gradients": "float32",
+        "exp_avg": "float32",
+        "exp_avg_sq": "float32",
+        "learning_rate": "CUDA float32 scalar"
+      },
+      "device": "cuda:0",
+      "parameter_tensors": 338,
+      "parameter_elements": 1543714304,
+      "capturable": true,
+      "foreach": true,
+      "fused": false,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "weight_decay": 0.1,
+      "eps": 1e-08
+    }
+  },
+  "optimizer_compile": {
+    "optimizer": "torch.optim.AdamW",
+    "implementation": "compiled_foreach",
+    "compile": {
+      "fullgraph": false,
+      "dynamic": false,
+      "mode": "default"
+    },
+    "compile_wrapper_setup_seconds": 1.1821035419998225,
+    "first_step_seconds_including_compilation": 7.604670897999313,
+    "compile_seconds": null,
+    "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+    "precision": {
+      "parameters": "float32",
+      "gradients": "float32",
+      "exp_avg": "float32",
+      "exp_avg_sq": "float32",
+      "learning_rate": "CUDA float32 scalar"
+    },
+    "device": "cuda:0",
+    "parameter_tensors": 338,
+    "parameter_elements": 1543714304,
+    "capturable": true,
+    "foreach": true,
+    "fused": false,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "weight_decay": 0.1,
+    "eps": 1e-08
+  },
+  "validation_before": {
+    "loss": 1.8800569772720337,
+    "perplexity": 6.553878273658338,
+    "supervised_tokens": 262016,
+    "input_tokens": 262144,
+    "blocks": 128,
+    "loss_backend": "native eager",
+    "attention_mask": "cached all-ones tensor"
+  },
+  "validation_after": {
+    "step": 306,
+    "loss": 1.8423415422439575,
+    "perplexity": 6.311299146229403,
+    "supervised_tokens": 262016,
+    "input_tokens": 262144,
+    "blocks": 128,
+    "loss_backend": "native eager",
+    "attention_mask": "cached all-ones tensor"
+  },
+  "validation_history": [
+    {
+      "step": 64,
+      "loss": 1.849241852760315,
+      "perplexity": 6.354999670295602,
+      "supervised_tokens": 262016,
+      "input_tokens": 262144,
+      "blocks": 128,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    {
+      "step": 153,
+      "loss": 1.8468945026397705,
+      "perplexity": 6.340099755553417,
+      "supervised_tokens": 262016,
+      "input_tokens": 262144,
+      "blocks": 128,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    {
+      "step": 306,
+      "loss": 1.8423415422439575,
+      "perplexity": 6.311299146229403,
+      "supervised_tokens": 262016,
+      "input_tokens": 262144,
+      "blocks": 128,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    }
+  ],
+  "peak_allocated_bytes": 193736781312,
+  "peak_reserved_bytes": 207574007808,
+  "gpu_training_this_invocation": {
+    "samples": 149,
+    "utilization": 96.20134228187919,
+    "memory_mib": 170334.6644295302,
+    "power_w": 1253.8754362416107
+  },
+  "checkpoint": "./runs/cpt_fast_pilot_10m_20261008/final_checkpoint",
+  "full_parameter_training": true,
+  "wall_seconds_this_invocation": 132.78622991699376,
+  "checkpoint_verification": "Atomic publication; independent reload/resume verification is separate"
+}

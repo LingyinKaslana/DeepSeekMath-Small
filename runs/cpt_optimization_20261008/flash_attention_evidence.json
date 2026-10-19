@@ -1,0 +1,108 @@
+{
+  "status": "confirmed_static_generated_path",
+  "recorded_utc": "2026-10-08T05:15:53.869104+00:00",
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "batch_size": 16,
+  "sequence_length": 2048,
+  "hidden_size": 1536,
+  "layers": 28,
+  "device": {
+    "type": "cuda",
+    "index": 0,
+    "compute_capability_code": 103,
+    "sm_count": 152,
+    "evidence_path": "./.cache/inductor/ta/ctayaaqlrttjghey2pdui5fwqmiwg2gawpkn6gu6fkc2eruzw2w2.py",
+    "metadata_line": 77,
+    "device_guard_line": 1716
+  },
+  "attention": {
+    "backend": "aten scaled_dot_product_flash_attention forward/backward",
+    "causal": true,
+    "dropout": 0.0,
+    "q_heads": 12,
+    "kv_heads": 2,
+    "head_dim": 128,
+    "dtype": "bfloat16",
+    "native_gqa": true,
+    "allocations": [
+      {
+        "role": "value",
+        "buffer": "buf14",
+        "path": "./.cache/inductor/ta/ctayaaqlrttjghey2pdui5fwqmiwg2gawpkn6gu6fkc2eruzw2w2.py",
+        "line": 1770,
+        "shape": [
+          16,
+          2,
+          2048,
+          128
+        ],
+        "dtype": "bfloat16"
+      },
+      {
+        "role": "query",
+        "buffer": "buf15",
+        "path": "./.cache/inductor/ta/ctayaaqlrttjghey2pdui5fwqmiwg2gawpkn6gu6fkc2eruzw2w2.py",
+        "line": 1776,
+        "shape": [
+          16,
+          12,
+          2048,
+          128
+        ],
+        "dtype": "bfloat16"
+      },
+      {
+        "role": "key",
+        "buffer": "buf16",
+        "path": "./.cache/inductor/ta/ctayaaqlrttjghey2pdui5fwqmiwg2gawpkn6gu6fkc2eruzw2w2.py",
+        "line": 1781,
+        "shape": [
+          16,
+          2,
+          2048,
+          128
+        ],
+        "dtype": "bfloat16"
+      }
+    ]
+  },
+  "residual": {
+    "path": "./.cache/inductor/ta/ctayaaqlrttjghey2pdui5fwqmiwg2gawpkn6gu6fkc2eruzw2w2.py",
+    "line": 1718,
+    "shape": [
+      16,
+      2048,
+      1536
+    ],
+    "dtype": "float32"
+  },
+  "generated_modules": [
+    {
+      "phase": "forward",
+      "path": "./.cache/inductor/ta/ctayaaqlrttjghey2pdui5fwqmiwg2gawpkn6gu6fkc2eruzw2w2.py",
+      "mtime_utc": "2026-10-08T04:58:01.710474+00:00",
+      "source_sha256": "1d068fa1526fc1d8dfdb790c6faaa307f0ee49ea42c924ae2a9e60cfe8577be3",
+      "representative_call_line": 1787,
+      "representative_call": "buf17 = torch.ops.aten._scaled_dot_product_flash_attention.default(buf15, buf16, buf14, 0.0, True, scale=0.08838834764831845)",
+      "flash_forward_call_count": 28,
+      "flash_backward_call_count": 0,
+      "efficient_attention_reference_count": 0,
+      "math_attention_reference_count": 0,
+      "liger_reference_count": 0
+    },
+    {
+      "phase": "backward",
+      "path": "./.cache/inductor/kh/ckhn5c32e3hbqulnweupndb4x6hsawfrgjmceyieejguxiqxegdk.py",
+      "mtime_utc": "2026-10-08T04:58:22.694651+00:00",
+      "source_sha256": "c3b1835d494908af8854079898193ab7a58635bfd3ef7b4eadd0be358bca1dc0",
+      "representative_call_line": 2888,
+      "representative_call": "buf28 = torch.ops.aten._scaled_dot_product_flash_attention_backward.default(reinterpret_tensor(buf26, (16, 12, 2048, 128), (3145728, 128, 1536, 1), 0), convert_element_type_991, convert_element_type_992, clone_112, getitem_243, getitem_244, None, None, 2048, 2048, 0.0, True, getitem_249, getitem_250, scale=0.08838834764831845)",
+      "flash_forward_call_count": 0,
+      "flash_backward_call_count": 28,
+      "efficient_attention_reference_count": 0,
+      "math_attention_reference_count": 0,
+      "liger_reference_count": 0
+    }
+  ],
+  "caveat": "Evidence is read-only inspection of generated compiled CUDA code matching native full-model B16x2048. It establishes the generated attention execution path, not runtime kernel durations, activity, or a fresh profiler capture. No GPU workload was run for this inspection."
+}

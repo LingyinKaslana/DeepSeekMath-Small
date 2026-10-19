@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": {
+    "checkpoint_files": true,
+    "checkpoint_training_state_file": true,
+    "checkpoint_manifest_sha256": true,
+    "selected_block_indices_sha256": true,
+    "selected_training_token_and_label_values_sha256": true,
+    "checked_probe_hashes": true,
+    "probes_json_sha256": true,
+    "actual_backend_options": true,
+    "start_prefix_counts": true,
+    "end_prefix_counts": true
+  },
+  "training_updates": 0
+}

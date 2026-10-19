@@ -1,0 +1,4 @@
+benchmark,score,total,base_correct,cpt_correct,base_accuracy_percent,cpt_accuracy_percent,delta_correct,delta_percentage_points,both_correct,base_only_correct,cpt_only_correct,both_wrong,improved,regressed,unchanged
+gsm8k,official,1319,818,671,62.0166793025019,50.87187263078089,-147,-11.144806671721007,556,262,115,386,115,262,942
+math,official,5000,1498,1243,29.959999999999997,24.86,-255,-5.099999999999998,865,633,378,3124,378,633,3989
+gsm8k,comma_normalized_diagnostic,1319,842,690,63.83623957543594,52.31235784685367,-152,-11.523881728582268,578,264,112,365,112,264,943

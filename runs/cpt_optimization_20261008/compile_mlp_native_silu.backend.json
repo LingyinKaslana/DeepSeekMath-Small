@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "validated": true,
+  "model": "Qwen/Qwen2.5-Coder-1.5B",
+  "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "sequence_length": 2048,
+  "effective_batch": 16,
+  "micro_batch": 16,
+  "mask_policy": "causal",
+  "fused_optimizer": false,
+  "options": {
+    "kernels": "native",
+    "loss": "native",
+    "chunk_mem_const": 1,
+    "compile_scope": "mlp",
+    "compile_mode": "default",
+    "compile_shape": [
+      16,
+      2048
+    ],
+    "compile_fullgraph": true,
+    "rms_in_place": false,
+    "emulate_precision_casts": true,
+    "compile_label_alias": "same_as_input",
+    "preserve_silu": true
+  },
+  "validation_evidence": {},
+  "purpose": "Candidate for production-shape numeric screening; not the selected default",
+  "compiled_optimizer": true
+}

@@ -1,0 +1,267 @@
+{
+  "status": "passed",
+  "reviewed_utc": "2026-10-10T02:28:19.090400+00:00",
+  "check_count": 42,
+  "checks": [
+    {
+      "name": "preflight_passed_and_probes_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "summary_complete_all_cases",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "summary_zero_training_updates",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_complete_readonly",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_model_revision",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_probes_data_script_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_frozen_source_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_same_actual_probe_hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_full_validation_reference",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "base_uniform_reference",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "base_correct_full_validation_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_correct_group_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_finite_native_losses",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "base_summary_matches_immutable_result",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_complete_readonly",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_model_revision",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_probes_data_script_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_frozen_source_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_same_actual_probe_hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_full_validation_reference",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "step15000_uniform_reference",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "step15000_correct_full_validation_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_correct_group_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_finite_native_losses",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step15000_summary_matches_immutable_result",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_complete_readonly",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_model_revision",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_probes_data_script_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_frozen_source_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_same_actual_probe_hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_full_validation_reference",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "step110000_uniform_reference",
+      "passed": true,
+      "details": 0.0
+    },
+    {
+      "name": "step110000_correct_full_validation_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_correct_group_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_finite_native_losses",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "step110000_summary_matches_immutable_result",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "loss_change_arithmetic_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_frozen_sources_still_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evaluator_still_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_groups_improve_base_to_early",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_groups_worsen_early_to_late",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_groups_still_better_than_base",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "metrics": {
+    "base": {
+      "validation": 1.86186945438385,
+      "uniform_train": 1.931435465812683,
+      "seen_train": 1.8855924606323242,
+      "unseen_train": 1.881611943244934
+    },
+    "step15000": {
+      "validation": 1.821273684501648,
+      "uniform_train": 1.8938571214675903,
+      "seen_train": 1.8218846321105957,
+      "unseen_train": 1.8416863679885864
+    },
+    "step110000": {
+      "validation": 1.8481593132019043,
+      "uniform_train": 1.8970496654510498,
+      "seen_train": 1.8542757034301758,
+      "unseen_train": 1.8536157608032227
+    }
+  },
+  "independently_recomputed_changes": {
+    "validation": {
+      "base_to_early": -0.04059576988220215,
+      "early_to_late": 0.026885628700256348,
+      "base_to_late": -0.0137101411819458
+    },
+    "uniform_train": {
+      "base_to_early": -0.03757834434509277,
+      "early_to_late": 0.0031925439834594727,
+      "base_to_late": -0.0343858003616333
+    },
+    "seen_train": {
+      "base_to_early": -0.06370782852172852,
+      "early_to_late": 0.03239107131958008,
+      "base_to_late": -0.03131675720214844
+    },
+    "unseen_train": {
+      "base_to_early": -0.039925575256347656,
+      "early_to_late": 0.01192939281463623,
+      "base_to_late": -0.027996182441711426
+    }
+  },
+  "probes_sha256": "e263f671c6efc422d5297460ef4c55a13ec9f26365a9d7afd1bc8152af4f0a20",
+  "conclusions": [
+    "These exact early-seen blocks worsen by 0.032391 loss from early to late; worsening is real for this fixed diagnostic sample, not a consequence of changing batch difficulty.",
+    "Late-unseen blocks also worsen by 0.011929 loss, while validation worsens by 0.026886. This rules out only a simple story where the aggregate training probe rises solely because some probe blocks remain unseen.",
+    "All four groups remain better than the original base; decline from the valley does not mean current model is worse than the original base.",
+    "This observational result does not determine a unique cause or the entire seen-prefix average. Old seen blocks have not been repeated in this first epoch, so forgetting or gradient interference remain consistent interpretations."
+  ],
+  "scope": "Read-only runtime results/source hashes and arithmetic audit; no GPU, no optimizer load, no production edits."
+}

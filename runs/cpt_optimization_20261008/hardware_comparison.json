@@ -1,0 +1,73 @@
+{
+  "baseline": "./runs/cpt_nvperf_20261008/training_v2/result.json",
+  "optimized": "./runs/cpt_nvperf_20261008/optimized/result.json",
+  "same_model_batch_context_precision": true,
+  "counter_samples": {
+    "baseline": 835,
+    "optimized": 487
+  },
+  "capture_duration_seconds": {
+    "baseline": 16.7,
+    "optimized": 9.74
+  },
+  "monitored_tokens_per_second": {
+    "baseline": 59110.159274822945,
+    "optimized": 97366.61200727819
+  },
+  "monitored_speed_ratio": 1.6472060505637987,
+  "metrics": {
+    "SM active": {
+      "baseline": 93.52427555928143,
+      "optimized": 92.3278976714579
+    },
+    "Tensor pipe active": {
+      "baseline": 29.318784365269458,
+      "optimized": 53.96112948870636
+    },
+    "HBM read": {
+      "baseline": 2074.9941760742513,
+      "optimized": 1722.0644244147843
+    },
+    "HBM write": {
+      "baseline": 1200.8162415556885,
+      "optimized": 785.9235885482548
+    },
+    "HBM throughput": {
+      "baseline": 45.746226383233534,
+      "optimized": 35.023695776180695
+    },
+    "L2 hit rate": {
+      "baseline": 38.38276762395209,
+      "optimized": 54.05623847433264
+    }
+  },
+  "cuda_span_mean_ms": {
+    "baseline": {
+      "input": 1.53982999548316,
+      "forward_loss": 184.94944381713867,
+      "backward": 334.3926057815552,
+      "clip_check": 5.5004399716854095,
+      "optimizer": 25.895648062229156
+    },
+    "optimized": {
+      "input": 0.6713149957358837,
+      "forward_loss": 98.96959400177002,
+      "backward": 219.53317642211914,
+      "clip_check": 5.846245974302292,
+      "optimizer": 9.356407970190048
+    }
+  },
+  "notes": [
+    "Device-wide counters; captures reject sampler overflow and nonmonotonic timestamps",
+    "Counter means are sample-interval weighted; CSV has already applied YAML unit multipliers",
+    "CUDA event spans include host launch/synchronization gaps, not kernel self time",
+    "PCIe counters do not measure Grace CPU-GPU NVLink/C2C traffic",
+    "Whole-model compiler rounding differs from native gradients; selected for learning-workflow throughput, not strict gradient-equivalence experiments"
+  ],
+  "estimated_hbm_bytes_per_input_token": {
+    "baseline": 55418737.79090324,
+    "optimized": 25758193.29911126,
+    "caution": "Inference from capture-window average bandwidth and measured throughput, not an exact kernel byte counter sum"
+  },
+  "estimated_hbm_traffic_per_token_reduction_fraction": 0.5352078678461103
+}

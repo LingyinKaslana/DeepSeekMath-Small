@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-15T09:19:50.122280+00:00",
+  "checkpoint": "./runs/deepseek_sft_gsm_math_20261015/best_checkpoint",
+  "model_kind": "sft",
+  "selection_counts": {
+    "gsm8k": 14,
+    "math": 547
+  },
+  "source_run": "./runs/deepseek_sft_gsm_math_20261015_setup/evaluation",
+  "source_manifest_sha256": "1839dd1f061a23fb57c2c0398cd125a00d04111635190f45d2221e4c49d0390c",
+  "source_result_sha256": "9c4b95476c6154e73c5773cb3f5a49893ec51668443f8b07b37bd0789f1b075b",
+  "original_max_new_tokens": 1024,
+  "max_new_tokens": 2048,
+  "retained_questions": 5758,
+  "full_denominator": 6319,
+  "source_and_model_hashes_verified_by_prepare": true,
+  "regenerate_from_original_prompt": true,
+  "automatic_unchanged_answer_verification": true
+}

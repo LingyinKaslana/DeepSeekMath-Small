@@ -1,0 +1,21 @@
+{
+  "definition": "Live group_totals.json counts the current weight lineage. To count all formal executed updates including discarded branches, add these abandoned totals. Disposable benchmark smoke updates are excluded.",
+  "abandoned_groups_used": 2720,
+  "abandoned_gradient_updates": 340,
+  "events": [
+    {
+      "resume_round": 1900,
+      "abandoned_completed_rounds": 55,
+      "abandoned_groups_used": 1760,
+      "abandoned_gradient_updates": 220,
+      "evidence": "runs/deepseek_dapo_10k_20261017_tail_setup/boundary.json"
+    },
+    {
+      "resume_round": 2200,
+      "abandoned_completed_rounds": 30,
+      "abandoned_groups_used": 960,
+      "abandoned_gradient_updates": 120,
+      "evidence": "runs/deepseek_dapo_10k_20261018_recovery_setup/recovery.json"
+    }
+  ]
+}

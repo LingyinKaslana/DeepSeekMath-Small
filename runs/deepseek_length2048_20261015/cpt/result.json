@@ -1,0 +1,111 @@
+{
+  "status": "complete_verified",
+  "verified_utc": "2026-10-15T05:52:21.175461+00:00",
+  "questions": 6319,
+  "rerun_questions": 2020,
+  "source_run": "./runs/deepseek_coder_10b_inference_20261015",
+  "checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+  "evaluation_mode": "selective_length_extension",
+  "max_new_tokens": 2048,
+  "benchmarks": {
+    "gsm8k": {
+      "original_1024": {
+        "correct": 114,
+        "total": 1319,
+        "accuracy_percent": 8.642911296436694
+      },
+      "selectively_extended_2048": {
+        "correct": 118,
+        "total": 1319,
+        "accuracy_percent": 8.946171341925702
+      },
+      "delta_percentage_points": 0.303260045489008,
+      "rerun_questions": 160,
+      "retained_questions": 1159,
+      "original_truncated_correct": 3,
+      "retry_correct": 7,
+      "gained": 4,
+      "lost": 0,
+      "still_truncated_2048": 118,
+      "prefix_identical_questions": 78,
+      "prefix_groups": {
+        "True": {
+          "old": {
+            "correct": 3,
+            "total": 78,
+            "accuracy_percent": 3.8461538461538463
+          },
+          "new": {
+            "correct": 3,
+            "total": 78,
+            "accuracy_percent": 3.8461538461538463
+          }
+        },
+        "False": {
+          "old": {
+            "correct": 0,
+            "total": 82,
+            "accuracy_percent": 0.0
+          },
+          "new": {
+            "correct": 4,
+            "total": 82,
+            "accuracy_percent": 4.878048780487805
+          }
+        }
+      },
+      "errors": 0,
+      "timeouts": 0
+    },
+    "math": {
+      "original_1024": {
+        "correct": 282,
+        "total": 5000,
+        "accuracy_percent": 5.64
+      },
+      "selectively_extended_2048": {
+        "correct": 286,
+        "total": 5000,
+        "accuracy_percent": 5.72
+      },
+      "delta_percentage_points": 0.08000000000000007,
+      "rerun_questions": 1860,
+      "retained_questions": 3140,
+      "original_truncated_correct": 58,
+      "retry_correct": 62,
+      "gained": 32,
+      "lost": 28,
+      "still_truncated_2048": 1650,
+      "prefix_identical_questions": 1155,
+      "prefix_groups": {
+        "True": {
+          "old": {
+            "correct": 25,
+            "total": 1155,
+            "accuracy_percent": 2.1645021645021645
+          },
+          "new": {
+            "correct": 29,
+            "total": 1155,
+            "accuracy_percent": 2.5108225108225106
+          }
+        },
+        "False": {
+          "old": {
+            "correct": 33,
+            "total": 705,
+            "accuracy_percent": 4.680851063829787
+          },
+          "new": {
+            "correct": 33,
+            "total": 705,
+            "accuracy_percent": 4.680851063829787
+          }
+        }
+      },
+      "errors": 0,
+      "timeouts": 0
+    }
+  },
+  "training_modified": false
+}

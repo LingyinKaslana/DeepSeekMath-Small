@@ -1,0 +1,41 @@
+{
+  "groups": [
+    {
+      "changed_fields": [],
+      "before": {
+        "lr": 9.999999747378752e-06,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.1,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": true,
+        "capturable": false,
+        "differentiable": false,
+        "fused": false,
+        "decoupled_weight_decay": true
+      },
+      "after": {
+        "lr": 9.999999747378752e-06,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.1,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": true,
+        "capturable": false,
+        "differentiable": false,
+        "fused": false,
+        "decoupled_weight_decay": true
+      }
+    }
+  ],
+  "adam_tensor_storage_identity_and_versions_unchanged": true,
+  "tensor_values_unchanged_basis": "Only weight_decay group assignment; all state tensor objects, storage pointers and versions preserved"
+}

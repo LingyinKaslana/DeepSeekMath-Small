@@ -1,0 +1,5 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 16.99it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 16.91it/s]
+{"event": "evaluation", "label": "step30860", "group": "uniform_train", "loss": 1.933874487876892}
+{"event": "evaluation", "label": "step30860", "group": "seen_train", "loss": 1.8680853843688965}
+{"event": "evaluation", "label": "step30860", "group": "unseen_train", "loss": 1.891266107559204}
+{"status": "complete", "label": "step30860", "metrics": {"validation": 1.8750613927841187, "uniform_train": 1.933874487876892, "seen_train": 1.8680853843688965, "unseen_train": 1.891266107559204}}

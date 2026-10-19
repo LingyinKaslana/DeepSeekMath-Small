@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "script_sha256": "7a5f062e25ff62ee2b248051f1998046acf56ef3be702a6c946781b9e68df98c",
+  "actual_openwebmath_smoke_train_tokens": 3000000,
+  "validation_tokens": 278528,
+  "old_validation_prefix_tokens": 262144,
+  "old_validation_reserved_documents": 334,
+  "old_validation_prefix_bitwise_preserved": true,
+  "new_validation_tokens": 16384,
+  "stop_resume_vs_continuous_artifacts": {
+    "train_tokens.npy": {
+      "resumed_sha256": "3f66ce8543c8f39a1879f4668c1424c6aa3552d5d7394309bf22612240beb57e",
+      "continuous_sha256": "3f66ce8543c8f39a1879f4668c1424c6aa3552d5d7394309bf22612240beb57e",
+      "bitwise_equal": true
+    },
+    "validation_tokens.npy": {
+      "resumed_sha256": "a4938acd4b6977e41687210aa4355fbc6b6a58b2359859073416b37f92624d79",
+      "continuous_sha256": "a4938acd4b6977e41687210aa4355fbc6b6a58b2359859073416b37f92624d79",
+      "bitwise_equal": true
+    },
+    "train.jsonl": {
+      "resumed_sha256": "cfe9749d6df46b57d3548df5fcce2d6979aa02baf4f05d532ac1c4843fb6f9ff",
+      "continuous_sha256": "cfe9749d6df46b57d3548df5fcce2d6979aa02baf4f05d532ac1c4843fb6f9ff",
+      "bitwise_equal": true
+    },
+    "validation.jsonl": {
+      "resumed_sha256": "192cbecdb4a8c45a18e3c34a8972cbcc725fc3e61a8b5db738ef2463845e8550",
+      "continuous_sha256": "192cbecdb4a8c45a18e3c34a8972cbcc725fc3e61a8b5db738ef2463845e8550",
+      "bitwise_equal": true
+    }
+  },
+  "source_shards_used": 3,
+  "all_validation_documents_retokenized": true,
+  "all_training_metadata_audited": true,
+  "global_exact_text_url_deduplication": true,
+  "same_run_candidate_extension_test": {
+    "status": "ready",
+    "duplicates_rejected": 94,
+    "train_tokens": 100000,
+    "source": "synthetic repeated URL fixture using real Qwen tokenizer; both shards extended from durable cursors"
+  },
+  "recommended_workers": 12,
+  "recommended_tokenizer_threads": 4,
+  "total_tokenizer_threads": 48,
+  "short_smoke_worker_effective_tokens_per_second": [
+    806701.9042913502,
+    768781.15825523,
+    977989.9376579713
+  ],
+  "measurement_scope": "CPU row-group read, hashing, batch tokenization, cache write and fsync; excludes tokenizer startup and source digest, not a full 5B preparation time estimate",
+  "dataset_manifest": "./data/processed/openwebmath_large_verified_resume_20261008/manifest.json"
+}

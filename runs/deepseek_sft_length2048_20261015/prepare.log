@@ -1,0 +1,1 @@
+{"event": "prepared", "source": "./runs/deepseek_sft_gsm_math_20261015_setup/evaluation", "selected": {"gsm8k": 14, "math": 547}, "max_new_tokens": 2048, "batch_size": 128, "prepare_only": true}

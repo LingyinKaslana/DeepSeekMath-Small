@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "status": "completed_cpu_small_tensor_review",
+  "observed_utc": "2026-10-09T13:23:34.163706+00:00",
+  "gpu_execution": false,
+  "training_configuration_modified": false,
+  "run": "./runs/cpt_native_from0_5h_20261009",
+  "base_snapshot": "./.cache/huggingface/hub/models--Qwen--Qwen2.5-Coder-1.5B/snapshots/df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "loading": "safetensors.safe_open(cpu) reads eight 1536-element tensors from each saved model; optimizer file torch.load(cpu,mmap=True,weights_only=True), inspect group metadata only",
+  "optimizer_groups": [
+    {
+      "lr": 9.999999747378752e-06,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.1,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": true,
+      "capturable": false,
+      "differentiable": false,
+      "fused": false,
+      "decoupled_weight_decay": true,
+      "parameter_count": 338
+    }
+  ],
+  "schedule": {
+    "total_steps": 305176,
+    "peak_lr": 1e-05,
+    "warmup_steps": 15259,
+    "decay_80_step": 244141,
+    "decay_90_step": 274659,
+    "decay_80_factor": 0.316,
+    "decay_90_factor": 0.1
+  },
+  "effective_batch_tokens": 32768,
+  "parameter_groups": {
+    "total_unique_tensors": 338,
+    "rmsnorm_weights": 57,
+    "attention_biases": 84,
+    "other_weight_tensors_including_shared_embedding": 197
+  },
+  "decay_only_counterfactual": {
+    "gradient_derived_adam_updates": "omitted",
+    "applied_lr": "LR rounded to FP32 exactly as set_native_lr before each update",
+    "real_formula": "exp(sum(log1p(-weight_decay * applied_lr)))",
+    "fp32_simulation": "CPU NumPy FP32 multiplication of the eight original small tensors, once per update; no gradients, not a proof of exact CUDA bitwise behavior",
+    "results": [
+      {
+        "steps": 5000,
+        "sum_applied_lr": 0.00819352513242938,
+        "real_arithmetic_multiplier": 0.9991809829749396,
+        "real_arithmetic_shrink_percent": 0.08190170250603757,
+        "fp32_small_tensor_combined_l2_ratio": 0.9991529546984662,
+        "fp32_relative_deviation_from_real_counterfactual": 4.33976621333761e-05
+      },
+      {
+        "steps": 15259,
+        "sum_applied_lr": 0.0762999999982012,
+        "real_arithmetic_multiplier": 0.9923990320346036,
+        "real_arithmetic_shrink_percent": 0.7600967965396443,
+        "fp32_small_tensor_combined_l2_ratio": 0.9923706236549862,
+        "fp32_relative_deviation_from_real_counterfactual": 6.135408617514331e-05
+      },
+      {
+        "steps": 20000,
+        "sum_applied_lr": 0.12370999880052386,
+        "real_arithmetic_multiplier": 0.9877052015126114,
+        "real_arithmetic_shrink_percent": 1.229479848738857,
+        "fp32_small_tensor_combined_l2_ratio": 0.9875867831996331,
+        "fp32_relative_deviation_from_real_counterfactual": 0.00019963070267804592
+      },
+      {
+        "steps": 25000,
+        "sum_applied_lr": 0.17370999753741762,
+        "real_arithmetic_multiplier": 0.9827789989357578,
+        "real_arithmetic_shrink_percent": 1.722100106424218,
+        "fp32_small_tensor_combined_l2_ratio": 0.9825827754044479,
+        "fp32_relative_deviation_from_real_counterfactual": 0.00034012998958298294
+      },
+      {
+        "steps": 30000,
+        "sum_applied_lr": 0.22370999627431137,
+        "real_arithmetic_multiplier": 0.9778773659083867,
+        "real_arithmetic_shrink_percent": 2.2122634091613302,
+        "fp32_small_tensor_combined_l2_ratio": 0.977620995043654,
+        "fp32_relative_deviation_from_real_counterfactual": 0.00045545286172402776
+      },
+      {
+        "steps": 30860,
+        "sum_applied_lr": 0.2323099960570571,
+        "real_arithmetic_multiplier": 0.9770367524902132,
+        "real_arithmetic_shrink_percent": 2.2963247509786844,
+        "fp32_small_tensor_combined_l2_ratio": 0.9767712188117187,
+        "fp32_relative_deviation_from_real_counterfactual": 0.0004738444863951262
+      }
+    ]
+  },
+  "native_scalar_vs_tensor_lr_decay_coefficient": {
+    "examined_updates": 30860,
+    "different_fp32_coefficients": 0,
+    "interpretation": "Compares FP32(1 - double(FP32(lr))*.1) to FP32(1 - FP32(FP32(lr)*FP32(.1))). This covers the coefficient only, not all Adam update precision."
+  },
+  "checkpoint_small_tensors": [
+    {
+      "steps": 20000,
+      "checkpoint": "./runs/cpt_native_from0_5h_20261009/checkpoint_step_00020000",
+      "real_decay_only_multiplier": 0.9877052015126114,
+      "small_tensors": [
+        {
+          "name": "model.layers.0.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.4537677764892578,
+          "checkpoint_mean": 0.44898524891080643,
+          "checkpoint_l2_to_base": 0.989601682185336,
+          "relative_l2_change": 0.011235182169190764,
+          "relative_l2_residual_vs_fp32_decay_only": 0.004686605081077092,
+          "fp32_decay_only_l2_to_base": 0.9876011450047658
+        },
+        {
+          "name": "model.layers.0.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.5452791959202538,
+          "checkpoint_mean": 0.5392725096505085,
+          "checkpoint_l2_to_base": 0.9887262540961712,
+          "relative_l2_change": 0.01161092126543306,
+          "relative_l2_residual_vs_fp32_decay_only": 0.002970781326045679,
+          "fp32_decay_only_l2_to_base": 0.9876163329337563
+        },
+        {
+          "name": "model.layers.14.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.3390644391377766,
+          "checkpoint_mean": 1.3228778928896645,
+          "checkpoint_l2_to_base": 0.9878684082739573,
+          "relative_l2_change": 0.01214505999033461,
+          "relative_l2_residual_vs_fp32_decay_only": 0.000607842212985737,
+          "fp32_decay_only_l2_to_base": 0.987591935027149
+        },
+        {
+          "name": "model.layers.27.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.2396314938863118,
+          "checkpoint_mean": 1.2246885748657708,
+          "checkpoint_l2_to_base": 0.9877077449710768,
+          "relative_l2_change": 0.012313109917669082,
+          "relative_l2_residual_vs_fp32_decay_only": 0.000696566603669412,
+          "fp32_decay_only_l2_to_base": 0.9876137699141687
+        },
+        {
+          "name": "model.layers.27.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.821889194349448,
+          "checkpoint_mean": 1.799598317971686,
+          "checkpoint_l2_to_base": 0.987747029575495,
+          "relative_l2_change": 0.012275479580923968,
+          "relative_l2_residual_vs_fp32_decay_only": 0.000750159854587043,
+          "fp32_decay_only_l2_to_base": 0.9876127581807856
+        },
+        {
+          "name": "model.norm.weight",
+          "elements": 1536,
+          "base_mean": 4.622725526491801,
+          "checkpoint_mean": 4.567830564153458,
+          "checkpoint_l2_to_base": 0.9881451877823475,
+          "relative_l2_change": 0.011882480620413693,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0009645133906050427,
+          "fp32_decay_only_l2_to_base": 0.9875722867562523
+        },
+        {
+          "name": "model.layers.0.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.05588574645419916,
+          "checkpoint_mean": 0.05532986953365556,
+          "checkpoint_l2_to_base": 0.9876974156377527,
+          "relative_l2_change": 0.012357640161330367,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0011587540000456645,
+          "fp32_decay_only_l2_to_base": 0.9876011169450455
+        },
+        {
+          "name": "model.layers.27.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.04487468798955282,
+          "checkpoint_mean": 0.04430910473691559,
+          "checkpoint_l2_to_base": 0.9876546978666987,
+          "relative_l2_change": 0.012360813168936939,
+          "relative_l2_residual_vs_fp32_decay_only": 0.000604534727426876,
+          "fp32_decay_only_l2_to_base": 0.9875907343496653
+        }
+      ]
+    },
+    {
+      "steps": 25000,
+      "checkpoint": "./runs/cpt_native_from0_5h_20261009/checkpoint_step_00025000",
+      "real_decay_only_multiplier": 0.9827789989357578,
+      "small_tensors": [
+        {
+          "name": "model.layers.0.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.4537677764892578,
+          "checkpoint_mean": 0.4474010026121202,
+          "checkpoint_l2_to_base": 0.9857644616229069,
+          "relative_l2_change": 0.01516030597352594,
+          "relative_l2_residual_vs_fp32_decay_only": 0.00607106661189194,
+          "fp32_decay_only_l2_to_base": 0.9826071699301059
+        },
+        {
+          "name": "model.layers.0.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.5452791959202538,
+          "checkpoint_mean": 0.5367837541023438,
+          "checkpoint_l2_to_base": 0.9840742668097988,
+          "relative_l2_change": 0.016305698494726118,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0037495410294759563,
+          "fp32_decay_only_l2_to_base": 0.9826229455406686
+        },
+        {
+          "name": "model.layers.14.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.3390644391377766,
+          "checkpoint_mean": 1.3163564677461181,
+          "checkpoint_l2_to_base": 0.9829788166953934,
+          "relative_l2_change": 0.017037105276842147,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0007816094810203972,
+          "fp32_decay_only_l2_to_base": 0.9825920071705817
+        },
+        {
+          "name": "model.layers.27.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.2396314938863118,
+          "checkpoint_mean": 1.2187155210061367,
+          "checkpoint_l2_to_base": 0.9828136640543101,
+          "relative_l2_change": 0.017210947742170964,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0008872024547136317,
+          "fp32_decay_only_l2_to_base": 0.9826263650149242
+        },
+        {
+          "name": "model.layers.27.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.821889194349448,
+          "checkpoint_mean": 1.7904861191497428,
+          "checkpoint_l2_to_base": 0.9827365449044586,
+          "relative_l2_change": 0.017290594361055536,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0009652916509100632,
+          "fp32_decay_only_l2_to_base": 0.9826147395845004
+        },
+        {
+          "name": "model.norm.weight",
+          "elements": 1536,
+          "base_mean": 4.622725526491801,
+          "checkpoint_mean": 4.548319437602004,
+          "checkpoint_l2_to_base": 0.9839241977064571,
+          "relative_l2_change": 0.0161181258456034,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0017606754503494463,
+          "fp32_decay_only_l2_to_base": 0.9825615586566308
+        },
+        {
+          "name": "model.layers.0.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.05588574645419916,
+          "checkpoint_mean": 0.055103653614305394,
+          "checkpoint_l2_to_base": 0.9827426397183451,
+          "relative_l2_change": 0.017319390439560094,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0014498507035659296,
+          "fp32_decay_only_l2_to_base": 0.9826024007988824
+        },
+        {
+          "name": "model.layers.27.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.04487468798955282,
+          "checkpoint_mean": 0.044089028503094596,
+          "checkpoint_l2_to_base": 0.9827082385646279,
+          "relative_l2_change": 0.01730856344449651,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0007257849720547285,
+          "fp32_decay_only_l2_to_base": 0.9826053783609028
+        }
+      ]
+    },
+    {
+      "steps": 30000,
+      "checkpoint": "./runs/cpt_native_from0_5h_20261009/checkpoint_step_00030000",
+      "real_decay_only_multiplier": 0.9778773659083867,
+      "small_tensors": [
+        {
+          "name": "model.layers.0.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.4537677764892578,
+          "checkpoint_mean": 0.44586045286268927,
+          "checkpoint_l2_to_base": 0.9819569353382925,
+          "relative_l2_change": 0.019041829640895347,
+          "relative_l2_residual_vs_fp32_decay_only": 0.007418811370407903,
+          "fp32_decay_only_l2_to_base": 0.9776410106907825
+        },
+        {
+          "name": "model.layers.0.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.5452791959202538,
+          "checkpoint_mean": 0.5342937056664564,
+          "checkpoint_l2_to_base": 0.9794155395226116,
+          "relative_l2_change": 0.021017392594142956,
+          "relative_l2_residual_vs_fp32_decay_only": 0.004534034664961608,
+          "fp32_decay_only_l2_to_base": 0.9776642040309724
+        },
+        {
+          "name": "model.layers.14.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.3390644391377766,
+          "checkpoint_mean": 1.309912279096655,
+          "checkpoint_l2_to_base": 0.9781333357859506,
+          "relative_l2_change": 0.021884006959290322,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0009397601478063032,
+          "fp32_decay_only_l2_to_base": 0.9776144881676966
+        },
+        {
+          "name": "model.layers.27.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.2396314938863118,
+          "checkpoint_mean": 1.2127838564580695,
+          "checkpoint_l2_to_base": 0.9779843488395993,
+          "relative_l2_change": 0.022042900002479472,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0010687403141613275,
+          "fp32_decay_only_l2_to_base": 0.977673263443465
+        },
+        {
+          "name": "model.layers.27.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.821889194349448,
+          "checkpoint_mean": 1.7813917390655358,
+          "checkpoint_l2_to_base": 0.9777351873130583,
+          "relative_l2_change": 0.02229607323696867,
+          "relative_l2_residual_vs_fp32_decay_only": 0.001172282965536465,
+          "fp32_decay_only_l2_to_base": 0.9776407538268576
+        },
+        {
+          "name": "model.norm.weight",
+          "elements": 1536,
+          "base_mean": 4.622725526491801,
+          "checkpoint_mean": 4.530520433201976,
+          "checkpoint_l2_to_base": 0.9800668861822293,
+          "relative_l2_change": 0.019989989761115958,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0028595799132538386,
+          "fp32_decay_only_l2_to_base": 0.9775962083543299
+        },
+        {
+          "name": "model.layers.0.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.05588574645419916,
+          "checkpoint_mean": 0.05487730186635531,
+          "checkpoint_l2_to_base": 0.9778634268386509,
+          "relative_l2_change": 0.022206767415049972,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0017482477522597249,
+          "fp32_decay_only_l2_to_base": 0.9776574221322558
+        },
+        {
+          "name": "model.layers.27.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.04487468798955282,
+          "checkpoint_mean": 0.04386575498794324,
+          "checkpoint_l2_to_base": 0.9777775043584561,
+          "relative_l2_change": 0.022240969621660066,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0008422202376172574,
+          "fp32_decay_only_l2_to_base": 0.9776436406477912
+        }
+      ]
+    },
+    {
+      "steps": 30860,
+      "checkpoint": "./runs/cpt_native_from0_5h_20261009/stopped_checkpoint",
+      "real_decay_only_multiplier": 0.9770367524902132,
+      "small_tensors": [
+        {
+          "name": "model.layers.0.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.4537677764892578,
+          "checkpoint_mean": 0.44560003554215655,
+          "checkpoint_l2_to_base": 0.9813059884109602,
+          "relative_l2_change": 0.01970904251525495,
+          "relative_l2_residual_vs_fp32_decay_only": 0.007660494463596184,
+          "fp32_decay_only_l2_to_base": 0.9767892411772015
+        },
+        {
+          "name": "model.layers.0.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 0.5452791959202538,
+          "checkpoint_mean": 0.5338580215032338,
+          "checkpoint_l2_to_base": 0.9785974043302,
+          "relative_l2_change": 0.021844529286677256,
+          "relative_l2_residual_vs_fp32_decay_only": 0.004661305591797359,
+          "fp32_decay_only_l2_to_base": 0.9768121669308399
+        },
+        {
+          "name": "model.layers.14.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.3390644391377766,
+          "checkpoint_mean": 1.3088085638999776,
+          "checkpoint_l2_to_base": 0.9773024036276314,
+          "relative_l2_change": 0.022715134577172058,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0009656354620224977,
+          "fp32_decay_only_l2_to_base": 0.9767606273988828
+        },
+        {
+          "name": "model.layers.27.input_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.2396314938863118,
+          "checkpoint_mean": 1.2117720457669445,
+          "checkpoint_l2_to_base": 0.9771590766788842,
+          "relative_l2_change": 0.022868566213446538,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0011002184473785138,
+          "fp32_decay_only_l2_to_base": 0.9768227483903041
+        },
+        {
+          "name": "model.layers.27.post_attention_layernorm.weight",
+          "elements": 1536,
+          "base_mean": 1.821889194349448,
+          "checkpoint_mean": 1.7798238980525032,
+          "checkpoint_l2_to_base": 0.9768737021386897,
+          "relative_l2_change": 0.02315812787458841,
+          "relative_l2_residual_vs_fp32_decay_only": 0.001204614204107632,
+          "fp32_decay_only_l2_to_base": 0.9767877724055802
+        },
+        {
+          "name": "model.norm.weight",
+          "elements": 1536,
+          "base_mean": 4.622725526491801,
+          "checkpoint_mean": 4.527658018879568,
+          "checkpoint_l2_to_base": 0.9794455994078517,
+          "relative_l2_change": 0.020613509841303772,
+          "relative_l2_residual_vs_fp32_decay_only": 0.003083795101095004,
+          "fp32_decay_only_l2_to_base": 0.9767470075111954
+        },
+        {
+          "name": "model.layers.0.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.05588574645419916,
+          "checkpoint_mean": 0.05484886619289379,
+          "checkpoint_l2_to_base": 0.977026355163635,
+          "relative_l2_change": 0.023045333517488876,
+          "relative_l2_residual_vs_fp32_decay_only": 0.001799127031953086,
+          "fp32_decay_only_l2_to_base": 0.9768092352136514
+        },
+        {
+          "name": "model.layers.27.self_attn.q_proj.bias",
+          "elements": 1536,
+          "base_mean": 0.04487468798955282,
+          "checkpoint_mean": 0.04382695868654688,
+          "checkpoint_l2_to_base": 0.9769356391832807,
+          "relative_l2_change": 0.023082862527003808,
+          "relative_l2_residual_vs_fp32_decay_only": 0.0008582673399910797,
+          "fp32_decay_only_l2_to_base": 0.9767933337106257
+        }
+      ]
+    }
+  ],
+  "installed_hf_trainer_default": {
+    "version": "4.55.4",
+    "source": "./.venv/lib/python3.12/site-packages/transformers/trainer.py:1189",
+    "behavior": "Trainer filters bias, LayerNorm, RMSNorm/name norm out of the decay group; assigns those parameters weight_decay=0. Current custom trainer passes model.parameters() as one WD=.1 group.",
+    "paper_policy": "Paper does not disclose bias/norm decay grouping; this is not evidence our grouping differs from the paper."
+  },
+  "interpretation": [
+    "The native 1.011B curve confirms early loss rebound without optimized execution. Norm/bias decay is a recipe hypothesis, not a diagnosed implementation bug.",
+    "Pure decay at the 5000-step loss minimum is only about .082%; it cannot alone establish an explanation for the entire later loss increase.",
+    "Actual ratios include gradients. Similarity to a pure-decay ratio is association, and nontrivial residuals show gradient effects remain.",
+    "The eight tensors are diagnostic samples, not a census or causal measurement of their effect on loss.",
+    "FP32 parameter multiplication slightly differs from real arithmetic; a CPU counterfactual does not attribute training loss to that rounding."
+  ],
+  "minimal_causal_intervention": {
+    "preferred": "Matched native training arms from identical base or complete checkpoint. Preserve weights, Adam states, next data batches, RNG, LR schedule and clipping. One arm keeps all-parameter WD=.1; the other sets bias/RMSNorm WD=0 while weight matrices retain WD=.1. Evaluate same fixed train probe and validation at matched updates/tokens.",
+    "window": "5000-10000 matched updates for a directional result; from base the strongest early loss minimum comparator requires reaching ~5000-10000 steps.",
+    "avoid": "Do not change LR and decay grouping in the same arm. Do not copy one-period optimizer moments into a differently initialized run or reset schedule. Counterfactual weight rescaling at inference is not equivalent to training without decay.",
+    "secondary": "Separate lower-LR arm if grouping test fails or as a first priority because loss rebounds while LR increases; retain decay unchanged."
+  }
+}

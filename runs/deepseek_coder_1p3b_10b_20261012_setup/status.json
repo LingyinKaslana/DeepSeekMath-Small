@@ -1,0 +1,20 @@
+{
+  "status": "complete_verified",
+  "phase": "finished",
+  "updated_utc": "2026-10-14T13:22:12.741123+00:00",
+  "run": "./runs/deepseek_coder_1p3b_10b_20261012",
+  "source_run": "./runs/deepseek_coder_1p3b_500m_20261012",
+  "model": "deepseek-ai/deepseek-coder-1.3b-base",
+  "configured_input_tokens": 10000000000,
+  "starting_input_tokens": 500006912,
+  "optimizer_preserved": true,
+  "warmup_repeated": false,
+  "qwen_experiments_modified": false,
+  "old_pilot_modified": false,
+  "exit_code": 0,
+  "result": "./runs/deepseek_coder_1p3b_10b_20261012/result.json",
+  "checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+  "verification": "./runs/deepseek_coder_1p3b_10b_20261012_setup/final_checkpoint_verification.json",
+  "report": "./runs/deepseek_coder_1p3b_10b_20261012_setup/report/summary.json",
+  "curve": "./runs/deepseek_coder_1p3b_10b_20261012_setup/report/train_validation_curve.png"
+}

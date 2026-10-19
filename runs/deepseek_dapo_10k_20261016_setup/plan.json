@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-15T16:16:29.557588+00:00",
+  "target_rounds": 10000,
+  "resume_round": 100,
+  "resume_checkpoint": "./runs/deepseek_dapo_100r_20261015/final_checkpoint",
+  "resume_manifest_sha256": "e0e63feff4f6b8b6a6af8a03621b3cec343b80b459d6a84c144fe4f6b465387e",
+  "run": "./runs/deepseek_dapo_10k_20261016",
+  "setup": "./runs/deepseek_dapo_10k_20261016_setup",
+  "source_run_preserved": "./runs/deepseek_dapo_100r_20261015",
+  "effective_groups_used_per_round": 32,
+  "responses_per_group": 8,
+  "optimizer_updates_per_round": 4,
+  "target_cumulative_used_groups": 320000,
+  "target_cumulative_used_responses": 2560000,
+  "target_cumulative_optimizer_updates": 40000,
+  "starting_group_totals": {
+    "effective_groups_found": 3806,
+    "effective_groups_used": 3200,
+    "all_wrong_groups": 3174,
+    "all_correct_groups": 604
+  },
+  "save_every_rounds": 100,
+  "validate_every_rounds": 100,
+  "retention": "Every 100: immutable FP32 model/tokenizer/counters/RNG; latest+best+final: full Adam state. Historical weight-only archives are not exact optimizer resumes.",
+  "expected_archive_weight_gib": 502,
+  "lr": 1e-06,
+  "restart_warmup": false,
+  "unchanged": [
+    "reward and correctness parser",
+    "GSM8K train/heldout split",
+    "32 used groups x 8 responses",
+    "4 minibatch updates/round",
+    "micro16",
+    "256 active response fixed batch with finished-row compaction",
+    "2048 response token cap"
+  ],
+  "not_enabled": [
+    "early cancellation/incorrect reward for long siblings",
+    "continuous group refill"
+  ],
+  "counter_definitions": {
+    "effective_groups_found": "All generated groups with 1..7 correct answers, including batch surplus",
+    "effective_groups_used": "Mixed groups actually used by optimizer (32 per completed round)",
+    "candidate_groups": "All sampled groups, including all wrong/all correct and surplus"
+  },
+  "wait_for": "./runs/deepseek_dapo_100r_20261015_setup_v5/status.json",
+  "final_evaluation": "Best validation checkpoint: full GSM8K+MATH, matched greedy1024 official prompts,batch256",
+  "source_hashes": {
+    "dapo_math.py": "f64ab73faf8c7af42447fd4b61f98e7a6b2bc3554e25e65c993e27d5ef8f6ba0",
+    "dapo_longrun.py": "350c3c47548a528480cc8060577d03ed0e71bd24eeef2de0865c360b1a1681d4",
+    "compact_decode.py": "e27200a3cab1bd47c66a8b1493b9b1bcd5c02610fb597624fe687b23e7d69fed",
+    "test_dapo_math.py": "a9a671ce707f1caee023cc966924992f53e606373621a83b348a844e9f59e606",
+    "test_dapo_longrun.py": "06686b36ffc5f824db9b810342077cfb80ff7c72288de2aefcac0bbb9967b371",
+    "test_compact_decode.py": "53e15b7b97557164ba3ca7446bf874467e197e895af5540484633e0d348db85f",
+    "run_math_inference.py": "39a7665871b94bfcf67afadab6204632a741963c4d93445cf20aaf268c9d9014",
+    "score_math_benchmarks.py": "09b7a92de597dff5801def64924f2f13740f2274bf1f893fa5706a195442d5b7",
+    "math_benchmark_protocol.py": "bd3fc2f2eb8649c33c08f34f7d8e1831828334b8eb1032c6000511d519b15608"
+  }
+}

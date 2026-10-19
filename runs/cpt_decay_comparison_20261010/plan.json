@@ -1,0 +1,83 @@
+{
+  "status": "prepared",
+  "created_utc": "2026-10-10T03:18:55.468803+00:00",
+  "production_run": "./runs/cpt_10b_lr3e6_20261009",
+  "production_pid": 621138,
+  "production_files_modified": false,
+  "original_checkpoint": "./runs/cpt_10b_lr3e6_20261009/checkpoint_step_00115000",
+  "checkpoint": "./runs/cpt_decay_comparison_20261010/starting_checkpoint",
+  "source": "./runs/cpt_decay_comparison_20261010/source",
+  "data": "./data/processed/openwebmath_5b_s42",
+  "start_step": 115000,
+  "end_step": 121104,
+  "steps": 6104,
+  "tokens_per_update": 32768,
+  "new_tokens_per_arm": 200015872,
+  "initial_lr": 3e-06,
+  "final_decay_lr": 3e-07,
+  "evaluation_offsets": [
+    0,
+    500,
+    1000,
+    2000,
+    3000,
+    4000,
+    5000,
+    6104
+  ],
+  "expected_initial_validation": 1.848425030708313,
+  "initial_validation_tolerance": 1e-06,
+  "diagnostic_micro_batch": 8,
+  "effective_batch": 16,
+  "evaluation_micro_batch": 4,
+  "allocator_memory_fraction": 0.42,
+  "arms": [
+    {
+      "id": "constant",
+      "label": "constant LR3e-6",
+      "run_directory": "./runs/cpt_decay_comparison_20261010/branch_constant",
+      "lr_schedule": "constant"
+    },
+    {
+      "id": "linear_decay",
+      "label": "linear LR3e-6 to3e-7",
+      "run_directory": "./runs/cpt_decay_comparison_20261010/branch_linear_decay",
+      "lr_schedule": "linear across6104updates; first3e-6 last3e-7"
+    }
+  ],
+  "checkpoint_manifest_sha256": "c4ba816b8f6f8a1679320fc3fb2b7282f611fe76f4132c9ad15a73367ba5516c",
+  "source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820"
+  },
+  "probes_sha256": "221900a0418b79bccbd6b1e4db23dec9980535c441073b3a246bef02a564d98b",
+  "shared_implementation_difference": "Both arms use original optimized source with micro8 and two gradient accumulation passes instead of production micro16; effective batch remains16. Compile shape8x2048.",
+  "unmodified": [
+    "starting weights and Adam moments/counters",
+    "CPU/CUDA RNG at start",
+    "next6104batches and token/label values",
+    "effective batch16 and sequence2048",
+    "FP32 parameters/grads/moments with BF16autocast",
+    "betas0.9/0.95 WD0.1 eps1e-8 clip1",
+    "native fixed evaluation"
+  ],
+  "main_intervention_policy": "No automatic production change; complete controlled comparison first",
+  "finite_policy": "Fail before optimizer mutation; never skip a batch",
+  "limits": [
+    "Two arms differ only in LR schedule relative to their shared implementation",
+    "A local response does not establish the unique original cause",
+    "LR changes gradient-update magnitude and LR-times-weight-decay together",
+    "Unseen denotes exact blocks in these branches, independent of continuing production",
+    "Shared GPU contention affects timing but not token budgets"
+  ]
+}

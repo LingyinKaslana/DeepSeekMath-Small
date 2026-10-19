@@ -1,0 +1,93 @@
+{
+  "generated_utc": "2026-10-10T02:13:21.826369+00:00",
+  "scope": "Read-only CPU audit and existing saved evaluations; active training settings untouched",
+  "sampling": {
+    "all_source_shards": 114,
+    "policy": "equal train and new-validation token quotas across fixed-seed shuffled source shards; shuffled row groups and rows",
+    "split": "fixed normalized-text SHA256 threshold independent of budgets; all pilot validation text hashes/URLs reserved first",
+    "train_tokens": 5000000000,
+    "train_documents": 2540257,
+    "not_strict_uniform_document_sample": true
+  },
+  "training_shuffle": "Independent sequential CPU-generator permutations per epoch, compact checksummed .npy; partial batches end at epoch boundaries",
+  "source_window_audit": "./runs/cpt_10b_lr3e6_20261009_launch/data_distribution_review/temporal_shard_distribution.json",
+  "source_window_audit_limit": "Source shard labels are coarse; this does not measure semantic or baseline-model difficulty shifts",
+  "fixed_probe": {
+    "blocks": 256,
+    "indices_sha256": "0275fe980c1fd3bf853fa63d40c27291d4368b0eb41b4c183127d9f964169a81",
+    "tokens_sha256": "f2d447c272813ee27c047b0a895234932d1d05cb1e4275b11b982dfedee42619",
+    "initial_loss": 1.931435465812683,
+    "minimum": {
+      "step": 14000,
+      "cumulative_tokens": 458752000,
+      "loss": 1.8931154012680054,
+      "perplexity": 6.640022826896199,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    },
+    "latest": {
+      "step": 110000,
+      "cumulative_tokens": 3604480000,
+      "loss": 1.8970496654510498,
+      "perplexity": 6.666197886916813,
+      "supervised_tokens": 524032,
+      "input_tokens": 524288,
+      "blocks": 256,
+      "loss_backend": "native eager",
+      "attention_mask": "standard 2D all-ones tensor"
+    }
+  },
+  "validation": {
+    "minimum": {
+      "step": 13000,
+      "loss": 1.8205416202545166,
+      "perplexity": 6.175202158856531,
+      "supervised_tokens": 2096128,
+      "input_tokens": 2097152,
+      "blocks": 1024,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    },
+    "latest": {
+      "step": 110000,
+      "loss": 1.8481593132019043,
+      "perplexity": 6.34812385410181,
+      "supervised_tokens": 2096128,
+      "input_tokens": 2097152,
+      "blocks": 1024,
+      "loss_backend": "native eager",
+      "attention_mask": "cached all-ones tensor"
+    }
+  },
+  "old_high_lr_seen_unseen": {
+    "base": {
+      "seen_train": 1.904410719871521,
+      "unseen_train": 1.8848373889923096
+    },
+    "step20000": {
+      "seen_train": 1.8369916677474976,
+      "unseen_train": 1.882137417793274
+    },
+    "step30860": {
+      "seen_train": 1.8680853843688965,
+      "unseen_train": 1.891266107559204
+    }
+  },
+  "fixed_changed_batch_baseline_difficulty_measured_this_turn": false,
+  "known_packing_issue_source": "./runs/cpt_native_long_20261009/other_causes_review.json",
+  "old_packing_strata_evaluation": "./runs/cpt_native_long_20261009/strata_comparison.json",
+  "supported": [
+    "Global block shuffle and broad source proportions show no source-ordered later-domain switch",
+    "Fixed native probe sample bytes do not change, so its rebound is not a consequence of resampling evaluation batches",
+    "New and old peakLR runs share epoch0 order but have different loss minima; updates affect the trend"
+  ],
+  "not_established": [
+    "A unique cause of rebound",
+    "No semantic/quality heterogeneity in corpus",
+    "Strictly seen-sample deterioration in the new low-LR run"
+  ],
+  "next_discriminating_check": "Compare early and later saved new-run checkpoints on exactly fixed blocks all visited by the earlier checkpoint, plus blocks not visited by the later checkpoint. Do not change the active production run."
+}

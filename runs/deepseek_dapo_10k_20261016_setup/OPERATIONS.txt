@@ -1,0 +1,57 @@
+DAPO cumulative 10,000-round continuation
+
+Project: .
+Setup: runs/deepseek_dapo_10k_20261016_setup
+Run: runs/deepseek_dapo_10k_20261016
+Session: deepseek-dapo-10k-20261016
+
+The durable tmux session first waits for the prior 100-round benchmark pipeline
+and for GPU ownership to be released. It then verifies source hashes, runs CPU
+checks, loads final round100 FP32 weights + full AdamW state, and verifies every
+weight tensor and optimizer state against disk before resuming at round101.
+The previous experiment and benchmark artifacts are preserved.
+
+Policy settings: LR 1e-6 (original warmup already finished), GSM8K training split,
+32 used mixed-correctness groups x 8 responses per round, 4 optimizer minibatches,
+response cap2048, train micro16, rollout prompt batch32, compact finished rows.
+No early cancellation/changed reward and no continuous group refill.
+
+Save and validate every100 cumulative rounds. Archives checkpoints/roundNNNNNN
+retain FP32 weights, tokenizer, counters and RNG. Latest/best checkpoints retain
+full optimizer state. Weight-only archives cannot continue AdamW exactly.
+The historical100 snapshot is retained as well; expected 100 weight archives
+through round10000 use about502 GiB, plus latest/best full state and logs.
+
+Progress sources:
+ - setup/status.json: pipeline phase (changes only when phase changes)
+ - run/progress.json: live current sampling/update/round status
+ - run/group_totals.json: counters through the last COMPLETED update round
+ - run/training.jsonl: one record/round; first100 copied from immutable prior run
+ - run/rollouts.jsonl: every generated group, including rejected/surplus groups
+ - run/validation_history.json: heldout zero-shot GSM8K256 history
+ - run/checkpoints.jsonl: retained archive index
+ - setup/training.log: detailed stdout/stderr
+
+Counter definitions:
+ effective_groups_found: mixed groups discovered, including unused batch surplus
+ effective_groups_used: mixed groups consumed by optimizer (32/completed round)
+ candidate_groups: all generated groups (found + all wrong + all correct)
+ Gradient updates: 4/completed round.
+Target cumulative used groups320000, responses2560000, gradient updates40000.
+Starting totals: found3806, used3200, candidates7584, gradient updates400.
+
+A tmux session survives client disconnects, not host reboot. The training process
+fails on nonfinite gradients or if 512 candidate groups cannot yield32 mixed
+groups. Such failure preserves saved checkpoints and reports failed status;
+there is no silent reward/filter alteration or unbounded automatic retry.
+
+Before any manual restart: make sure the original training process is gone;
+verify the selected full checkpoint, preserve and trim append-only training and
+rollout logs to its completed_rounds, and preserve any newer validation artifacts.
+Resume with the frozen source and identical flags, replacing --resume with the
+full latest_checkpoint and omitting --extend-rounds/--history-run. This does not
+repeat warmup. Do not restart the initial launcher blindly into an existing run.
+
+After round10000, the pipeline verifies final checkpoint tensor/Adam reload,
+then evaluates the best validation checkpoint on full GSM8K1319+MATH5000 using
+matched official prompts/greedy1024/batch256, scores and verifies the full report.

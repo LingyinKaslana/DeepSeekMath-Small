@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "checkpoint": "./runs/cpt_multiepoch_smoke_20261008/final_checkpoint",
+  "cpu_only": true,
+  "weights": {
+    "serialized_tensors_compared_exactly": 338,
+    "reloaded_state_tensors": 339,
+    "serialized_tensor_elements": 1543714304,
+    "serialized_tensor_bytes": 6174857216,
+    "model_parameters": 1543714304,
+    "unique_parameter_tensors": 338,
+    "tied_aliases": {
+      "lm_head.weight": "model.embed_tokens.weight"
+    },
+    "shards": 2
+  },
+  "optimizer": {
+    "parameter_groups": 1,
+    "parameter_ids": 338,
+    "initialized_states": 338,
+    "state_tensors_checked": 1014,
+    "moment_elements": 3087428608,
+    "moment_bytes": 12349714432,
+    "moment_dtype": "float32",
+    "optimizer_step": 66,
+    "cpu_adamw_load_state_dict_passed": true
+  },
+  "tokenizer": {
+    "model_vocabulary": 151936,
+    "tokenizer_size": 151665,
+    "eos_token_id": 151643,
+    "eos_token": "<|endoftext|>",
+    "tied_word_embeddings": true
+  },
+  "training": {
+    "completed_steps": 66,
+    "configured_steps": 66,
+    "optimizer_updates": 66,
+    "trained_tokens": 2098176,
+    "supervised_tokens": 2097150,
+    "dataset_tokens": 1049088,
+    "shuffle_blocks": 513,
+    "epochs": 2,
+    "epoch_steps": 33,
+    "order_storage": "checksummed mmap NumPy files",
+    "schedule_complete": true,
+    "schedule": {
+      "total_steps": 66,
+      "peak_lr": 1e-05,
+      "warmup_steps": 4,
+      "decay_80_step": 53,
+      "decay_90_step": 60,
+      "decay_80_factor": 0.316,
+      "decay_90_factor": 0.1
+    },
+    "source_sha256": {
+      "train_cpt.py": "319197b0fb29b3425ba6f6cb7c10bb9c3c62ff25d21333ff55c37d614c274aa3",
+      "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+      "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+      "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+      "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+      "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+      "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+      "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+      "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+    },
+    "signature": {
+      "backend_config_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+      "data_manifest_sha256": "78a1145f07ce7346c259f2f44201183123ba4939a7540548ce93c8a4f5712d77",
+      "token_file_sha256": {
+        "train_tokens.npy": "599b849a4f8600a6e5534c3759814a5592151d63d215022ee77dbf47db7b2881",
+        "validation_tokens.npy": "11e8bb7af47658075c1c0d9ac783e1d60ad026cdf8233d44aacdc60cc1323b93"
+      },
+      "peak_lr": 1e-05,
+      "seed": 42,
+      "sequence_length": 2048,
+      "effective_batch": 16,
+      "epochs": 2,
+      "source_sha256": {
+        "train_cpt.py": "319197b0fb29b3425ba6f6cb7c10bb9c3c62ff25d21333ff55c37d614c274aa3",
+        "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+        "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+        "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+        "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+        "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+        "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+        "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+        "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+      }
+    }
+  },
+  "checkpoint_bytes": 18540864702,
+  "checkpoint_files": {
+    "generation_config.json": 117,
+    "added_tokens.json": 605,
+    "chat_template.jinja": 2507,
+    "training_state.pt": 12350051623,
+    "model-00002-of-00002.safetensors": 1178224960,
+    "tokenizer_config.json": 4688,
+    "checkpoint_manifest.json": 5129,
+    "model-00001-of-00002.safetensors": 4996670464,
+    "merges.txt": 1671853,
+    "tokenizer.json": 11421896,
+    "special_tokens_map.json": 616,
+    "model.safetensors.index.json": 27729,
+    "config.json": 1322,
+    "vocab.json": 2776833
+  },
+  "checkpoint_order_files": {
+    "orders/order_epoch_00000.npy": 2180,
+    "orders/order_epoch_00001.npy": 2180
+  },
+  "checkpoint_config_sha256": "b3acdef5a51b13f9badea41d138def143a4a63745d6404ccfb772e2f2b26a714",
+  "checkpoint_manifest_sha256": "c1cb0dabc42a0e471d1f1f8270d287d5eceae557f1e4bb7d9bed31b28e988392",
+  "checkpoint_source_sha256": {
+    "train_cpt.py": "319197b0fb29b3425ba6f6cb7c10bb9c3c62ff25d21333ff55c37d614c274aa3",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56"
+  },
+  "scope": "Exact serialized weight reload; FP32 finite weights/moments; optimizer binding/counters; source/config/data signatures. No live-model comparison or training resume execution.",
+  "seconds": 22.345511630002875,
+  "verified_utc": "2026-10-08T06:44:47.919426+00:00",
+  "verifier_source_sha256": "d2007715391820a7f07814cba7a338bc34a20bcc4144682e28b48d9102cd740b"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "complete_protocol_matched_comparison",
+  "run": "./runs/base_vs_cpt_10b_20261012",
+  "comparison": "./runs/base_vs_cpt_10b_20261012/comparison.json",
+  "base_run": "./runs/base_math_inference_20261012",
+  "cpt_run": "./runs/cpt_10b_inference_20261012",
+  "questions_per_model": 6319,
+  "updated_utc": "2026-10-12T04:26:46.225259+00:00"
+}

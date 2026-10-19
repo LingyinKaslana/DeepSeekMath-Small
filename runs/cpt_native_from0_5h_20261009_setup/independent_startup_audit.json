@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "passed_runtime_startup_audit",
+  "observed_utc": "2026-10-09T04:32:33.552345+00:00",
+  "gpu_execution_by_reviewer": false,
+  "production_files_modified": false,
+  "run": "./runs/cpt_native_from0_5h_20261009",
+  "setup": "./runs/cpt_native_from0_5h_20261009_setup",
+  "manifest": "./runs/cpt_native_from0_5h_20261009/manifest.json",
+  "validation_before": "./runs/cpt_native_from0_5h_20261009/validation_before.json",
+  "first_training_record": "./runs/cpt_native_from0_5h_20261009/training.jsonl",
+  "checks": [
+    {
+      "name": "fresh_start_runtime_manifest",
+      "passed": true
+    },
+    {
+      "name": "actual_source_and_backend_same_as_reviewed",
+      "passed": true
+    },
+    {
+      "name": "same_actual_verified_input_fingerprints",
+      "passed": true,
+      "token_file_sha256": {
+        "train_tokens.npy": "882da90d2ba31e63d90ef1c9192b077d9c76c7b6b04aedb95948e084bc69edc5",
+        "validation_tokens.npy": "51f5e5d49556e674abd29e4bec7af633c34d6be5ed38f2a1436eeaeb72ac3de0"
+      },
+      "note": "manifest produced after frozen verify_data SHA of actual files."
+    },
+    {
+      "name": "same_actual_order_byte_hashes_and_schedule",
+      "passed": true,
+      "schedule": {
+        "total_steps": 305176,
+        "peak_lr": 1e-05,
+        "warmup_steps": 15259,
+        "decay_80_step": 244141,
+        "decay_90_step": 274659,
+        "decay_80_factor": 0.316,
+        "decay_90_factor": 0.1
+      },
+      "order_sha256": [
+        "cb620a8596cd8ff50b838e6be94fa676ffbe0d41118c094fcbed66c2817b466b",
+        "d522f0f1d149346e93da04800c666611fb3789df357343ac221de61a745f6f80"
+      ]
+    },
+    {
+      "name": "same_training_seed_and_math_protocol",
+      "passed": true,
+      "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+      "note": "fresh native optimizer implementation was CPU/static reviewed: new torch.optim.AdamW, empty initial state, betas .9/.95, wd .1 allparams, eps1e-8, strict clip1; no load_state_dict branch when resume=None."
+    },
+    {
+      "name": "native_no_compile_retry",
+      "passed": true
+    },
+    {
+      "name": "five_hours_does_not_shorten_lr_schedule",
+      "passed": true,
+      "max_seconds": 18000.0
+    },
+    {
+      "name": "step0_validation_matches_original_base_exactly",
+      "passed": true,
+      "loss": 1.86186945438385,
+      "expected_loss": 1.86186945438385,
+      "absolute_difference": 0.0
+    },
+    {
+      "name": "step0_fixed_training_probe",
+      "passed": true,
+      "loss": 1.931435465812683,
+      "input_tokens": 524288
+    },
+    {
+      "name": "first_successful_update_is_step1_first_epoch_first_batch_fresh_warmup",
+      "passed": true,
+      "record": {
+        "step": 1,
+        "loss": 1.948043704032898,
+        "grad_norm": 1.7028546333312988,
+        "epoch": 1,
+        "step_in_epoch": 1,
+        "lr": 6.553509404285996e-10,
+        "effective_fp32_lr": 6.553509401818758e-10,
+        "input_tokens": 32768,
+        "supervised_tokens": 32752,
+        "cumulative_tokens": 32768,
+        "seconds": 1.1307840419758577,
+        "native_retry_applied": false,
+        "optimizer_applied": true,
+        "first_full_shape_update": true
+      }
+    }
+  ],
+  "limitations": [
+    "Live GPU optimizer tensors were not independently read by this CPU-only reviewer; fresh optimizer behavior follows verified frozen no-resume control flow and step0/step1 manifest/log evidence.",
+    "Initial validation matches exact recorded average; this confirms start/reference alignment without claiming bitwise subsequent native/compiled gradients.",
+    "5h trainer wall budget includes startup/evaluations/saves; final boundary evaluation/save and wrapper CPU verification/report may finish later."
+  ]
+}

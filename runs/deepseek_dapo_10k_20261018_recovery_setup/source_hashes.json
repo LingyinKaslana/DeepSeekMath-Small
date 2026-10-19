@@ -1,0 +1,18 @@
+{
+  "audit_dapo_prompt_history.py": "d0733d9a3af668209e75a334c558ab2833f54cb65ce93e4b9dc26c006eeb0f91",
+  "score_math_benchmarks.py": "09b7a92de597dff5801def64924f2f13740f2274bf1f893fa5706a195442d5b7",
+  "dapo_math.py": "f4e73ba012b8ba70f762f7ef304a32ea060677557cc6df2bb2ce627f3db01ceb",
+  "test_compact_decode.py": "53e15b7b97557164ba3ca7446bf874467e197e895af5540484633e0d348db85f",
+  "benchmark_dapo_tailopt.py": "1535e67d8ed7e47d16e9692be9d0bc8b3fc619fd894cf2bb74d08cd05f062c64",
+  "group_length_shadow.py": "2aac6fa3f167c5043b54c14812314f6addbb6902f0f52e75b17146719f744aee",
+  "test_group_length_shadow.py": "53e7841aa82502fd402c2dc793ef24d241e751b2b95cbb848f015300aaa76100",
+  "test_dapo_math.py": "a9a671ce707f1caee023cc966924992f53e606373621a83b348a844e9f59e606",
+  "test_dapo_recovery.py": "27b94b92940ed5201e5e4c53732b7ee39360cf6c4d3977d9ec1b27ea2b05cd5a",
+  "math_benchmark_protocol.py": "bd3fc2f2eb8649c33c08f34f7d8e1831828334b8eb1032c6000511d519b15608",
+  "run_math_inference.py": "39a7665871b94bfcf67afadab6204632a741963c4d93445cf20aaf268c9d9014",
+  "dapo_longrun.py": "350c3c47548a528480cc8060577d03ed0e71bd24eeef2de0865c360b1a1681d4",
+  "compact_decode.py": "e27200a3cab1bd47c66a8b1493b9b1bcd5c02610fb597624fe687b23e7d69fed",
+  "test_dapo_tail_sampling.py": "2ca48d235457ea7334c93b28eca85d7d843e350aa82438f0e7a3e03c4eb85e87",
+  "dapo_tail_sampling.py": "84b62a7e9d09fcb79801e006d870e5c86f1a1d3c3a681d631d0ca4e3d0843517",
+  "test_dapo_longrun.py": "06686b36ffc5f824db9b810342077cfb80ff7c72288de2aefcac0bbb9967b371"
+}

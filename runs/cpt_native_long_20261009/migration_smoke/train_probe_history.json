@@ -1,0 +1,24 @@
+[
+  {
+    "step": 181650,
+    "cumulative_tokens": 5952302080,
+    "loss": 1.9102617502212524,
+    "perplexity": 6.7548566523764135,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 181654,
+    "cumulative_tokens": 5952433152,
+    "loss": 1.9101834297180176,
+    "perplexity": 6.754327629321066,
+    "supervised_tokens": 524032,
+    "input_tokens": 524288,
+    "blocks": 256,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  }
+]

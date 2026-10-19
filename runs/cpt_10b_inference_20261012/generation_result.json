@@ -1,0 +1,34 @@
+{
+  "status": "generation_complete",
+  "finished_utc": "2026-10-12T02:36:45.015768+00:00",
+  "questions": 6319,
+  "benchmarks": {
+    "gsm8k": {
+      "questions": 1319,
+      "finish_reasons": {
+        "stop_string": 1187,
+        "length": 70,
+        "eos": 62
+      },
+      "generated_tokens": 219144,
+      "prediction_sha256": "483cd11a8dddd317fb0e0d5ef67ebb669e6a2578118960fb514797691ad78800"
+    },
+    "math": {
+      "questions": 5000,
+      "finish_reasons": {
+        "stop_string": 3944,
+        "eos": 216,
+        "length": 840
+      },
+      "generated_tokens": 1540879,
+      "prediction_sha256": "a064bb0b9565c8765d81fe8800bc1deaf783b919ef905db7cdc4c113e8023f22"
+    }
+  },
+  "manifest": "./runs/cpt_10b_inference_20261012/manifest.json",
+  "generation_seconds_this_invocation": 2716.6349222360877,
+  "generation_tokens_per_second": 647.8687973838267,
+  "wall_seconds_this_invocation": 2810.8548265799764,
+  "peak_allocated_gib": 98.4581823348999,
+  "scoring": "pending",
+  "training_modified": false
+}

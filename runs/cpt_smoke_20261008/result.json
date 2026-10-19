@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "scope": "CPT correctness smoke; short timing is not a throughput benchmark",
+  "config": {
+    "model": "Qwen/Qwen2.5-Coder-1.5B",
+    "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+    "output": "DeepSeekMath-Small/runs/cpt_smoke_20261008",
+    "fixture": true,
+    "data": null,
+    "local_files_only": true,
+    "sequence_length": 512,
+    "batch_size": 2,
+    "warmup_steps": 2,
+    "steps": 3,
+    "lr": 0.0001
+  },
+  "resolved_model_commit": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "script_sha256": "0454e3d2bca51a153c1b4f40d385f967e4bdcb05f1ec1ffd8ec2fcac08206895",
+  "data_sha256": "9b7a208dba40033980564fec5304216c17b031b9bad3f44d108242186618a2fc",
+  "gpu": "NVIDIA GB300",
+  "versions": {
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4"
+  },
+  "trainable_parameters": 1543714304,
+  "probe": "model.layers.0.self_attn.q_proj.weight",
+  "probe_changed_elements": 1613919,
+  "losses": [
+    0.8627362847328186,
+    5.64630651473999,
+    0.872613787651062
+  ],
+  "grad_norms": [
+    58.5,
+    660.0,
+    32.5
+  ],
+  "timed_seconds": 0.65510554901266,
+  "seconds_per_update": 0.21836851633755336,
+  "input_tokens_per_second": 4689.320682186181,
+  "peak_allocated_bytes": 15462976000,
+  "peak_reserved_bytes": 20430454784,
+  "checkpoint_loss": 0.3788130283355713,
+  "reloaded_loss": 0.3788130283355713,
+  "resumed_loss": 0.3788130283355713,
+  "resume_verified": true,
+  "optimizer_state_dtype": "PyTorch AdamW defaults; not FP32 master-weight training"
+}

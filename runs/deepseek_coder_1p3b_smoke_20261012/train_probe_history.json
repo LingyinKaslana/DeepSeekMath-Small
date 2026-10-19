@@ -1,0 +1,35 @@
+[
+  {
+    "step": 0,
+    "cumulative_tokens": 0,
+    "loss": 2.272456407546997,
+    "perplexity": 9.703206593661045,
+    "supervised_tokens": 65504,
+    "input_tokens": 65536,
+    "blocks": 32,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 16,
+    "cumulative_tokens": 524288,
+    "loss": 2.256883382797241,
+    "perplexity": 9.553268839621769,
+    "supervised_tokens": 65504,
+    "input_tokens": 65536,
+    "blocks": 32,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  },
+  {
+    "step": 32,
+    "cumulative_tokens": 1047840,
+    "loss": 2.2387397289276123,
+    "perplexity": 9.381500600250154,
+    "supervised_tokens": 65504,
+    "input_tokens": 65536,
+    "blocks": 32,
+    "loss_backend": "native eager",
+    "attention_mask": "standard 2D all-ones tensor"
+  }
+]

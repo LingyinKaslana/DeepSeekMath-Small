@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-09T02:10:54.459294+00:00",
+  "pid": 513107,
+  "checks": {
+    "process_live": true,
+    "frozen_source_matches_manifest": true,
+    "configured_10b_tokens": true,
+    "configured_305176_steps": true,
+    "resumed_at_verified_step": true,
+    "resumed_at_verified_token_prefix": true,
+    "validation_exactly_matches_saved_checkpoint": true,
+    "retry_enabled": true,
+    "source_only_migration_preserved": true,
+    "updates_running": true,
+    "contiguous_updates": true,
+    "finite_loss_norm": true,
+    "no_skipped_batch": true,
+    "no_unexpected_native_retry": true,
+    "lr_unchanged": true,
+    "no_failed_result": true
+  },
+  "latest_record": {
+    "step": 175325,
+    "loss": 1.970310926437378,
+    "grad_norm": 2.198460817337036,
+    "epoch": 2,
+    "step_in_epoch": 22737,
+    "lr": 1e-05,
+    "input_tokens": 32768,
+    "supervised_tokens": 32752,
+    "cumulative_tokens": 5745046016,
+    "seconds": 0.3386449520185124,
+    "native_retry_applied": false,
+    "optimizer_applied": true,
+    "first_full_shape_update": false
+  },
+  "recent_update_tokens_per_second": 97593.13655658558,
+  "estimated_remaining_pure_training_hours": 12.110807213752427,
+  "scope": "Read-only startup evidence: exact native validation reload, unchanged data/LR/order/token budget, finite contiguous updates; source-only migration audited"
+}

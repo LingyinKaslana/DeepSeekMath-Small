@@ -1,0 +1,98 @@
+{
+  "generated_utc": "2026-10-14T13:22:11.564346+00:00",
+  "generated_beijing": "2026-10-14T21:22:11.564346+08:00",
+  "run": "./runs/deepseek_coder_1p3b_10b_20261012",
+  "source_runs": [
+    "./runs/deepseek_coder_1p3b_500m_20261012",
+    "./runs/deepseek_coder_1p3b_10b_20261012"
+  ],
+  "common_evaluation_step": 305176,
+  "baseline": {
+    "step": 0,
+    "input_tokens": 0,
+    "input_tokens_b": 0.0,
+    "validation_loss": 2.1084015369415283,
+    "fixed_train_probe_loss": 2.113933563232422
+  },
+  "latest": {
+    "step": 305176,
+    "input_tokens": 10000000000,
+    "input_tokens_b": 10.0,
+    "validation_loss": 1.7536568641662598,
+    "fixed_train_probe_loss": 1.70439875125885
+  },
+  "best_validation": {
+    "step": 305000,
+    "input_tokens": 9994234880,
+    "input_tokens_b": 9.99423488,
+    "validation_loss": 1.75364089012146,
+    "fixed_train_probe_loss": 1.7047300338745117
+  },
+  "best_fixed_train_probe": {
+    "step": 304000,
+    "input_tokens": 9961466880,
+    "input_tokens_b": 9.96146688,
+    "validation_loss": 1.754028081893921,
+    "fixed_train_probe_loss": 1.7042841911315918
+  },
+  "train_probe_seen_blocks": 256,
+  "train_probe_unseen_blocks": 0,
+  "batch_mean_window_updates": 1000,
+  "batch_mean_latest": {
+    "start_step": 304001,
+    "end_step": 305000,
+    "input_tokens_b": 9.99423488,
+    "supervised_tokens": 32752000,
+    "updates": 1000,
+    "token_weighted_batch_loss": 1.7691286603212357
+  },
+  "batch_mean_weighting": "supervised-token weighted, non-overlapping complete windows, x at window end",
+  "fixed_evaluation_point_count": 323,
+  "batch_mean_point_count": 305,
+  "observed_training_rows_through_cutoff": 305176,
+  "sources": [
+    {
+      "path": "./runs/deepseek_coder_1p3b_10b_20261012/manifest.json",
+      "sha256": "bac9d6ad1350f1eedef48d60ffc63b265ca24283f474fae84db336964214200f"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/final_checkpoint/checkpoint_manifest.json",
+      "sha256": "d7a498cffacfe8ee741e73756166f308a1b71c184344ea716a0b8c9bf541cc11"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/manifest.json",
+      "sha256": "373d8ecf12c4177d24b0332f4fc03149b62cdadfe471c88fbfefce3ce8845709"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_10b_20261012/data_manifest.json",
+      "sha256": "1e8045ecdc70a6c1cc1eb9c88a10ac3f790b1ced7ba4bc56af2bf85c86ea981a"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_10b_20261012/validation_before.json",
+      "sha256": "b03b3f800f25fbe7819e5a0714a07d9b8ac70181dbb6337a5a2488b5d91b1e69"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/validation_before.json",
+      "sha256": "cc21b8cc2b44f650364e3505f377c2667e10d5babe281928dbfd6b4333eea9f1"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_10b_20261012/validation_history.json",
+      "sha256": "ae2d684b5813dc83f8b86fe5bc36f7f4745759b01e266609bcd71b55944efa7b"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_10b_20261012/train_probe_history.json",
+      "sha256": "971a80a57da29a7d1b37072e4928b8bdd4441aa1eed95cf9a1a8f8dedb515555"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_500m_20261012/training.jsonl",
+      "sha256": "5c133895d23512470e163a6a4881551fdc7330cfad27259b92c0ff97410661e9"
+    },
+    {
+      "path": "./runs/deepseek_coder_1p3b_10b_20261012/training.jsonl",
+      "sha256": "0d439a8126cd3ac6fdf96cb81b279146c79f4c74aaf4f730d48cc929397bdea7"
+    }
+  ],
+  "script_sha256": "cfde072aa270544e6161f015631c6f577bf9b88d0b4bfa03dc3766d47b0a1eeb",
+  "fixed_curves_smoothed": false,
+  "training_unchanged": true
+}

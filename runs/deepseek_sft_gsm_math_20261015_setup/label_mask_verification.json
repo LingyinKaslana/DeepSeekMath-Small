@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "examples_read": 14459,
+  "unicode_line_separators_preserved": true,
+  "prompt_and_padding_labels_masked": true,
+  "real_eos_supervised_even_when_pad_equals_eos": true,
+  "native_hf_loss_matches_independent_shifted_cross_entropy": true,
+  "supervised_count_matches_native_shift": true,
+  "diagnostic_smoke_isolated_from_formal_training": true,
+  "cpu_only": true
+}

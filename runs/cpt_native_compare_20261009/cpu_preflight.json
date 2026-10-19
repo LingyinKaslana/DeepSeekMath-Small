@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "same_common_plan": true,
+  "ignored_fields": [
+    "case",
+    "started_utc"
+  ],
+  "global_steps": [
+    179939,
+    180939
+  ],
+  "input_tokens": 32768000,
+  "target_tokens": 32752000,
+  "source_sha256": {
+    "train_cpt.py": "e402087acbaebdd177917f85bae8d87453a80b8f452b03f9214a958084b997d6",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "0b95360c9051bdb2d0fc0a646cd26477a297434d114b3183742565dd8823c5f0"
+  },
+  "diagnostic_sha256": "455eeb4f5bfcbcbc9f8405dcb8193fb62d7d5be23a3838eeb3bc76d14aa8bb5e",
+  "fixed_probe_index_sha256": "0275fe980c1fd3bf853fa63d40c27291d4368b0eb41b4c183127d9f964169a81",
+  "fixed_probe_token_sha256": "f2d447c272813ee27c047b0a895234932d1d05cb1e4275b11b982dfedee42619",
+  "batch_indices_sha256": "0347e7a6e2e8d9f0f9ca036317c30c5161d47b1a34850f86dc2c560bc86b6bcb",
+  "batch_values_sha256": "7c6ad4db2fde2040af896be6ab7402f2bf3d860ce2591238e7d9c75027b9f097",
+  "cpu_data_path_comparison": {
+    "passed": true,
+    "updates": 1000,
+    "input_ids_equal": true,
+    "labels_equal": true,
+    "token_and_target_counts_equal": true
+  },
+  "tail_steps": [],
+  "cpu_tests": {
+    "status": "passed",
+    "tests": 7,
+    "log": "cpu_tests.log",
+    "test_script_sha256": "6506ceef01bc4b7392448b37ca3ac7681018b87f9572545189f30531c85eba55",
+    "frozen_source_matches_tested_source": true
+  }
+}

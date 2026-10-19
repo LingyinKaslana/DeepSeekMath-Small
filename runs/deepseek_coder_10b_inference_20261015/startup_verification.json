@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-15T00:53:57.324145+00:00",
+  "checkpoint": "./runs/deepseek_coder_1p3b_10b_20261012/final_checkpoint",
+  "questions_total": 6319,
+  "first_batch_questions": 256,
+  "current_progress": {
+    "status": "generating",
+    "updated_utc": "2026-10-15T00:53:09.433504+00:00",
+    "benchmark": "gsm8k",
+    "dataset_finished": 256,
+    "dataset_total": 1319,
+    "finished": 256,
+    "total": 6319,
+    "batch_seconds": 170.41550750203896,
+    "generated_tokens_this_invocation": 34992,
+    "generation_seconds_this_invocation": 170.41550750203896,
+    "generation_tokens_per_second": 205.33342600632358,
+    "peak_allocated_gib": 137.96890306472778
+  },
+  "batch_size": 256,
+  "no_smoke_limit": true,
+  "first_batch_complete_with_unique_indices": true,
+  "question_text_matches_official_prompts": true,
+  "healthy_background_session": true,
+  "estimated_generation_minutes_range": [
+    70,
+    100
+  ],
+  "automatic_scoring_and_completeness_verification": true,
+  "training_modified": false
+}

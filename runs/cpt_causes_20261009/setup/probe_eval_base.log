@@ -1,0 +1,4 @@
+{"event": "evaluation", "label": "base", "group": "uniform_train", "loss": 1.931435465812683}
+{"event": "evaluation", "label": "base", "group": "seen_train", "loss": 1.904410719871521}
+{"event": "evaluation", "label": "base", "group": "unseen_train", "loss": 1.8848373889923096}
+{"status": "complete", "label": "base", "metrics": {"validation": 1.86186945438385, "uniform_train": 1.931435465812683, "seen_train": 1.904410719871521, "unseen_train": 1.8848373889923096}}

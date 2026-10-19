@@ -1,0 +1,390 @@
+{
+  "status": "complete_verified",
+  "verified_utc": "2026-10-15T03:53:23.217995+00:00",
+  "started_utc": "2026-10-15T03:01:35.726399+00:00",
+  "completed_utc": "2026-10-15T03:53:07.695562+00:00",
+  "checkpoint": "./.cache/huggingface/hub/models--deepseek-ai--deepseek-coder-1.3b-base/snapshots/c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "model": "deepseek-ai/deepseek-coder-1.3b-base",
+  "trained_input_tokens": 0,
+  "questions": 6319,
+  "protocol": {
+    "checkpoint": "./.cache/huggingface/hub/models--deepseek-ai--deepseek-coder-1.3b-base/snapshots/c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+    "trained_input_tokens": 0,
+    "model_kind": "base",
+    "model_revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+    "checkpoint_manifest_sha256": null,
+    "model_shards_sha256": {
+      "pytorch_model.bin": "a400155e495b4d6b1cd5b05f04c56032b7dbc6bdff940e046a89ffc1cc2fbdcd"
+    },
+    "official_repository_commit": "b8b0f8ce093d80bf8e9a641e44142f06d092c305",
+    "benchmarks": {
+      "gsm8k": 1319,
+      "math": 5000
+    },
+    "prompt_format": {
+      "gsm8k": "Official DeepSeekMath Base 8-shot CoT",
+      "math": "Official DeepSeekMath Base Minerva 4-shot CoT"
+    },
+    "chat_template": false,
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 1024,
+    "n": 1,
+    "batch_size": 256,
+    "stops": {
+      "gsm8k": [
+        "\nQ:"
+      ],
+      "math": [
+        "\nProblem:"
+      ]
+    },
+    "seed": 42,
+    "backend": "Unmodified native Hugging Face generate with SDPA and KV cache",
+    "precision": "FP32 parameters; BF16 autocast compute, matching CPT evaluation precision",
+    "compute_precision": {
+      "parameters": "float32",
+      "autocast": "bfloat16",
+      "kv_cache": "native HF cache"
+    },
+    "checkpoint_stored_dtype": "bfloat16",
+    "torch": "2.9.1+cu130",
+    "transformers": "4.55.4",
+    "smoke_limit_per_dataset": null,
+    "prompt_statistics": {
+      "gsm8k": {
+        "questions": 1319,
+        "minimum_tokens": 760,
+        "maximum_tokens": 926,
+        "mean_tokens": 802.1576952236543
+      },
+      "math": {
+        "questions": 5000,
+        "minimum_tokens": 738,
+        "maximum_tokens": 2163,
+        "mean_tokens": 802.352
+      }
+    },
+    "sources_sha256": {
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/datasets/gsm8k/test.jsonl": "fd32e8e549626b0dcce350eec7bbace9c463ddbcfa1c0303ba5abe9122450839",
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/datasets/math/test.jsonl": "5fc86b7d164f455c6fc51b8777cac60468fac90c5d0a3e1c9b3312a79fe2ee8e",
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/cot_gsm_8_shot.py": "29533d2bdbd38d554348ee2386c8faa00b12d4bb56ae7de826131dc26cd592a0",
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/cot_minerva_math_4_shot.py": "6f3b5abd73d5183add0f7e753cf6ef4fd669faa338bfa3571ece50d4363daac1",
+      "./runs/cpt_10b_inference_20261012/vendor/DeepSeek-Math/evaluation/few_shot_prompts/few_shot_prompting.py": "039a7b588a2db755a148eadb8d5f78f5815fa8b094ef500209bf05487c86d9d2",
+      "./runs/deepseek_coder_base_inference_20261015/source/run_math_inference.py": "2df92924ae49034d36db90fcb4238fb2c6f0955e33cbd5f5671e203a7e366703",
+      "./runs/deepseek_coder_base_inference_20261015/source/math_benchmark_protocol.py": "bd3fc2f2eb8649c33c08f34f7d8e1831828334b8eb1032c6000511d519b15608"
+    },
+    "limits": [
+      "This is the unchanged pinned original Coder model, before our CPT.",
+      "No GSM8K/MATH decontamination of the CPT corpus was performed.",
+      "HF backend differs from the paper's vLLM backend; outputs can differ with numerical rounding.",
+      "Answers exceeding 1024 new tokens are truncated and remain in the score denominator."
+    ],
+    "reference_comparison": {
+      "run": "./runs/deepseek_coder_10b_inference_20261015",
+      "manifest_sha256": "e2c1fa7696d774cf44f396c4fb03e7836013acc1d4e8cdf9e545459830024856",
+      "same_generation_settings": true,
+      "same_runtime_precision": true,
+      "same_tokenizer": true,
+      "prompts": {
+        "gsm8k": {
+          "questions": 1319,
+          "exact_text_and_indices": true,
+          "exact_input_token_ids": true,
+          "prompt_file_sha256": "6287eb092a4cdfb7fe3aa4c81f6fb7197a7dbc1ebac614b3ffbcb20e7450842a"
+        },
+        "math": {
+          "questions": 5000,
+          "exact_text_and_indices": true,
+          "exact_input_token_ids": true,
+          "prompt_file_sha256": "204ca1f6540ef6593cef9344c92a2060f80be98677753c735b5b55a6a32f6b52"
+        }
+      }
+    }
+  },
+  "benchmarks": {
+    "gsm8k": {
+      "total": 1319,
+      "correct": 63,
+      "accuracy": 0.047763457164518575,
+      "accuracy_percent": 4.776345716451857,
+      "timeouts": 0,
+      "errors": 0,
+      "empty_predictions": 0,
+      "truncated_generations": 113,
+      "missing_generations": 0,
+      "scored_file": "./runs/deepseek_coder_base_inference_20261015/gsm8k_scored.jsonl",
+      "prediction_sha256": "faee7a7662c8060517ade5365b77fe0a03337001aea1ce3a3339fc48ce073d6d",
+      "secondary_comma_normalized": {
+        "label": "Diagnostic only; not official main score",
+        "correct": 65,
+        "total": 1319,
+        "accuracy": 0.04927975739196361,
+        "changed_predictions": 28
+      }
+    },
+    "math": {
+      "total": 5000,
+      "correct": 208,
+      "accuracy": 0.0416,
+      "accuracy_percent": 4.16,
+      "timeouts": 0,
+      "errors": 0,
+      "empty_predictions": 203,
+      "truncated_generations": 1964,
+      "missing_generations": 0,
+      "scored_file": "./runs/deepseek_coder_base_inference_20261015/math_scored.jsonl",
+      "prediction_sha256": "7782193d0b9f722b330bfe92446d6ada0a9982b027ed00e81469a30b4e49295a",
+      "by_type": {
+        "Algebra": {
+          "total": 1187,
+          "correct": 51,
+          "accuracy": 0.04296545914069082,
+          "accuracy_percent": 4.296545914069082,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 21,
+          "truncated_generations": 416,
+          "missing_generations": 0
+        },
+        "Counting & Probability": {
+          "total": 474,
+          "correct": 22,
+          "accuracy": 0.046413502109704644,
+          "accuracy_percent": 4.641350210970464,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 20,
+          "truncated_generations": 121,
+          "missing_generations": 0
+        },
+        "Geometry": {
+          "total": 479,
+          "correct": 9,
+          "accuracy": 0.018789144050104383,
+          "accuracy_percent": 1.8789144050104383,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 39,
+          "truncated_generations": 137,
+          "missing_generations": 0
+        },
+        "Intermediate Algebra": {
+          "total": 903,
+          "correct": 39,
+          "accuracy": 0.04318936877076412,
+          "accuracy_percent": 4.318936877076411,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 31,
+          "truncated_generations": 517,
+          "missing_generations": 0
+        },
+        "Number Theory": {
+          "total": 540,
+          "correct": 22,
+          "accuracy": 0.040740740740740744,
+          "accuracy_percent": 4.074074074074074,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 23,
+          "truncated_generations": 271,
+          "missing_generations": 0
+        },
+        "Prealgebra": {
+          "total": 871,
+          "correct": 49,
+          "accuracy": 0.05625717566016074,
+          "accuracy_percent": 5.625717566016074,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 27,
+          "truncated_generations": 255,
+          "missing_generations": 0
+        },
+        "Precalculus": {
+          "total": 546,
+          "correct": 16,
+          "accuracy": 0.029304029304029304,
+          "accuracy_percent": 2.93040293040293,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 42,
+          "truncated_generations": 247,
+          "missing_generations": 0
+        }
+      },
+      "by_level": {
+        "Level 1": {
+          "total": 437,
+          "correct": 41,
+          "accuracy": 0.09382151029748284,
+          "accuracy_percent": 9.382151029748284,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 18,
+          "truncated_generations": 121,
+          "missing_generations": 0
+        },
+        "Level 2": {
+          "total": 894,
+          "correct": 54,
+          "accuracy": 0.06040268456375839,
+          "accuracy_percent": 6.0402684563758395,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 42,
+          "truncated_generations": 266,
+          "missing_generations": 0
+        },
+        "Level 3": {
+          "total": 1131,
+          "correct": 54,
+          "accuracy": 0.04774535809018567,
+          "accuracy_percent": 4.774535809018567,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 37,
+          "truncated_generations": 415,
+          "missing_generations": 0
+        },
+        "Level 4": {
+          "total": 1214,
+          "correct": 32,
+          "accuracy": 0.026359143327841845,
+          "accuracy_percent": 2.6359143327841847,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 45,
+          "truncated_generations": 525,
+          "missing_generations": 0
+        },
+        "Level 5": {
+          "total": 1324,
+          "correct": 27,
+          "accuracy": 0.02039274924471299,
+          "accuracy_percent": 2.0392749244712993,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 61,
+          "truncated_generations": 637,
+          "missing_generations": 0
+        }
+      },
+      "by_category": {
+        "algebra": {
+          "total": 1187,
+          "correct": 51,
+          "accuracy": 0.04296545914069082,
+          "accuracy_percent": 4.296545914069082,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 21,
+          "truncated_generations": 416,
+          "missing_generations": 0
+        },
+        "counting_and_probability": {
+          "total": 474,
+          "correct": 22,
+          "accuracy": 0.046413502109704644,
+          "accuracy_percent": 4.641350210970464,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 20,
+          "truncated_generations": 121,
+          "missing_generations": 0
+        },
+        "geometry": {
+          "total": 479,
+          "correct": 9,
+          "accuracy": 0.018789144050104383,
+          "accuracy_percent": 1.8789144050104383,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 39,
+          "truncated_generations": 137,
+          "missing_generations": 0
+        },
+        "intermediate_algebra": {
+          "total": 903,
+          "correct": 39,
+          "accuracy": 0.04318936877076412,
+          "accuracy_percent": 4.318936877076411,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 31,
+          "truncated_generations": 517,
+          "missing_generations": 0
+        },
+        "number_theory": {
+          "total": 540,
+          "correct": 22,
+          "accuracy": 0.040740740740740744,
+          "accuracy_percent": 4.074074074074074,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 23,
+          "truncated_generations": 271,
+          "missing_generations": 0
+        },
+        "prealgebra": {
+          "total": 871,
+          "correct": 49,
+          "accuracy": 0.05625717566016074,
+          "accuracy_percent": 5.625717566016074,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 27,
+          "truncated_generations": 255,
+          "missing_generations": 0
+        },
+        "precalculus": {
+          "total": 546,
+          "correct": 16,
+          "accuracy": 0.029304029304029304,
+          "accuracy_percent": 2.93040293040293,
+          "timeouts": 0,
+          "errors": 0,
+          "empty_predictions": 42,
+          "truncated_generations": 247,
+          "missing_generations": 0
+        }
+      }
+    }
+  },
+  "generation": {
+    "status": "generation_complete",
+    "finished_utc": "2026-10-15T03:53:07.695562+00:00",
+    "questions": 6319,
+    "benchmarks": {
+      "gsm8k": {
+        "questions": 1319,
+        "finish_reasons": {
+          "stop_string": 1206,
+          "length": 113
+        },
+        "generated_tokens": 222927,
+        "prediction_sha256": "faee7a7662c8060517ade5365b77fe0a03337001aea1ce3a3339fc48ce073d6d"
+      },
+      "math": {
+        "questions": 5000,
+        "finish_reasons": {
+          "stop_string": 3027,
+          "length": 1964,
+          "eos": 9
+        },
+        "generated_tokens": 2378249,
+        "prediction_sha256": "7782193d0b9f722b330bfe92446d6ada0a9982b027ed00e81469a30b4e49295a"
+      }
+    },
+    "manifest": "./runs/deepseek_coder_base_inference_20261015/manifest.json",
+    "generation_seconds_this_invocation": 3068.117543727276,
+    "generation_tokens_per_second": 847.8084567907342,
+    "wall_seconds_this_invocation": 3091.9642501780763,
+    "peak_allocated_gib": 156.25416707992554,
+    "scoring": "pending",
+    "training_modified": false
+  },
+  "training_modified": false,
+  "verification": "All official test rows generated/scored exactly once; model and protocol hashes unchanged."
+}

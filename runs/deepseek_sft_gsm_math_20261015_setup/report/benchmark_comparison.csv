@@ -1,0 +1,3 @@
+benchmark,cpt_correct,sft_correct,total,cpt_accuracy_percent,sft_accuracy_percent,delta_percentage_points,truncated_generations,errors,timeouts
+gsm8k,114,281,1319,8.642911296436695,21.30401819560273,12.661106899166034,14,0,0
+math,282,307,5000,5.64,6.140000000000001,0.5000000000000009,547,0,0

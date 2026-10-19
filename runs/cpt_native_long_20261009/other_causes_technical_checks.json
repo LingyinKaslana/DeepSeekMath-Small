@@ -1,0 +1,60 @@
+{
+  "gpu_execution": false,
+  "checks": [
+    {
+      "name": "hf_loss_single_next_token_shift",
+      "passed": true,
+      "hf_loss": 3.506869077682495,
+      "manual_shifted_loss": 3.506869077682495,
+      "valid_targets": 10,
+      "expected_valid_targets": 10
+    },
+    {
+      "name": "allones_and_resolved_causal_logits_agree_cpu",
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "causal_prefix_invariant_to_future_or_ignored_padding_changes",
+      "passed": true,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "name": "hf_loss_does_not_mutate_aliased_input_labels_cpu",
+      "passed": true
+    },
+    {
+      "name": "actual_5b_reader_matches_vectorized_values_and_counts_across_2_pow_32_offset_tail_duplicate",
+      "passed": true,
+      "indices": [
+        0,
+        1,
+        2097151,
+        2097152,
+        2441405,
+        2441406,
+        2441406,
+        0
+      ],
+      "input_tokens": 13312,
+      "supervised_tokens": 13304,
+      "tail_real_length": 512,
+      "tail_padding_labels_ignored": true
+    },
+    {
+      "name": "two_epoch_schedule_exact_total_prefix_counts",
+      "passed": true,
+      "actual": [
+        10000000000,
+        9995117186,
+        305176
+      ],
+      "expected": [
+        10000000000,
+        9995117186,
+        305176
+      ]
+    }
+  ],
+  "status": "passed"
+}

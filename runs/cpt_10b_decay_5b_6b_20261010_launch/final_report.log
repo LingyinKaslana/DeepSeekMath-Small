@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./runs/cpt_10b_decay_5b_6b_20261010_launch/tools/plot_cpt_validation.py", line 176, in <module>
+    main()
+  File "./runs/cpt_10b_decay_5b_6b_20261010_launch/tools/plot_cpt_validation.py", line 91, in main
+    raise ValueError("Expected the original base-model validation at step zero")
+ValueError: Expected the original base-model validation at step zero

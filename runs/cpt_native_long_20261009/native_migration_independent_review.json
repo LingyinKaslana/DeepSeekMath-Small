@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "no_blocking_issue_found",
+  "reviewed_utc": "2026-10-09T03:34:19.723108+00:00",
+  "gpu_execution": false,
+  "files_modified": [
+    "New independent audit JSON only"
+  ],
+  "frozen_source_directory": "./runs/cpt_native_long_launch_20261009/source",
+  "backend_config": "./configs/cpt_backend_native.json",
+  "preflight_execution_sources_match_frozen": true,
+  "source_sha256": {
+    "train_cpt.py": "02bad1cfba66bed34de51aabd5510521b114bad5b30d0ef21e81f1bccad07a7b",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820",
+    "verify_cpt_checkpoint.py": "7047edb6dc77ad174018c59a5668f56c3bb0170345708a6303530918c65555e0",
+    "verify_cpt_pipeline.py": "03d63d44e99fe0f5ae5ba0d458f4b1c1e0409db0f666291f2d0d1771c835e052",
+    "test_cpt_native_migration.py": "97a5e762456afce378c69d755c2c53e79bafab5a83917579d4c714f354b45f1b"
+  },
+  "config_sha256": "f727e399f12bfc95d7a60a5e1b95606f8340fbb59223a0be0240491fa5cbbee1",
+  "evidence_reviewed": {
+    "cpu_preflight": "./runs/cpt_native_compare_20261009/native_migration_cpu_preflight.json",
+    "reported_cpu_tests_passed": 25,
+    "cpu_tests_independently_rerun_here": false
+  },
+  "checks": [
+    {
+      "item": "unmodified native execution",
+      "result": "pass_static",
+      "evidence": "train_cpt native_standard branch directly load_native_model, forward=model, cpt.batch, make_native_optimizer, update_native. configure_model/compiled optimizer/step callable/vectorized provider branch bypassed; plain eager native evaluation uses nullcontext."
+    },
+    {
+      "item": "Adam state and parameter ordering",
+      "result": "pass_static",
+      "evidence": "adapt_native_optimizer CPU digest scans all saved step/exp_avg/exp_avg_sq before and after execution-only adaptation. No tensor arithmetic, deletion or reset; saved param_groups params IDs order retained; restore_optimizer transfers moments while scalar step stays CPU for capturable=False."
+    },
+    {
+      "item": "unchanged mathematical protocol",
+      "result": "pass_static",
+      "evidence": "beta .9/.95, weight_decay .1 all parameters, eps1e-8, minimize, clip1, BF16 autocast, FP32 master/grad/moments. Native LR Python float uses exact float32 representation inherited from previous tensor LR; schedule remains saved global index, no warmup restart."
+    },
+    {
+      "item": "same sample cursor and exact counts",
+      "result": "pass_static",
+      "evidence": "load_saved_orders validates existing order metadata; validate_resume reconstructs counters prefix and epoch cursor. train step=completed_steps order_indices and LR use that global prefix; counters increment after successful update."
+    },
+    {
+      "item": "strict invalid update behavior",
+      "result": "pass_static",
+      "evidence": "Native total finite check before strict clip_grad_norm_(error_if_nonfinite=True); optimizer.step occurs only after both pass. No retry, disabled finite guard or skipped invalid gradient step."
+    },
+    {
+      "item": "narrow lineage authorization",
+      "result": "pass_static",
+      "evidence": "without_execution excludes only source_sha256/backend_config_sha256; all other signature fields must exactly match. validate_native_backend_change accepts only configured→standard_native, allones mask, disabled optimizer compilation and options.compile_scope=model→none plus descriptions. All source/config historical snapshots SHA checked and chain counters monotonic; ordinary native resume uses exact signature without migration flag."
+    },
+    {
+      "item": "probe RNG and mode isolation",
+      "result": "pass_static",
+      "evidence": "uniform probe uses private np.default_rng; original fixed indices/tokens retained. evaluate restores CPU/CUDA RNG and original model.train flag in finally; no mutation of dataset token bytes. Native labels separately cloned and standard 2D allones masks."
+    },
+    {
+      "item": "no new repeated large audit synchronization",
+      "result": "pass_static",
+      "evidence": "Full moment digest, state restore synchronization, source/config hashing and fixed probe token hashing are once at startup. Training update uses ordinary finite scalar loss+strict norm check; pre-existing per-step timing CUDA synchronization remains. No per-update D2H weights/moments/fingerprint scan."
+    },
+    {
+      "item": "checkpoint preservation and verifier",
+      "result": "pass_static",
+      "evidence": "Atomic save_pretrained plus optimizer state_dict and torch CPU/CUDA RNG; snapshots include standard_native.py among12 execution files. Verifier checks exact LR precision, flags, FP32 finite moments, nonnegative second moments, identical scalar update count338states, source/config/order counters and lineage."
+    }
+  ],
+  "limitations": [
+    "Read-only static review plus earlier CPU preflight evidence; this is not independent GPU migration execution or a bitwise numerical-equivalence claim.",
+    "Standard PyTorch foreach/capturable=False changes execution order versus compiled AdamW; identical saved tensor values and mathematical hyperparameters do not imply bitwise future updates.",
+    "Validation/probe are fixed native estimates; EOS quota-packing defect remains in original reference and is separately diagnosed, not silently repaired during migration."
+  ]
+}

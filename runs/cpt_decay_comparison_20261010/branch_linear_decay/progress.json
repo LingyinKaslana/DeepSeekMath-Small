@@ -1,0 +1,13 @@
+{
+  "offset": 6104,
+  "step": 121104,
+  "loss": 1.8730287551879883,
+  "grad_norm": 1.787757396697998,
+  "lr": 3.000000000000001e-07,
+  "effective_fp32_lr": 3.000000106112566e-07,
+  "input_tokens": 32768,
+  "supervised_tokens": 32752,
+  "cumulative_tokens": 3968335872,
+  "seconds": 0.7667314569698647,
+  "optimizer_applied": true
+}

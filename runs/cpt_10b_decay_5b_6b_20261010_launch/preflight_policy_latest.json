@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "cpu_only": true,
+  "optimizer_updates_performed": 0,
+  "checked_utc": "2026-10-10T06:48:01.024155+00:00",
+  "checkpoint": "./runs/cpt_10b_lr3e6_20261009/checkpoint_step_00140000",
+  "resumed_steps": 140000,
+  "resumed_input_tokens": 4587520000,
+  "configured_input_tokens": 10000000000,
+  "policy": {
+    "schema_version": 1,
+    "type": "linear_input_tokens",
+    "start_input_tokens": 5000000000,
+    "end_input_tokens": 6000000000,
+    "start_lr": 3e-06,
+    "end_lr": 3e-07,
+    "after": "hold"
+  },
+  "original_schedule_preserved": true,
+  "old_order_metadata_preserved": true,
+  "source_sha256": {
+    "train_cpt.py": "5b4ed4f23399fbd75fda18a0538954f2ae7bd5d9b45c3688d99bbc835a600de1",
+    "model_backends.py": "603adb5a408b833eed904e33456651e31c8787a553f810694d0a53e8efb99daa",
+    "token_batches.py": "d6b0302546349c9c1b1cb80adb79ade1005de36b6ea27d9a0cb4928416195fe4",
+    "compiled_adamw.py": "e044257ec3ccab3bedbc6a475731def993d28ebdda936b3675676be208ab1c77",
+    "native_ops.py": "2f5dac3fb7237f3dd634f2366eedafc26d136dcc046a3b5d085543b0f08f5a57",
+    "native_chunked_ce.py": "bb5291c098e9f6ada7050b947de3b3a20ddc6154205c39677b1a0f9258789bad",
+    "cpt.py": "71ce9227a81ddbe1016268091871634366951e1ce05b6e129d0caa13a49cc9f2",
+    "packed_data.py": "3413839b2a78884602ee59cb877a6faac8c516ac70a728e1d97e91b3f732285b",
+    "cpt_orders.py": "5da5882cccf5285797b4aa3a7f2dc3143282d0ff1a5ad626d4b7122b7fdd0b56",
+    "nonfinite_retry.py": "bf9fa1b2c7c223317fbafd3d9372b15ff2f97920c08682c10ae680c04075da1b",
+    "source_migration.py": "5e7dfcba76a46946eba2454a1d14e28d08d215bb3caac66264359dd69bec51bd",
+    "standard_native.py": "c72daef34509524f476e7b59dc6c3e831856443f1e8dc95ff2e641394d98d820",
+    "lr_intervention.py": "881e005c690cef06f3b2ab30e38ab3c90c24917652ced12294f8e7cf08aa03a8"
+  },
+  "unchanged_original_sources": [
+    "model_backends.py",
+    "token_batches.py",
+    "compiled_adamw.py",
+    "native_ops.py",
+    "native_chunked_ce.py",
+    "cpt.py",
+    "packed_data.py",
+    "cpt_orders.py",
+    "nonfinite_retry.py",
+    "source_migration.py",
+    "standard_native.py"
+  ],
+  "backend_sha256": "2acfac3653b1fddcfae55204c640cdbb3f84eeff4466b1217cddf8253532b5c4",
+  "rates": [
+    {
+      "next_update": 140001,
+      "pre_update_input_tokens": 4587520000,
+      "mathematical_lr": 3e-06,
+      "expected_fp32_lr": 3.000000106112566e-06
+    },
+    {
+      "next_update": 152588,
+      "pre_update_input_tokens": 4999969280,
+      "mathematical_lr": 3e-06,
+      "expected_fp32_lr": 3.000000106112566e-06
+    },
+    {
+      "next_update": 152589,
+      "pre_update_input_tokens": 5000000000,
+      "mathematical_lr": 3e-06,
+      "expected_fp32_lr": 3.000000106112566e-06
+    },
+    {
+      "next_update": 152590,
+      "pre_update_input_tokens": 5000032768,
+      "mathematical_lr": 2.9999115264000002e-06,
+      "expected_fp32_lr": 2.999911430379143e-06
+    },
+    {
+      "next_update": 167848,
+      "pre_update_input_tokens": 5500006912,
+      "mathematical_lr": 1.6499813376e-06,
+      "expected_fp32_lr": 1.6499813000336871e-06
+    },
+    {
+      "next_update": 179209,
+      "pre_update_input_tokens": 5872284160,
+      "mathematical_lr": 6.44832768e-07,
+      "expected_fp32_lr": 6.448327667385456e-07
+    },
+    {
+      "next_update": 179210,
+      "pre_update_input_tokens": 5872315392,
+      "mathematical_lr": 6.447484416e-07,
+      "expected_fp32_lr": 6.44748467948375e-07
+    },
+    {
+      "next_update": 183106,
+      "pre_update_input_tokens": 5999979520,
+      "mathematical_lr": 3.0005529599999993e-07,
+      "expected_fp32_lr": 3.000552908360987e-07
+    },
+    {
+      "next_update": 183107,
+      "pre_update_input_tokens": 6000012288,
+      "mathematical_lr": 3e-07,
+      "expected_fp32_lr": 3.000000106112566e-07
+    },
+    {
+      "next_update": 183108,
+      "pre_update_input_tokens": 6000045056,
+      "mathematical_lr": 3e-07,
+      "expected_fp32_lr": 3.000000106112566e-07
+    },
+    {
+      "next_update": 244142,
+      "pre_update_input_tokens": 8000007168,
+      "mathematical_lr": 3e-07,
+      "expected_fp32_lr": 3.000000106112566e-07
+    },
+    {
+      "next_update": 274660,
+      "pre_update_input_tokens": 9000020992,
+      "mathematical_lr": 3e-07,
+      "expected_fp32_lr": 3.000000106112566e-07
+    },
+    {
+      "next_update": 305176,
+      "pre_update_input_tokens": 9999969280,
+      "mathematical_lr": 3e-07,
+      "expected_fp32_lr": 3.000000106112566e-07
+    }
+  ],
+  "scope": "Actual order-prefix token accounting, original resume guards, policy inheritance and future-only application; no model load or GPU update."
+}

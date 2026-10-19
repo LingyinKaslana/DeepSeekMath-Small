@@ -1,0 +1,23 @@
+{
+  "status": "complete_verified",
+  "launched_utc": "2026-10-12T03:40:38.195067+00:00",
+  "run": "./runs/base_math_inference_20261012",
+  "model_kind": "base",
+  "trained_input_tokens": 0,
+  "model_revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+  "reference_run": "./runs/cpt_10b_inference_20261012",
+  "tmux_session": "deepseekmath-base-inference-20261012",
+  "benchmarks": {
+    "gsm8k": 1319,
+    "math": 5000
+  },
+  "same_generation_settings": true,
+  "same_input_token_ids": true,
+  "training_modified": false,
+  "completed_utc": "2026-10-12T04:22:30.616359+00:00",
+  "verified_utc": "2026-10-12T04:26:46.225259+00:00",
+  "result": "./runs/base_math_inference_20261012/result.json",
+  "scores": "./runs/base_math_inference_20261012/scores.json",
+  "independent_review": "./runs/base_math_inference_20261012/final_inference_review.json",
+  "comparison": "./runs/base_vs_cpt_10b_20261012/comparison.json"
+}

@@ -1,0 +1,63 @@
+{
+  "kernels": "native",
+  "loss": "native",
+  "chunk_mem_const": 1,
+  "compile_scope": "model",
+  "compile_mode": "default",
+  "compile_shape": [
+    16,
+    2048
+  ],
+  "compile_label_alias": "same_as_input",
+  "compile_fullgraph": true,
+  "compile_dynamic": false,
+  "rms_in_place": false,
+  "emulate_precision_casts": true,
+  "preserve_silu": false,
+  "ce_chunk_rows": 4096,
+  "master_parameter_dtype": "float32",
+  "forward_autocast_dtype": "bfloat16",
+  "backward_autocast": "off",
+  "instance_local": true,
+  "torch_version": "2.9.1+cu130",
+  "transformers_version": "4.55.4",
+  "liger_version": "0.8.4",
+  "native_validation": "with eager_native(model): model(**batch)",
+  "notes": [
+    "Training-loop code must still verify FP32 gradients and optimizer states.",
+    "RoPE and BF16 CE change intermediate rounding; verify before selecting them.",
+    "Pass an already-resolved attention mask dictionary to compiled forwards."
+  ],
+  "optimizer_compile": {
+    "optimizer": "torch.optim.AdamW",
+    "implementation": "compiled_foreach",
+    "compile": {
+      "fullgraph": false,
+      "dynamic": false,
+      "mode": "default"
+    },
+    "compile_wrapper_setup_seconds": 1.2341282660199795,
+    "first_step_seconds_including_compilation": 8.190581867005676,
+    "compile_seconds": null,
+    "compile_time_note": "Lazy compilation; first-step time includes device execution and is not pure compilation time",
+    "precision": {
+      "parameters": "float32",
+      "gradients": "float32",
+      "exp_avg": "float32",
+      "exp_avg_sq": "float32",
+      "learning_rate": "CUDA float32 scalar"
+    },
+    "device": "cuda:0",
+    "parameter_tensors": 338,
+    "parameter_elements": 1543714304,
+    "capturable": true,
+    "foreach": true,
+    "fused": false,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "weight_decay": 0.1,
+    "eps": 1e-08
+  }
+}
