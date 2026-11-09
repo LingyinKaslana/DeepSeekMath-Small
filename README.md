@@ -1,118 +1,146 @@
-# DeepSeekMath Small · 单卡数学推理训练实验
+# DeepSeekMath Small：单卡数学推理全流程
 
-在一张 NVIDIA GB300（约 251 GiB 显存）上，使用小型 Coder 模型学习数学继续预训练、监督微调和可验证奖励强化学习的完整流程。主线模型为 **DeepSeek-Coder-1.3B-Base**；同时保留 Qwen2.5-Coder-1.5B 的早期对照、数值诊断、失败和恢复记录。
+在一张 **NVIDIA GB300（约 251 GiB 显存）** 上，用 **DeepSeek-Coder-1.3B-Base** 跑通数学继续预训练（CPT）→ 监督微调（SFT）→ DAPO 强化学习的完整流程，并把 GSM8K 从 **4.78%** 提升到 **23.73%**。重点不是刷榜，而是验证**单卡训练与 rollout 采样效率**：哪些优化真的省时间，哪些只是看起来省。
 
-这个仓库是训练工作区的发布快照：**主要保留代码、配置、实验数值和日志**。CPT 和 SFT 已完成；DAPO 原计划累计 10,000 轮，已按用户要求在 **2,652 轮**后保存完整检查点并停止，共 **10,608 次梯度更新、84,864 个实际用于更新的有效组**。最终进度、停止记录与曲线见 [结果快照](docs/results.md)。
+仓库是训练工作区的发布快照：保留代码、配置、聚合数值、日志与审计记录，不包含权重、数据正文和逐题生成文本。
 
-## 训练工作
+---
 
-| 阶段 | 设置与产出 |
+## 主要结论（Summary）
+
+1. **单卡跑通三阶段全流程。** CPT 训练 **10B input token**（OpenWebMath 约 5B 语料两遍），SFT 14,459 条样本 / 1,356 steps，DAPO 完成 **2,652 轮 / 10,608 次梯度更新 / 84,864 个有效组**；全程一张 GB300。
+2. **GSM8K 4.78% → 23.73%。** CPT 后 8.64%，SFT 后 21.30%，早期 RL（第 80 轮）23.73%。同一批检查点的 MATH 为 4.16% → 5.64% → 6.14% → **5.34%**：RL 早期 GSM8K 提升伴随 MATH 回落，这个负结果保留在表里。
+3. **长 RL 的独立验证。** 256 题 held-out GSM8K、zero-shot、2,048 token：最佳第 800 轮 **41.41%**（106/256），第 2,600 轮 **39.06%**（100/256）。最终轮与最佳验证检查点尚未做全量 GSM8K + MATH 复测。
+4. **rollout 吞吐优化。** 完成回答即时移出解码 batch、microbatch 调到 16（4×64 response minibatch）、用 GPU profiling 定位解码瓶颈；最近 100 轮约 **265 秒/轮（13.6 轮/小时）**。
+5. **按历史难度路由选题。** 75% 历史优先 + 25% 随机探索；256 路匹配权重对比下有效组产出速度约 **1.88 倍**（uniform 108.23 s vs history 57.63 s），64 路小并发约 3.50 倍。这是短期采样对比，长期有效组比例下降后倍率不保持。
+6. **可审计的发布快照。** `EXPORT_MANIFEST.json` / `RELEASE_MANIFEST.json` 记录 SHA256，CPU 测试覆盖学习率、恢复、PPO clipping、组计数和解码规则；失败回退与重跑量单独记账。
+
+---
+
+## 1. 实验设置
+
+| 项 | 设置 |
 |---|---|
-| 数学 CPT | OpenWebMath 约 5B token 数据，训练 10B input token；全参数训练，确定性数据顺序、分片与验证隔离 |
-| SFT | GSM8K + MATH；14,459 条训练、512 条验证；答案和 EOS 计算 loss，最长 4,096 token；3 epoch，选中第 2 epoch 检查点 |
-| DAPO | GSM8K；每题 8 个回答，每轮使用 32 个混合对错组；每轮 4 次 optimizer update；生成上限 2,048 token |
-| 单卡优化 | 完成回答移出解码 batch；microbatch 调优；历史难度路由；数值对照、GPU profiling、恢复审计 |
+| 模型 | DeepSeek-Coder-1.3B-Base（另保留 Qwen2.5-Coder-1.5B 早期对照与失败记录） |
+| 硬件 | 单张 NVIDIA GB300，约 251 GiB 显存 |
+| CPT | OpenWebMath 固定 revision，约 5B token 语料，训练 10B input token；全参数训练，确定性数据顺序 |
+| SFT | GSM8K + MATH；14,459 条训练、512 条验证；答案 + EOS 计算 loss，最长 4,096 token；3 epoch，取第 2 epoch 最佳检查点（step 904，val loss 0.7081） |
+| RL | GSM8K；每题 8 个回答；每轮 32 个混合对错组（256 条回答）；每轮 4 次 optimizer update；生成上限 2,048 token；lr 1e-6，前 10 轮 warmup |
+| 精度 | FP32 参数 / 梯度 / Adam 状态，BF16 autocast 计算 |
+| 全量评测 | GSM8K 1,319 题、MATH 5,000 题；官方 few-shot CoT、greedy、1,024 token，错误与超时计入分母 |
 
-主线使用 FP32 参数、梯度和 Adam 状态，BF16 autocast 计算。RL 学习率为 `1e-6`，前 10 轮 warmup；后续使用 **75% 历史优先选题 + 25% 随机探索**。该选题策略有意改变训练题分布。
+---
 
-## 已完成的全量评测
+## 2. 训练结果
 
-下表使用相同的官方 few-shot CoT 协议、greedy、1,024 token 上限；GSM8K 1,319 题，MATH 5,000 题，错误与超时计入分母。
+### 2.1 三阶段主线
 
-| 模型检查点 | GSM8K | MATH |
+| 阶段 | 状态与数值 |
+|---|---|
+| 数学 CPT | 10,000,000,000 input token；验证 loss **2.1084 → 1.7537** |
+| SFT | 1,356 steps；最佳 step 904，验证 loss **0.7081** |
+| DAPO | 2,652 / 10,000 轮；**10,608** 次梯度更新；实际使用 **84,864** 个有效组 |
+
+### 2.2 全量测试（统一 1,024 token）
+
+| 检查点 | GSM8K 正确数 / 1,319 | MATH 正确数 / 5,000 |
 |---|---:|---:|
-| 原始 DeepSeek-Coder-1.3B | 4.78% | 4.16% |
-| 数学 CPT 10B | 8.64% | 5.64% |
-| SFT 最佳检查点 | 21.30% | 6.14% |
-| 首次 100 轮 RL 实验选中的第 80 轮 | 23.73% | 5.34% |
+| 原始 DeepSeek-Coder-1.3B | 63（**4.78%**） | 208（**4.16%**） |
+| 数学 CPT 10B | 114（**8.64%**） | 282（**5.64%**） |
+| SFT 最佳 step 904 | 281（**21.30%**） | 307（**6.14%**） |
+| 早期 RL 第 80 轮 | 313（**23.73%**） | 267（**5.34%**） |
 
-最后一行是**早期 RL 检查点**。长训练使用的 256 题、zero-shot GSM8K 验证分数单独记录，不与本表混用。RL 对 GSM8K 的提升伴随这一早期检查点 MATH 分数下降；长训练的最终轮与最佳验证检查点尚未重新进行全量测试。
+最后一行是早期 RL 检查点，不是长训练的最终成绩。长训练使用另一套 256 题、zero-shot、2,048 token 的 held-out 验证，两套数字不能直接比较。
+
+### 2.3 长 RL 的 held-out 验证
+
+256 题 held-out GSM8K，zero-shot / greedy / EOS-only / 2,048 token：
+
+| 轮数 | 1,900 | 2,000 | 2,100 | 2,200 | 2,300 | 2,400 | 2,500 | 2,600 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 正确数 / 256 | 96 | 100 | 102 | 101 | 98 | 99 | 90 | 100 |
+| 正确率 | 37.50% | 39.06% | 39.84% | 39.45% | 38.28% | 38.67% | 35.16% | 39.06% |
+
+最佳为第 800 轮的 **41.41%**（106/256）；最近 100 轮平均 265.0 秒/轮，候选中混合对错组占 4.45%。
 
 ![RL heldout validation](docs/figures/rl_validation.png)
 
-[完整结果与限制](docs/results.md) · [实验目录索引](docs/experiments.csv) · [数据处理与训练方法](docs/methodology.md)
+---
 
-## 目录
+## 3. 单卡 rollout 优化
+
+### 3.1 解码与训练吞吐
+
+- **完成回答即时移出解码 batch**：不等整批最长序列结束，已完成的回答不再参与后续 decode 步。当前版本没有实现完整的 continuous batching（持续补题）。
+- **microbatch 调优**：每轮 32 组、256 条回答，先重算整批 old log probabilities，再切成 4 个 64-response minibatch，microbatch 取 16。
+- **GPU profiling**：用 profiler 定位 decode 阶段的耗时分布，再决定优化顺序；没有把 CPU 观测或队列等待混进 decode 计时。
+
+### 3.2 历史难度路由
+
+- 每批构造确定性候选池，对每题历史正确率做 EMA 更新；**25% 回答组随机探索，75% 优先选择历史上仍有正确/错误分歧的题**。被跳过的 proposal 不执行推理，单独计数。
+- 同一第 1,900 轮权重、正式 256 路采样、每次凑齐 32 个有效组：
+
+  | 策略 | 耗时 | 有效组比例 |
+  |---|---:|---:|
+  | uniform | 108.23 s | 10.31% |
+  | history_rank | **57.63 s** | **28.12%** |
+
+  短期有效组产出速度约 **1.88 倍**；训练继续后大量题目变成全对，有效组比例下降，长期速度不保持这个倍率。
+- 另测过“按已完成正确回答长度的中位数 / batch p90 提前取消长回答”，小试验没有触发取消且无额外收益，正式训练未启用。
+
+---
+
+## 4. 复现与仓库结构
 
 ```text
 scripts/             数据处理、CPT / SFT / DAPO、评测、绘图、诊断和测试
 configs/             历史配置、依赖锁定记录、协议与学习率计划
-runs/                各实验的数值、日志、报告和当时的 source 快照
-  */checkpoint_metadata/  检查点描述；不包含权重或优化器张量
-  */*rollout_metrics*      rollout 的长度、奖励、正确率、筛选统计
-  */*.partNNNN.gz         大日志的压缩分片
-logs/                工作区早期诊断 stdout
-data/                仅保留数据 manifest；不包含数据正文与 token 数组
-tools/               日志解压、快照检查、结果与图表生成工具
-docs/                结果、方法、实验索引、图表和本次整理的检查结果
-EXPORT_MANIFEST.json 原文件快照与导出文件的 SHA256 对照
-RELEASE_MANIFEST.json 发布目录各文件的 SHA256 清单
+runs/                各实验数值、日志、报告和当时的 source 快照
+  */checkpoint_metadata/  检查点描述；不含权重或优化器张量
+  */*rollout_metrics*     rollout 长度、奖励、正确率、筛选统计
+logs/                早期诊断 stdout
+data/                仅数据 manifest；不含正文与 token 数组
+tools/               日志解压、快照检查、结果与图表生成
+docs/                结果、方法、实验索引、图表
+EXPORT_MANIFEST.json 原始 / 导出文件的 SHA256 对照
+RELEASE_MANIFEST.json 发布目录的 SHA256 清单
 ```
 
-原实验目录名称保留，便于追溯。`runs/*/source/` 和历史 launcher 用于查看当时实现及启动参数；新的实验请使用 `scripts/` 下的 CLI，并指定新的输出目录。
-
-## 先查看结果或运行 CPU 检查
-
-记录的环境为 Python 3.12、PyTorch 2.9.1+cu130、Transformers 4.55.4。CUDA 相关依赖与完整环境记录见 `configs/requirements.lock.txt`。在已有兼容 PyTorch 环境中：
+环境记录为 Python 3.12、PyTorch 2.9.1+cu130、Transformers 4.55.4。CPU 侧自检：
 
 ```bash
-python -m pip install -r requirements.txt
-python -m pip install -r requirements-analysis.txt
+python -m pip install -r requirements.txt -r requirements-analysis.txt
 python -m unittest discover -s scripts -p 'test_*.py'
 python tools/validate_release.py
 python tools/build_results.py
 ```
 
-需要真实模型或数据的两项历史集成测试在缺少资产时会明确跳过。常规 CPU 测试覆盖学习率、数据顺序、恢复、PPO clipping、group 计数、解码及取消规则。
-
-大日志保留为 gzip 分片，按清单可恢复为可供原绘图脚本读取的文件：
+训练入口（权重与数据需自行准备）：
 
 ```bash
-python tools/materialize_logs.py --pattern 'runs/deepseek_coder_1p3b_10b_20261012/training.jsonl'
-python tools/materialize_logs.py --pattern 'runs/*/gpu_samples.jsonl'
-```
-
-这会解压**导出后的内容**。解压文件会登记为本地派生文件，并加入本地 Git 排除列表。逐题正文已被移除的统计文件无法借此还原原始题目、生成文本或 token ID。
-
-## 训练与评测入口
-
-权重和数据需要另外下载、准备。运行训练前从仓库根目录执行，使用独立的输出目录：
-
-```bash
-python scripts/download_openwebmath.py --help
-python scripts/prepare_openwebmath_large.py --help
-python scripts/prepare_deepseek_coder_pilot.py --help
-python scripts/extend_deepseek_coder_data.py --help
 python scripts/train_cpt.py --help
-python scripts/prepare_math_sft.py --help
 python scripts/train_math_sft.py --help
 python scripts/dapo_math.py --help
 python scripts/run_math_inference.py --help
 ```
 
-历史精确启动链、分阶段扩充数据、resume 参数和源代码哈希保留在 `runs/*_setup/`、`runs/*_launch/`。部分 CLI 会校验原始数据与检查点血缘；单独取得代码不等于取得这些资产。准备新的数据后需要生成自己的 manifest 和训练产物。
+大日志按 gzip 分片保存，可用 `tools/materialize_logs.py` 还原为绘图脚本可读的格式；逐题正文已移除，无法据此还原原始题目或生成文本。
 
-官方评测依赖另行获取，未在本仓库复制：
+---
 
-```bash
-git clone https://github.com/deepseek-ai/DeepSeek-Math.git vendor/DeepSeek-Math
-git -C vendor/DeepSeek-Math checkout b8b0f8ce093d80bf8e9a641e44142f06d092c305
-```
+## 5. 局限
 
-相关依赖见 `requirements-eval.txt`。逐题评测输出保留正确性、长度、类别、耗时和失败统计；完整生成文本留在原工作区，因此本发布包不能直接重新判分原始生成。
+- **单卡、小模型、小数据**的流程学习实验，模型、数据组成和预算都与论文设置不同，不能当作方法有效性的论文级证据。
+- **GSM8K 训练题同时用于 SFT 和 RL**，不做“未见任务泛化”或“RL 单独带来提升”的归因；只做了精确去重和重叠检查，没有完整语义去重或 CPT 污染排查。
+- **早期 RL 的 MATH 分数下降**（6.14% → 5.34%）是真实结果；长训练的最终轮和最佳验证检查点尚未做全量复测。
+- **1.88 倍是短期采样对比**，不是全程恒定加速；长期有效组比例下降后倍率会回落。
+- RL 中曾因候选组上限退出并回滚到已保存检查点，失败分支与重跑量记录在 `runs/dapo_execution_ledger.json`；这些不计入主线 2,652 轮。
+- 权重、Adam 张量、数据正文、token 数组和原始 rollout 解答不在发布包中。
 
-## 结果边界与记录原则
+---
 
-- 这是单卡、小模型、小数据的流程学习实验；模型、数据组成和预算均与论文设置不同。
-- SFT 与 RL 均使用过 GSM8K 训练题；不作未见任务泛化或单独归因于 RL 的结论。
-- 仅做所述精确去重和重叠检查，没有完整的语义去重或 CPT 测试集污染排查。
-- 早期 Qwen CPT 出现验证 loss 回升与推理退化；保留原生 / 优化对照、学习率试验及失败记录。
-- 64 路小并发下历史路由约 3.50 倍；正式 256 路匹配权重对比约 **1.88 倍有效组产出速度**。这属于短期采样对比，长期有效组比例下降后速度也下降，不能当作全程恒定加速。
-- 已尝试长尾提前结束；小试验没有触发取消且未显示额外收益，本次正式训练未启用。
-- RL 中曾因候选组上限退出并回退到已保存检查点；失败分支、重跑量和累计 group 口径均保留，见 `runs/dapo_execution_ledger.json`。
+## 参考
 
-源文件中的机器绝对路径已改为相对路径或 `/external/...` 占位。历史 SHA256 描述原始字节；导出后的 SHA256 单独记录，不能对路径修改后的源码直接套用历史哈希。
+[DeepSeekMath](https://arxiv.org/abs/2402.03300) · [DAPO](https://arxiv.org/abs/2503.14476) · [OpenWebMath](https://huggingface.co/datasets/open-web-math/openwebmath) · [DeepSeek-Coder-1.3B-Base](https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base)
 
-参考：[DeepSeekMath](https://arxiv.org/abs/2402.03300) · [DAPO](https://arxiv.org/abs/2503.14476) · [OpenWebMath](https://huggingface.co/datasets/open-web-math/openwebmath) · [DeepSeek-Coder-1.3B-Base](https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base)
-
-重新生成图表或修改发布文件后，用 `python tools/validate_release.py --write-manifest` 更新发布清单。历史配置中的 SHA256 始终保留原始口径。
+结果细节见 [docs/results.md](docs/results.md)，数据与训练方法见 [docs/methodology.md](docs/methodology.md)，实验索引见 [docs/experiments.csv](docs/experiments.csv)。
